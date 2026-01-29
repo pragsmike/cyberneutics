@@ -6,13 +6,13 @@
 
 Each generation of computing hardware forced us to adapt how we think about expressing and solving problems.  Each generation widened the class of problems they could help with.
 
-*Numeric computing*: We framed our problems numerically when we got fast arithmetic machines.
-*Symbolic computing*: We framed problems in symbolic logic when we got bitstring crunchers.
-*Narrative computing*: Now we have storytelling engines, and we must learn to frame our problems as stories.
+*Numeric computing*: We framed our problems numerically when we got fast arithmetic machines.  
+*Symbolic computing*: We framed problems in symbolic logic when we got bitstring crunchers.  
+*Narrative computing*: Now we have storytelling engines, and we must learn to frame our problems as stories.  
 
 As always, the computers won't completely solve the problems for us, but they can amplify our capacity to think them through.
 
-The essay [Stories All the Way Down](./stories-all-the-way-down.md) explains
+The essay [Stories All the Way Down](./essays/stories-all-the-way-down.md) explains
 how everything is a story, how stories are a way to deal with wicked problems,
 and how we are constantly editing and re-editing the stories we tell ourselves
 about the world.
