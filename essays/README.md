@@ -17,7 +17,7 @@ If you want to understand why this methodology works and what problem it solves:
 If you want to understand the theoretical synthesis:
 
 1. **[Why Narrative Engines Change Everything](./01-why-narrative-engines-change-everything.md)** - Historical context
-2. **[From Practice to Theory](./02-from-practice-to-theory.md)** *(coming soon)* - How operational techniques revealed theoretical patterns
+2. **[From Practice to Theory: How We Got Here; The Game within a Game](./02-from-practice-to-theory.md)** - How operational failures led to the "Game within a Game" framework
 3. **[Introduction to Sense-Making](./03-sensemaking-101.md)** - Dervin's Situation-Gap-Bridge model
 4. **[Cybernetics and the Observer Problem](./04-cybernetics-and-observation.md)** *(coming soon)* - Second-order cybernetics and why observation changes state
 5. **[The Synthesis](./05-the-synthesis.md)** *(coming soon)* - How sense-making is inherently cybernetic

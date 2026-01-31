@@ -33,7 +33,7 @@ Structured template for documenting what worked, what failed, and how to apply l
 
 ### Complete Worked Examples
 
-**[Hiring Decision Example](./examples/hiring-decision-example.md)** *(coming soon)*
+**[Hiring Decision Example](./hiring-decision-example.md)**
 Complete transcript of a hiring deliberation using adversarial committees and Robert's Rules, with independent evaluation scores, lessons extracted, and decision rationale.
 
 **[Strategic Pivot Example](./examples/strategic-pivot-example.md)** *(coming soon)*

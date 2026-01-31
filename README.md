@@ -48,17 +48,17 @@ These aren't incremental improvements. They represent a fundamentally different 
 ## What's in this repository?
 
 **[Essays](essays/)** - Theoretical foundations and synthesis
-- Why narrative engines change everything
-- From practice to theory: how we got here
-- Introduction to Sense-Making Methodology
+- [Why narrative engines change everything](./essays/01-why-narrative-engines-change-everything.md)
+- [From practice to theory: how we got here](./essays/02-from-practice-to-theory.md)
+- [Introduction to Sense-Making Methodology](./essays/03-sensemaking-101.md)
 - Cybernetics and the observer problem
 - The synthesis: why sense-making is inherently cybernetic
 
 **[Artifacts](artifacts/)** - Practical techniques and protocols
-- Adversarial committees with fixed character rosters
+- [Adversarial committees with fixed character rosters](./artifacts/adversarial-committees.md)
 - Robert's Rules as forcing functions
 - Independent evaluation protocols
-- Worked examples and transcripts
+- [Worked examples and transcripts](./artifacts/examples/README.md)
 
 **[References](references/)** - Background reading
 - Dervin's Sense-Making Methodology
