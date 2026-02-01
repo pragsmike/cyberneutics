@@ -19,9 +19,9 @@ If you want to understand the theoretical synthesis:
 1. **[Why Narrative Engines Change Everything](./01-why-narrative-engines-change-everything.md)** - Historical context
 2. **[From Practice to Theory: How We Got Here; The Game within a Game](./02-from-practice-to-theory.md)** - How operational failures led to the "Game within a Game" framework
 3. **[Introduction to Sense-Making](./03-sensemaking-101.md)** - Dervin's Situation-Gap-Bridge model
-4. **[Cybernetics and the Observer Problem](./04-cybernetics-and-observation.md)** *(coming soon)* - Second-order cybernetics and why observation changes state
-5. **[The Synthesis](./05-the-synthesis.md)** *(coming soon)* - How sense-making is inherently cybernetic
-6. **[Deleuzian Foundations](./06-deleuze-difference-repetition.md)** *(coming soon)* - Becoming, difference, and why repetition produces novelty
+4. **[Cybernetics and the Observer Problem](./04-cybernetics-and-observation.md)** - Second-order cybernetics and why observation changes state
+5. **[The Synthesis](./05-the-synthesis.md)** - How sense-making is inherently cybernetic
+6. **[Deleuzian Foundations](./06-deleuze-difference-repetition.md)** - Becoming, difference, and why repetition produces novelty
 
 ### For Skeptics (Show Me Why This Matters)
 
@@ -158,6 +158,21 @@ If you're not convinced this is necessary:
 
 ---
 
+### [Narrative Engineering: From Philosophy to Practice](./07-bolands-narrative-engineering.md)
+
+**The convergence**: Alex Boland's "Narrative Engineering" arrives at similar conclusions from a different angle (continental philosophy vs. cybernetics).
+
+**Key insight**: We are steering narrative potential. The "diegetic boundary" is the interface where we exert control.
+
+**Will cover**:
+- Comparison of Cyber-Sense and Narrative Engineering
+- How Boland's "diegetic boundary" maps to our "Game Within a Game"
+- Synthesis of techniques
+
+**Read this if**: You want to see how these ideas are emerging independently across the field.
+
+---
+
 ### [The Stochastic Imps of Happenstance](./the-stochastic-imps-of-happenstance.md)
 
 **The insight**: Most failures aren't malice or incompetence—they're noise. Entropy favors failure simply because there are more ways to break than to succeed.
@@ -180,11 +195,11 @@ If you're not convinced this is necessary:
 
 Deeper dive into the historical progression from numeric to symbolic to narrative computing, with detailed examples of how each paradigm shift required new methodologies and disciplines.
 
-### [The Pachinko of Stored Literature](./pachinko-of-stored-literature.md) *(coming soon)*
+### [The Pachinko of Stored Literature](./pachinko-of-stored-literature.md)
 
 Extended metaphor: LLMs as pachinko machines where tokens drop through a maze of statistical weights, occasionally producing useful outputs. Why this framing helps and when it breaks down.
 
-### [Charts on a Manifold](./charts-on-a-manifold.md) *(coming soon)*
+### [Charts on a Manifold](./charts-on-a-manifold.md)
 
 Mathematical formalism: treating complex problems as manifolds requiring multiple coordinate charts (stories), none sufficient alone, overlapping at boundaries. Connection to ensemble methods and multi-model inference.
 

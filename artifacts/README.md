@@ -53,7 +53,7 @@ Collection of annotated deliberation transcripts showing:
 
 ## Troubleshooting
 
-### [Troubleshooting Guide](./troubleshooting.md) - Common failure modes and fixes
+### [Common Problems and Solutions](./troubleshooting.md) failure modes and fixes
 Diagnostic guide for when things go wrong:
 - "My committee just agrees with everything"
 - "Characters are too polite / not adversarial enough"
@@ -84,7 +84,7 @@ Including: when each is essential, failure modes, calibration notes, interaction
 
 ## Integration
 
-### [Integration with MOOLLM](./integration-with-moollm.md) *(coming soon)*
+### [Integration with MOOLLM](./integration-with-moollm.md)
 How Cyber-Sense techniques map to MOOLLM's architecture:
 - Where these protocols fit in the MOOLLM stack
 - Example MOOLLM configurations

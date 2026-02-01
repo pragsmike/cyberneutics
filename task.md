@@ -8,6 +8,6 @@
     - [x] Write `04-cybernetics-and-observation.md` <!-- id: 5 -->
     - [x] Write `05-the-synthesis.md` <!-- id: 6 -->
     - [x] Write `06-deleuze-difference-repetition.md` <!-- id: 7 -->
-- [ ] Planned Artifacts <!-- id: 8 -->
+- [x] Planned Artifacts <!-- id: 8 -->
     - [x] Create `troubleshooting.md` <!-- id: 9 -->
     - [x] Create `integration-with-moollm.md` <!-- id: 10 -->

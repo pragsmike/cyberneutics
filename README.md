@@ -87,6 +87,10 @@ Cyber-Sense provides the methodology - design patterns and best practices for *u
 
 Think of it as: **MOOLLM is the platform, Cyber-Sense is the practice.**
 
+## Related Work
+
+*   **[Narrative Engineering](https://alexbo.land/essays/narrative_engineering_2023.html)** (Alex Boland): A convergent philosophy that treats LLMs as engines for "steering narrative potential." Boland's concept of the "diegetic boundary" is central to our understanding of the Game Within a Game. See [Essay 07](./essays/07-bolands-narrative-engineering.md) for a detailed comparison.
+
 ## Who is this for?
 
 - Practitioners working with AI on complex sociotechnical problems
