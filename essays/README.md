@@ -86,7 +86,7 @@ If you're not convinced this is necessary:
 
 ---
 
-### [From Practice to Theory: How We Got Here](./02-from-practice-to-theory.md) *(coming soon)*
+### [From Practice to Theory: How We Got Here](./02-from-practice-to-theory.md)
 
 **The journey**: This methodology didn't start with theory. It started with practical frustration: AI outputs that sounded good but were subtly wrong, or obviously right but uselessly shallow.
 

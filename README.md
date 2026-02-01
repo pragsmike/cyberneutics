@@ -51,6 +51,7 @@ These aren't incremental improvements. They represent a fundamentally different 
 - [Why narrative engines change everything](./essays/01-why-narrative-engines-change-everything.md)
 - [From practice to theory: how we got here](./essays/02-from-practice-to-theory.md)
 - [Introduction to Sense-Making Methodology](./essays/03-sensemaking-101.md)
+- [The Stochastic Imps of Happenstance](./essays/the-stochastic-imps-of-happenstance.md)
 - Cybernetics and the observer problem
 - The synthesis: why sense-making is inherently cybernetic
 
@@ -58,6 +59,7 @@ These aren't incremental improvements. They represent a fundamentally different 
 - [Adversarial committees with fixed character rosters](./artifacts/adversarial-committees.md)
 - Robert's Rules as forcing functions
 - Independent evaluation protocols
+- [Hiring Decision Example](./artifacts/examples/hiring-decision-example.md)
 - [Worked examples and transcripts](./artifacts/examples/README.md)
 
 **[References](references/)** - Background reading
