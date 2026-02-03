@@ -26,6 +26,12 @@ Your first committee deliberation in 30 minutes. Minimal viable implementation, 
 ### [Committee Setup Template](./committee-setup-template.md)
 Prompt templates for initializing characters, presenting problems, and structuring deliberations. Ready-to-use starting points.
 
+### [Evidence Evaluation Prompt](./evaluating-evidence-quality-prompt.md)
+Specialized prompt for determining if vendor reports and white papers are high-quality enough to justify a selection decision. Only used when data quality is suspect.
+
+### [Product Ranking Prompt](./product-ranking-prompt.md)
+The Phase 2 prompt. Use this AFTER the committee has agreed the evidence is sufficient. Focuses on weighted scoring, risk analysis, and final selection.
+
 ### [Lesson Extraction Template](./lesson-extraction-template.md)
 Structured template for documenting what worked, what failed, and how to apply lessons in future scenarios. Includes workflow checklist.
 

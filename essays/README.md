@@ -173,6 +173,21 @@ If you're not convinced this is necessary:
 
 ---
 
+### [Societies of Thought: From Neural Evidence to Methodological Action](./societies-of-thought-synthesis.md)
+
+**The validation**: Analyzes how recent research on "Societies of Thought" provides empirical backing for Cyber-Sense techniques (adversarial roles, perspective swiching).
+
+**Key insight**: Surprise markers in discourse correlate with better reasoning. Adversarial committees are engines for generating this surprise (entropy reduction).
+
+**Covers**:
+- Empirical evidence for "social scaling"
+- Why conversational scaffolding improves reasoning
+- Actionable steps to improve committee variance (Big Five traits)
+
+**Read this if**: You want scientific validation that this isn't just roleplay—it's cognitive engineering.
+
+---
+
 ### [The Stochastic Imps of Happenstance](./the-stochastic-imps-of-happenstance.md)
 
 **The insight**: Most failures aren't malice or incompetence—they're noise. Entropy favors failure simply because there are more ways to break than to succeed.

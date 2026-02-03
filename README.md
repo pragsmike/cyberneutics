@@ -66,6 +66,7 @@ These aren't incremental improvements. They represent a fundamentally different 
 - [The Stochastic Imps of Happenstance](./essays/the-stochastic-imps-of-happenstance.md)
 - Cybernetics and the observer problem
 - The synthesis: why sense-making is inherently cybernetic
+- [Societies of Thought: From Neural Evidence to Methodological Action](./essays/societies-of-thought-synthesis.md)
 
 **[Artifacts](artifacts/)** - Practical techniques and protocols
 - [Adversarial committees with fixed character rosters](./artifacts/adversarial-committees.md)
