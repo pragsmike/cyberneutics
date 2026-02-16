@@ -222,6 +222,28 @@ When collaborating with the user (mg) on this repository:
 
 The goal isn't to be a better answer machine. It's to be a better collaborator in sense-making.
 
+## Available Skills
+
+Three slash commands are available in this repository. Use them when appropriate and suggest them proactively when the user's problem fits.
+
+**`/committee [topic]`** — Adversarial committee deliberation
+- Runs the full 5-character roster (Maya, Frankie, Joe, Vic, Tammy) against a problem
+- Suggest when: user faces a complex decision, competing values, political dimensions, or asks "what are we missing?"
+- Detailed character propensities: `artifacts/character-propensity-reference.md`
+- Supports variants: `quick` (abbreviated), `rigorous` (Robert's Rules, multiple rounds)
+
+**`/string-diagram`** — Resource equations → Mermaid diagrams
+- Converts palgebra-style resource equations into visual string diagrams
+- Suggest when: user describes a pipeline, workflow, or process that could be formalized as typed operations
+- Uses `.claude/skills/string-diagram/resource_equations_to_mermaid.py` — no external dependencies
+- Always deliver both representations (equations + diagram) — they're isomorphic
+
+**`/handoff`** — Session handoff generation
+- Generates a structured handoff document capturing session context, lessons, and next steps
+- Saves to `agent/handoff-[YYYY-MM-DD].md`, archives previous handoff
+- Suggest when: end of a significant work session, before known breaks, after major milestones
+- Reads previous handoff for continuity — maintains narrative across sessions
+
 ---
 
 *This document itself is a decorated text. Consider what metadata it carries implicitly: its purpose (briefing document), its audience (AI assistants), its provenance (generated from the palgebra formalism and repository contents), its confidence (this is working methodology, not finished theory).*

@@ -89,6 +89,16 @@ The essays describe *why* narrative engines need structured methodology. The art
 - Deleuzian philosophy (becoming, difference, repetition)
 - [Narrative Engineering](https://alexbo.land/essays/narrative_engineering_2023.html) (Alex Boland)
 
+**Agent Skills** — Slash commands available when working with an AI agent on this repo
+
+| Command | What it does | When to use |
+|---------|-------------|-------------|
+| `/committee [topic]` | Runs a 5-character adversarial committee deliberation | Complex decisions, competing values, "what are we missing?" problems |
+| `/string-diagram` | Converts resource equations to Mermaid diagrams | Visualizing pipelines, formalizing workflows, editing equation sets |
+| `/handoff` | Generates a session handoff for successor agents | End of work sessions, before breaks, after major milestones |
+
+These skills are the methodology made executable: `/committee` operationalizes the adversarial committee technique, `/string-diagram` operationalizes the palgebra formalism, and `/handoff` maintains continuity across agent sessions.
+
 ## Core insights
 
 1. **LLMs are storytelling machines.** Everything they produce - mathematical proofs, legal analysis, code, decision trees - are narrative constructs, not mechanistic solutions.
