@@ -167,6 +167,20 @@ bands are level sets of the membership function. The human review gates
 are threshold checks: proceed only if the membership grade exceeds a
 minimum on every criterion.
 
+In algebraic terms, this type-checking operation is a morphism that
+produces both a score and enriched metadata. If we write a soft type as
+τ = (template, rubric), then type-checking is not a boolean predicate but
+a score-producing map:
+
+```
+check_τ : (t, m) ↦ (t, m ⊔ {type := τ, fit := s, violations := ...})
+```
+
+The payload `t` passes through unchanged. The metadata `m` is enriched
+(via the join operator `⊔`) with the type annotation, the fit score `s`,
+and any violations the rubric detected. This is an enrichment morphism:
+the artifact gains type information without transforming its content.
+
 ## The decorated text model
 
 The insight that unifies all of this is that pipeline artifacts are
@@ -266,6 +280,42 @@ These three decorations have different algebraic behavior:
 | Provenance | Monotone increase (only appends) | Chain of custody |
 | Content | Transformation (may change entirely) | Signal through a filter |
 
+### Score combination structures
+
+The monotone degradation of confidence is a specific algebraic choice.
+More precisely, confidence scores form a lattice where composition takes
+the minimum (greatest lower bound). This ensures quality can only degrade
+through the pipeline: a Medium-confidence evidence file cannot produce a
+High-confidence finding.
+
+But other scoring strategies are possible, each with different monoidal
+structure:
+
+**Lattice-style (max/min):** Scores combine by taking the supremum or
+infimum. This is appropriate when quality is bounded: the weakest link
+determines overall quality, or the strongest signal dominates. Confidence
+degradation uses min-lattice structure.
+
+**Semiring-style (weighted sums):** Scores combine additively with
+weights. This is appropriate when contributions are cumulative: multiple
+weak signals can add up to a strong conclusion, or costs accumulate
+across operations. Cost accounting and evidence aggregation often use
+semiring structure.
+
+**Pareto-style (multi-objective frontiers):** Scores are vectors, and
+combination preserves the Pareto frontier. This is appropriate when
+criteria are incommensurable: you cannot trade off security against
+usability on a single scale, so you track both and let human reviewers
+choose from non-dominated options.
+
+Different pipeline stages may use different combination rules. The rubric
+application at line 159 chose the lattice structure (overall confidence
+is the minimum across criteria), but a different pipeline might sum
+weighted criterion scores or maintain a Pareto frontier of candidates.
+The key insight is that these are monoidal structures: they compose
+predictably, and the pipeline algebra tells you how scores flow through
+composition.
+
 ## Two kinds of morphism
 
 The decorated-text model reveals that pipeline operations fall into two
@@ -322,6 +372,50 @@ the part (transformation) or inspects it and updates the traveler
 clipboard (enrichment). The traveler accompanies the workpiece through
 the shop floor. At the end of the line, the traveler is the proof that
 the workpiece was built correctly.
+
+## Pipeline composition laws
+
+Having distinguished these two morphism types, we can now state the laws
+that govern their safe composition. These are not mathematical theorems
+but operational principles — discipline that makes pipelines predictable
+and maintainable.
+
+**Monotone enrichment.** An enrichment step should only add or overwrite
+keys within its declared namespace. For example, a step that scores
+evidence quality writes to `scores.*` and nothing else; a security gate
+writes to `gate.*` and nothing else. This namespace discipline makes
+metadata merges predictable and compositional. When enrichment steps
+respect namespace boundaries, they can be reordered or parallelized
+without conflict. The RFC 822 analogy (lines 362-368) embodies this law:
+each mail transfer agent adds its own `Received:` header without touching
+anyone else's headers or the message body.
+
+**Idempotence where possible.** If a step is deterministic given frozen
+inputs — same rubric text, same model settings, same artifact — then
+re-running it should not change the metadata. When this isn't true
+(because the LLM is stochastic or the rubric has changed), store the
+variance explicitly as structured data (e.g., `scores.helpfulness.samples:
+[0.81, 0.83, 0.82]` for an ensemble). Idempotence makes enrichment steps
+safe to re-run during debugging or pipeline repair. You can re-score an
+artifact after tuning a rubric without cascading changes to unrelated
+metadata.
+
+**First-class step specifications.** Since pipeline operations are
+specified by prompt texts, store each step's specification text alongside
+its outputs in the provenance metadata. When you change a rubric or
+template, that change is a diff in the spec text. This makes the pipeline
+reproducible and auditable: you can see exactly what version of what
+rubric produced a given score, and you can diff pipeline versions to
+understand behavioral changes. The `type.rubric: evidence-rubric-v1`
+field (line 447) is an instance of this law — it records which rubric
+version was applied.
+
+Taken together, these three laws ensure that enrichment composes cleanly.
+Namespace discipline prevents accidental clobbers. Idempotence makes
+steps rerunnable. First-class specs make the pipeline's behavior explicit
+and diffable. They transform an LLM pipeline from an opaque sequence of
+prompt calls into a system with the compositional properties we expect
+from well-engineered software.
 
 ## Human gates as collapse operators
 
@@ -621,6 +715,23 @@ and knowledge management tools (Obsidian). The RFC 822 message header
 format and its descendants (MIME, HTTP) are the original version of
 this pattern: metadata headers that accumulate as a message passes
 through processing stages.
+
+**Kleisli categories and LLM nondeterminism.** The morphisms in our
+algebra are effectful: an LLM call is stochastic, may fail, and operates
+through a prompt that is itself a text artifact subject to drift. The
+natural framework for modeling this is the Kleisli category of a monad
+that captures nondeterminism and failure. In this view, a pipeline
+operation is not a pure function `(Text, Meta) → (Text, Meta)` but a
+Kleisli arrow `(Text, Meta) → M(Text, Meta)` where `M` is a monad
+combining probability distributions (stochasticity), error handling
+(failure modes), and possibly other effects (API rate limits, model
+unavailability). Human gates (lines 424-459) become collapse operators
+that project from the monadic type back to a committed value — precisely
+the role of measurement in quantum mechanics or observer decisions in
+second-order cybernetics. We have not yet formalized this connection, but
+the parallel is suggestive: the gate is where the pipeline's internal
+uncertainty resolves into a definite state that subsequent operations can
+depend on. This remains a direction for future work.
 
 ## Next steps
 
