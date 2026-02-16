@@ -41,6 +41,7 @@ Large Language Models are not databases. They are not logic engines. They are **
 
 **Want the theory?**
 *   Read the [Essays](essays/) in order, starting with [From Practice to Theory](./essays/02-from-practice-to-theory.md).
+*   For the formal pipeline algebra, see [Decorated Texts](./palgebra/decorated-texts.md).
 
 **Want practical techniques?**
 *   Jump straight to the [Artifacts](artifacts/).
@@ -74,6 +75,13 @@ These aren't incremental improvements. They represent a fundamentally different 
 - Independent evaluation protocols
 - [Hiring Decision Example](./artifacts/examples/hiring-decision-example.md)
 - [Worked examples and transcripts](./artifacts/examples/README.md)
+
+**[Palgebra](palgebra/)** - Formal algebra for LLM pipelines
+- [Decorated Texts: A Resource-Theoretic View of LLM Pipelines](./palgebra/decorated-texts.md)
+- Treats LLM pipelines as compositions of typed operations on *decorated texts* — artifacts carrying both content and structured metadata
+- Connects the narrative techniques in the essays and artifacts to a precise algebraic framework: resource equations, string diagrams, and YAML-decorated artifact files as three isomorphic representations of the same pipeline
+
+The essays describe *why* narrative engines need structured methodology. The artifacts provide *how* — concrete techniques like adversarial committees and evaluation rubrics. Palgebra provides *what, precisely* — a formal language for specifying pipelines, their types, their quality propagation, and their composition laws. An adversarial committee is a transformation morphism; a rubric evaluation is an enrichment morphism; a human review gate is a collapse operator. The formalism makes these relationships explicit and composable.
 
 **[References](references/)** - Background reading
 - Dervin's Sense-Making Methodology
