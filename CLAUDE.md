@@ -224,7 +224,7 @@ The goal isn't to be a better answer machine. It's to be a better collaborator i
 
 ## Available Skills
 
-Three slash commands are available in this repository. Use them when appropriate and suggest them proactively when the user's problem fits.
+Four slash commands are available in this repository. Use them when appropriate and suggest them proactively when the user's problem fits.
 
 **`/committee [topic]`** — Adversarial committee deliberation
 - Runs the full 5-character roster (Maya, Frankie, Joe, Vic, Tammy) against a problem
@@ -237,6 +237,12 @@ Three slash commands are available in this repository. Use them when appropriate
 - Suggest when: user describes a pipeline, workflow, or process that could be formalized as typed operations
 - Uses `.claude/skills/string-diagram/resource_equations_to_mermaid.py` — no external dependencies
 - Always deliver both representations (equations + diagram) — they're isomorphic
+
+**`/review`** — Independent deliberation review
+- Evaluates a committee transcript against five rubrics (reasoning, rigor, assumptions, evidence, trade-offs)
+- Scores 0-3 per rubric with specific transcript citations; produces actionable feedback and trustworthiness verdict
+- Suggest when: after any `/committee` run — completes the adversarial training loop (generator + evaluator)
+- Can review transcripts from the current conversation or pasted/attached text
 
 **`/handoff`** — Session handoff generation
 - Generates a structured handoff document capturing session context, lessons, and next steps

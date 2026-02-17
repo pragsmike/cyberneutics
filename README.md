@@ -97,10 +97,11 @@ The essays describe *why* narrative engines need structured methodology. The art
 | Command | What it does | When to use |
 |---------|-------------|-------------|
 | `/committee [topic]` | Runs a 5-character adversarial committee deliberation | Complex decisions, competing values, "what are we missing?" problems |
+| `/review` | Independent evaluation of a committee transcript against five rubrics | After any `/committee` run, or on a pasted transcript — completes the feedback loop |
 | `/string-diagram` | Converts resource equations to Mermaid diagrams | Visualizing pipelines, formalizing workflows, editing equation sets |
 | `/handoff` | Generates a session handoff for successor agents | End of work sessions, before breaks, after major milestones |
 
-These skills are the methodology made executable: `/committee` operationalizes the adversarial committee technique, `/string-diagram` operationalizes the palgebra formalism, and `/handoff` maintains continuity across agent sessions.
+These skills are the methodology made executable: `/committee` operationalizes the adversarial committee technique, `/review` operationalizes independent evaluation, `/string-diagram` operationalizes the palgebra formalism, and `/handoff` maintains continuity across agent sessions.
 
 ## Core insights
 
