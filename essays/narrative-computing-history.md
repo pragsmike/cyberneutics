@@ -44,6 +44,38 @@ Empirical research supports this. Pennington and Hastie's studies of jury decisi
 
 The connection to Cyber-Sense methodology is direct: if humans naturally think through narrative, then framing AI collaboration as narrative generation and evaluation isn't artificial. It's working *with* human cognition rather than against it. Adversarial storytelling works because it leverages how humans actually process complex situations.
 
+### From Cognition to Implementation: Kahneman and the Neural Substrate
+
+Bruner's two modes find their implementation in both human neuroscience and machine architecture. Daniel Kahneman's *Thinking, Fast and Slow* (2011) gives us another lens on the same dichotomy: System 1 (fast, automatic, associative) and System 2 (slow, deliberate, logical).
+
+System 1 corresponds to Bruner's narrative mode. It operates through pattern recognition and completion, finding coherence through association rather than analysis. When you see dark clouds and feel rain is coming, or read a face and know someone is angry, or encounter a familiar situation and intuitively grasp what's happening—that's System 1. It's fast because it runs on pattern-matching: your brain recognizes the configuration and retrieves the most likely completion.
+
+System 2 corresponds to Bruner's paradigmatic mode. When you work through a multi-step proof, analyze competing explanations, or force yourself to check assumptions you'd normally accept, you're engaging System 2. It's slow because it requires sustained attention, explicit reasoning steps, and conscious effort.
+
+At the neural level, the distinction maps onto computational architecture. System 1 is essentially a single forward pass through trained weights—millions of neurons firing in parallel, each performing a small computation (fundamentally linear algebra), and the aggregate producing pattern recognition at scale. This is what neocortical columns do: they're miniature pattern matchers, "piles of linear algebra" that recognize features and feed results forward. System 1 is one sweep through this machinery.
+
+System 2 is more expensive: it's iterative loops routing System 1 outputs through additional checking, comparison, and state-holding. You run System 1, examine the result, run it again with adjusted context, compare outputs, maintain working memory of what you've checked. This requires sustained recurrent activity across multiple brain regions—prefrontal cortex orchestrating, working memory holding intermediate states, attention mechanisms selecting what to process next. It's "piles of piles" doing logical reasoning at greater metabolic cost.
+
+The parallel to LLMs is striking and consequential. Large language models natively operate in System 1. Base inference is a single forward pass through transformer layers—pattern completion at enormous scale. The model sees a prompt and generates the most likely continuation according to its training. This is fast, cheap, and associative. It follows narrative logic: what typically comes next, what sounds right, what completes the pattern coherently.
+
+Chain-of-thought prompting, adversarial committees, and the structured deliberation protocols in Cyber-Sense methodology all induce System 2 behavior in a System 1 substrate. You're forcing the model through multiple passes, maintaining state across iterations, comparing perspectives, checking claims against each other. The individual model responses are still System 1 (pattern completion), but the orchestration creates System 2 reasoning through composition.
+
+This helps explain why methodology matters so much. Without structured iteration, LLMs default to System 1: plausible-sounding pattern completion that gravitates toward statistical likelihood. The first coherent story wins. But real reasoning—the kind that catches errors, surfaces assumptions, weighs trade-offs, and resists premature closure—requires System 2. Since LLMs don't do this natively, we must induce it through architecture: adversarial prompting forces multiple perspectives, Robert's Rules forces checking, independent evaluation forces comparison.
+
+The *Societies of Thought* research (discussed in our synthesis essay) reveals something remarkable: when reasoning models are trained with reinforcement learning, they learn to do internally what Cyber-Sense does externally. They develop internal dialog, simulate multiple agents, and engage in debate with themselves. In effect, they're learning to implement System 2 reasoning through iterated System 1 calls. The methodology we designed as external scaffolding turns out to mirror what optimized reasoning architectures discover through training.
+
+This also illuminates the 60-year debate in AI between symbolic and connectionist approaches. The symbolic AI tradition (GOFAI, production rules, logic engines) was essentially trying to build System 2 / paradigmatic reasoning directly: represent knowledge explicitly, manipulate symbols according to logical rules, chain inference steps mechanically. The connectionist tradition (neural networks, parallel distributed processing, deep learning) built System 1 / narrative reasoning: learn patterns from data, complete configurations through association, generate outputs that cohere with training distribution.
+
+Each camp insisted its approach represented "real" intelligence. Both were right and both were incomplete. Bruner's insight applies: these are irreducible modes, and both are necessary. Modern AI breaks the impasse not by choosing one, but by composing them: System 1 (pattern completion) as the computational primitive, System 2 (logical checking) as the orchestrated loop. Neural networks provide the fast associative substrate; methodology provides the slow deliberate structure.
+
+### Bruner's Dichotomy as Sense-Making Tool
+
+There's something worth noting explicitly about how this framework functions. Bruner's paradigmatic/narrative dichotomy isn't just a classification scheme—it's a tool for thought that transforms how we see existing materials. Once you have this lens, pieces that seemed disconnected suddenly slot together and illuminate each other stereoscopically.
+
+Cyber-Sense methodology (cybernetics, control theory, formal evaluation protocols) follows paradigmatic logic. Boland's Narrative Engineering (continental philosophy, Gödel as parable, diegetic frames) follows narrative logic. The convergence between them isn't coincidence—it's two irreducible cognitive modes, applied to the same domain, necessarily arriving at compatible structural features. This explains why the essay collection itself uses both modes: dialog scenes are narrative, information theory essay is paradigmatic. Both are needed because both capture aspects the other can't.
+
+This is itself an instance of Dervin's sense-making in action: we had a situation (collection of essays and techniques), encountered a gap (how do these relate at a deeper level?), and built a bridge (Bruner's framework). The result isn't just classification—it's transformed understanding. The paradigmatic/narrative split now organizes relationships throughout the material: System 1/System 2, symbolic/connectionist AI, explainability demands versus discourse-based observation, first-order versus second-order cybernetics. The framework makes the topology of ideas visible.
+
 ---
 
 ## The Computational Thread: Making Machines Tell Stories
@@ -206,6 +238,8 @@ What's new is the application domain and the synthesis. We have powerful narrati
 
 We're in the early days. The methodology will evolve. But the fundamental insight is clear: if the tool is a narrative engine, treating it like a calculator is a category error. You don't get mad at a car for not flying; you learn to drive.
 
+For the philosophical path to these same conclusions—through Gödel, Kuhn, operational closures, and category theory—see [Narrative Engineering](./07-bolands-narrative-engineering.md).
+
 ---
 
 ## References
@@ -217,6 +251,8 @@ Beach, Lee Roy. 2010. *The Psychology of Narrative Thought: How the Stories We T
 Bruner, Jerome S. 1986. *Actual Minds, Possible Worlds*. Harvard University Press.
 
 Dervin, Brenda. 1998. "Sense-Making Theory and Practice: An Overview of User Interests in Knowledge Seeking and Use." *Journal of Knowledge Management* 2(2): 36-46.
+
+Kahneman, Daniel. 2011. *Thinking, Fast and Slow*. Farrar, Straus and Giroux.
 
 Pennington, Nancy, and Reid Hastie. 1992. "Explaining the Evidence: Tests of the Story Model for Juror Decision Making." *Journal of Personality and Social Psychology* 62(2): 189-206.
 

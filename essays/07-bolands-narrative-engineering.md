@@ -23,6 +23,22 @@ Yet when these two paths converge, they describe the same phenomenon from comple
 
 When independent investigations reach similar conclusions through radically different methods, there's likely something real being described. This essay explores that convergence, shows how Boland's philosophical foundations validate and enrich Cyber-Sense methodology, and positions both within the emerging discipline of **narrative engineering**.
 
+### The Bruner Lens: Why Convergence Was Inevitable
+
+There's a deeper pattern here worth naming explicitly. Jerome Bruner's distinction between **paradigmatic** (logico-scientific) and **narrative** modes of thought helps explain why this convergence happened and why both paths were necessary.
+
+Cyber-Sense methodology follows paradigmatic logic in its method: cybernetics, control theory, information theory, formal evaluation protocols, measurable rubrics. It applies the tools of engineering and formal systems to structure and validate AI interaction. This is System 2 thinking, explicit reasoning chains, mechanisms you can diagram and measure.
+
+Boland's Narrative Engineering follows narrative logic in its method: continental philosophy, Gödel as philosophical parable rather than formal proof, metaphor and umwelt as organizing concepts, category theory used heuristically rather than axiomatically. It works through story, insight, recontextualization. This is System 1 intuition, pattern recognition across domains, seeing connections that resist formalization.
+
+Bruner's insight was that these two modes are **irreducible and complementary**—neither reduces to the other, and both are necessary for navigating complexity. The convergence between Cyber-Sense and Narrative Engineering isn't coincidence. It's two irreducible cognitive modes, applied independently to the same domain (how to work with narrative engines), necessarily arriving at compatible structural conclusions.
+
+Each approach captures what the other can't directly express. Cyber-Sense provides operational protocols, measurable criteria, repeatable procedures—the paradigmatic scaffolding that makes the methodology teachable and improvable. Boland provides philosophical foundations, conceptual depth, the "why this works" that paradigmatic method alone can't fully articulate. You need both because the problem space itself requires both: formal structure to prevent collapse, narrative understanding to know what you're structuring.
+
+This also explains why the essay collection uses both modes: dialog scenes operate narratively, information theory essays operate paradigmatically. The methodology works *through* both, not despite their difference. The paradigmatic/narrative distinction isn't just describing our approaches—it's revealing why genuine understanding of complex systems requires holding both modes in creative tension.
+
+For the paradigmatic path to these conclusions—through cognitive science, computational narrative intelligence, and systems theory—see [Narrative Computing as Historical Progression](./narrative-computing-history.md).
+
 ## II. Boland's Core Argument
 
 ### A. Gödel and the Problem of Incompleteness

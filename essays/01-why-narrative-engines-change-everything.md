@@ -213,6 +213,38 @@ A story can:
 - Draw seemingly logical conclusions
 - **Be completely wrong**
 
+### The Explainability Objection (And Why It Was Half-Right)
+
+Early critics of large language models raised a serious concern: "These systems are opaque. We can't see why they produce what they produce. Therefore we can't trust them."
+
+This objection was correct—but only for how most people were using LLMs at the time. If you ask one model one question and trust the answer without verification, opacity is genuinely dangerous. You have no way to distinguish confident-sounding truth from confident-sounding fabrication.
+
+The critics prescribed the wrong remedy, though. They demanded **internal transparency**: show us the production rules, the logical chain, the reasoning steps inside the model. Make the black box inspectable.
+
+This was asking for symbolic AI's paradigmatic logic from a connectionist system running narrative logic. It's like demanding a steam engine show you its thoughts—it's the wrong category of demand for what the machine actually is. Neural networks are piles of linear algebra doing pattern completion at massive scale. They don't have "reasoning steps" to inspect. They have weights trained through gradient descent to minimize loss on next-token prediction. The demand for explainability was applying paradigmatic criteria (show me the mechanism) to a narrative system (a statistical story generator).
+
+**But there's an engineering answer to opacity that doesn't require transparent components.**
+
+Claude Shannon didn't solve noisy communication channels by demanding perfect wires. He showed how to compose unreliable channels into reliable communication through redundancy, error correction, and feedback loops. John von Neumann extended this to computation: you can build reliable computers from unreliable components through careful system design—voting, checking, redundancy.
+
+The principle: **system-level reliability from component-level unreliability through composition, measurement, and feedback**.
+
+Applied to LLMs: you don't need to see inside individual models to build trustworthy systems. Instead:
+
+- **Pose problems as stories to be completed** (work with the grain of what narrative engines do)
+- **Use multiple models or perspectives in concert** (redundancy, like Shannon's channel coding)
+- **Surface reasoning through dialog** (make the process observable at the system level)
+- **Measure outputs against external standards** (error detection, like parity checks)
+- **Iterate based on evaluation** (feedback loops, like control systems)
+
+The discourse becomes observable. The transcript becomes evidence. Individual models remain opaque, but the system of deliberation is legible. You can read the debate transcript, see what arguments were made, check whether claims were challenged, verify whether evidence was demanded. The opacity is at the component level. The observability is at the system level.
+
+This reframes the human's role. You're not trying to inspect the neural network's internals. You're observing the system dynamics—how multiple perspectives interact, which arguments survive cross-examination, what evidence gets cited, where assumptions break down. Then you make a choice: which interpretation do you act on?
+
+This is where von Foerster's observer responsibility becomes operational. The committee generates a virtual field of possible interpretations. You observe this field (the transcript shows you what's there). Then you **collapse the potential by choosing one interpretation, based on what you value**. Not because one is objectively True, but because given your values, risk tolerance, and constraints, this is the story you're betting on.
+
+The explainability critics were right that opacity is dangerous for single-model, open-loop operation. They were wrong that the remedy requires inspecting model internals. The actual remedy is better system architecture: compose opaque components into observable systems, surface reasoning through structured deliberation, and keep human judgment central to the collapse from potential to action.
+
 ## The Solution Isn't "Better AI"
 
 The problem isn't that LLMs are bad at reasoning (though they are, in certain ways).

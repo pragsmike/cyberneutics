@@ -199,6 +199,8 @@ But understanding them as **bridge attempts** rather than "answers" changes ever
 - You don't evaluate "correctness"
 - You evaluate "usefulness for movement through my actual situation"
 
+For concrete examples of narrative as the primary cognitive mode—how stories capture what mechanism misses in complex systems—see [Stories All the Way Down](./stories-all-the-way-down.md).
+
 ## Where We Go From Here
 
 Sense-Making explains **what's happening** when you work with AI on complex problems.

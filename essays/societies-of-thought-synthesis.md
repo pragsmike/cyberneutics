@@ -47,6 +47,14 @@ The paper provides three types of validation:
 
 **Collective intelligence validation**: The parallels between your techniques and human team dynamics aren't metaphorical. The same principles that make diverse human teams effective (personality diversity, structured conflict, reconciliation protocols) apply to multi-perspective reasoning in AI systems.
 
+### Dissolving the Explainability Problem
+
+There's an additional dimension worth noting: this research resolves the "explainability" critique of LLMs from an unexpected angle. Critics demanded we inspect why models produce their outputs—show the reasoning chain, make the process transparent. But reasoning models trained to exhibit conversational behaviors are doing internally what Cyber-Sense does externally: generating dialog, simulating perspectives, surfacing conflicts.
+
+When you externalize this through adversarial committees and structured deliberation, the "black box" reasoning process becomes naturally legible. The internal process critics wanted to inspect is, it turns out, dialog—and dialog can be read, evaluated, and verified. The transcript is the explainability artifact. What the paper shows is that enhanced reasoning correlates precisely with the conversational structures that Cyber-Sense makes observable. You're not demanding transparency from an opaque mechanism; you're architecting interaction so the reasoning process (which is inherently dialogic for both humans and trained reasoning models) becomes an explicit, readable artifact.
+
+For the theoretical foundations of these recursive stabilization processes—eigenforms, observer coupling, and how stable patterns emerge from iterative loops—see [Cybernetics and the Observer Problem](./04-cybernetics-and-observation.md).
+
 ## Part II: What We Haven't Considered
 
 ### 1. Personality Architecture, Not Just Role Assignment

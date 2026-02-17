@@ -8,6 +8,8 @@ This isn't metaphorical or reductive. It's recognizing that **mechanism fails to
 
 Sometimes it takes many stories—like charts on a manifold—each valid in its own region, overlapping at the boundaries, no single one sufficient to cover the whole territory.
 
+For the formal sense-making framework underlying this claim—how humans bridge gaps through narrative construction—see [Introduction to Sense-Making Methodology](./03-sensemaking-101.md).
+
 ## Why This Changes Everything About Using AI
 
 The mechanistic view treats AI as an oracle: you ask a question, it computes an answer, you evaluate whether that answer is correct. This works fine for constrained technical problems with ground truth.

@@ -73,6 +73,8 @@ In AI interaction, we are hunting for Eigenforms.
 
 **Eigenforms are the engineer's version of Deleuze's "becoming-stabilized."** They prove that you don't need fixed objects to have stability. You just need stable processes.
 
+For empirical validation of eigenforms and recursive stabilization in LLM reasoning—where trained models learn to simulate exactly these dialogic structures internally—see [Societies of Thought](./societies-of-thought-synthesis.md).
+
 ## The Observer's Responsibility
 
 Understanding this changes how you use the tool.
@@ -89,6 +91,23 @@ You stop blaming the car for going off the road and start looking at your hands 
 *   **You interpret the result.**
 
 You are not the user. You are the Co-System.
+
+### Explainability as First-Order Thinking
+
+The demand for "explainable AI"—that we should be able to inspect why models produce their outputs—is a first-order cybernetic move. It wants to open the black box, examine the mechanism, understand the causal chain from input to output. "Show me the reasoning steps inside the model."
+
+This makes sense for first-order systems where the observer stands outside. If you're debugging a rule-based expert system with explicit if-then logic, inspecting the reasoning chain is exactly the right approach. The system's behavior is determined by inspectable rules.
+
+But large language models aren't rule-based systems. They're dynamical systems with millions of parameters trained through gradient descent. The "reasoning" (if we can call it that) is distributed across weights, emergent from training, and not localizable to inspectable steps. Demanding internal transparency is demanding the wrong thing from the wrong kind of system.
+
+The second-order move is different: **observe the system dynamics, not the component internals**. Don't try to see inside the neural network. Instead, architect the interaction so the process becomes observable: multiple perspectives argue, claims get challenged, evidence gets cited, assumptions surface. The transcript is the observable. The discourse is the measurement.
+
+This is the Shannon/von Neumann principle: reliable systems from unreliable components through composition and feedback. You don't need transparent parts if you have observable systems. The individual model responses remain opaque (statistically determined pattern completion), but the system of deliberation is legible (you can read the debate, see what survived scrutiny, verify what evidence was demanded).
+
+First-order: "Explain why you said that" (trying to inspect the component).  
+Second-order: "Let me observe how multiple perspectives interact and what survives cross-examination" (observing the system).
+
+The unit of analysis shifts. Not the individual model's internals but the coupled system's behavior. Not "what reasoning did the neural network execute?" but "what arguments emerged when multiple perspectives were forced to contest?" The hermeneutic circle remains unbroken—the model that generated text will find it convincing—but we break the circle by introducing new observers (independent evaluation instances) who see only the artifact, not the generation process.
 
 ## Summary
 
