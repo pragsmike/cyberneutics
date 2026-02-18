@@ -4,7 +4,8 @@ description: >
   Run an adversarial committee deliberation using the fixed 5-character roster
   (Maya, Frankie, Joe, Vic, Tammy) to explore decision spaces, surface assumptions,
   and map trade-offs. Use when the user types '/committee [topic]' or asks for a
-  committee deliberation on a complex decision or problem.
+  committee deliberation. Use '/committee record [topic]' to save output as a
+  directory under agent/deliberations/ (00–04 files).
 ---
 
 # Committee Deliberation Skill
@@ -202,6 +203,16 @@ The skill should then:
 
 The skill recognizes sufficient context and proceeds directly to deliberation.
 
+### Deliberation record (directory output)
+```
+/committee record [topic]
+```
+or
+```
+/committee [topic] save to record
+```
+Create `agent/deliberations/<topic-slug>/` and write 00-charter.yml, 01-roster.yml, 01-convening.md, 02-deliberation.md, and 03-resolution.yml in order. Also deliver the decision space map inline. See "Deliberation record directory" above.
+
 ### Scoped invocation
 ```
 /committee quick [topic]
@@ -239,12 +250,45 @@ Not "do this" but "if you optimize for X, you sacrifice Y, and here's what each 
 
 ## Integration with other artifacts
 
-The committee skill can reference:
+The committee skill can reference (all paths under cyber-sense only):
 
-- **Previous deliberations**: If similar problem deliberated before, note lessons learned
+- **Previous deliberations**: Other runs under `agent/deliberations/<topic-slug>/`; if a similar problem was deliberated before, note lessons learned from those records
 - **Character propensity reference**: `artifacts/character-propensity-reference.md` for detailed character calibration
 - **Setup templates**: `artifacts/committee-setup-template.md` for advanced customization
 - **Examples**: `artifacts/examples/` for precedent
+- **Deliberation record layout**: `agent/deliberations/README.md` and `agent/augmentation-plan.md` for the 00–04 directory structure
+
+## Deliberation record directory (opt-in)
+
+When the user requests **structured output** or **save to deliberation record** (e.g. `/committee record [topic]` or `/committee [topic] save to record`), write the deliberation into a dedicated directory instead of (or in addition to) the inline response. Default behavior remains inline-only unless the user opts in.
+
+**Location:** `agent/deliberations/<topic-slug>/`
+
+**Topic-slug:** Derive from the topic: lowercase, replace spaces with `-`, remove or replace special characters. Examples: "Should we adopt microservices?" → `microservices-adoption`; "Is the author a crackpot?" → `is-author-crackpot`.
+
+**Phased file production:** Create the directory and write files in order.
+
+1. **Before deliberation** (from topic + any user context):
+   - **00-charter.yml** — `charter:` with `goal`, `context` (2–4 sentences), `success_criteria` (list), `exit_conditions` (list), `deliverable_format: "Resolution Artifact (YAML) + Decision Space Map"`.
+   - **01-roster.yml** — Fixed 5-member roster: `roster:` with `committee_name: "Cyber-Sense Adversarial Committee"`, `size: 5`, `members:` list of `name`, `role`, `propensity` for Maya (devil's_advocate, paranoid_realism), Frankie (opportunity_scout, idealism), Joe (historian, continuity_guardian), Vic (evidence_checker, evidence_prosecutor), Tammy (systems_analyst, systems_thinking). No external `file:` references; character details stay in `artifacts/character-propensity-reference.md`.
+   - **01-convening.md** — Markdown: Date, Selection strategy (e.g. "Standard 5-member roster"), Rationale (why this roster: diversity, tensions, coverage), Composition notes (Maya vs Frankie, grounding from Joe/Vic, exploration from Tammy/Frankie), Outcome ("Committee convened with 5 members. See 01-roster.yml.").
+
+2. **During/after deliberation:**
+   - **02-deliberation.md** — Full transcript in this structure:
+     - Header: "Phase 2: Deliberation" with topic and protocol (Robert's Rules).
+     - "Opening Statements" — one subsection per member (Maya, Frankie, Joe, Vic, Tammy), 2–3 paragraphs each.
+     - "Initial Positions Summary" — table: Member | Stance | Confidence | Key Concern.
+     - "Key Tensions Identified" — numbered list.
+     - "Round 1", "Round 2", … — Chair + member exchanges; after each round, "Round N Analysis" (emerging consensus, new tension, status, next).
+     - "Final Consensus" — bullet list; status: DELIBERATION COMPLETE.
+     - Then the standard output blocks: **KEY TENSIONS IDENTIFIED**, **ASSUMPTIONS SURFACED**, **EVIDENCE REQUIREMENTS**, **DECISION SPACE MAP**, **RECOMMENDED NEXT STEPS**, and if applicable **VERDICT** or **CONCLUSION**.
+
+3. **After synthesis:**
+   - **03-resolution.yml** — From Final Consensus and DECISION SPACE MAP / VERDICT. Structure: `resolution:` with `date` (YYYY-MM-DD), `topic`, `outcome` (PASSED | DEFERRED | NO_CONSENSUS), `decision` (one line), `summary` (paragraph), optional `details`, optional `implementation_plan` (list of action/description), `votes` (maya, frankie, joe, vic, tammy: YES | NO | ABSTAIN or conditional text), `signatures` (chair: "Committee (Cyber-Sense)", ratified_by: "User").
+
+**Backward compatibility:** If the user does *not* say "record", "save to record", or "structured output", produce only the inline deliberation as today; do not create or write to `agent/deliberations/`.
+
+**Reference:** Full schemas and rationale in `agent/augmentation-plan.md`; overview in `agent/deliberations/README.md`.
 
 ## Customization options
 

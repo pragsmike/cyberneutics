@@ -2,10 +2,10 @@
 name: review
 description: >
   Run an independent review of a committee deliberation transcript. Evaluates
-  against the five core rubrics (reasoning completeness, adversarial rigor,
-  assumption surfacing, evidence standards, trade-off explicitness), cites
-  specific transcript passages, and produces actionable feedback. Use when
-  the user types '/review' after a committee deliberation or pastes a transcript.
+  against the five core rubrics, cites specific transcript passages, and produces
+  actionable feedback. Use '/review' after a committee run or with a pasted
+  transcript; use '/review agent/deliberations/<topic-slug>' to review a
+  deliberation record and optionally write transcript_review to 04-evaluation.yml.
 ---
 
 # Committee Review Skill
@@ -35,8 +35,9 @@ compensates by:
 
 - User types `/review` (evaluates the most recent committee deliberation in the conversation)
 - User types `/review` and pastes or attaches a transcript
+- User types `/review agent/deliberations/<topic-slug>` or "review the last deliberation record" — read transcript from that directory, optionally write transcript review into 04-evaluation.yml
 - User asks to "review the deliberation" or "evaluate the committee output"
-- After any `/committee` run, suggest: "Want me to run `/review` on this?"
+- After any `/committee` run (or committee record run), suggest: "Want me to run `/review` on this?"
 
 ## What the skill does
 
@@ -250,6 +251,16 @@ When conducting the review, enforce these rules on yourself:
 ```
 The skill finds the most recent committee output in the conversation and reviews it.
 
+### Review from deliberation directory
+```
+/review agent/deliberations/microservices-adoption
+```
+or: "review the last deliberation record"
+
+- Resolve the directory (e.g. `agent/deliberations/<topic-slug>/`). If "last deliberation record," use the most recently created or modified directory under `agent/deliberations/`.
+- Read `02-deliberation.md` as the transcript. Optionally read `00-charter.yml` for the charter (problem statement).
+- Perform the same five-rubric review as above. Optionally **write** the result into that directory: create or update `04-evaluation.yml` with a `transcript_review` key containing: rubric scores (reasoning_completeness, adversarial_rigor, assumption_surfacing, evidence_standards, tradeoff_explicitness), aggregate score, verdict (High/Medium/Low), biggest_gaps, recommendations. If the file already has a `resolution_evaluation` section (from a resolution-only pass), keep it and add `transcript_review` alongside it so one file holds both evaluations.
+
 ### With a pasted transcript
 ```
 /review
@@ -263,11 +274,19 @@ The skill reviews the provided transcript.
 ```
 Run full review but provide extra depth on specified rubrics.
 
+## Resolution-only evaluation (04-evaluation.yml)
+
+When a deliberation was saved to `agent/deliberations/<topic-slug>/`, that directory may also contain **resolution-only** evaluation: an assessment of whether the resolution (03-resolution.yml) satisfies the charter (00-charter.yml), *without* reading the transcript. The reviewer uses only 00-charter.yml and 03-resolution.yml, scores alignment_with_goal, completeness, feasibility, risk_mitigation, and writes a `resolution_evaluation` section to 04-evaluation.yml (outcome: RATIFIED | REVISE | REJECT, critique, recommendation). The same review skill can perform this as a **second pass**: when asked to "evaluate the resolution" or "run resolution-only evaluation" for a deliberation directory, read only 00 and 03, score against the charter, and write or update 04-evaluation.yml with `resolution_evaluation`. The transcript review (five rubrics on 02-deliberation.md) is then stored under `transcript_review` in the same file. See `agent/deliberations/README.md` for the 04-evaluation.yml schema.
+
 ## Suggesting the review
 
 After any `/committee` deliberation, proactively suggest:
 
 > "Want me to run `/review` on this to check the quality? The independent evaluation can catch theatrical rigor that looks convincing but doesn't hold up."
+
+If the deliberation was saved to a record directory (`/committee record [topic]`), add:
+
+> "I can also evaluate the transcript and write the review to 04-evaluation.yml in that directory, or run a resolution-only evaluation (charter + resolution, no transcript)."
 
 This nudge is part of the cybernetic feedback loop — generator + evaluator in tension drives improvement.
 
@@ -294,7 +313,10 @@ After running the review, the user should be able to:
 
 ## Files reference
 
+All paths under cyber-sense only:
+
 - **Evaluation rubrics detail**: `artifacts/evaluation-rubrics-reference.md`
 - **Independent evaluation theory**: `artifacts/independent-evaluation.md`
 - **Committee skill**: `.claude/skills/committee/SKILL.md`
 - **Character calibration**: `artifacts/character-propensity-reference.md`
+- **Deliberation record layout**: `agent/deliberations/README.md`, `agent/augmentation-plan.md`
