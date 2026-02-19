@@ -188,41 +188,140 @@ This document captures key insights about how the Cyber-Sense methodology evolve
 
 **Result**: Honest assessment → specific improvements → appropriate expectations.
 
+### Feb 16-18, 2026: Skills Implementation and Operational Maturity
+
+**Created**:
+- `/committee` skill — executable adversarial committee deliberation, writes structured output to `agent/deliberations/<topic-slug>/` (files 00-03)
+- `/review` skill — independent evaluation against five rubrics, writes to 04-evaluation-1.yml (and 06/08 for feedback loop rounds)
+- `/string-diagram` skill — resource equations → Mermaid diagram converter (`resource_equations_to_mermaid.py`, no dependencies)
+- `/handoff` skill — session handoff generation with archival of previous handoff
+- **Evaluation feedback loop**: full implementation of remediation cycle — review scores below threshold → committee remediation round → re-review, max 2 rounds, with convening-file overrides for threshold and max rounds
+- Augmentation plan completed, marked implemented, and archived to `agent/archive/`
+
+**Key Learning**: The skills operationalize what the artifacts describe manually. The gap between "here's a technique document" and "type `/committee` and it runs" is enormous for adoption. The feedback loop (review → remediation → re-review) is now testable end-to-end.
+
+### Feb 17, 2026: Bruner-Kahneman Synthesis
+
+**Theoretical development**: Jerome Bruner's paradigmatic/narrative dichotomy identified as master frame unifying multiple threads in the methodology. Key mappings:
+- Paradigmatic ↔ Narrative maps onto symbolic AI ↔ neural nets, Kahneman System 2 ↔ System 1, and mg's cybernetics path ↔ Boland's continental philosophy path
+- LLM base inference is System 1; chain-of-thought and adversarial committees induce System 2 behavior in a System 1 substrate
+- The Societies of Thought paper shows reasoning models learn via RL to do internally what Cyber-Sense does externally
+
+**Key Learning**: Bruner's dichotomy provides the primitive text types for a formal type system — paradigmatic text (parsable, syntactically rigid) and narrative text (semantically rich, requires LLM evaluation). These are the base types that palgebra's soft types refine.
+
+### Feb 19, 2026 (Morning): Narrative Immune Systems
+
+**Theoretical development**: The evaluation feedback loop is an immune system. Key discoveries:
+- Generator-discriminator architecture maps precisely to biological immunity (rubrics = antibodies, evaluator = T cell, evaluation protocol = thymus, bounded trace = immune downregulation)
+- **Organ vs. bath**: two regimes with different type-theoretic properties. Inside a pipeline (organ), types are assigned by construction; in the open world (bath), types are claims requiring evaluation. This resolves a tension in the formalism.
+- **Organs as trust boundaries**: agents work well locally because the environment provides ambient trust (like an organ inside a body); the internet is hostile bloodstream where every input is an unprovenanced antigen
+- Description logic (TBox/ABox/reasoner) maps to the bath model; fuzzy DL needed for graded soft-type membership
+- **Civic application**: mis/dis/malinformation as pathogen taxonomy; LLMs can give everyone a thymus (automated rubric evaluation)
+
+**Key Learning**: The immune analogy isn't just metaphor — it's functorial (structure-preserving) with specific predictions: adaptive rubrics should exist (somatic hypermutation), autoimmune disorders map to over-aggressive type-checking, immunodeficiency maps to absent evaluation.
+
+### Feb 19, 2026 (Afternoon): Palgebra Materialization and Coherence Pass
+
+**Created/moved**:
+- `palgebra/reference.md` — agent-optimized reference card: syntax, operators, annotations, morphism types, propagation rules, composition laws, metadata format, step-by-step guide for specifying new pipelines. Cites Fong and Spivak's *Seven Sketches* Ch. 2.
+- `palgebra/README.md` — directory overview with layered reading paths (reference → essay → worked example → tool)
+- `committee-as-palgebra.md` moved from `agent/` to `palgebra/` as canonical worked example
+
+**Coherence pass** — bridged palgebra into existing material:
+- Essays README: "Will cover" → "Covers" for all completed essays; added "For Formalists" reading path; pruned "coming soon" stubs
+- Artifacts README: added "Formal grounding" section to combination patterns (transformation → enrichment → coproduct → bounded trace); fixed stale references
+- `adversarial-committees.md`: added "Where This Fits: The Pipeline View" section
+- `independent-evaluation.md`: added "Formal Grounding: Evaluation as Enrichment" section
+- `quick-start-guide.md`: added "The fast path: slash commands" section
+- Top-level README: expanded palgebra section with three entry points
+
+**Key Learning**: The formalism existed but was invisible to readers who entered through essays or artifacts. Bridging it in required only surgical additions (a section per file, not rewrites) because the essay and the practice were already consistent — they just didn't cross-reference each other.
+
+### Feb 19, 2026 (Afternoon): Software Factories Research
+
+**Created** in `wild/software-factories/`:
+- Summary of Nate B. Jones's "5 Levels of AI Coding" video (replacing raw transcript)
+- Analysis of factory.strongdm.ai: what the site publishes, what happens when you naively point an agent at it, and where palgebra maps onto dark factory architecture
+- Updated README with consolidated references
+
+**Key Learning**: The dark factory concept maps cleanly onto palgebra: scenarios = enrichment, DTU = catalytic resources, satisfaction = soft types, the $1k/day token spend = fuel for the feedback loop that raises spec quality (the confidence propagation rule in action). Whether palgebra can serve as a more rigorous specification language than DOT-based NLSpecs is an empirical question worth testing.
+
+### Feb 19, 2026 (Afternoon): First External Adoption Signals
+
+Two independent external uptake events reported:
+1. A practitioner forked the repository intending to use and extend the committee deliberation feature — specifically, experimenting with different committee makeups to compare results for different problem types
+2. SimHacker/MOOLLM incorporated the adversarial committee mechanism into its platform
+
+See [meta/uptake-and-usage.md](uptake-and-usage.md) for details and analysis.
+
+**Significance**: The Feb 1 self-evaluation identified external validation as the key gap: "Do other practitioners succeed with this?" These are the first data points. The fork specifically targets the extensibility the committee skill was designed for (different rosters for different domains), which suggests the architecture is being understood as intended.
+
+### Feb 19, 2026 (Evening): Bridge Essay
+
+**Created**: `essays/08-from-methodology-to-formalism.md` — the essay connecting the philosophical foundations (Dervin, von Foerster, Deleuze) to the palgebra formalism. Shows how the two vocabularies describe the same phenomenon: gaps as undecidables motivate soft types, cybernetic loops are traced monoidal structures, Deleuzian difference maps to transformation morphisms, characters are catalytic inputs (charts on a manifold), and confidence propagation is the formalism's sharpest practical gift. Bidirectional: what the formalism reveals that philosophy cannot, and vice versa.
+
+**Key Learning**: The bridge essay was the last identified gap in the documentation coherence pass. Writing it confirmed that the philosophical and algebraic treatments are genuinely consistent — not just metaphorically related but structurally aligned. The essay identifies a fourth representation (philosophical narrative) alongside the three isomorphic representations the palgebra already names (equations, diagrams, files). The four are not all mechanically interconvertible, but they form a coherent whole.
+
 ---
 
 ## What This Shows About Methodology Maturity
 
 ### Stable Behavioral Equilibrium Reached
 
-**Evidence**: 
+**Evidence**:
 - Core techniques (committees, Robert's Rules, evaluation, lesson extraction) are well-defined
 - Template formats have stabilized
 - Character roster is fixed and works consistently
 - RUBRIC scoring is codified
+- **New**: Executable skills (`/committee`, `/review`, `/string-diagram`, `/handoff`) operationalize the techniques as one-command workflows
+- **New**: Evaluation feedback loop (review → remediation → re-review) is implemented and testable end-to-end
 
-**What This Means**: The methodology won't radically change. Refinements, yes. Fundamental redesign, no.
-
----
-
-### Documentation Still Evolving
-
-**Evidence**:
-- Self-review identified messaging inconsistencies
-- Citation gaps in early essays
-- Only one worked example complete
-- Troubleshooting guide needs expansion
-
-**What This Means**: Techniques are validated. Documentation needs more examples, external validation, and practitioner feedback.
+**What This Means**: The methodology won't radically change. Refinements, yes. Fundamental redesign, no. The addition of executable skills is an accessibility improvement, not a methodology change — the same pipeline, now automated.
 
 ---
 
-### Appropriate Humility
+### Formalism Maturing
 
-**Claim**: "Techniques refined through practice, reached stable equilibrium."
-**Caveat**: "Documentation suitable for early adopters and researchers."
-**Honest Gap**: "Broader practitioner readiness requires additional worked examples and external validation."
+**Evidence** (new since Feb 1):
+- Palgebra reference card provides agent-optimized entry point to the formalism
+- Committee pipeline fully formalized as resource equations (9 operations, all 4 structural kinds)
+- Palgebra bridged into essays and artifacts (cross-references, formal grounding sections)
+- Applied to a new domain (dark factory architecture) as feasibility test
+- Narrative immune systems work extends the formalism toward open-world (bath) settings
+- **Bridge essay** (`essays/08-from-methodology-to-formalism.md`) explicitly connects the philosophical foundations to the algebraic machinery
 
-This is appropriately humble. We know what works (techniques). We know what's needed (more examples, external use). We don't oversell.
+**What This Means**: The formalism is past "interesting idea in one essay" and into "reference card + worked examples + tool + bridge essay + applications." The bridge essay closes the gap between the essay series and the palgebra — readers can now enter from either side and understand the other. Still needs: more worked examples in different domains, the bath model formalized, and testing whether agents can bootstrap pipelines from resource equations.
+
+---
+
+### First External Adoption
+
+**Evidence** (new since Feb 1):
+- Repository forked by practitioner intending to extend committee makeups
+- MOOLLM platform incorporated adversarial committee mechanism
+
+**What This Means**: The Feb 1 self-evaluation's #1 gap — "do other practitioners succeed with this?" — now has first data points. Two independent signals of adoption, both targeting the committee system. Neither is sustained usage yet, but both indicate the methodology is being understood as intended. See [uptake-and-usage.md](uptake-and-usage.md).
+
+---
+
+### Documentation Substantially Improved
+
+**Evidence** (since Feb 1):
+- Essays README: all "Will cover" items updated to "Covers," "For Formalists" reading path added, "coming soon" stubs pruned
+- Artifacts README: stale references fixed, palgebra connection added, examples section reflects actual files
+- Quick-start guide: slash commands mentioned as fast path
+- Core artifacts (adversarial-committees, independent-evaluation): formal grounding sections added
+- Top-level README: palgebra section expanded with three entry points
+
+**Remaining gaps**: More worked examples in non-committee domains needed. Failure case documentation still absent.
+
+---
+
+### Appropriate Assessment
+
+**Claim**: "Methodology with executable skills, a formal algebra, and first external adoption."
+**Caveat**: "Suitable for early adopters. Documentation improved but not yet complete for all audiences."
+**Honest Gap**: "Broader practitioner readiness requires more domain examples, failure case documentation, and sustained feedback from external users."
 
 ---
 
@@ -244,10 +343,10 @@ This is appropriately humble. We know what works (techniques). We know what's ne
 
 ### What We Still Need to Learn
 
-1. **External validation**: Do other practitioners succeed with this?
+1. **External validation**: Do other practitioners succeed with this? *First signals: one fork intending to extend committee makeups; MOOLLM has incorporated the adversarial committee mechanism. See [uptake-and-usage.md](uptake-and-usage.md). Still early — need sustained feedback, not just initial adoption.*
 2. **Domain boundaries**: Where does methodology fail? What problems don't benefit?
-3. **Simplification opportunities**: Can we make this more accessible without losing rigor?
-4. **Tool integration**: How does this work with MOOLLM platform? (Integration-with-moollm.md drafted but untested)
+3. **Simplification opportunities**: Can we make this more accessible without losing rigor? *Partial progress: `/committee` and `/review` skills reduce the barrier from "read all the artifacts" to "type a command." The palgebra reference card provides a fast path into the formalism.*
+4. **Tool integration**: How does this work with MOOLLM platform? *MOOLLM has adopted the adversarial committee mechanism. Integration-with-moollm.md maps primitives (Characters→Cards, Sessions→Rooms, Lessons→Files). Live testing still needed.*
 
 ---
 
@@ -271,18 +370,18 @@ If it couldn't do that, it wouldn't be rigorous. Since it can, we have evidence 
 
 ## Questions for Future Development
 
-1. **Can this methodology be taught?** We have documentation. Can someone learn it without direct mentorship?
-2. **What's the failure rate?** How often do committees produce unhelpful deliberations?
-3. **Domain boundaries**: Complex sociotechnical problems, yes. But what else? Scientific research? Creative work? Personal decisions?
+1. **Can this methodology be taught?** We have documentation. Can someone learn it without direct mentorship? *The fork suggests someone is trying. Whether they succeed is the test.*
+2. **What's the failure rate?** How often do committees produce unhelpful deliberations? *The evaluation feedback loop (review → remediation → re-review) now provides quantitative data: rubric scores per deliberation, score trends over remediation rounds. We can start answering this empirically.*
+3. **Domain boundaries**: Complex sociotechnical problems, yes. But what else? Scientific research? Creative work? Personal decisions? *The fork practitioner intends to test different committee makeups for different problem types — exactly the extensibility experiment we need.*
 4. **Scalability**: Does this work for 10-person organizations? 1000-person? Governments?
-5. **Tool dependence**: Does this require Claude specifically? Or work with other LLMs?
+5. **Tool dependence**: Does this require Claude specifically? Or work with other LLMs? *MOOLLM integration suggests platform-agnostic potential, but untested with non-Claude models.*
+6. **Can palgebra specify pipelines beyond the committee?** The dark factory analysis (`wild/software-factories/palgebra-and-dark-factories.md`) maps palgebra onto an entirely different domain. Whether agents can bootstrap a pipeline from resource equations is testable.
+7. **Does the immune system analogy predict useful architecture?** The narrative immune systems work (`wild/narrative-immune-systems.md`) predicts adaptive rubrics, regulatory mechanisms, and an organ/bath boundary formalism. These are concrete engineering targets.
 
-We don't know yet. That's why this is "early-stage documentation of emerging methodology" (accurate) becoming "suitable for early adopters and researchers" (with amendments) rather than "ready for all practitioners" (not yet).
-
-Honesty about what we know vs. what we're still learning is part of the methodology's rigor.
+We're past "early-stage documentation" and into "methodology with executable skills, a formal algebra, and first external adoption." Still not "ready for all practitioners" — but the gap is narrowing, and we now have empirical signals to steer by.
 
 ---
 
-**Last Updated**: February 1, 2026
+**Last Updated**: February 19, 2026
 **Status**: Living document—will update as methodology evolves
 **Contribute**: If you use this methodology, please share your results (successes AND failures)

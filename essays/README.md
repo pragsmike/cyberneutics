@@ -38,8 +38,9 @@ If you want the precise machinery underneath the methodology:
 1. **[Palgebra Reference](../palgebra/reference.md)** - Start here: syntax, operators, morphism types, propagation rules, composition laws
 2. **[Decorated Texts](../palgebra/decorated-texts.md)** - The full essay developing the pipeline algebra from first principles
 3. **[Committee as Palgebra](../palgebra/committee-as-palgebra.md)** - Worked example: the adversarial committee pipeline formalized as resource equations
+4. **[From Methodology to Formalism](./08-from-methodology-to-formalism.md)** - The bridge: how the philosophical foundations and the algebra describe the same phenomenon
 
-The essays in this directory establish *why* narrative engines need structured methodology. The palgebra provides *how, precisely* — a formal language where adversarial committees are transformation morphisms, rubric evaluation is enrichment, and human review gates are collapse operators. See the [palgebra directory](../palgebra/) for the full formalism.
+The essays in this directory establish *why* narrative engines need structured methodology. The palgebra provides *how, precisely* — a formal language where adversarial committees are transformation morphisms, rubric evaluation is enrichment, and human review gates are collapse operators. [From Methodology to Formalism](./08-from-methodology-to-formalism.md) bridges the two vocabularies explicitly. See the [palgebra directory](../palgebra/) for the full formalism.
 
 ## Core Essays
 
@@ -183,6 +184,25 @@ The essays in this directory establish *why* narrative engines need structured m
 
 ---
 
+### [From Methodology to Formalism](./08-from-methodology-to-formalism.md)
+
+**The bridge**: The essays explain *why* narrative engines need structured methodology. The palgebra explains *how, precisely*. This essay shows they describe the same phenomenon at different levels of abstraction.
+
+**Key insight**: The philosophical foundations (gaps as undecidables, cybernetic loops, Deleuzian difference) and the algebraic machinery (soft types, morphism kinds, propagation rules) are not separate projects — they are four representations of the same methodology, like charts on a manifold.
+
+**Covers**:
+- How Dervin's gaps motivate palgebra's soft types (graded membership, not boolean)
+- How the cybernetic loop is a traced monoidal structure with bounded feedback
+- How transformation morphisms formalize Deleuzian repetition-producing-difference
+- Characters as catalytic inputs: charts on the problem manifold
+- Confidence propagation as the formalism's sharpest practical gift
+- What the formalism reveals that philosophy cannot (and vice versa)
+- The four representations: equations, diagrams, files, philosophical narrative
+
+**Read this if**: You've read the essays and want to connect them to the palgebra, or you've read the palgebra and want to understand why it's shaped the way it is.
+
+---
+
 ### [Societies of Thought: From Neural Evidence to Methodological Action](./societies-of-thought-synthesis.md)
 
 **The validation**: Analyzes how recent research on "Societies of Thought" provides empirical backing for Cyber-Sense techniques (adversarial roles, perspective swiching).
@@ -256,7 +276,6 @@ Possible future essays, not yet written:
 
 - **When This Methodology Fails** — failure modes, edge cases, situations where this is the wrong tool
 - **Cognitive Overhead and Diminishing Returns** — when methodology becomes busywork, calibrating technique to problem complexity
-- **From Methodology to Formalism** — the bridge essay connecting this essay series to the palgebra; how the pipeline algebra makes the methodology auditable, composable, and its quality propagation explicit
 - **Narrative Computing and the Extended Mind** — connection to Clark & Chalmers; are LLMs tools or parts of a distributed cognitive system?
 
 ## For Further Reading
@@ -283,7 +302,7 @@ Possible future essays, not yet written:
 
 ## Status and Evolution
 
-These essays represent an emerging theoretical framework. The core insights are stable (narrative engines, cybernetic sense-making, iterative co-evolution). The formalization is ongoing.
+These essays represent an emerging theoretical framework. The core insights are stable (narrative engines, cybernetic sense-making, iterative co-evolution). The formalization is now bridged to the essay series via [Essay 08](./08-from-methodology-to-formalism.md).
 
 **Feedback welcome**. If these essays:
 - Clarify something → let us know what clicked
