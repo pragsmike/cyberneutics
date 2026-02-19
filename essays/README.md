@@ -31,6 +31,16 @@ If you're not convinced this is necessary:
 2. **[Stories All the Way Down](./stories-all-the-way-down.md)** - Concrete examples of narrative in action
 3. **[The Stochastic Imps of Happenstance](./the-stochastic-imps-of-happenstance.md)** - Why most failures are noise, not malice, and what that means
 
+### For Formalists (The Algebra)
+
+If you want the precise machinery underneath the methodology:
+
+1. **[Palgebra Reference](../palgebra/reference.md)** - Start here: syntax, operators, morphism types, propagation rules, composition laws
+2. **[Decorated Texts](../palgebra/decorated-texts.md)** - The full essay developing the pipeline algebra from first principles
+3. **[Committee as Palgebra](../palgebra/committee-as-palgebra.md)** - Worked example: the adversarial committee pipeline formalized as resource equations
+
+The essays in this directory establish *why* narrative engines need structured methodology. The palgebra provides *how, precisely* — a formal language where adversarial committees are transformation morphisms, rubric evaluation is enrichment, and human review gates are collapse operators. See the [palgebra directory](../palgebra/) for the full formalism.
+
 ## Core Essays
 
 ### [Why Narrative Engines Change Everything](./01-why-narrative-engines-change-everything.md)
@@ -92,13 +102,13 @@ If you're not convinced this is necessary:
 
 **Key insight**: The techniques (adversarial committees, Robert's Rules, independent evaluation) emerged from operational need. The theory came later, explaining why they work.
 
-**Will cover**:
-- The practical problems that needed solving
-- How adversarial committees emerged organically
-- Why Robert's Rules turned out to be necessary
-- What independent evaluation revealed about self-confirmation
-- The moment of theoretical recognition ("this is cybernetic sense-making")
-- Why formalization matters (making implicit explicit enables teaching)
+**Covers**:
+- The engineering problem: "stochastic imps" and statistical ghosts
+- The pivot: narrative as feature, not bug
+- Rediscovering the adversarial committee through operational need
+- Why it works: constraining latent space
+- The theory emerges: recognizing cybernetic sense-making in practice
+- Connection to MOOLLM and the broader platform vision
 
 **Read this if**: You want to understand the methodology's empirical foundations before diving into theory.
 
@@ -110,13 +120,12 @@ If you're not convinced this is necessary:
 
 **Key insight**: You cannot observe a complex system without changing it. Your questions shape possible answers. Your frameworks determine what's visible.
 
-**Will cover**:
-- First-order vs. second-order cybernetics (von Foerster, Bateson)
-- The observer effect in sense-making
-- Eigenforms and recursive self-reference
-- Why LLM interaction is inherently cybernetic
-- How prompting is control theory
-- Feedback loops between questions and answers
+**Covers**:
+- The loop you can't step out of: second-order cybernetics (von Foerster, Bateson)
+- Prompting as control theory
+- The physics of Deleuze: virtuality, actuality, and observation
+- Eigenforms: how stability emerges from noise
+- The observer's responsibility and why explainability is first-order thinking
 
 **Read this if**: You want to understand why observation changes state and what that means for AI collaboration.
 
@@ -128,13 +137,11 @@ If you're not convinced this is necessary:
 
 **Key insight**: Cyber-Sense isn't just "using cybernetics for sense-making." It's recognizing that sense-making IS cybernetic—you cannot bridge gaps without altering the gap and being altered by the bridge.
 
-**Will cover**:
-- How Situation-Gap-Bridge maps to cybernetic loops
-- Why interpretation is feedback mechanism
-- How eigenforms emerge from iterative sense-making
-- The Deleuzian insight (repetition as difference-production)
-- Why narrative engines make this methodology necessary
-- Formal structure of the synthesis
+**Covers**:
+- The three threads: the dynamic gap (Dervin), the cybernetic loop (von Foerster), the Deleuzian engine (becoming and difference)
+- The grand unification: why these are the same phenomenon at different scales
+- Why this matters for AI: the methodology as "loop architecture"
+- The cybernetic hermeneutic: sense-making IS cybernetic
 
 **Read this if**: You want to understand how the three theoretical frameworks compose into something greater than their sum.
 
@@ -146,13 +153,14 @@ If you're not convinced this is necessary:
 
 **Key insight**: When you ask an LLM "the same" question multiple times, you're not checking for consistency. You're sampling the distribution of possible narratives, each revealing different aspects of the latent space.
 
-**Will cover**:
-- Becoming vs. being (process philosophy)
+**Covers**:
+- The Wittgenstein contrast and the core inversion: difference over identity
+- Becoming over being (process philosophy)
 - Why repetition produces difference, not sameness
-- Intensity and virtuality in narrative space
-- How iteration is exploration, not verification
-- Connection to LLM latent space sampling
-- Why "reformulating the question" is methodology, not failure
+- Virtuality and actuality; the category theory connection
+- Eigenforms: when processes stabilize
+- Charts on a manifold: why complex problems need multiple coordinate systems
+- Practical implications for iteration, convergence, framing, and identity
 
 **Read this if**: You want philosophical grounding for why iterative exploration with AI is fundamental, not remedial.
 
@@ -164,10 +172,12 @@ If you're not convinced this is necessary:
 
 **Key insight**: We are steering narrative potential. The "diegetic boundary" is the interface where we exert control.
 
-**Will cover**:
-- Comparison of Cyber-Sense and Narrative Engineering
-- How Boland's "diegetic boundary" maps to our "Game Within a Game"
-- Synthesis of techniques
+**Covers**:
+- Two bridges to the same shore: comparing Cyber-Sense and Narrative Engineering
+- Boland's core argument (Gödel, Kuhn, Bruner's paradigmatic/narrative modes)
+- Where Boland enriches Cyber-Sense; where Cyber-Sense extends Boland
+- Synthesis: how the "diegetic boundary" maps to the "Game Within a Game"
+- Implications and open questions
 
 **Read this if**: You want to see how these ideas are emerging independently across the field.
 
@@ -210,21 +220,13 @@ If you're not convinced this is necessary:
 
 Deeper dive into the historical progression from numeric to symbolic to narrative computing, with detailed examples of how each paradigm shift required new methodologies and disciplines.
 
-### The Pachinko of Stored Literature *(coming soon)*
+### The Pachinko of Stored Literature
 
-Extended metaphor: LLMs as pachinko machines where tokens drop through a maze of statistical weights, occasionally producing useful outputs. Why this framing helps and when it breaks down. (Preview: the metaphor appears in [Essay 01](./01-why-narrative-engines-change-everything.md) and throughout [Stories All the Way Down](./stories-all-the-way-down.md).)
+The extended pachinko metaphor appears in [Essay 01](./01-why-narrative-engines-change-everything.md) and throughout [Stories All the Way Down](./stories-all-the-way-down.md). A standalone treatment may follow.
 
-### Charts on a Manifold *(coming soon)*
+### Charts on a Manifold
 
-Mathematical formalism: treating complex problems as manifolds requiring multiple coordinate charts (stories), none sufficient alone, overlapping at boundaries. Connection to ensemble methods and multi-model inference. (Preview: the charts-on-manifold metaphor is developed in [Stories All the Way Down](./stories-all-the-way-down.md) and formalized in the [Decorated Texts](../palgebra/decorated-texts.md) essay.)
-
-### [Eigenforms and Narrative Convergence](./eigenforms-narrative-convergence.md) *(coming soon)*
-
-Technical deep-dive: how recursive self-reference in sense-making produces stable patterns (eigenforms), why premature convergence is dangerous, and how adversarial process prevents collapse.
-
-### [The Editor's Role: Publishing Stories to Reality](./editor-role-publishing.md) *(coming soon)*
-
-Extended exploration of the analyst-as-editor metaphor. How curating which stories get "published to reality" is the fundamental act of decision-making in narrative computing.
+The charts-on-manifold idea — complex problems as manifolds requiring multiple coordinate charts (stories), none sufficient alone — is developed in [Essay 06](./06-deleuze-difference-repetition.md) and formalized in [Decorated Texts](../palgebra/decorated-texts.md), where the three isomorphic representations (equations, diagrams, artifact files) are described as charts on the same manifold.
 
 ## Transcripts and Worked Examples
 
@@ -236,49 +238,26 @@ A committee debate transcript (Kaelen/Elena/Silas) that uses the adversarial com
 
 ## Applied Essays
 
-### Adversarial Committees as Epistemic Triangulation *(coming soon)*
+### Independent Evaluation as Adversarial Training
 
-Why having characters with incompatible propensities isn't theater—it's rigorous epistemic practice. Connection to adversarial processes in courts, peer review, red teams. (Meanwhile: the practical technique is documented in [Adversarial Committees](../artifacts/adversarial-committees.md) and the empirical evidence is in [Societies of Thought](./societies-of-thought-synthesis.md).)
+The generator/evaluator split, the adversarial training loop, and how it connects to GANs. This topic is now substantially addressed by the palgebra formalization: see [Committee as Palgebra](../palgebra/committee-as-palgebra.md) for the full pipeline (transformation → enrichment → quality gate → bounded feedback trace), and [Independent Evaluation Protocols](../artifacts/independent-evaluation.md) for the practical protocol.
 
-### Robert's Rules as Information-Theoretic Constraint *(coming soon)*
+### Further applied essay candidates
 
-Technical explanation: how procedural overhead introduces computational constraints that prevent collapse to high-probability (but potentially wrong) outputs. Shannon's information theory meets parliamentary procedure. (Meanwhile: the practical technique is documented in [Robert's Rules as Forcing Functions](../artifacts/roberts-rules-forcing-function.md).)
+These remain directions for future essays. The practical techniques are documented in [artifacts/](../artifacts/) and can be used without them.
 
-### Independent Evaluation as Adversarial Training *(coming soon)*
+- **Adversarial Committees as Epistemic Triangulation** — connection to adversarial processes in courts, peer review, red teams. See [Adversarial Committees](../artifacts/adversarial-committees.md) and [Societies of Thought](./societies-of-thought-synthesis.md) for current material.
+- **Robert's Rules as Information-Theoretic Constraint** — Shannon meets parliamentary procedure. See [Robert's Rules as Forcing Functions](../artifacts/roberts-rules-forcing-function.md).
+- **Cross-Scenario Learning as Institutional Memory** — organizational learning theory meets AI collaboration. See [Cross-Scenario Learning](../artifacts/cross-scenario-learning.md).
 
-How the generator/evaluator split creates adversarial training loop that drives quality improvement over time. Connection to GANs and other adversarial machine learning techniques. (Meanwhile: the practical protocol is documented in [Independent Evaluation Protocols](../artifacts/independent-evaluation.md) with full rubrics in [Evaluation Rubrics Reference](../artifacts/evaluation-rubrics-reference.md).)
+## Future Directions
 
-### Cross-Scenario Learning as Institutional Memory *(coming soon)*
+Possible future essays, not yet written:
 
-How lesson extraction and injection creates persistent knowledge structures that survive conversation amnesia. Organizational learning theory meets AI collaboration. (Meanwhile: the practical template is in [Cross-Scenario Learning](../artifacts/cross-scenario-learning.md) and [Lesson Extraction Template](../artifacts/lesson-extraction-template.md).)
-
-## Critiques and Limitations
-
-### [When This Methodology Fails](./when-methodology-fails.md) *(coming soon)*
-
-Honest assessment of failure modes, edge cases, and situations where Cyber-Sense methodology is wrong tool for the job. What kinds of problems don't benefit from adversarial deliberation.
-
-### [The Formalization Problem](./formalization-problem.md) *(coming soon)*
-
-Tension between making methodology explicit (teachable, replicable) and the risk of it becoming rigid procedure that loses the spirit. When "following the methodology" produces worse results than intuitive collaboration.
-
-### [Cognitive Overhead and Diminishing Returns](./cognitive-overhead-diminishing-returns.md) *(coming soon)*
-
-Analysis of when methodology becomes busywork. How to calibrate technique to problem complexity. The danger of methodology becoming end rather than means.
-
-## Philosophical Context
-
-### [Cybernetic Hermeneutics: A New Discipline?](./cybernetic-hermeneutics.md) *(coming soon)*
-
-Is "cybernetic hermeneutics" genuinely novel, or just recombination of existing ideas? What would it mean for this to be a new discipline vs. applied synthesis of existing frameworks?
-
-### [Narrative Computing and the Extended Mind](./narrative-computing-extended-mind.md) *(coming soon)*
-
-Connection to extended mind thesis (Clark & Chalmers). Are LLMs tools we use for thinking, or parts of a distributed cognitive system? What does that imply for methodology?
-
-### [The Epistemology of Collaborative Sense-Making](./epistemology-collaborative-sensemaking.md) *(coming soon)*
-
-Philosophical examination: what does it mean to "know" something when knowledge is produced through AI collaboration? Is this different from traditional epistemology?
+- **When This Methodology Fails** — failure modes, edge cases, situations where this is the wrong tool
+- **Cognitive Overhead and Diminishing Returns** — when methodology becomes busywork, calibrating technique to problem complexity
+- **From Methodology to Formalism** — the bridge essay connecting this essay series to the palgebra; how the pipeline algebra makes the methodology auditable, composable, and its quality propagation explicit
+- **Narrative Computing and the Extended Mind** — connection to Clark & Chalmers; are LLMs tools or parts of a distributed cognitive system?
 
 ## For Further Reading
 

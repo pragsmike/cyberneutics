@@ -39,23 +39,13 @@ Structured template for documenting what worked, what failed, and how to apply l
 
 ### Complete Worked Examples
 
-**[Hiring Decision Example](./hiring-decision-example.md)**
+**[Hiring Decision Example](./examples/hiring-decision-example.md)**
 Complete transcript of a hiring deliberation using adversarial committees and Robert's Rules, with independent evaluation scores, lessons extracted, and decision rationale.
 
-**[Strategic Pivot Example](./examples/strategic-pivot-example.md)** *(coming soon)*
-Product strategy decision showing how the methodology works in a different domain. Demonstrates generality across problem types.
+**[Repository Review Example](./examples/repository-review-example.md)**
+The methodology applied to reviewing a codebase.
 
-**[Failure Case Example](./examples/failure-case-example.md)** *(coming soon)*
-Example where the methodology caught a decision that would have been wrong. Shows value of adversarial process and independent evaluation.
-
-### Transcript Library
-
-**[Example Transcripts](./examples/)** *(coming soon)*
-Collection of annotated deliberation transcripts showing:
-- High-scoring deliberations (what "good" looks like)
-- Low-scoring deliberations (common failure patterns)
-- Before/after iterations (how lessons improve quality)
-- Domain variety (hiring, strategy, resource allocation, partnerships)
+See the [examples directory](./examples/) for the full collection.
 
 ## Troubleshooting
 
@@ -151,6 +141,18 @@ Each layer addresses a specific failure mode:
 2. Robert's Rules prevents statistical shortcuts
 3. Independent evaluation prevents self-confirmation
 4. Cross-scenario learning prevents repeating mistakes
+
+### Formal grounding
+
+This combination pattern is formalized in the [palgebra](../palgebra/):
+
+- A committee deliberation is a **transformation morphism** (consumes a charter, produces a transcript)
+- Rubric evaluation is an **enrichment morphism** (scores the transcript without changing it)
+- The quality gate is a **coproduct** (above threshold → accepted; below → remediation)
+- The feedback loop is a **bounded trace** (max 2 remediation rounds)
+- Character propensities and evaluation rubrics are **catalytic inputs** (used but not consumed)
+
+See [Committee as Palgebra](../palgebra/committee-as-palgebra.md) for the full pipeline as resource equations, and the [Palgebra Reference](../palgebra/reference.md) for the formalism.
 
 ## Contributing
 

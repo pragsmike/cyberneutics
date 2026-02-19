@@ -291,6 +291,20 @@ Adversarial committees work best when combined with:
 
 See the [artifacts/](./README.md) directory for detailed protocols on each technique.
 
+## Where This Fits: The Pipeline View
+
+In the [palgebra formalism](../palgebra/reference.md), a committee deliberation is a **transformation morphism** — it consumes a charter (problem statement + constraints) and produces a transcript (the deliberation record):
+
+```
+charter × character-propensities → transcript  [Deliberate]  {catalytic: character-propensities}
+```
+
+Character propensities are a **catalytic input** — they participate in every deliberation without being consumed or modified. This is why fixed rosters work: the propensities are reusable infrastructure, not per-problem artifacts.
+
+The transcript then flows through **enrichment** (rubric scoring by the independent evaluator), a **quality gate** (threshold check), and optionally a **bounded feedback trace** (remediation loop, max 2 rounds). The full pipeline — from charter to accepted transcript — is formalized in [Committee as Palgebra](../palgebra/committee-as-palgebra.md).
+
+The confidence propagation rule matters here: a committee that produces a Medium-confidence transcript cannot be rescued by excellent evaluation. The quality ceiling is set at generation time. This is why character calibration and Robert's Rules matter — they raise the quality of the *transformation*, not just the scoring of its output.
+
 ## Theoretical Foundation
 
 This technique operationalizes insights from:

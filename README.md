@@ -80,9 +80,10 @@ These aren't incremental improvements. They represent a fundamentally different 
 - [Worked examples and transcripts](./artifacts/examples/README.md)
 
 **[Palgebra](palgebra/)** - Formal algebra for LLM pipelines
-- [Decorated Texts: A Resource-Theoretic View of LLM Pipelines](./palgebra/decorated-texts.md)
-- Treats LLM pipelines as compositions of typed operations on *decorated texts* — artifacts carrying both content and structured metadata
-- Connects the narrative techniques in the essays and artifacts to a precise algebraic framework: resource equations, string diagrams, and YAML-decorated artifact files as three isomorphic representations of the same pipeline
+- **[Reference Card](./palgebra/reference.md)** — start here: syntax, operators, morphism types, propagation rules, composition laws
+- **[Decorated Texts](./palgebra/decorated-texts.md)** — full essay developing the formalism from first principles (soft types, enrichment vs. transformation, confidence propagation, human gates as collapse operators)
+- **[Committee as Palgebra](./palgebra/committee-as-palgebra.md)** — worked example: the adversarial committee pipeline formalized as resource equations
+- Adapts Fong and Spivak's resource-theoretic framework (*Seven Sketches in Compositionality*, Ch. 2) to LLM pipelines. Three isomorphic representations: resource equations, string diagrams, and YAML-decorated artifact files
 
 The essays describe *why* narrative engines need structured methodology. The artifacts provide *how* — concrete techniques like adversarial committees and evaluation rubrics. Palgebra provides *what, precisely* — a formal language for specifying pipelines, their types, their quality propagation, and their composition laws. An adversarial committee is a transformation morphism; a rubric evaluation is an enrichment morphism; a human review gate is a collapse operator. The formalism makes these relationships explicit and composable.
 

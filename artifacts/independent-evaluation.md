@@ -413,6 +413,28 @@ This technique operationalizes:
 
 **Adversarial Training** (from ML): Generator and discriminator in tension drive improvement. The generator tries to fool the discriminator, the discriminator tries to catch the generator's tricks. The equilibrium is higher quality output than either could produce alone.
 
+## Formal Grounding: Evaluation as Enrichment
+
+In the [palgebra formalism](../palgebra/reference.md), independent evaluation is an **enrichment morphism** — it reads the transcript body, evaluates it against rubrics, and writes scores to metadata without changing the transcript itself:
+
+```
+transcript × evaluation-rubrics → transcript  [Evaluate]  {catalytic: evaluation-rubrics; enriches: scores}
+```
+
+The five rubrics are the **rubric half of a soft type** — the membership function that grades how well a deliberation inhabits the type "rigorous deliberation." Scores are 0-3 per criterion, rolling up to a confidence band. This is graded type inhabitation, not boolean pass/fail.
+
+The quality gate that follows is a **coproduct**:
+
+```
+transcript × threshold → accepted + needs-remediation  [QualityGate]  {catalytic: threshold; discard: needs-remediation}
+```
+
+And the remediation loop is a **bounded trace** (max 2 rounds) — the rejected transcript re-enters the committee with evaluation feedback, producing a remediation that is then re-evaluated. The bound prevents the system from going autoimmune (over-correcting endlessly).
+
+The key propagation rule: **confidence can only degrade through the pipeline.** If the original deliberation scores Medium on evidence standards, no amount of downstream enrichment can raise the overall pipeline confidence above Medium. To get higher-confidence output, you must improve the generation step, not the evaluation step.
+
+See [Committee as Palgebra](../palgebra/committee-as-palgebra.md) for the full pipeline as resource equations, and the [Palgebra Reference](../palgebra/reference.md) for the underlying formalism.
+
 ## Why This Feels Paranoid (And Why That's Good)
 
 Independent evaluation feels like overkill. You generated a deliberation that looks rigorous. Why second-guess it?
