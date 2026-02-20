@@ -123,8 +123,8 @@ Let's vote on the current motion and move forward.
 **Problem**: Claims without evidence
 **Fix**:
 ```
-Vic should challenge that. [Character] just claimed [X] without 
-evidence. Vic, demand falsifiability criteria.
+The evidence prosecutor should challenge that. [Character] just claimed [X] without 
+evidence. Demand falsifiability criteria.
 ```
 
 **Problem**: Skipped reasoning steps
@@ -214,7 +214,7 @@ The methodology helps you think, not replaces your thinking. You should end with
 
 **Fix**: Explicitly demand hostility.
 ```
-This is too diplomatic. Maya should be paranoid. Vic should be 
+This is too diplomatic. [Paranoid realist] should be suspicious. [Evidence prosecutor] should be 
 prosecutorial. Make them fight.
 ```
 

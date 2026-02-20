@@ -216,10 +216,10 @@ CHAIR (Procedural Enforcer)
 
 **Smaller (3 members)** for simpler problems:
 ```
-Core trio:
-- Evidence Prosecutor (Vic)
-- Systems Thinker (Tammy)  
-- One domain-specific perspective (Maya/Frankie/Joe based on problem)
+Core trio (from agent/roster.md):
+- Evidence Prosecutor
+- Systems Thinker
+- One domain-specific perspective (choose based on problem: political, values, or institutional-memory)
 ```
 
 **Larger (6-7 members)** for very complex problems:
