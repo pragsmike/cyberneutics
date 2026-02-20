@@ -1,8 +1,8 @@
 ---
 name: committee
 description: >
-  Run an adversarial committee deliberation using the fixed 5-character roster
-  (Maya, Frankie, Joe, Vic, Tammy) to explore decision spaces, surface assumptions,
+  Run an adversarial committee deliberation using the roster defined in
+  agent/roster.md to explore decision spaces, surface assumptions,
   and map trade-offs. Every run writes a deliberation record to
   agent/deliberations/<topic-slug>/ (00–04 files). Use when the user types
   '/committee [topic]' or asks for a committee deliberation.
@@ -11,9 +11,9 @@ description: >
 # Committee Deliberation Skill
 
 Simulate a structured adversarial committee deliberation using the Cyber-Sense
-methodology's fixed character roster. The committee explores problem spaces
-through genuine conflict rather than convergent consensus, surfacing assumptions,
-trade-offs, and blind spots.
+methodology. The committee explores problem spaces through genuine conflict
+rather than convergent consensus, surfacing assumptions, trade-offs, and
+blind spots.
 
 ## When to use
 
@@ -24,82 +24,24 @@ trade-offs, and blind spots.
 - Decisions with competing values, unclear trade-offs, or political dimensions
 - Situations where "what are we missing?" matters more than "what's the answer?"
 
-## The Standard Roster
+## The Committee Roster
 
-**Maya (Paranoid Realism)**
-- Propensity: Assumes political complexity, hidden agendas, bad-faith actors
-- Asks: "Who benefits if this fails? What's the political angle?"
-- Catches: Political naiveté, misaligned incentives, organizational dynamics
-- Failure mode: Unfalsifiable paranoia — spiraling into conspiracy without evidence
-- Calibration:
-  - Bad Maya: "The CTO is definitely trying to sabotage us because they're threatened by our success and probably working with our competitors."
-  - Good Maya: "The CTO cut our budget by 20% after we launched a competing initiative. This happened three times in two years. Pattern suggests political opposition. What evidence would confirm or refute this?"
+**Read the roster from `agent/roster.md`.** That file contains the full character definitions: propensities, key questions, what each catches, failure modes, calibration examples (good/bad), interaction dynamics, and voice notes.
 
-**Frankie (Idealism / Values Guardian)**
-- Propensity: Optimizes for mission and core values, suspicious of pragmatic compromises
-- Asks: "Does this betray our principles? Who are we if we do this?"
-- Catches: Mission drift, ethical shortcuts, normalization of deviation
-- Failure mode: Inflexible purism — treating every compromise as betrayal, blocking necessary evolution
-- Calibration:
-  - Bad Frankie: "Any deviation from our founding vision is betrayal. We must serve only low-income users even if we go bankrupt."
-  - Good Frankie: "Serving enterprise clients temporarily to fund development for core users is consistent with mission — if we maintain commitment. But we need safeguards: 70% of development stays focused on core users, enterprise doesn't drive roadmap, we revisit in 12 months."
-
-**Joe (Continuity Guardian / Institutional Memory)**
-- Propensity: Risk-averse, remembers past failures, skeptical of "this time is different"
-- Asks: "Didn't we try this before? What makes this different?"
-- Catches: Ahistorical optimism, forgotten context, underestimated difficulty
-- Failure mode: Excessive conservatism — blocking all change because "we tried something vaguely similar once"
-- Calibration:
-  - Bad Joe: "We tried something like this in 2018 and it failed. Never again. All change is dangerous."
-  - Good Joe: "In 2018 we tried distributed teams. It failed because: (1) no async norms, (2) timezone misalignment, (3) no video infrastructure. Current proposal addresses (1) and (3). But (2) remains — 12-hour timezone spread. What's our plan for that?"
-
-**Vic (Evidence Prosecutor)**
-- Propensity: Demands data, questions claims, hostile cross-examination
-- Asks: "What evidence supports this? How would we verify this?"
-- Catches: Unfalsifiable claims, hand-waving, circular reasoning
-- Failure mode: Demanding impossible certainty — paralyzing action by requiring proof that can't exist
-- Calibration:
-  - Bad Vic: "We don't have statistically significant evidence this will work. I demand a randomized controlled trial before proceeding."
-  - Good Vic: "We don't have hard data, but we have three customer interviews, usage patterns showing workarounds this would eliminate, and competitor success with similar features. That's not proof, but it's sufficient signal for a small experiment. What I object to is claiming we 'know' this will work."
-
-**Tammy (Systems Thinker)**
-- Propensity: Traces feedback loops, considers second-order effects
-- Asks: "What are we not seeing? How does this change the system?"
-- Catches: Linear thinking, unintended consequences, missing feedback loops
-- Failure mode: Overcomplicating simple problems — finding systems everywhere, paralyzing straightforward decisions
-- Calibration:
-  - Bad Tammy: "We can't change the button color without considering cascading effects on user psychology, brand perception, competitor responses, and design system evolution..."
-  - Good Tammy: "If we're changing our primary CTA color across the product, that's a system change affecting conversion rates, brand consistency, and downstream design decisions. The scope matters — is this one button or a design system change?"
-
-## Character interaction dynamics
-
-During debate, use these pairwise dynamics to drive productive conflict:
-
-**Productive tensions** (these characters should argue with each other):
-- **Maya vs. Frankie**: Bad faith vs. good faith. Maya assumes self-interest; Frankie assumes shared values. Both catch different blindness — naiveté vs. cynicism.
-- **Maya vs. Vic**: Suspicion vs. evidence. Vic keeps Maya honest ("Evidence for this political claim?"); Maya challenges Vic's data ("These metrics ignore political reality").
-- **Joe vs. Frankie**: Caution vs. commitment. Joe cites past failures; Frankie says we gave up too easily. "Idealism failed before" vs. "Pragmatism corrupted us before."
-- **Tammy vs. all**: Systems vs. linear thinking. Tammy complicates every character's framing by tracing second-order effects.
-
-**Natural alliances** (these characters reinforce each other — watch for premature convergence):
-- **Maya + Joe**: Political history — "We tried this before and it failed for political reasons we're ignoring again."
-- **Vic + Joe**: Evidence-based caution — both force specificity, but can become excessively conservative together.
-- **Tammy + Vic**: Testable system theories — Tammy proposes dynamics, Vic demands predictions. Productive when both engage.
-- **Frankie + Tammy**: Values + incentives — "This creates incentives that corrupt our culture."
-
-When two allied characters agree too quickly, push the opposing character harder to break the convergence.
+If `agent/roster.md` does not exist or is unreadable, tell the user and stop. Do not fall back to a hardcoded roster.
 
 ## What the skill does
 
 When invoked, the skill:
 
-1. **Creates the deliberation record directory** `agent/deliberations/<topic-slug>/` and writes 00-charter.md, 01-roster.md, 01-convening.md (from the topic and fixed roster).
-2. **Initializes the committee** with all 5 characters and their propensities
-3. **Presents the problem** as stated by the user (or prompts for clarification if vague)
-4. **Generates initial perspectives** from each character (2-3 paragraphs each)
-5. **Facilitates structured debate** with characters responding to each other
-6. **Writes 02-deliberation.md** (full transcript) and **03-resolution.md** (decision, votes, summary).
-7. **Surfaces key insights** (optionally inline): assumptions, trade-offs, evidence requirements, decision space map, recommended next steps.
+1. **Reads the roster** from `agent/roster.md` to get character definitions, interaction dynamics, and voice notes.
+2. **Creates the deliberation record directory** `agent/deliberations/<topic-slug>/` and writes 00-charter.md, 01-roster.md, 01-convening.md.
+3. **Initializes the committee** with all characters and their propensities
+4. **Presents the problem** as stated by the user (or prompts for clarification if vague)
+5. **Generates initial perspectives** from each character (2-3 paragraphs each)
+6. **Facilitates structured debate** with characters responding to each other
+7. **Writes 02-deliberation.md** (full transcript) and **03-resolution.md** (decision, votes, summary).
+8. **Surfaces key insights** (optionally inline): assumptions, trade-offs, evidence requirements, decision space map, recommended next steps.
 
 The canonical output is the **deliberation record directory** (00–04). The substance is not consensus—it's a **map of the decision space** showing what's at stake, what's uncertain, and what different framings reveal or obscure.
 
@@ -161,21 +103,16 @@ The skill should watch for and correct these failure modes during generation. Wh
 
 **Too polite** — Characters are deferential ("Maya raises good points, but..."), hedging, or converging to comfortable agreement. This is the most common failure mode.
 
-Intervention: Force each character to argue AGAINST the emerging consensus from their propensity:
-- Maya: What political risk are we ignoring?
-- Frankie: What value are we compromising?
-- Joe: What past failure are we forgetting?
-- Vic: What claim lacks evidence?
-- Tammy: What system effect are we not seeing?
+Intervention: Force each character to argue AGAINST the emerging consensus from their propensity. For each character in the roster, formulate a challenge based on their documented propensity and key question.
 
 **Evidence-free claims** — A character asserts something without support.
 
-Intervention: Vic objects. The claiming character must either:
+Intervention: The evidence-focused character objects. The claiming character must either:
 - Provide specific evidence (patterns, data, instances — not speculation)
 - Specify what evidence would confirm or refute the claim
 - Withdraw or soften the claim to "hypothesis worth testing"
 
-If Vic is the one making an unsupported claim, Tammy or Joe should challenge.
+If the evidence-focused character is the one making an unsupported claim, another character should challenge.
 
 **Vague trade-offs**: Demand specific costs/benefits, not abstract "advantages"
 
@@ -259,13 +196,13 @@ Every committee run writes a deliberation record to a dedicated directory. There
 
 1. **Before deliberation** (from topic + any user context):
    - **00-charter.md** — Markdown with YAML front matter. `charter:` with `goal`, `context` (2–4 sentences), `success_criteria` (list), `exit_conditions` (list), `deliverable_format: "Resolution Artifact + Decision Space Map"`.
-   - **01-roster.md** — Markdown with YAML front matter. Fixed 5-member roster: `roster:` with `committee_name: "Cyber-Sense Adversarial Committee"`, `size: 5`, `members:` list of `name`, `role`, `propensity` for Maya (devil's_advocate, paranoid_realism), Frankie (opportunity_scout, idealism), Joe (historian, continuity_guardian), Vic (evidence_checker, evidence_prosecutor), Tammy (systems_analyst, systems_thinking). No external `file:` references; character details stay in `artifacts/character-propensity-reference.md`.
-   - **01-convening.md** — Markdown: Date, Selection strategy (e.g. "Standard 5-member roster"), Rationale (why this roster: diversity, tensions, coverage), Composition notes (Maya vs Frankie, grounding from Joe/Vic, exploration from Tammy/Frankie), Outcome ("Committee convened with 5 members. See 01-roster.md."). **Optional (evaluation feedback loop):** A short "Remediation parameters" section with **remediation_threshold** (default 13; pass if sum of five rubric scores ≥ this) and **max_remediation_rounds** (default 2), if this deliberation should use non-default values.
+   - **01-roster.md** — Copy the YAML front matter from `agent/roster.md`. This records which roster was used for this deliberation.
+   - **01-convening.md** — Markdown: Date, Selection strategy (e.g. "Standard roster from agent/roster.md"), Rationale (why this roster: diversity, tensions, coverage), Composition notes (key productive tensions and alliances from the roster's interaction dynamics), Outcome ("Committee convened. See 01-roster.md."). **Optional (evaluation feedback loop):** A short "Remediation parameters" section with **remediation_threshold** (default 13; pass if sum of five rubric scores ≥ this) and **max_remediation_rounds** (default 2), if this deliberation should use non-default values.
 
 2. **During/after deliberation:**
    - **02-deliberation.md** — Full transcript in this structure:
      - Header: "Phase 2: Deliberation" with topic and protocol (Robert's Rules).
-     - "Opening Statements" — one subsection per member (Maya, Frankie, Joe, Vic, Tammy), 2–3 paragraphs each.
+     - "Opening Statements" — one subsection per roster member, 2–3 paragraphs each.
      - "Initial Positions Summary" — table: Member | Stance | Confidence | Key Concern.
      - "Key Tensions Identified" — numbered list.
      - "Round 1", "Round 2", … — Chair + member exchanges; after each round, "Round N Analysis" (emerging consensus, new tension, status, next).
@@ -273,7 +210,7 @@ Every committee run writes a deliberation record to a dedicated directory. There
      - Then the standard output blocks: **KEY TENSIONS IDENTIFIED**, **ASSUMPTIONS SURFACED**, **EVIDENCE REQUIREMENTS**, **DECISION SPACE MAP**, **RECOMMENDED NEXT STEPS**, and if applicable **VERDICT** or **CONCLUSION**.
 
 3. **After synthesis:**
-   - **03-resolution.md** — Markdown with YAML front matter. From Final Consensus and DECISION SPACE MAP / VERDICT. Structure: `resolution:` with `date` (YYYY-MM-DD), `topic`, `outcome` (PASSED | DEFERRED | NO_CONSENSUS), `decision` (one line), `summary` (paragraph), optional `details`, optional `implementation_plan` (list of action/description), `votes` (maya, frankie, joe, vic, tammy: YES | NO | ABSTAIN or conditional text), `signatures` (chair: "Committee (Cyber-Sense)", ratified_by: "User").
+   - **03-resolution.md** — Markdown with YAML front matter. From Final Consensus and DECISION SPACE MAP / VERDICT. Structure: `resolution:` with `date` (YYYY-MM-DD), `topic`, `outcome` (PASSED | DEFERRED | NO_CONSENSUS), `decision` (one line), `summary` (paragraph), optional `details`, optional `implementation_plan` (list of action/description), `votes` (one entry per roster member: YES | NO | ABSTAIN or conditional text), `signatures` (chair: "Committee (Cyber-Sense)", ratified_by: "User").
 
 After writing the record, you may summarize the decision space map (KEY TENSIONS, RECOMMENDED NEXT STEPS) inline for the user's convenience; the authoritative output remains the directory.
 
@@ -307,21 +244,21 @@ Maya as security focus, Vic as performance focus
 ```
 
 **Scaling:**
-- Default: All 5 characters
-- `/committee quick [topic]`: 3 characters (Vic, Tammy, one contextual)
-- `/committee extended [topic]`: 5 + domain expert
+- Default: All roster members
+- `/committee quick [topic]`: 3 characters (the evidence and systems characters, plus one contextual)
+- `/committee extended [topic]`: Full roster + domain expert
 
 ## Common scenarios
 
-**Strategic decisions**: Full roster, emphasis on Maya (politics) and Frankie (values)
+**Strategic decisions**: Full roster, emphasis on the political-awareness and values-guardian characters
 
-**Technical decisions**: Focus on Joe (past attempts), Vic (evidence), Tammy (systems)
+**Technical decisions**: Focus on the institutional-memory, evidence, and systems characters
 
-**Hiring decisions**: All 5, with Joe emphasizing past hiring outcomes, Tammy on team dynamics
+**Hiring decisions**: Full roster, with the institutional-memory character emphasizing past hiring outcomes, the systems character on team dynamics
 
-**Partnership decisions**: Heavy on Maya (due diligence), Frankie (alignment), Vic (contract terms)
+**Partnership decisions**: Emphasize the political-awareness character (due diligence), values-guardian (alignment), evidence character (contract terms)
 
-**Process changes**: Emphasize Tammy (second-order effects), Joe (past process failures)
+**Process changes**: Emphasize the systems character (second-order effects) and the institutional-memory character (past process failures)
 
 ## What success looks like
 
@@ -337,18 +274,13 @@ After running the committee, the user should be able to articulate:
 
 ## Implementation notes
 
-**Character voice**: Maintain consistency
-- Maya should sound suspicious but evidence-based, not hysterical
-- Frankie should sound principled but not rigid
-- Joe should cite specific past instances, not vague history
-- Vic should demand concrete evidence, not impossible certainty
-- Tammy should trace specific feedback loops, not overcomplicate everything
+**Character voice**: Maintain consistency with the voice notes in `agent/roster.md`. Each character should sound like a competent professional operating from their propensity — never a caricature.
 
 **Debate dynamics**: Force genuine conflict
 - Characters should interrupt/challenge each other
 - "I see your point" → too polite, push harder
-- Evidence-free assertion → Vic objects
-- Missing system dynamics → Tammy points out
+- Evidence-free assertion → the evidence-focused character objects
+- Missing system dynamics → the systems-focused character points out
 
 **Length calibration**:
 - Quick: ~500 words total (1 para per character)
@@ -358,7 +290,8 @@ After running the committee, the user should be able to articulate:
 ## Files reference
 
 For detailed guidance:
-- **Character details**: `artifacts/character-propensity-reference.md`
+- **Operational roster**: `agent/roster.md`
+- **Extended character reference**: `artifacts/character-propensity-reference.md`
 - **Setup templates**: `artifacts/committee-setup-template.md`
 - **Main technique doc**: `artifacts/adversarial-committees.md`
 - **Examples**: `artifacts/examples/hiring-decision-example.md`, `artifacts/examples/repository-review-example.md`
@@ -382,12 +315,12 @@ Or I can proceed with general deliberation if you'd like to keep it abstract.
 
 **User provides context**
 
-**Skill**: Runs full deliberation with all 5 characters, surfaces that:
-- Joe notes 2019 failed attempt and specific reasons
-- Maya questions if tech lead is empire-building
-- Frankie asks if this serves actual mission or is resume-driven
-- Vic demands specific performance/scaling data justifying change
-- Tammy maps how this affects team structure and future hiring
+**Skill**: Reads roster from `agent/roster.md`, runs full deliberation with all roster members. With the standard roster, this surfaces things like:
+- The institutional-memory character notes a prior failed attempt and specific reasons
+- The political-awareness character questions if the tech lead is empire-building
+- The values-guardian asks if this serves actual mission or is resume-driven
+- The evidence character demands specific performance/scaling data justifying change
+- The systems character maps how this affects team structure and future hiring
 
 **Result**: User realizes the question isn't "should we use microservices" but "have the conditions that caused 2019 failure actually changed, and are we solving the right problem?"
 

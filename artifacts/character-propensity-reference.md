@@ -1,5 +1,7 @@
 # Character Propensity Reference
 
+> **Relationship to `agent/roster.md`**: The operational roster used by the committee skill lives in `agent/roster.md`. That file contains the character definitions the skill reads at invocation time: propensities, key questions, what each catches, failure modes, calibration examples (good/bad), interaction dynamics, and voice notes. This document provides **extended commentary** beyond what the roster file contains: detailed personality theory, interaction analysis, examples of each character at their best, scaling considerations, and deep calibration guidance.
+
 ## Overview
 
 This document provides detailed reference material for each member of the standard adversarial committee roster. Use this to understand when each character is essential, how they interact, what their failure modes are, and how to calibrate their behavior.

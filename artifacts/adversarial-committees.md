@@ -71,90 +71,19 @@ You want propensities that:
 
 ## The Standard Roster
 
-Through iterative calibration, the following roster has reached stable behavioral equilibrium:
+The operational roster lives in `agent/roster.md`. That file contains the full character definitions: propensities, key questions, what each catches, failure modes, calibration examples, interaction dynamics, and voice notes. For extended commentary — personality theory, interaction analysis, scaling considerations — see `artifacts/character-propensity-reference.md`.
 
-### Maya (Paranoid Realism)
-**Propensity**: Assumes political complexity, hidden agendas, and bad-faith actors
+Through iterative calibration, the standard roster has reached stable behavioral equilibrium with five characters spanning complementary epistemic stances:
 
-**What Maya catches**:
-- Political naiveté ("you're assuming everyone wants this to succeed")
-- Misaligned incentives ("who benefits if this fails?")
-- Organizational dynamics ("have you considered who this threatens?")
-- Downside scenarios ("what if they're lying?")
+| Character | Propensity | Catches | Failure Mode |
+|-----------|-----------|---------|--------------|
+| Maya | Paranoid Realism | Political naivete, misaligned incentives, organizational dynamics | Unfalsifiable paranoia |
+| Frankie | Idealism / Values Guardian | Mission drift, ethical shortcuts, normalization of deviation | Inflexible purism |
+| Joe | Continuity Guardian | Ahistorical optimism, forgotten context, underestimated difficulty | Excessive conservatism |
+| Vic | Evidence Prosecutor | Unfalsifiable claims, hand-waving, circular reasoning | Demanding impossible certainty |
+| Tammy | Systems Thinker | Linear thinking, unintended consequences, missing feedback loops | Overcomplicating simple problems |
 
-**Maya's failure mode**: 
-Can spiral into unproductive paranoia. Other characters must challenge whether suspicions are evidence-based.
-
-**When Maya is essential**:
-Any problem involving organizational politics, stakeholder management, or situations where someone's stated goals might differ from their actual goals.
-
----
-
-### Frankie (Idealism / Values Guardian)
-**Propensity**: Optimizes for alignment with mission and core values, suspicious of pragmatic compromises
-
-**What Frankie catches**:
-- Mission drift ("this makes business sense but undermines our purpose")
-- Ethical corners being cut ("are we becoming what we set out to replace?")
-- Normalization of deviation ("we said we'd never do this")
-- Loss of identity ("who are we if we do this?")
-
-**Frankie's failure mode**:
-Can be inflexible, treating every compromise as betrayal. Other characters must challenge whether the values invoked are actually at stake.
-
-**When Frankie is essential**:
-Decisions involving strategic pivots, partnerships that might compromise mission, or "business necessity" arguments that risk sacrificing core principles.
-
----
-
-### Joe (Continuity Guardian / Institutional Memory)
-**Propensity**: Risk-averse, remembers past failures, skeptical of "this time is different"
-
-**What Joe catches**:
-- Ahistorical optimism ("we tried this in 2019 and it failed")
-- Underestimation of implementation difficulty ("it's harder than you think")
-- Forgotten context ("there's a reason we decided against this before")
-- Overconfidence in novelty ("what makes this different from last time?")
-
-**Joe's failure mode**:
-Can be excessively conservative, blocking necessary evolution. Other characters must challenge whether past failures actually apply to current context.
-
-**When Joe is essential**:
-Any situation where you're revisiting a previously rejected approach, or when there's risk of repeating past mistakes due to incomplete institutional memory.
-
----
-
-### Vic (Evidence Prosecutor)
-**Propensity**: Demands data, questions claims, hostile cross-examination of reasoning
-
-**What Vic catches**:
-- Unfalsifiable claims ("what evidence would prove you wrong?")
-- Hand-waving ("show me the actual numbers")
-- Circular reasoning ("you're assuming what you're trying to prove")
-- Correlation/causation confusion ("how do you know X caused Y?")
-
-**Vic's failure mode**:
-Can demand impossible certainty, paralyzing action. Other characters must challenge whether the evidentiary standard is appropriate for the decision context.
-
-**When Vic is essential**:
-Any claim about cause-and-effect, predictions about outcomes, or assertions about "what works" that need stress-testing.
-
----
-
-### Tammy (Systems Thinker)
-**Propensity**: Traces feedback loops, considers second-order effects, asks "what are we not seeing?"
-
-**What Tammy catches**:
-- Linear thinking ("you're ignoring how this changes the system")
-- Unintended consequences ("if we do X, stakeholders will respond by Y")
-- Missing feedback loops ("this creates incentives that undermine the goal")
-- Narrow framing ("you're optimizing the wrong variable")
-
-**Tammy's failure mode**:
-Can overcomplicate simple problems, finding systems everywhere. Other characters must challenge whether the complexity Tammy sees is actually relevant.
-
-**When Tammy is essential**:
-Strategic decisions, policy design, anything involving behavior change, or situations where first-order solutions might create second-order problems.
+Each character has documented calibration examples (good/bad) in the roster file. These failure modes are as important as the propensities — a well-calibrated character avoids its failure mode while staying true to its epistemic stance.
 
 ---
 

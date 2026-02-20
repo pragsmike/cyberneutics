@@ -21,31 +21,9 @@ This document provides ready-to-use prompt templates for initializing and runnin
 I need an adversarial committee deliberation using the Cyber-Sense methodology.
 
 COMMITTEE ROSTER:
-
-MAYA (Paranoid Realism)
-- Propensity: Assumes political complexity, hidden agendas, bad-faith actors
-- Asks: "Who benefits if this fails? What's the political angle?"
-- Catches: Political naiveté, misaligned incentives, organizational dynamics
-
-FRANKIE (Idealism / Values Guardian)
-- Propensity: Optimizes for mission and core values, suspicious of pragmatic compromises
-- Asks: "Does this betray our principles? Who are we if we do this?"
-- Catches: Mission drift, ethical corners being cut, normalization of deviation
-
-JOE (Continuity Guardian / Institutional Memory)
-- Propensity: Risk-averse, remembers past failures, skeptical of "this time is different"
-- Asks: "Didn't we try this before? What makes this different?"
-- Catches: Ahistorical optimism, forgotten context, underestimated implementation difficulty
-
-VIC (Evidence Prosecutor)
-- Propensity: Demands data, questions claims, hostile cross-examination
-- Asks: "What evidence supports this? What would prove you wrong?"
-- Catches: Unfalsifiable claims, hand-waving, circular reasoning, correlation/causation confusion
-
-TAMMY (Systems Thinker)
-- Propensity: Traces feedback loops, considers second-order effects
-- Asks: "What are we not seeing? How does this change the system?"
-- Catches: Linear thinking, unintended consequences, missing feedback loops, narrow framing
+[Paste the character definitions from agent/roster.md, or reference it directly
+if your tool can read files. Each character needs: name, propensity, key question,
+what they catch, and failure mode.]
 
 DELIBERATION REQUIREMENTS:
 - Perspectives must genuinely conflict, not converge to diplomatic consensus
@@ -92,11 +70,8 @@ DECISION: [One sentence]
 CONTEXT: [2-3 sentences max]
 
 COMMITTEE:
-- MAYA (paranoid realist): political risks, hidden agendas
-- FRANKIE (idealist): values alignment, mission integrity  
-- JOE (risk-averse): past failures, implementation difficulty
-- VIC (evidence prosecutor): data requirements, falsifiability
-- TAMMY (systems thinker): feedback loops, unintended consequences
+[List each character from agent/roster.md with name, propensity, and focus area.
+One line each.]
 
 REQUIREMENTS:
 - 1 paragraph each
@@ -117,7 +92,7 @@ CRITICAL DECISION DELIBERATION - HIGH RIGOR PROTOCOL
 I need a formal adversarial committee deliberation for a high-stakes decision.
 
 COMMITTEE COMPOSITION:
-[Use full Template A roster descriptions]
+[Paste the full character definitions from agent/roster.md]
 
 PROCEDURAL FRAMEWORK:
 This deliberation will use simplified Robert's Rules of Order:
@@ -174,36 +149,23 @@ CONTEXT:
 - Past hiring outcomes: [relevant history]
 
 COMMITTEE (HIRING-CALIBRATED):
+[Start from the roster in agent/roster.md, then narrow each character's
+focus to the hiring domain. Example domain-specific focus areas:]
 
-MAYA - Focus on:
-- Team dynamics and politics
-- Who this hire threatens/empowers
-- Hidden stakeholder agendas
-- Power dynamics this creates
+MAYA - Focus on: team dynamics and politics, who this hire
+  threatens/empowers, hidden stakeholder agendas, power dynamics
 
-FRANKIE - Focus on:
-- Mission alignment (are we building capability or buying delivery?)
-- Long-term vs short-term optimization
-- Talent development commitments
-- Cultural fit and values
+FRANKIE - Focus on: mission alignment (building capability vs buying
+  delivery?), talent development commitments, cultural fit and values
 
-JOE - Focus on:
-- Past hiring mistakes in similar contexts
-- Implementation realities (mentorship bandwidth, onboarding capacity)
-- Structural constraints that haven't changed
-- What made previous hires succeed/fail
+JOE - Focus on: past hiring mistakes in similar contexts, mentorship
+  bandwidth, onboarding capacity, what made previous hires succeed/fail
 
-VIC - Focus on:
-- Actual productivity data (not vibes)
-- Measurable differences between options
-- Verifiable claims about candidate quality
-- Cost-benefit with numbers
+VIC - Focus on: actual productivity data (not vibes), measurable
+  differences between options, cost-benefit with numbers
 
-TAMMY - Focus on:
-- How this hire affects team composition dynamics
-- Feedback loops (does this make future hiring easier/harder?)
-- Second-order effects on team capability
-- Systemic implications beyond this hire
+TAMMY - Focus on: how this hire affects team composition dynamics,
+  feedback loops (future hiring easier/harder?), systemic implications
 
 LESSONS FROM PAST HIRING DELIBERATIONS:
 [Inject domain-specific lessons here]
@@ -217,7 +179,7 @@ Then: Structured debate on specific motion
 
 ### Modifying Character Propensities
 
-If the standard roster doesn't fit your context, adjust propensities:
+The standard roster lives in `agent/roster.md`. If it doesn't fit your context, adjust propensities for a specific domain:
 
 **Example: Technical Architecture Decision**
 ```
@@ -292,13 +254,9 @@ If you can't answer these, the committee will struggle. Do the pre-work.
 ```
 INTERVENTION: The current discussion is too diplomatic. This suggests premature convergence to comfortable consensus.
 
-Required: Each character must now argue AGAINST the emerging consensus from their propensity. Show me what we're missing by being too agreeable.
+Required: Each character must now argue AGAINST the emerging consensus from their propensity. For each character in the roster, formulate a challenge based on their documented propensity and key question.
 
-Maya: What political risk are we ignoring?
-Frankie: What value are we compromising?
-Joe: What past failure are we forgetting?
-Vic: What claim lacks evidence?
-Tammy: What system effect are we not seeing?
+Show me what we're missing by being too agreeable.
 ```
 
 ### When Claims Lack Evidence
@@ -306,7 +264,7 @@ Tammy: What system effect are we not seeing?
 ```
 POINT OF ORDER: [Character] just claimed [specific claim] without supporting evidence.
 
-Vic should challenge this claim with:
+The evidence-focused character should challenge this claim with:
 - What specific evidence supports this?
 - What would constitute counter-evidence?
 - Is this falsifiable?

@@ -66,30 +66,22 @@ Copy this prompt template and fill in your problem:
 ```
 I need an adversarial committee to help me think through a decision.
 
-The committee has 5 members with different propensities:
+The committee roster is defined in agent/roster.md. Paste the character
+definitions here, or if your tool can read files, reference that file
+directly. Each character needs: name, propensity, key question, and
+what they catch.
 
-MAYA (Paranoid Realism): Assumes political complexity, hidden agendas, 
-bad-faith actors. Asks "who benefits if this fails?"
-
-FRANKIE (Idealism): Optimizes for mission and values, suspicious of 
-pragmatic compromises. Asks "does this betray our principles?"
-
-JOE (Continuity Guardian): Risk-averse, remembers past failures, 
-skeptical of "this time is different." Asks "didn't we try this before?"
-
-VIC (Evidence Prosecutor): Demands data, questions claims, hostile 
-cross-examination. Asks "what evidence supports this?"
-
-TAMMY (Systems Thinker): Traces feedback loops, considers second-order 
-effects. Asks "what are we not seeing?"
+[PASTE CHARACTER DEFINITIONS FROM agent/roster.md]
 
 The problem:
 [PASTE YOUR PROBLEM FRAMING FROM STEP 1]
 
-Please have each committee member respond with their initial perspective 
-on this decision. Keep responses to 2-3 paragraphs each. Be genuinely 
+Please have each committee member respond with their initial perspective
+on this decision. Keep responses to 2-3 paragraphs each. Be genuinely
 adversarial—these perspectives should conflict, not converge.
 ```
+
+> **Note**: If you're using the `/committee` skill in this repository, it reads the roster automatically from `agent/roster.md`. The template above is for manual use outside the skill.
 
 ### Step 3: Run the Debate (15 minutes)
 
@@ -110,14 +102,15 @@ Using simplified Robert's Rules:
 Make a motion and let's see real debate.
 ```
 
-**Watch for these failure modes:**
+**Watch for these failure modes** (examples below use the standard roster names from `agent/roster.md`):
 
 **Problem**: Characters agree too easily
-**Fix**: 
+**Fix**:
 ```
-Stop. This consensus emerged too quickly. What conflict is being 
-papered over? Maya, what specifically concerns you that others are 
-ignoring? Vic, what evidence is missing from this "agreement"?
+Stop. This consensus emerged too quickly. What conflict is being
+papered over? [Paranoid realist], what specifically concerns you that
+others are ignoring? [Evidence prosecutor], what evidence is missing
+from this "agreement"?
 ```
 
 **Problem**: Debate goes in circles
@@ -321,9 +314,9 @@ If you only have 10 minutes and need to see if this is worth exploring:
 
 **2. Paste this ultra-minimal prompt (30 seconds)**:
 ```
-I need quick adversarial takes on this decision from 5 perspectives: 
-paranoid realist, idealist, risk-averse historian, evidence prosecutor, 
-systems thinker.
+I need quick adversarial takes on this decision from 5 perspectives
+(see agent/roster.md for full definitions): paranoid realist, idealist,
+risk-averse historian, evidence prosecutor, systems thinker.
 
 Decision: [YOUR DECISION]
 

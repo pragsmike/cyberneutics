@@ -17,7 +17,7 @@ So the "real" type is the type name (charter, deliberation, …); the number is 
 | File | Type | Purpose |
 |------|------|---------|
 | `00-charter.md` | charter | Goal, context, success criteria, exit conditions, deliverable format |
-| `01-roster.md` | roster | Fixed 5-member committee (Maya, Frankie, Joe, Vic, Tammy); roles and propensities |
+| `01-roster.md` | roster | Committee roster (copied from `agent/roster.md`); roles and propensities |
 | `01-convening.md` | convening | Selection rationale, composition notes, outcome. Optional **Remediation parameters** (for the evaluation feedback loop): **remediation_threshold** (default 13; pass if sum of five rubric scores ≥ this), **max_remediation_rounds** (default 2). Add a short "Remediation parameters" section when this deliberation uses non-default values. |
 | `02-deliberation.md` | deliberation | Full transcript: opening statements, rounds, analyses, consensus, decision space map |
 | `03-resolution.md` | resolution | Decision, summary, votes, implementation plan, signatures |
@@ -32,7 +32,7 @@ Optional (when evaluation feedback loop runs): `05-remediation-1.md`, then `06-e
 - **resolution_evaluation** — Charter vs resolution only (no transcript). Reviewer reads `00-charter.md` and `03-resolution.md`, scores alignment_with_goal, completeness, feasibility, risk_mitigation; writes outcome (RATIFIED | REVISE | REJECT), critique, recommendation. Request via the review skill: e.g. "evaluate the resolution" or "run resolution-only evaluation" for this directory.
 - **transcript_review** — Full transcript evaluation. Reviewer reads `02-deliberation.md` (and optionally `00-charter.md`), scores the five rubrics (reasoning completeness, adversarial rigor, assumption surfacing, evidence standards, trade-off explicitness), writes verdict (High/Medium/Low), biggest_gaps, recommendations. Produced when you run `/review agent/deliberations/<topic-slug>`; the review skill writes to the appropriate evaluation file (04-evaluation-1.md for first review, 04-evaluation-2.md after first remediation, etc.).
 
-All paths and references stay **under the cyber-sense repository**. Roster and character details come from `.claude/skills/committee/SKILL.md` and `artifacts/character-propensity-reference.md`; evaluation rubrics from `.claude/skills/review/SKILL.md` and `artifacts/evaluation-rubrics-reference.md`.
+All paths and references stay **under the cyber-sense repository**. Roster and character details come from `agent/roster.md` (operational definitions) and `artifacts/character-propensity-reference.md` (extended commentary); evaluation rubrics from `.claude/skills/review/SKILL.md` and `artifacts/evaluation-rubrics-reference.md`.
 
 See **agent/archive/augmentation-plan.md** for full schemas and implementation details; **agent/investigation-report.md** for how this structure was derived.
 
