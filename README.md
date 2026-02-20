@@ -87,6 +87,9 @@ These aren't incremental improvements. They represent a fundamentally different 
 
 The essays describe *why* narrative engines need structured methodology. The artifacts provide *how* — concrete techniques like adversarial committees and evaluation rubrics. Palgebra provides *what, precisely* — a formal language for specifying pipelines, their types, their quality propagation, and their composition laws. An adversarial committee is a transformation morphism; a rubric evaluation is an enrichment morphism; a human review gate is a collapse operator. The formalism makes these relationships explicit and composable.
 
+**[Applications](applications/)** - Domain analyses applying the framework to real-world phenomena
+- [Narrative Immune Systems](./applications/narrative-immune-systems/) — information warfare, journalism, and the trust commons, analyzed through the immune analogy
+
 **[References](references/)** - Background reading
 - Dervin's Sense-Making Methodology
 - Second-Order Cybernetics (von Foerster, Bateson)

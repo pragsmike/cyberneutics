@@ -376,7 +376,7 @@ If it couldn't do that, it wouldn't be rigorous. Since it can, we have evidence 
 4. **Scalability**: Does this work for 10-person organizations? 1000-person? Governments?
 5. **Tool dependence**: Does this require Claude specifically? Or work with other LLMs? *MOOLLM integration suggests platform-agnostic potential, but untested with non-Claude models.*
 6. **Can palgebra specify pipelines beyond the committee?** The dark factory analysis (`wild/software-factories/palgebra-and-dark-factories.md`) maps palgebra onto an entirely different domain. Whether agents can bootstrap a pipeline from resource equations is testable.
-7. **Does the immune system analogy predict useful architecture?** The narrative immune systems work (`wild/narrative-immune-systems.md`) predicts adaptive rubrics, regulatory mechanisms, and an organ/bath boundary formalism. These are concrete engineering targets.
+7. **Does the immune system analogy predict useful architecture?** The narrative immune systems work (`essays/09-narrative-immune-systems.md`) predicts adaptive rubrics, regulatory mechanisms, and an organ/bath boundary formalism. These are concrete engineering targets. The civic application (`applications/narrative-immune-systems/`) shows what this looks like at the social scale.
 
 We're past "early-stage documentation" and into "methodology with executable skills, a formal algebra, and first external adoption." Still not "ready for all practitioners" — but the gap is narrowing, and we now have empirical signals to steer by.
 

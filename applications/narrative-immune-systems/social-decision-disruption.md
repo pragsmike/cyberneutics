@@ -120,4 +120,4 @@ The goal is a population that understands — in practice, not just in theory �
 
 ---
 
-*Related: [Narrative Immune Systems](narrative-immune-systems.md) develops the formal immune analogy — generator-discriminator architectures, thymic selection as type-checking, the bath/pipeline distinction — in the context of narrative computing and palgebra. The present piece applies the same analogy to the civic and political domain.*
+*Related: [Narrative Immune Systems](../../essays/09-narrative-immune-systems.md) develops the formal immune analogy — generator-discriminator architectures, thymic selection as type-checking, the bath/pipeline distinction — in the context of narrative computing and palgebra. The present piece applies the same analogy to the civic and political domain.*

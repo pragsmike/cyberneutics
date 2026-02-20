@@ -39,6 +39,7 @@ If you want the precise machinery underneath the methodology:
 2. **[Decorated Texts](../palgebra/decorated-texts.md)** - The full essay developing the pipeline algebra from first principles
 3. **[Committee as Palgebra](../palgebra/committee-as-palgebra.md)** - Worked example: the adversarial committee pipeline formalized as resource equations
 4. **[From Methodology to Formalism](./08-from-methodology-to-formalism.md)** - The bridge: how the philosophical foundations and the algebra describe the same phenomenon
+5. **[Narrative Immune Systems](./09-narrative-immune-systems.md)** - Evaluation as immune function, trust boundaries, the organ/bath distinction
 
 The essays in this directory establish *why* narrative engines need structured methodology. The palgebra provides *how, precisely* — a formal language where adversarial committees are transformation morphisms, rubric evaluation is enrichment, and human review gates are collapse operators. [From Methodology to Formalism](./08-from-methodology-to-formalism.md) bridges the two vocabularies explicitly. See the [palgebra directory](../palgebra/) for the full formalism.
 
@@ -203,6 +204,25 @@ The essays in this directory establish *why* narrative engines need structured m
 
 ---
 
+### [Narrative Immune Systems](./09-narrative-immune-systems.md)
+
+**The extension**: The evaluation feedback loop in the committee pipeline is a generator-discriminator architecture. It is also, precisely, an immune system.
+
+**Key insight**: The analogy is functorial (structure-preserving), not merely metaphorical. It predicts missing components (adaptive rubrics, memory cells, regulatory mechanisms) and identifies two regimes — pipeline (organ) and bath (bloodstream) — with distinct type-theoretic properties. Trust boundaries determine where immune function concentrates.
+
+**Covers**:
+- Generator-discriminator as immune system (rubrics as antibodies, evaluators as T cells, evaluation protocols as thymic gauntlet)
+- Thymic selection mapped to type-checking: positive selection as template conformance, negative selection as degenerate parroting
+- Organ (pipeline) vs. bath (bloodstream): two trust regimes with different reasoning frameworks
+- Organs as trust boundaries: why local agentic AI outperforms open-web agentic AI
+- Postel's law as design principle at the organ/bath interface
+- Civic application: mis/dis/malinformation as pathogen taxonomy
+- Predicted missing parts: memory cells, autoimmune disorders, immunodeficiency
+
+**Read this if**: You want to see the formalism extended beyond pipeline design into trust architecture and immune function — or want the theoretical foundation for the [applied work on information warfare](../applications/narrative-immune-systems/).
+
+---
+
 ### [Societies of Thought: From Neural Evidence to Methodological Action](./societies-of-thought-synthesis.md)
 
 **The validation**: Analyzes how recent research on "Societies of Thought" provides empirical backing for Cyber-Sense techniques (adversarial roles, perspective swiching).
@@ -255,6 +275,12 @@ The charts-on-manifold idea — complex problems as manifolds requiring multiple
 A committee debate transcript (Kaelen/Elena/Silas) that uses the adversarial committee methodology to develop the theoretical synthesis itself. The methodology applied to its own foundations — three characters representing Entropy, Constraint, and Integration argue about how cybernetics, sense-making, and Deleuzian philosophy compose into a coherent framework.
 
 **Read this if**: You want to see the methodology in action on a theoretical problem, or want a concrete example of how adversarial debate produces synthesis rather than just compromise.
+
+## Applications
+
+The [applications/](../applications/) directory contains domain analyses that apply this framework to real-world phenomena. Currently:
+
+- **[Narrative Immune Systems](../applications/narrative-immune-systems/)** — Information warfare, journalism, and the trust commons, analyzed through the immune analogy from [Essay 09](./09-narrative-immune-systems.md)
 
 ## Applied Essays
 

@@ -1,7 +1,7 @@
 # Narrative Immune Systems
 
 Seed ideas from a session on 2026-02-19. The diary entry
-(`agent/diary/2026-02-19-narrative-immune-system.md`) has the full
+(`../agent/diary/2026-02-19-narrative-immune-system.md`) has the full
 improvisation; this is the distillation.
 
 ---
@@ -261,3 +261,15 @@ power users and becomes a public good.
   evaluation system itself is well-calibrated. The "who watches the
   watchmen" problem. The immune system suggests structural solutions
   (regulatory T cells suppress overactive responses).
+
+---
+
+**Previous essay**: [From Methodology to Formalism](./08-from-methodology-to-formalism.md) — bridging the philosophical foundations to the algebraic machinery
+
+**Applied**:
+- [Social Decision Disruption](../applications/narrative-immune-systems/social-decision-disruption.md) — the immune analogy applied to journalism, information warfare, and the trust commons
+
+**Related**:
+- [Palgebra Reference](../palgebra/reference.md) — the formalism this essay extends
+- [Committee as Palgebra](../palgebra/committee-as-palgebra.md) — the pipeline whose evaluation loop is an immune system
+- [Independent Evaluation Protocols](../artifacts/independent-evaluation.md) — the practical technique that implements thymic selection

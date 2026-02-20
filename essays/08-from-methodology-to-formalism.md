@@ -262,7 +262,7 @@ sits.
 
 ## 6. Postel's Law at the Boundary
 
-The narrative immune systems work (see [wild/narrative-immune-systems.md](../wild/narrative-immune-systems.md))
+The narrative immune systems work (see [Essay 09](./09-narrative-immune-systems.md))
 extends the formalism into two regimes:
 
 **Inside a pipeline (organ)**: Types are assigned by construction.
@@ -503,4 +503,4 @@ The bridge is where the methodology lives.
 - [Decorated Texts](../palgebra/decorated-texts.md) — the full theoretical development
 - [Committee as Palgebra](../palgebra/committee-as-palgebra.md) — the worked example
 - [The Synthesis](./05-the-synthesis.md) — the philosophical synthesis this essay formalizes
-- [Narrative Immune Systems](../wild/narrative-immune-systems.md) — extending the formalism to organ/bath regimes
+**Next essay**: [Narrative Immune Systems](./09-narrative-immune-systems.md) — extending the formalism to immune function, trust boundaries, and organ/bath regimes
