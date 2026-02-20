@@ -3,7 +3,8 @@
     "allow": [
       "Bash(where:*)",
       "WebFetch(domain:factory.strongdm.ai)",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "Bash(git mv:*)"
     ]
   }
 }
