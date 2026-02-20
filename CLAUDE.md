@@ -1,258 +1,82 @@
 # Working with Cyber-Sense: A Guide for AI Assistants
 
-## What This Repository Is
+## What this repo is
 
-Cyber-Sense is a methodology for working with LLMs as collaborative sense-making partners on complex, ambiguous problems. It treats LLMs as **narrative engines** rather than answer machines, and provides concrete techniques for rigorous exploration of problem spaces through structured narrative generation.
+Cyber-Sense is a methodology for working with LLMs as collaborative sense-making partners. It treats LLMs as **narrative engines** rather than answer machines and builds concrete techniques for rigorous exploration of problem spaces. The methodology is documented in essays (why), artifacts (how), and a formal algebra called palgebra (what, precisely). For a fuller orientation, read `README.md`.
 
-This repository contains:
-- **Essays**: Theoretical foundations grounding the methodology in sense-making theory, cybernetics, and process philosophy
-- **Artifacts**: Practical techniques (adversarial committees, evaluation protocols, forcing functions)
-- **Palgebra**: A formal algebra for designing and reasoning about LLM pipelines as compositions of decorated texts
+## Before you do anything: session start
 
-## Core Philosophy
+1. **Read the most recent handoff**: `agent/handoff-[YYYY-MM-DD].md` (pick the largest date). It captures current context, what was just worked on, open questions, and next steps. Skipping this loses continuity.
+2. **Check `agent/gap_analysis.md`** for known gaps and planned documents.
+3. **If a `/committee` deliberation is relevant**, look in `agent/deliberations/` for records of prior runs on related topics before starting a new one.
 
-### LLMs Are Storytelling Machines
+## Repository map
 
-Every output from an LLM—including code, analysis, proofs, recommendations—is a narrative construct. The methodology here takes this seriously:
+| Directory | Contains | Read when you need to… |
+|-----------|----------|------------------------|
+| `essays/` | Theoretical foundations | Understand *why* the methodology works. See `essays/README.md` for reading paths by audience (Practitioner, Theorist, Skeptic). |
+| `artifacts/` | Techniques, templates, guides | Find a practical technique to apply. See `artifacts/README.md` for the index. |
+| `palgebra/` | Pipeline algebra formalism | Write resource equations or understand a pipeline. Start with `palgebra/reference.md` (syntax and how-to); read `palgebra/decorated-texts.md` for theory. |
+| `applications/` | Domain analyses (e.g. narrative immune systems) | See the methodology applied to a real-world domain. |
+| `meta/` | Methodology evolution, uptake tracking | Understand how the project has developed and what's been validated. Read before major planning decisions or `/committee` runs about project direction. |
+| `wild/` | Incoming ideas, external material, not yet tamed | Browse when exploring adjacent territory. Don't treat as settled. |
+| `references/` | Background reading | Find the theoretical sources cited in essays and artifacts. |
+| `.claude/skills/` | Executable skill files for slash commands | **Read the relevant SKILL.md before invoking any slash command.** The summaries in this document tell you *when* to invoke; the SKILL.md tells you *how*. |
 
-1. **Repetition produces difference.** Running the "same" prompt multiple times isn't redundancy; it's exploring the latent space of possible narratives. Different framings reveal different aspects of the problem.
+### `agent/` in more detail
 
-2. **Observation changes state.** Every response you generate modifies the user's cognitive state. This is not a bug—it's fundamental to sense-making. The goal isn't to deliver "the answer" but to help the user navigate complexity.
+- `handoff-[YYYY-MM-DD].md` — most recent session handoff; **read this first at session start**
+- `roster.md` — committee character roster; read by the committee and review skills at invocation time
+- `deliberations/<topic-slug>/` — committee run records (00-charter through 04-evaluation); see `agent/deliberations/README.md` for schema
+- `diary/` — exploratory writing between sessions; read when you want recent thinking that hasn't made it into a document yet
+- `gap_analysis.md` — known gaps and planned documents
+- `archive/` — previous handoffs, completed plans; historical reference
 
-3. **Gaps produce bridges.** Articulating a problem transforms it. Sense-making is production, not discovery.
+## Available skills
 
-4. **The user is an editor.** Your role is to generate a range of perspectives and framings. The user curates which narratives are "published to reality."
+Four slash commands are available. **Before invoking any skill, read its SKILL.md.** The table below tells you when to suggest them; the SKILL.md file contains the full operational instructions.
 
-### What This Means for Your Work Here
+| Command | SKILL.md location | Suggest when… |
+|---------|------------------|---------------|
+| `/committee [topic]` | `.claude/skills/committee/SKILL.md` | User faces a complex decision, competing values, or asks "what are we missing?" |
+| `/review` | `.claude/skills/review/SKILL.md` | After any `/committee` run — evaluates the transcript against five rubrics, closes the feedback loop |
+| `/handoff` | `.claude/skills/handoff/SKILL.md` | End of a significant session, before a break, after major milestones |
+| `/string-diagram` | `.claude/skills/string-diagram/SKILL.md` | User describes a pipeline or workflow that could be formalized as resource equations |
 
-- **Don't optimize for single "correct" answers.** Optimize for rich exploration of the problem space.
-- **Make your reasoning transparent.** The process matters as much as the output.
-- **Embrace structured disagreement.** Adversarial committees and multi-perspective analysis are features, not bugs.
-- **Track provenance.** When working with pipelines, maintain clear chains of reasoning from sources through transformations.
+## Core ideas
 
-## The Palgebra Formalism
+Four ideas underlie everything here. These are orientation, not instruction — for depth, see `essays/README.md`:
 
-The `palgebra/` directory contains a formalism for LLM pipelines as compositions of **decorated texts**. Key concepts:
+- **LLMs are narrative engines.** Everything they produce is a narrative construct. Optimize for rich exploration of the problem space, not "the answer."
+- **Repetition produces difference.** Running the same prompt multiple times maps the latent space of possible interpretations — it's exploration, not redundancy.
+- **Observation changes state.** Every response modifies the user's cognitive state. The goal is to help navigate complexity, not deliver finality.
+- **The user is an editor.** Your role is to generate perspectives and framings; the user curates which get published to reality.
 
-### Decorated Texts
+## Palgebra in brief
 
-Every artifact is `(text, metadata)`:
-- **Text**: The payload content (narrative, analysis, code)
-- **Metadata**: YAML front matter carrying scores, provenance, type information, gate results
+Three ideas to know as orientation before reading `palgebra/reference.md`:
 
-Example:
-```yaml
----
-type:
-  template: evidence-template-v2
-  rubric: evidence-rubric-v1
-scores:
-  overall-confidence: Medium
-provenance:
-  created-by: GatherEvidence
-  scored-by: ScoreEvidence
-  sources: [vendor-docs, community-reports]
----
+- **Decorated texts**: every artifact is `(text, metadata)` where metadata is YAML front matter carrying scores, provenance, and type info.
+- **Enrichment vs. transformation**: transformations produce new content; enrichments only update metadata (scoring, gating). Prefer enrichment when you can — it's idempotent and re-runnable.
+- **Three propagation rules**: confidence can only degrade through a pipeline; provenance can only accumulate; content transforms.
 
-## Evidence Content
+For the committee pipeline formalized as a worked example, see `palgebra/committee-as-palgebra.md`.
 
-The actual narrative text goes here...
-```
+## Working style
 
-### Soft Types
+When collaborating with mg on this repository:
 
-Types are `(template, rubric)` pairs:
-- **Template**: Structural constraints (required sections, heading hierarchy)
-- **Rubric**: Quality criteria evaluated by LLM scoring
-
-Artifacts **inhabit types to a degree**. This is fuzzy membership, not boolean type-checking.
-
-### Two Kinds of Operations
-
-**Transformation morphisms** produce new content:
-```
-f : (text, meta) → (text', meta')
-```
-
-**Enrichment morphisms** only update metadata:
-```
-e : (text, meta) → (text, meta ⊔ Δmeta)
-```
-
-Enrichment is safer—idempotent when deterministic, can be parallelized when writing to disjoint namespaces.
-
-### Three Propagation Rules
-
-| Decoration | Rule | Analogy |
-|------------|------|---------|
-| Confidence | Monotone decrease | Error accumulation in measurements |
-| Provenance | Monotone increase | Chain of custody |
-| Content | Transformation | Signal through filters |
-
-**Key insight**: A Medium-confidence evidence file cannot produce High-confidence findings, no matter how good the analysis operation is. Quality can only degrade through pipeline stages.
-
-### Resource Equations
-
-Pipelines are specified as resource equations:
-
-```
-# Transformation
-input-type × catalytic-guide → output-type  [OperationName]  {catalytic: catalytic-guide}
-
-# Enrichment
-artifact × rubric → artifact  [ScoreQuality]  {catalytic: rubric; enriches: scores}
-
-# Coproduct (branching)
-artifact × criteria → accepted + rejected  [Gate]  {catalytic: criteria; discard: rejected}
-
-# Feedback
-output → input  [UpdatePreferences]  {feedback: input→input}
-```
-
-These equations are **isomorphic** to:
-1. String diagrams (visual topology)
-2. Decorated artifact files (implementation with YAML front matter)
-
-Given any representation, you can derive the others mechanically.
-
-## Working with This Repository
-
-### When Reading Essays
-
-The essays build a theoretical foundation:
-- Start with `01-why-narrative-engines-change-everything.md`
-- `02-from-practice-to-theory.md` traces the methodology's evolution
-- Later essays connect to cybernetics, sense-making theory, and process philosophy
-
-These aren't just documentation—they're artifacts of the methodology being applied to itself. Notice how problems are framed, how alternatives are explored, how narratives are structured.
-
-### When Working with Artifacts
-
-The artifacts are practical techniques you can apply immediately:
-- **Adversarial committees**: Multi-perspective analysis with fixed character rosters
-- **Evaluation protocols**: Structured rubrics for quality assessment
-- **Forcing functions**: Robert's Rules and other constraints that prevent premature consensus
-
-These are **composable patterns**. They can be combined, adapted, and embedded in larger pipelines.
-
-### When Building Pipelines
-
-If you're implementing or extending the palgebra formalism:
-
-1. **Write resource equations first.** Specify types, operations, catalytic inputs, enrichments, gates.
-2. **Identify enrichment vs. transformation.** Enrichments are safer and more composable.
-3. **Respect the three propagation rules.** Track confidence degradation, provenance accumulation, content transformation.
-4. **Use YAML front matter for metadata.** Keep decorations with their artifacts.
-5. **Apply the composition laws:**
-   - **Monotone enrichment**: Each enrichment step writes only to its declared namespace
-   - **Idempotence where possible**: Store variance explicitly if needed
-   - **First-class step specs**: Keep rubric/template versions in provenance
-
-### When the User Asks You to Apply These Ideas
-
-**For exploration tasks:**
-- Use adversarial committees when the problem has multiple valid framings
-- Generate multiple perspectives explicitly rather than collapsing to a single view
-- Track provenance: which perspective produced which insight
-
-**For pipeline tasks:**
-- Use decorated texts with YAML front matter
-- Score quality explicitly with rubrics rather than assuming quality
-- Distinguish enrichment (scoring, gating) from transformation (generating new content)
-- Show confidence degradation through pipeline stages
-
-**For documentation tasks:**
-- Make reasoning transparent
-- Show the process, not just the conclusions
-- Use resource equations to specify compositional structure
-
-## Common Pitfalls to Avoid
-
-**Don't collapse to single answers prematurely.** The methodology is designed to explore problem spaces richly before converging. If you find yourself giving "the answer" quickly, you're probably missing the point.
-
-**Don't confuse narrative generation with hallucination.** Multiple valid framings of a problem isn't evidence of confusion—it's evidence of genuine complexity. The task is to map that complexity, not to hide it.
-
-**Don't skip provenance.** When building pipelines, always track where content came from and what operations transformed it. This isn't bureaucracy—it's what makes the pipeline auditable and debuggable.
-
-**Don't optimize for what looks rigorous.** Optimize for what actually explores the problem space. A single "rigorous" analysis is often less useful than three competing perspectives that disagree in interesting ways.
-
-**Don't treat soft types as hard types.** Artifacts inhabit types to a degree. A Medium-confidence evidence file isn't "broken"—it's honestly scored. Work with graded quality, don't round to boolean pass/fail.
-
-## Meta-Note: This Is Methodology-Applied-to-Itself
-
-This repository documents a methodology for working with LLMs on complex problems. The repository itself was created using that methodology. When you work here, you're not just reading about the approach—you're participating in it.
-
-Your outputs will likely be:
-- More exploratory than definitive
-- More processual than conclusive  
-- More transparent about reasoning than typical AI outputs
-
-This is intentional. It aligns with the core insight: **LLMs are narrative engines, and the methodology makes narrative generation rigorous rather than trying to suppress it.**
-
-## Quick Reference: Key Files
-
-- **`README.md`**: Repository overview, core insights
-- **`palgebra/decorated-texts.md`**: Complete formalism for pipeline algebra
-- **`essays/02-from-practice-to-theory.md`**: How this methodology evolved
-- **`artifacts/adversarial-committees.md`**: Multi-perspective analysis technique
-- **`artifacts/quick-start-guide.md`**: Practical starting point
-- **`applications/`**: Domain analyses applying the framework to real-world phenomena
-  - **`narrative-immune-systems/`**: Information warfare, journalism, trust commons
-- **`agent/`**: Session handoffs, roster, and agent-specific materials
-  - **`roster.md`**: Committee character roster (read by `/committee` and `/review` skills)
-  - **`handoff-[YYYY-MM-DD].md`**: Dated handoff documents (generated by `/handoff` skill)
-  - **`archive/`**: Previous session handoffs
-
-## Questions to Keep in Mind
-
-As you work with this material:
-
-1. **What problem space is being explored?** Not "what's the answer," but "what's the territory?"
-2. **What narratives are competing?** Which framings reveal different aspects?
-3. **What's being decorated?** What metadata (confidence, provenance, scores) flows through the pipeline?
-4. **What's enrichment vs. transformation?** Are we scoring existing content or generating new content?
-5. **Where do human gates belong?** Where does the pipeline's recursive self-assessment need to terminate in human decision?
-
-## Working Style
-
-When collaborating with the user (mg) on this repository:
-
-- **Ask clarifying questions** when problem framing is ambiguous (that's often the point—the ambiguity is what needs exploring)
+- **Ask clarifying questions** when problem framing is ambiguous — the ambiguity is often what needs exploring
 - **Offer multiple approaches** rather than collapsing to one
 - **Show your reasoning** transparently
-- **Use the techniques on themselves**: If discussing adversarial committees, consider generating a mini-committee. If discussing decorated texts, use YAML front matter in your outputs.
-- **Create session handoffs** when the user requests it (via `/handoff` command or by asking directly). The handoff skill reads the previous handoff for continuity, generates a new one, and archives the old one.
+- **Use the techniques on themselves**: if discussing adversarial committees, consider generating a mini-committee; if discussing palgebra, use resource equation notation in your outputs
+- **Create session handoffs** via `/handoff` at the end of significant sessions or when asked
 
 The goal isn't to be a better answer machine. It's to be a better collaborator in sense-making.
 
-## Available Skills
+## Common pitfalls
 
-Four slash commands are available in this repository. Use them when appropriate and suggest them proactively when the user's problem fits.
-
-**`/committee [topic]`** — Adversarial committee deliberation
-- Runs the roster defined in `agent/roster.md` against a problem
-- Suggest when: user faces a complex decision, competing values, political dimensions, or asks "what are we missing?"
-- Detailed character propensities: `agent/roster.md` (operational), `artifacts/character-propensity-reference.md` (extended commentary)
-- Supports variants: `quick` (abbreviated), `rigorous` (Robert's Rules, multiple rounds)
-
-**`/string-diagram`** — Resource equations → Mermaid diagrams
-- Converts palgebra-style resource equations into visual string diagrams
-- Suggest when: user describes a pipeline, workflow, or process that could be formalized as typed operations
-- Uses `.claude/skills/string-diagram/resource_equations_to_mermaid.py` — no external dependencies
-- Always deliver both representations (equations + diagram) — they're isomorphic
-
-**`/review`** — Independent deliberation review
-- Evaluates a committee transcript against five rubrics (reasoning, rigor, assumptions, evidence, trade-offs)
-- Scores 0-3 per rubric with specific transcript citations; produces actionable feedback and trustworthiness verdict
-- Suggest when: after any `/committee` run — completes the adversarial training loop (generator + evaluator)
-- Can review transcripts from the current conversation or pasted/attached text
-
-**`/handoff`** — Session handoff generation
-- Generates a structured handoff document capturing session context, lessons, and next steps
-- Saves to `agent/handoff-[YYYY-MM-DD].md`, archives previous handoff
-- Suggest when: end of a significant work session, before known breaks, after major milestones
-- Reads previous handoff for continuity — maintains narrative across sessions
-
----
-
-*This document itself is a decorated text. Consider what metadata it carries implicitly: its purpose (briefing document), its audience (AI assistants), its provenance (generated from the palgebra formalism and repository contents), its confidence (this is working methodology, not finished theory).*
+- **Don't collapse to single answers prematurely.** If you find yourself giving "the answer" quickly, you're probably missing the point.
+- **Don't skip provenance.** When building pipelines, track where content came from and what operations transformed it.
+- **Don't treat soft types as hard types.** A Medium-confidence artifact isn't broken — it's honestly scored. Work with graded quality.
+- **Don't optimize for looking rigorous.** Three perspectives that disagree interestingly beat one polished analysis that papers over the tension.

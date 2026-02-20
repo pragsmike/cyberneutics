@@ -49,6 +49,12 @@ external deliberation data. Especially valuable if they run the
 `/review` evaluation against their transcripts — that would give us
 comparative rubric scores across different roster configurations.
 
+**Update — February 20, 2026**: Contributor has given more detail on their direction.
+
+*Condorcet theorem*: They intend to investigate the Condorcet jury theorem as a formal foundation for the committee technique. The theorem (Condorcet, 1785) states that if each member of a majority-vote group is independently more likely than not to make a correct judgment, the probability of the majority being correct exceeds any individual's, and approaches 1 as group size grows. This would formalize *why* multi-perspective adversarial deliberation improves decision quality — it's not just a heuristic. The existing empirical support in `essays/societies-of-thought-synthesis.md` (Google, UChicago, Santa Fe Institute work) is consistent with this prediction but doesn't invoke Condorcet explicitly. If the contributor formalizes this connection, it would strengthen the theoretical section of `artifacts/adversarial-committees.md` and add a new dimension to `essays/societies-of-thought-synthesis.md`.
+
+*mRNA and the immune analogy*: They suggested considering mRNA as relevant to the immune system analogy in `essays/09-narrative-immune-systems.md` and `applications/narrative-immune-systems/`. The implication is apt: mRNA vaccines deliver instructions to cells to produce a recognizable fragment of a pathogen so the immune system can learn the pattern *without exposure to the actual pathogen*. Applied to narrative immune systems: rather than exposing a community to real misinformation to build resistance (risky — the exposure itself can cause anchoring or radicalization), you could construct "narrative mRNA" — carefully designed fictional exemplars of misinformation patterns that train pattern recognition without contact with live attack vectors. This is a meaningful extension of the analogy beyond what the current essay captures. Worth a committee deliberation or a `/committee` run on the question of how to design such training material.
+
 ---
 
 ### 2. MOOLLM Platform Integration
@@ -90,6 +96,58 @@ deliberations and share feedback, the sample size grows faster.
 
 ---
 
+### 3. Repository Fork: Deleuzian Walks and Residuality Theory
+
+**Date**: February 20, 2026
+**Who**: New external contributor (details TBD)
+**What**: Forked the repository and engaged with the Deleuze material
+(`essays/06-deleuze-difference-repetition.md`), specifically noting a
+connection between Deleuzian walks and Barry O'Reilly's Residuality
+Theory via the concept of Architectural walks.
+
+**The connection they're drawing**: A "Deleuzian walk" is nomadic
+traversal through smooth space — following connections rather than
+following a predetermined grid, letting difference lead rather than
+imposing identity. In O'Reilly's Residuality Theory, an Architectural
+walk is a method for understanding complex systems by moving through
+them and observing what *residues* — essential, persistent elements —
+survive change and transformation. The contributor suggests that
+Residuality Theory's Architectural walk concept may have been
+influenced by, or at minimum parallels, the Deleuzian model of
+movement through space.
+
+**Why this is interesting for cyber-sense**: The committee deliberation
+process is already implicitly a kind of architectural walk — each
+character traverses the problem space from their propensity-driven
+starting point, following their epistemic "line of flight," and the
+synthesis traces what residues persist across all the different
+traversals. The Condorcet connection (from contributor #1) speaks to
+*why* multiple walkers converge on better answers; the Residuality
+connection speaks to *what* they're looking for — the features of the
+problem space that survive reframing.
+
+There's also a potential connection to the palgebra formalism: if the
+committee is a set of traversals through a problem space, the
+deliberation record (the 00-04 files) is the residue — what the
+process leaves behind as a persistent artifact.
+
+**What this validates**:
+- The Deleuze essay is accessible to external readers and legible as
+  something that connects to live theoretical work elsewhere
+- The methodology is attracting contributors interested in theoretical
+  depth, not just practitioners who want the committee technique
+- Residuality Theory is an adjacent conceptual framework worth tracking;
+  see `wild/` for where to put exploratory reading
+
+**What to track**:
+- Whether this contributor develops the connection formally
+- Barry O'Reilly's Residuality Theory as a potential theoretical
+  neighbor — the "residue" framing (what persists through transformation)
+  is distinct from but complementary to the "decorated text" framing
+  (what metadata accumulates through pipeline stages)
+
+---
+
 ## What the Feb 1 Self-Evaluation Predicted
 
 The committee self-evaluation (repository readiness review) identified
@@ -97,16 +155,20 @@ several conditions that would signal the methodology is working:
 
 | Predicted signal | Status |
 |---|---|
-| External practitioners attempt to use the methodology | First fork confirmed |
+| External practitioners attempt to use the methodology | Two forks confirmed |
 | Techniques are adopted by other platforms | MOOLLM integration confirmed |
-| Different committee makeups tested for different domains | Fork practitioner intends this |
+| Different committee makeups tested for different domains | Fork #1 intends this; investigating Condorcet as formal basis |
 | Rubric scores from external deliberations available | Not yet |
 | Failure reports from practitioners | Not yet |
 | Sustained multi-session use by external users | Not yet |
 
-Two of six predicted signals have appeared within three weeks of the
-self-evaluation. This is consistent with "suitable for early adopters"
-but too early to claim broad validation.
+Two of six predicted signals have appeared, plus a second fork showing
+theoretical engagement (Deleuze / Residuality Theory). This is
+consistent with "suitable for early adopters" but too early to claim
+broad validation. The theoretical depth of the engagement — Condorcet,
+mRNA analogy extension, Deleuzian walks — is a stronger signal than
+expected at this stage: these contributors are not just consuming the
+technique, they're extending the theoretical scaffolding.
 
 ---
 
@@ -137,4 +199,4 @@ feedback would be:
 
 ---
 
-**Last Updated**: February 19, 2026
+**Last Updated**: February 20, 2026

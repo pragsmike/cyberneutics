@@ -1,11 +1,5 @@
 # Narrative Immune Systems
 
-Seed ideas from a session on 2026-02-19. The diary entry
-(`../agent/diary/2026-02-19-narrative-immune-system.md`) has the full
-improvisation; this is the distillation.
-
----
-
 ## The core observation
 
 An LLM produces text, given text, parameterized by text. If we want
