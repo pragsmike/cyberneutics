@@ -33,6 +33,7 @@ If you want to understand the theoretical synthesis:
 5. **[Cybernetics and the Observer Problem](./04-cybernetics-and-observation.md)** - Second-order cybernetics and why observation changes state
 6. **[The Synthesis](./05-the-synthesis.md)** - How sense-making is inherently cybernetic
 7. **[Deleuzian Foundations](./06-deleuze-difference-repetition.md)** - Becoming, difference, and why repetition produces novelty
+8. **[Decisions Under Uncertainty](./10-decisions-under-uncertainty.md)** - How the duality of exploration and commitment yields rigorous decision-making
 
 ### For Skeptics (Show Me Why This Matters)
 
@@ -51,6 +52,7 @@ If you want the precise machinery underneath the methodology:
 3. **[Committee as Palgebra](../palgebra/committee-as-palgebra.md)** - Worked example: the adversarial committee pipeline formalized as resource equations
 4. **[From Methodology to Formalism](./08-from-methodology-to-formalism.md)** - The bridge: how the philosophical foundations and the algebra describe the same phenomenon
 5. **[Narrative Immune Systems](./09-narrative-immune-systems.md)** - Evaluation as immune function, trust boundaries, the organ/bath distinction
+6. **[Decisions Under Uncertainty](./10-decisions-under-uncertainty.md)** - The fan/funnel duality, decision monads, and rigorous decision-making through composition and iteration
 
 The essays in this directory establish *why* narrative engines need narrative engineering. The palgebra provides *how, precisely* — a formal language where adversarial committees are transformation morphisms, rubric evaluation is enrichment, and human review gates are collapse operators. [From Methodology to Formalism](./08-from-methodology-to-formalism.md) bridges the two vocabularies explicitly. See the [palgebra directory](../palgebra/) for the full formalism.
 
@@ -194,6 +196,24 @@ The essays in this directory establish *why* narrative engines need narrative en
 - Implications and open questions
 
 **Read this if**: You want to see how these ideas are emerging independently across the field.
+
+---
+
+### [Decisions Under Uncertainty](./10-decisions-under-uncertainty.md)
+
+**The prescription**: The adversarial committee is one half of a dual pair. Its dual is scenario generation — the divergent operation that explores possible futures before the committee debates what to do.
+
+**Key insight**: Composing scenario generation (fan) with committee deliberation (funnel) yields a decision pipeline with formal properties: traceable provenance, predictable quality propagation, and iteration that maps the topology of the decision space rather than collapsing prematurely to a single answer. Repeated runs reveal basins of attraction and ridges — the landscape of the decision, not just the decision itself.
+
+**Covers**:
+- The fan/funnel duality: scenario generation as coproduct, committee as product
+- The decision monad: composing exploration and commitment, with testable quality laws
+- Repetition as stability test: architectural walks, residues vs. eigenforms
+- Diagnosing instability: situation ambiguity vs. load-bearing assumptions vs. pipeline noise
+- The Sagan analogy: a baloney detection kit for decisions under uncertainty
+- Connection to residuality theory, Deleuzian walks, and Bruner's binocular vision
+
+**Read this if**: You want to understand how cyberneutics supports rigorous, traceable decision-making under genuine uncertainty.
 
 ---
 

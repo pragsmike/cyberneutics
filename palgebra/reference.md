@@ -3,8 +3,10 @@
 A reference for writing and reasoning about LLM pipelines as compositions
 of decorated texts. For the full theoretical development, see
 [decorated-texts.md](decorated-texts.md). For worked examples, see
-[committee-as-palgebra.md](committee-as-palgebra.md) and the equation
-files in `.claude/skills/string-diagram/`.
+[committee-as-palgebra.md](committee-as-palgebra.md) (the funnel half),
+[duality-and-composition.md](duality-and-composition.md) (the fan half,
+the composition, and the decision monad), and the equation files in
+`.claude/skills/string-diagram/`.
 
 The formalism derives from Fong and Spivak's resource-theoretic treatment
 of monoidal categories in *Seven Sketches in Compositionality* (2019),
@@ -326,6 +328,55 @@ Options: `--direction LR` (default), `TD`, `RL`, `BT`.
 
 Always deliver **both** equations and diagram — they are isomorphic.
 
+## Spider patterns: fan and funnel
+
+Two dual patterns recur in pipeline design. They are formalized in
+[duality-and-composition.md](duality-and-composition.md).
+
+### Fan (one-to-many / coproduct spider)
+
+A single input is injected into multiple distinct outputs:
+
+```
+situation × params → scenario-1 + scenario-2 + scenario-3  [Fan]  {catalytic: params}
+```
+
+Or more compactly, when the output is a typed collection:
+
+```
+situation × params → scenario-set  [Fan]  {catalytic: params}
+```
+
+The fan is **divergent**: it explores a possibility space by producing
+multiple narratives from different assumptions. Each output is an
+injection of the input into a different narrative context.
+
+### Funnel (many-to-one / product spider)
+
+Multiple inputs converge into a single output:
+
+```
+charter × scenario-set × roster → transcript  [Deliberate]  {catalytic: roster}
+```
+
+The funnel is **convergent**: it commits by combining multiple
+perspectives into a single resolution. Each input contributes a
+projection to the output.
+
+### Composed pattern: the decision monad
+
+Fan → funnel yields a single-input, single-output operation:
+
+```
+situation → resolution  [DeliberatedChoice]
+```
+
+This composition has monad structure (unit, associativity), meaning it
+can be iterated and chained. See
+[duality-and-composition.md](duality-and-composition.md) for the full
+treatment, including monad laws as quality criteria and iteration for
+mapping decision landscapes.
+
 ## Quick reference: annotation cheat sheet
 
 ```
@@ -335,6 +386,8 @@ A → B + C           [Op]  {discard: C}            # C is waste
 A × R → A           [Op]  {catalytic: R; enriches: scores}  # enrichment
 A → B               [Op]  {feedback: B→A}         # feedback loop
 A × B → C + D       [Op]  {catalytic: B; discard: D}        # combined
+A × P → B₁ + B₂ + B₃  [Op]  {catalytic: P}      # fan (one-to-many)
+A₁ × A₂ × A₃ → B  [Op]                          # funnel (many-to-one)
 ```
 
 ## References

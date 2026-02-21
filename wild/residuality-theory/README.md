@@ -86,9 +86,15 @@ A deliberation record (00-04 files) is both a palgebra artifact chain *and* the 
 
 ## Status
 
-Incoming — not yet tamed. This directory was created because an external contributor (second fork, February 2026) noted the Deleuzian walks → Architectural walks connection and because the eigenform question opened a productive theoretical seam. See `meta/uptake-and-usage.md` for context.
+**Partially integrated.** The core connections have been formalized:
 
-Possible directions:
+- **Architectural walks → Probe operation**: Running the composed fan → funnel pipeline N times is N architectural walks through the decision space. See [Duality and Composition](../../palgebra/duality-and-composition.md) for the formal treatment.
+- **Residues vs. eigenforms**: A single deliberation produces a residue; repeated runs hunt eigenforms. The remediation loop within a run hunts local eigenforms; the Probe operation hunts global ones. See [Decisions Under Uncertainty](../../essays/10-decisions-under-uncertainty.md) for the philosophical bridge.
+- **Criticality → survival constraint**: The appropriate optimization target for wicked problems shifts from maximizing expected value to satisficing subject to a survival constraint. This is O'Reilly's "criticality over correctness" made operational.
+
+This directory was created because an external contributor (second fork, February 2026) noted the Deleuzian walks → Architectural walks connection and because the eigenform question opened a productive theoretical seam. See `meta/uptake-and-usage.md` for context.
+
+### Remaining directions
+- Whether the 2-round remediation cap makes sense in eigenform terms — are we stopping at local fixed points? (Documented as open question in the palgebra treatment.)
+- Connecting O'Reilly's "criticality" more deeply to the evaluation rubric system — how do you know a deliberation is critical rather than just locally coherent?
 - A committee deliberation on the question: what is the committee process in residuality terms? What are the residues of deliberation?
-- Connecting O'Reilly's "criticality" (survive unknown stressors) to the evaluation rubric system (how do you know a deliberation is critical rather than just locally coherent?)
-- Whether the 2-round remediation cap makes sense in eigenform terms — are we stopping at local fixed points?

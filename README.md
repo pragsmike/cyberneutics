@@ -22,7 +22,7 @@ The essay [Stories All the Way Down](./essays/stories-all-the-way-down.md) expla
 
 ## What is Cyberneutics?
 
-**Cyberneutics** is a methodology for working with AI systems as collaborative sense-making partners rather than oracles that deliver answers.
+**Cyberneutics** is a methodology for working with AI systems as collaborative sense-making partners rather than oracles that deliver answers. It provides rigorous, traceable techniques for **making decisions under genuine uncertainty** — the kind where you can't enumerate outcomes or assign probabilities, and the act of deciding changes what you're deciding about.
 
 It builds upon the runtime environment of **[MOOLLM](https://github.com/SimHacker/moollm)** (Don Hopkins) and aligns with the philosophy of **[Narrative Engineering](https://alexbo.land/essays/narrative_engineering_2023.html)** (Alex Boland). Think of it as: **MOOLLM is the platform, Cyberneutics is the practice.**
 
@@ -57,11 +57,13 @@ Large Language Models are not databases. They are not logic engines. They are **
 
 Most AI interaction fails because we treat LLMs like search engines or calculators. We ask questions expecting definitive answers. But LLMs are most powerful when understood as **rapid story generators** that help us navigate complexity through narrative exploration.
 
+The core pipeline: **explore** possible futures (scenario generation), **evaluate** them adversarially (committee deliberation), **repeat** to map the decision landscape, and **trace** every commitment to the arguments that produced it. Quality propagates predictably through the pipeline — you always know where the ceiling is and what to improve. See [Decisions Under Uncertainty](./essays/10-decisions-under-uncertainty.md) for the full argument.
+
 The methodology documented here has produced:
-- More rigorous problem analysis
-- Better identification of blind spots and assumptions  
-- Richer exploration of decision spaces
-- More useful artifacts (not just chat transcripts)
+- Rigorous, traceable decision-making under genuine uncertainty
+- Better identification of blind spots and load-bearing assumptions
+- Richer exploration of decision spaces with formal quality tracking
+- Auditable artifacts with full provenance (not just chat transcripts)
 
 These aren't incremental improvements. They represent a fundamentally different approach to human-AI collaboration.
 
@@ -75,6 +77,7 @@ These aren't incremental improvements. They represent a fundamentally different 
 - Cybernetics and the observer problem
 - The synthesis: why sense-making is inherently cybernetic
 - [Societies of Thought: From Neural Evidence to Methodological Action](./essays/societies-of-thought-synthesis.md)
+- [Decisions Under Uncertainty](./essays/10-decisions-under-uncertainty.md)
 
 **[Artifacts](artifacts/)** - Practical techniques and protocols
 - [Adversarial committees with fixed character rosters](./artifacts/adversarial-committees.md)
@@ -87,6 +90,7 @@ These aren't incremental improvements. They represent a fundamentally different 
 - **[Reference Card](./palgebra/reference.md)** — start here: syntax, operators, morphism types, propagation rules, composition laws
 - **[Decorated Texts](./palgebra/decorated-texts.md)** — full essay developing the formalism from first principles (soft types, enrichment vs. transformation, confidence propagation, human gates as collapse operators)
 - **[Committee as Palgebra](./palgebra/committee-as-palgebra.md)** — worked example: the adversarial committee pipeline formalized as resource equations
+- **[Duality and Composition](./palgebra/duality-and-composition.md)** — the fan/funnel duality: scenario generation as the committee's categorical dual, their composition as a decision monad, and iteration for mapping decision landscapes
 - Adapts Fong and Spivak's resource-theoretic framework (*Seven Sketches in Compositionality*, Ch. 2) to LLM pipelines. Three isomorphic representations: resource equations, string diagrams, and YAML-decorated artifact files
 
 The essays describe *why* narrative engines need narrative engineering. The artifacts provide *how* — concrete techniques like adversarial committees and evaluation rubrics. Palgebra provides *what, precisely* — a formal language for specifying pipelines, their types, their quality propagation, and their composition laws. An adversarial committee is a transformation morphism; a rubric evaluation is an enrichment morphism; a human review gate is a collapse operator. The formalism makes these relationships explicit and composable.
