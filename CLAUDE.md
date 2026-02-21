@@ -27,7 +27,10 @@ Cyberneutics is a methodology for working with LLMs as collaborative sense-makin
 
 - `handoff-[YYYY-MM-DD].md` — most recent session handoff; **read this first at session start**
 - `roster.md` — committee character roster; read by the committee and review skills at invocation time
+- `scenario-roster.md` — scenario character roster (divergent exploration lenses); read by the scenarios skill. Distinct from committee roster — different purpose, different characters.
 - `deliberations/<topic-slug>/` — committee run records (00-charter through 04-evaluation); see `agent/deliberations/README.md` for schema
+- `scenarios/<topic-slug>/` — scenario generation records (00-situation through 03-assessment); produced by `/scenarios`
+- `probes/<topic-slug>/` — probe records (run-01/ through run-0N/, variance report, landscape map); produced by `/probe`
 - `diary/` — exploratory writing between sessions; read when you want recent thinking that hasn't made it into a document yet. **Write to diary** for speculative or exploratory ideas mid-session that don't yet belong in a handoff; **write to handoff** for conclusions, decisions, and next steps.
 - `gap_analysis.md` — known gaps and planned documents
 - `archive/` — previous handoffs, completed plans; historical reference
@@ -49,14 +52,16 @@ Cyberneutics is a methodology for working with LLMs as collaborative sense-makin
 
 ## Available skills
 
-Four slash commands are available. **Before invoking any skill, read its SKILL.md.** The table below tells you when to suggest them; the SKILL.md file contains the full operational instructions.
+Six slash commands are available. **Before invoking any skill, read its SKILL.md.** The table below tells you when to suggest them; the SKILL.md file contains the full operational instructions.
 
 | Command | SKILL.md location | Suggest when… |
 |---------|------------------|---------------|
-| `/committee [topic]` | `.claude/skills/committee/SKILL.md` | User faces a complex decision, competing values, or asks "what are we missing?" |
+| `/committee [topic]` | `.claude/skills/committee/SKILL.md` | User faces a complex decision, competing values, or asks "what are we missing?" Supports `scenario_context:` for deliberated choice. |
+| `/scenarios [situation]` | `.claude/skills/scenarios/SKILL.md` | User faces genuine uncertainty about *what might happen* — explore possible futures before committing. The divergent (fan) half of the fan/funnel duality. |
+| `/probe [situation]` | `.claude/skills/probe/SKILL.md` | High-stakes decisions where understanding the *decision landscape* matters — runs fan→funnel N times, compares resolutions, identifies eigenforms vs. residues. |
 | `/review` | `.claude/skills/review/SKILL.md` | After any `/committee` run — evaluates the transcript against five rubrics, closes the feedback loop |
 | `/handoff` | `.claude/skills/handoff/SKILL.md` | End of a significant session, before a break, after major milestones |
-| `/string-diagram` | `.claude/skills/string-diagram/SKILL.md` | User describes a pipeline or workflow that could be formalized as resource equations |
+| `/string-diagram` | `.claude/skills/string-diagram/SKILL.md` | User describes a pipeline or workflow that could be formalized as resource equations. Supports `{spider: fan/funnel}` annotations for fan/funnel topology. |
 
 ## Core ideas
 

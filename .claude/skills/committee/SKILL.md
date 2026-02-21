@@ -23,6 +23,7 @@ blind spots.
 - Complex sociotechnical problems where single perspectives miss important angles
 - Decisions with competing values, unclear trade-offs, or political dimensions
 - Situations where "what are we missing?" matters more than "what's the answer?"
+- **After `/scenarios`**: User provides `scenario_context: agent/scenarios/<topic-slug>/` to deliberate across previously generated scenarios (the deliberated choice workflow)
 
 ## The Committee Roster
 
@@ -44,6 +45,42 @@ When invoked, the skill:
 8. **Surfaces key insights** (optionally inline): assumptions, trade-offs, evidence requirements, decision space map, recommended next steps.
 
 The canonical output is the **deliberation record directory** (00–04). The substance is not consensus—it's a **map of the decision space** showing what's at stake, what's uncertain, and what different framings reveal or obscure.
+
+## Scenario-aware mode (deliberated choice)
+
+When the user provides `scenario_context:` (a path to a `/scenarios` output directory), the committee operates in **scenario-aware mode** — the convergent half of the fan→funnel composition.
+
+**How to detect**: The user includes `scenario_context: agent/scenarios/<topic-slug>/` in their invocation, or says "deliberate across the scenarios in [path]."
+
+**What changes**:
+
+1. **Read the scenario set**: Read `02-scenarios.md` and `00-situation.md` from the specified directory. Extract scenario titles, narrators, assumptions, and key implications.
+2. **Charter includes scenario context**: The `00-charter.md` gets additional fields:
+   ```yaml
+   scenario_context: "agent/scenarios/<topic-slug>/"
+   scenarios_summary:
+     - id: 1
+       title: "scenario title"
+       narrator: "Continuity"
+       key_assumption: "the distinguishing assumption"
+     - id: 2
+       title: "scenario title"
+       narrator: "Disruption"
+       key_assumption: "the distinguishing assumption"
+   ```
+3. **Opening statements engage with scenarios**: Each character's opening must reference at least 2 scenarios from their propensity. Maya asks which scenario hides the worst political dynamics; Vic demands evidence for or against each scenario's assumptions; etc.
+4. **Debate ranges across futures**: The structured debate considers which futures to optimize for, which to survive, and which to dismiss — not just which perspective is right.
+5. **Resolution is scenario-aware**: The resolution distinguishes:
+   - **Robust actions**: commitments that make sense across most scenarios
+   - **Scenario-dependent actions**: contingent commitments with trigger conditions
+   - **Monitoring plan**: early warning signs to watch (from the scenarios)
+   - **Dismissed futures**: which scenarios the committee judged implausible, with justification
+
+**What stays the same**: Roster, deliberation requirements, intervention patterns, record directory structure, evaluation/remediation flow — all unchanged. Scenario-aware mode enriches the input; it does not change the committee's process.
+
+**Backward compatibility**: If no `scenario_context` is provided, the committee operates exactly as before. The scenario-aware fields in the charter are optional.
+
+For the full workflow, see `artifacts/deliberated-choice-workflow.md`.
 
 ## Deliberation requirements
 
@@ -138,6 +175,13 @@ The skill should then:
 ```
 
 The skill recognizes sufficient context and proceeds directly to deliberation.
+
+### With scenario context (deliberated choice)
+```
+/committee [decision question] scenario_context: agent/scenarios/<topic-slug>/
+```
+
+Reads the scenario set from the specified directory and runs in scenario-aware mode. Each character engages with the scenarios from their propensity. The resolution distinguishes robust actions from scenario-dependent ones.
 
 ### Scoped invocation
 ```
@@ -294,6 +338,8 @@ For detailed guidance:
 - **Extended character reference**: `artifacts/character-propensity-reference.md`
 - **Setup templates**: `artifacts/committee-setup-template.md`
 - **Main technique doc**: `artifacts/adversarial-committees.md`
+- **Scenario generation**: `artifacts/scenario-generation.md` — the fan (divergent) half
+- **Deliberated choice workflow**: `artifacts/deliberated-choice-workflow.md` — composing fan→funnel
 - **Examples**: `artifacts/examples/hiring-decision-example.md`, `artifacts/examples/repository-review-example.md`
 
 ## Example invocation flow

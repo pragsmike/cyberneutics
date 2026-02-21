@@ -64,7 +64,18 @@ A → B      [Op]  {feedback: B→X}
 
 # Combined annotations (semicolon-separated)
 A × B → C + D  [Op]  {catalytic: B; discard: D}
+
+# Spider topology (fan/funnel duality)
+A → B + C  [Diverge]  {spider: fan}
+A × B → C  [Converge]  {spider: funnel}
 ```
+
+**Spider annotations**: Mark operations as `fan` (one-to-many, divergent) or
+`funnel` (many-to-one, convergent) to render them with distinct shapes and
+colors. Fan operations get a trapezoid shape (blue); funnel operations get an
+inverted trapezoid (green). Use for the fan/funnel duality from
+`palgebra/duality-and-composition.md`. Annotations on continuation lines
+(indented, containing `{`) are joined to the previous equation automatically.
 
 **Type names:** lowercase hyphenated identifiers (e.g., `experience-reports`, `candidates-long-list`)
 
@@ -84,6 +95,8 @@ The generated Mermaid diagram follows string-diagram style:
 | Feedback loop | `{feedback: X→Y}` | Wire from output back to input node |
 | Cross product | `A × B` | Multiple wires entering one box |
 | Coproduct | `A + B` | Multiple wires leaving one box |
+| Fan spider | `{spider: fan}` | Trapezoid node (blue) — one-to-many topology |
+| Funnel spider | `{spider: funnel}` | Inverted trapezoid node (green) — many-to-one topology |
 
 ## How to use
 
@@ -148,6 +161,7 @@ as red sink nodes.
 ## Files
 
 - `SKILL.md` — this file
-- `resource_equations_to_mermaid.py` — the converter (Python 3.10+, no dependencies)
-- `examples/ai-study-equations.txt` — the AI study pipeline equations
-- `examples/lemon-pie-equations.txt` — the lemon meringue pie equations
+- `resource_equations_to_mermaid.py` — the converter (Python 3.7+, no dependencies)
+- `ai-study-equations.txt` — the AI study pipeline equations
+- `lemon-pie-equations.txt` — the lemon meringue pie equations
+- `decision-monad-equations.txt` — the fan→funnel deliberated choice pipeline (demonstrates spider annotations)

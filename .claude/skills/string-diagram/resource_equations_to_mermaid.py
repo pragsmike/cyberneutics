@@ -10,6 +10,7 @@ a Mermaid flowchart in string-diagram style:
   - Catalytic inputs (dashed wires) are not consumed
   - Waste/discard outputs (red sinks) are rejected byproducts
   - Feedback loops connect outputs back to inputs
+  - Spider annotations render fan/funnel topology with distinct shapes
 
 Input format (resource equations file):
   Lines of the form:
@@ -18,6 +19,8 @@ Input format (resource equations file):
     A × B → C  [Op] {catalytic: B}   (B is catalytic / not consumed)
     A → B + C  [Op] {discard: C}     (C is waste/rejected output)
     A → B      [Op] {feedback: B→X}  (B feeds back to input X)
+    A → B + C  [Op] {spider: fan}    (one-to-many spider: trapezoid, blue)
+    A × B → C  [Op] {spider: funnel} (many-to-one spider: inv. trapezoid, green)
 
   - Type names: hyphenated lowercase identifiers (e.g., experience-reports)
   - Cross product: × (unicode) or * (ascii fallback)
@@ -31,6 +34,8 @@ Usage:
   python resource_equations_to_mermaid.py equations.txt > flow.mermaid
   python resource_equations_to_mermaid.py equations.txt --direction TD > flow.mermaid
 """
+
+from __future__ import annotations
 
 import re
 import sys
@@ -53,6 +58,7 @@ class Equation:
     catalytic: set[str] = field(default_factory=set)   # input types that are not consumed
     discard: set[str] = field(default_factory=set)      # waste/rejected outputs
     feedback: dict[str, str] = field(default_factory=dict)  # output→input feedback mapping
+    spider: Optional[str] = None  # 'fan' (one-to-many) or 'funnel' (many-to-one)
 
 
 # ---------------------------------------------------------------------------
@@ -83,15 +89,16 @@ def extract_types(expr: str) -> list[str]:
     return [p for p in parts if p]
 
 
-def parse_annotations(ann_str: str) -> tuple[set[str], set[str], dict[str, str]]:
-    """Parse {catalytic: X, Y; discard: Z; feedback: W→V} annotation block."""
+def parse_annotations(ann_str: str) -> tuple[set[str], set[str], dict[str, str], Optional[str]]:
+    """Parse {catalytic: X, Y; discard: Z; feedback: W→V; spider: fan|funnel}."""
     catalytic = set()
     discard = set()
     feedback = {}
+    spider = None
     
     ann_str = ann_str.strip().strip('{}')
     if not ann_str:
-        return catalytic, discard, feedback
+        return catalytic, discard, feedback, spider
     
     for clause in ann_str.split(';'):
         clause = clause.strip()
@@ -113,8 +120,12 @@ def parse_annotations(ann_str: str) -> tuple[set[str], set[str], dict[str, str]]
                 if '→' in arrow:
                     src, dst = arrow.split('→', 1)
                     feedback[src.strip()] = dst.strip()
+        elif key == 'spider':
+            val_str = vals[0].lower() if vals else ''
+            if val_str in ('fan', 'funnel'):
+                spider = val_str
     
-    return catalytic, discard, feedback
+    return catalytic, discard, feedback, spider
 
 
 def parse_equation(line: str, number: int) -> Optional[Equation]:
@@ -152,7 +163,7 @@ def parse_equation(line: str, number: int) -> Optional[Equation]:
     # Parse inputs
     inputs = extract_types(lhs)
     
-    catalytic, discard, feedback = parse_annotations(ann_str)
+    catalytic, discard, feedback, spider = parse_annotations(ann_str)
     
     return Equation(
         number=number,
@@ -162,19 +173,33 @@ def parse_equation(line: str, number: int) -> Optional[Equation]:
         catalytic=catalytic,
         discard=discard,
         feedback=feedback,
+        spider=spider,
     )
 
 
 def parse_file(filepath: str) -> list[Equation]:
-    """Parse a file of resource equations."""
+    """Parse a file of resource equations.
+
+    Handles continuation lines: an indented line containing '{' is joined
+    to the previous non-blank, non-comment line before parsing.
+    """
     equations = []
-    num = 0
-    with open(filepath, 'r') as f:
-        for line in f:
-            num += 1
-            eq = parse_equation(line, num)
-            if eq:
-                equations.append(eq)
+    with open(filepath, 'r', encoding='utf-8') as f:
+        raw_lines = f.readlines()
+
+    joined = []
+    for line in raw_lines:
+        stripped = line.rstrip('\n')
+        if stripped and stripped[0] in (' ', '\t') and '{' in stripped:
+            if joined:
+                joined[-1] += ' ' + stripped.strip()
+                continue
+        joined.append(stripped)
+
+    for num, line in enumerate(joined, start=1):
+        eq = parse_equation(line, num)
+        if eq:
+            equations.append(eq)
     return equations
 
 
@@ -246,11 +271,16 @@ def generate_mermaid(equations: list[Equation], direction: str = 'LR') -> str:
     lines.append('')
     
     # --- Operation nodes ---
-    lines.append('    %% --- Operations (boxes) ---')
+    lines.append('    %% --- Operations (boxes; spiders use distinct shapes) ---')
     for eq in equations:
         if eq.operation:
             slug = slugify(eq.operation)
-            lines.append(f'    {slug}["{eq.operation}"]')
+            if eq.spider == 'fan':
+                lines.append(f'    {slug}[/"{eq.operation}"\\]')
+            elif eq.spider == 'funnel':
+                lines.append(f'    {slug}[\\"{eq.operation}"/]')
+            else:
+                lines.append(f'    {slug}["{eq.operation}"]')
     lines.append('')
     
     # --- Sink nodes (waste/discard) ---
@@ -313,12 +343,17 @@ def generate_mermaid(equations: list[Equation], direction: str = 'LR') -> str:
     lines.append('    %% --- Styling ---')
     lines.append('')
     
-    # Operations: dark boxes
-    lines.append('    %% Operations: dark boxes')
+    # Operations: dark boxes; spiders get distinct colors
+    lines.append('    %% Operations: dark boxes (fan=blue divergent, funnel=green convergent)')
     for eq in equations:
         if eq.operation:
             slug = slugify(eq.operation)
-            lines.append(f'    style {slug} fill:#2d2d2d,stroke:#000,color:#fff,stroke-width:2px')
+            if eq.spider == 'fan':
+                lines.append(f'    style {slug} fill:#1a3a5c,stroke:#0d47a1,color:#bbdefb,stroke-width:2px')
+            elif eq.spider == 'funnel':
+                lines.append(f'    style {slug} fill:#1b5e20,stroke:#2e7d32,color:#c8e6c9,stroke-width:2px')
+            else:
+                lines.append(f'    style {slug} fill:#2d2d2d,stroke:#000,color:#fff,stroke-width:2px')
     lines.append('')
     
     # Sources: light rounded
