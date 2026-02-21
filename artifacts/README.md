@@ -16,7 +16,7 @@ Procedural overhead that prevents statistical shortcuts and forces genuine explo
 Breaking the hermeneutic circle by evaluating deliberations with fresh model instances against explicit rubrics. Learn the five core rubrics and how to iterate based on feedback.
 
 ### [Cross-Scenario Learning](./cross-scenario-learning.md)
-Building institutional memory by extracting lessons from past deliberations and injecting them into future ones. See how the methodology improves over time through compounding learning.
+Building institutional memory by extracting lessons from past deliberations and injecting them into future ones. See how the methodology improves over time through compounding learning. *Formal context:* scenario generation (the **fan** — one situation → many scenarios) is the dual of the committee (the **funnel**); the composed pipeline is formalized in [palgebra/duality-and-composition.md](../palgebra/duality-and-composition.md) and [Decisions Under Uncertainty](../essays/10-decisions-under-uncertainty.md). A dedicated scenario-generation artifact and `/scenarios` skill are planned but not yet implemented.
 
 ## Getting Started
 

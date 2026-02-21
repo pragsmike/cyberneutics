@@ -124,6 +124,16 @@ This document captures key insights about how the Cyberneutics methodology evolv
 
 ---
 
+### Fan and Funnel as Compositional Duality
+
+**Discovery**: The committee (convergent, many-to-one) has a categorical dual — scenario generation (divergent, one-to-many). Neither alone is sufficient: scenarios without selection is uncommitted storytelling; committee without scenario exploration risks anchoring on the first framing.
+
+**Evolution**: Formalized in `palgebra/duality-and-composition.md` and `essays/10-decisions-under-uncertainty.md`. Composition yields a decision monad with testable quality laws (unit, associativity). Iteration (N runs → variance report → decision landscape map) maps topology of the decision space; connects to residuality theory (residues vs eigenforms, architectural walks).
+
+**Why It Matters**: Makes "decisions under uncertainty" the explicit value proposition: rigorous, traceable commitment via explore → evaluate → repeat → trace. Scenario roster and `/scenarios` skill are specified but not yet implemented; `/probe` is designed, not built.
+
+---
+
 ## Theoretical Synthesis Development
 
 ### How the Three Frameworks Compose
@@ -252,6 +262,42 @@ See [meta/uptake-and-usage.md](uptake-and-usage.md) for details and analysis.
 
 **Key Learning**: The bridge essay was the last identified gap in the documentation coherence pass. Writing it confirmed that the philosophical and algebraic treatments are genuinely consistent — not just metaphorically related but structurally aligned. The essay identifies a fourth representation (philosophical narrative) alongside the three isomorphic representations the palgebra already names (equations, diagrams, files). The four are not all mechanically interconvertible, but they form a coherent whole.
 
+### Feb 20, 2026: Roster Extraction and Repository Rename
+
+**Created**:
+- `agent/roster.md` — configurable committee roster as single source of truth; YAML front matter + markdown body (character definitions, interaction dynamics, voice notes). Committee and review skills read roster at invocation.
+
+**Modified**: Committee and review skills, four artifact documents, deliberations README, CLAUDE.md, top-level README — inline roster removed, all character-specific logic genericized to reference propensities; roster file is the only operational definition.
+
+**Repository**: Renamed from `cyber-sense` to `cyberneutics` (name collision with Dell/Quest CyberSense; neologism with zero search competition).
+
+**Key Learning**: Roster as catalytic input is now explicit in file structure — `agent/roster.md` persists across deliberations and is not consumed. Making the roster configurable puts the user in editorial control of which epistemic stances the committee employs; changing roster is an editorial decision, not an implementation edit. Plan file survived context boundary during multi-file extraction; comprehensive plan prevented omissions.
+
+### Feb 20–21, 2026: Documentation and Distinction Passes
+
+**Created/updated** (across multiple commits):
+- Narrative computing / narrative engineering distinction clarified and propagated across docs
+- Research plan extracted from `societies-of-thought-synthesis.md` to `meta/research-plan.md`
+- Tilt Sound Collective fiction extracted from stochastic-imps essay to `essays/tilt-sound-collective-story.md`
+- `references/README.md` rewritten as comprehensive annotated bibliography (39 sources, 9 thematic sections, "Cited in" pointers)
+- Editorial review: cross-references, character attributions, reading paths
+
+**Key Learning**: Extraction pattern (move material to dedicated file, leave bridge in source) keeps essays focused while preserving full content. Bibliography as single reference surface improves citability and gap-spotting.
+
+### Feb 21, 2026: Fan/Funnel Duality and Decisions Under Uncertainty
+
+**Theoretical development**: The adversarial committee (funnel) has a categorical dual — scenario generation (fan). Composing them yields a **decision monad**: a single pipeline that converts ambiguity into justified commitment with traceable provenance and predictable quality propagation.
+
+**Created**:
+- `palgebra/duality-and-composition.md` — formal treatment: fan as coproduct (one-to-many), funnel as product (many-to-one); resource equations for the fan operation; composed fan→funnel pipeline; monad structure with unit and associativity laws as quality criteria; Probe/Map operations for N-run variance analysis and decision-landscape mapping; new types (situation, scenario, scenario-set, variance-report, decision-landscape-map); two rosters (committee vs scenario); six open design questions
+- `essays/10-decisions-under-uncertainty.md` — Essay 10: fan/funnel as Bruner's binocular vision (narrative mode explore, paradigmatic mode evaluate); monad laws as testable quality; repetition as stability test; residues vs eigenforms; Sagan analogy (baloney detection kit for wicked problems); connection to residuality theory and architectural walks; practical prescription (explore, deliberate, repeat, trace, fix quality at source)
+
+**Updated**: README.md (decision-under-uncertainty value proposition near top, new doc links); essays/README.md (Essay 10 on Theorist and Formalist paths, Core Essays entry); palgebra/reference.md (spider patterns: fan, funnel, decision monad; cheat sheet); wild/residuality-theory/README.md (status → partially integrated); agent/gap_analysis.md (diary/residuality TODO marked theory-complete, remaining implementation phases noted).
+
+**Residuality integration**: Architectural walks = N runs of fan→funnel; residue = single-run output; eigenform = what persists across runs. Remediation loop hunts local eigenforms; Probe hunts global. O'Reilly's "criticality over correctness" mapped to satisficing subject to survival constraint for wicked problems.
+
+**Key Learning**: The committee was only half the story — the convergent half. The divergent half (scenario exploration) had been implicit in practice; formalizing it as the fan gives the composition a precise type and makes the decision monad the unit of "expand, evaluate, commit." Implementation phases remain: `/scenarios` skill, scenario roster design, composed fan→funnel pipeline, `/probe` skill, string-diagram spider rendering. Theory is documented; implementation is sequenced but not yet built.
+
 ---
 
 ## What This Shows About Methodology Maturity
@@ -266,7 +312,7 @@ See [meta/uptake-and-usage.md](uptake-and-usage.md) for details and analysis.
 - **New**: Executable skills (`/committee`, `/review`, `/string-diagram`, `/handoff`) operationalize the techniques as one-command workflows
 - **New**: Evaluation feedback loop (review → remediation → re-review) is implemented and testable end-to-end
 
-**What This Means**: The methodology won't radically change. Refinements, yes. Fundamental redesign, no. The addition of executable skills is an accessibility improvement, not a methodology change — the same pipeline, now automated.
+**What This Means**: The methodology won't radically change. Refinements, yes. Fundamental redesign, no. The addition of executable skills is an accessibility improvement, not a methodology change — the same pipeline, now automated. **Value proposition sharpened** (Feb 21): README and Essay 10 surface "rigorous, traceable decision-making under genuine uncertainty" as the primary promise — explore (fan), evaluate (funnel), repeat (probe), trace (provenance). The committee remains the implemented half; the fan and composed pipeline are specified but not yet executable.
 
 ---
 
@@ -279,8 +325,9 @@ See [meta/uptake-and-usage.md](uptake-and-usage.md) for details and analysis.
 - Applied to a new domain (dark factory architecture) as feasibility test
 - Narrative immune systems work extends the formalism toward open-world (bath) settings
 - **Bridge essay** (`essays/08-from-methodology-to-formalism.md`) explicitly connects the philosophical foundations to the algebraic machinery
+- **Duality and composition** (`palgebra/duality-and-composition.md`): committee formalized as one half of a dual pair; scenario generation (fan) as coproduct; composition as decision monad with testable quality laws; Probe/Map for iteration; new types and two rosters (committee vs scenario). Spider patterns (fan/funnel) added to reference.
 
-**What This Means**: The formalism is past "interesting idea in one essay" and into "reference card + worked examples + tool + bridge essay + applications." The bridge essay closes the gap between the essay series and the palgebra — readers can now enter from either side and understand the other. Still needs: more worked examples in different domains, the bath model formalized, and testing whether agents can bootstrap pipelines from resource equations.
+**What This Means**: The formalism is past "interesting idea in one essay" and into "reference card + worked examples + tool + bridge essay + applications + compositional duality." The committee is now explicitly the funnel half; the fan half is specified but not yet implemented as a skill. Still needs: `/scenarios` and `/probe` implementation, scenario roster design, more worked examples in different domains, the bath model formalized, and testing whether agents can bootstrap pipelines from resource equations.
 
 ---
 
@@ -367,11 +414,12 @@ If it couldn't do that, it wouldn't be rigorous. Since it can, we have evidence 
 5. **Tool dependence**: Does this require Claude specifically? Or work with other LLMs? *MOOLLM integration suggests platform-agnostic potential, but untested with non-Claude models.*
 6. **Can palgebra specify pipelines beyond the committee?** The dark factory analysis (`wild/software-factories/palgebra-and-dark-factories.md`) maps palgebra onto an entirely different domain. Whether agents can bootstrap a pipeline from resource equations is testable.
 7. **Does the immune system analogy predict useful architecture?** The narrative immune systems work (`essays/09-narrative-immune-systems.md`) predicts adaptive rubrics, regulatory mechanisms, and an organ/bath boundary formalism. These are concrete engineering targets. The civic application (`applications/narrative-immune-systems/`) shows what this looks like at the social scale.
+8. **Does the decision monad hold up in practice?** Fan/funnel composition is formalized (`palgebra/duality-and-composition.md`, `essays/10-decisions-under-uncertainty.md`). Implementation phases: `/scenarios` skill, scenario roster design (distinct from committee roster), composed fan→funnel pipeline, `/probe` for N-run variance and decision-landscape mapping. Open design questions: scenario roster composition, variance-report and decision-landscape-map structure, monad laws as executable tests.
 
-We're past "early-stage documentation" and into "methodology with executable skills, a formal algebra, and first external adoption." Still not "ready for all practitioners" — but the gap is narrowing, and we now have empirical signals to steer by.
+We're past "early-stage documentation" and into "methodology with executable skills, a formal algebra, and first external adoption." The formalism now includes a compositional duality (fan/funnel) and an explicit prescription for decisions under uncertainty; the committee remains the only fully implemented half. Still not "ready for all practitioners" — but the gap is narrowing, and we now have empirical signals to steer by.
 
 ---
 
-**Last Updated**: February 19, 2026
+**Last Updated**: February 21, 2026
 **Status**: Living document—will update as methodology evolves
 **Contribute**: If you use this methodology, please share your results (successes AND failures)

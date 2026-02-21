@@ -2,7 +2,7 @@
 
 ## What this repo is
 
-Cyberneutics is a methodology for working with LLMs as collaborative sense-making partners. It treats LLMs as **narrative engines** rather than answer machines and builds concrete techniques for rigorous exploration of problem spaces. The methodology is documented in essays (why), artifacts (how), and a formal algebra called palgebra (what, precisely). For a fuller orientation, read `README.md`.
+Cyberneutics is a methodology for working with LLMs as collaborative sense-making partners. It treats LLMs as **narrative engines** rather than answer machines and provides rigorous, traceable techniques for **decisions under genuine uncertainty** — explore possible futures, evaluate them adversarially, repeat to map the decision landscape, trace every commitment to its sources. The methodology is documented in essays (why), artifacts (how), and a formal algebra called palgebra (what, precisely). For a fuller orientation, read `README.md`.
 
 ## Before you do anything: session start
 
@@ -76,7 +76,7 @@ Three ideas to know as orientation before reading `palgebra/reference.md`:
 - **Enrichment vs. transformation**: transformations produce new content; enrichments only update metadata (scoring, gating). Prefer enrichment when you can — it's idempotent and re-runnable.
 - **Three propagation rules**: confidence can only degrade through a pipeline; provenance can only accumulate; content transforms.
 
-For the committee pipeline formalized as a worked example, see `palgebra/committee-as-palgebra.md`.
+For the committee pipeline formalized as a worked example, see `palgebra/committee-as-palgebra.md`. For the fan/funnel duality (scenario generation + committee as a decision monad) and iteration for mapping decision landscapes, see `palgebra/duality-and-composition.md` and `essays/10-decisions-under-uncertainty.md`.
 
 ## Working style
 

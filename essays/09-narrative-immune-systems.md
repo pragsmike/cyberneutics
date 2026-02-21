@@ -260,6 +260,8 @@ power users and becomes a public good.
 
 **Previous essay**: [From Methodology to Formalism](./08-from-methodology-to-formalism.md) — bridging the philosophical foundations to the algebraic machinery
 
+**Next essay**: [Decisions Under Uncertainty](./10-decisions-under-uncertainty.md) — the fan/funnel duality, decision monad, and rigorous decision-making under genuine uncertainty
+
 **Applied**:
 - [Social Decision Disruption](../applications/narrative-immune-systems/social-decision-disruption.md) — the immune analogy applied to journalism, information warfare, and the trust commons
 

@@ -43,6 +43,14 @@ LLM-generated artifacts.
   Detailed commentary on catalytic inputs, the bounded feedback trace,
   confidence propagation, and comparison with the trade study pipeline.
 
+- **[duality-and-composition.md](duality-and-composition.md)** — The
+  committee as one half of a dual pair: scenario generation (fan,
+  one-to-many) is the other. Composing fan → funnel yields a decision
+  monad with quality laws; Probe/Map operations for N-run variance and
+  decision-landscape mapping; new types (situation, scenario-set,
+  variance-report, etc.); two rosters (committee vs scenario). Scenario
+  skill and composed pipeline are specified but not yet implemented.
+
 ### Tool
 
 - **[`../.claude/skills/string-diagram/`](../.claude/skills/string-diagram/)** —
