@@ -186,7 +186,9 @@ The terminology matters. "AI assistant" sets wrong expectations—it implies the
 
 Just as "numeric computing" emphasized that you had to frame problems numerically to use arithmetic machines, and "symbolic computing" emphasized that you had to frame problems formally to use logic machines, "narrative computing" emphasizes that you must frame problems as stories to use storytelling machines.
 
-This isn't limitation—it's recognition. Each paradigm expanded the class of problems computers could help with. Narrative computing extends to the messy, contextual, intention-laden problems that resisted both numeric and symbolic approaches. But it requires appropriate methodology.
+This isn't limitation—it's recognition. Each paradigm expanded the class of problems computers could help with. Narrative computing extends to the messy, contextual, intention-laden problems that resisted both numeric and symbolic approaches.
+
+But just as numeric computing required numerical analysis and symbolic computing required software engineering, narrative computing requires its own engineering discipline. **Narrative engineering** is that discipline: composing unreliable narrative primitives (individual LLM calls) into reliable systems through redundancy, feedback, iteration, and staged composition. The relationship between narrative computing and narrative engineering parallels the relationship between symbolic computing and software engineering — the former names what the machine does, the latter names how we compose those operations into systems that work.
 
 ---
 
@@ -198,9 +200,9 @@ Numeric computing took roughly 30 years to develop mature methodology—from ENI
 
 Symbolic computing followed a similar arc—from LISP to enterprise software with established practices for software engineering, testing, and formal verification.
 
-We're in the early days of narrative computing. The methodologies aren't settled. Best practices are still emerging. Cyberneutics represents one contribution to this developing field, not the final word.
+We're in the early days of narrative engineering — the discipline that grows from narrative computing, just as software engineering grew from symbolic computing. The methodologies aren't settled. Best practices are still emerging. Cyberneutics represents one contribution to this developing field, not the final word.
 
-What disciplines will narrative computing require? Adversarial deliberation, certainly. Evidence standards adapted for narrative claims. Assumption surfacing techniques. Institutional memory management. Perhaps entirely new practices we haven't yet imagined.
+What will narrative engineering require? Adversarial deliberation, certainly. Evidence standards adapted for narrative claims. Assumption surfacing techniques. Institutional memory management. Perhaps entirely new practices we haven't yet imagined.
 
 ### Risks of Getting It Wrong
 
@@ -228,15 +230,15 @@ The disciplines we use for high-stakes decisions—adversarial process, independ
 
 ## Conclusion
 
-The three-eras framing—numeric, symbolic, narrative—is defensible, not hype. Each paradigm is defined by what the machine does (arithmetic, logic, story generation) and what methodology humans must develop to use it effectively.
+The three-eras framing—numeric, symbolic, narrative—is defensible, not hype. Each paradigm is defined by what the machine does (arithmetic, logic, story generation) and the engineering discipline humans develop to compose those primitives into reliable systems.
 
-Narrative computing is the current paradigm. LLMs are narrative engines. Treating them as oracles or reasoning systems is a category error with practical consequences. Appropriate methodology—like Cyberneutics—designs interaction around what these systems actually do.
+Narrative computing is the current paradigm. LLMs are narrative engines — the transistors of this era. Treating them as oracles or reasoning systems is a category error with practical consequences. Narrative engineering — composing unreliable narrative primitives into trustworthy systems through redundancy, feedback, and staged composition — is the discipline this era demands. Cyberneutics is one methodology within it.
 
 The intellectual foundations are solid. Bruner established narrative as irreducible cognitive mode. Rosen demonstrated that complex systems require semantic description beyond syntactic manipulation. Computational narrative intelligence developed techniques for story generation and analysis. Second-order cybernetics explained why observer and observed are entangled.
 
-What's new is the application domain and the synthesis. We have powerful narrative engines now. We need practical methodology for collaborating with them. The components exist in other fields—adversarial process, evidence standards, procedural constraints, independent evaluation. The contribution is adapting these into coherent practice for human-AI narrative collaboration.
+What's new is the application domain and the synthesis. We have powerful narrative engines now. We need narrative engineering — the practical discipline for composing them into systems that catch their own errors and produce assessable artifacts. The components exist in other fields—adversarial process, evidence standards, procedural constraints, independent evaluation. The contribution is adapting these into coherent practice for human-AI narrative collaboration.
 
-We're in the early days. The methodology will evolve. But the fundamental insight is clear: if the tool is a narrative engine, treating it like a calculator is a category error. You don't get mad at a car for not flying; you learn to drive.
+We're in the early days. The discipline will evolve. But the fundamental insight is clear: if the tool is a narrative engine, treating it like a calculator is a category error. You don't get mad at a car for not flying; you learn to drive.
 
 For the philosophical path to these same conclusions—through Gödel, Kuhn, operational closures, and category theory—see [Narrative Engineering](./07-bolands-narrative-engineering.md).
 

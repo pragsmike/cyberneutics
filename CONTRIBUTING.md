@@ -15,7 +15,7 @@ If you have developed a new technique (e.g., a specific committee structure, an 
 - **Link it** in `artifacts/README.md`.
 
 ### 2. Essays & Theory
-Theoretical contributions are welcome but undergo stricter review to ensure consistency with the core axioms (Narrative Computing, Cybernetics, Sense-Making).
+Theoretical contributions are welcome but undergo stricter review to ensure consistency with the core axioms (narrative computing as primitive, narrative engineering as discipline, cybernetics, sense-making).
 - **Draft your essay** in `essays/` (you can start with a PR or draft).
 - **Ensure you reference** existing foundational texts.
 - **Tone**: Rigorous but accessible.

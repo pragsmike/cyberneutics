@@ -4,11 +4,12 @@ This directory contains essays exploring the theoretical foundations of Cyberneu
 
 ## Terminology
 
-Three terms recur across this collection with distinct meanings:
+Four terms recur across this collection with distinct meanings:
 
+- **Narrative Computing** — what the machine does: an LLM takes a prompt and generates a narrative. The primitive operation — the transistor of this discipline.
+- **Narrative Engineering** — the discipline of composing primitive narrative computers into reliable systems through redundancy, feedback, iteration, and staged composition. Analogous to how software engineering grew from symbolic computing. (Developed in [Essay 07](./07-bolands-narrative-engineering.md))
+- **Cyberneutics** — one methodology within narrative engineering: the specific techniques (adversarial committees, parliamentary procedures, RUBRIC evaluation) implemented within this repository
 - **Cybernetic Hermeneutics** — the theoretical synthesis: interpretation as a regulated, dynamic feedback loop (defined in [Essay 05](./05-the-synthesis.md))
-- **Narrative Engineering** — the discipline: using engineering principles to design processes for generating and evaluating narratives (developed in [Essay 07](./07-bolands-narrative-engineering.md))
-- **Cyberneutics** — the methodology: the specific techniques (adversarial committees, parliamentary procedures, RUBRIC evaluation) implemented within this repository
 
 ## Reading Paths
 
@@ -51,7 +52,7 @@ If you want the precise machinery underneath the methodology:
 4. **[From Methodology to Formalism](./08-from-methodology-to-formalism.md)** - The bridge: how the philosophical foundations and the algebra describe the same phenomenon
 5. **[Narrative Immune Systems](./09-narrative-immune-systems.md)** - Evaluation as immune function, trust boundaries, the organ/bath distinction
 
-The essays in this directory establish *why* narrative engines need structured methodology. The palgebra provides *how, precisely* — a formal language where adversarial committees are transformation morphisms, rubric evaluation is enrichment, and human review gates are collapse operators. [From Methodology to Formalism](./08-from-methodology-to-formalism.md) bridges the two vocabularies explicitly. See the [palgebra directory](../palgebra/) for the full formalism.
+The essays in this directory establish *why* narrative engines need narrative engineering. The palgebra provides *how, precisely* — a formal language where adversarial committees are transformation morphisms, rubric evaluation is enrichment, and human review gates are collapse operators. [From Methodology to Formalism](./08-from-methodology-to-formalism.md) bridges the two vocabularies explicitly. See the [palgebra directory](../palgebra/) for the full formalism.
 
 ## Core Essays
 
@@ -182,9 +183,10 @@ The essays in this directory establish *why* narrative engines need structured m
 
 **The convergence**: Alex Boland's "Narrative Engineering" arrives at similar conclusions from a different angle (continental philosophy vs. cybernetics).
 
-**Key insight**: We are steering narrative potential. The "diegetic boundary" is the interface where we exert control.
+**Key insight**: Narrative computing is the primitive; narrative engineering is the discipline of composing those primitives into reliable systems — just as software engineering composes symbolic computations. The transistor analogy: redundancy, feedback, iteration, and staged composition make unreliable components into trustworthy systems.
 
 **Covers**:
+- The distinction between narrative computing and narrative engineering
 - Two bridges to the same shore: comparing Cyberneutics and Narrative Engineering
 - Boland's core argument (Gödel, Kuhn, Bruner's paradigmatic/narrative modes)
 - Where Boland enriches Cyberneutics; where Cyberneutics extends Boland
@@ -197,7 +199,7 @@ The essays in this directory establish *why* narrative engines need structured m
 
 ### [From Methodology to Formalism](./08-from-methodology-to-formalism.md)
 
-**The bridge**: The essays explain *why* narrative engines need structured methodology. The palgebra explains *how, precisely*. This essay shows they describe the same phenomenon at different levels of abstraction.
+**The bridge**: The essays explain *why* narrative engines need narrative engineering. The palgebra explains *how, precisely*. This essay shows they describe the same phenomenon at different levels of abstraction.
 
 **Key insight**: The philosophical foundations (gaps as undecidables, cybernetic loops, Deleuzian difference) and the algebraic machinery (soft types, morphism kinds, propagation rules) are not separate projects — they are four representations of the same methodology, like charts on a manifold.
 
@@ -338,7 +340,7 @@ Possible future essays, not yet written:
 
 ## Status and Evolution
 
-These essays represent an emerging theoretical framework. The core insights are stable (narrative engines, cybernetic sense-making, iterative co-evolution). The formalization is now bridged to the essay series via [Essay 08](./08-from-methodology-to-formalism.md).
+These essays represent an emerging theoretical framework. The core insights are stable (narrative computing as primitive, narrative engineering as discipline, cybernetic sense-making, iterative co-evolution). The formalization is now bridged to the essay series via [Essay 08](./08-from-methodology-to-formalism.md).
 
 **Feedback welcome**. If these essays:
 - Clarify something → let us know what clicked

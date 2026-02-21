@@ -7,8 +7,8 @@
 
 ## Why This Essay Exists
 
-The essays in this series explain *why* narrative engines need structured
-methodology. The palgebra provides *how, precisely* — a formal algebra
+The essays in this series explain *why* narrative engines need narrative
+engineering. The palgebra provides *how, precisely* — a formal algebra
 where text artifacts carry metadata, operations compose predictably, and
 quality propagation is explicit. But until now these two modes of
 understanding have been developed separately: the essays speak in the
@@ -23,7 +23,7 @@ other leaves obscure.
 The bridge matters because the methodology without the formalism remains
 intuitive but unauditable. The formalism without the methodology remains
 precise but unmotivated. Together, they form a complete discipline for
-narrative computing: the essays explain what problems require narrative
+narrative engineering: the essays explain what problems require narrative
 exploration and why certain techniques work; the palgebra makes those
 techniques composable, their quality propagation visible, and their
 failure modes predictable.
@@ -56,7 +56,7 @@ means — and then provides formal machinery for evaluating their quality.
 The pipeline's *types* are not boolean (is this an evidence file? yes/no)
 but *graded* (how well does this evidence file inhabit its type, measured
 along five dimensions?). The formalism encodes the recognition that for
-the problems narrative computing addresses, quality is not a predicate
+the problems narrative engineering addresses, quality is not a predicate
 but a membership function.
 
 **The connection**: Dervin's gap motivates the need for narrative
@@ -446,7 +446,7 @@ rigorously, the palgebra gives you three things:
 If you have read the palgebra and want to understand why it is shaped
 the way it is, the essays give you three things:
 
-1. **A theory of the problem class.** Narrative computing addresses
+1. **A theory of the problem class.** Narrative engineering addresses
    problems that are undecidable in the formal sense — gaps that require
    bridging, not solving. The soft type system (graded membership, not
    boolean) follows from the nature of the problem class.
@@ -489,7 +489,7 @@ sharpen the methodology, while the methodology reveals motivational
 properties (why soft types, why bounded loops, why multiple characters)
 that ground the formalism in genuine problems.
 
-The discipline of narrative computing requires both vocabularies. To
+The discipline of narrative engineering requires both vocabularies. To
 use only the philosophical one is to remain intuitive but imprecise.
 To use only the algebraic one is to remain precise but unmotivated.
 The bridge is where the methodology lives.

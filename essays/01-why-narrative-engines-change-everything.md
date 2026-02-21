@@ -389,11 +389,11 @@ This is:
 
 ## The Path Forward
 
-Numeric computing required us to learn: numerical analysis, error propagation, stability theory, algorithms.
+Numeric computing required numerical analysis: error propagation, stability theory, algorithms.
 
-Symbolic computing required us to learn: formal logic, type theory, algorithm complexity, data structures.
+Symbolic computing required software engineering: formal logic, type theory, algorithm complexity, data structures.
 
-**Narrative computing requires us to learn**: adversarial deliberation, evidence standards, assumption surfacing, independent evaluation, institutional memory management.
+**Narrative computing requires narrative engineering**: adversarial deliberation, evidence standards, assumption surfacing, independent evaluation, institutional memory management. Each LLM call is a transistor — locally useful but unreliable. The engineering is in the composition.
 
 We're in the early days. The methodologies aren't settled. The best practices are still emerging.
 

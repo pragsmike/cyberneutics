@@ -98,7 +98,7 @@ This is Deleuze's inversion in mathematical form. Identity (what an object IS) b
 
 This is a weaker notion than equality, and it's more useful. It lets you say "these are the same in the ways that matter" without claiming they're identical in all respects.
 
-For narrative computing, this matters:
+For narrative engineering, this matters:
 
 - Two stories can be "equivalent" for decision-making purposes without being the same story
 - Two committee outputs can be isomorphic in their recommendation structure even if they differ in wording
@@ -225,7 +225,7 @@ Cyberneutics is for the wicked problems. For the others, just compute.
 
 ## Summary
 
-Deleuze's philosophy provides theoretical grounding for why narrative computing works the way it does:
+Deleuze's philosophy provides theoretical grounding for why narrative engineering works the way it does:
 
 | Concept | Implication for Practice |
 |---------|-------------------------|

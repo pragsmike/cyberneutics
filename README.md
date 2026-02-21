@@ -1,16 +1,20 @@
-# Cyberneutics: Towards methodology for narrative computing
+# Cyberneutics: Narrative engineering for the age of narrative computing
 
 > If the tool is a narrative engine, treating it like a calculator is a category error. You don't get mad at a car for not flying; you learn to drive.
 
-## Narrative computing
+## Narrative computing and narrative engineering
 
-Each generation of computing hardware forced us to adapt how we think about expressing and solving problems. Each generation widened the class of problems they could help with.
+Each generation of computing hardware forced us to adapt how we think about expressing and solving problems. Each generation also required a new engineering discipline.
 
-*Numeric computing*: We framed our problems numerically when we got fast arithmetic machines.  
-*Symbolic computing*: We framed problems in symbolic logic when we got bitstring crunchers.  
-*Narrative computing*: Now we have storytelling engines, and we must learn to frame our problems as stories.  
+*Numeric computing*: We got fast arithmetic machines and developed numerical analysis.  
+*Symbolic computing*: We got bitstring crunchers and developed software engineering.  
+*Narrative computing*: Now we have storytelling engines — and we need **narrative engineering**.  
 
-As always, the computers won't completely solve the problems for us, but they can amplify our capacity to think them through.
+**Narrative computing** is what the machine does. An LLM takes a prompt and generates a narrative. This is the primitive operation — the transistor of narrative engineering.
+
+**Narrative engineering** is how we compose those primitives into reliable systems. A single LLM call is locally coherent but unreliable, just as a single transistor amplifies but drifts. You don't fix that by building a better transistor. You design circuits: redundancy (multiple perspectives), feedback (evaluation against rubrics), iteration (generate-evaluate-revise loops), and staged composition (charter → deliberation → resolution → evaluation). The engineering makes the system trustworthy even when individual components aren't.
+
+Software engineering grew from symbolic computing. Narrative engineering grows from narrative computing.
 
 [From Practice to Theory](./essays/02-from-practice-to-theory.md) tells the story of how these practices grew, and the theory used to guide their development.
 
@@ -32,7 +36,7 @@ Large Language Models are not databases. They are not logic engines. They are **
 *   **Researchers** exploring human-AI collaboration
 *   **Anyone frustrated** with shallow AI outputs who suspects there's a better way
 *   **Skeptics** wondering if this is just prompt engineering theater → [start here](essays/README.md#for-skeptics-show-me-why-this-matters)
-*   **Theorists** interested in narrative computing, cybernetics, or sense-making
+*   **Theorists** interested in narrative engineering, cybernetics, or sense-making
 
 ## Getting started
 
@@ -85,7 +89,7 @@ These aren't incremental improvements. They represent a fundamentally different 
 - **[Committee as Palgebra](./palgebra/committee-as-palgebra.md)** — worked example: the adversarial committee pipeline formalized as resource equations
 - Adapts Fong and Spivak's resource-theoretic framework (*Seven Sketches in Compositionality*, Ch. 2) to LLM pipelines. Three isomorphic representations: resource equations, string diagrams, and YAML-decorated artifact files
 
-The essays describe *why* narrative engines need structured methodology. The artifacts provide *how* — concrete techniques like adversarial committees and evaluation rubrics. Palgebra provides *what, precisely* — a formal language for specifying pipelines, their types, their quality propagation, and their composition laws. An adversarial committee is a transformation morphism; a rubric evaluation is an enrichment morphism; a human review gate is a collapse operator. The formalism makes these relationships explicit and composable.
+The essays describe *why* narrative engines need narrative engineering. The artifacts provide *how* — concrete techniques like adversarial committees and evaluation rubrics. Palgebra provides *what, precisely* — a formal language for specifying pipelines, their types, their quality propagation, and their composition laws. An adversarial committee is a transformation morphism; a rubric evaluation is an enrichment morphism; a human review gate is a collapse operator. The formalism makes these relationships explicit and composable.
 
 **[Applications](applications/)** - Domain analyses applying the framework to real-world phenomena
 - [Narrative Immune Systems](./applications/narrative-immune-systems/) — information warfare, journalism, and the trust commons, analyzed through the immune analogy

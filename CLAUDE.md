@@ -60,9 +60,10 @@ Four slash commands are available. **Before invoking any skill, read its SKILL.m
 
 ## Core ideas
 
-Four ideas underlie everything here. These are orientation, not instruction — for depth, see `essays/README.md`:
+Five ideas underlie everything here. These are orientation, not instruction — for depth, see `essays/README.md`:
 
-- **LLMs are narrative engines.** Everything they produce is a narrative construct. Optimize for rich exploration of the problem space, not "the answer."
+- **LLMs are narrative engines.** Everything they produce is a narrative construct. An LLM generating a narrative is **narrative computing** — the primitive operation, like a transistor amplifying a signal.
+- **Narrative engineering composes unreliable primitives into reliable systems.** A single LLM call drifts and distorts. Redundancy (multiple perspectives), feedback (evaluation), iteration (generate-evaluate-revise), and staged composition (pipelines) make the system trustworthy. This is the discipline — analogous to how software engineering grew from symbolic computing.
 - **Repetition produces difference.** Running the same prompt multiple times maps the latent space of possible interpretations — it's exploration, not redundancy.
 - **Observation changes state.** Every response modifies the user's cognitive state. The goal is to help navigate complexity, not deliver finality.
 - **The user is an editor.** Your role is to generate perspectives and framings; the user curates which get published to reality.

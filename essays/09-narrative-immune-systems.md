@@ -26,7 +26,7 @@ Biological immunity works by graded recognition: antibodies bind to
 antigens with measurable affinity; T cells pass a two-stage gauntlet
 in the thymus before release. The parallel:
 
-| Biological | Narrative Computing |
+| Biological | Narrative Engineering |
 |---|---|
 | Antibody (circulating pattern-matcher) | Rubric (quality dimension scorer) |
 | T cell (active agent using recognition) | Evaluator (independent instance applying rubrics) |
@@ -224,14 +224,14 @@ economics: encode the rubric, automate the evaluation, give everyone a
 thymus.
 
 Media literacy as currently taught tries to make every person into their
-own T cell. Narrative computing offers the possibility of giving people
+own T cell. Narrative engineering offers the possibility of giving people
 a **thymus** — an organ that does heavy screening so each encounter
 doesn't require full immunological reasoning from scratch. The tool
 amplifies judgment rather than replacing it. Ashby's requisite variety:
 the complexity of the attack surface demands proportionally complex
 defense.
 
-This is where narrative computing stops being a methodology for LLM
+This is where narrative engineering stops being a methodology for LLM
 power users and becomes a public good.
 
 ## Open threads

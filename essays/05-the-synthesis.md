@@ -14,7 +14,7 @@ Individually, they are powerful lenses. Dervin explains *why* we ask. Cybernetic
 
 But when combined, they form a single, cohesive rigorous description of what happens when a human thinks with an AI.
 
-This essay articulates that synthesis: **Sense-making is inherently cybernetic, and narrative computing is the engine of its becoming.**
+This essay articulates that synthesis: **Sense-making is inherently cybernetic, and narrative engines are the primitive that makes its becoming possible.**
 
 ## 1. The Dynamic Gap
 
