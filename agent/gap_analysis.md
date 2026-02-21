@@ -35,6 +35,8 @@ The following documents are listed in `essays/README.md` or `artifacts/README.md
 
 ## 3. TODO Items
 
+*   ~~**Start Here reading path** (methodology-adoption-strategy robust action)~~: Done — `artifacts/start-here.md`: 15-min path (gist → 01, 02, 03 → try quick-start or adversarial-committees). Linked from README "Getting started."
+*   ~~**Full-pipeline worked example** (methodology-adoption-strategy robust action)~~: Done — `artifacts/examples/full-pipeline-worked-example.md`: methodology-adoption-strategy run (situation → scenarios → charter → deliberation → resolution) with commentary on what the process surfaced. Linked from artifacts/examples/README.md.
 *   ~~**Consider splitting fiction from `the-stochastic-imps-of-happenstance.md`**~~: Done — story and epilogue extracted to `essays/tilt-sound-collective-story.md`; essay retains preamble, appendix, and coda with a bridge linking to the fiction.
 *   ~~**Extract project plan from `societies-of-thought-synthesis.md`**~~: Done — extracted to `meta/research-plan.md`; essay now has a bridging paragraph referencing the plan.
 *   ~~**Cross-reference all cited documents against references directory**~~: Done — `references/README.md` rewritten as a comprehensive annotated bibliography covering all 39 sources cited across essays/ and palgebra/, organized into 9 thematic sections with consistent format and "Cited in" pointers.

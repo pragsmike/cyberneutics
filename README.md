@@ -40,7 +40,9 @@ Large Language Models are not databases. They are not logic engines. They are **
 
 ## Getting started
 
-**New to these ideas?**
+**New to these ideas?** → **[Start Here](artifacts/start-here.md)** — 15-minute onboarding path, then your first committee run.
+
+Or step by step:
 1.  **Read**: [Why Narrative Engines Change Everything](essays/01-why-narrative-engines-change-everything.md)
 2.  **Try**: [Adversarial Committees](artifacts/adversarial-committees.md) (a concrete technique you can use today)
 

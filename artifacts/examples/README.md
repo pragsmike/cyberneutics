@@ -11,6 +11,7 @@ This directory will contain a collection of annotated deliberation transcripts t
 
 ### Completed Files
 *   [`hiring-decision-example.md`](./hiring-decision-example.md): Complete transcript of a hiring deliberation.
+*   [`full-pipeline-worked-example.md`](./full-pipeline-worked-example.md): End-to-end scenarios→committee→resolution (methodology-adoption-strategy run) with commentary on what the process surfaced.
 *   [`scene-1.md`](../../essays/scene-1.md) *(in essays/)*: Committee debate bootstrapping the theoretical synthesis — the methodology applied to its own foundations.
 
 ### Planned Files
