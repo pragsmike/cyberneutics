@@ -35,7 +35,7 @@ The following documents are listed in `essays/README.md` or `artifacts/README.md
 
 ## 3. TODO Items
 
-*   **Consider splitting fiction from `the-stochastic-imps-of-happenstance.md`**: The file is 754 lines — the longest in the collection. The narrative fiction (540 lines) and the analytical preamble/appendix serve different audiences. Consider extracting the story into a standalone file with the preamble and character appendix remaining as the essay.
+*   ~~**Consider splitting fiction from `the-stochastic-imps-of-happenstance.md`**~~: Done — story and epilogue extracted to `essays/tilt-sound-collective-story.md`; essay retains preamble, appendix, and coda with a bridge linking to the fiction.
 *   ~~**Extract project plan from `societies-of-thought-synthesis.md`**~~: Done — extracted to `meta/research-plan.md`; essay now has a bridging paragraph referencing the plan.
 *   **Cross-reference all cited documents against references directory**: Extract every document, paper, and book cited across all essays and verify they are listed somewhere in the `references/` directory. Ensure completeness and consistency of bibliographic entries.
 *   **Incorporate diary/2026-02-21-cyberneutics-dual-operations** and **wild/residuality-theory** into methodology, documents and palgebra formalism, and string diagram generation.
