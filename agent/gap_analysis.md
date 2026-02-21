@@ -37,5 +37,5 @@ The following documents are listed in `essays/README.md` or `artifacts/README.md
 
 *   ~~**Consider splitting fiction from `the-stochastic-imps-of-happenstance.md`**~~: Done — story and epilogue extracted to `essays/tilt-sound-collective-story.md`; essay retains preamble, appendix, and coda with a bridge linking to the fiction.
 *   ~~**Extract project plan from `societies-of-thought-synthesis.md`**~~: Done — extracted to `meta/research-plan.md`; essay now has a bridging paragraph referencing the plan.
-*   **Cross-reference all cited documents against references directory**: Extract every document, paper, and book cited across all essays and verify they are listed somewhere in the `references/` directory. Ensure completeness and consistency of bibliographic entries.
+*   ~~**Cross-reference all cited documents against references directory**~~: Done — `references/README.md` rewritten as a comprehensive annotated bibliography covering all 39 sources cited across essays/ and palgebra/, organized into 9 thematic sections with consistent format and "Cited in" pointers.
 *   **Incorporate diary/2026-02-21-cyberneutics-dual-operations** and **wild/residuality-theory** into methodology, documents and palgebra formalism, and string diagram generation.
