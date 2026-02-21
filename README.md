@@ -1,4 +1,4 @@
-# Cyber-Sense: Towards methodology for narrative computing
+# Cyberneutics: Towards methodology for narrative computing
 
 > If the tool is a narrative engine, treating it like a calculator is a category error. You don't get mad at a car for not flying; you learn to drive.
 
@@ -16,11 +16,11 @@ As always, the computers won't completely solve the problems for us, but they ca
 
 The essay [Stories All the Way Down](./essays/stories-all-the-way-down.md) explains how everything is a story, how stories are a way to deal with wicked problems, and how we are constantly editing and re-editing the stories we tell ourselves about the world.
 
-## What is Cyber-sense?
+## What is Cyberneutics?
 
-**Cyber-Sense** is a methodology for working with AI systems as collaborative sense-making partners rather than oracles that deliver answers.
+**Cyberneutics** is a methodology for working with AI systems as collaborative sense-making partners rather than oracles that deliver answers.
 
-It builds upon the runtime environment of **[MOOLLM](https://github.com/SimHacker/moollm)** (Don Hopkins) and aligns with the philosophy of **[Narrative Engineering](https://alexbo.land/essays/narrative_engineering_2023.html)** (Alex Boland). Think of it as: **MOOLLM is the platform, Cyber-Sense is the practice.**
+It builds upon the runtime environment of **[MOOLLM](https://github.com/SimHacker/moollm)** (Don Hopkins) and aligns with the philosophy of **[Narrative Engineering](https://alexbo.land/essays/narrative_engineering_2023.html)** (Alex Boland). Think of it as: **MOOLLM is the platform, Cyberneutics is the practice.**
 
 > "We've never had narrative engines powerful enough to make this methodology necessary before."
 
@@ -119,17 +119,15 @@ These skills are the methodology made executable: `/committee` operationalizes t
 
 5. **The analyst is an editor.** Your role isn't truth-seeker but curator of which stories get "published to reality."
 
-## Why "Cyber-Sense"?
+## Why "Cyberneutics"?
 
-LLMs produce what we might call "cybersense" - narratives that emerge from cybernetic feedback between human queries and machine-generated responses. 
+Cyberneutics is a neologism derived from
 
-This can go two ways:
+> Cyber (κυβερνήτης, the steersman) - governance, feedback, control
+> Neutics - evoking both hermeneutics (interpretation of texts) and neural (the substrate you're actually working with)
 
-**Undisciplined cybersense**: High-entropy narratives that sound locally plausible but collapse to statistical likelihood. The "stochastic parrots" problem.
-
-**Disciplined cybersense**: Rigorous methodology that treats narrative generation as a controllable process, using techniques like adversarial committees and forcing functions to prevent premature collapse.
-
-This repository documents the latter.
+It captures something that "narrative computing" doesn't quite get at: that you're not just computing on narratives but doing something closer to steering through interpretation - the cybernetic loop applied to meaning-making with neural systems.
+There's also a nice echo of heuristics in there, which fits the System 1 / fast-pass dimension of the work.
 
 ## Status
 

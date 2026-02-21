@@ -1,8 +1,8 @@
-# Troubleshooting Cyber-Sense
+# Troubleshooting Cyberneutics
 
 > "The map is not the territory, but if the map shows a bridge and your territory shows a cliff, stop driving."
 
-This guide addresses common failure modes when implementing Cyber-Sense methodology. It follows a **Problem → Diagnosis → Fix** pattern.
+This guide addresses common failure modes when implementing Cyberneutics methodology. It follows a **Problem → Diagnosis → Fix** pattern.
 
 ## 1. The Echo Chamber
 

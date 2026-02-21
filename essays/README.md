@@ -1,6 +1,6 @@
 # Essays: Theoretical Foundations and Synthesis
 
-This directory contains essays exploring the theoretical foundations of Cyber-Sense methodology and how Second-Order Cybernetics, Sense-Making Methodology, and Deleuzian philosophy compose into a coherent framework for AI collaboration.
+This directory contains essays exploring the theoretical foundations of Cyberneutics methodology and how Second-Order Cybernetics, Sense-Making Methodology, and Deleuzian philosophy compose into a coherent framework for AI collaboration.
 
 ## Terminology
 
@@ -8,7 +8,7 @@ Three terms recur across this collection with distinct meanings:
 
 - **Cybernetic Hermeneutics** — the theoretical synthesis: interpretation as a regulated, dynamic feedback loop (defined in [Essay 05](./05-the-synthesis.md))
 - **Narrative Engineering** — the discipline: using engineering principles to design processes for generating and evaluating narratives (developed in [Essay 07](./07-bolands-narrative-engineering.md))
-- **Cyber-Sense** — the methodology: the specific techniques (adversarial committees, parliamentary procedures, RUBRIC evaluation) implemented within this repository
+- **Cyberneutics** — the methodology: the specific techniques (adversarial committees, parliamentary procedures, RUBRIC evaluation) implemented within this repository
 
 ## Reading Paths
 
@@ -147,7 +147,7 @@ The essays in this directory establish *why* narrative engines need structured m
 
 **The integration**: Sense-Making says gaps produce bridges that change situations. Cybernetics says observation changes state. Deleuze says repetition produces difference. These aren't separate ideas—they're the same phenomenon at different scales.
 
-**Key insight**: Cyber-Sense isn't just "using cybernetics for sense-making." It's recognizing that sense-making IS cybernetic—you cannot bridge gaps without altering the gap and being altered by the bridge.
+**Key insight**: Cyberneutics isn't just "using cybernetics for sense-making." It's recognizing that sense-making IS cybernetic—you cannot bridge gaps without altering the gap and being altered by the bridge.
 
 **Covers**:
 - The three threads: the dynamic gap (Dervin), the cybernetic loop (von Foerster), the Deleuzian engine (becoming and difference)
@@ -185,9 +185,9 @@ The essays in this directory establish *why* narrative engines need structured m
 **Key insight**: We are steering narrative potential. The "diegetic boundary" is the interface where we exert control.
 
 **Covers**:
-- Two bridges to the same shore: comparing Cyber-Sense and Narrative Engineering
+- Two bridges to the same shore: comparing Cyberneutics and Narrative Engineering
 - Boland's core argument (Gödel, Kuhn, Bruner's paradigmatic/narrative modes)
-- Where Boland enriches Cyber-Sense; where Cyber-Sense extends Boland
+- Where Boland enriches Cyberneutics; where Cyberneutics extends Boland
 - Synthesis: how the "diegetic boundary" maps to the "Game Within a Game"
 - Implications and open questions
 
@@ -235,7 +235,7 @@ The essays in this directory establish *why* narrative engines need structured m
 
 ### [Societies of Thought: From Neural Evidence to Methodological Action](./societies-of-thought-synthesis.md)
 
-**The validation**: Analyzes how recent research on "Societies of Thought" provides empirical backing for Cyber-Sense techniques (adversarial roles, perspective switching).
+**The validation**: Analyzes how recent research on "Societies of Thought" provides empirical backing for Cyberneutics techniques (adversarial roles, perspective switching).
 
 **Key insight**: Surprise markers in discourse correlate with better reasoning. Adversarial committees are engines for generating this surprise (entropy reduction).
 

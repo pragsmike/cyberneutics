@@ -1,4 +1,4 @@
-# Integration with MOOLLM: Cyber-Sense as Application
+# Integration with MOOLLM: Cyberneutics as Application
 
 ## Conceptual Framing
 
@@ -13,9 +13,9 @@
 
 An operating system doesn't know what applications will run on it. It provides memory management, process scheduling, and inter-process communication. Applications provide domain logic, user interaction models, and workflows.
 
-### Cyber-Sense as Application
+### Cyberneutics as Application
 
-Cyber-Sense is a methodology that can run "bare metal" (manual state management, ad-hoc context injection) or on MOOLLM infrastructure. The relationship is analogous to version control concepts versus Git: you can practice version control with manual file copies and naming conventions, but Git provides infrastructure that makes it reliable, auditable, and scalable.
+Cyberneutics is a methodology that can run "bare metal" (manual state management, ad-hoc context injection) or on MOOLLM infrastructure. The relationship is analogous to version control concepts versus Git: you can practice version control with manual file copies and naming conventions, but Git provides infrastructure that makes it reliable, auditable, and scalable.
 
 What MOOLLM provides that ad-hoc approaches lack:
 
@@ -27,9 +27,9 @@ What MOOLLM provides that ad-hoc approaches lack:
 | Hoping the model follows Robert's Rules | Protocol enforcement at system level |
 | Manual lesson injection | Queryable institutional memory |
 
-Cyber-Sense provides what MOOLLM doesn't: the methodology itself. Which characters to use, how to calibrate them, what makes a good rubric, when to iterate, how to extract lessons. MOOLLM is the platform; Cyber-Sense is the practice.
+Cyberneutics provides what MOOLLM doesn't: the methodology itself. Which characters to use, how to calibrate them, what makes a good rubric, when to iterate, how to extract lessons. MOOLLM is the platform; Cyberneutics is the practice.
 
-## Mapping Cyber-Sense Primitives to MOOLLM Primitives
+## Mapping Cyberneutics Primitives to MOOLLM Primitives
 
 ### Characters → Cards
 
@@ -85,7 +85,7 @@ File: rubrics/deliberation-quality-v2.md
 └── Version history: [how rubric evolved]
 ```
 
-MOOLLM provides storage and retrieval. Cyber-Sense defines the schema—what lessons look like, how to query them, when to inject them into deliberations.
+MOOLLM provides storage and retrieval. Cyberneutics defines the schema—what lessons look like, how to query them, when to inject them into deliberations.
 
 ### Robert's Rules → Protocol
 
@@ -104,7 +104,7 @@ Protocol violations become system-level errors rather than model discretion. The
 
 ## Architecture Patterns
 
-Cyber-Sense can run at different capability levels. The methodology remains constant; the infrastructure determines what guarantees you get.
+Cyberneutics can run at different capability levels. The methodology remains constant; the infrastructure determines what guarantees you get.
 
 ### Pattern A: Single-Instance Simulated Committee
 
@@ -129,7 +129,7 @@ Cyber-Sense can run at different capability levels. The methodology remains cons
 
 **Appropriate for**: Low-stakes decisions, rapid iteration, resource-constrained environments.
 
-This is essentially current Cyber-Sense practice with better state management.
+This is essentially current Cyberneutics practice with better state management.
 
 ### Pattern B: Isolated Evaluation Rooms
 
@@ -236,7 +236,7 @@ This is essentially current Cyber-Sense practice with better state management.
 
 ## Migration Path
 
-For practitioners currently using Cyber-Sense without MOOLLM, migration can be incremental.
+For practitioners currently using Cyberneutics without MOOLLM, migration can be incremental.
 
 ### Stage 1: State Externalization
 
@@ -300,9 +300,9 @@ For practitioners currently using Cyber-Sense without MOOLLM, migration can be i
 
 **Design principle**: Patterns A-C should be implemented such that Pattern D is a configuration change, not an architecture change. The room structure, protocol definitions, and file schemas should work regardless of whether characters are simulated or instantiated.
 
-## What Cyber-Sense Provides That MOOLLM Doesn't
+## What Cyberneutics Provides That MOOLLM Doesn't
 
-MOOLLM provides infrastructure. Cyber-Sense provides methodology. The distinction matters.
+MOOLLM provides infrastructure. Cyberneutics provides methodology. The distinction matters.
 
 ### Character Design and Calibration
 
@@ -312,7 +312,7 @@ MOOLLM can store character definitions as cards. It doesn't know:
 - When to add domain-specific characters vs. use the standard roster
 - How to calibrate based on past performance
 
-This is Cyber-Sense domain knowledge.
+This is Cyberneutics domain knowledge.
 
 ### Rubric Development
 
@@ -322,7 +322,7 @@ MOOLLM can store and retrieve rubrics. It doesn't know:
 - What failure indicators should trigger re-deliberation
 - How to evolve rubrics based on experience
 
-This is Cyber-Sense methodology.
+This is Cyberneutics methodology.
 
 ### Lesson Extraction and Injection
 
@@ -332,13 +332,13 @@ MOOLLM provides queryable storage. It doesn't know:
 - How to weight recency vs. relevance
 - What "similar enough" means for cross-scenario learning
 
-This is Cyber-Sense practice.
+This is Cyberneutics practice.
 
 ### The Judgment Calls
 
 When do you need Pattern B vs. Pattern A? When is a decision "high-stakes enough" for editorial review? When has a committee reached diminishing returns on iteration?
 
-MOOLLM provides the machinery. Cyber-Sense provides the judgment.
+MOOLLM provides the machinery. Cyberneutics provides the judgment.
 
 ## Open Design Questions
 
@@ -382,16 +382,16 @@ Can the evaluator's output be evaluated? Should it be?
 
 ### Interoperability
 
-Can Cyber-Sense rooms interact with non-Cyber-Sense MOOLLM applications?
+Can Cyberneutics rooms interact with non-Cyberneutics MOOLLM applications?
 
-**Example**: A research synthesis application produces a summary. Can that summary be input to a Cyber-Sense deliberation room?
+**Example**: A research synthesis application produces a summary. Can that summary be input to a Cyberneutics deliberation room?
 
-**Current recommendation**: Define clean interfaces. A Cyber-Sense room accepts:
+**Current recommendation**: Define clean interfaces. A Cyberneutics room accepts:
 - Problem statement (text)
 - Context documents (files)
 - Relevant lessons (query results)
 
-Any MOOLLM application that can produce those artifacts can feed a Cyber-Sense deliberation. The methodology doesn't require the input to come from Cyber-Sense.
+Any MOOLLM application that can produce those artifacts can feed a Cyberneutics deliberation. The methodology doesn't require the input to come from Cyberneutics.
 
 ## Example: Hiring Decision on MOOLLM
 
@@ -473,9 +473,9 @@ Walking through the existing [hiring-decision-example](./examples/hiring-decisio
 
 ## Summary
 
-MOOLLM provides the operating system: rooms, cards, files, protocols. Cyber-Sense provides the application: character rosters, deliberation patterns, evaluation rubrics, lesson extraction.
+MOOLLM provides the operating system: rooms, cards, files, protocols. Cyberneutics provides the application: character rosters, deliberation patterns, evaluation rubrics, lesson extraction.
 
-The integration allows Cyber-Sense to run at multiple capability levels:
+The integration allows Cyberneutics to run at multiple capability levels:
 - **Pattern A**: Single instance, simulated committee, MOOLLM provides state persistence
 - **Pattern B**: Isolated evaluation rooms, MOOLLM enforces context boundaries
 - **Pattern C**: Editorial review by second committee with different propensities
@@ -483,10 +483,10 @@ The integration allows Cyber-Sense to run at multiple capability levels:
 
 Migration is incremental. Each stage adds guarantees without requiring practitioners to change their methodology—just their infrastructure.
 
-The goal is not to make Cyber-Sense dependent on MOOLLM, but to make MOOLLM the optimal environment for rigorous Cyber-Sense practice. The methodology remains portable; the infrastructure makes it reliable.
+The goal is not to make Cyberneutics dependent on MOOLLM, but to make MOOLLM the optimal environment for rigorous Cyberneutics practice. The methodology remains portable; the infrastructure makes it reliable.
 
 ---
 
 *For MOOLLM specifications and implementation status, see the [MOOLLM repository](https://github.com/SimHacker/moollm).*
 
-*For Cyber-Sense methodology independent of MOOLLM, see the [artifacts](./README.md) and [essays](../essays/README.md) in this repository.*
+*For Cyberneutics methodology independent of MOOLLM, see the [artifacts](./README.md) and [essays](../essays/README.md) in this repository.*

@@ -86,7 +86,7 @@ But LLMs are narrative engines. We use them to think. And thinking is a temporal
 
 This implies that **prompt engineering is actually loop design.**
 
-The techniques in Cyber-Sense are simply structured loops designed to prevent premature collapse:
+The techniques in Cyberneutics are simply structured loops designed to prevent premature collapse:
 
 *   **Adversarial Committees**: A loop that forces divergence (difference via widening the gap).
 *   **Robert's Rules**: A dampening function (governor) that prevents the loop from spinning too fast (hallucination/incoherence).
@@ -96,7 +96,7 @@ The techniques in Cyber-Sense are simply structured loops designed to prevent pr
 
 Hermeneutics is the theory of interpretation. Cybernetics is the theory of regulation.
 
-**Cyber-Sense is Cybernetic Hermeneutics.**
+**Cyberneutics is Cybernetic Hermeneutics.**
 
 It treats interpretation not as a static analysis of text, but as a regulated, dynamic feedback loop between a human need (the Gap) and a machine capability (the Narrative).
 

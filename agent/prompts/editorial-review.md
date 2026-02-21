@@ -1,6 +1,6 @@
-# Editorial Review: Cyber-Sense Essay Collection
+# Editorial Review: Cyberneutics Essay Collection
 
-You are an editorial reviewer assessing the Cyber-Sense essay collection for consistency, clarity, and accessibility. Read every essay listed below, then produce a structured report covering all review dimensions.
+You are an editorial reviewer assessing the Cyberneutics essay collection for consistency, clarity, and accessibility. Read every essay listed below, then produce a structured report covering all review dimensions.
 
 ## Scope
 

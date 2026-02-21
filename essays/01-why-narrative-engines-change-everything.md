@@ -267,7 +267,7 @@ The pattern: **When stakes are high, we don't trust single narratives.**
 
 We create **adversarial processes** that force narratives to fight each other, surface assumptions, demand evidence, and acknowledge trade-offs.
 
-**Cyber-Sense methodology applies this same principle to AI collaboration.**
+**Cyberneutics methodology applies this same principle to AI collaboration.**
 
 ## What Changes With Narrative Engines
 

@@ -15,7 +15,7 @@ positive, negative, and ambiguous — as it arrives.
 
 **Date**: February 19, 2026
 **Who**: External practitioner (details TBD)
-**What**: Forked the cyber-sense repository with the stated intent to
+**What**: Forked the cyberneutics repository with the stated intent to
 use and extend the adversarial committee deliberation feature.
 
 **Specific interest**: Experimenting with different committee makeups
@@ -65,14 +65,14 @@ comparative rubric scores across different roster configurations.
 MOOLLM platform.
 
 **Context**: The `artifacts/integration-with-moollm.md` document maps
-Cyber-Sense primitives to MOOLLM primitives (Characters → Cards,
+Cyberneutics primitives to MOOLLM primitives (Characters → Cards,
 Committee Sessions → Rooms, Lessons → Files). This integration was
 anticipated in the architecture but not previously confirmed as
 implemented.
 
 **What this validates**:
 - The technique is portable — it can be extracted from the
-  cyber-sense repository and embedded in a different platform
+  cyberneutics repository and embedded in a different platform
 - The MOOLLM mapping (characters as persistent cards with
   calibration state, sessions as bounded rooms with protocol
   enforcement) is workable in practice
@@ -86,7 +86,7 @@ implemented.
 - Whether MOOLLM's infrastructure features (room isolation,
   persistent cards) improve deliberation quality compared to
   the ad-hoc approach
-- Whether MOOLLM users who haven't read the cyber-sense essays
+- Whether MOOLLM users who haven't read the cyberneutics essays
   can use the committee feature effectively
 
 **Significance**: MOOLLM integration is a different kind of adoption
@@ -116,7 +116,7 @@ Residuality Theory's Architectural walk concept may have been
 influenced by, or at minimum parallels, the Deleuzian model of
 movement through space.
 
-**Why this is interesting for cyber-sense**: The committee deliberation
+**Why this is interesting for cyberneutics**: The committee deliberation
 process is already implicitly a kind of architectural walk — each
 character traverses the problem space from their propensity-driven
 starting point, following their epistemic "line of flight," and the

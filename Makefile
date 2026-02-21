@@ -1,6 +1,6 @@
 .PHONY: pack
 
-OUTPUT_FILE := $(HOME)/cybersense-pack.txt
+OUTPUT_FILE := $(HOME)/cyberneutics-pack.txt
 INCLUDE_PATTERNS := *.md *.txt Makefile
 
 # Construct find arguments: -name "pat1" -o -name "pat2" ...

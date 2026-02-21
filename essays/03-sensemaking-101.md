@@ -211,7 +211,7 @@ Second-Order Cybernetics explains **why** observation changes state.
 
 Deleuzian philosophy explains **how** repetition produces difference.
 
-Together, they form **Cyber-Sense**: a methodology for collaborative navigation of complexity using narrative engines.
+Together, they form **Cyberneutics**: a methodology for collaborative navigation of complexity using narrative engines.
 
 The next essay explores the cybernetic foundations—how feedback loops, eigenforms, and observer effects structure the sense-making process itself.
 

@@ -1,16 +1,16 @@
-# Example: Repository Self-Review Using Cyber-Sense
+# Example: Repository Self-Review Using Cyberneutics
 
-**Scenario**: Evaluating whether the Cyber-Sense repository documentation is ready for external practitioners.
+**Scenario**: Evaluating whether the Cyberneutics repository documentation is ready for external practitioners.
 
 **Challenge**: The repository creator (mg) has deep context about the methodology's development. How do we assess "readiness" without creator blindness?
 
-**Solution**: Apply Cyber-Sense methodology to itself—convene an adversarial committee to review the repository.
+**Solution**: Apply Cyberneutics methodology to itself—convene an adversarial committee to review the repository.
 
 ---
 
 ## The Setup
 
-**Motion Presented**: "The Cyber-Sense repository as currently constituted is ready for external practitioners to discover, understand, and apply the methodology effectively."
+**Motion Presented**: "The Cyberneutics repository as currently constituted is ready for external practitioners to discover, understand, and apply the methodology effectively."
 
 **Committee Roster**: Standard five-character committee
 - **Maya**: Data/evidence analyst - quantifies readiness metrics

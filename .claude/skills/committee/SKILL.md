@@ -10,7 +10,7 @@ description: >
 
 # Committee Deliberation Skill
 
-Simulate a structured adversarial committee deliberation using the Cyber-Sense
+Simulate a structured adversarial committee deliberation using the Cyberneutics
 methodology. The committee explores problem spaces through genuine conflict
 rather than convergent consensus, surfacing assumptions, trade-offs, and
 blind spots.
@@ -176,7 +176,7 @@ Not "do this" but "if you optimize for X, you sacrifice Y, and here's what each 
 
 ## Integration with other artifacts
 
-The committee skill can reference (all paths under cyber-sense only):
+The committee skill can reference (all paths under cyberneutics only):
 
 - **Previous deliberations**: Other runs under `agent/deliberations/<topic-slug>/`; if a similar problem was deliberated before, note lessons learned from those records
 - **Character propensity reference**: `artifacts/character-propensity-reference.md` for detailed character calibration
@@ -210,7 +210,7 @@ Every committee run writes a deliberation record to a dedicated directory. There
      - Then the standard output blocks: **KEY TENSIONS IDENTIFIED**, **ASSUMPTIONS SURFACED**, **EVIDENCE REQUIREMENTS**, **DECISION SPACE MAP**, **RECOMMENDED NEXT STEPS**, and if applicable **VERDICT** or **CONCLUSION**.
 
 3. **After synthesis:**
-   - **03-resolution.md** — Markdown with YAML front matter. From Final Consensus and DECISION SPACE MAP / VERDICT. Structure: `resolution:` with `date` (YYYY-MM-DD), `topic`, `outcome` (PASSED | DEFERRED | NO_CONSENSUS), `decision` (one line), `summary` (paragraph), optional `details`, optional `implementation_plan` (list of action/description), `votes` (one entry per roster member: YES | NO | ABSTAIN or conditional text), `signatures` (chair: "Committee (Cyber-Sense)", ratified_by: "User").
+   - **03-resolution.md** — Markdown with YAML front matter. From Final Consensus and DECISION SPACE MAP / VERDICT. Structure: `resolution:` with `date` (YYYY-MM-DD), `topic`, `outcome` (PASSED | DEFERRED | NO_CONSENSUS), `decision` (one line), `summary` (paragraph), optional `details`, optional `implementation_plan` (list of action/description), `votes` (one entry per roster member: YES | NO | ABSTAIN or conditional text), `signatures` (chair: "Committee (Cyberneutics)", ratified_by: "User").
 
 After writing the record, you may summarize the decision space map (KEY TENSIONS, RECOMMENDED NEXT STEPS) inline for the user's convenience; the authoritative output remains the directory.
 

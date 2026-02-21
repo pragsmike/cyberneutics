@@ -2,12 +2,12 @@
 
 ## Executive Summary
 
-Recent research from Google, University of Chicago, and Santa Fe Institute ("Reasoning Models Generate Societies of Thought", arXiv:2601.10825) provides empirical validation for the core principles underlying Cyber-Sense methodology. Their mechanistic interpretability studies of reasoning models like DeepSeek-R1 and QwQ-32B reveal that enhanced reasoning emerges from simulating multi-agent interactions internally—precisely what Cyber-Sense orchestrates externally through adversarial committees.
+Recent research from Google, University of Chicago, and Santa Fe Institute ("Reasoning Models Generate Societies of Thought", arXiv:2601.10825) provides empirical validation for the core principles underlying Cyberneutics methodology. Their mechanistic interpretability studies of reasoning models like DeepSeek-R1 and QwQ-32B reveal that enhanced reasoning emerges from simulating multi-agent interactions internally—precisely what Cyberneutics orchestrates externally through adversarial committees.
 
 This essay examines three critical aspects:
 1. **What the paper validates**: Empirical evidence that perspective diversity and conversational structure causally improve reasoning
 2. **What the paper reveals we're missing**: Gaps in balance metrics, reconciliation protocols, and transfer learning
-3. **What we do next**: Ten concrete action items to strengthen Cyber-Sense methodology based on their findings
+3. **What we do next**: Ten concrete action items to strengthen Cyberneutics methodology based on their findings
 
 ## Part I: The Convergence
 
@@ -37,7 +37,7 @@ When the paper shows that steering conversational features increases reasoning a
 
 Robert's Rules isn't just bureaucratic overhead. It's a surprise-injection mechanism. By forcing structured deliberation, you prevent the model from collapsing too quickly to the statistically likely (low-surprise, low-information) conclusion. You keep it in the high-entropy exploration phase longer.
 
-### What This Means for Cyber-Sense
+### What This Means for Cyberneutics
 
 The paper provides three types of validation:
 
@@ -49,9 +49,9 @@ The paper provides three types of validation:
 
 ### Dissolving the Explainability Problem
 
-There's an additional dimension worth noting: this research resolves the "explainability" critique of LLMs from an unexpected angle. Critics demanded we inspect why models produce their outputs—show the reasoning chain, make the process transparent. But reasoning models trained to exhibit conversational behaviors are doing internally what Cyber-Sense does externally: generating dialog, simulating perspectives, surfacing conflicts.
+There's an additional dimension worth noting: this research resolves the "explainability" critique of LLMs from an unexpected angle. Critics demanded we inspect why models produce their outputs—show the reasoning chain, make the process transparent. But reasoning models trained to exhibit conversational behaviors are doing internally what Cyberneutics does externally: generating dialog, simulating perspectives, surfacing conflicts.
 
-When you externalize this through adversarial committees and structured deliberation, the "black box" reasoning process becomes naturally legible. The internal process critics wanted to inspect is, it turns out, dialog—and dialog can be read, evaluated, and verified. The transcript is the explainability artifact. What the paper shows is that enhanced reasoning correlates precisely with the conversational structures that Cyber-Sense makes observable. You're not demanding transparency from an opaque mechanism; you're architecting interaction so the reasoning process (which is inherently dialogic for both humans and trained reasoning models) becomes an explicit, readable artifact.
+When you externalize this through adversarial committees and structured deliberation, the "black box" reasoning process becomes naturally legible. The internal process critics wanted to inspect is, it turns out, dialog—and dialog can be read, evaluated, and verified. The transcript is the explainability artifact. What the paper shows is that enhanced reasoning correlates precisely with the conversational structures that Cyberneutics makes observable. You're not demanding transparency from an opaque mechanism; you're architecting interaction so the reasoning process (which is inherently dialogic for both humans and trained reasoning models) becomes an explicit, readable artifact.
 
 For the theoretical foundations of these recursive stabilization processes—eigenforms, observer coupling, and how stable patterns emerge from iterative loops—see [Cybernetics and the Observer Problem](./04-cybernetics-and-observation.md).
 
@@ -106,7 +106,7 @@ They found optimal performance requires *both* conflict AND reconciliation in ap
 
 ## Part III: What They're Missing (And You Can Fill)
 
-While the paper provides strong empirical evidence, it has significant limitations that create opportunities for Cyber-Sense to contribute:
+While the paper provides strong empirical evidence, it has significant limitations that create opportunities for Cyberneutics to contribute:
 
 ### 1. They Only Studied Pre-Trained Behavior
 
@@ -136,7 +136,7 @@ The paper coins the term "social scaling" to describe how reasoning improves thr
 
 **Your edge**: MOOLLM integration offers formal architecture for what they observe informally. "Rooms as cognitive contexts," "cards as actors," "files as state"—these are mechanisms for implementing social scaling systematically rather than relying on emergent behavior from RL training.
 
-**Opportunity**: Position Cyber-Sense as the formal methodology for social scaling that complements parameter scaling. Show how to engineer multi-perspective reasoning through explicit architectural choices rather than hoping it emerges from training.
+**Opportunity**: Position Cyberneutics as the formal methodology for social scaling that complements parameter scaling. Show how to engineer multi-perspective reasoning through explicit architectural choices rather than hoping it emerges from training.
 
 ## Part IV: The Action Plan
 
@@ -245,7 +245,7 @@ Based on the convergence of their findings and your methodology gaps, here are t
 
 #### 7. Develop Social Scaling Theory
 
-**What**: Position Cyber-Sense as the practical methodology for "social scaling"—improving reasoning through multi-perspective structure rather than parameter scaling.
+**What**: Position Cyberneutics as the practical methodology for "social scaling"—improving reasoning through multi-perspective structure rather than parameter scaling.
 
 **Why**: The paper coins "social scaling" but doesn't develop it into actionable framework. This is your opportunity to own this concept.
 
@@ -253,13 +253,13 @@ Based on the convergence of their findings and your methodology gaps, here are t
 - Write position paper: "Social Scaling: Engineering Collective Intelligence in AI Systems"
 - Define: What social scaling is, how it differs from parameter/compute scaling
 - Framework: Dimensions of social scaling (diversity, structure, balance, reconciliation)
-- Methodology: Cyber-Sense as reference implementation
+- Methodology: Cyberneutics as reference implementation
 - Evidence: Combine paper's findings with your operational results
 - Place as essay: `social-scaling-theory.md`
 
-**Success metric**: Concept of "social scaling" becomes associated with Cyber-Sense methodology; researchers cite your work when discussing multi-agent reasoning.
+**Success metric**: Concept of "social scaling" becomes associated with Cyberneutics methodology; researchers cite your work when discussing multi-agent reasoning.
 
-#### 8. Map Cyber-Sense to MOOLLM Architecture
+#### 8. Map Cyberneutics to MOOLLM Architecture
 
 **What**: Translate your current ad-hoc patterns (agent directories, committee transcripts, cross-scenario lessons) into MOOLLM's formal infrastructure (Rooms, Cards, Files).
 
@@ -270,7 +270,7 @@ Based on the convergence of their findings and your methodology gaps, here are t
 - Specify Card behaviors for committee characters (Maya Card, Frankie Card, etc.)
 - Define File structures for institutional memory, cross-scenario lessons
 - Create `moollm-implementation-guide.md` showing:
-  - How to instantiate Cyber-Sense committee as MOOLLM Room
+  - How to instantiate Cyberneutics committee as MOOLLM Room
   - How parliamentary procedure maps to Room rules
   - How cross-scenario learning uses File persistence
 - Work with Don Hopkins to prototype implementation
@@ -353,13 +353,13 @@ Based on the convergence of their findings and your methodology gaps, here are t
 ### Medium-term (6 months)
 - [ ] Comparative effectiveness study completed with quantified results
 - [ ] Information-theoretic foundations essay published
-- [ ] Social scaling theory paper positioned Cyber-Sense as reference methodology
+- [ ] Social scaling theory paper positioned Cyberneutics as reference methodology
 - [ ] MOOLLM prototype demonstrating formal implementation
 - [ ] Domain-specific committee variants tested and documented
 
 ### Long-term (12 months)
 - [ ] Methodology cited in research literature
-- [ ] Multiple independent practitioners using Cyber-Sense successfully
+- [ ] Multiple independent practitioners using Cyberneutics successfully
 - [ ] MOOLLM integration production-ready
 - [ ] Comprehensive evidence base covering multiple domains and problem types
 - [ ] Clear theory connecting information theory, social cognition, and multi-agent reasoning

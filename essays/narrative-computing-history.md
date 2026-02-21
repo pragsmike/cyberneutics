@@ -10,7 +10,7 @@ When we got symbol manipulation machines in the 1970s, we had to learn formal lo
 
 Now we have machines that generate coherent narrative on demand. This essay argues that **narrative computing** represents a comparable paradigm shift—not an incremental improvement to symbolic computing, but a categorical change requiring new methodology.
 
-This is a strong claim. To defend it, we'll trace three intellectual threads that converge on the present moment: the cognitive science of narrative thought, the computational narrative intelligence research tradition, and systems-theoretic critiques of mechanism. Each thread contributes something essential. Together, they explain why Cyber-Sense methodology isn't arbitrary—it's grounded in established science while addressing a genuinely new problem.
+This is a strong claim. To defend it, we'll trace three intellectual threads that converge on the present moment: the cognitive science of narrative thought, the computational narrative intelligence research tradition, and systems-theoretic critiques of mechanism. Each thread contributes something essential. Together, they explain why Cyberneutics methodology isn't arbitrary—it's grounded in established science while addressing a genuinely new problem.
 
 ---
 
@@ -42,7 +42,7 @@ When we encounter new situations, we don't first analyze them logically and then
 
 Empirical research supports this. Pennington and Hastie's studies of jury decision-making (1986, 1992) demonstrated that jurors construct narrative representations of evidence, not logical matrices. They organize testimony into stories, and the story that best accounts for the evidence wins. This isn't a bug in human reasoning—it's how complex judgment under uncertainty actually works.
 
-The connection to Cyber-Sense methodology is direct: if humans naturally think through narrative, then framing AI collaboration as narrative generation and evaluation isn't artificial. It's working *with* human cognition rather than against it. Adversarial storytelling works because it leverages how humans actually process complex situations.
+The connection to Cyberneutics methodology is direct: if humans naturally think through narrative, then framing AI collaboration as narrative generation and evaluation isn't artificial. It's working *with* human cognition rather than against it. Adversarial storytelling works because it leverages how humans actually process complex situations.
 
 ### From Cognition to Implementation: Kahneman and the Neural Substrate
 
@@ -58,11 +58,11 @@ System 2 is more expensive: it's iterative loops routing System 1 outputs throug
 
 The parallel to LLMs is striking and consequential. Large language models natively operate in System 1. Base inference is a single forward pass through transformer layers—pattern completion at enormous scale. The model sees a prompt and generates the most likely continuation according to its training. This is fast, cheap, and associative. It follows narrative logic: what typically comes next, what sounds right, what completes the pattern coherently.
 
-Chain-of-thought prompting, adversarial committees, and the structured deliberation protocols in Cyber-Sense methodology all induce System 2 behavior in a System 1 substrate. You're forcing the model through multiple passes, maintaining state across iterations, comparing perspectives, checking claims against each other. The individual model responses are still System 1 (pattern completion), but the orchestration creates System 2 reasoning through composition.
+Chain-of-thought prompting, adversarial committees, and the structured deliberation protocols in Cyberneutics methodology all induce System 2 behavior in a System 1 substrate. You're forcing the model through multiple passes, maintaining state across iterations, comparing perspectives, checking claims against each other. The individual model responses are still System 1 (pattern completion), but the orchestration creates System 2 reasoning through composition.
 
 This helps explain why methodology matters so much. Without structured iteration, LLMs default to System 1: plausible-sounding pattern completion that gravitates toward statistical likelihood. The first coherent story wins. But real reasoning—the kind that catches errors, surfaces assumptions, weighs trade-offs, and resists premature closure—requires System 2. Since LLMs don't do this natively, we must induce it through architecture: adversarial prompting forces multiple perspectives, Robert's Rules forces checking, independent evaluation forces comparison.
 
-The *Societies of Thought* research (discussed in our synthesis essay) reveals something remarkable: when reasoning models are trained with reinforcement learning, they learn to do internally what Cyber-Sense does externally. They develop internal dialog, simulate multiple agents, and engage in debate with themselves. In effect, they're learning to implement System 2 reasoning through iterated System 1 calls. The methodology we designed as external scaffolding turns out to mirror what optimized reasoning architectures discover through training.
+The *Societies of Thought* research (discussed in our synthesis essay) reveals something remarkable: when reasoning models are trained with reinforcement learning, they learn to do internally what Cyberneutics does externally. They develop internal dialog, simulate multiple agents, and engage in debate with themselves. In effect, they're learning to implement System 2 reasoning through iterated System 1 calls. The methodology we designed as external scaffolding turns out to mirror what optimized reasoning architectures discover through training.
 
 This also illuminates the 60-year debate in AI between symbolic and connectionist approaches. The symbolic AI tradition (GOFAI, production rules, logic engines) was essentially trying to build System 2 / paradigmatic reasoning directly: represent knowledge explicitly, manipulate symbols according to logical rules, chain inference steps mechanically. The connectionist tradition (neural networks, parallel distributed processing, deep learning) built System 1 / narrative reasoning: learn patterns from data, complete configurations through association, generate outputs that cohere with training distribution.
 
@@ -72,7 +72,7 @@ Each camp insisted its approach represented "real" intelligence. Both were right
 
 There's something worth noting explicitly about how this framework functions. Bruner's paradigmatic/narrative dichotomy isn't just a classification scheme—it's a tool for thought that transforms how we see existing materials. Once you have this lens, pieces that seemed disconnected suddenly slot together and illuminate each other stereoscopically.
 
-Cyber-Sense methodology (cybernetics, control theory, formal evaluation protocols) follows paradigmatic logic. Boland's Narrative Engineering (continental philosophy, Gödel as parable, diegetic frames) follows narrative logic. The convergence between them isn't coincidence—it's two irreducible cognitive modes, applied to the same domain, necessarily arriving at compatible structural features. This explains why the essay collection itself uses both modes: dialog scenes are narrative, information theory essay is paradigmatic. Both are needed because both capture aspects the other can't.
+Cyberneutics methodology (cybernetics, control theory, formal evaluation protocols) follows paradigmatic logic. Boland's Narrative Engineering (continental philosophy, Gödel as parable, diegetic frames) follows narrative logic. The convergence between them isn't coincidence—it's two irreducible cognitive modes, applied to the same domain, necessarily arriving at compatible structural features. This explains why the essay collection itself uses both modes: dialog scenes are narrative, information theory essay is paradigmatic. Both are needed because both capture aspects the other can't.
 
 This is itself an instance of Dervin's sense-making in action: we had a situation (collection of essays and techniques), encountered a gap (how do these relate at a deeper level?), and built a bridge (Bruner's framework). The result isn't just classification—it's transformed understanding. The paradigmatic/narrative split now organizes relationships throughout the material: System 1/System 2, symbolic/connectionist AI, explainability demands versus discourse-based observation, first-order versus second-order cybernetics. The framework makes the topology of ideas visible.
 
@@ -136,7 +136,7 @@ This has direct implications for understanding LLMs. Large language models are, 
 
 When we ask an LLM for analysis or advice, we get narrative that follows the conventions of good analysis or advice. The syntax is right. But semantic validity—whether the analysis actually applies to our situation—requires something the model cannot provide: judgment that connects symbols to reality.
 
-This is why methodology matters. The model produces syntactically coherent narrative. Humans must supply semantic grounding through evaluation, verification, and judgment. Cyber-Sense methodology structures this division of labor: AI generates candidate narratives, humans evaluate which narratives merit belief and action.
+This is why methodology matters. The model produces syntactically coherent narrative. Humans must supply semantic grounding through evaluation, verification, and judgment. Cyberneutics methodology structures this division of labor: AI generates candidate narratives, humans evaluate which narratives merit belief and action.
 
 ### Second-Order Cybernetics
 
@@ -162,9 +162,9 @@ This created urgent need for methodology that hadn't existed before. Bruner told
 
 The application domain was new. As the characters in the synthesis essay observe: "We've never had narrative engines powerful enough to make this methodology necessary before."
 
-### What Cyber-Sense Contributes
+### What Cyberneutics Contributes
 
-The novelty of Cyber-Sense methodology isn't in its components:
+The novelty of Cyberneutics methodology isn't in its components:
 
 - Adversarial process comes from legal tradition, peer review, red teams
 - Explicit reasoning chains come from mathematical proof and philosophical argument
@@ -198,7 +198,7 @@ Numeric computing took roughly 30 years to develop mature methodology—from ENI
 
 Symbolic computing followed a similar arc—from LISP to enterprise software with established practices for software engineering, testing, and formal verification.
 
-We're in the early days of narrative computing. The methodologies aren't settled. Best practices are still emerging. Cyber-Sense represents one contribution to this developing field, not the final word.
+We're in the early days of narrative computing. The methodologies aren't settled. Best practices are still emerging. Cyberneutics represents one contribution to this developing field, not the final word.
 
 What disciplines will narrative computing require? Adversarial deliberation, certainly. Evidence standards adapted for narrative claims. Assumption surfacing techniques. Institutional memory management. Perhaps entirely new practices we haven't yet imagined.
 
@@ -206,7 +206,7 @@ What disciplines will narrative computing require? Adversarial deliberation, cer
 
 The stakes are significant. LLMs are being deployed at scale right now—for strategic decisions, medical triage, legal research, code generation, educational assessment, content moderation.
 
-Most deployment treats LLMs as better versions of symbolic systems—faster search, smarter assistants, automated reasoning. This is the category error that Cyber-Sense methodology addresses.
+Most deployment treats LLMs as better versions of symbolic systems—faster search, smarter assistants, automated reasoning. This is the category error that Cyberneutics methodology addresses.
 
 If we don't develop appropriate methodology, we get:
 - Confident-sounding bullshit at scale
@@ -230,7 +230,7 @@ The disciplines we use for high-stakes decisions—adversarial process, independ
 
 The three-eras framing—numeric, symbolic, narrative—is defensible, not hype. Each paradigm is defined by what the machine does (arithmetic, logic, story generation) and what methodology humans must develop to use it effectively.
 
-Narrative computing is the current paradigm. LLMs are narrative engines. Treating them as oracles or reasoning systems is a category error with practical consequences. Appropriate methodology—like Cyber-Sense—designs interaction around what these systems actually do.
+Narrative computing is the current paradigm. LLMs are narrative engines. Treating them as oracles or reasoning systems is a category error with practical consequences. Appropriate methodology—like Cyberneutics—designs interaction around what these systems actually do.
 
 The intellectual foundations are solid. Bruner established narrative as irreducible cognitive mode. Rosen demonstrated that complex systems require semantic description beyond syntactic manipulation. Computational narrative intelligence developed techniques for story generation and analysis. Second-order cybernetics explained why observer and observed are entangled.
 
@@ -273,4 +273,4 @@ von Foerster, Heinz. 2003. *Understanding Understanding: Essays on Cybernetics a
 - [Narrative Engineering](./07-bolands-narrative-engineering.md) — Boland's independent convergence on similar conclusions
 
 **Related artifacts**:
-- [Integration with MOOLLM](../artifacts/integration-with-moollm.md) — how Cyber-Sense maps onto an infrastructure designed for narrative computing
+- [Integration with MOOLLM](../artifacts/integration-with-moollm.md) — how Cyberneutics maps onto an infrastructure designed for narrative computing

@@ -1,6 +1,6 @@
 # Artifacts: Practical Techniques and Protocols
 
-This directory contains concrete techniques, protocols, and examples for implementing Cyber-Sense methodology.
+This directory contains concrete techniques, protocols, and examples for implementing Cyberneutics methodology.
 
 ## Core Techniques
 
@@ -84,7 +84,7 @@ When using the committee and review skills (`.claude/skills/committee/`, `.claud
 ## Integration
 
 ### [Integration with MOOLLM](./integration-with-moollm.md)
-How Cyber-Sense techniques map to MOOLLM's architecture:
+How Cyberneutics techniques map to MOOLLM's architecture:
 - Where these protocols fit in the MOOLLM stack
 - Example MOOLLM configurations
 - How to use MOOLLM's microworld features with these techniques
@@ -157,7 +157,7 @@ See [Committee as Palgebra](../palgebra/committee-as-palgebra.md) for the full p
 ## Contributing
 
 ### Adding New Techniques
-If you develop new protocols that fit the Cyber-Sense framework:
+If you develop new protocols that fit the Cyberneutics framework:
 - Document the problem it solves
 - Provide concrete examples
 - Show how it integrates with existing techniques

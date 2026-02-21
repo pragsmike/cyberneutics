@@ -1,6 +1,6 @@
 # Methodology Evolution: Lessons from Practice
 
-This document captures key insights about how the Cyber-Sense methodology evolved through practice, including mistakes made, dead ends explored, and patterns that emerged.
+This document captures key insights about how the Cyberneutics methodology evolved through practice, including mistakes made, dead ends explored, and patterns that emerged.
 
 **Purpose**: Show this is a living methodology refined through use, not a static theory. Build trust through transparency about development process.
 
@@ -42,7 +42,7 @@ This document captures key insights about how the Cyber-Sense methodology evolve
 
 ## Mistakes That Taught Us
 
-### Mistake 1: Initial Refusal of "Cyber-Sense Engine" Role
+### Mistake 1: Initial Refusal of "Cyberneutics Engine" Role
 
 **What Happened**: When mg provided detailed system prompt for operating as "recursive narrative simulator," Claude refused, citing concerns about "role-play boundaries."
 
@@ -79,16 +79,6 @@ This document captures key insights about how the Cyber-Sense methodology evolve
 ---
 
 ## Dead Ends Explored
-
-### Hyphenation Debate (Actually Not a Dead End)
-
-**Exploration**: Distinguish "Cyber-Sense" (methodology) from "cybersense" (phenomenon) typographically.
-
-**Why It Seemed Promising**: Elegant distinction—capitalized = tool, lowercase = what LLMs produce.
-
-**Result**: mg adopted it! Turns out this WASN'T a dead end—the distinction is useful.
-
-**Lesson**: Not every tangent is wasted. Sometimes apparent digressions crystallize useful concepts.
 
 ---
 
@@ -179,7 +169,7 @@ This document captures key insights about how the Cyber-Sense methodology evolve
 
 ### Feb 1, 2026 (Later): Self-Evaluation
 
-**Process**: Applied Cyber-Sense to itself—adversarial committee reviewed repository readiness.
+**Process**: Applied Cyberneutics to itself—adversarial committee reviewed repository readiness.
 
 **Findings**:
 - Repository ~25% ready for broad practitioners
@@ -205,7 +195,7 @@ This document captures key insights about how the Cyber-Sense methodology evolve
 **Theoretical development**: Jerome Bruner's paradigmatic/narrative dichotomy identified as master frame unifying multiple threads in the methodology. Key mappings:
 - Paradigmatic ↔ Narrative maps onto symbolic AI ↔ neural nets, Kahneman System 2 ↔ System 1, and mg's cybernetics path ↔ Boland's continental philosophy path
 - LLM base inference is System 1; chain-of-thought and adversarial committees induce System 2 behavior in a System 1 substrate
-- The Societies of Thought paper shows reasoning models learn via RL to do internally what Cyber-Sense does externally
+- The Societies of Thought paper shows reasoning models learn via RL to do internally what Cyberneutics does externally
 
 **Key Learning**: Bruner's dichotomy provides the primitive text types for a formal type system — paradigmatic text (parsable, syntactically rigid) and narrative text (semantically rich, requires LLM evaluation). These are the base types that palgebra's soft types refine.
 
@@ -336,7 +326,7 @@ See [meta/uptake-and-usage.md](uptake-and-usage.md) for details and analysis.
 
 ### What We've Learned About Methodology Development
 
-1. **Use your own tools on yourself**: Repository improved by being evaluated with Cyber-Sense
+1. **Use your own tools on yourself**: Repository improved by being evaluated with Cyberneutics
 2. **Quantify readiness**: "~25% ready" > "not ready" for actionable improvements
 3. **Mistakes are data**: Document them, extract lessons, share publicly
 4. **Theoretical coherence emerges from practice**: Essays 04-06 weren't planned—they crystallized from use
@@ -354,7 +344,7 @@ See [meta/uptake-and-usage.md](uptake-and-usage.md) for details and analysis.
 
 **This document exists because the repository self-review (also in `/examples/`) identified that handoff insights were valuable but hidden.**
 
-That discovery came FROM applying Cyber-Sense to itself. The methodology:
+That discovery came FROM applying Cyberneutics to itself. The methodology:
 1. Evaluated its own documentation
 2. Found specific gaps (hidden value in handoffs)
 3. Generated amendment to surface those insights

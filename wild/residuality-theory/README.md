@@ -4,7 +4,7 @@
 
 Barry O'Reilly's Residuality Theory is a philosophy of software architecture that treats **residues** — what remains after a stressor impacts a system — as the fundamental unit of architectural design. Rather than designing for anticipated failures, you design with residues as building blocks so the system can survive stressors it wasn't designed for: antifragility rather than correctness.
 
-Its three core philosophical commitments (from O'Reilly's NDC talks) mirror those of cyber-sense:
+Its three core philosophical commitments (from O'Reilly's NDC talks) mirror those of cyberneutics:
 
 - **Process over substance** — systems are becomings, not static things
 - **Criticality over correctness** — the goal is surviving the unknown, not satisfying specifications
@@ -22,14 +22,14 @@ O'Reilly explicitly roots this in Deleuze: the walk is an instance of process ph
 
 ---
 
-## Connection to Cyber-Sense
+## Connection to Cyberneutics
 
 ### The Deleuzian thread
 
-O'Reilly's philosophical sources overlap substantially with cyber-sense's:
+O'Reilly's philosophical sources overlap substantially with cyberneutics's:
 
 - He explicitly cites Deleuze's process philosophy, difference over essence, and the primacy of change
-- His walk-as-knowledge-building directly parallels cyber-sense's "repetition produces difference" insight from `essays/06-deleuze-difference-repetition.md`
+- His walk-as-knowledge-building directly parallels cyberneutics's "repetition produces difference" insight from `essays/06-deleuze-difference-repetition.md`
 - His positivism critique (architects who model reality until nothing of reality remains) echoes the second-order cybernetics material in `essays/04-cybernetics-and-observation.md`
 
 The committee deliberation process can be read as an architectural walk through a problem space: each character follows their propensity-driven line of flight through the problem; the deliberation traces the topology of the decision space; the 02-deliberation.md transcript is what the walk leaves behind.

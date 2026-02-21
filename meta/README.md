@@ -31,7 +31,7 @@ Feb 1, 2026 self-evaluation.
 
 ## Why This Directory Exists
 
-The methodology claims to be self-improving: applying Cyber-Sense to
+The methodology claims to be self-improving: applying Cyberneutics to
 itself should produce measurable improvements. This directory is where
 that claim gets tested.
 

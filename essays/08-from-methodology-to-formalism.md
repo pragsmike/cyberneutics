@@ -467,7 +467,7 @@ the way it is, the essays give you three things:
 
 ## Conclusion: The Methodology Is the Formalism Is the Practice
 
-Cyber-Sense began as practice: techniques that worked for exploring
+Cyberneutics began as practice: techniques that worked for exploring
 complex problems with LLMs. The essays came next: theoretical
 frameworks explaining *why* the techniques worked. The palgebra came
 last: a formal algebra making the techniques composable, auditable, and

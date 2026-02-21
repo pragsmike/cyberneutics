@@ -1,6 +1,6 @@
 ---
 roster:
-  committee_name: "Cyber-Sense Adversarial Committee"
+  committee_name: "Cyberneutics Adversarial Committee"
   size: 5
   members:
     - name: Maya

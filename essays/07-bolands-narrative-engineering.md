@@ -5,11 +5,11 @@
 
 ## I. Two Bridges to the Same Shore
 
-In 2023, Alex Boland published an essay titled "Narrative Engineering" that arrived at striking conclusions through a completely different path than Cyber-Sense methodology.
+In 2023, Alex Boland published an essay titled "Narrative Engineering" that arrived at striking conclusions through a completely different path than Cyberneutics methodology.
 
 Boland came through philosophy: Gödel's incompleteness theorems, Kuhn's scientific paradigms, Uexküll's concept of the *umwelt*, and category theory. His question was fundamental—how does knowledge actually work when formal systems inevitably contain undecidable propositions?
 
-Cyber-Sense came through practice: operational failures using AI for complex decisions, recognition that LLMs are narrative engines not reasoning systems, development of adversarial committees and parliamentary procedures to prevent collapse to statistical likelihood.
+Cyberneutics came through practice: operational failures using AI for complex decisions, recognition that LLMs are narrative engines not reasoning systems, development of adversarial committees and parliamentary procedures to prevent collapse to statistical likelihood.
 
 Yet when these two paths converge, they describe the same phenomenon from complementary angles:
 
@@ -21,19 +21,19 @@ Yet when these two paths converge, they describe the same phenomenon from comple
 
 - **Both recognize that mechanism fails for complex systems.** Not because mechanism is wrong, but because sufficiently complex systems always contain elements that resist reduction to formal rules.
 
-When independent investigations reach similar conclusions through radically different methods, there's likely something real being described. This essay explores that convergence, shows how Boland's philosophical foundations validate and enrich Cyber-Sense methodology, and positions both within the emerging discipline of **narrative engineering**.
+When independent investigations reach similar conclusions through radically different methods, there's likely something real being described. This essay explores that convergence, shows how Boland's philosophical foundations validate and enrich Cyberneutics methodology, and positions both within the emerging discipline of **narrative engineering**.
 
 ### The Bruner Lens: Why Convergence Was Inevitable
 
 There's a deeper pattern here worth naming explicitly. Jerome Bruner's distinction between **paradigmatic** (logico-scientific) and **narrative** modes of thought helps explain why this convergence happened and why both paths were necessary.
 
-Cyber-Sense methodology follows paradigmatic logic in its method: cybernetics, control theory, information theory, formal evaluation protocols, measurable rubrics. It applies the tools of engineering and formal systems to structure and validate AI interaction. This is System 2 thinking, explicit reasoning chains, mechanisms you can diagram and measure.
+Cyberneutics methodology follows paradigmatic logic in its method: cybernetics, control theory, information theory, formal evaluation protocols, measurable rubrics. It applies the tools of engineering and formal systems to structure and validate AI interaction. This is System 2 thinking, explicit reasoning chains, mechanisms you can diagram and measure.
 
 Boland's Narrative Engineering follows narrative logic in its method: continental philosophy, Gödel as philosophical parable rather than formal proof, metaphor and umwelt as organizing concepts, category theory used heuristically rather than axiomatically. It works through story, insight, recontextualization. This is System 1 intuition, pattern recognition across domains, seeing connections that resist formalization.
 
-Bruner's insight was that these two modes are **irreducible and complementary**—neither reduces to the other, and both are necessary for navigating complexity. The convergence between Cyber-Sense and Narrative Engineering isn't coincidence. It's two irreducible cognitive modes, applied independently to the same domain (how to work with narrative engines), necessarily arriving at compatible structural conclusions.
+Bruner's insight was that these two modes are **irreducible and complementary**—neither reduces to the other, and both are necessary for navigating complexity. The convergence between Cyberneutics and Narrative Engineering isn't coincidence. It's two irreducible cognitive modes, applied independently to the same domain (how to work with narrative engines), necessarily arriving at compatible structural conclusions.
 
-Each approach captures what the other can't directly express. Cyber-Sense provides operational protocols, measurable criteria, repeatable procedures—the paradigmatic scaffolding that makes the methodology teachable and improvable. Boland provides philosophical foundations, conceptual depth, the "why this works" that paradigmatic method alone can't fully articulate. You need both because the problem space itself requires both: formal structure to prevent collapse, narrative understanding to know what you're structuring.
+Each approach captures what the other can't directly express. Cyberneutics provides operational protocols, measurable criteria, repeatable procedures—the paradigmatic scaffolding that makes the methodology teachable and improvable. Boland provides philosophical foundations, conceptual depth, the "why this works" that paradigmatic method alone can't fully articulate. You need both because the problem space itself requires both: formal structure to prevent collapse, narrative understanding to know what you're structuring.
 
 This also explains why the essay collection uses both modes: dialog scenes operate narratively, information theory essays operate paradigmatically. The methodology works *through* both, not despite their difference. The paradigmatic/narrative distinction isn't just describing our approaches—it's revealing why genuine understanding of complex systems requires holding both modes in creative tension.
 
@@ -83,7 +83,7 @@ Most AI usage is **normal**: routine prompting for known problem types (factual 
 
 But some problems trigger **crisis**: when standard prompting fails, when you get plausible-sounding nonsense, when multiple contradictory outputs all seem defensible. This signals that the problem exceeds the interpretive framework provided by simple prompting.
 
-Cyber-Sense methodology emerged from exactly these crisis moments—when operational failures revealed that treating AI as reasoning system or knowledge repository fundamentally misunderstood what the technology does. The adversarial committee structure, parliamentary procedures, and evaluation rubrics are revolutionary reconceptualization—new interpretive framework for a new class of problems.
+Cyberneutics methodology emerged from exactly these crisis moments—when operational failures revealed that treating AI as reasoning system or knowledge repository fundamentally misunderstood what the technology does. The adversarial committee structure, parliamentary procedures, and evaluation rubrics are revolutionary reconceptualization—new interpretive framework for a new class of problems.
 
 ### C. Operational Closures as New Moves
 
@@ -107,11 +107,11 @@ Each iteration doesn't converge on pre-existing truth. It *generates new territo
 
 This is why the methodology works: it treats narrative generation as the creation of operational closures rather than the retrieval of hidden truths.
 
-## III. Where Boland Enriches Cyber-Sense
+## III. Where Boland Enriches Cyberneutics
 
 ### A. Formal Grounding for "Everything is a Story"
 
-A core Cyber-Sense intuition: complex sociotechnical systems resist mechanistic explanation. Narrative isn't optional elegance added to computational analysis—it's necessary for problems that mechanism cannot reach.
+A core Cyberneutics intuition: complex sociotechnical systems resist mechanistic explanation. Narrative isn't optional elegance added to computational analysis—it's necessary for problems that mechanism cannot reach.
 
 But *why* is this necessarily true?
 
@@ -131,11 +131,11 @@ Boland's formalization explains why this is necessary, not a compromise.
 
 ### B. Umwelt as Institutional Memory
 
-A persistent Cyber-Sense challenge: how do we maintain context across AI conversation boundaries? LLMs have no memory. Each conversation starts fresh. The methodology needs to persist even when the medium doesn't.
+A persistent Cyberneutics challenge: how do we maintain context across AI conversation boundaries? LLMs have no memory. Each conversation starts fresh. The methodology needs to persist even when the medium doesn't.
 
 Boland's umwelt concept provides the theoretical framework: organisms construct their "experienced worlds" through active engagement. The umwelt is simultaneously material (physical affordances, tools, structures) and conceptual (interpretive frameworks, categories, questions).
 
-**The connection to Cyber-Sense**:
+**The connection to Cyberneutics**:
 
 - **Agent directories** = material substrate of the umwelt. Files persist across sessions. State management transcends conversation boundaries.
 
@@ -151,7 +151,7 @@ This reframes what the agent directory actually is: not just "file storage" or "
 
 ### C. Crisis Recognition: Normal vs. Extraordinary Problems
 
-Cyber-Sense methodology is powerful but expensive. Adversarial committees take time. Parliamentary procedure requires discipline. Independent evaluation adds overhead.
+Cyberneutics methodology is powerful but expensive. Adversarial committees take time. Parliamentary procedure requires discipline. Independent evaluation adds overhead.
 
 When should you use it? When is standard prompting sufficient?
 
@@ -181,7 +181,7 @@ As Boland writes:
 
 ### D. Why Repetition Produces Difference
 
-A counterintuitive Cyber-Sense technique: run the same committee deliberation multiple times. Expect different outputs. This isn't testing for consistency—it's exploring interpretive space.
+A counterintuitive Cyberneutics technique: run the same committee deliberation multiple times. Expect different outputs. This isn't testing for consistency—it's exploring interpretive space.
 
 Traditional view: variation is error. Good systems should give the same answer to the same question. Randomness is something to minimize.
 
@@ -199,7 +199,7 @@ When you run three committee deliberations on the same problem and get three dif
 
 **Why this matters**: Iteration isn't redundancy. Each pass explores new territory, surfaces new considerations, reveals new patterns. The variation *is* the information—it tells you about the shape of the problem space.
 
-## IV. Where Cyber-Sense Extends Boland
+## IV. Where Cyberneutics Extends Boland
 
 ### A. From Philosophy to Engineering
 
@@ -207,7 +207,7 @@ Boland provides rigorous philosophical foundations for why narrative engineering
 
 What he doesn't provide: concrete methodology for *doing* it.
 
-This is where Cyber-Sense extends the framework from philosophy into engineering:
+This is where Cyberneutics extends the framework from philosophy into engineering:
 
 **Adversarial committees** implement multi-perspectival interpretation systematically. Fixed roster of characters (Maya, Frankie, Joe, Vic, Tammy) with defined propensities ensures coverage of interpretive space without degenerating into noise.
 
@@ -217,7 +217,7 @@ This is where Cyber-Sense extends the framework from philosophy into engineering
 
 **Cross-scenario learning** builds umwelt evolution over time. Lessons extracted from past deliberations inject into future ones. Pattern recognition across problem instances. Institutional memory that persists across conversation boundaries.
 
-**The gap Cyber-Sense fills**: Boland explains *why* we need new axioms to fill undecidable gaps. Cyber-Sense shows *how* to generate those axioms systematically and evaluate whether they actually work.
+**The gap Cyberneutics fills**: Boland explains *why* we need new axioms to fill undecidable gaps. Cyberneutics shows *how* to generate those axioms systematically and evaluate whether they actually work.
 
 Philosophy identifies the necessity. Engineering provides the machinery.
 
@@ -227,7 +227,7 @@ Boland diagnoses the problem: systems collapse to statistical likelihood when fo
 
 For many problems, this works fine. But for wicked problems where the most common story is inadequate or misleading, collapse is failure.
 
-**Cyber-Sense's anti-collapse mechanisms**:
+**Cyberneutics's anti-collapse mechanisms**:
 
 **Parliamentary procedure** forces genuine exploration. You must hear minority positions. You must consider alternatives before voting. You must provide reasoning for decisions. These aren't arbitrary rules—they're forcing functions that prevent premature convergence.
 
@@ -251,7 +251,7 @@ Traditional falsification requires clear truth conditions. A theory predicts X w
 
 Boland offers **local validity**: does the story work *here*, *now*, for *this problem*? This is progress but incomplete—what does "work" mean operationally?
 
-**Cyber-Sense's addition**: RUBRIC-based evaluation creates operational falsification without requiring universal truth:
+**Cyberneutics's addition**: RUBRIC-based evaluation creates operational falsification without requiring universal truth:
 
 **Coherence (0-3)**: Does the story hold together internally? Are its parts consistent? Does the logic flow?
 
@@ -273,7 +273,7 @@ This is engineering, not metaphysics. Does it work? Can you reproduce it? Can ot
 
 Boland's focus is how paradigms evolve within scientific communities—continuous interaction over years or decades where the umwelt persists because the community persists.
 
-Cyber-Sense faces a different problem: AI conversations have hard boundaries. Sessions end. Context windows clear. Memory doesn't carry forward automatically.
+Cyberneutics faces a different problem: AI conversations have hard boundaries. Sessions end. Context windows clear. Memory doesn't carry forward automatically.
 
 How do you maintain the umwelt across these discontinuities?
 
@@ -321,7 +321,7 @@ The discipline parallels traditional engineering in rigor while differing fundam
 - Conceptual vocabulary (umwelt, operational closure, paradigm crisis)
 - Legitimacy through connection to established intellectual tradition
 
-**What Cyber-Sense provides**:
+**What Cyberneutics provides**:
 - Practical methodology (adversarial committees, character propensities, parliamentary procedures)
 - Anti-collapse mechanisms (forcing functions that prevent premature convergence)
 - State management (agent directories, cross-scenario learning, persistent umwelt)
@@ -337,11 +337,11 @@ The synthesis creates something greater than either part: intellectually rigorou
 
 ### C. The Naming Question
 
-Should we adopt **"Narrative Engineering"** as the umbrella term for this discipline, with **"Cyber-Sense"** as one methodology within it?
+Should we adopt **"Narrative Engineering"** as the umbrella term for this discipline, with **"Cyberneutics"** as one methodology within it?
 
 **Arguments for**:
 
-*Historical precedence*: Boland coined "narrative engineering" in 2023 before Cyber-Sense documentation existed. Intellectual honesty requires acknowledging this.
+*Historical precedence*: Boland coined "narrative engineering" in 2023 before Cyberneutics documentation existed. Intellectual honesty requires acknowledging this.
 
 *Disciplinary coherence*: "Narrative Engineering" names the broader field. Multiple methodologies could emerge within it, each implementing the core insights differently.
 
@@ -351,19 +351,19 @@ Should we adopt **"Narrative Engineering"** as the umbrella term for this discip
 
 **Arguments against**:
 
-*Established practice*: "Cyber-Sense" has meaning in our work. Practitioners know what it refers to. Changing terminology creates confusion.
+*Established practice*: "Cyberneutics" has meaning in our work. Practitioners know what it refers to. Changing terminology creates confusion.
 
 *Risk of dilution*: Generalizing to "narrative engineering" might lose specificity of particular techniques.
 
-*Accessibility*: "Narrative Engineering" sounds abstract. "Cyber-Sense" suggests practical methodology.
+*Accessibility*: "Narrative Engineering" sounds abstract. "Cyberneutics" suggests practical methodology.
 
 **Proposed resolution**:
 
 - **"Narrative Engineering"** names the discipline/field: the theoretical understanding that narrative functions as computational substrate for problems beyond mechanism's reach, and that engineering principles apply to designing processes for generating and evaluating narratives.
 
-- **"Cyber-Sense"** names a specific methodology within that field: adversarial committees, parliamentary procedures, RUBRIC evaluation, cross-scenario learning—the particular techniques we've developed and documented.
+- **"Cyberneutics"** names a specific methodology within that field: adversarial committees, parliamentary procedures, RUBRIC evaluation, cross-scenario learning—the particular techniques we've developed and documented.
 
-This essay establishes that relationship clearly: Cyber-Sense is narrative engineering made operational for human-AI collaboration on complex problems.
+This essay establishes that relationship clearly: Cyberneutics is narrative engineering made operational for human-AI collaboration on complex problems.
 
 Other methodologies might emerge. They would share the theoretical foundations (Gödel, Kuhn, Dervin, cybernetics) while implementing different practical techniques. That diversity strengthens the field.
 
@@ -409,11 +409,11 @@ Hermeneutics is the theory and methodology of interpretation. We're developing c
 
 ### C. For the Field
 
-**Where this positions Cyber-Sense**: Not just collection of ad-hoc techniques that happen to work, but instantiation of rigorous intellectual tradition with solid foundations.
+**Where this positions Cyberneutics**: Not just collection of ad-hoc techniques that happen to work, but instantiation of rigorous intellectual tradition with solid foundations.
 
 **What we're not claiming**: 
 - That we invented narrative engineering (Boland got there independently)
-- That Cyber-Sense is the only valid methodology (others could emerge)
+- That Cyberneutics is the only valid methodology (others could emerge)
 - That this solves all problems (it's for specific problem types)
 
 **What we are claiming**:
@@ -436,7 +436,7 @@ When independent investigations reach similar conclusions through radically diff
 
 **What we've shown**:
 
-Boland's philosophical narrative engineering and Cyber-Sense's practical methodology describe the same phenomenon from complementary angles. Philosophy explains why narrative engineering is necessary and possible. Practice demonstrates how to actually do it. Together they form a complete discipline.
+Boland's philosophical narrative engineering and Cyberneutics's practical methodology describe the same phenomenon from complementary angles. Philosophy explains why narrative engineering is necessary and possible. Practice demonstrates how to actually do it. Together they form a complete discipline.
 
 The theoretical foundations are solid: Gödel proves that sufficiently complex formal systems contain undecidable propositions. Kuhn shows how paradigms structure interpretation and evolve through crisis. Dervin demonstrates that sense-making is active construction, not passive reception. Cybernetics reveals that observation changes state. Deleuze explains why repetition produces difference.
 
@@ -446,7 +446,7 @@ The synthesis is valuable: it provides both intellectual rigor and operational u
 
 **On the naming question**: This essay proposes that "Narrative Engineering" names the discipline—the recognition that narrative can function as computational substrate for problems beyond mechanism's reach, and that engineering principles apply to designing processes for generating and evaluating narratives.
 
-"Cyber-Sense" is one methodology within that discipline—the specific set of techniques we've developed for human-AI collaboration on complex problems under uncertainty.
+"Cyberneutics" is one methodology within that discipline—the specific set of techniques we've developed for human-AI collaboration on complex problems under uncertainty.
 
 This relationship honors Boland's precedence while preserving the identity and practical specificity of our work. It positions both within a broader intellectual tradition that can accommodate multiple methodologies sharing common foundations.
 
@@ -488,7 +488,7 @@ Von Foerster, Heinz. 2003. *Understanding Understanding: Essays on Cybernetics a
 
 ## Further Reading
 
-**From the Cyber-Sense essays**:
+**From the Cyberneutics essays**:
 - [Why Narrative Engines Change Everything](./01-why-narrative-engines-change-everything.md) - Historical context for paradigm shift
 - [Stories All the Way Down](./stories-all-the-way-down.md) - Concrete examples of narrative necessity
 - [Introduction to Sense-Making](./03-sensemaking-101.md) - Dervin's framework
@@ -496,7 +496,7 @@ Von Foerster, Heinz. 2003. *Understanding Understanding: Essays on Cybernetics a
 - [The Synthesis](./05-the-synthesis.md) - How the frameworks compose
 - [Deleuzian Foundations](./06-deleuze-difference-repetition.md) - Becoming, difference, repetition
 
-**From the Cyber-Sense artifacts**:
+**From the Cyberneutics artifacts**:
 - [Adversarial Committees](../artifacts/adversarial-committees.md) - Core technique
 - [Robert's Rules as Forcing Function](../artifacts/roberts-rules-forcing-function.md) - Preventing premature closure
 - [Independent Evaluation](../artifacts/independent-evaluation.md) - RUBRIC scoring

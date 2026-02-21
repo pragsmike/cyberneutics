@@ -18,7 +18,7 @@ This document provides ready-to-use prompt templates for initializing and runnin
 **Use when**: Normal deliberation, balanced depth and time
 
 ```
-I need an adversarial committee deliberation using the Cyber-Sense methodology.
+I need an adversarial committee deliberation using the Cyberneutics methodology.
 
 COMMITTEE ROSTER:
 [Paste the character definitions from agent/roster.md, or reference it directly

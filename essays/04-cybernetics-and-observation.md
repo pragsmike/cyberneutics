@@ -121,7 +121,7 @@ We build these loops intentionally. That provides the "How."
 Deleuze provides the "What."
 And Dervin provides the "Why."
 
-Together, they form the Cyber-Sense machine.
+Together, they form the Cyberneutics machine.
 
 ---
 

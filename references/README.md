@@ -1,6 +1,6 @@
 # References
 
-This directory contains background reading and theoretical foundations for the Cyber-Sense methodology.
+This directory contains background reading and theoretical foundations for the Cyberneutics methodology.
 
 For a full annotated bibliography organized by theoretical tradition (Sense-Making, Cybernetics, Deleuze, Applied Works), see the [Further Reading section](../essays/README.md#for-further-reading) of the essays directory. Additional citations appear in [Narrative Computing as Historical Progression](../essays/narrative-computing-history.md#references) and [Deleuzian Foundations](../essays/06-deleuze-difference-repetition.md#further-reading).
 

@@ -1,8 +1,8 @@
-# Working with Cyber-Sense: A Guide for AI Assistants
+# Working with Cyberneutics: A Guide for AI Assistants
 
 ## What this repo is
 
-Cyber-Sense is a methodology for working with LLMs as collaborative sense-making partners. It treats LLMs as **narrative engines** rather than answer machines and builds concrete techniques for rigorous exploration of problem spaces. The methodology is documented in essays (why), artifacts (how), and a formal algebra called palgebra (what, precisely). For a fuller orientation, read `README.md`.
+Cyberneutics is a methodology for working with LLMs as collaborative sense-making partners. It treats LLMs as **narrative engines** rather than answer machines and builds concrete techniques for rigorous exploration of problem spaces. The methodology is documented in essays (why), artifacts (how), and a formal algebra called palgebra (what, precisely). For a fuller orientation, read `README.md`.
 
 ## Before you do anything: session start
 

@@ -10,7 +10,7 @@ description: >
 
 Perform an independent evaluation of a committee deliberation transcript,
 treating it as a found document and scoring it against the five core rubrics
-from the Cyber-Sense evaluation framework.
+from the Cyberneutics evaluation framework.
 
 ## Why this exists
 
@@ -315,7 +315,7 @@ After running the review, the user should be able to:
 
 ## Files reference
 
-All paths under cyber-sense only:
+All paths under cyberneutics only:
 
 - **Evaluation rubrics detail**: `artifacts/evaluation-rubrics-reference.md`
 - **Independent evaluation theory**: `artifacts/independent-evaluation.md`

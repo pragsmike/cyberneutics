@@ -1,6 +1,6 @@
-# Contributing to Cyber-Sense
+# Contributing to Cyberneutics
 
-Thank you for your interest in contributing to Cyber-Sense. This methodology evolves through practice, and we welcome contributions that refine the theory or expand the toolkit.
+Thank you for your interest in contributing to Cyberneutics. This methodology evolves through practice, and we welcome contributions that refine the theory or expand the toolkit.
 
 ## How to Contribute
 

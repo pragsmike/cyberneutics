@@ -31,7 +31,7 @@ provenance:
 
 # Example: The "10x Engineer" Hiring Decision
 
-This worked example demonstrates the Cyber-Sense methodology applied to a high-stakes hiring decision, followed by an independent review that scores the deliberation against the five core evaluation rubrics.
+This worked example demonstrates the Cyberneutics methodology applied to a high-stakes hiring decision, followed by an independent review that scores the deliberation against the five core evaluation rubrics.
 
 It shows how the "Adversarial Committee" structure (the Inner Game) wins against the "Stochastic Imps" of entropy (bias, halo effects, and wishful thinking) that typically plague hiring — and how independent evaluation reveals where even a good deliberation falls short.
 

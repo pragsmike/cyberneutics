@@ -1,4 +1,4 @@
-**CYBER-SENSE ENGINE: Session Log**
+**CYBERNEUTICS ENGINE: Session Log**
 
 *[Three figures materialize in a sparse white room. A table. Three chairs. The air hums with potential.]*
 

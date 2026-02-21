@@ -221,7 +221,7 @@ When you need identity—fixed, verifiable, reproducible—Deleuze's framework i
 
 The skill is knowing which kind of problem you're facing. Wicked problems—sociotechnical, strategic, interpersonal—are Deleuzian. Well-defined problems—computational, factual, procedural—aren't.
 
-Cyber-Sense is for the wicked problems. For the others, just compute.
+Cyberneutics is for the wicked problems. For the others, just compute.
 
 ## Summary
 
@@ -254,7 +254,7 @@ Theory without practice is sterile. Practice without theory is blind. This essay
 - Deleuze, Gilles. *Difference and Repetition* (1968/1994) — The foundational text, notoriously difficult
 - Deleuze, Gilles. *Bergsonism* (1966/1988) — Shorter, more accessible, explains the becoming/duration framework
 
-**Related to Cyber-Sense**:
+**Related to Cyberneutics**:
 - [Cybernetics and the Observer Problem](./04-cybernetics-and-observation.md) — How observation changes state
 - [The Synthesis](./05-the-synthesis.md) — How Deleuze, Dervin, and cybernetics compose
 - Eigenforms and Narrative Convergence — Technical deep-dive on recursive stabilization (coming soon)

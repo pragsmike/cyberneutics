@@ -1,6 +1,6 @@
 # Applications
 
-Domain analyses that apply the Cyber-Sense framework to real-world phenomena.
+Domain analyses that apply the Cyberneutics framework to real-world phenomena.
 
 The [essays](../essays/) build the theoretical foundations. The [palgebra](../palgebra/) provides formal machinery. The [artifacts](../artifacts/) provide practical techniques. This directory shows what happens when you point those tools at a problem domain and see what they reveal.
 
