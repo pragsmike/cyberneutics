@@ -1,16 +1,24 @@
 # Wild Material Incorporation Plan
 
+## Constraints
+
+1. **No wild/ references in essays or main parts.** The `wild/` folder is upstream in our authoring process. Once material is incorporated into essays, artifacts, or other main parts of the repo, the essays stand on their own — they cite the original thinkers (Pask, von Foerster, O'Reilly) directly, never referencing internal `wild/` paths. After incorporation, the corresponding `wild/` files may be removed.
+
+2. **Neo-Cybernetics: excluded from all main parts.** Neo-Cybernetics material must NEVER appear in essays, README, artifacts, palgebra, or any main-line content. It may only be mentioned in the `wild/` folder itself and in planning documents within `agent/`. This constraint is absolute.
+
+3. **Integration means absorption.** We are not creating cross-references to wild material. We are *absorbing* the insights from Pask, von Foerster, and O'Reilly into the essays as if they had always been part of the theoretical foundation. The wild material is scaffolding; once the building stands, the scaffolding comes down.
+
+4. **This plan document is internal.** References to `wild/` paths below are authoring notes for *us*, indicating where to find source material during the writing process. They must never propagate into essays or other main-line content.
+
 ## Executive Summary
 
-The cyberneutics essay collection (Essays 01-10 plus supplementary essays) has developed a rigorous methodology for working with LLMs as collaborative sense-making partners. Three bodies of wild material—**Pask's Conversation Theory**, **O'Reilly's Residuality Theory**, and the **Neo-Cybernetics initiative**—enrich this foundation by:
+The cyberneutics essay collection (Essays 01-10 plus supplementary essays) has developed a rigorous methodology for working with LLMs as collaborative sense-making partners. Two bodies of wild material—**Pask's Conversation Theory** (including von Foerster's second-order cybernetics) and **O'Reilly's Residuality Theory**—enrich this foundation by:
 
 1. **Conversation Theory** provides the micro-mechanics of how deliberation actually works. Pask's teachback mechanism operationalizes what the committee does; entailment meshes formalize how knowledge accumulates. The teachback-as-residuality connection unifies Pask with O'Reilly at different scales.
 
 2. **Residuality Theory** offers architectural walks as the formalization of the Probe operation's repeated runs. The residues/eigenforms distinction sharpens the treatment in Essay 10, adding the "criticality over correctness" optimization target. The residuality framing complements palgebra without replacing it.
 
-3. **Neo-Cybernetics** is primarily a meta/community matter—positioning cyberneutics within a broader revival of cybernetic thinking for 21st-century technology. At the content level, it offers minimal new methodology but validates the theoretical directions cyberneutics has taken.
-
-This plan identifies specific augmentation opportunities per essay, proposes three new documents to formalize the wild material into essays, and recommends a phased integration approach prioritizing high-value, low-effort additions.
+This plan identifies specific augmentation opportunities per essay, proposes new documents to formalize the material, and recommends a phased integration approach prioritizing high-value, low-effort additions.
 
 ---
 
@@ -315,7 +323,7 @@ This plan identifies specific augmentation opportunities per essay, proposes thr
 | **P3** | Essay 07: Von Foerster BCL as community model | Moderate | Moderate | Read von-Foerster.md, community-building.md | 3-4 hours |
 | **P3** | Essay 09: Teachback-as-residuality integration | Moderate | Moderate | Read conversation-theory.md sections 4-5 | 3-4 hours |
 | **P3** | Other essays: selective citations | Low | Low | Selective reading | 2-3 hours |
-| **X** | Neo-Cybernetics positioning (meta decision) | Low | N/A | Read neo-cybernetics material | TBD |
+| — | ~~Neo-Cybernetics positioning~~ | — | — | EXCLUDED from all main parts per constraint | — |
 
 ---
 
@@ -414,38 +422,13 @@ Tasks:
 
 ## Part 4: What NOT to Integrate
 
-### Neo-Cybernetics Positioning
+### Excluded: Neo-Cybernetics
 
-**Why staying in wild/ is appropriate:**
-
-Neo-Cybernetics (Daniele Nanni, et al.) is a contemporary initiative applying cybernetics to 21st-century technology and social questions. It has substantial overlap with cyberneutics at the content level (both root in second-order cybernetics, both emphasize observation-changes-state, both are transdisciplinary) but is a distinct project.
-
-**What NOT to do:**
-- Do not position cyberneutics as a Neo-Cybernetics case study or sub-project within essays. This is an organizational/community decision, not a methodological one.
-- Do not integrate Neo-Cybernetics concepts into the essays as novel contributions. The material is largely validation/affirmation of existing directions, not new methodology.
-
-**What could be done (meta decision):**
-- Document the relationship in a meta/ file (e.g., meta/neo-cybernetics-positioning.md) exploring whether cyberneutics should formally position itself within the Neo-Cybernetics ecosystem (federation, collaboration, visibility).
-- This is a strategic/governance decision for the repository authors and community, not an essay decision.
-- Reference: wild/neo-cybernetics/content-level-relations.md and meta-level-relations.md already document the relationships.
-
----
+**Hard constraint:** Neo-Cybernetics material must NEVER appear in essays, README, artifacts, palgebra, or any main-line content. It remains in `wild/` and planning documents only. This is not a deferral — it is an exclusion.
 
 ### Material That Stays Wild
 
-**Von Foerster's Community-Building Playbook** (wild/cybernetics/community-building.md)
-- Fascinating as historical context for how to build methodology communities (BCL model).
-- Tangential to the core methodology; properly belongs in wild/ as a resource for community-building, not as content for essays.
-- **Exception:** Can be referenced in Essay 07's community subsection (see Phase 4), but the essay should not replicate the playbook.
-
-**Neo-Cybernetics Federation Model and Governance** (wild/neo-cybernetics/)
-- Organizational/strategic material, not methodological.
-- Should remain in wild/ pending a meta-level decision about cyberneutics's organizational stance.
-
-**Harness Engineering and Software Factories** (wild/harness-engineering/, wild/software-factories/)
-- These explore adjacent technical domains (dark factories, AI coding levels, etc.) without yet establishing deep connections to core cyberneutics methodology.
-- Should remain in wild/ until integration points are clearer.
-- Valuable for future exploration but not ready for essay incorporation.
+**Harness Engineering and Software Factories** — Adjacent technical domains without deep connections to core methodology. Remain in `wild/` until integration points are clearer.
 
 ---
 

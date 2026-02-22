@@ -377,6 +377,24 @@ information. The variance is the methodology's core value proposition.
 The formalism can record this (store multiple runs, compare scores), but
 it cannot explain why you should want multiple runs in the first place.
 
+**Why residuality complements the formalism.** The palgebra and Barry
+O'Reilly's residuality theory offer complementary views of the same
+pipeline. Palgebra asks: what does each operation *add* to the artifact
+(enrichment, transformation, provenance)? Residuality asks: what
+*survives* across all operations — what is the fixed architectural
+substrate? These are not competing; they illuminate different aspects of
+the same process. A deliberation record (the 00-charter through
+04-evaluation file chain) is simultaneously a palgebra artifact chain
+with typed stages and quality propagation, *and* a residue of the
+committee process — the arguments, tensions, and resolutions that
+survived the conversational gauntlet. A single run produces a residue;
+repeated runs hunt eigenforms. The remediation loop hunts local
+eigenforms (does this framing stabilize under self-assessment?); the
+Probe operation hunts global eigenforms (does this *decision* stabilize
+under independent re-examination?). Residuality theory provides the
+philosophical grounding for why iteration matters; palgebra provides the
+type-theoretic machinery for tracking what iteration produces.
+
 **Why rubrics are not arbitrary.** The formalism treats rubrics as
 catalytic inputs — they parameterize enrichment. But what makes a good
 rubric? The essays ground this: rubrics encode the quality criteria that

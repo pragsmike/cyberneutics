@@ -80,9 +80,9 @@ Running the composed pipeline multiple times from the same premises is not a con
 
 ### Architectural walks
 
-Barry O'Reilly's [residuality theory](../wild/residuality-theory/README.md) introduces the concept of the **architectural walk**: knowledge built through repeated traversal. You walk a system multiple times; each repetition differs slightly; the differences accumulate into understanding that no single pass can provide.
+Barry O'Reilly's residuality theory introduces the concept of the **architectural walk**: knowledge built through repeated traversal. You walk a system multiple times; each repetition differs slightly; the differences accumulate into understanding that no single pass can provide.
 
-O'Reilly roots this explicitly in Deleuze — the same philosophical ground as Essay 06. The walk is an instance of process philosophy in action: each repetition is not the same repetition, because both the walker and the path are different. This is the Deleuzian "repetition produces difference" made operational in software architecture.
+O'Reilly roots this explicitly in Deleuze — the same philosophical ground as Essay 06. The walk is an instance of process philosophy in action: each repetition is not the same repetition, because both the walker and the path are different. This is the Deleuzian "repetition produces difference" made operational in software architecture. His three core philosophical commitments — process over substance, criticality over correctness, difference over essence — mirror the foundations of cyberneutics point for point.
 
 The composed fan → funnel pipeline is an architectural walk through a decision space. Each run follows different lines of flight — different scenarios get generated, different arguments crystallize, different metaphors catch fire. The transcript is what the walk leaves behind.
 
@@ -159,7 +159,7 @@ Essay 08 showed that the essays and the palgebra describe the same phenomenon at
 
 ### Residuality theory
 
-O'Reilly's residuality theory enters through the architectural walk. His three commitments — process over substance, criticality over correctness, difference over essence — mirror the foundations of cyberneutics point for point. The productive distinction between residues (single-walk findings) and eigenforms (persistent findings) sharpens what the essays describe philosophically. The remediation loop hunts local eigenforms; the Probe hunts global ones. Residuality theory provides the vocabulary for this distinction.
+O'Reilly's residuality theory enters through the architectural walk. The productive distinction between residues (single-walk findings) and eigenforms (persistent findings) sharpens what the essays describe philosophically. The remediation loop hunts local eigenforms; the Probe hunts global ones. Residuality theory provides the vocabulary for this distinction.
 
 The palgebra and residuality theory offer complementary views of the same pipeline:
 
@@ -167,6 +167,8 @@ The palgebra and residuality theory offer complementary views of the same pipeli
 - **Residuality asks**: what *survives* across all operations? (Residues, eigenforms, architectural substrate.)
 
 A deliberation record is both a palgebra artifact chain and the residue of the committee process. These are charts on the same manifold.
+
+Pask's Conversation Theory provides a third lens at the micro-scale: each conversational move — challenge, rephrasing, teachback — is a "shock," and what remains invariant across those shocks is the residual structure of understanding. A Paskian "understanding" is a residual architecture of concepts; an O'Reilly "residue" is a Paskian understanding scaled to systems engineering. Residuality theory, conversation theory, and palgebra describe the same pattern at different scales — what survives perturbation is knowledge.
 
 ---
 
@@ -185,6 +187,10 @@ If you are facing a decision under genuine uncertainty — the kind where you ca
 5. **Fix quality at the source.** Confidence can only degrade through the pipeline. A weak scenario set produces a weak resolution, no matter how good the committee. Invest in the fan — the quality of exploration determines the ceiling on the quality of commitment.
 
 The appropriate success criterion for decisions under genuine uncertainty is not *maximizing expected value*. It is **satisficing subject to a survival constraint**: find an action that doesn't produce catastrophic failure in any scenario you can imagine, and commit to it with eyes open about what you don't know.
+
+This is O'Reilly's "criticality over correctness" made operational. Traditional architecture optimizes for correctness — does the system satisfy the specification? Traditional decision theory optimizes for expected utility — does the choice maximize weighted outcomes? Both assume you can enumerate what matters in advance. For wicked problems, you can't. The future stressor set is unknowable.
+
+Residuality theory suggests the alternative: optimize for **criticality** — does the decision survive unknown stressors? Not maximizing performance on known cases but satisficing on unknown ones. Each scenario in the fan phase is a stressor trying to break the decision. Resilience is what survives many stressors (residues). Robustness is what survives *all* our imagined stressors (eigenforms). The landscape map produced by repeated runs is exactly O'Reilly's stressor landscape: the topology of what survives and where decisions break.
 
 ---
 
@@ -207,6 +213,6 @@ These questions should not block implementation of the basic pipeline. The fan o
 - [Duality and Composition](../palgebra/duality-and-composition.md) — the formal treatment: resource equations, monad laws, new type definitions
 - [Committee as Palgebra](../palgebra/committee-as-palgebra.md) — the funnel half formalized
 - [Palgebra Reference](../palgebra/reference.md) — notation and composition laws
-- [Residuality Theory](../wild/residuality-theory/README.md) — architectural walks, residues vs. eigenforms
+- Barry O'Reilly, *Residues: Time, Change, and Uncertainty in Software Architecture* — architectural walks, residues vs. eigenforms
 
 **Next**: Implementation — the `/scenarios` skill, scenario roster design, and composed pipeline patterns

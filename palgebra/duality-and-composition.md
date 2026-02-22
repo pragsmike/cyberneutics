@@ -4,7 +4,7 @@
 
 The adversarial committee pipeline formalized in [committee-as-palgebra.md](committee-as-palgebra.md) is a **convergent** operation: multiple perspectives collapse into a single resolution. This document formalizes its categorical dual — **scenario generation** — as a divergent operation, then shows what happens when you compose them.
 
-The payoff: the composed operation converts ambiguity into justified commitment. The composition has the structure of a **monad**, which gives us formal quality criteria (the monad laws) and a theory of iteration (running the monad repeatedly to map decision landscapes). The iteration connects to [residuality theory](../wild/residuality-theory/README.md) and to the Deleuzian "repetition produces difference" insight from [Essay 06](../essays/06-deleuze-difference-repetition.md), grounding both in operational pipeline algebra.
+The payoff: the composed operation converts ambiguity into justified commitment. The composition has the structure of a **monad**, which gives us formal quality criteria (the monad laws) and a theory of iteration (running the monad repeatedly to map decision landscapes). The iteration connects to residuality theory (O'Reilly) and to the Deleuzian "repetition produces difference" insight from [Essay 06](../essays/06-deleuze-difference-repetition.md), grounding both in operational pipeline algebra.
 
 This document parallels [committee-as-palgebra.md](committee-as-palgebra.md) in structure. That document formalizes one half of the duality (the funnel). This document formalizes the other half (the fan), the composition, and what the composition reveals.
 
@@ -261,7 +261,7 @@ This connects to the Kleisli category discussion in [decorated-texts.md](decorat
 
 ## Iteration: the Deleuzian walk
 
-Running the composed pipeline multiple times from the same premises is a **stability test**. Each run is an architectural walk (in [residuality theory](../wild/residuality-theory/README.md) terms) through the decision space. The walks are never identical — each actualizes a different trajectory through the stochastic pipeline — and the differences between walks reveal structure.
+Running the composed pipeline multiple times from the same premises is a **stability test**. Each run is an architectural walk (in residuality theory (O'Reilly) terms) through the decision space. The walks are never identical — each actualizes a different trajectory through the stochastic pipeline — and the differences between walks reveal structure.
 
 ### The Probe operation
 
@@ -285,7 +285,7 @@ The variance report should distinguish these sources. The first two are *finding
 
 ### Residues and eigenforms
 
-The distinction from [residuality theory](../wild/residuality-theory/README.md) is precise and useful here:
+The distinction from residuality theory (O'Reilly) is precise and useful here:
 
 - A **residue** is what a single run leaves behind — the resolution, the key tensions, the surfaced assumptions. It is the output of one architectural walk through the problem space.
 - An **eigenform** is what persists across all runs — the decision (or tension, or assumption) that every walk discovers. It is a fixed point of the pipeline: `M(x) = x` — running the pipeline on this input reproduces it.
@@ -412,5 +412,5 @@ This document connects to the following essays:
 
 This document draws on:
 
-- **[Residuality Theory](../wild/residuality-theory/README.md)** — architectural walks, residues vs. eigenforms, process over substance
+- **Barry O'Reilly, Residuality Theory** — architectural walks, residues vs. eigenforms, process over substance
 - **Diary entry 2026-02-21** — the improvisational conversation that generated the initial inventory of types, operations, and patterns formalized here

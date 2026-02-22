@@ -62,17 +62,20 @@ If everything is a loop of becoming, how does anything ever stay still? How do w
 
 Heinz von Foerster gave the mathematical answer: **Eigenforms.**
 
-An eigenform is a recursive value—a specific state that a function creates, which then creates itself.
+Von Foerster developed the concept at the Biological Computer Laboratory (BCL) at the University of Illinois (1958–1975), the interdisciplinary hub he directed where cybernetics, cognition research, and experimental computing converged. The BCL brought together engineers, philosophers, biologists, and social scientists in a shared systems-oriented conversation — the kind of fertile collision between disciplines that second-order cybernetics both theorizes and requires. Von Foerster's radical constructivism — captured in his slogan "It is like I tell it," in contrast to "Tell it like it is" — grounded the eigenform concept in a broader epistemological commitment: observers don't discover pre-existing stable structures, they *participate in producing them*.
+
+An eigenform is a recursive fixed point — a specific state that a function creates, which then creates itself.
 xₜ₊₁ = F(xₜ)
 
 If this loop stabilizes such that x = F(x), you have found an Eigenform.
 
-In AI interaction, we are hunting for Eigenforms.
+In AI interaction, we are hunting for Eigenforms at multiple scales.
 
 *   **Dialogue**: When you and the AI finally "get" each other, and the conversation flows effortlessly? You have entered a stable eigen-behavior.
-*   **Adversarial Committees**: We use the committee structure to *prevent* premature eigenforms. We don't want the system to stabilize on the first easy answer. We inject noise (character conflict) to kick the system out of shallow eigen-states, reshaping the function $F(x)$ until the only stable solution is a robust, well-reasoned truth.
+*   **Conversational eigenforms**: Gordon Pask's Conversation Theory provides a complementary lens. For Pask, a conversation reaches an eigenform when both participants can correctly describe the other's understanding of a topic and that understanding persists under perturbation — when you can *teach back* the other's position and the teachback survives challenge. The entailment mesh (Pask's term for the network of mutually-supporting concepts that participants build through dialogue) is the residual structure that persists through conversational shocks. Eigenforms in dialogue are not just mathematical fixed points; they are **shared understandings that survive re-articulation**.
+*   **Adversarial Committees**: We use the committee structure to *prevent* premature eigenforms. We don't want the system to stabilize on the first easy answer. We inject noise (character conflict) to kick the system out of shallow eigen-states, reshaping the function $F(x)$ until the only stable solution is a robust, well-reasoned truth. In Pask's terms: we force repeated teachback under adversarial conditions, so that only genuinely robust understandings survive.
 
-**Eigenforms are the engineer's version of Deleuze's "becoming-stabilized."** They prove that you don't need fixed objects to have stability. You just need stable processes.
+**Eigenforms are the engineer's version of Deleuze's "becoming-stabilized."** They prove that you don't need fixed objects to have stability. You just need stable processes. Von Foerster showed this mathematically; Pask showed it conversationally; the adversarial committee operationalizes both.
 
 For empirical validation of eigenforms and recursive stabilization in LLM reasoning—where trained models learn to simulate exactly these dialogic structures internally—see [Societies of Thought](./societies-of-thought-synthesis.md). For the full treatment of eigenforms — including premature convergence, deliberate destabilization, and the connection to Deleuzian process philosophy — see [Deleuzian Foundations](./06-deleuze-difference-repetition.md).
 
@@ -101,7 +104,9 @@ This makes sense for first-order systems where the observer stands outside. If y
 
 But large language models aren't rule-based systems. They're dynamical systems with millions of parameters trained through gradient descent. The "reasoning" (if we can call it that) is distributed across weights, emergent from training, and not localizable to inspectable steps. Demanding internal transparency is demanding the wrong thing from the wrong kind of system.
 
-The second-order move is different: **observe the system dynamics, not the component internals**. Don't try to see inside the neural network. Instead, architect the interaction so the process becomes observable: multiple perspectives argue, claims get challenged, evidence gets cited, assumptions surface. The transcript is the observable. The discourse is the measurement.
+The second-order move is different: **observe the system dynamics, not the component internals**. Von Foerster's radical constructivism makes the point sharply: the demand for explainability assumes an objective world whose mechanisms we can lay bare. But second-order cybernetics reframes this — we are explaining how we *construct* our understanding, not how the system "really" works. The relevant question is not "what is the model doing internally?" but "what happens when we observe it under these conditions?"
+
+Don't try to see inside the neural network. Instead, architect the interaction so the process becomes observable: multiple perspectives argue, claims get challenged, evidence gets cited, assumptions surface. The transcript is the observable. The discourse is the measurement.
 
 This is the Shannon/von Neumann principle: reliable systems from unreliable components through composition and feedback. You don't need transparent parts if you have observable systems. The individual model responses remain opaque (statistically determined pattern completion), but the system of deliberation is legible (you can read the debate, see what survived scrutiny, verify what evidence was demanded).
 

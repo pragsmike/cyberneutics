@@ -72,12 +72,40 @@ the generation process.
 **Predicted missing parts:**
 - **Memory cells**: After successfully identifying a type of bad text,
   the system should get better at that pattern. Currently evaluations
-  are stateless.
+  are stateless. Pask's entailment meshes suggest the shape: accumulated
+  evaluative judgments forming a network of mutually-supporting patterns,
+  each edge strengthened by repeated encounters.
 - **Autoimmune disorders**: Over-aggressive rubrics, thresholds set
   too high, miscalibrated evaluators rejecting good texts. Need
   regulatory mechanisms.
 - **Immunodeficiency**: Absent evaluation = undisciplined generation =
   narrative collapse to statistical likelihood.
+
+### Teachback as immune challenge
+
+There is a natural connection to Pask's teachback mechanism from
+Conversation Theory. Each conversational move — challenge, rephrasing,
+application to a new context, reconstruction from an adversarial
+perspective — is an immune challenge: a shock that tests whether
+understanding is structural or merely superficial.
+
+In the committee pipeline, teachback can serve as an additional immune
+function layer. After the main deliberation, requiring each character
+to reconstruct every other character's strongest argument (the
+[Teachback Protocol](../artifacts/teachback-protocol.md)) tests whether
+the deliberation produced genuine mutual understanding or parallel
+monologues. Arguments that survive teachback from adversarial
+perspectives are genuine residues — structurally sound, not just
+locally coherent. Arguments that can't be taught back were
+immunologically naive: they passed the surface check (positive
+selection — yes, this looks like an argument) but failed the
+substance check (negative selection — mere restating, not genuine
+engagement).
+
+This is Pask's insight scaled to immune architecture: knowledge is
+what survives repeated perturbation. Understanding is the residual
+structure after conversational shocks. The immune system and the
+conversation are the same pattern at different scales.
 
 ## Two regimes: pipeline (organ) vs. bath (bloodstream)
 
