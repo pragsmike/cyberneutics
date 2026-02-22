@@ -98,6 +98,10 @@ Understanding this changes how you work with the technology:
 
 ## The Category Theory Connection
 
+Pask wrote that "cybernetics is the science or the art of manipulating defensible metaphors; showing how they may be constructed and what can be inferred as a result of their existence," in the context of his work *The Cybernetics of Human Learning and Performance* (1966). 
+
+That's also an excellent description of category theory.
+
 There's a formal parallel between Deleuzian philosophy and category theory that illuminates both.
 
 **Category theory privileges arrows over objects.** In traditional mathematics, you define objects (sets, groups, spaces) and then study functions between them. In category theory, the morphisms (arrows, transformations) are primary. Objects are just the sources and targets of morphisms. What matters is how things relate, not what things "are."
