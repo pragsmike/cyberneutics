@@ -82,6 +82,8 @@ A deliberation record (00-04 files) is both a palgebra artifact chain *and* the 
 
 - [Applying Residuality Theory for Better Software Design](https://www.cutter.com/article/residuality-theory-introduction) — Cutter Consortium
 
+- [Eric Normand on Residuality Theory](https://ericnormand.substack.com/p/residuality-theory)
+
 ---
 
 ## Status

@@ -73,6 +73,10 @@ They are the same operation.
 *   To **bridge a gap** is to create a **feedback loop** that produces **difference**.
 *   To **engage in cybernetics** is to **make sense** by **becoming** something new.
 
+This convergence is not idiosyncratic to cyberneutics. Gordon Pask arrived at nearly identical positions independently in the 1960s-70s through his Conversation Theory. Pask treated learning as movement through a rhizomatic entailment mesh where conversations bridge gaps and stabilize understanding through teachback — the same operation as Dervin's bridge-building, the same topology as Deleuze's rhizome, the same recursive feedback loop as von Foerster's cybernetics. That an educational cybernetician working on adaptive teaching machines converged with a communication theorist (Dervin), a continental philosopher (Deleuze), and a systems epistemologist (von Foerster) on the same fundamental operation suggests something deeper than any one author's framework: this is a structural truth about how meaning-making works.
+
+The four together give a complete picture: Deleuze provides the **geometry** of the conceptual space (rhizomatic, non-hierarchical); Dervin provides the **phenomenology** of movement through it (situated gap-bridging); Pask provides the **micro-mechanics** of how understanding is achieved and tested (conversation, teachback, entailment mesh stabilization); and von Foerster provides the **epistemology** that grounds the whole enterprise (observer-dependent, constructivist, recursive).
+
 ### Why This Matters for AI
 
 This synthesis explains why the "Chat" interface won. It wasn't just convenience. It was because **Chat is the native topology of cybernetic sense-making.**

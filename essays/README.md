@@ -33,7 +33,8 @@ If you want to understand the theoretical synthesis:
 5. **[Cybernetics and the Observer Problem](./04-cybernetics-and-observation.md)** - Second-order cybernetics and why observation changes state
 6. **[The Synthesis](./05-the-synthesis.md)** - How sense-making is inherently cybernetic
 7. **[Deleuzian Foundations](./06-deleuze-difference-repetition.md)** - Becoming, difference, and why repetition produces novelty
-8. **[Decisions Under Uncertainty](./10-decisions-under-uncertainty.md)** - How the duality of exploration and commitment yields rigorous decision-making
+8. **[Conversation Theory](./11-conversation-theory.md)** - Pask's micro-mechanics of understanding: teachback, entailment meshes, and conversational architecture
+9. **[Decisions Under Uncertainty](./10-decisions-under-uncertainty.md)** - How the duality of exploration and commitment yields rigorous decision-making
 
 ### For Skeptics (Show Me Why This Matters)
 
@@ -268,6 +269,25 @@ The essays in this directory establish *why* narrative engines need narrative en
 - Actionable steps to improve committee variance (Big Five traits)
 
 **Read this if**: You want scientific validation that this isn't just roleplay—it's cognitive engineering.
+
+---
+
+### [Conversation Theory: The Micro-Mechanics of Sense-Making](./11-conversation-theory.md)
+
+**The fourth pillar**: Gordon Pask's Conversation Theory provides the micro-mechanics that the other theoretical frameworks leave abstract — the specific operations by which understanding is achieved, tested, and maintained through conversation.
+
+**Key insight**: Pask's teachback mechanism operationalizes what the committee does: understanding is demonstrated not by agreement but by the ability to reconstruct another's position from a different starting point. The entailment mesh (Pask's term for a non-hierarchical network of mutually-entailing concepts) is structurally isomorphic to Deleuze's rhizome — independent convergence from an educational cybernetician and a continental philosopher on the same knowledge topology.
+
+**Covers**:
+- Teachback as bridge-testing: how you know a Dervin bridge holds weight
+- Entailment meshes as rhizomes: knowledge topology from two independent sources
+- Walk styles (serialist, holist, versatile) and committee character dynamics
+- Languages and levels: natural language, object language, metalanguage — and how the methodology spans all three
+- Conversational architecture: Pask's skeleton mapped to the committee pipeline
+- Teachback as micro-residuality: the deep structural parallel with O'Reilly's residuality theory
+- The complete four-pillar theoretical architecture: Dervin + von Foerster + Deleuze + Pask
+
+**Read this if**: You want to understand the micro-mechanics of how committee deliberation actually produces understanding, or why the cyberneutics methodology has four independent theoretical foundations that converge.
 
 ---
 

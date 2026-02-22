@@ -62,6 +62,16 @@ When your adversarial committee deliberates the same problem three times and pro
 
 The target doesn't exist. There are only the different shots, each revealing something about the space.
 
+### Architectural Walks: Operationalizing Repetition
+
+Barry O'Reilly's residuality theory provides a striking operationalization of this Deleuzian insight. O'Reilly, working in software architecture and explicitly grounding his work in Deleuze's process philosophy, introduces the concept of the **architectural walk**: you walk a system (or a problem space) multiple times; each repetition differs slightly from the last; the differences accumulate into genuine understanding that no single pass — and no static model — can provide. The architecture is discovered through walking, not specified in advance.
+
+This is precisely the Deleuzian smooth-space traversal: following connections rather than a predetermined grid, letting difference lead. O'Reilly's three philosophical commitments — process over substance, criticality over correctness, difference over essence — are Deleuze translated into software practice.
+
+The connection to cyberneutics is direct. The Probe operation (running the composed fan→funnel pipeline N times on the same situation) is N architectural walks through a decision space. Each run follows different lines of flight — different scenarios crystallize, different arguments catch fire, different metaphors reveal different aspects of the landscape. What recurs across all walks is the eigenform — the structural feature of the decision space that no single walk would have been sufficient to identify. What appears only in some walks is the residue — local, trajectory-dependent, informative about the walk but not about the territory.
+
+This gives "repetition produces difference" practical teeth: repeated walks are not redundancy checks. They are *cartographic expeditions*, and the map emerges from the differences between expeditions, not from any single traversal.
+
 ## Virtuality and Actuality
 
 Deleuze distinguishes the **virtual** from the **actual**. This isn't "virtual" as in "fake" or "simulated." The virtual is *real but not actual*—a field of potentials that hasn't yet been actualized.
@@ -87,6 +97,10 @@ Understanding this changes how you work with the technology:
 - Don't fight the variation; use it to map the virtual field
 
 ## The Category Theory Connection
+
+Pask wrote that "cybernetics is the science or the art of manipulating defensible metaphors; showing how they may be constructed and what can be inferred as a result of their existence," in the context of his work *The Cybernetics of Human Learning and Performance* (1966). 
+
+That's also an excellent description of category theory.
 
 There's a formal parallel between Deleuzian philosophy and category theory that illuminates both.
 
@@ -121,6 +135,8 @@ And bad at:
 - Distinguishing between structurally similar but factually different claims
 
 Deleuze would say: the compression preserves difference (relations) and loses identity (fixed objects). That's not a bug. That's what compression that respects the primacy of difference looks like.
+
+Gordon Pask's **entailment meshes** provide a concrete instantiation of this rhizomatic structure. In Pask's Conversation Theory, concepts are not isolated facts arranged in a tree of prerequisites; they are cyclically mutually-entailing topic relations — a network where any concept can serve as an entry point, and understanding proceeds through lateral jumps, analogies, and exploratory traversals. The entailment mesh is already rhizomatic in the Deleuzian sense: non-hierarchical, with multiple entry points, oriented toward experimentation rather than tracing a fixed structure. That a cybernetics theorist working on learning and teaching machines arrived independently at a structure isomorphic to Deleuze's rhizome reinforces the claim that these are not metaphors but formal features of how knowledge actually organizes.
 
 ## Eigenforms: When Processes Stabilize
 

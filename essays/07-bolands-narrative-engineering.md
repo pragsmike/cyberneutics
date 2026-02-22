@@ -423,6 +423,8 @@ Hermeneutics is the theory and methodology of interpretation. We're developing c
 - The theoretical foundations are solid—grounded in established work (Gödel, Kuhn, Dervin, cybernetics, Deleuze)
 - The synthesis is novel—combining these frameworks for human-AI collaboration is new
 
+**The BCL precedent**: There is historical precedent for this kind of interdisciplinary synthesis. Heinz von Foerster's Biological Computer Laboratory at the University of Illinois (1958–1975) functioned as a hub where engineers, philosophers, biologists, and social scientists — including Gordon Pask, Ross Ashby, and Humberto Maturana — converged around cybernetic ideas. The BCL's success came not from a single theory but from creating conversational infrastructure where different disciplinary languages could interact productively. Von Foerster's mode of persuasion was "Come teach us X, and we'll expose you to Y." The BCL produced not a unified theory but a shared vocabulary and set of patterns — entailment meshes (Pask), autopoiesis (Maturana), requisite variety (Ashby) — that turned out to be describing the same phenomena at different scales. Cyberneutics's convergence with Boland's narrative engineering follows the same pattern: independent investigations arriving at compatible conclusions suggest something structural, not coincidental.
+
 **Academic legitimacy**: Positioning within broader intellectual tradition matters for:
 - Credibility with institutions that value theoretical rigor
 - Collaboration with researchers in adjacent fields

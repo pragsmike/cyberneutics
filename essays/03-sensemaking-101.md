@@ -69,6 +69,18 @@ After those stakeholder conversations, you're not in the same situation anymore:
 
 This is why information-seeking is inherently **iterative and emergent** rather than linear and goal-directed.
 
+### Teachback as Bridge-Testing
+
+Dervin describes bridge-construction abstractly — people build bridges across gaps. But how do you know whether a bridge actually holds weight?
+
+Gordon Pask's Conversation Theory provides the mechanism: **teachback**. After constructing a bridge (a hypothesis, a reframing, a course of action), you test it by teaching it back — restating it in your own terms, applying it to a new context, defending it against challenge. A bridge counts as successful when you can sustain mutual understanding despite perturbation.
+
+This is Dervin's bridge-building made operational. The bridge isn't the information received; it's what survives re-articulation. If you can't teach it back — explain it to someone else, apply it to a variant scenario, hold it steady under questioning — you haven't actually crossed the gap. You've just papered over it with a plausible-sounding narrative.
+
+In Pask's terms, understanding is a cyclically maintained network of mutually-entailing concepts — an **entailment mesh**. Each successful teachback strengthens edges in the mesh. Each failure reveals where the mesh is thin. The mesh is not a static knowledge structure but a living record of gaps that have been bridged and how.
+
+The integrated picture: the learner walks a rhizomatic space (in the sense Deleuze describes — see [Essay 06](./06-deleuze-difference-repetition.md)), encounters gaps (Dervin), and uses conversation to construct bridges that stabilize through teachback (Pask). Three frameworks, one process.
+
 ## Why This Matters for AI Interaction
 
 Traditional AI interaction assumes:
@@ -130,6 +142,22 @@ Dervin's Situation-Gap-Bridge model is inherently cybernetic:
 - Each iteration produces new initial conditions
 
 The full implications of this cybernetic loop — including why observation literally changes what you're observing — are developed in [Cybernetics and the Observer Problem](./04-cybernetics-and-observation.md).
+
+## Gap-First Dialogue with Teachback Loops
+
+The Dervin-Pask integration suggests a concrete design pattern for AI interaction — one that transforms Sense-Making from a descriptive framework into a conversation protocol:
+
+1. **Elicit the gap explicitly.** Don't start with "tell me about X." Start with "here's my situation, here's where my understanding breaks down." Dervin's gap-first method: ask what confuses you, what you're trying to do, where you're stuck.
+
+2. **Propose a bridge.** The AI generates a narrative that could cross the gap — information, a reframing, an analogy, a course of action.
+
+3. **Teachback.** Before accepting the bridge, restate it in your own terms. Apply it to a variant of your situation. Defend it against a challenge. If you can't, the bridge is decorative — plausible-sounding but not load-bearing.
+
+4. **Log the result.** Gaps and bridges are first-class objects in the interaction, not ephemeral query-response pairs. The history of gaps bridged (and bridges that failed teachback) is the entailment mesh of the conversation — a living record of what's been understood and what hasn't.
+
+5. **Iterate.** The successful bridge changes the situation (Dervin). New gaps emerge. The cycle repeats.
+
+This is a cybernetic loop with Pask's teachback as the feedback mechanism: walk → gap → conversation → bridge → teachback → mesh update → changed future walks.
 
 ## Practical Implications for AI Collaboration
 

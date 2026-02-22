@@ -24,6 +24,9 @@ Divergent narrative exploration of possible futures. Deploy independent narrativ
 ### [Deliberated Choice Workflow](./deliberated-choice-workflow.md)
 The composed fan→funnel pipeline: generate divergent scenarios, then deliberate across them with the adversarial committee. Converts ambiguity into justified commitment. Documents the manual workflow for chaining `/scenarios` and `/committee`.
 
+### [Teachback Protocol](./teachback-protocol.md)
+Quality-assurance step for committee deliberations based on Gordon Pask's Conversation Theory. After deliberation, each character reconstructs every other character's strongest argument from their own perspective. Tests whether the committee achieved genuine mutual understanding or produced parallel monologues. Directly targets Rubric 2 (Adversarial Rigor) and Rubric 3 (Assumption Surfacing).
+
 ## Getting Started
 
 ### [Quick Start Guide](./quick-start-guide.md)
