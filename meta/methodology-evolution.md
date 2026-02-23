@@ -298,6 +298,21 @@ See [meta/uptake-and-usage.md](uptake-and-usage.md) for details and analysis.
 
 **Key Learning**: The committee was only half the story — the convergent half. The divergent half (scenario exploration) had been implicit in practice; formalizing it as the fan gives the composition a precise type and makes the decision monad the unit of "expand, evaluate, commit." Implementation phases remain: `/scenarios` skill, scenario roster design, composed fan→funnel pipeline, `/probe` skill, string-diagram spider rendering. Theory is documented; implementation is sequenced but not yet built.
 
+### Feb 22, 2026: Condorcet Experiment — First Empirical Evidence for Deliberation
+
+**Contribution**: External contributor (Fork #1) investigated Condorcet's jury theorem as a formal foundation for the committee technique.
+
+**Created**:
+- Committee deliberation on whether to "correct for" CJT (`agent/deliberations/condorcet-jury-theorem-process/`): unanimous recommendation to *document* the relationship, not change the process. Review 13/15 (High).
+- `artifacts/condorcet-jury-theorem-and-committee.md` — clarification artifact: design goals first, CJT as motivating analogy, three explicit deviations (no independence, no binary outcome, no literal *p*), and the fork (CJT-compliant = different pipeline).
+- `artifacts/comparison-protocol-deliberative-vs-cjt.md` — reusable protocol for deliberative vs. CJT-style comparison.
+- Two comparison runs (`agent/comparisons/`): deliberative vs. CJT-style on the same question with the same roster.
+- Smoke test (`scripts/test_string_diagram.py`) and run guide (`meta/repository-review-and-run-guide.md`).
+
+**Key Finding — process structure changes outcomes**: On a value-laden question (Code of Conduct), independent voting produced Aye 3–2; deliberation with Robert's Rules produced Nay 5–0. Three votes flipped when the enforcement/weaponization objection was pressed in debate. On a straightforward question (second CI job), both pipelines agreed. This is the first controlled comparison showing that the interaction structure — not just the number of perspectives — drives outcomes.
+
+**Key Learning**: The comparison protocol is a reusable tool for accumulating evidence. Two runs are datapoints, not a study, but they establish the pattern: on value-laden questions with hidden enforcement or second-order concerns, deliberation produces materially different results than aggregation. The contributor's investigation strengthened the methodology's empirical base rather than changing its process — which is itself evidence that the design is robust.
+
 ---
 
 ## What This Shows About Methodology Maturity
@@ -312,7 +327,7 @@ See [meta/uptake-and-usage.md](uptake-and-usage.md) for details and analysis.
 - **New**: Executable skills (`/committee`, `/review`, `/string-diagram`, `/handoff`) operationalize the techniques as one-command workflows
 - **New**: Evaluation feedback loop (review → remediation → re-review) is implemented and testable end-to-end
 
-**What This Means**: The methodology won't radically change. Refinements, yes. Fundamental redesign, no. The addition of executable skills is an accessibility improvement, not a methodology change — the same pipeline, now automated. **Value proposition sharpened** (Feb 21): README and Essay 10 surface "rigorous, traceable decision-making under genuine uncertainty" as the primary promise — explore (fan), evaluate (funnel), repeat (probe), trace (provenance). The committee remains the implemented half; the fan and composed pipeline are specified but not yet executable.
+**What This Means**: The methodology won't radically change. Refinements, yes. Fundamental redesign, no. The addition of executable skills is an accessibility improvement, not a methodology change — the same pipeline, now automated. **Value proposition sharpened** (Feb 21): README and Essay 10 surface "rigorous, traceable decision-making under genuine uncertainty" as the primary promise — explore (fan), evaluate (funnel), repeat (probe), trace (provenance). The committee remains the implemented half; the fan and composed pipeline are specified but not yet executable. **Empirically supported** (Feb 22): The Condorcet comparison runs provide the first controlled evidence that deliberation (with Robert's Rules) produces different outcomes than independent aggregation on the same question with the same roster — specifically on value-laden questions where second-order concerns (enforcement, weaponization) require adversarial pressure to surface.
 
 ---
 
@@ -337,7 +352,7 @@ See [meta/uptake-and-usage.md](uptake-and-usage.md) for details and analysis.
 - Repository forked by practitioner intending to extend committee makeups
 - MOOLLM platform incorporated adversarial committee mechanism
 
-**What This Means**: The Feb 1 self-evaluation's #1 gap — "do other practitioners succeed with this?" — now has first data points. Two independent signals of adoption, both targeting the committee system. Neither is sustained usage yet, but both indicate the methodology is being understood as intended. See [uptake-and-usage.md](uptake-and-usage.md).
+**What This Means**: The Feb 1 self-evaluation's #1 gap — "do other practitioners succeed with this?" — now has first data points. Two independent signals of adoption, both targeting the committee system. Neither is sustained usage yet, but both indicate the methodology is being understood as intended. **New** (Feb 22): Fork #1's Condorcet investigation has been completed and merged — producing the first empirical comparison of deliberative vs. independent-aggregation pipelines. See [uptake-and-usage.md](uptake-and-usage.md).
 
 ---
 
@@ -416,10 +431,10 @@ If it couldn't do that, it wouldn't be rigorous. Since it can, we have evidence 
 7. **Does the immune system analogy predict useful architecture?** The narrative immune systems work (`essays/09-narrative-immune-systems.md`) predicts adaptive rubrics, regulatory mechanisms, and an organ/bath boundary formalism. These are concrete engineering targets. The civic application (`applications/narrative-immune-systems/`) shows what this looks like at the social scale.
 8. **Does the decision monad hold up in practice?** Fan/funnel composition is formalized (`palgebra/duality-and-composition.md`, `essays/10-decisions-under-uncertainty.md`). Implementation phases: `/scenarios` skill, scenario roster design (distinct from committee roster), composed fan→funnel pipeline, `/probe` for N-run variance and decision-landscape mapping. Open design questions: scenario roster composition, variance-report and decision-landscape-map structure, monad laws as executable tests.
 
-We're past "early-stage documentation" and into "methodology with executable skills, a formal algebra, and first external adoption." The formalism now includes a compositional duality (fan/funnel) and an explicit prescription for decisions under uncertainty; the committee remains the only fully implemented half. Still not "ready for all practitioners" — but the gap is narrowing, and we now have empirical signals to steer by.
+We're past "early-stage documentation" and into "methodology with executable skills, a formal algebra, first external adoption, and initial empirical evidence." The formalism now includes a compositional duality (fan/funnel) and an explicit prescription for decisions under uncertainty; the committee remains the only fully implemented half. The Condorcet comparison runs (Feb 22) provide the first controlled evidence that the deliberative pipeline produces different outcomes than independent aggregation — specifically, that Robert's Rules as forcing function prevents premature consensus on value-laden questions. Still not "ready for all practitioners" — but the gap is narrowing, and we now have empirical signals to steer by.
 
 ---
 
-**Last Updated**: February 21, 2026
+**Last Updated**: February 22, 2026
 **Status**: Living document—will update as methodology evolves
 **Contribute**: If you use this methodology, please share your results (successes AND failures)

@@ -139,6 +139,10 @@ After a good committee session, you should be able to articulate:
 - What you're choosing to optimize for and what you're accepting as downside
 - What early warning signs would indicate you chose wrong
 
+### Evidence: deliberation vs. independent aggregation
+
+The [comparison protocol](./comparison-protocol-deliberative-vs-cjt.md) tests this claim directly by running the same question through both a deliberative pipeline (this committee) and an independent-vote pipeline (each character responds in isolation, then majority rules). On the Code of Conduct question ([records](../agent/comparisons/code-of-conduct/)), independent voting produced Aye 3–2; deliberation produced Nay 5–0. Three characters changed their votes after being forced to confront the enforcement objection they had ignored in isolation. The deliberative pipeline produced a richer output (decision-space map, surfaced assumptions, revisit conditions) and a different verdict. This is initial evidence that the structured adversarial process adds value beyond simply having multiple perspectives — the interaction structure matters, not just the number of voices. See [Condorcet's Jury Theorem and the Committee](./condorcet-jury-theorem-and-committee.md) for why the two pipelines are fundamentally different designs.
+
 ## Common Mistakes
 
 ### Mistake 1: Generating characters dynamically

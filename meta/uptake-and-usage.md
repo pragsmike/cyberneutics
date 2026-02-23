@@ -55,6 +55,35 @@ comparative rubric scores across different roster configurations.
 
 *mRNA and the immune analogy*: They suggested considering mRNA as relevant to the immune system analogy in `essays/09-narrative-immune-systems.md` and `applications/narrative-immune-systems/`. The implication is apt: mRNA vaccines deliver instructions to cells to produce a recognizable fragment of a pathogen so the immune system can learn the pattern *without exposure to the actual pathogen*. Applied to narrative immune systems: rather than exposing a community to real misinformation to build resistance (risky — the exposure itself can cause anchoring or radicalization), you could construct "narrative mRNA" — carefully designed fictional exemplars of misinformation patterns that train pattern recognition without contact with live attack vectors. This is a meaningful extension of the analogy beyond what the current essay captures. Worth a committee deliberation or a `/committee` run on the question of how to design such training material.
 
+**Update — February 22, 2026**: Condorcet investigation completed; PR merged.
+
+The contributor produced a substantial body of work that has been reviewed and merged:
+
+- **Committee deliberation** (`agent/deliberations/condorcet-jury-theorem-process/`): The committee recommended *documenting* the relationship to CJT, not changing the process. Review scored 13/15 (High). Key finding: the committee process deliberately violates CJT's conditions (independence, binary outcome, literal competence probability) because it optimizes for adversarial stress-testing and decision-space mapping, not for maximizing the probability of a correct binary vote. A CJT-compliant variant would be a *different pipeline* — independent generation then aggregation — not a correction to this one.
+- **Artifact created**: `artifacts/condorcet-jury-theorem-and-committee.md` — design goals first, CJT as motivating analogy, explicit deviations table, and the fork (CJT-compliant = different pipeline). Cross-linked from `artifacts/adversarial-committees.md`.
+- **Comparison protocol**: `artifacts/comparison-protocol-deliberative-vs-cjt.md` — how to run both pipelines (deliberative and CJT-style independent vote) on the same question and compare.
+- **Two comparison runs** (`agent/comparisons/`):
+  - *second-ci-job*: Both pipelines said Nay. CJT 4–1, Deliberative 5–0 (same verdict; one vote changed in deliberation, revisit condition added).
+  - *code-of-conduct*: **Opposite verdicts.** CJT Aye 3–2, Deliberative Nay 5–0. Three characters (Frankie, Vic, Tammy) voted Aye in isolation but flipped to Nay after debate. The enforcement/weaponization objection — present in CJT-style rationales from Maya and Joe but never answered by the Aye voters — was pressed in deliberation, and three votes changed.
+
+**What this validates — first empirical evidence for deliberation over aggregation**:
+
+The code-of-conduct comparison is the first controlled test showing that *process matters*: same question, same roster, different pipeline structure, different verdict. Specifically, it validates three claims:
+
+1. **Robert's Rules as forcing function works.** The Roberts Rules artifact predicts that without procedural forcing, characters give "sounds reasonable" answers (Statistical Shortcut #1: premature consensus). The CJT-style run confirms this: Vic and Tammy's independent Aye rationales were surface-level and never confronted the enforcement objection. In deliberation, the Chair directed them to respond, and they changed their positions.
+
+2. **Adversarial back-and-forth is the value, not the number of perspectives.** Five perspectives voting independently produced a different (arguably weaker) result than five perspectives debating adversarially. The number of perspectives was held constant; only the interaction structure changed. This supports the core claim in `artifacts/adversarial-committees.md`.
+
+3. **The Condorcet artifact's own claim is supported.** The artifact says a CJT-compliant variant "would sacrifice deliberation and stress-testing for independence and aggregability." The comparison runs demonstrate exactly this trade-off.
+
+**What we still don't know**:
+
+- Whether the deliberative verdict was *better* (that requires ground truth or external judgment — we don't have one).
+- Whether the pattern generalizes: two runs are datapoints, not a study. More runs on different question types would strengthen or weaken the pattern.
+- Whether a CJT-style pipeline with more voters (e.g. 15 or 25 independent responses) would converge toward the deliberative result.
+
+**Significance**: This is the closest thing to a controlled experiment the methodology has produced. It partially addresses the "comparative evaluation" evidence gap. The comparison protocol is reusable for future runs.
+
 ---
 
 ### 2. MOOLLM Platform Integration
@@ -157,18 +186,23 @@ several conditions that would signal the methodology is working:
 |---|---|
 | External practitioners attempt to use the methodology | Two forks confirmed |
 | Techniques are adopted by other platforms | MOOLLM integration confirmed |
-| Different committee makeups tested for different domains | Fork #1 intends this; investigating Condorcet as formal basis |
-| Rubric scores from external deliberations available | Not yet |
+| Different committee makeups tested for different domains | Fork #1 investigated Condorcet; tested CJT-style (independent vote) as alternative pipeline |
+| Rubric scores from external deliberations available | Partial: Condorcet deliberation scored 13/15 (High) on internal review |
 | Failure reports from practitioners | Not yet |
 | Sustained multi-session use by external users | Not yet |
+| Deliberation vs. aggregation compared empirically | **New signal (not originally predicted):** Two comparison runs — same verdict on one question, opposite verdicts on another. First evidence that process structure (deliberation vs. independence) changes outcomes. |
 
-Two of six predicted signals have appeared, plus a second fork showing
-theoretical engagement (Deleuze / Residuality Theory). This is
-consistent with "suitable for early adopters" but too early to claim
-broad validation. The theoretical depth of the engagement — Condorcet,
-mRNA analogy extension, Deleuzian walks — is a stronger signal than
-expected at this stage: these contributors are not just consuming the
-technique, they're extending the theoretical scaffolding.
+Three of six original predicted signals have appeared (counting the
+Condorcet deliberation review score as partial rubric evidence), plus
+a second fork showing theoretical engagement (Deleuze / Residuality
+Theory), plus an unpredicted signal: the first controlled comparison
+of deliberative vs. independent-aggregation pipelines. This is
+consistent with "suitable for early adopters" and now has initial
+empirical evidence for deliberation's value. The theoretical depth of
+the engagement — Condorcet, mRNA analogy extension, Deleuzian walks —
+is a stronger signal than expected at this stage: these contributors
+are not just consuming the technique, they're extending the
+theoretical scaffolding and producing testable evidence.
 
 ---
 
@@ -199,4 +233,4 @@ feedback would be:
 
 ---
 
-**Last Updated**: February 20, 2026
+**Last Updated**: February 22, 2026

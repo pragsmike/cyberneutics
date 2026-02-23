@@ -31,6 +31,7 @@ Cyberneutics is a methodology for working with LLMs as collaborative sense-makin
 - `deliberations/<topic-slug>/` — committee run records (00-charter through 04-evaluation); see `agent/deliberations/README.md` for schema
 - `scenarios/<topic-slug>/` — scenario generation records (00-situation through 03-assessment); produced by `/scenarios`
 - `probes/<topic-slug>/` — probe records (run-01/ through run-0N/, variance report, landscape map); produced by `/probe`
+- `comparisons/<topic-slug>/` — comparison runs (deliberative vs. CJT-style on the same question); see `agent/comparisons/README.md` and `artifacts/comparison-protocol-deliberative-vs-cjt.md`
 - `diary/` — exploratory writing between sessions; read when you want recent thinking that hasn't made it into a document yet. **Write to diary** for speculative or exploratory ideas mid-session that don't yet belong in a handoff; **write to handoff** for conclusions, decisions, and next steps.
 - `gap_analysis.md` — known gaps and planned documents
 - `archive/` — previous handoffs, completed plans; historical reference

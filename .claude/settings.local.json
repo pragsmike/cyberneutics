@@ -5,7 +5,9 @@
       "WebFetch(domain:factory.strongdm.ai)",
       "Bash(dir:*)",
       "Bash(git mv:*)",
-      "Bash(git rm:*)"
+      "Bash(git rm:*)",
+      "Bash(git log:*)",
+      "Bash(gh pr view:*)"
     ]
   }
 }

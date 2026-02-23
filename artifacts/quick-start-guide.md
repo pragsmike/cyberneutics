@@ -279,6 +279,7 @@ If no → what specifically didn't help? That's useful information.
 - [Robert's Rules as Forcing Functions](./roberts-rules-forcing-function.md) - procedural rigor
 - [Independent Evaluation Protocols](./independent-evaluation.md) - comprehensive rubrics
 - [Cross-Scenario Learning](./cross-scenario-learning.md) - building institutional memory
+- [When the Methodology Fails](../essays/when-methodology-fails.md) - six failure modes and when *not* to use this
 
 **Try it on another problem**:
 - Different domain to test generality
