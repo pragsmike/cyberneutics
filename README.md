@@ -121,11 +121,13 @@ The essays describe *why* narrative engines need narrative engineering. The arti
 | Command | What it does | When to use |
 |---------|-------------|-------------|
 | `/committee [topic]` | Runs an adversarial committee deliberation using the roster in `agent/roster.md` | Complex decisions, competing values, "what are we missing?" problems |
+| `/scenarios [situation]` | Divergent scenario generation (fan): explore possible futures before committing | Genuine uncertainty about *what might happen* — the fan half of fan/funnel |
+| `/probe [situation]` | Runs fan→funnel N times; produces variance report and decision landscape map | High-stakes decisions where understanding the *decision landscape* matters |
 | `/review` | Independent evaluation of a committee transcript against five rubrics | After any `/committee` run, or on a pasted transcript — completes the feedback loop |
 | `/string-diagram` | Converts resource equations to Mermaid diagrams | Visualizing pipelines, formalizing workflows, editing equation sets |
 | `/handoff` | Generates a session handoff for successor agents | End of work sessions, before breaks, after major milestones |
 
-These skills are the methodology made executable: `/committee` operationalizes the adversarial committee technique, `/review` operationalizes independent evaluation, `/string-diagram` operationalizes the palgebra formalism, and `/handoff` maintains continuity across agent sessions.
+These skills are the methodology made executable: `/committee` operationalizes the adversarial committee technique, `/scenarios` the fan (explore futures), `/probe` the repeated fan→funnel for landscape mapping, `/review` independent evaluation, `/string-diagram` the palgebra formalism, and `/handoff` continuity across agent sessions.
 
 ## Core insights
 
