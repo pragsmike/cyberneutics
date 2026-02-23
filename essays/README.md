@@ -36,6 +36,8 @@ If you want to understand the theoretical synthesis:
 8. **[Conversation Theory](./11-conversation-theory.md)** - Pask's micro-mechanics of understanding: teachback, entailment meshes, and conversational architecture
 9. **[Decisions Under Uncertainty](./10-decisions-under-uncertainty.md)** - How the duality of exploration and commitment yields rigorous decision-making
 
+Essays 07 (Narrative Engineering) and 09 (Narrative Immune Systems) are in Core Essays below; the path above is a minimal theorist sequence.
+
 ### For Skeptics (Show Me Why This Matters)
 
 If you're not convinced this is necessary:
@@ -312,6 +314,10 @@ The essays in this directory establish *why* narrative engines need narrative en
 ### [Narrative Computing as Historical Progression](./narrative-computing-history.md)
 
 Deeper dive into the historical progression from numeric to symbolic to narrative computing, with detailed examples of how each paradigm shift required new methodologies and disciplines.
+
+### [Tilt Sound Collective: A Story About AI, Trust, and Games Within Games](./tilt-sound-collective-story.md)
+
+A narrative piece: five people take over a post-production studio and figure out how to use AI without being used by it. Dramatizes the threat landscape, the hypervigilance problem, and the game-theoretic frame from [The Stochastic Imps of Happenstance](./the-stochastic-imps-of-happenstance.md).
 
 ### The Pachinko of Stored Literature
 

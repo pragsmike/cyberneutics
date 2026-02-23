@@ -76,7 +76,7 @@ The committee's roster implicitly embodies these styles:
 
 - **Joe (Continuity)** is a natural serialist—he follows causal chains forward in time, tracing how one decision leads to another, maintaining logical continuity.
 - **Tammy (Systems)** is a natural holist—she jumps between components, seeking feedback loops and emergent consequences, asking how distant elements interact.
-- **Maya (Experience)** traces paths in a different domain—she recalls similar situations and walks the serialist chain of how they unfolded.
+- **Maya (Paranoid realism)** traces paths in a different domain—she surfaces hidden risks and political dynamics and walks the serialist chain of how incentives could play out.
 
 The committee's strength comes partly from this stylistic diversity. A pure serialist committee would miss system-level consequences. A pure holist committee would lose track of causal chains. By forcing different walk styles into conversation, the committee explores the mesh more thoroughly.
 

@@ -67,7 +67,7 @@ Von Foerster developed the concept at the Biological Computer Laboratory (BCL) a
 An eigenform is a recursive fixed point — a specific state that a function creates, which then creates itself.
 xₜ₊₁ = F(xₜ)
 
-If this loop stabilizes such that x = F(x), you have found an Eigenform.
+If this loop stabilizes such that x = F(x), you have found an Eigenform. (In words: the next state is some function of the current state; when applying the function again leaves the state unchanged, that state is an eigenform.)
 
 In AI interaction, we are hunting for Eigenforms at multiple scales.
 
