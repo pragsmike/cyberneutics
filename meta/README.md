@@ -15,16 +15,15 @@ session state (agent/).
 
 ## Contents
 
-### [research-plan.md](research-plan.md) ← **Start here if you want to contribute**
+### [research-plans/](research-plans/README.md) ← **Start here if you want to contribute**
 
-Ten concrete action items derived from the [Societies of Thought analysis](../essays/societies-of-thought-synthesis.md). Each item specifies what to build, why it matters, how to do it, and a success metric. Items span four categories:
+Research plans, experiment designs, and evidence-building programs are collected in **meta/research-plans/** with an index ordered by impact on uncertainty:
 
-- **Category A** — Strengthen existing infrastructure: personality architecture for committee characters, balance metrics, reconciliation protocols
-- **Category B** — Test generalization: transfer learning across domains, domain-specific character variants
-- **Category C** — Formalize theory: information-theoretic foundations essay, social scaling theory
-- **Category D** — Expand evidence: worked examples library, comparative effectiveness study
+- **[Societies of Thought research plan](research-plans/societies-of-thought-research-plan.md)** — Ten action items derived from the [Societies of Thought analysis](../essays/societies-of-thought-synthesis.md): infrastructure (personality, balance, reconciliation), generalization (transfer, domain variants), theory (information-theory essay, social scaling), evidence (worked examples, comparative study), MOOLLM integration.
+- **[Evaluation schemes](research-plans/evaluation-schemes.md)** — Research design for testing whether the methodology outperforms simpler approaches.
+- **[Multi-model committee](research-plans/multi-model-committee.md)** — Using different LLMs per character; architectures and experimental protocol.
 
-Phases 1–3 are accessible without deep repo context. If any item interests you — as practitioner, theorist, or builder — pick it up and run.
+The [research-plans README](research-plans/README.md) lists active and completed plans by theme. Pick an item that matches your skills or interests.
 
 ### [methodology-evolution.md](methodology-evolution.md)
 
@@ -62,7 +61,7 @@ The methodology claims to be self-improving: applying Cyberneutics to
 itself should produce measurable improvements. This directory is where
 that claim gets tested.
 
-- **research-plan.md** is the active work queue — what needs doing and how
+- **research-plans/** is the active work queue — what needs doing and how (index + plans)
 - **methodology-evolution.md** shows whether the methodology actually
   evolved through practice (not just accumulated documentation)
 - **uptake-and-usage.md** shows whether anyone outside the project

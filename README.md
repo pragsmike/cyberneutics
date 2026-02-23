@@ -145,7 +145,7 @@ These skills are the methodology made executable: `/committee` operationalizes t
 
 Cyberneutics is a neologism derived from
 
-> Cyber (κυβερνήτης, the steersman) - governance, feedback, control
+> Cyber (κυβερνήτης, the steersman) - governance, feedback, control  
 > Neutics - evoking both hermeneutics (interpretation of texts) and neural (the substrate you're actually working with)
 
 It captures something that "narrative computing" doesn't quite get at: that you're not just computing on narratives but doing something closer to steering through interpretation - the cybernetic loop applied to meaning-making with neural systems.

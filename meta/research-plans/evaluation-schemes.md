@@ -4,7 +4,7 @@
 
 **Last updated**: 2026-02-22
 
-**Origins**: Identified in `agent/handoff-2026-02-21.md` as the highest-value evidence the project could produce. Committee recommendation in both deliberations (is-author-crackpot, is-author-crackpot-revisited).
+**Origins**: Identified in [agent/handoff-2026-02-21.md](../../agent/archive/handoff-2026-02-21.md) (archived) as the highest-value evidence the project could produce. Committee recommendation in both deliberations (is-author-crackpot, is-author-crackpot-revisited).
 
 ---
 

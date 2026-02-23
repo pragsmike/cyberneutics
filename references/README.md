@@ -118,7 +118,7 @@ Sources are organized by theoretical tradition. For a reading-path view (which s
 
 **Liang, Guanlin, et al.** "Prompts Are Programs Too!" arXiv:2409.12447 (2024; accepted FSE 2025). — Empirical study of prompt development as a programming phenomenon; developers use structured workflows analogous to software engineering. Cited in: [palgebra/reference.md](../palgebra/reference.md), [palgebra/README.md](../palgebra/README.md).
 
-**Hopkins, Don.** MOOLLM. https://github.com/SimHacker/MOOLLM. — Governance framework for LLMs providing structured environments ("worlds," "rooms," "cards," "files") where AI interactions are constrained by explicit rules, roles, and protocols. Referenced in: [From Practice to Theory](../essays/02-from-practice-to-theory.md), [research-plan.md](../meta/research-plan.md).
+**Hopkins, Don.** MOOLLM. https://github.com/SimHacker/MOOLLM. — Governance framework for LLMs providing structured environments ("worlds," "rooms," "cards," "files") where AI interactions are constrained by explicit rules, roles, and protocols. Referenced in: [From Practice to Theory](../essays/02-from-practice-to-theory.md), [research-plans](../meta/research-plans/README.md).
 
 **StrongDM.** "Software Factories and the Agentic Moment." https://factory.strongdm.ai/. — Industry perspective on agentic AI systems as software factories; useful framing for the infrastructure implications of narrative computing at scale. Referenced in: [references/README.md](./README.md).
 
