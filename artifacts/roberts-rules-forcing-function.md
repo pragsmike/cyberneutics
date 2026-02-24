@@ -225,7 +225,7 @@ Generate text where everyone ultimately agrees because that's what "productive m
 - Someone wins, someone loses
 - The vote makes conflict explicit
 
-**Empirical evidence**: The [deliberative vs. CJT-style comparison](./comparison-protocol-deliberative-vs-cjt.md) on the Code of Conduct question ([records](../agent/comparisons/code-of-conduct/)) demonstrated this directly. Without deliberation (independent vote), Vic and Tammy voted Aye on surface-level reasoning ("low cost," "sets expectations") — premature consensus with the Aye majority. With Robert's Rules, the Chair forced them to respond to Maya and Joe's enforcement objection. Both changed their votes. Final: independent Aye 3–2, deliberative Nay 5–0. The forcing function flipped the outcome.
+**Empirical evidence**: The [deliberative vs. CJT-style comparison](./comparison-protocol-deliberative-vs-cjt.md) on the Code of Conduct question ([records](../meta/research-programs/condorcet-comparison/results/code-of-conduct/)) demonstrated this directly. Without deliberation (independent vote), Vic and Tammy voted Aye on surface-level reasoning ("low cost," "sets expectations") — premature consensus with the Aye majority. With Robert's Rules, the Chair forced them to respond to Maya and Joe's enforcement objection. Both changed their votes. Final: independent Aye 3–2, deliberative Nay 5–0. The forcing function flipped the outcome.
 
 ### Statistical Shortcut #2: Vague Synthesis
 

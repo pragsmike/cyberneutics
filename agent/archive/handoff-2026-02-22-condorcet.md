@@ -2,6 +2,8 @@
 
 **Archived from**: `agent/handoff-2026-02-22.md` (split out — this session's content was merged with the wild-material verification session in the original file).
 
+**Note (2026-02-24):** The comparison and deliberation records listed below (`agent/comparisons/second-ci-job/`, `agent/comparisons/code-of-conduct/`, `agent/deliberations/condorcet-jury-theorem-process/`, `agent/deliberations/second-ci-job/`, `agent/deliberations/code-of-conduct/`) were moved to `meta/research-programs/condorcet-comparison/results/` as part of consolidating the condorcet experiment into a research program. See [meta/research-programs/condorcet-comparison.md](../../meta/research-programs/condorcet-comparison.md).
+
 ## Session Summary
 
 **Duration:** Single session. User asked for an in-depth repository review and run/test guidance, then ran committee and comparison work (CI, Condorcet, deliberative vs. CJT-style).

@@ -501,6 +501,10 @@ These dimensions operationalize what "better" means without requiring ground tru
 
 ### Recommended Implementation Plan
 
+**Existing evidence (completed)**: Condorcet Comparison (Deliberative vs. CJT-Style)
+- See [condorcet-comparison.md](condorcet-comparison.md) for plan and results.
+- Two runs (2026-02-22) comparing the deliberative pipeline against CJT-style independent vote on the same questions. One run agreed (second-ci-job: both Nay); one produced opposite verdicts (code-of-conduct: CJT Aye 3-2, Deliberative Nay 5-0). Initial evidence that deliberation changes outcomes on value-laden questions. Lightweight precursor to the designs below.
+
 **Phase 1 (Immediate, 4-6 weeks)**: Design F (Ablation Study)
 - See [ablation-study.md](ablation-study.md) for plan and results.
 - Cheapest to run.

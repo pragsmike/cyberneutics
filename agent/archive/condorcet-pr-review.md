@@ -3,6 +3,8 @@
 **Date**: 2026-02-22
 **Reviewer**: mg (maintainer), assisted by Claude
 **PR**: condorcet-constraints branch, merged
+
+**Note (2026-02-24):** The comparison and deliberation records referenced below were moved from `agent/comparisons/` and `agent/deliberations/` to `meta/research-programs/condorcet-comparison/results/`. See [meta/research-programs/condorcet-comparison.md](../../meta/research-programs/condorcet-comparison.md).
 **Scope**: 45 files changed, +1713 / -119
 
 ---

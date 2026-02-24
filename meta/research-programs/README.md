@@ -22,7 +22,7 @@ These programs are ordered by how much they reduce the main open uncertainties: 
 
 | Priority | Uncertainty reduced | Plan(s) |
 |----------|---------------------|---------|
-| **Highest** | Does committee-based deliberation beat simpler prompting? When is it worth the cost? | [evaluation-schemes.md](evaluation-schemes.md) — research design for empirical comparison; [ablation-study.md](ablation-study.md) — component contribution (Phase 1); [societies-of-thought-research-plan.md](societies-of-thought-research-plan.md) Item 10 (comparative effectiveness study) |
+| **Highest** | Does committee-based deliberation beat simpler prompting? When is it worth the cost? | [evaluation-schemes.md](evaluation-schemes.md) — research design for empirical comparison; [ablation-study.md](ablation-study.md) — component contribution (Phase 1); [condorcet-comparison.md](condorcet-comparison.md) — deliberative vs. CJT-style comparison (2 runs, completed); [societies-of-thought-research-plan.md](societies-of-thought-research-plan.md) Item 10 (comparative effectiveness study) |
 | **High** | Would different LLMs per character improve deliberation? | [multi-model-committee.md](multi-model-committee.md) — hypothesis, five architectures, experimental protocol |
 | **High** | Does the methodology transfer across domains? When does roster composition matter? | [societies-of-thought-research-plan.md](societies-of-thought-research-plan.md) Items 4, 5, 9 (transfer learning, domain variants, worked examples) |
 | **Medium** | Why does it work? Can we formalize and cite it? | [societies-of-thought-research-plan.md](societies-of-thought-research-plan.md) Items 1–3, 6–7 (personality/balance/reconciliation, information-theory essay, social scaling theory) |
@@ -52,6 +52,7 @@ These plans have been executed or implemented. They live in [agent/archive/](../
 | Cross-reference and synthesis | Executed (11/11 items) | [agent/archive/cross-reference-synthesis-plan.md](../../agent/archive/cross-reference-synthesis-plan.md) |
 | Augmentation (deliberation structure, evaluation loop) | Implemented | [agent/archive/augmentation-plan.md](../../agent/archive/augmentation-plan.md) |
 | Evaluation feedback loop | Merged into augmentation plan | [agent/archive/evaluation-feedback-loop-plan.md](../../agent/archive/evaluation-feedback-loop-plan.md) |
+| Condorcet comparison (deliberative vs. CJT-style) | Completed (2 runs, 2026-02-22) | [condorcet-comparison.md](condorcet-comparison.md) — results in [condorcet-comparison/results/](condorcet-comparison/results/) |
 
 ---
 
@@ -59,7 +60,7 @@ These plans have been executed or implemented. They live in [agent/archive/](../
 
 | Theme | Plans | Status |
 |-------|-------|--------|
-| **Validation / evidence** | evaluation-schemes, ablation-study, societies-of-thought Items 9–10 | Active |
+| **Validation / evidence** | evaluation-schemes, ablation-study, condorcet-comparison, societies-of-thought Items 9–10 | Active / Completed |
 | **Theory / foundations** | societies-of-thought Items 6–7 | Active |
 | **Infrastructure / process** | societies-of-thought Items 1–3, 8; augmentation | Active / Implemented |
 | **Integration** | wild-material-incorporation, multi-model-committee | Executed / Active |

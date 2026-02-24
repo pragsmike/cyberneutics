@@ -303,10 +303,10 @@ See [meta/uptake-and-usage.md](uptake-and-usage.md) for details and analysis.
 **Contribution**: External contributor (Fork #1) investigated Condorcet's jury theorem as a formal foundation for the committee technique.
 
 **Created**:
-- Committee deliberation on whether to "correct for" CJT (`agent/deliberations/condorcet-jury-theorem-process/`): unanimous recommendation to *document* the relationship, not change the process. Review 13/15 (High).
+- Committee deliberation on whether to "correct for" CJT (`meta/research-programs/condorcet-comparison/results/condorcet-jury-theorem-process/`): unanimous recommendation to *document* the relationship, not change the process. Review 13/15 (High).
 - `artifacts/condorcet-jury-theorem-and-committee.md` — clarification artifact: design goals first, CJT as motivating analogy, three explicit deviations (no independence, no binary outcome, no literal *p*), and the fork (CJT-compliant = different pipeline).
 - `artifacts/comparison-protocol-deliberative-vs-cjt.md` — reusable protocol for deliberative vs. CJT-style comparison.
-- Two comparison runs (`agent/comparisons/`): deliberative vs. CJT-style on the same question with the same roster.
+- Two comparison runs (`meta/research-programs/condorcet-comparison/results/`): deliberative vs. CJT-style on the same question with the same roster. Now documented as the [condorcet-comparison research program](research-programs/condorcet-comparison.md).
 - Smoke test (`scripts/test_string_diagram.py`) and run guide (`meta/repository-review-and-run-guide.md`).
 
 **Key Finding — process structure changes outcomes**: On a value-laden question (Code of Conduct), independent voting produced Aye 3–2; deliberation with Robert's Rules produced Nay 5–0. Three votes flipped when the enforcement/weaponization objection was pressed in debate. On a straightforward question (second CI job), both pipelines agreed. This is the first controlled comparison showing that the interaction structure — not just the number of perspectives — drives outcomes.

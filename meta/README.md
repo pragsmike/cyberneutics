@@ -23,6 +23,7 @@ Research plans, experiment designs, evidence-building programs, and their result
 - **[Evaluation schemes](research-programs/evaluation-schemes.md)** — Research design for testing whether the methodology outperforms simpler approaches.
 - **[Ablation study](research-programs/ablation-study.md)** — Component contribution and interaction effects (Phase 1 of evaluation).
 - **[Multi-model committee](research-programs/multi-model-committee.md)** — Using different LLMs per character; architectures and experimental protocol.
+- **[Condorcet comparison](research-programs/condorcet-comparison.md)** — Deliberative vs. CJT-style comparison; two runs completed, initial evidence that deliberation changes outcomes on value-laden questions. Results in [condorcet-comparison/results/](research-programs/condorcet-comparison/results/).
 
 The [research-programs README](research-programs/README.md) lists active and completed programs by theme. Pick an item that matches your skills or interests.
 

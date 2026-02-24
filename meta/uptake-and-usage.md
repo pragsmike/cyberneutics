@@ -59,10 +59,10 @@ comparative rubric scores across different roster configurations.
 
 The contributor produced a substantial body of work that has been reviewed and merged:
 
-- **Committee deliberation** (`agent/deliberations/condorcet-jury-theorem-process/`): The committee recommended *documenting* the relationship to CJT, not changing the process. Review scored 13/15 (High). Key finding: the committee process deliberately violates CJT's conditions (independence, binary outcome, literal competence probability) because it optimizes for adversarial stress-testing and decision-space mapping, not for maximizing the probability of a correct binary vote. A CJT-compliant variant would be a *different pipeline* — independent generation then aggregation — not a correction to this one.
+- **Committee deliberation** (`meta/research-programs/condorcet-comparison/results/condorcet-jury-theorem-process/`): The committee recommended *documenting* the relationship to CJT, not changing the process. Review scored 13/15 (High). Key finding: the committee process deliberately violates CJT's conditions (independence, binary outcome, literal competence probability) because it optimizes for adversarial stress-testing and decision-space mapping, not for maximizing the probability of a correct binary vote. A CJT-compliant variant would be a *different pipeline* — independent generation then aggregation — not a correction to this one.
 - **Artifact created**: `artifacts/condorcet-jury-theorem-and-committee.md` — design goals first, CJT as motivating analogy, explicit deviations table, and the fork (CJT-compliant = different pipeline). Cross-linked from `artifacts/adversarial-committees.md`.
 - **Comparison protocol**: `artifacts/comparison-protocol-deliberative-vs-cjt.md` — how to run both pipelines (deliberative and CJT-style independent vote) on the same question and compare.
-- **Two comparison runs** (`agent/comparisons/`):
+- **Two comparison runs** (`meta/research-programs/condorcet-comparison/results/`):
   - *second-ci-job*: Both pipelines said Nay. CJT 4–1, Deliberative 5–0 (same verdict; one vote changed in deliberation, revisit condition added).
   - *code-of-conduct*: **Opposite verdicts.** CJT Aye 3–2, Deliberative Nay 5–0. Three characters (Frankie, Vic, Tammy) voted Aye in isolation but flipped to Nay after debate. The enforcement/weaponization objection — present in CJT-style rationales from Maya and Joe but never answered by the Aye voters — was pressed in deliberation, and three votes changed.
 
