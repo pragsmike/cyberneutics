@@ -215,4 +215,4 @@ These questions should not block implementation of the basic pipeline. The fan o
 - [Palgebra Reference](../palgebra/reference.md) — notation and composition laws
 - Barry O'Reilly, *Residues: Time, Change, and Uncertainty in Software Architecture* — architectural walks, residues vs. eigenforms
 
-**Next**: Implementation — the `/scenarios` skill, scenario roster design, and composed pipeline patterns
+**Next essay**: [Conversation Theory](./11-conversation-theory.md) — Pask's micro-mechanics of understanding: teachback, entailment meshes, and conversational architecture

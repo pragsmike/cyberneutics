@@ -37,7 +37,7 @@ Each approach captures what the other can't directly express. Cyberneutics provi
 
 This also explains why the essay collection uses both modes: dialog scenes operate narratively, information theory essays operate paradigmatically. The methodology works *through* both, not despite their difference. The paradigmatic/narrative distinction isn't just describing our approaches—it's revealing why genuine understanding of complex systems requires holding both modes in creative tension.
 
-For the paradigmatic path to these conclusions—through cognitive science, computational narrative intelligence, and systems theory—see [Narrative Computing as Historical Progression](./narrative-computing-history.md).
+For the paradigmatic path to these conclusions—through cognitive science (including a deeper treatment of Bruner's two modes and their Kahneman System 1/2 parallel), computational narrative intelligence, and systems theory—see [Narrative Computing as Historical Progression](./narrative-computing-history.md).
 
 ## II. Boland's Core Argument
 
@@ -111,23 +111,11 @@ This is why the methodology works: it treats narrative generation as the creatio
 
 ### A. Formal Grounding for "Everything is a Story"
 
-A core Cyberneutics intuition: complex sociotechnical systems resist mechanistic explanation. Narrative isn't optional elegance added to computational analysis—it's necessary for problems that mechanism cannot reach.
+A core Cyberneutics intuition: complex sociotechnical systems resist mechanistic explanation. Narrative isn't optional elegance—it's necessary for problems that mechanism cannot reach (for concrete examples—math proofs, legal theories, strategic decisions—see [Essay 01](./01-why-narrative-engines-change-everything.md)).
 
-But *why* is this necessarily true?
+Boland provides the *mathematical* grounding through Gödel: systems complex enough for self-reference always contain undecidable propositions. For problems in that space, there's no algorithm that mechanically produces correct answers. What you *can* do is generate stories that bridge the gaps—narratives that connect premises to conclusions through interpretive moves that aren't formally derivable but are nonetheless coherent, useful, and actionable.
 
-Boland provides the answer through Gödel: systems complex enough for self-reference always contain undecidable propositions. For problems in that space, there's no algorithm that mechanically produces correct answers. You can't solve them by applying transformation rules to axioms.
-
-What you *can* do is generate stories that bridge the gaps—narratives that connect premises to conclusions through interpretive moves that aren't formally derivable but are nonetheless coherent, useful, and actionable.
-
-**Math proofs are stories.** They're sequences of steps that connect axioms to conclusions through patterns that the mathematical community recognizes as valid. The validity isn't mechanical—it depends on shared interpretive frameworks about what counts as "obvious," "elegant," or "natural."
-
-**Legal theories are stories.** They connect facts to conclusions through principles that seem to follow but whose application requires judgment that no algorithm captures. Different legal theories tell different stories about the same facts, each internally coherent.
-
-**Strategic decisions are stories.** You construct narratives about how the world works, how your actions will affect it, what others will do in response. The narrative shapes what you notice, what seems possible, what risks you accept.
-
-**Practical implication**: Your adversarial committee isn't failing when it produces multiple valid interpretations of the same problem. It's succeeding—mapping the space of undecidables that *must* be bridged through interpretation rather than calculation.
-
-Boland's formalization explains why this is necessary, not a compromise.
+The adversarial committee isn't failing when it produces multiple valid interpretations. It's succeeding—mapping the space of undecidables that *must* be bridged through interpretation rather than calculation. Boland's formalization explains why this is necessary, not a compromise.
 
 ### B. Umwelt as Institutional Memory
 
@@ -183,21 +171,9 @@ As Boland writes:
 
 A counterintuitive Cyberneutics technique: run the same committee deliberation multiple times. Expect different outputs. This isn't testing for consistency—it's exploring interpretive space.
 
-Traditional view: variation is error. Good systems should give the same answer to the same question. Randomness is something to minimize.
+Boland, drawing on Deleuze, provides the philosophical grounding: you can't ask the same question twice, because the context has shifted and you've been changed by the first answer. Each LLM query actualizes one possibility from the virtual field; the actualization changes what's probable next. For the full Deleuzian framework—why repetition produces difference rather than sameness, and why variation *is* the information—see [Essay 06](./06-deleuze-difference-repetition.md).
 
-Boland, drawing on Deleuze, explains why this view is wrong:
-
-**You can't ask the same question twice.** The words might be identical, but the question isn't. The context has shifted. You've been changed by the first answer. The second asking occurs in a different situation.
-
-**Repetition doesn't reproduce sameness—it produces difference.** You can't step in the same river twice. The river has changed. You have changed. The "same" step is impossible.
-
-**Formalization via probability**: Each LLM query actualizes one possibility from a probability distribution—the virtual field. The actualization changes what's probable for the next query. The distribution itself evolves through interaction.
-
-When you run three committee deliberations on the same problem and get three different recommendations, that's not failure. That's the methodology working correctly. You're mapping the topology of valid interpretations, not testing whether the system hits a fixed target.
-
-**The target doesn't exist.** There are only the different actualizations, each revealing something about the structure of the interpretive space.
-
-**Why this matters**: Iteration isn't redundancy. Each pass explores new territory, surfaces new considerations, reveals new patterns. The variation *is* the information—it tells you about the shape of the problem space.
+The practical upshot: when three committee deliberations on the same problem yield three different recommendations, the methodology is working correctly. The target doesn't exist. There are only different actualizations, each revealing something about the structure of the interpretive space.
 
 ## IV. Where Cyberneutics Extends Boland
 
@@ -504,3 +480,9 @@ Von Foerster, Heinz. 2003. *Understanding Understanding: Essays on Cybernetics a
 - [Robert's Rules as Forcing Functions](../artifacts/roberts-rules-forcing-function.md) - Preventing premature closure
 - [Independent Evaluation](../artifacts/independent-evaluation.md) - RUBRIC scoring
 - [Cross-Scenario Learning](../artifacts/cross-scenario-learning.md) - Building institutional memory
+
+---
+
+**Previous essay**: [Deleuzian Foundations](./06-deleuze-difference-repetition.md) — Becoming, difference, and why repetition produces novelty
+
+**Next essay**: [From Methodology to Formalism](./08-from-methodology-to-formalism.md) — Bridging the philosophical foundations to the algebraic machinery

@@ -82,13 +82,9 @@ This is itself an instance of Dervin's sense-making in action: we had a situatio
 
 ### Early Story Generation
 
-The dream of computational storytelling predates modern AI. As Mark Riedl notes, we can trace interest in machine-generated narrative to 1843, when Ada Lovelace first asked whether Babbage's Analytical Engine could be creative.
+The dream of computational storytelling predates modern AI—Ada Lovelace asked whether Babbage's Analytical Engine could be creative in 1843. Story generation systems emerged by the 1960s, with systems like TALESPIN (Meehan, 1977) generating original Aesop-style fables by simulating characters with goals, plans, and beliefs.
 
-The first actual story generation systems emerged in the 1960s. Grimes' fairy tale generator (1960, recently rediscovered by James Ryan) may be the first system to use artificial intelligence techniques for story creation. By the 1970s, researchers like James Meehan had created systems like TALESPIN (1977), which could generate original Aesop-style fables by simulating characters with goals, plans, and beliefs.
-
-TALESPIN is famous for its failures as much as its successes. When character goals conflicted in unexpected ways, the system produced delightfully absurd stories—like the tale where Joe Bear, hungry for honey, asks Irving Bird where to find some. Irving doesn't know, so Joe asks Irving where to ask, and Irving doesn't know that either. Joe wanders off, and the story ends with Joe still hungry and Irving still ignorant. The system had generated a "story" that was technically coherent but narratively unsatisfying.
-
-These failures revealed something important: **narrative coherence isn't just logical coherence**. A story can be internally consistent and still feel wrong. The early systems could generate plot structures but couldn't evaluate whether those structures made good stories.
+These early systems revealed something important: **narrative coherence isn't just logical coherence**. TALESPIN could produce stories that were technically consistent but narratively unsatisfying—characters pursuing goals through logically valid but absurd chains of action. The systems could generate plot structures but couldn't evaluate whether those structures made good stories.
 
 ### Computational Narrative Intelligence
 
@@ -240,7 +236,7 @@ What's new is the application domain and the synthesis. We have powerful narrati
 
 We're in the early days. The discipline will evolve. But the fundamental insight is clear: if the tool is a narrative engine, treating it like a calculator is a category error. You don't get mad at a car for not flying; you learn to drive.
 
-For the philosophical path to these same conclusions—through Gödel, Kuhn, operational closures, and category theory—see [Narrative Engineering](./07-bolands-narrative-engineering.md).
+For the philosophical path to these same conclusions—through Gödel, Kuhn, operational closures, and category theory (where Bruner's dichotomy reappears as the lens explaining why independent convergence was inevitable)—see [Narrative Engineering](./07-bolands-narrative-engineering.md).
 
 ---
 

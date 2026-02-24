@@ -1,5 +1,7 @@
 **CYBERNEUTICS ENGINE: Session Log**
 
+> **Note**: This scene uses a three-person committee (Kaelen/Entropy, Elena/Constraint, Silas/Integration) — a separate roster from the five-character committee (Maya, Frankie, Joe, Vic, Tammy) used in the main methodology. The different cast is deliberate: this lighter format explores a theoretical debate rather than a full adversarial deliberation.
+
 *[Three figures materialize in a sparse white room. A table. Three chairs. The air hums with potential.]*
 
 ---

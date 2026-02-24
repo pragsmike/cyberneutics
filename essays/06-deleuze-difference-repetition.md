@@ -284,3 +284,9 @@ Theory without practice is sterile. Practice without theory is blind. This essay
 *"The question is not whether everything is true but whether any of it is useful."*
 
 *Stories don't need to be true. They need to be good enough to act on. Deleuze helps explain why that's not a compromise—it's the nature of how understanding works in a world of becoming.*
+
+---
+
+**Previous essay**: [The Synthesis](./05-the-synthesis.md) — How the three frameworks compose
+
+**Next essay**: [Narrative Engineering: From Philosophy to Practice](./07-bolands-narrative-engineering.md) — Independent convergence validates the synthesis

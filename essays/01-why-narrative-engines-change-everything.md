@@ -411,6 +411,6 @@ That's the paradigm shift. That's why narrative engines change everything.
 
 ---
 
-**Next**: [From Practice to Theory: How We Got Here](./02-from-practice-to-theory.md) - The operational techniques that led to this theoretical framework
+**Next essay**: [From Practice to Theory: How We Got Here](./02-from-practice-to-theory.md) — The operational techniques that led to this theoretical framework
 
-**Or jump to**: [Introduction to Sense-Making](./03-sensemaking-101.md) - The theoretical foundation for treating interpretation as cybernetic process
+**Or jump to**: [Introduction to Sense-Making](./03-sensemaking-101.md) — The theoretical foundation for treating interpretation as cybernetic process

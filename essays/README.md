@@ -22,6 +22,8 @@ If you want to understand why this methodology works and what problem it solves:
 3. **[Stories All the Way Down](./stories-all-the-way-down.md)** - Why everything is narrative and what that means for AI use
 4. **[Introduction to Sense-Making](./03-sensemaking-101.md)** - Dervin's framework for understanding information-seeking as active construction
 
+Ready to try it? Start with **[Start Here](../artifacts/start-here.md)** for a guided first run, or **[Quick Start Guide](../artifacts/quick-start-guide.md)** for a faster on-ramp.
+
 ### For Theorists (Deep Dive)
 
 If you want to understand the theoretical synthesis:
@@ -36,7 +38,7 @@ If you want to understand the theoretical synthesis:
 8. **[Conversation Theory](./11-conversation-theory.md)** - Pask's micro-mechanics of understanding: teachback, entailment meshes, and conversational architecture
 9. **[Decisions Under Uncertainty](./10-decisions-under-uncertainty.md)** - How the duality of exploration and commitment yields rigorous decision-making
 
-Essays 07 (Narrative Engineering) and 09 (Narrative Immune Systems) are in Core Essays below; the path above is a minimal theorist sequence.
+The path above is a minimal theorist sequence. Also recommended: **[Essay 07: Narrative Engineering](./07-bolands-narrative-engineering.md)** (independent convergence from philosophy validates the synthesis) and **[Essay 09: Narrative Immune Systems](./09-narrative-immune-systems.md)** (extends the formalism to trust boundaries and evaluation as immune function).
 
 ### For Skeptics (Show Me Why This Matters)
 
@@ -321,7 +323,7 @@ A narrative piece: five people take over a post-production studio and figure out
 
 ### The Pachinko of Stored Literature
 
-The extended pachinko metaphor appears in [Essay 01](./01-why-narrative-engines-change-everything.md) and throughout [Stories All the Way Down](./stories-all-the-way-down.md). A standalone treatment may follow.
+The extended pachinko metaphor appears in [Essay 01](./01-why-narrative-engines-change-everything.md) and throughout [Stories All the Way Down](./stories-all-the-way-down.md). No standalone treatment is currently planned.
 
 ### Charts on a Manifold
 

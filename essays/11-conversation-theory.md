@@ -255,6 +255,15 @@ Several tensions emerge from integrating Pask into the framework—tensions that
 
 These aren't problems. They're directions where conversation theory suggests the methodology can deepen.
 
+## What's Next
+
+This is the final essay in the theoretical sequence. The eleven numbered essays establish why narrative engines need narrative engineering and how four theoretical traditions — Dervin's sense-making, von Foerster's second-order cybernetics, Deleuze's difference and repetition, and Pask's conversation theory — compose into a coherent framework for collaborative sense-making with AI.
+
+From here:
+- **To start doing**: [Start Here](../artifacts/start-here.md) — a guided first run of the methodology, or [Quick Start Guide](../artifacts/quick-start-guide.md) for a faster on-ramp
+- **To formalize**: [Palgebra Reference](../palgebra/reference.md) — the pipeline algebra that makes these ideas composable and auditable
+- **To see it applied**: [Narrative Immune Systems (Applications)](../applications/narrative-immune-systems/) — the framework applied to trust, information warfare, and the commons
+
 ---
 
 **Previous essay**: [Decisions Under Uncertainty](./10-decisions-under-uncertainty.md)—the composed pipeline that Conversation Theory provides micro-mechanics for.

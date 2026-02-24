@@ -83,7 +83,7 @@ We aren't creating consciousness. We are creating a **dynamic system of constrai
 
 ## Connection to MOOLLM
 
-This aligns perfectly with the philosophy behind **[MOOLLM](https://github.com/SimHacker/MOOLLM)** — Don Hopkins' project that builds a governance framework for LLMs. MOOLLM provides structured environments ("worlds") where AI interactions are constrained by explicit rules, roles, and protocols — a runtime for exactly the kind of structured narrative games this methodology requires. Hopkins frames it as a system of "games" and "worlds."
+This aligns perfectly with the philosophy behind **[MOOLLM](https://github.com/SimHacker/MOOLLM)** — Don Hopkins' runtime environment for multi-agent LLM interaction, providing structured environments ("worlds") where AI interactions are constrained by explicit rules, roles, and protocols. MOOLLM is the platform; Cyberneutics is the methodology that runs on it. Hopkins frames it as a system of "games" and "worlds."
 
 *   **MOOLLM** provides the engine to run the game (the physics, the objects, the protocols).
 *   **Cyberneutics** designs the *rules* of the specific game we are playing (the Sense-Making Game).
@@ -108,4 +108,6 @@ If we accept that LLMs are storytelling machines and impose game-theoretic const
 
 ---
 
-**Next**: [Introduction to Sense-Making](./03-sensemaking-101.md) - The theoretical foundation for treating interpretation as cybernetic process
+**Previous essay**: [Why Narrative Engines Change Everything](./01-why-narrative-engines-change-everything.md) — The paradigm shift from symbolic to narrative computing
+
+**Next essay**: [Introduction to Sense-Making](./03-sensemaking-101.md) — The theoretical foundation for treating interpretation as cybernetic process

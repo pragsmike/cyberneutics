@@ -521,4 +521,5 @@ The bridge is where the methodology lives.
 - [Decorated Texts](../palgebra/decorated-texts.md) — the full theoretical development
 - [Committee as Palgebra](../palgebra/committee-as-palgebra.md) — the worked example
 - [The Synthesis](./05-the-synthesis.md) — the philosophical synthesis this essay formalizes
+
 **Next essay**: [Narrative Immune Systems](./09-narrative-immune-systems.md) — extending the formalism to immune function, trust boundaries, and organ/bath regimes

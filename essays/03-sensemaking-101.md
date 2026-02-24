@@ -261,3 +261,9 @@ The next essay explores the cybernetic foundations—how feedback loops, eigenfo
 - We now face information abundance and generation problems
 - Her framework scales remarkably well to AI collaboration contexts
 - The core insight—that information-seeking is active construction, not passive reception—becomes even more critical when the "information" is generated on-demand by narrative engines
+
+---
+
+**Previous essay**: [From Practice to Theory: How We Got Here](./02-from-practice-to-theory.md) — How operational failures led to the methodology
+
+**Next essay**: [Cybernetics and the Observer Problem](./04-cybernetics-and-observation.md) — Second-order cybernetics and why observation changes state
