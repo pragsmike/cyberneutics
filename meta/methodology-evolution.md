@@ -277,7 +277,7 @@ See [meta/uptake-and-usage.md](uptake-and-usage.md) for details and analysis.
 
 **Created/updated** (across multiple commits):
 - Narrative computing / narrative engineering distinction clarified and propagated across docs
-- Research plan extracted from `societies-of-thought-synthesis.md` to `meta/research-plans/societies-of-thought-research-plan.md`
+- Research plan extracted from `societies-of-thought-synthesis.md` to `meta/research-programs/societies-of-thought-research-plan.md`
 - Tilt Sound Collective fiction extracted from stochastic-imps essay to `essays/tilt-sound-collective-story.md`
 - `references/README.md` rewritten as comprehensive annotated bibliography (39 sources, 9 thematic sections, "Cited in" pointers)
 - Editorial review: cross-references, character attributions, reading paths

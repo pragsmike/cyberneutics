@@ -61,8 +61,8 @@ None.
 
 ### Plans Awaiting mg's Go-Ahead
 
-- **`meta/research-plans/evaluation-schemes.md`**: Experimental designs for testing whether committees beat simpler methods. Plan only; not executed.
-- **`meta/research-plans/multi-model-committee.md`**: Investigation of using different LLMs for different characters. Plan only; not executed.
+- **`meta/research-programs/evaluation-schemes.md`**: Experimental designs for testing whether committees beat simpler methods. Plan only; not executed.
+- **`meta/research-programs/multi-model-committee.md`**: Investigation of using different LLMs for different characters. Plan only; not executed.
 
 ### Carried Forward (from previous handoffs, still relevant)
 
@@ -117,8 +117,8 @@ None.
 | `agent/archive/handoff-2026-02-22-condorcet.md` | Condorcet contributor session; split out from this file. |
 | `agent/wild-material-incorporation-verification.md` | This session's verification; documents what was done and the two optional gaps (Essay 02, gap_analysis). |
 | `essays/06-deleuze-difference-repetition.md` | Pask defensible-metaphors + category theory paragraph at start of "The Category Theory Connection"; **mg has edited this**. |
-| `meta/research-plans/evaluation-schemes.md` | Experimental designs for committee vs. simpler methods; plan awaiting go-ahead. |
-| `meta/research-plans/multi-model-committee.md` | Multi-model committee investigation; plan awaiting go-ahead. |
+| `meta/research-programs/evaluation-schemes.md` | Experimental designs for committee vs. simpler methods; plan awaiting go-ahead. |
+| `meta/research-programs/multi-model-committee.md` | Multi-model committee investigation; plan awaiting go-ahead. |
 | `agent/handoff-2026-02-21.md` | Previous handoff; comparative evaluation and other carried items still apply. |
 
 ---

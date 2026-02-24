@@ -493,44 +493,7 @@ These dimensions operationalize what "better" means without requiring ground tru
 
 ### Design F: Ablation Study
 
-**Objective**: Run full pipeline and remove components one at a time to measure each component's contribution.
-
-**Procedure**:
-1. **Run full methodology** on N decisions (Committee + Scenarios + Deliberated Choice + Evaluation).
-
-2. **Run ablations**:
-   - **A1**: Committee only (no scenarios, no deliberated choice).
-   - **A2**: Scenarios only (no committee debate, just scenario generation).
-   - **A3**: Scenarios + simple resolution (no adversarial committee, just funnel without debate).
-   - **A4**: Scenarios + committee (no evaluation loop).
-   - **A5**: Committee without Robert's Rules structure (just free-form debate).
-
-3. **Evaluate all versions** using Dimensions A-F.
-
-4. **Compute contribution**:
-   - What is the marginal improvement from adding each component?
-   - Example: Does adding evaluation loop improve scores? By how much?
-
-5. **Analyze**:
-   - Which components contribute most?
-   - Which are optional (low contribution)?
-   - Interaction effects: does evaluation loop help only if you have both committee and scenarios?
-
-**Expected output**:
-- Component contribution table showing effect size of each ablation.
-- Insight: "Committee debate contributes +25% to perspective diversity; Robert's Rules contributes additional +5%."
-- Cost-benefit: if evaluation loop contributes +10% but doubles runtime, is it worth it?
-
-**Strengths**:
-- Answers the practical question: "Do we need all of this?"
-- Cheaper than full comparison (you're not running baselines, just variants of the methodology).
-- Diagnostic: tells you where to invest effort if improving methodology.
-
-**Weaknesses**:
-- Only tests **within** methodology, not against baselines. You may find that all variants beat S1 equally.
-- Some components may have non-linear effects (removing Robert's Rules breaks the whole structure).
-
-**Timeline**: 3-4 weeks.
+**Design F: Ablation Study.** Run full pipeline and remove or vary components to measure each component's contribution and interaction effects. Full procedure, factor definitions, run budget, and results tabulation are in [ablation-study.md](ablation-study.md). Results (when available): [ablation-study/results/](ablation-study/results/).
 
 ---
 
@@ -539,6 +502,7 @@ These dimensions operationalize what "better" means without requiring ground tru
 ### Recommended Implementation Plan
 
 **Phase 1 (Immediate, 4-6 weeks)**: Design F (Ablation Study)
+- See [ablation-study.md](ablation-study.md) for plan and results.
 - Cheapest to run.
 - Directly informs whether each component is valuable.
 - Can be run in parallel with decision-making; no waiting for outcomes.
@@ -590,7 +554,7 @@ After Phase 5 (by month 9-12):
 ### Scenario A: Methodology Clearly Wins
 - Methodology scores significantly higher (effect size d ≥ 0.5) on Dimensions A, B, D, E.
 - Expert judges prefer methodology ≥65% of the time.
-- Ablation shows all components contribute (each adds ≥5% improvement).
+- Ablation shows all components contribute (each adds ≥5% improvement); see [ablation-study](ablation-study.md) for run results.
 
 **Interpretation**: Publish results. Methodology has evidence-based support. Useful for adoption and credibility.
 
@@ -612,7 +576,7 @@ After Phase 5 (by month 9-12):
 ### Scenario C: Methodology and Baselines Perform Equivalently
 - Effect sizes all < 0.2 (negligible).
 - Expert judges split preferences.
-- Ablation shows many components contribute little.
+- Ablation shows many components contribute little; see [ablation-study](ablation-study.md) for run results.
 
 **Interpretation**: Methodology does *not* provide better decisions; it provides *clearer reasoning and documentation*. This is still valuable for governance, but not a claim about decision quality.
 
@@ -835,4 +799,4 @@ This document succeeds if:
 
 **Status**: Ready for implementation. Recommend review and pre-registration before running Phase 1.
 
-**Next step**: If approved, begin Phase 1 (Ablation Study) design and rater recruitment.
+**Next step**: If approved, begin Phase 1 (Ablation Study) design and rater recruitment; plan and results location: [ablation-study.md](ablation-study.md).

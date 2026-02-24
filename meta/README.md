@@ -15,15 +15,16 @@ session state (agent/).
 
 ## Contents
 
-### [research-plans/](research-plans/README.md) ← **Start here if you want to contribute**
+### [research-programs/](research-programs/README.md) ← **Start here if you want to contribute**
 
-Research plans, experiment designs, and evidence-building programs are collected in **meta/research-plans/** with an index ordered by impact on uncertainty:
+Research plans, experiment designs, evidence-building programs, and their results and findings are collected in **meta/research-programs/** with an index ordered by impact on uncertainty:
 
-- **[Societies of Thought research plan](research-plans/societies-of-thought-research-plan.md)** — Ten action items derived from the [Societies of Thought analysis](../essays/societies-of-thought-synthesis.md): infrastructure (personality, balance, reconciliation), generalization (transfer, domain variants), theory (information-theory essay, social scaling), evidence (worked examples, comparative study), MOOLLM integration.
-- **[Evaluation schemes](research-plans/evaluation-schemes.md)** — Research design for testing whether the methodology outperforms simpler approaches.
-- **[Multi-model committee](research-plans/multi-model-committee.md)** — Using different LLMs per character; architectures and experimental protocol.
+- **[Societies of Thought research plan](research-programs/societies-of-thought-research-plan.md)** — Ten action items derived from the [Societies of Thought analysis](../essays/societies-of-thought-synthesis.md): infrastructure (personality, balance, reconciliation), generalization (transfer, domain variants), theory (information-theory essay, social scaling), evidence (worked examples, comparative study), MOOLLM integration.
+- **[Evaluation schemes](research-programs/evaluation-schemes.md)** — Research design for testing whether the methodology outperforms simpler approaches.
+- **[Ablation study](research-programs/ablation-study.md)** — Component contribution and interaction effects (Phase 1 of evaluation).
+- **[Multi-model committee](research-programs/multi-model-committee.md)** — Using different LLMs per character; architectures and experimental protocol.
 
-The [research-plans README](research-plans/README.md) lists active and completed plans by theme. Pick an item that matches your skills or interests.
+The [research-programs README](research-programs/README.md) lists active and completed programs by theme. Pick an item that matches your skills or interests.
 
 ### [methodology-evolution.md](methodology-evolution.md)
 
@@ -61,7 +62,7 @@ The methodology claims to be self-improving: applying Cyberneutics to
 itself should produce measurable improvements. This directory is where
 that claim gets tested.
 
-- **research-plans/** is the active work queue — what needs doing and how (index + plans)
+- **research-programs/** is the active work queue — what needs doing and how (index + plans and results)
 - **methodology-evolution.md** shows whether the methodology actually
   evolved through practice (not just accumulated documentation)
 - **uptake-and-usage.md** shows whether anyone outside the project
