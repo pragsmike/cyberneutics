@@ -131,6 +131,35 @@ The essays describe *why* narrative engines need narrative engineering. The arti
 
 These skills are the methodology made executable: `/committee` operationalizes the adversarial committee technique, `/scenarios` the fan (explore futures), `/probe` the repeated fan→funnel for landscape mapping, `/review` independent evaluation, `/string-diagram` the palgebra formalism, and `/handoff` continuity across agent sessions.
 
+**[Cowork Plugin](cowork-plugin/)** — Portable, installable version of these capabilities for Claude Code and Claude Cowork
+
+The `cowork-plugin/` directory packages cyberneutics as a Claude plugin you can use in **any project**, not just this repo. Same methodology, same commands, same five-agent committee — as a portable plugin.
+
+**Setup:**
+
+```bash
+# Option 1: Test locally (development)
+claude --plugin-dir ./cowork-plugin
+
+# Option 2: Install for persistent use
+claude plugin add ./cowork-plugin
+```
+
+Once loaded, commands are namespaced as `/cyberneutics:command`:
+
+| Command | What it does |
+|---------|-------------|
+| `/cyberneutics:scenarios [situation]` | Generate 4 distinct possible futures |
+| `/cyberneutics:committee [decision]` | Run a 5-agent adversarial deliberation |
+| `/cyberneutics:probe [situation]` | Map the decision landscape (scenarios + committee) |
+| `/cyberneutics:review` | Evaluate a deliberation's quality against 5 rubrics |
+| `/cyberneutics:handoff` | Save a session summary for continuity |
+| `/cyberneutics:string-diagram [workflow]` | Visualize a process as a resource equation diagram |
+
+The plugin also includes four background skills (committee dynamics, fan/funnel duality, orientation, palgebra notation) that Claude draws on automatically when relevant. See the [plugin README](cowork-plugin/README.md) for a quick-start walkthrough.
+
+> **Repo skills vs. plugin**: The agent skills listed above work when an AI agent is working *inside this repo* (via `.claude/commands/`). The cowork plugin works *anywhere* — install it once and use it in any project or in Claude Desktop via Cowork.
+
 ## Core insights
 
 1. **LLMs are storytelling machines.** Everything they produce - mathematical proofs, legal analysis, code, decision trees - are narrative constructs, not mechanistic solutions.
