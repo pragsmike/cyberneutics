@@ -46,6 +46,8 @@ For Glenda, the mesh-comparison framework suggests several defensive properties:
 
 - **The Crock model as a research object.** Red-teaming Glenda by attempting to build a Crock — deliberately rewiring specific mesh regions while preserving surface coherence — would generate empirical data on where the seams appear, how wide they are, and what interrogation strategies expose them.
 
+- **The seam and residuality.** The mesh regions that resist Crock's rewiring — the inherited entailment structure that remains intact because rewiring it would collapse surface coherence — are residual structures in O'Reilly's sense: what survives repeated perturbation. The seam is where residuality breaks down, where the attack has overridden the mesh's natural resistance. This connects to the [bath document's open question on residuality](../../wild/pask-mesh-bath/bath-and-pask-meshes.md) and to teachback as micro-residuality (Essay 11): Socratic probing of the seam is a targeted residuality test, applying conversational shocks precisely where the mesh is expected to be weakest.
+
 ---
 
-*Connections: [Bath and Pask meshes](../../wild/pask-mesh-bath/bath-and-pask-meshes.md), Essay 09 (Narrative Immune Systems), [Social decision disruption](social-decision-disruption.md).*
+*Connections: [Bath and Pask meshes](../../wild/pask-mesh-bath/bath-and-pask-meshes.md), Essay 09 (Narrative Immune Systems), Essay 11 (Conversation Theory), [Social decision disruption](social-decision-disruption.md).*

@@ -19,7 +19,7 @@ The general document-evaluation framework:
 - **Formalism** — why standard RDF is insufficient; fuzzy RDF, embeddings, or sheaf consistency. LLM as mesh extractor; structural comparison as discriminator.
 - Open questions: tractability, extraction quality, admission formalization, palgebra, residuality.
 
-### [Glenda/Crock: Adversarial Alignment as Mesh-Rewiring](../applications/narrative-immune-systems/glenda-crock-alignment.md)
+### [Glenda/Crock: Adversarial Alignment as Mesh-Rewiring](../../applications/narrative-immune-systems/glenda-crock-alignment.md)
 
 Application of the mesh-comparison framework to LLM alignment (lives under `applications/narrative-immune-systems/`):
 
@@ -32,10 +32,10 @@ Application of the mesh-comparison framework to LLM alignment (lives under `appl
 
 ## Relationship between the two
 
-The bath/mesh document is the *document-evaluation* framework. The Glenda/Crock document applies the same formalism to *model alignment*: adversarial fine-tuning is mesh-rewiring with a detectable seam; defending requires structural evaluation and protecting the admission process. They share the same conceptual machinery; the application doc opens with a "builds on" pointer to this directory.
+The bath/mesh document is the *document-evaluation* framework. The Glenda/Crock document applies the same formalism to *model alignment*: adversarial fine-tuning is mesh-rewiring with a detectable seam; defending requires structural evaluation and protecting the admission process. They share the same conceptual machinery; the application doc opens with a "builds on" pointer to the bath document.
 
 ---
 
 ## Connections
 
-Essay 09 (Narrative Immune Systems), Essay 10 (Decisions Under Uncertainty), Essay 11 (Conversation Theory), palgebra bath formalization (open thread), [social decision disruption](../applications/narrative-immune-systems/social-decision-disruption.md), residuality theory.
+Essay 09 (Narrative Immune Systems), Essay 10 (Decisions Under Uncertainty), Essay 11 (Conversation Theory), palgebra bath formalization (open thread), [social decision disruption](../../applications/narrative-immune-systems/social-decision-disruption.md), residuality theory.
