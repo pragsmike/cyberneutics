@@ -1,4 +1,4 @@
-# Bath Epistemology and Pask Meshes
+# Pask Mesh Fitting
 
 > *Diary entry / wild idea — February 2026. Not yet methodology. Candidate for future investigation and possible incorporation into the framework and tools.*
 

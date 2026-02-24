@@ -1,4 +1,4 @@
-# Bath Epistemology and Pask Meshes
+# Pask Mesh Fitting
 
 **Status:** Wild / diary material (Feb 2026). Not yet methodology. Candidate for future investigation and possible incorporation into the framework.
 
@@ -8,7 +8,7 @@
 
 ## Contents
 
-### [Bath Epistemology and Pask Meshes](bath-and-pask-meshes.md)
+### [Pask Mesh Fitting](pask-mesh-fitting.md)
 
 The general document-evaluation framework:
 
@@ -21,6 +21,8 @@ The general document-evaluation framework:
 
 ### [Glenda/Crock: Adversarial Alignment as Mesh-Rewiring](../../applications/narrative-immune-systems/glenda-crock-alignment.md)
 
+*(Application of the Pask mesh fitting framework to LLM alignment.)*
+
 Application of the mesh-comparison framework to LLM alignment (lives under `applications/narrative-immune-systems/`):
 
 - Glenda vs Crock; adversarial alignment as selective mesh-rewiring; the **seam** (detectable boundary between rewired and inherited mesh).
@@ -32,7 +34,7 @@ Application of the mesh-comparison framework to LLM alignment (lives under `appl
 
 ## Relationship between the two
 
-The bath/mesh document is the *document-evaluation* framework. The Glenda/Crock document applies the same formalism to *model alignment*: adversarial fine-tuning is mesh-rewiring with a detectable seam; defending requires structural evaluation and protecting the admission process. They share the same conceptual machinery; the application doc opens with a "builds on" pointer to the bath document.
+The Pask mesh fitting document is the *document-evaluation* framework. The Glenda/Crock document applies the same formalism to *model alignment*: adversarial fine-tuning is mesh-rewiring with a detectable seam; defending requires structural evaluation and protecting the admission process. They share the same conceptual machinery; the application doc opens with a "builds on" pointer to the fitting document.
 
 ---
 

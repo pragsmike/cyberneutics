@@ -20,7 +20,7 @@ How false journalism functions not as counter-argument but as signal hijack — 
 
 ### [Glenda/Crock: Adversarial Alignment as Mesh-Rewiring](glenda-crock-alignment.md)
 
-Application of the bath/epistemic-mesh framework to LLM alignment: adversarial alignment as selective mesh-rewiring, the detectable seam between rewired and inherited entailment structure, and the HIV strategy (attack admission, not individual outputs). Builds on [bath and Pask meshes](../../wild/pask-mesh-bath/bath-and-pask-meshes.md).
+Application of the bath/epistemic-mesh framework to LLM alignment: adversarial alignment as selective mesh-rewiring, the detectable seam between rewired and inherited entailment structure, and the HIV strategy (attack admission, not individual outputs). Builds on [Pask Mesh Fitting](../../wild/pask-mesh-fitting/pask-mesh-fitting.md).
 
 - Glenda vs Crock; the seam as detectable signature
 - Defensive implications: structural evaluation, Socratic probing, admission as trust boundary
