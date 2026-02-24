@@ -15,6 +15,12 @@ Procedural overhead that prevents statistical shortcuts and forces genuine explo
 ### [Independent Evaluation Protocols](./independent-evaluation.md)
 Breaking the hermeneutic circle by evaluating deliberations with fresh model instances against explicit rubrics. Learn the five core rubrics and how to iterate based on feedback.
 
+### [Metacognition and Committee Veracity](./metacognition-and-committee-veracity.md)
+Using *metacognitive efficiency* (meta-d'/d') as a test of whether committee members' **confidence** tracks the **veracity** of their advice. Confidence (1–4) is collected at resolution; accuracy is resolution-aligned. Complements independent evaluation by adding a per-character veracity signal for the **end user** (who to weight when interpreting advice). Register and scripts: see §6 and Software. **Related:** [Cumulative confidence smoke test](./cumulative-confidence-smoke-test.md) — does using the register improve decision quality?
+
+### [Cumulative confidence smoke test](./cumulative-confidence-smoke-test.md)
+Protocol to test whether **using the metacog register** (cumulative confidence across runs) improves committee decision quality. Same topic run twice: baseline and with-register. Compare review scores and calibration-aware content via `scripts/compare_cumulative_confidence_runs.py`. Committee "with metacog register" mode: see `.claude/skills/committee/SKILL.md`.
+
 ### [Cross-Scenario Learning](./cross-scenario-learning.md)
 Building institutional memory by extracting lessons from past deliberations and injecting them into future ones. See how the methodology improves over time through compounding learning.
 

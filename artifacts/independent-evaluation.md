@@ -27,6 +27,8 @@ This breaks the self-confirming loop by introducing an observer who:
 - Can only see what's actually on the page
 - Must evaluate against external standards, not internal consistency
 
+**Related:** For a proposed additional test of *veracity* — whether each committee member's **confidence** tracks the eventual validity of their advice — see [Metacognition and Committee Veracity](metacognition-and-committee-veracity.md). That artifact describes how metacognitive efficiency (meta-d'/d') could be used to weight or flag contributions by calibration.
+
 ## Why This Works: The Adversarial Training Loop
 
 Independent evaluation creates a **cybernetic feedback system**:
