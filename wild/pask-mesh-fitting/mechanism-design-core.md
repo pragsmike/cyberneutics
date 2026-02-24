@@ -8,9 +8,8 @@
 
 1. [Architectural & Theoretical Design](#1-architectural--theoretical-design)
 2. [Research Synthesis](#2-research-synthesis)
-3. [Execution Plan](#3-execution-plan)
-4. [Evaluation Rubric](#4-evaluation-rubric)
-5. [Palgebra Formalization](#appendix-palgebra-formalization)
+3. [Evaluation Rubric](#3-evaluation-rubric)
+4. [Palgebra Formalization](#appendix-palgebra-formalization)
 
 ---
 
@@ -153,137 +152,18 @@ For adversarial detection, variance is a signal: engineered text that maintains 
 
 ## 2. Research Synthesis
 
-### 2.1 Knowledge Graph Embeddings
+This architectural design synthesizes several distinct fields of mathematical and computational research. The deep-dive analyses for each theoretical pillar can be found in the `research/` directory:
 
-**What they offer**: KGE methods (TransE, RotatE, ConvE and successors) represent entities as vectors and relations as geometric transformations in embedding space. The corpus mesh defines a geometry; a new fragment's embedding compatibility is measured as geometric distance plus directional consistency. Type-augmented variants (TaKE, TransR, HCCE) explicitly incorporate entity and relation type information, preventing type confusion in the embedding.
-
-**What they miss**: Standard KGE optimizes for link prediction (does this edge exist?) rather than type-consistency (is this edge of the right type?). The type-spoof signature — nodes embed well, edges don't — is a gap in existing methods. Type-preserving embeddings can be post-processed with a type-consistency oracle, but this two-step approach is less elegant than the sheaf formulation.
-
-**Relevance to Pask mesh fitting**: KGE provides the fast, scalable node-embedding layer (Step 1 of fitting). For Step 2 (relational consistency), KGE alone is insufficient — it compresses relational information into geometric space, losing the explicit edge typing needed for type-spoof detection.
-
-**Key references**: TP-RotatE (2025, path-aware rotation embeddings); TaKE (type-augmented framework, Nature Scientific Reports 2023); SparseTransX (2025, 5× speedup enabling larger meshes).
-
-### 2.2 Sheaf Theory and Consistency Checking
-
-**What it offers**: Sheaf theory provides the mathematical language for detecting exactly what Pask mesh fitting needs — obstructions to gluing local fragments into a global whole. A cellular sheaf on the corpus graph assigns data spaces to nodes and restriction maps to edges. Sheaf cohomology (H¹) measures the failure of local consistency to yield global consistency. The Sheaf Laplacian provides a continuous consistency measure: its eigenvector structure reveals the "grain" of consistency in the corpus.
-
-**Applied implementations**: Knowledge Sheaves (Gebhart, 2023) directly frames KG embedding as sheaf learning, incorporating the Sheaf Laplacian into the embedding loss. Sheaf Neural Networks (Hansen et al.) generalize GNNs with sheaf structure, computing cohomology during message passing. Opinion Dynamics on Discourse Sheaves (Hansen & Ghrist) models competing narrative constraints — directly relevant when the corpus contains internal tensions.
-
-**The four discrepancies through sheaves**: Novel-coherent → H¹ = 0, section extends. Contradictory → local conflict, high Laplacian at specific edges. Type-spoofing → restriction map violations, cohomology in the type layer. Domain-foreign → disjoint component, no sections exist.
-
-**Limitations**: Computational complexity (O(n³) for n nodes) limits direct application to large meshes. Approximate methods — the Sheaf Laplacian as a consistency proxy rather than full cohomology computation — are necessary for practical corpus sizes. Tool maturity is limited: few off-the-shelf implementations exist for knowledge graphs specifically.
-
-**Key references**: Gebhart (2023), Knowledge Sheaves; Hansen & Ghrist, spectral theory of cellular sheaves and the gentle introduction to graph sheaves; Robinson (2014), Topological Signal Processing and its application to data fusion.
-
-### 2.3 LLM-Based Knowledge Graph Extraction
-
-**What it offers**: The field has reached production maturity. Schema-guided systems (KARMA, Neo4j's LLM Knowledge Graph Builder) achieve 85-90% precision for entity and relation extraction when operating within a fixed ontology. Schema-free systems (Ontogenia, AutoSchemaKG) can discover relation types dynamically, which is relevant when the corpus contains novel conceptual territory.
-
-**Quality and reliability**: Best-case precision around 89.7%; realistic range 75-85%. Relation extraction is harder than entity extraction. Common relation types extract more reliably than rare ones. Multi-run extraction with ensemble voting improves reliability at the cost of compute.
-
-**Adversarial robustness**: This is the critical weakness. The KGPA framework (2024) demonstrates that knowledge graphs can be poisoned via prompt injection. Adversarially crafted documents can manipulate the extraction process to produce fragments that embed cleanly but encode false relations. Worse, models with stronger reasoning capabilities are *more* sensitive to KG poisoning — the same capability that makes them good extractors makes them susceptible to manipulation.
-
-**Mitigation**: Multi-run extraction (the fan) is the primary defense. Documents that produce high extraction variance under adversarial conditions are flagged. Post-extraction validation against the corpus mesh catches fragments that pass extraction but fail structural consistency. The two-layer defense (extraction robustness + structural fitting) is stronger than either alone.
-
-**Key references**: Neo4j LLM Knowledge Graph Builder (2025); Ontogenia (metacognitive prompting); KGPA (adversarial robustness, 2024); LLM4RGNN (KDD 2025, LLM-based graph purification).
-
-### 2.4 Topological Data Analysis
-
-**What it offers**: Persistent homology computes the "shape" of a graph fragment across multiple scales. Represent the fragment as a simplicial complex; track topological features (connected components, cycles, voids) as a threshold parameter varies. Features that persist across scales are structural; those that appear and vanish are noise. The persistence diagram is a compact signature of the fragment's shape.
-
-**Relevance**: Comparing persistence diagrams of new fragments against the corpus mesh's persistence signature provides a scale-free, embedding-independent structural comparison. Novel-coherent fragments should have persistence diagrams similar in shape but extended (new persistent features). Contradictory fragments show features that conflict with the corpus signature. Type-spoofing fragments may have similar persistence at coarse scales but diverge at fine scales (where the edge-type distortion becomes visible).
-
-**Limitations**: Computational cost (O(n³) worst case, though optimized implementations like GUDHI and Ripser are much faster in practice). The threshold selection for building simplicial complexes from knowledge graphs is somewhat arbitrary. Integration with LLM confidence scores is not natural.
-
-**Key references**: Dist2Cycle (simplicial neural networks for homology localization); topological deep learning survey (2025); GUDHI library for practical computation.
-
-### 2.5 Graph Matching and Subgraph Embedding
-
-**What it offers**: The "does this fragment embed into the corpus mesh?" question is a typed subgraph matching problem. Neural approaches (NeuroMatch, HFrame) achieve 100× speedup over classical algorithms with high accuracy. HFrame (2024-2025) specifically handles subgraph homomorphism (allowing some flexibility in the matching), achieving 101× speedup with 0.962 accuracy.
-
-**Type preservation**: Standard implementations treat edges as untyped or uniformly typed. For Pask mesh fitting, typed subgraph matching is essential — the embedding must respect both node types and edge types. This requires extending existing tools with type constraint layers, or using a two-phase approach: find candidate node matchings respecting types, then verify edge type compatibility.
-
-**Limitations**: Subgraph matching is NP-complete in worst case; even neural approaches have practical limits around 500K-node target graphs. The corpus mesh may grow beyond this threshold for large corpora, requiring hierarchical or approximate matching strategies.
-
-**Key references**: NeuroMatch (Stanford, GNN-based subgraph matching); HFrame (2024-2025, hybrid algorithmic+ML subgraph homomorphism); VF3 (classical backtracking with pruning).
-
-### 2.6 Adjacent Frameworks
-
-**Relational Message Passing (RelGNN, 2025)**: Composite message passing that respects relation types during graph neural network learning. Directly applicable to learning typed embeddings of both corpus mesh and fragments.
-
-**Hypergraph Neural Networks**: The typed hypergraph representation of Pask meshes is naturally handled by hypergraph neural networks. Petri Graph Neural Networks (PGNN, 2025) support multimodal flow and nested relations. The emerging Hypergraph Interchange Format (HIF) provides a standard for cross-tool compatibility.
-
-**Ologs (Ontology Logs)**: A category-theoretic approach to knowledge representation where every olog is a category, objects are concept types, and morphisms are relations. Commutative diagrams enforce consistency constraints. Functors between ologs enable data migration and schema integration. Connects directly to the palgebra formalism and to sheaf theory.
+*   **[Knowledge Graph Embeddings](research/knowledge-graph-embeddings.md)**: Using TransE and RotatE for geometric consistency checking.
+*   **[Sheaf Theory and Consistency Checking](research/sheaf-theory-consistency.md)**: Using sheaf cohomology and the Sheaf Laplacian to detect topological obstructions.
+*   **[LLM-Based Knowledge Graph Extraction](research/llm-kg-extraction.md)**: Evaluating the reliability, schema adherence, and adversarial robustness of the extraction fan.
+*   **[Topological Data Analysis](research/topological-data-analysis.md)**: Alternative structural comparison using persistent homology.
+*   **[Graph Matching and Subgraph Embedding](research/graph-matching.md)**: Neural approaches to typed subgraph homomorphism.
+*   **[Adjacent Frameworks](research/adjacent-frameworks.md)**: Relational Message Passing, Hypergraph Neural Networks, and Ologs.
 
 ---
 
-## 3. Execution Plan
-
-### Phase 0: Conceptual Validation (2-3 weeks)
-
-**Goal**: Test whether LLM mesh extraction produces fragments with enough structural fidelity to support relational comparison.
-
-**Steps**:
-
-1. Select 5-10 documents from a domain where the entailment structure is well-understood (e.g., introductory logic, basic physics, or a well-mapped subdomain within cyberneutics itself).
-2. Design an extraction prompt with a fixed ontology scaffold: 6 relation types (prerequisite, entailment, analogy, opposition, instantiation, exemplification), concept node extraction with type labels.
-3. Run extraction K=5 times per document. Inspect the fragments manually. Assess: do the fragments capture the document's actual relational structure? Where do they fail?
-4. Aggregate the 5 fragments per document into a document mesh using weighted union. Assess: does aggregation improve over individual runs?
-5. Write one deliberately type-spoofing document (familiar vocabulary, wrong relational structure). Extract its fragment and compare visually to the corpus fragments.
-
-**Deliverable**: A qualitative assessment of extraction fidelity and a judgment on whether the approach is viable enough to warrant Phase 1.
-
-**Tools**: Any frontier LLM for extraction; NetworkX or igraph for graph representation; manual inspection.
-
-### Phase 1: Prototype Fitting Engine (4-6 weeks)
-
-**Goal**: Build a working prototype that can ingest a small corpus, construct a corpus mesh, and evaluate new documents against it, producing discrepancy classifications.
-
-**Steps**:
-
-1. **Corpus mesh construction**: Implement the aggregation pipeline — K-run extraction, document mesh aggregation, corpus-level aggregation with entity resolution. Use embedding similarity (sentence-transformers) for entity resolution between documents.
-2. **Node embedding (Step 1 of fitting)**: Implement candidate matching using cosine similarity on node embeddings. Threshold tuning: how close must a node be to count as "mapped"?
-3. **Relational consistency (Step 2)**: Implement edge-type checking between matched nodes. Start with exact match (does the corpus have this edge type between these nodes?), then extend to path-based checking (does a compatible path exist?).
-4. **Discrepancy classification**: Implement the four-way classifier based on the signature definitions in Section 1.4. Test against known examples: genuine corpus documents (should score as consistent), novel-coherent documents (from an adjacent field), contradictory documents (manually constructed), type-spoofing documents (manually constructed).
-5. **Variance analysis**: Implement the K-run variance signal. Does high extraction variance correlate with engineered text?
-
-**Deliverable**: A Python prototype (likely using NetworkX, sentence-transformers, and a frontier LLM API) that can process a corpus of ~50 documents and evaluate new documents against it, with discrepancy classification and confidence scores.
-
-**Tools**: Python; NetworkX or igraph; sentence-transformers for embeddings; LLM API for extraction; pytest for validation.
-
-### Phase 2: Sheaf-Theoretic Enhancement (4-6 weeks)
-
-**Goal**: Replace the ad-hoc relational consistency check from Phase 1 with the sheaf-theoretic formulation, gaining rigorous obstruction detection.
-
-**Steps**:
-
-1. **Sheaf construction**: Define the cellular sheaf F on the corpus graph. Each node's data space is the concept's local semantic context (a vector); each edge's restriction map encodes the relational constraint (a linear map between endpoint data spaces that the relation type imposes).
-2. **Sheaf Laplacian computation**: Implement the Sheaf Laplacian L_F for the corpus mesh. This is a block matrix where blocks correspond to restriction maps. Use sparse matrix libraries for scalability.
-3. **Consistency scoring**: For a new fragment, compute x^T L_F x where x encodes the fragment's data assignments in the corpus sheaf's coordinate system. This replaces the edge-type checking from Phase 1 with a continuous, geometrically grounded consistency measure.
-4. **Type-spoof detection via mismatch analysis**: Implement the mismatch vector computation and the correlation analysis that distinguishes isolated contradiction from distributed type-spoofing.
-5. **Validation**: Compare discrepancy classifications from Phase 1 (ad-hoc) and Phase 2 (sheaf-based). The sheaf-based approach should catch cases that ad-hoc checking misses, particularly subtle type-spoofing.
-
-**Deliverable**: An enhanced prototype with sheaf-based consistency scoring, validated against the Phase 1 baseline.
-
-**Tools**: NumPy/SciPy for sparse linear algebra; the Knowledge Sheaves framework (Gebhart) as reference implementation; custom sheaf construction code.
-
-### Phase 3: Scale and Integration (6-8 weeks)
-
-**Goal**: Scale to a realistic corpus, integrate with the cyberneutics bath model, and formalize in palgebra.
-
-**Steps**:
-
-1. **Scalability**: Test on a corpus of 500+ documents. Identify computational bottlenecks. Implement approximate sheaf consistency (Laplacian eigenvalue bounds rather than full cohomology) if needed.
-2. **RDF integration**: Connect the mesh representation to the bath's existing RDF judgment graph. A discrepancy classification becomes a judgment node in the bath, with typed pointers to the specific structural discrepancies detected.
-3. **Palgebra formalization**: Write the resource equations for the full pipeline (see Appendix). Verify that the three propagation rules hold. Generate string diagrams.
-4. **Adversarial testing**: Construct a suite of adversarial documents (type-spoofing, Crock-style mesh rewiring) and test detection rates. Measure false positive and false negative rates.
-5. **Integration with `/committee`**: Design a committee character specifically tasked with structural mesh evaluation — a character whose propensity is to trace entailment chains and probe seam regions.
-
-**Deliverable**: A production-capable system integrated with the cyberneutics bath model and formalized in palgebra.
-
----
-
-## 4. Evaluation Rubric
+## 3. Evaluation Rubric
 
 The following rubric evaluates any implementation attempt against five criteria, scored 0-3 per criterion. The criteria are designed to be orthogonal — good performance on one does not guarantee performance on others.
 

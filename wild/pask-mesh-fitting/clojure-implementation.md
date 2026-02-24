@@ -1,8 +1,8 @@
-# Pask Mesh Fitting: Clojure Mechanism Design
+# Pask Mesh Fitting: Clojure Implementation
 
-Based on the prompt requirements (`agent/prompts/pask-mesh-fitting-design.md`) and research into Sheaf Theory, Knowledge Graph Embeddings (KGE), and LLM extraction variance, this document outlines the mechanism design and architectural plan for implementing the Pask Mesh Fitting workflow in Clojure.
+> *This document is an execution plan. It requires the theoretical architectural design described in [mechanism-design-core.md](mechanism-design-core.md).*
 
----
+Based on the prompt requirements (`agent/prompts/pask-mesh-fitting-design.md`) and research into computational tractability, this document outlines the mechanism design and architectural plan for implementing the Pask Mesh Fitting workflow organically in **Clojure**.
 
 ## 1. Architectural Mechanisms
 

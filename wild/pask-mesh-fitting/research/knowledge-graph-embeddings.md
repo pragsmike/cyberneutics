@@ -1,23 +1,9 @@
-# Research: Knowledge Graph Embeddings (KGE) and Discrepancy Detection
+# 2.1 Knowledge Graph Embeddings
 
-## Core Concepts
-Knowledge Graph Embeddings represent entities (nodes) and relations (edges) as vectors or matrices in a continuous space. 
+**What they offer**: KGE methods (TransE, RotatE, ConvE and successors) represent entities as vectors and relations as geometric transformations in embedding space. The corpus mesh defines a geometry; a new fragment's embedding compatibility is measured as geometric distance plus directional consistency. Type-augmented variants (TaKE, TransR, HCCE) explicitly incorporate entity and relation type information, preventing type confusion in the embedding.
 
-1. **TransE (Translating Embeddings):**
-   - Models relations as translations: $head + relation \approx tail$.
-   - **Limitations:** Struggles with symmetric relations (if A is sibling to B, $A + r = B \implies B + r = A$, which implies $r = 0$, heavily distorting the space), and Many-to-1 / 1-to-Many relationships.
-   - **Discrepancy context:** If a corpus has a contradictory edge that violates the learned geometry, TransE might just smooth it over or produce a highly sub-optimal embedding, making confident anomaly detection difficult.
+**What they miss**: Standard KGE optimizes for link prediction (does this edge exist?) rather than type-consistency (is this edge of the right type?). The type-spoof signature — nodes embed well, edges don't — is a gap in existing methods. Type-preserving embeddings can be post-processed with a type-consistency oracle, but this two-step approach is less elegant than the sheaf formulation.
 
-2. **RotatE (Relational Rotation in Complex Space):**
-   - Represents entities in complex vector space and relations as rotations: $head \circ relation \approx tail$ (Hadamard product).
-   - **Strengths:** Can explicitly model symmetry (rotation by $0$ or $\pi$), antisymmetry, inversion, and composition. 
-   - **Discrepancy context:** Because it models relationship patterns explicitly, an edge that violates an established pattern (e.g., asserting a symmetric link on an antisymmetric relation) results in a high "energy" or distance score.
+**Relevance to Pask mesh fitting**: KGE provides the fast, scalable node-embedding layer (Step 1 of fitting). For Step 2 (relational consistency), KGE alone is insufficient — it compresses relational information into geometric space, losing the explicit edge typing needed for type-spoof detection.
 
-## Application to Pask Mesh Fitting
-RotatE is a highly pragmatic alternative to the heavy mathematics of Sheaf Theory for detecting structural contradictions (Type-Spoofing or Contradictory discrepancies). 
-
-In the Clojure implementation:
-- The corpus mesh can be periodically embedded using a KGE approach.
-- When an LLM extracts a fragment, we look up the vector representations of the vocabulary in the corpus.
-- We then apply the RotatE function: does $head_{corpus} \circ relation_{fragment} \approx tail_{corpus}$?
-- A high distance score indicates a structural contradiction. If the distance is high but the vocabulary vectors exist and are tight, we have identified a **Type-Spoof**.
+**Key references**: TP-RotatE (2025, path-aware rotation embeddings); TaKE (type-augmented framework, Nature Scientific Reports 2023); SparseTransX (2025, 5× speedup enabling larger meshes).
