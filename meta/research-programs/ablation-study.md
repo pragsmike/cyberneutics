@@ -1,8 +1,14 @@
 # Ablation Study: Component Contribution and Interaction Effects
 
-**Status**: Not started  
-**Runs**: (none yet)  
+**Status**: Not started
+**Runs**: (none yet)
 **Results**: [ablation-study/results/](ablation-study/results/)
+
+> **Contributing to this program**
+> - **Skills needed**: Ability to run the full methodology pipeline (`/committee`, `/scenarios`, deliberated choice), basic statistics (mean, CI, effect size). Familiarity with the evaluation dimensions in [evaluation-schemes.md](evaluation-schemes.md).
+> - **Estimated scope**: Month (generate outputs across conditions, rate on 6 dimensions, analyze).
+> - **Contributor type**: Solo (one person can run all conditions) or paired (one generates, one rates blind).
+> - **Entry point**: Read the Procedure and Factor Definitions below. Then read [evaluation-schemes.md](evaluation-schemes.md) Sections III and VIII for the dimension codebooks. Choose N=8 decisions and start with the full-methodology condition.
 
 This plan was extracted from the evaluation-schemes design (Design F). Full procedure, factor definitions, run budget, and results tabulation are below. The umbrella evaluation design and phase ordering remain in [evaluation-schemes.md](evaluation-schemes.md).
 

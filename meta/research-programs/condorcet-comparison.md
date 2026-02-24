@@ -4,6 +4,12 @@
 **Runs**: 2 (2026-02-22)
 **Results**: [condorcet-comparison/results/](condorcet-comparison/results/)
 
+> **Contributing to this program**
+> - **Skills needed**: Ability to run `/committee` deliberations and generate independent CJT-style votes per the [comparison protocol](../../artifacts/comparison-protocol-deliberative-vs-cjt.md). Analytical writing for comparison summaries.
+> - **Estimated scope**: Afternoon per additional run (one question, both pipelines, comparison write-up).
+> - **Contributor type**: Solo.
+> - **Entry point**: Read the [comparison protocol](../../artifacts/comparison-protocol-deliberative-vs-cjt.md), then review one completed run (e.g., [code-of-conduct results](condorcet-comparison/results/code-of-conduct/)) as a template. Pick a new binary question and run both pipelines.
+
 ---
 
 ## Objective

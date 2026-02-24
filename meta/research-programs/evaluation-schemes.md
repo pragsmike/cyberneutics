@@ -1,6 +1,14 @@
 # Evaluation Schemes for Cyberneutics Mechanisms
 
-**Status**: Research design document, not a philosophical essay. Intended as a practical guide for empirical testing.
+**Status**: Active (umbrella design document; Phase 1 = [ablation-study.md](ablation-study.md))
+**Runs**: See individual designs: [ablation-study](ablation-study.md) (not started), [condorcet-comparison](condorcet-comparison.md) (completed, 2 runs)
+**Results**: Each extracted design has its own results folder. See links above.
+
+> **Contributing to this program**
+> - **Skills needed**: Experimental design, familiarity with the committee and scenario pipelines (`/committee`, `/scenarios`), basic statistics (effect sizes, confidence intervals). For Design E: ability to recruit domain experts.
+> - **Estimated scope**: This is an umbrella document — you wouldn't implement it all at once. Phase 1 (ablation study) is a month. Phase 2 (blind panel) is 6-10 weeks. Phase 3 (information-theoretic) is a day.
+> - **Contributor type**: Collaborative for Designs A and E (need raters/experts); solo for Designs D and F.
+> - **Entry point**: Read Sections I-III (core questions, why evaluation is hard, proposed dimensions) to understand the framework. Then pick one design: start with [ablation-study.md](ablation-study.md) (Phase 1, most immediate) or Design D (cheapest, automated).
 
 **Last updated**: 2026-02-22
 
