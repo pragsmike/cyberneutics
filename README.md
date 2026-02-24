@@ -2,6 +2,14 @@
 
 > If the tool is a narrative engine, treating it like a calculator is a category error. You don't get mad at a car for not flying; you learn to drive.
 
+## What is Cyberneutics?
+
+> Sounds like something a Rand Corporation analyst would say to avoid being understood. - Hunter S. Thompson, if he were alive
+
+**Cyberneutics** (literally, steering interpretation) is a methodology for working with AI systems as collaborative sense-making partners rather than oracles that deliver answers. It provides rigorous, traceable techniques for **making decisions under genuine uncertainty** — the kind where you can't enumerate outcomes or assign probabilities, and the act of deciding changes what you're deciding about.
+
+Large Language Models are not databases. They are not logic engines. They are **narrative generators** - storytelling machines operating through what we call "the pachinko of stored literature." This changes everything about how we should work with them.
+
 ## Narrative computing and narrative engineering
 
 Each generation of computing hardware forced us to adapt how we think about expressing and solving problems. Each generation also required a new engineering discipline.
@@ -14,21 +22,15 @@ Each generation of computing hardware forced us to adapt how we think about expr
 
 **Narrative engineering** is how we compose those primitives into reliable systems. A single LLM call is locally coherent but unreliable, just as a single transistor amplifies but drifts. You don't fix that by building a better transistor. You design circuits: redundancy (multiple perspectives), feedback (evaluation against rubrics), iteration (generate-evaluate-revise loops), and staged composition (charter → deliberation → resolution → evaluation). The engineering makes the system trustworthy even when individual components aren't.
 
+> "We've never had narrative engines powerful enough to make this methodology necessary before."
+
 Software engineering grew from symbolic computing. Narrative engineering grows from narrative computing.
 
 [From Practice to Theory](./essays/02-from-practice-to-theory.md) tells the story of how these practices grew, and the theory used to guide their development.
 
 The essay [Stories All the Way Down](./essays/stories-all-the-way-down.md) explains how everything is a story, how stories are a way to deal with wicked problems, and how we are constantly editing and re-editing the stories we tell ourselves about the world.
 
-## What is Cyberneutics?
-
-**Cyberneutics** is a methodology for working with AI systems as collaborative sense-making partners rather than oracles that deliver answers. It provides rigorous, traceable techniques for **making decisions under genuine uncertainty** — the kind where you can't enumerate outcomes or assign probabilities, and the act of deciding changes what you're deciding about.
-
-It builds upon the runtime environment of **[MOOLLM](https://github.com/SimHacker/moollm)** (Don Hopkins) and aligns with the philosophy of **[Narrative Engineering](https://alexbo.land/essays/narrative_engineering_2023.html)** (Alex Boland). Think of it as: **MOOLLM is the platform, Cyberneutics is the practice.**
-
-> "We've never had narrative engines powerful enough to make this methodology necessary before."
-
-Large Language Models are not databases. They are not logic engines. They are **narrative generators** - storytelling machines operating through what we call "the pachinko of stored literature." This changes everything about how we should work with them.
+> A methodology for making AI argue with itself until the truth gets uncomfortable. -- Lester Bangs, if he were alive
 
 ## Who is this for?
 
@@ -151,13 +153,15 @@ Cyberneutics is a neologism derived from
 It captures something that "narrative computing" doesn't quite get at: that you're not just computing on narratives but doing something closer to steering through interpretation - the cybernetic loop applied to meaning-making with neural systems.
 There's also a nice echo of heuristics in there, which fits the System 1 / fast-pass dimension of the work.
 
+Cyberneutics builds upon the runtime environment of **[MOOLLM](https://github.com/SimHacker/moollm)** (Don Hopkins) and aligns with the philosophy of **[Narrative Engineering](https://alexbo.land/essays/narrative_engineering_2023.html)** (Alex Boland). Think of it as: **MOOLLM is the platform, Cyberneutics is the practice.**
+
 ## Status
 
-This is early-stage documentation of an emerging methodology. The techniques described here have been refined through iterative practice and have reached stable behavioral equilibrium. The theoretical framework is being formalized.
+This is early-stage documentation of an emerging methodology. The techniques have been refined through iterative practice and have reached stable behavioral equilibrium; the theoretical framework is being formalized. As of Feb 2026, uptake signals include two external forks (one with merged Condorcet/comparison work), MOOLLM integration of the committee mechanism, and two repository stars (as of 2026-02-23). Current state and a brief trajectory are in [Uptake and usage](meta/uptake-and-usage.md); a dated event log is in [usage-and-uptake-chronology](meta/usage-and-uptake-chronology.md).
 
 **Run and test:** For how to run the methodology (skills in chat, string-diagram script) and how to test the repo (smoke test, structure checks), see the [repository review and run guide](meta/repository-review-and-run-guide.md). For recent session context and maintainer hand-off, see the latest handoff in [agent/](agent/).
 
-**Evidence base**: The adversarial committee technique has empirical support from research on multi-agent reasoning — see [Societies of Thought](essays/societies-of-thought-synthesis.md) for a synthesis of findings from Google, UChicago, and the Santa Fe Institute showing that perspective-switching and conversational scaffolding improve reasoning quality. Internal comparison runs ([deliberative vs. CJT-style independent vote](artifacts/comparison-protocol-deliberative-vs-cjt.md)) provide initial evidence that deliberation with Robert's Rules produces materially different outcomes than independent aggregation — on a value-laden question, the two pipelines gave opposite verdicts (see [comparison records](agent/comparisons/)). The theoretical foundations draw on established work in sense-making methodology (Dervin), second-order cybernetics (von Foerster, Bateson), and process philosophy (Deleuze). The relationship to Condorcet's jury theorem is [explicitly documented](artifacts/condorcet-jury-theorem-and-committee.md): we use CJT as a motivating analogy but do not satisfy its conditions, by design. What remains to be validated is the specific combination of techniques and their calibration across problem domains.
+**Evidence base**: The adversarial committee technique has empirical support from research on multi-agent reasoning — see [Societies of Thought](essays/societies-of-thought-synthesis.md) for a synthesis of findings from Google, UChicago, and the Santa Fe Institute. Comparison runs ([deliberative vs. CJT-style independent vote](artifacts/comparison-protocol-deliberative-vs-cjt.md)) provide initial evidence that deliberation with Robert's Rules produces materially different outcomes than independent aggregation; on a value-laden question the two pipelines gave opposite verdicts (see [comparison records](agent/comparisons/)). The theoretical foundations draw on sense-making methodology (Dervin), second-order cybernetics (von Foerster, Bateson), and process philosophy (Deleuze). The relationship to Condorcet's jury theorem is [explicitly documented](artifacts/condorcet-jury-theorem-and-committee.md): we use CJT as a motivating analogy but do not satisfy its conditions, by design. What remains to be validated is the specific combination of techniques and their calibration across problem domains.
 
 Feedback, questions, and contributions welcome.
 

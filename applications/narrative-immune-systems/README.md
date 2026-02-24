@@ -18,6 +18,14 @@ How false journalism functions not as counter-argument but as signal hijack — 
 - LLMs at the inflection point: industrial-scale tools available for both medicine and poison
 - Editorial practice as immune function; the open question of whether literacy-rebuilding can outpace the industrialization of the attack
 
+### [Glenda/Crock: Adversarial Alignment as Mesh-Rewiring](glenda-crock-alignment.md)
+
+Application of the bath/epistemic-mesh framework to LLM alignment: adversarial alignment as selective mesh-rewiring, the detectable seam between rewired and inherited entailment structure, and the HIV strategy (attack admission, not individual outputs). Builds on [bath and Pask meshes](../../wild/pask-mesh-bath/bath-and-pask-meshes.md).
+
+- Glenda vs Crock; the seam as detectable signature
+- Defensive implications: structural evaluation, Socratic probing, admission as trust boundary
+- Crock model as red-team research object (open question)
+
 ---
 
 ## Relationship to the Essay

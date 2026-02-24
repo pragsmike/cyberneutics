@@ -4,219 +4,28 @@ External adoption signals, practitioner feedback, and what they tell
 us about whether the methodology actually works outside its birthplace.
 
 **Why this file exists**: The Feb 1, 2026 self-evaluation identified
-external validation as the #1 gap. This document tracks evidence —
-positive, negative, and ambiguous — as it arrives.
+external validation as the #1 gap. This document summarizes **current
+state** and **brief trajectory**. For a dated event log, see
+[usage-and-uptake-chronology.md](usage-and-uptake-chronology.md).
 
 ---
 
-## Adoption Events
+## Current state (as of Feb 2026)
 
-### 1. Repository Fork: Committee Makeup Extension
-
-**Date**: February 19, 2026
-**Who**: External practitioner (details TBD)
-**What**: Forked the cyberneutics repository with the stated intent to
-use and extend the adversarial committee deliberation feature.
-
-**Specific interest**: Experimenting with different committee makeups
-to compare results for different kinds of problems. This is exactly
-the extensibility the committee system was designed for — the
-character-propensity-reference and committee-setup-template documents
-support custom rosters, and the `/committee` skill can be invoked
-with different character configurations.
-
-**What this validates**:
-- The committee concept is comprehensible to someone outside the
-  project — they understood it well enough to identify a specific
-  extension direction
-- The extension they chose (different rosters for different domains)
-  is architecturally sound — it doesn't require changing the pipeline
-  structure, only the catalytic inputs (character propensities)
-- In palgebra terms: they're keeping the morphisms and changing the
-  catalytic objects, which is exactly how the formalism says you
-  customize a pipeline
-
-**What we don't know yet**:
-- Whether they succeed in running deliberations
-- Whether different makeups actually produce measurably different
-  results
-- What problems they apply it to
-- What friction they encounter (documentation gaps, unclear
-  instructions, tool assumptions)
-
-**Follow-up**: If they share results, this would be the first
-external deliberation data. Especially valuable if they run the
-`/review` evaluation against their transcripts — that would give us
-comparative rubric scores across different roster configurations.
-
-**Update — February 20, 2026**: Contributor has given more detail on their direction.
-
-*Condorcet theorem*: They intend to investigate the Condorcet jury theorem as a formal foundation for the committee technique. The theorem (Condorcet, 1785) states that if each member of a majority-vote group is independently more likely than not to make a correct judgment, the probability of the majority being correct exceeds any individual's, and approaches 1 as group size grows. This would formalize *why* multi-perspective adversarial deliberation improves decision quality — it's not just a heuristic. The existing empirical support in `essays/societies-of-thought-synthesis.md` (Google, UChicago, Santa Fe Institute work) is consistent with this prediction but doesn't invoke Condorcet explicitly. If the contributor formalizes this connection, it would strengthen the theoretical section of `artifacts/adversarial-committees.md` and add a new dimension to `essays/societies-of-thought-synthesis.md`.
-
-*mRNA and the immune analogy*: They suggested considering mRNA as relevant to the immune system analogy in `essays/09-narrative-immune-systems.md` and `applications/narrative-immune-systems/`. The implication is apt: mRNA vaccines deliver instructions to cells to produce a recognizable fragment of a pathogen so the immune system can learn the pattern *without exposure to the actual pathogen*. Applied to narrative immune systems: rather than exposing a community to real misinformation to build resistance (risky — the exposure itself can cause anchoring or radicalization), you could construct "narrative mRNA" — carefully designed fictional exemplars of misinformation patterns that train pattern recognition without contact with live attack vectors. This is a meaningful extension of the analogy beyond what the current essay captures. Worth a committee deliberation or a `/committee` run on the question of how to design such training material.
-
-**Update — February 22, 2026**: Condorcet investigation completed; PR merged.
-
-The contributor produced a substantial body of work that has been reviewed and merged:
-
-- **Committee deliberation** (`meta/research-programs/condorcet-comparison/results/condorcet-jury-theorem-process/`): The committee recommended *documenting* the relationship to CJT, not changing the process. Review scored 13/15 (High). Key finding: the committee process deliberately violates CJT's conditions (independence, binary outcome, literal competence probability) because it optimizes for adversarial stress-testing and decision-space mapping, not for maximizing the probability of a correct binary vote. A CJT-compliant variant would be a *different pipeline* — independent generation then aggregation — not a correction to this one.
-- **Artifact created**: `artifacts/condorcet-jury-theorem-and-committee.md` — design goals first, CJT as motivating analogy, explicit deviations table, and the fork (CJT-compliant = different pipeline). Cross-linked from `artifacts/adversarial-committees.md`.
-- **Comparison protocol**: `artifacts/comparison-protocol-deliberative-vs-cjt.md` — how to run both pipelines (deliberative and CJT-style independent vote) on the same question and compare.
-- **Two comparison runs** (`meta/research-programs/condorcet-comparison/results/`):
-  - *second-ci-job*: Both pipelines said Nay. CJT 4–1, Deliberative 5–0 (same verdict; one vote changed in deliberation, revisit condition added).
-  - *code-of-conduct*: **Opposite verdicts.** CJT Aye 3–2, Deliberative Nay 5–0. Three characters (Frankie, Vic, Tammy) voted Aye in isolation but flipped to Nay after debate. The enforcement/weaponization objection — present in CJT-style rationales from Maya and Joe but never answered by the Aye voters — was pressed in deliberation, and three votes changed.
-
-**What this validates — first empirical evidence for deliberation over aggregation**:
-
-The code-of-conduct comparison is the first controlled test showing that *process matters*: same question, same roster, different pipeline structure, different verdict. Specifically, it validates three claims:
-
-1. **Robert's Rules as forcing function works.** The Roberts Rules artifact predicts that without procedural forcing, characters give "sounds reasonable" answers (Statistical Shortcut #1: premature consensus). The CJT-style run confirms this: Vic and Tammy's independent Aye rationales were surface-level and never confronted the enforcement objection. In deliberation, the Chair directed them to respond, and they changed their positions.
-
-2. **Adversarial back-and-forth is the value, not the number of perspectives.** Five perspectives voting independently produced a different (arguably weaker) result than five perspectives debating adversarially. The number of perspectives was held constant; only the interaction structure changed. This supports the core claim in `artifacts/adversarial-committees.md`.
-
-3. **The Condorcet artifact's own claim is supported.** The artifact says a CJT-compliant variant "would sacrifice deliberation and stress-testing for independence and aggregability." The comparison runs demonstrate exactly this trade-off.
-
-**What we still don't know**:
-
-- Whether the deliberative verdict was *better* (that requires ground truth or external judgment — we don't have one).
-- Whether the pattern generalizes: two runs are datapoints, not a study. More runs on different question types would strengthen or weaken the pattern.
-- Whether a CJT-style pipeline with more voters (e.g. 15 or 25 independent responses) would converge toward the deliberative result.
-
-**Significance**: This is the closest thing to a controlled experiment the methodology has produced. It partially addresses the "comparative evaluation" evidence gap. The comparison protocol is reusable for future runs.
+- **Two external forks** — one focused on committee makeup and Condorcet/jury-theorem comparison (with merged PR and new artifacts), one on Deleuzian walks and Residuality Theory. Both show the methodology is comprehensible and extensible by outsiders; the first produced the first controlled comparison of deliberative vs. independent-aggregation pipelines (opposite verdicts on a value-laden question).
+- **MOOLLM integration** — the adversarial committee mechanism has been incorporated into the MOOLLM platform, making the technique available to that platform’s user base.
+- **Repository stars** — as of 2026-02-23, the git repository had two stars on the hosting platform (lightweight adoption signal).
+- **Evidence so far**: Internal comparison runs and one external deliberation review (Condorcet run scored 13/15 High) support “suitable for early adopters” and give initial empirical evidence that deliberation structure (Robert’s Rules, adversarial back-and-forth) changes outcomes vs. independent vote. No failure reports or sustained multi-session external use reported yet; no rubric scores from purely external deliberations.
 
 ---
 
-### 2. MOOLLM Platform Integration
+## Trajectory in brief
 
-**Date**: On or before February 19, 2026
-**Who**: SimHacker / MOOLLM project
-**What**: Incorporated the adversarial committee mechanism into the
-MOOLLM platform.
-
-**Context**: The `artifacts/integration-with-moollm.md` document maps
-Cyberneutics primitives to MOOLLM primitives (Characters → Cards,
-Committee Sessions → Rooms, Lessons → Files). This integration was
-anticipated in the architecture but not previously confirmed as
-implemented.
-
-**What this validates**:
-- The technique is portable — it can be extracted from the
-  cyberneutics repository and embedded in a different platform
-- The MOOLLM mapping (characters as persistent cards with
-  calibration state, sessions as bounded rooms with protocol
-  enforcement) is workable in practice
-- The methodology can run on infrastructure that provides features
-  the ad-hoc approach lacks (room isolation, persistent state,
-  protocol enforcement)
-
-**What we don't know yet**:
-- How faithfully the committee mechanism was adapted (full roster?
-  Robert's Rules? Independent evaluation?)
-- Whether MOOLLM's infrastructure features (room isolation,
-  persistent cards) improve deliberation quality compared to
-  the ad-hoc approach
-- Whether MOOLLM users who haven't read the cyberneutics essays
-  can use the committee feature effectively
-
-**Significance**: MOOLLM integration is a different kind of adoption
-than an individual fork. It makes the committee available to MOOLLM's
-user base, potentially multiplying exposure. If MOOLLM users produce
-deliberations and share feedback, the sample size grows faster.
+Uptake moved quickly after the Feb 1 gap call: two forks and MOOLLM integration by mid–late Feb 2026. One fork delivered concrete artifacts (Condorcet–committee relationship, comparison protocol, two comparison runs) and demonstrated that process structure can flip verdicts. The other fork engaged with theory (Deleuze, Residuality). That combination — portable technique plus theoretical extension — is a stronger signal than originally expected at this stage. The full dated event log is in [usage-and-uptake-chronology.md](usage-and-uptake-chronology.md).
 
 ---
 
-### 3. Repository Fork: Deleuzian Walks and Residuality Theory
-
-**Date**: February 20, 2026
-**Who**: New external contributor (details TBD)
-**What**: Forked the repository and engaged with the Deleuze material
-(`essays/06-deleuze-difference-repetition.md`), specifically noting a
-connection between Deleuzian walks and Barry O'Reilly's Residuality
-Theory via the concept of Architectural walks.
-
-**The connection they're drawing**: A "Deleuzian walk" is nomadic
-traversal through smooth space — following connections rather than
-following a predetermined grid, letting difference lead rather than
-imposing identity. In O'Reilly's Residuality Theory, an Architectural
-walk is a method for understanding complex systems by moving through
-them and observing what *residues* — essential, persistent elements —
-survive change and transformation. The contributor suggests that
-Residuality Theory's Architectural walk concept may have been
-influenced by, or at minimum parallels, the Deleuzian model of
-movement through space.
-
-**Why this is interesting for cyberneutics**: The committee deliberation
-process is already implicitly a kind of architectural walk — each
-character traverses the problem space from their propensity-driven
-starting point, following their epistemic "line of flight," and the
-synthesis traces what residues persist across all the different
-traversals. The Condorcet connection (from contributor #1) speaks to
-*why* multiple walkers converge on better answers; the Residuality
-connection speaks to *what* they're looking for — the features of the
-problem space that survive reframing.
-
-There's also a potential connection to the palgebra formalism: if the
-committee is a set of traversals through a problem space, the
-deliberation record (the 00-04 files) is the residue — what the
-process leaves behind as a persistent artifact.
-
-**What this validates**:
-- The Deleuze essay is accessible to external readers and legible as
-  something that connects to live theoretical work elsewhere
-- The methodology is attracting contributors interested in theoretical
-  depth, not just practitioners who want the committee technique
-- Residuality Theory is an adjacent conceptual framework worth tracking;
-  see `wild/` for where to put exploratory reading
-
-**What to track**:
-- Whether this contributor develops the connection formally
-- Barry O'Reilly's Residuality Theory as a potential theoretical
-  neighbor — the "residue" framing (what persists through transformation)
-  is distinct from but complementary to the "decorated text" framing
-  (what metadata accumulates through pipeline stages)
-
----
-
-## What the Feb 1 Self-Evaluation Predicted
-
-The committee self-evaluation (repository readiness review) identified
-several conditions that would signal the methodology is working:
-
-| Predicted signal | Status |
-|---|---|
-| External practitioners attempt to use the methodology | Two forks confirmed |
-| Techniques are adopted by other platforms | MOOLLM integration confirmed |
-| Different committee makeups tested for different domains | Fork #1 investigated Condorcet; tested CJT-style (independent vote) as alternative pipeline |
-| Rubric scores from external deliberations available | Partial: Condorcet deliberation scored 13/15 (High) on internal review |
-| Failure reports from practitioners | Not yet |
-| Sustained multi-session use by external users | Not yet |
-| Deliberation vs. aggregation compared empirically | **New signal (not originally predicted):** Two comparison runs — same verdict on one question, opposite verdicts on another. First evidence that process structure (deliberation vs. independence) changes outcomes. |
-
-Three of six original predicted signals have appeared (counting the
-Condorcet deliberation review score as partial rubric evidence), plus
-a second fork showing theoretical engagement (Deleuze / Residuality
-Theory), plus an unpredicted signal: the first controlled comparison
-of deliberative vs. independent-aggregation pipelines. This is
-consistent with "suitable for early adopters" and now has initial
-empirical evidence for deliberation's value. The theoretical depth of
-the engagement — Condorcet, mRNA analogy extension, Deleuzian walks —
-is a stronger signal than expected at this stage: these contributors
-are not just consuming the technique, they're extending the
-theoretical scaffolding and producing testable evidence.
-
----
-
-## Feedback Log
-
-*(Record practitioner feedback here as it arrives — positive,
-negative, and ambiguous. Date, source, verbatim if possible,
-analysis.)*
-
-No feedback received yet beyond the adoption events above.
-
----
-
-## Open Questions for Practitioners
+## Open questions for practitioners
 
 If you've forked or used this methodology, the most valuable
 feedback would be:
@@ -233,4 +42,4 @@ feedback would be:
 
 ---
 
-**Last Updated**: February 22, 2026
+**Last updated**: February 24, 2026
