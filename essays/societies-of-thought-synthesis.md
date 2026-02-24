@@ -142,7 +142,7 @@ The paper coins the term "social scaling" to describe how reasoning improves thr
 
 The three convergences above — mechanistic, information-theoretic, collective intelligence — generate a concrete research agenda. Ten action items fall into four categories: strengthening existing infrastructure (personality architecture, balance metrics, reconciliation protocols), testing generalization and transfer, formalizing theoretical foundations, and expanding the evidence base through worked examples and comparative studies.
 
-That plan lives at [`meta/research-plan.md`](../meta/research-plan.md). Each item specifies what, why, how, and a success metric. If any direction here interests you — as practitioner, theorist, or builder — that's where to start.
+That plan lives at [meta/research-programs/societies-of-thought-research-plan.md](../meta/research-programs/societies-of-thought-research-plan.md). Each item specifies what, why, how, and a success metric. If any direction here interests you — as practitioner, theorist, or builder — that's where to start.
 
 ## Closing Thoughts
 
@@ -150,7 +150,7 @@ The "Societies of Thought" paper isn't just validation—it's a gift. They've do
 
 But they've also exposed gaps. You're strong on adversarial structure but weaker on reconciliation. You use personality intuitively but haven't systematized it. You've built something that works but haven't fully explained why.
 
-The [research plan](../meta/research-plan.md) addresses these gaps while building on your strengths:
+The [research plan](../meta/research-programs/societies-of-thought-research-plan.md) addresses these gaps while building on your strengths:
 
 **Your strengths**:
 - Working methodology that practitioners can use today

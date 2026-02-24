@@ -15,16 +15,17 @@ session state (agent/).
 
 ## Contents
 
-### [research-plan.md](research-plan.md) ← **Start here if you want to contribute**
+### [research-programs/](research-programs/README.md) ← **Start here if you want to contribute**
 
-Ten concrete action items derived from the [Societies of Thought analysis](../essays/societies-of-thought-synthesis.md). Each item specifies what to build, why it matters, how to do it, and a success metric. Items span four categories:
+Research plans, experiment designs, evidence-building programs, and their results and findings are collected in **meta/research-programs/** with an index ordered by impact on uncertainty:
 
-- **Category A** — Strengthen existing infrastructure: personality architecture for committee characters, balance metrics, reconciliation protocols
-- **Category B** — Test generalization: transfer learning across domains, domain-specific character variants
-- **Category C** — Formalize theory: information-theoretic foundations essay, social scaling theory
-- **Category D** — Expand evidence: worked examples library, comparative effectiveness study
+- **[Societies of Thought research plan](research-programs/societies-of-thought-research-plan.md)** — Ten action items derived from the [Societies of Thought analysis](../essays/societies-of-thought-synthesis.md): infrastructure (personality, balance, reconciliation), generalization (transfer, domain variants), theory (information-theory essay, social scaling), evidence (worked examples, comparative study), MOOLLM integration.
+- **[Evaluation schemes](research-programs/evaluation-schemes.md)** — Research design for testing whether the methodology outperforms simpler approaches.
+- **[Ablation study](research-programs/ablation-study.md)** — Component contribution and interaction effects (Phase 1 of evaluation).
+- **[Multi-model committee](research-programs/multi-model-committee.md)** — Using different LLMs per character; architectures and experimental protocol.
+- **[Condorcet comparison](research-programs/condorcet-comparison.md)** — Deliberative vs. CJT-style comparison; two runs completed, initial evidence that deliberation changes outcomes on value-laden questions. Results in [condorcet-comparison/results/](research-programs/condorcet-comparison/results/).
 
-Phases 1–3 are accessible without deep repo context. If any item interests you — as practitioner, theorist, or builder — pick it up and run.
+The [research-programs README](research-programs/README.md) lists active and completed programs by theme. Pick an item that matches your skills or interests.
 
 ### [methodology-evolution.md](methodology-evolution.md)
 
@@ -62,7 +63,7 @@ The methodology claims to be self-improving: applying Cyberneutics to
 itself should produce measurable improvements. This directory is where
 that claim gets tested.
 
-- **research-plan.md** is the active work queue — what needs doing and how
+- **research-programs/** is the active work queue — what needs doing and how (index + plans and results)
 - **methodology-evolution.md** shows whether the methodology actually
   evolved through practice (not just accumulated documentation)
 - **uptake-and-usage.md** shows whether anyone outside the project

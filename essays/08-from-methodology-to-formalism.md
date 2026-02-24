@@ -184,7 +184,7 @@ requiring multiple coordinate charts, each revealing different aspects,
 none sufficient alone.
 
 The committee's five characters — Maya (paranoid-realist), Frankie
-(idealist), Joe (pragmatic), Vic (evidentiary), Tammy (systems) — are
+(idealist), Joe (continuity guardian), Vic (evidentiary), Tammy (systems) — are
 charts on the problem manifold. Each character's propensities define a
 coordinate system: a way of organizing the problem that makes certain
 features visible and others invisible. Maya sees hidden risks and political

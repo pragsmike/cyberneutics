@@ -60,7 +60,7 @@ How do humans make high-stakes decisions when truth is uncertain? We rarely do i
 
 We form committees. We empanel juries. We seek second opinions. We create structures where conflict is not a bug, but the method of discovery.
 
-I decided to try this with the LLM. Instead of asking one agent for "the answer," I built a game with five players (Maya, Vic, Frankie, and others), each with a specific "winning condition":
+I decided to try this with the LLM. Instead of asking one agent for "the answer," I built a game with five players (Maya, Vic, Frankie, Joe, Tammy), each with a specific "winning condition":
 
 *   **The Paranoid (Maya)** wins if she finds a hidden risk.
 *   **The Skeptic (Vic)** wins if he destroys an unsupported claim.

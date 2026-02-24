@@ -75,11 +75,21 @@ These aren't incremental improvements. They represent a fundamentally different 
 - [Why narrative engines change everything](./essays/01-why-narrative-engines-change-everything.md)
 - [From practice to theory: how we got here](./essays/02-from-practice-to-theory.md)
 - [Introduction to Sense-Making Methodology](./essays/03-sensemaking-101.md)
-- [The Stochastic Imps of Happenstance](./essays/the-stochastic-imps-of-happenstance.md)
 - [Cybernetics and the observer problem](./essays/04-cybernetics-and-observation.md)
 - [The synthesis: why sense-making is inherently cybernetic](./essays/05-the-synthesis.md)
+- [Deleuzian foundations: difference and repetition](./essays/06-deleuze-difference-repetition.md)
+- [Narrative Engineering: From Philosophy to Practice](./essays/07-bolands-narrative-engineering.md)
+- [From methodology to formalism](./essays/08-from-methodology-to-formalism.md)
+- [Narrative immune systems](./essays/09-narrative-immune-systems.md)
+- [Decisions under uncertainty](./essays/10-decisions-under-uncertainty.md)
+- [Conversation theory](./essays/11-conversation-theory.md)
+- [Stories all the way down](./essays/stories-all-the-way-down.md)
+- [The Stochastic Imps of Happenstance](./essays/the-stochastic-imps-of-happenstance.md)
 - [Societies of Thought: From Neural Evidence to Methodological Action](./essays/societies-of-thought-synthesis.md)
-- [Decisions Under Uncertainty](./essays/10-decisions-under-uncertainty.md)
+- [Narrative computing as historical progression](./essays/narrative-computing-history.md)
+- [When this methodology fails](./essays/when-methodology-fails.md)
+- [Scene 1: Bootstrapping Cybernetic Hermeneutics](./essays/scene-1.md)
+- [Tilt Sound Collective: A Story About AI, Trust, and Games Within Games](./essays/tilt-sound-collective-story.md)
 
 **[Artifacts](artifacts/)** - Practical techniques and protocols
 - [Adversarial committees with fixed character rosters](./artifacts/adversarial-committees.md)
@@ -111,11 +121,13 @@ The essays describe *why* narrative engines need narrative engineering. The arti
 | Command | What it does | When to use |
 |---------|-------------|-------------|
 | `/committee [topic]` | Runs an adversarial committee deliberation using the roster in `agent/roster.md` | Complex decisions, competing values, "what are we missing?" problems |
+| `/scenarios [situation]` | Divergent scenario generation (fan): explore possible futures before committing | Genuine uncertainty about *what might happen* — the fan half of fan/funnel |
+| `/probe [situation]` | Runs fan→funnel N times; produces variance report and decision landscape map | High-stakes decisions where understanding the *decision landscape* matters |
 | `/review` | Independent evaluation of a committee transcript against five rubrics | After any `/committee` run, or on a pasted transcript — completes the feedback loop |
 | `/string-diagram` | Converts resource equations to Mermaid diagrams | Visualizing pipelines, formalizing workflows, editing equation sets |
 | `/handoff` | Generates a session handoff for successor agents | End of work sessions, before breaks, after major milestones |
 
-These skills are the methodology made executable: `/committee` operationalizes the adversarial committee technique, `/review` operationalizes independent evaluation, `/string-diagram` operationalizes the palgebra formalism, and `/handoff` maintains continuity across agent sessions.
+These skills are the methodology made executable: `/committee` operationalizes the adversarial committee technique, `/scenarios` the fan (explore futures), `/probe` the repeated fan→funnel for landscape mapping, `/review` independent evaluation, `/string-diagram` the palgebra formalism, and `/handoff` continuity across agent sessions.
 
 ## Core insights
 
@@ -133,7 +145,7 @@ These skills are the methodology made executable: `/committee` operationalizes t
 
 Cyberneutics is a neologism derived from
 
-> Cyber (κυβερνήτης, the steersman) - governance, feedback, control
+> Cyber (κυβερνήτης, the steersman) - governance, feedback, control  
 > Neutics - evoking both hermeneutics (interpretation of texts) and neural (the substrate you're actually working with)
 
 It captures something that "narrative computing" doesn't quite get at: that you're not just computing on narratives but doing something closer to steering through interpretation - the cybernetic loop applied to meaning-making with neural systems.
@@ -145,7 +157,7 @@ This is early-stage documentation of an emerging methodology. The techniques des
 
 **Run and test:** For how to run the methodology (skills in chat, string-diagram script) and how to test the repo (smoke test, structure checks), see the [repository review and run guide](meta/repository-review-and-run-guide.md). For recent session context and maintainer hand-off, see the latest handoff in [agent/](agent/).
 
-**Evidence base**: The adversarial committee technique has empirical support from research on multi-agent reasoning — see [Societies of Thought](essays/societies-of-thought-synthesis.md) for a synthesis of findings from Google, UChicago, and the Santa Fe Institute showing that perspective-switching and conversational scaffolding improve reasoning quality. The theoretical foundations draw on established work in sense-making methodology (Dervin), second-order cybernetics (von Foerster, Bateson), and process philosophy (Deleuze). What remains to be validated is the specific combination of techniques and their calibration across problem domains.
+**Evidence base**: The adversarial committee technique has empirical support from research on multi-agent reasoning — see [Societies of Thought](essays/societies-of-thought-synthesis.md) for a synthesis of findings from Google, UChicago, and the Santa Fe Institute showing that perspective-switching and conversational scaffolding improve reasoning quality. Internal comparison runs ([deliberative vs. CJT-style independent vote](artifacts/comparison-protocol-deliberative-vs-cjt.md)) provide initial evidence that deliberation with Robert's Rules produces materially different outcomes than independent aggregation — on a value-laden question, the two pipelines gave opposite verdicts (see [comparison records](agent/comparisons/)). The theoretical foundations draw on established work in sense-making methodology (Dervin), second-order cybernetics (von Foerster, Bateson), and process philosophy (Deleuze). The relationship to Condorcet's jury theorem is [explicitly documented](artifacts/condorcet-jury-theorem-and-committee.md): we use CJT as a motivating analogy but do not satisfy its conditions, by design. What remains to be validated is the specific combination of techniques and their calibration across problem domains.
 
 Feedback, questions, and contributions welcome.
 

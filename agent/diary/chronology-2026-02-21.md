@@ -27,7 +27,7 @@ This entry was the input for formalization and implementation; it was later mark
 - **Handoff and archive**: Add handoff 2026-02-21, archive 2026-02-20.
 - **Repo rename mop-up**: Rename cyber-sense → cyberneutics in docs (`d8d8359`). Two known forks notified.
 - **Narrative computing vs narrative engineering**: Clarify and then establish the distinction across docs (`f5ee32d`, `5d14cc3`) — computing = what the machine does, engineering = how we compose primitives.
-- **Extractions**: Research plan from societies-of-thought-synthesis → `meta/research-plan.md`; Tilt Sound Collective fiction from stochastic-imps essay → `essays/tilt-sound-collective-story.md`.
+- **Extractions**: Research plan from societies-of-thought-synthesis → `meta/research-programs/societies-of-thought-research-plan.md`; Tilt Sound Collective fiction from stochastic-imps essay → `essays/tilt-sound-collective-story.md`.
 - **References**: Build comprehensive annotated bibliography in `references/README.md` (39 sources, 9 sections, “Cited in” pointers).
 
 These set the naming and doc baseline before fan/funnel work.

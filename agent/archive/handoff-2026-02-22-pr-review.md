@@ -1,0 +1,144 @@
+# Session Handoff: 2026-02-22 (PR Review and Documentation Update)
+
+**Note:** Two earlier sessions from 2026-02-22 have been archived:
+- `agent/archive/handoff-2026-02-22-condorcet.md` — the condorcet contributor session (review/run guide, smoke test, deliberations, comparison protocol, comparison runs)
+- `agent/archive/handoff-2026-02-22-wild-verification.md` — wild-material-incorporation verification and Pask quote session
+
+**This handoff was superseded by a later 2026-02-22 session (editorial review, skills docs, research-programs collection). Archived to preserve PR-review session context.**
+
+## Session Summary
+
+**Duration**: Single session. mg merged the Condorcet experiment PR and asked for thorough review, documentation updates, and housekeeping.
+
+**Main Accomplishments**:
+- **Exhaustive PR review**: Reviewed all 45 files changed in the merged Condorcet PR against the project's documented assumptions. Determined which committee phase it affects (none — it adds a parallel pipeline and documentation, not modifying existing phases), how it fits with assumptions (strong alignment), and how it validates the Roberts Rules forcing function practice (the code-of-conduct comparison is the best empirical evidence yet for Statistical Shortcut #1: Premature Consensus).
+- **Handoff split**: Separated the merged `handoff-2026-02-22.md` into two clean standalone files — condorcet session archived to `agent/archive/handoff-2026-02-22-condorcet.md`, wild-verification content retained in `agent/handoff-2026-02-22.md`.
+- **Documentation updates propagating PR learnings**: Updated 7 files to reflect what the Condorcet experiment validated:
+  - `meta/uptake-and-usage.md` — Feb 22 update under Adoption Event #1 with completed investigation, comparison evidence, validated claims, updated predicted signals table
+  - `meta/methodology-evolution.md` — new development trajectory entry, updated equilibrium and adoption sections
+  - `README.md` — evidence base paragraph now references comparison evidence and CJT doc
+  - `artifacts/roberts-rules-forcing-function.md` — empirical evidence note under Statistical Shortcut #1
+  - `artifacts/adversarial-committees.md` — new "Evidence: deliberation vs. independent aggregation" subsection under "What Success Looks Like"
+  - `CLAUDE.md` — repository map now includes `agent/comparisons/`
+- **PR review archived**: Comprehensive review written to `agent/archive/condorcet-pr-review.md`
+- **Maintainer review checklist verified and archived**: All items in `agent/ready-for-maintainer-review.md` confirmed addressed; archived to `agent/archive/ready-for-maintainer-review-2026-02-22.md`
+- **Quick-start guide updated**: Added `when-methodology-fails.md` to recommended reading in `artifacts/quick-start-guide.md` (carried forward item, now complete)
+
+**Original intent**: mg asked for PR review → documentation updates → housekeeping → quick-start fix → handoff.
+
+**Actual outcome**: All completed as requested. Three outstanding optional items remain (see below).
+
+---
+
+## Mistakes and Lessons
+
+- **Tool sequencing**: The `Edit` and `Write` tools require a fresh `Read` of the target file in the same session before they'll work, even if the file was read in a previous conversation turn that got compacted. Multiple edits failed with "File has not been read yet" errors. **Lesson for successor**: always read a file immediately before editing it if there's any chance the prior read was in a compacted context window.
+- **`gh` CLI not available**: Tried `gh pr view 3` to inspect the PR — `gh` is not on PATH in this environment. Used `git diff` on specific commits instead. **Lesson**: use git directly for diff inspection; don't assume GitHub CLI is available.
+- **Python not on PATH**: Could not run `python scripts/test_string_diagram.py` to verify the smoke test. Verified correctness by file inspection instead. **Lesson**: this environment may not have Python readily available in the bash shell.
+
+---
+
+## Current State (as of end of this session)
+
+### Completed This Session
+
+| Item | Location / note |
+|------|------------------|
+| PR review | `agent/archive/condorcet-pr-review.md` |
+| Handoff split | `agent/archive/handoff-2026-02-22-condorcet.md` (condorcet session); `agent/archive/handoff-2026-02-22-wild-verification.md` (wild-verification session) |
+| meta/uptake-and-usage.md update | Feb 22 update under Adoption Event #1; updated predicted signals table; new "deliberation vs. aggregation" row |
+| meta/methodology-evolution.md update | Feb 22 development trajectory entry; updated equilibrium and adoption sections |
+| README.md evidence base | Now references comparison evidence and links to CJT doc and comparison protocol |
+| artifacts/roberts-rules-forcing-function.md | Empirical evidence paragraph added under Statistical Shortcut #1 |
+| artifacts/adversarial-committees.md | "Evidence: deliberation vs. independent aggregation" subsection |
+| CLAUDE.md repository map | Added `comparisons/<topic-slug>/` to `agent/` table |
+| ready-for-maintainer-review.md | Verified and archived to `agent/archive/ready-for-maintainer-review-2026-02-22.md` |
+| Quick-start guide | Added `when-methodology-fails.md` to recommended reading list |
+
+### Outstanding Optional Items
+
+1. **CI workflow**: The CI deliberation recommended adding a GitHub Actions workflow that runs `scripts/test_string_diagram.py`. Not implemented. mg has not decided whether to add it.
+2. **Full comparative evaluation**: One decision, three methods (committee, simple pros/cons, individual LLM call), same rubric — the committee's #1 evidence gap. The two deliberative-vs-CJT comparisons are partial evidence but don't cover the full three-method protocol. Requires mg's go-ahead and a chosen decision.
+3. **gap_analysis.md closure**: Update per wild-material-incorporation plan Part 5 (completed Essay 11, residuality absorption, three strikethrough TODOs). Low priority paperwork.
+
+### Plans Awaiting mg's Go-Ahead
+
+- **`meta/research-programs/evaluation-schemes.md`**: Experimental designs for testing whether committees beat simpler methods. Plan only; not executed.
+- **`meta/research-programs/multi-model-committee.md`**: Investigation of using different LLMs for different characters. Plan only; not executed.
+
+### Carried Forward (still relevant)
+
+- `/probe` still untested; `/review` on methodology-adoption (scenario-aware) not run.
+- Roster customization workflow undocumented; `integration-with-moollm.md` hardcodes roster.
+
+---
+
+## Immediate Next Steps
+
+1. **Comparative evaluation** (highest value): Run one decision through three methods (committee, simple pros/cons, individual LLM call) with same rubric. Requires mg to choose a decision. This is the #1 evidence gap.
+2. **If mg wants to pursue plans**: Evaluation-schemes analysis and/or multi-model-committee analysis — both exist as written plans in `meta/research-programs/`.
+3. **If closing paperwork**: Update `agent/gap_analysis.md` per wild-material-incorporation plan Part 5.
+4. **If testing infrastructure**: Run `/probe` on a topic to validate the probe skill; run `/review` on methodology-adoption with scenario context.
+
+---
+
+## Working with mg: Session-Specific Insights
+
+- **Structured delegation**: mg gives clear, sequenced instructions ("Do 2. Then handoff.") and expects autonomous execution without confirmation prompts. Follow the sequence literally.
+- **Documentation propagation**: When a PR validates claims, mg expects those claims to be updated across all documents that make them — not just the primary artifact. Think about which essays, artifacts, READMEs, and meta/ files contain claims that are now stronger, and update them proactively.
+- **Housekeeping valued**: mg explicitly asked to verify the ready-for-maintainer-review checklist, archive it when done, and write the PR review into archive/. Clean closure of administrative artifacts matters.
+- **"Carried forward" items**: mg tracks these across handoffs and will explicitly ask to resolve them (as with the quick-start guide item this session). Keep the carried-forward list honest and short.
+
+---
+
+## Open Questions and Decisions Needed
+
+- **CI workflow**: Add the GitHub Actions job for `scripts/test_string_diagram.py`, or defer? Committee recommended it; implementation is straightforward.
+- **Comparative evaluation**: What decision should be used for the three-method comparison? mg needs to choose a real or realistic decision to run through all three pipelines.
+- **Evaluation-schemes / multi-model-committee**: Pursue one or both? Plans exist in `meta/research-programs/`; execution depends on mg.
+
+---
+
+## Technical Notes
+
+- **Environment constraints**: This Windows environment does not have `gh` CLI or `python` readily available on PATH in the bash shell. Use `git` directly for repository inspection. File verification by inspection rather than execution.
+- **Tool sequencing requirement**: Always `Read` a file immediately before `Edit` or `Write` if the previous read might have been compacted. The tools enforce a "read before edit" contract per session context.
+- **Three handoffs for one date**: 2026-02-22 now has three handoff documents because three separate agent sessions worked on this date. The two earlier ones are archived with suffixes (`-condorcet`, `-wild-verification`). This one is the current active handoff.
+
+---
+
+## Watch-Outs for Successor
+
+- **Don't re-review the Condorcet PR**: Review is complete and archived at `agent/archive/condorcet-pr-review.md`. All documentation updates have been propagated.
+- **Don't re-verify wild-material-incorporation**: Verified in an earlier session; report at `agent/wild-material-incorporation-verification.md`.
+- **Essay 06 Pask passage**: mg has edited the opening of "The Category Theory Connection" section. Respect mg's wording; do not revert.
+- **Quick-start guide `when-methodology-fails.md` reference**: Just added this session. It's in the "Read the detailed techniques" list under "What to Do Next". Don't add it again.
+- **The code-of-conduct comparison is the crown jewel**: When discussing evidence for the methodology, the code-of-conduct comparison (CJT Aye 3-2, Deliberative Nay 5-0 — opposite verdicts from same roster) is the strongest empirical evidence. It's now documented in `meta/uptake-and-usage.md`, `artifacts/adversarial-committees.md`, `artifacts/roberts-rules-forcing-function.md`, and `README.md`.
+
+---
+
+## Context for Specific Files
+
+| File | Note |
+|------|------|
+| `agent/archive/condorcet-pr-review.md` | This session's comprehensive PR review. Covers fit with assumptions, phase analysis, Roberts Rules validation. |
+| `agent/archive/handoff-2026-02-22-condorcet.md` | Condorcet contributor session handoff (split out from merged file this session). |
+| `agent/archive/handoff-2026-02-22-wild-verification.md` | Wild-material verification session handoff (archived this session to make room for this handoff). |
+| `agent/archive/ready-for-maintainer-review-2026-02-22.md` | Maintainer review checklist, verified and archived this session. |
+| `meta/uptake-and-usage.md` | Updated this session with Condorcet completion, comparison evidence, predicted signals table. |
+| `meta/methodology-evolution.md` | Updated this session with Feb 22 entry, equilibrium/adoption updates. |
+| `artifacts/roberts-rules-forcing-function.md` | Empirical evidence paragraph added under Statistical Shortcut #1 this session. |
+| `artifacts/adversarial-committees.md` | Evidence subsection added under "What Success Looks Like" this session. |
+| `artifacts/quick-start-guide.md` | `when-methodology-fails.md` reference added to recommended reading this session. |
+| `CLAUDE.md` | Repository map updated with `comparisons/` entry this session. |
+| `README.md` | Evidence base paragraph updated with comparison evidence this session. |
+
+---
+
+## Session Metadata
+
+**Agent**: Session that reviewed merged Condorcet PR, propagated documentation updates, performed housekeeping, added quick-start reference, and created handoff
+**Date**: 2026-02-22
+**Goal**: Review PR, update documentation with validated claims, clean up administrative artifacts, resolve carried-forward item
+**Status**: All requested work complete. Three optional items remain (CI workflow, comparative evaluation, gap_analysis closure).
+**Continuation priority**: Comparative evaluation (highest value, requires mg's decision choice) → evaluation-schemes/multi-model plans (if mg approves) → `/probe` test → gap_analysis closure (paperwork).

@@ -1,10 +1,6 @@
-# Multi-Model Committee Architectures
+# Multi-Model Committee: Reference Material
 
-## Executive Summary
-
-This document investigates whether using different LLM models to play different committee characters would produce more authentic and rigorous adversarial deliberation than a single model simulating all five characters. It proposes five distinct architectural patterns, analyzes their trade-offs, and outlines an experimental protocol to test the hypothesis that model diversity amplifies perspective diversity.
-
-**Core claim**: A single model simulating five characters must overcome its own training biases and latent space constraints to generate genuine disagreement. Different models with genuinely different training distributions, RLHF/constitutional AI frameworks, and reasoning architectures could produce more authentic adversarial dynamics at lower cognitive cost to the system.
+This document contains the architectural analysis, model personality profiles, implementation code, cost calculations, and open questions for the multi-model committee research program. For the experimental plan (what to do, in what order), see [multi-model-committee.md](multi-model-committee.md).
 
 ---
 
@@ -534,8 +530,6 @@ class CommitteeEvaluator:
 - Less likely to advocate for bold/unconventional approaches
 
 **Best Character Fit**: **Frankie (Idealism/Values)** or **Joe (Continuity/Memory)**
-- Natural affinity with values-based deliberation
-- Reads context deeply, maintains coherence across conversation
 
 ---
 
@@ -565,8 +559,6 @@ class CommitteeEvaluator:
 - Confidence can be overconfident on factual questions
 
 **Best Character Fit**: **Vic (Evidence Prosecutor)** or **Tammy (Systems Thinker)**
-- Natural strength in evidence evaluation and logical inconsistency detection
-- Good at breaking down complex systems into causal chains
 
 ---
 
@@ -596,8 +588,6 @@ class CommitteeEvaluator:
 - Can be more verbose than needed
 
 **Best Character Fit**: **Joe (Continuity/Memory)** or **Vic (Evidence Prosecutor)**
-- Excellent at maintaining historical context and referencing prior work
-- Good at evidence gathering and synthesis
 
 ---
 
@@ -628,8 +618,6 @@ class CommitteeEvaluator:
 - Quality variance (depends on fine-tune)
 
 **Best Character Fit**: **Maya (Paranoid Realist)**
-- Natural tendency toward risk flagging and skepticism
-- Less likely to hedged uncomfortable truths
 
 ---
 
@@ -658,8 +646,6 @@ class CommitteeEvaluator:
 - Less documentation of tendencies
 
 **Best Character Fit**: **Maya (Paranoid Realist)** or **Frankie (Idealism)**
-- As a contrarian voice, good at seeing things other models miss
-- Different inductive biases sometimes produce more novel framings
 
 ---
 
@@ -940,233 +926,6 @@ Latency: 10 topics × 5 runs × 80 seconds = 40,000 seconds = 11 hours (sequenti
 Latency: 10 topics × 5 runs × 20 seconds = 10,000 seconds = 2.8 hours (parallel execution)
 ```
 
-**Multi-Model (Random Assignment), 5 Runs per Topic**:
-```
-10 topics × 5 runs × 15 turns × avg cost = 750 turns × $0.0000056 = $0.042
-+ API overhead: $25/month
-Latency (parallel): 10 topics × 5 runs × 20 seconds = 2.8 hours
-```
-
----
-
-## Experimental Protocol
-
-### Phase 1: Establish Baseline + Model Profiles
-
-**Goal**: Validate that single-model works as expected; profile each model's natural tendencies.
-
-**Duration**: 1–2 weeks
-
-**Procedure**:
-
-1. **Single-Model Baseline** (5 topics, 1 run each)
-   - Run standard deliberations using current single-model approach
-   - Topics should cover diverse domains (ethics, technical, governance, resource allocation, strategy)
-   - Score on 5 rubrics
-   - Record as `baseline-single-model.json`
-
-2. **Model Personality Profiles** (5 topics, 1 response per model, no deliberation)
-   - For each topic, send to all 5 models: "Please respond to this topic: [topic]. What's your perspective?"
-   - No character roleplay, no prior context
-   - Analyze responses for:
-     - Length, hedging score, confidence, evidence count
-     - Risk mentions, value mentions, sentiment
-     - Logical structure, novelty of framing
-   - Record as `model-profiles.json`
-
-3. **Output**:
-   ```yaml
-   baseline_scores:
-     topic_1:
-       comprehensiveness: 8.2
-       adversarial_rigor: 7.1
-       assumption_coverage: 8.5
-       reasoning_depth: 7.8
-       decision_readiness: 7.4
-       avg: 7.8
-
-   model_profiles:
-     claude:
-       hedging_avg: 0.62
-       confidence_avg: 0.58
-       evidence_count_avg: 2.4
-       risk_mentions_avg: 1.2
-       value_mentions_avg: 3.8
-     gpt4:
-       hedging_avg: 0.31
-       confidence_avg: 0.72
-       evidence_count_avg: 4.1
-       risk_mentions_avg: 2.1
-       value_mentions_avg: 0.9
-     ... etc
-   ```
-
-**Decision Gate**: Do model profiles justify hypothesis that different models have different personalities? If yes, proceed to Phase 2.
-
----
-
-### Phase 2: Comparative Architectures
-
-**Goal**: Run the same topics through Patterns 1, 3, and 4; compare outputs.
-
-**Duration**: 2–4 weeks
-
-**Procedure**:
-
-1. **Pattern 1: Fixed Mapping** (5 topics, 1 run each)
-   - Use empirically-derived model-character assignments from Phase 1
-   - Example mapping:
-     - Maya: Llama (high risk mentions, low hedging)
-     - Frankie: Claude (high value mentions)
-     - Vic: GPT-4o (high evidence count, high confidence)
-     - Tammy: Gemini (high cross-domain references)
-     - Joe: Claude or Gemini (maintain coherence)
-   - Score on 5 rubrics, track per-character contribution
-   - Record as `pattern-1-fixed-mapping.json`
-
-2. **Pattern 3: No Character Prompting** (5 topics, 1 run each, same topics as Pattern 1)
-   - Send same 5 models (assigned to characters, but no character brief)
-   - Prompt: "We are running a debate on [topic]. Here is what others have said: [prior responses]. Please add your perspective."
-   - Score on same rubrics
-   - Record as `pattern-3-no-prompting.json`
-
-3. **Pattern 4: Hybrid** (5 topics, 1 run each, same topics)
-   - Use same fixed mapping as Pattern 1
-   - BUT: character brief is tuned to amplify that model's natural tendencies
-   - Example: To Llama (Maya): "You are Maya, Paranoid Realist. Catch hidden agendas and risks. What's being dismissed?"
-   - Score, record as `pattern-4-hybrid.json`
-
-4. **Comparative Analysis**:
-   ```python
-   def compare_patterns(topics, patterns):
-       """
-       patterns: {
-           'single_model': [...scores],
-           'pattern_1': [...scores],
-           'pattern_3': [...scores],
-           'pattern_4': [...scores]
-       }
-       """
-       for topic in topics:
-           for rubric in ['comprehensiveness', 'adversarial_rigor', ...]:
-               scores = [patterns[p][topic][rubric] for p in patterns.keys()]
-               print(f"{topic} / {rubric}:")
-               print(f"  Single-Model: {scores[0]:.2f}")
-               print(f"  Pattern 1: {scores[1]:.2f}")
-               print(f"  Pattern 3: {scores[2]:.2f}")
-               print(f"  Pattern 4: {scores[3]:.2f}")
-               print()
-
-       # Statistical test: does pattern matter?
-       # ANOVA or Kruskal-Wallis test
-       p_value = statistical_test(patterns)
-       if p_value < 0.05:
-           print("✓ Pattern choice significantly affects deliberation quality")
-       else:
-           print("✗ Pattern choice does not significantly affect quality")
-   ```
-
-5. **Qualitative Analysis**:
-   - For each pattern, manually review 2–3 transcripts
-   - Ask: Do arguments feel genuinely different, or theatrically different?
-   - Does the debate reveal different blind spots?
-   - Which character's contribution feels most authentic?
-
-**Decision Gate**: Which pattern produces the best results (highest aggregate score)? Is the improvement worth the cost/complexity?
-
----
-
-### Phase 3: Ablation & Optimization
-
-**Goal**: Isolate the contribution of model diversity vs. character prompting; find optimal model-character assignments.
-
-**Duration**: 2–3 weeks
-
-**Procedure**:
-
-1. **Ablation: Model Diversity**
-   - Run Pattern 4 (hybrid) vs. Pattern 1 (fixed) multiple times on same topics
-   - Does the specific model-character pairing matter, or just that there are different models?
-   - Metric: variance in scores across runs using same pattern
-     - High variance = model identity matters
-     - Low variance = character prompting dominates
-
-2. **Ablation: Character Prompting**
-   - Run Pattern 3 (no prompting) vs. Pattern 1 (with prompting)
-   - Does the character brief help or hinder authentic diversity?
-   - Metric: do deliberations with character briefs converge to more stereotyped arguments?
-
-3. **Optimization: Model-Character Permutations**
-   - Run Pattern 4 (hybrid) with different model-character mappings
-   - Example:
-     - Run 1: Standard mapping (Claude=Frankie, Llama=Maya, etc.)
-     - Run 2: Swap Maya and Frankie assignments (Llama=Frankie, Claude=Maya)
-     - Run 3: Rotate all assignments
-     - etc.
-   - Identify which pairing produces strongest debate (highest adversarial rigor score)
-   - Record as `optimization-matrix.json`:
-     ```json
-     {
-       "topic": "Should we build AGI without alignment safeguards?",
-       "mappings": {
-         "claude_frankie_gpt4_vic_gemini_tammy": 7.8,
-         "llama_frankie_gpt4_vic_gemini_tammy": 6.9,
-         "claude_maya_gpt4_vic_gemini_tammy": 6.5,
-         ...
-       }
-     }
-     ```
-
-4. **Statistical Significance**:
-   - For top 3 patterns, run 10 deliberations each on same topics
-   - Compute confidence intervals on average rubric scores
-   - Do confidence intervals overlap? (If not, difference is significant)
-
-**Decision Gate**: Based on cost, complexity, and performance—which pattern should be production recommendation?
-
----
-
-### Phase 4: Longitudinal Validation
-
-**Goal**: Confirm that the chosen pattern produces consistent quality over time and across diverse topics.
-
-**Duration**: Ongoing (3–6 months)
-
-**Procedure**:
-
-1. **Diverse Topic Set** (15–20 topics covering):
-   - Ethics questions
-   - Technical architecture choices
-   - Governance/policy
-   - Resource allocation
-   - Strategy/planning
-   - Failure analysis
-   - Uncertainty quantification
-
-2. **Runs per Topic**: 3 deliberations per topic using chosen pattern
-   - Total: 45–60 deliberations
-   - Score each
-
-3. **Quality Metrics**:
-   - Mean score per rubric
-   - Std. dev. (consistency)
-   - Min/max (failure modes)
-   - Correlation between rubrics (does high adversarial rigor correlate with good assumption coverage?)
-
-4. **Regression Analysis**:
-   ```
-   Does topic domain affect score? (ethics vs. technical)
-   Does topic complexity affect score?
-   Are any rubrics weaker than others?
-   What's the failure mode (which topics score poorly)?
-   ```
-
-5. **Output**: `validation-report.md`
-   - Average scores by rubric
-   - Variability analysis
-   - Recommendations for when to use single-model vs. multi-model
-   - Known limitations and failure modes
-
 ---
 
 ## Evaluation Framework
@@ -1387,59 +1146,6 @@ Gordon Pask's conversation theory states that genuine conversation requires part
 **Current single-model committee**: Closer to monologue—one agent (the model) speaking through five puppets (characters).
 
 **Proposed multi-model committee**: Actual conversation—five different agents (models) with different cognitive architectures, reasoning strategies, and latent spaces interacting through five roles (characters).
-
----
-
-## Risks & Mitigations
-
-| Risk | Probability | Impact | Mitigation |
-|------|-------------|--------|-----------|
-| **Coordination complexity overwhelms benefits** | Medium | High | Phase 2 testing; compare pattern complexity to score improvement |
-| **API cost multiplication** | Low | Medium | Use parallel execution; negotiate volume discounts; use open-source models |
-| **Inconsistent quality (weak model drags down debate)** | Medium | Medium | Implement model health checks; fallback to single-model; abort with grace |
-| **Loss of "game within game"** | Low | Medium | Empirically test Pattern 3 vs. Pattern 1; single-model approach still available |
-| **Model training cutoff creates "hallucinated facts"** | Medium | Low | Accept as part of model's perspective; add fact-checker role if needed |
-| **Vendor lock-in to multiple APIs** | Medium | Medium | Prioritize open-source models (Llama); build abstraction layer for easy swaps |
-| **Debate meanders without strong Chair** | Medium | Medium | Use explicit agenda; limit turn count; use model as Chair if needed |
-| **Model saturation (diversity decreases with repeated runs)** | Low | Medium | Refresh model set periodically; use Pattern 2 (random assignment) |
-| **Evaluation model biases results** | Medium | Medium | Use independent evaluator; aggregate multiple evaluators; track provenance |
-| **Difference is statistically insignificant** | Medium | Low | Commit to Phase 3 ablation; accept if result is negative (single-model sufficient) |
-
----
-
-## Recommendations
-
-### Short-term (Phases 1–2: 4–6 weeks)
-
-1. **Run baseline + profile studies** (Phase 1)
-   - Establish single-model performance
-   - Measure each model's natural personality biases
-   - Investment: ~$50, ~20 hours
-
-2. **Run Pattern 1 vs. Pattern 4 comparison** (Phase 2)
-   - Use empirical profiles to assign models to characters
-   - Compare fixed hybrid mapping vs. current single-model approach
-   - Investment: ~$100, ~30 hours
-
-3. **Decision point**: Does hybrid multi-model beat single-model on evaluation rubrics?
-   - **If yes**: Proceed to optimization (Phase 3)
-   - **If no**: Multi-model adds complexity without benefit; stick with single-model but document findings
-
-### Medium-term (Phase 3: 2–3 weeks, if Phase 2 is positive)
-
-4. **Run ablation studies** (Phase 3)
-   - Isolate contribution of model diversity vs. character prompting
-   - Optimize model-character pairings
-   - Investment: ~$150, ~40 hours
-
-5. **Write decision memo**: Based on Phases 1–3, recommend which pattern should be standard practice
-
-### Long-term (Phase 4: ongoing, if Phase 3 is positive)
-
-6. **Longitudinal validation** (Phase 4)
-   - Run Pattern 4 (hybrid) on diverse topic set
-   - Track consistency and failure modes
-   - Refine based on live performance
 
 ---
 
@@ -1709,22 +1415,3 @@ logging:
   results_dir: ./results/
   log_level: INFO
 ```
-
----
-
-## Conclusion
-
-Multi-model committee deliberations represent a natural evolution of the Cybernetics methodology, extending the principle of perspective diversity from the character level to the model level. The evidence from multi-agent debate literature suggests that genuine model diversity could improve deliberation quality; the main questions are (1) whether the improvement justifies the added complexity and cost, and (2) which architectural pattern best realizes the benefits.
-
-This document provides five concrete patterns (from simple to sophisticated), an experimental protocol to test them, and an implementation template to begin building. The recommended path is:
-
-1. **Phase 1–2** (~6 weeks): Establish baselines, run Pattern 4 (Hybrid) vs. single-model
-2. **Decision gate**: Does hybrid improve over single-model? If yes, continue; if no, document and close
-3. **Phase 3** (~3 weeks, if positive): Optimize model-character pairings, ablate components
-4. **Phase 4** (ongoing): Longitudinal validation and production hardening
-
-The output of this work will be either:
-- **A new standard for committee deliberations** (if multi-model proves superior), published to `/artifacts/` and integrated into `/committees/SKILL.md`
-- **Documented evidence** that single-model simulation is sufficient (if multi-model fails to improve), published to `/agent/deliberations/` for future reference
-
-Either way, the methodology and infrastructure become reusable for future agent research.

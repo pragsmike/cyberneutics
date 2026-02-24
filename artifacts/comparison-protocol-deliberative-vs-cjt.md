@@ -69,7 +69,9 @@ See [Condorcet's Jury Theorem and the Committee](condorcet-jury-theorem-and-comm
 
 ## Where to store comparison runs
 
-Suggested layout:
+Runs that are part of the **condorcet-comparison research program** live in [meta/research-programs/condorcet-comparison/results/](../meta/research-programs/condorcet-comparison/results/). The first two runs (second-ci-job and code-of-conduct, 2026-02-22) are stored there.
+
+For **future runs** not yet assigned to a research program, or ad-hoc comparisons, use this layout:
 
 - `agent/comparisons/<topic-slug>/`
   - `00-charter.md` (shared question and context)

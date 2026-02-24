@@ -13,6 +13,8 @@ If you're working with an AI agent on this repository, the methodology is availa
 - **`/committee [topic]`** — runs a full adversarial committee deliberation, writes structured output to `agent/deliberations/`
 - **`/review`** — independent evaluation of the transcript against five rubrics, with remediation feedback loop
 
+Other skills: **`/scenarios [situation]`** (explore possible futures), **`/probe [situation]`** (map decision landscape), **`/handoff`**, **`/string-diagram`** — see the [repository README](../README.md) or [repository review and run guide](../meta/repository-review-and-run-guide.md).
+
 These automate the five-step process described below. Try `/committee Should we hire two juniors or one senior?` to see it in action. The rest of this guide explains what the skills do and why, so you can use the methodology manually or adapt it to other tools.
 
 ## Prerequisites
@@ -279,6 +281,7 @@ If no → what specifically didn't help? That's useful information.
 - [Robert's Rules as Forcing Functions](./roberts-rules-forcing-function.md) - procedural rigor
 - [Independent Evaluation Protocols](./independent-evaluation.md) - comprehensive rubrics
 - [Cross-Scenario Learning](./cross-scenario-learning.md) - building institutional memory
+- [When the Methodology Fails](../essays/when-methodology-fails.md) - six failure modes and when *not* to use this
 
 **Try it on another problem**:
 - Different domain to test generality

@@ -281,7 +281,7 @@ How do you maintain the umwelt across these discontinuities?
 
 **Agent directories** provide material persistence. Files exist outside conversation boundaries. State management transcends any individual session. The umwelt's material substrate persists even when no AI instance is active.
 
-**Character propensities** provide conceptual continuity. Maya's dispositional skepticism, Tammy's systems thinking, Joe's pragmatic focus—these persist as stable interpretive positions independent of which AI instance embodies them in any given session.
+**Character propensities** provide conceptual continuity. Maya's dispositional skepticism, Tammy's systems thinking, Joe's continuity-guardian focus—these persist as stable interpretive positions independent of which AI instance embodies them in any given session.
 
 **Lesson extraction** makes implicit learning explicit. At the end of each deliberation, extract what was learned. Codify it. Make it available for injection into future deliberations. Pattern recognition becomes institutional knowledge.
 
@@ -501,6 +501,6 @@ Von Foerster, Heinz. 2003. *Understanding Understanding: Essays on Cybernetics a
 
 **From the Cyberneutics artifacts**:
 - [Adversarial Committees](../artifacts/adversarial-committees.md) - Core technique
-- [Robert's Rules as Forcing Function](../artifacts/roberts-rules-forcing-function.md) - Preventing premature closure
+- [Robert's Rules as Forcing Functions](../artifacts/roberts-rules-forcing-function.md) - Preventing premature closure
 - [Independent Evaluation](../artifacts/independent-evaluation.md) - RUBRIC scoring
 - [Cross-Scenario Learning](../artifacts/cross-scenario-learning.md) - Building institutional memory
