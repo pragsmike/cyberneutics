@@ -1,6 +1,8 @@
 {
   "name": "cyberneutics",
-  "version": "0.1.0",
-  "description": "Narrative engineering for decisions under genuine uncertainty. Committee deliberation with independent agents, scenario generation, and decision landscape mapping for knowledge workers.",
-  "author": "mg"
+  "version": "0.1.1",
+  "description": "Narrative engineering for decisions under genuine uncertainty. Committee deliberation with independent perspectives, scenario generation, and decision landscape mapping for knowledge workers.",
+  "author": {
+    "name": "mg"
+  }
 }

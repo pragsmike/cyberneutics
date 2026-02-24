@@ -84,6 +84,12 @@ A summary showing:
 **Monitoring plan**:
 - Watch for [signal] — indicates [scenario] is materializing
 
+## Cost and scope
+
+A probe runs scenario generation plus a full committee deliberation for each of the 4 scenarios. That's 4 complete five-member deliberations — a substantial operation. Expect this to take several minutes and use significant context.
+
+For lighter-weight exploration, consider running `/cyberneutics:scenarios` first, reading the output, and then running `/cyberneutics:committee` only on the 1-2 scenarios that seem most decision-relevant.
+
 ## For rigorous landscape mapping
 
 For high-stakes decisions, run this command 3-5 times and compare the outputs. Stable resolutions across runs are robust. Unstable ones signal a decision near a critical boundary — that's where you need more information before committing.

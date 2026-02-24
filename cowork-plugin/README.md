@@ -1,12 +1,12 @@
 # Cyberneutics
 
-**Structured adversarial deliberation for decisions under genuine uncertainty.** Five independent AI agents with radically different worldviews stress-test your thinking, surface hidden assumptions, and map the trade-offs you're actually facing.
+**Structured adversarial deliberation for decisions under genuine uncertainty.** Five independent committee members with radically different worldviews stress-test your thinking, surface hidden assumptions, and map the trade-offs you're actually facing.
 
 ## The three things you can do
 
 - **Explore possible futures** (`/cyberneutics:scenarios`) — Generate distinct scenarios for your situation so you can prepare for multiple possibilities, not just the one you expect.
 
-- **Stress-test a decision** (`/cyberneutics:committee`) — Five independent agents examine your problem from political, values-based, historical, evidentiary, and systems perspectives. The output is a map of the decision space, not a recommendation.
+- **Stress-test a decision** (`/cyberneutics:committee`) — Five independent committee members examine your problem from political, values-based, historical, evidentiary, and systems perspectives. The output is a map of the decision space, not a recommendation.
 
 - **Test decision robustness** (`/cyberneutics:probe`) — Run scenarios and deliberation together, then analyze which conclusions hold up across different futures and which are fragile.
 
@@ -28,7 +28,7 @@ You'll get four distinct scenarios — what if trends continue? What if somethin
 /cyberneutics:committee Should we expand into Europe now or wait? Consider the scenarios above.
 ```
 
-Five agents debate your options. Maya asks who benefits politically if expansion fails. Frankie asks whether this serves your mission or just your growth metrics. Joe recalls the last failed international push. Vic demands evidence on market size and GDPR costs. Tammy traces how expansion changes your team dynamics and product roadmap.
+Five committee members debate your options. Maya asks who benefits politically if expansion fails. Frankie asks whether this serves your mission or just your growth metrics. Joe recalls the last failed international push. Vic demands evidence on market size and GDPR costs. Tammy traces how expansion changes your team dynamics and product roadmap.
 
 **Step 3: Check the quality.**
 
@@ -36,7 +36,7 @@ Five agents debate your options. Maya asks who benefits politically if expansion
 /cyberneutics:review
 ```
 
-An independent evaluation scores the deliberation against five rubrics. Did the agents actually argue, or just make polite separate speeches? Were trade-offs specific or vague? Were claims evidence-backed?
+An independent evaluation scores the deliberation against five rubrics. Did the committee members actually argue, or just make polite separate speeches? Were trade-offs specific or vague? Were claims evidence-backed?
 
 ## When to use this
 
@@ -53,12 +53,22 @@ An independent evaluation scores the deliberation against five rubrics. Did the 
 - Extreme time pressure that doesn't allow for deliberation
 - Low-stakes decisions where the cost of being wrong is trivial
 
+## The five committee members
+
+| Member | Lens | Asks |
+|--------|------|------|
+| **Maya** | Political realism | "Who benefits if this fails? What are the hidden incentives?" |
+| **Frankie** | Values & mission | "Does this betray our principles? Who gets affected?" |
+| **Joe** | Institutional memory | "Didn't we try this before? What specifically is different?" |
+| **Vic** | Evidence prosecution | "What evidence supports this? How would we verify it?" |
+| **Tammy** | Systems thinking | "What's the feedback loop? What are the second-order effects?" |
+
 ## Command reference
 
 | Command | What it does |
 |---------|-------------|
 | `/cyberneutics:scenarios [situation]` | Generate 4 distinct possible futures |
-| `/cyberneutics:committee [decision]` | Run a 5-agent adversarial deliberation |
+| `/cyberneutics:committee [decision]` | Run a 5-member adversarial deliberation |
 | `/cyberneutics:probe [situation]` | Map the decision landscape (scenarios + committee) |
 | `/cyberneutics:review` | Evaluate a deliberation's quality against 5 rubrics |
 | `/cyberneutics:handoff` | Save a session summary for continuity |

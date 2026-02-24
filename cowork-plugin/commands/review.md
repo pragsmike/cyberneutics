@@ -51,7 +51,7 @@ Did debate actually stress-test ideas, or generate polite disagreement?
 - **3**: Hostile cross-examination — every claim challenged, no hand-waving survives
 - **2**: Genuine conflict — direct challenges, but some dodged
 - **1**: Surface disagreement — parallel assertions, not actual debate
-- **0**: Polite agreement — agents don't argue
+- **0**: Polite agreement — members don't argue
 
 *Red flags*: "Good point, but..." (diplomatic deflection). Everyone converging by the end.
 
@@ -100,14 +100,14 @@ Are trade-offs acknowledged with specifics, or papered over with "balance"?
 
 If the review scores below 2.5, you have options:
 
-1. **Ask the committee to respond to the review**: Rerun the committee with the specific critique as input. The agents will address the identified gaps.
+1. **Ask the committee to respond to the review**: Rerun the committee with the specific critique as input. The members will address the identified gaps.
 2. **Rerun with better framing**: If the charter was weak, sharpen the problem statement and rerun.
 3. **Focus on the lowest-scoring rubric**: A deliberation with perfect evidence standards but no adversarial rigor needs more conflict, not more data.
 
 ## Why this matters
 
 A deliberation that *looks* rigorous but isn't is worse than no deliberation at all — it gives false confidence. The review catches:
-- **Theatrical rigor**: agents making separate speeches instead of engaging
+- **Theatrical rigor**: members making separate speeches instead of engaging
 - **Premature convergence**: disagreement that dissolves suspiciously quickly
 - **Missing trade-offs**: recommendations that seem to have no downsides
 - **Evidence theater**: data cited but not actually supporting the conclusion

@@ -49,6 +49,6 @@ Not every problem needs a committee. Skip the methodology when:
 ## Common pitfalls
 
 - **Collapsing to single answers prematurely.** If you find yourself with "the answer" quickly, you're probably missing something. Sit with the tensions.
-- **Ignoring disagreement.** When agents disagree, that's the signal — it means there's a real trade-off. Don't smooth it over.
+- **Ignoring disagreement.** When committee members disagree, that's the signal — it means there's a real trade-off. Don't smooth it over.
 - **Skipping the review.** A deliberation that looks rigorous might not be. The review catches theatrical rigor.
 - **Using the wrong tool.** Scenarios explore futures; committees evaluate options. Don't run a committee when you need scenarios, or vice versa.

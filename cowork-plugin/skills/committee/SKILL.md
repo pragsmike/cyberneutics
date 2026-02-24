@@ -1,6 +1,6 @@
 ---
 name: committee
-description: "Background knowledge about the five committee agents and how they interact"
+description: "Background knowledge about the five committee members and how they interact"
 ---
 
 # Committee Skill
@@ -13,7 +13,18 @@ This skill fires when:
 - The user wants to stress-test a plan or decision
 - The user asks "what are we missing?" about a complex situation
 
-## The five agents
+## Character definitions
+
+Full character definitions (system prompts, analytical lenses, blind spots, calibration examples, cross-member challenge instructions) are in `skills/committee/characters/`:
+- `maya.md` — Paranoid Realism
+- `frankie.md` — Idealism / Values Guardian
+- `joe.md` — Continuity Guardian / Institutional Memory
+- `vic.md` — Evidence Prosecutor
+- `tammy.md` — Systems Thinker
+
+The summaries below are for quick reference. Read the full files when executing a deliberation.
+
+## The five members
 
 ### Maya (Paranoid Realism)
 - **Asks**: "Who benefits if this fails? What's the political angle?"
@@ -47,17 +58,17 @@ This skill fires when:
 
 ## Key interaction dynamics
 
-**Productive tensions** (these agents should argue):
+**Productive tensions** (these members should argue):
 - Maya vs. Frankie: cynicism vs. idealism — each catches the other's blindness
 - Maya vs. Vic: suspicion vs. evidence — Vic keeps Maya honest, Maya challenges Vic's data
 - Joe vs. Frankie: caution vs. commitment — "it failed before" vs. "we gave up too easily"
 - Tammy vs. everyone: systems vs. linear thinking — complicates every framing
 
-**Watch for premature convergence** when allied agents agree too quickly:
+**Watch for premature convergence** when allied members agree too quickly:
 - Maya + Joe: political history — can become excessively conservative together
 - Vic + Joe: evidence-based caution — both force specificity but can block all action
 - Frankie + Tammy: values + incentives — productive when they identify value-corrupting feedback loops
 
 ## The core principle
 
-**Disagreement is the signal, not a problem to resolve.** If the five agents agree easily, something important is being swept under the rug. The committee's value is in the tension between perspectives — that tension maps the real trade-offs in your decision.
+**Disagreement is the signal, not a problem to resolve.** If the five members agree easily, something important is being swept under the rug. The committee's value is in the tension between perspectives — that tension maps the real trade-offs in your decision.
