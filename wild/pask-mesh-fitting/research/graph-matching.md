@@ -1,4 +1,4 @@
-# 2.5 Graph Matching and Subgraph Embedding
+# Graph Matching and Subgraph Embedding
 
 **What it offers**: The "does this fragment embed into the corpus mesh?" question is a typed subgraph matching problem. Neural approaches (NeuroMatch, HFrame) achieve 100× speedup over classical algorithms with high accuracy. HFrame (2024-2025) specifically handles subgraph homomorphism (allowing some flexibility in the matching), achieving 101× speedup with 0.962 accuracy.
 

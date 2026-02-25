@@ -1,4 +1,4 @@
-# 2.4 Topological Data Analysis
+# Topological Data Analysis
 
 **What it offers**: Persistent homology computes the "shape" of a graph fragment across multiple scales. Represent the fragment as a simplicial complex; track topological features (connected components, cycles, voids) as a threshold parameter varies. Features that persist across scales are structural; those that appear and vanish are noise. The persistence diagram is a compact signature of the fragment's shape.
 

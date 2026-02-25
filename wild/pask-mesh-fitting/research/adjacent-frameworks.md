@@ -1,4 +1,4 @@
-# 2.6 Adjacent Frameworks
+# Adjacent Frameworks
 
 **Relational Message Passing (RelGNN, 2025)**: Composite message passing that respects relation types during graph neural network learning. Directly applicable to learning typed embeddings of both corpus mesh and fragments.
 

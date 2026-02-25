@@ -1,4 +1,4 @@
-# 2.3 LLM-Based Knowledge Graph Extraction
+# LLM-Based Knowledge Graph Extraction
 
 **What it offers**: The field has reached production maturity. Schema-guided systems (KARMA, Neo4j's LLM Knowledge Graph Builder) achieve 85-90% precision for entity and relation extraction when operating within a fixed ontology. Schema-free systems (Ontogenia, AutoSchemaKG) can discover relation types dynamically, which is relevant when the corpus contains novel conceptual territory.
 

@@ -1,4 +1,4 @@
-# 2.2 Sheaf Theory and Consistency Checking
+# Sheaf Theory and Consistency Checking
 
 **What it offers**: Sheaf theory provides the mathematical language for detecting exactly what Pask mesh fitting needs — obstructions to gluing local fragments into a global whole. A cellular sheaf on the corpus graph assigns data spaces to nodes and restriction maps to edges. Sheaf cohomology (H¹) measures the failure of local consistency to yield global consistency. The Sheaf Laplacian provides a continuous consistency measure: its eigenvector structure reveals the "grain" of consistency in the corpus.
 
