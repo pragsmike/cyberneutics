@@ -1,5 +1,8 @@
 # Pask Mesh Fitting
 
+> [!WARNING]
+> **Practical Assessment:** The full global "immune system" approach described here relies on topological matrix math ($O(N^3)$ complexity) and massive LLM extraction volume. Our current assessment is that the generalized Pask Mesh Fitting mechanism is computationally intractable at a realistic corpus scale. See the **[Tractability, Complexity, and Risk](research/tractability-and-risks.md)** analysis for experiment proposals and scoped-down fallbacks.
+
 **Status:** Wild / diary material (Feb 2026). Not yet methodology. Candidate for future investigation and possible incorporation into the framework.
 
 **Provenance:** A conversation that began with "how do you decide whether to trust document 1 of 30?" and led to a formal account of adversarial LLM alignment as a mesh-rewiring attack. The material is split into a framework document (here) and an application document (under narrative immune systems).
