@@ -26,3 +26,6 @@ While each framework can be studied independently, they interlock to enable the 
 
 *   **[Adjacent Frameworks](adjacent-frameworks.md)**
     Related computational avenues, including Relational Message Passing, Hypergraph Neural Networks, and Category-Theoretic Ologs.
+
+*   **[Tractability, Complexity, and Risk](tractability-and-risks.md)**
+    An analysis of the core assumptions, scaling bottlenecks ($O(N^3)$), and risks of the Pask Mesh Fitting approach, including a set of "kill-or-cure" validation experiments and less ambitious scoped-down fallbacks.
