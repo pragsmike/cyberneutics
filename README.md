@@ -1,6 +1,15 @@
 # Cyberneutics: Narrative engineering for the age of narrative computing
 
-> If the tool is a narrative engine, treating it like a calculator is a category error. You don't get mad at a car for not flying; you learn to drive.
+<table>
+  <tr>
+    <td width="300px" align="center" style="border: none;">
+      <img src="./assets/CyberNewt.png" alt="CyberNewt Logo" width="300" />
+    </td>
+    <td style="border: none; padding-left: 20px;">
+      <blockquote><p>If the tool is a narrative engine, treating it like a calculator is a category error. You don't get mad at a car for not flying; you learn to drive.</p></blockquote>
+    </td>
+  </tr>
+</table>
 
 ## What is Cyberneutics?
 
