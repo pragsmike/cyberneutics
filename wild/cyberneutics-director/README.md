@@ -23,3 +23,9 @@ The director presents three interfaces serving three principals with different n
 - Define an MVP schema for the "deliberation state store."
 - Build a prototype MCP server demonstrating how an agent escalates a problem from "task" to "wicked decision."
 - Interface with the `palgebra-graph-ui` project to visualize the output.
+
+### The GitHub MCP Prototype
+One immediate path to prototyping the Director is to leverage the official **GitHub MCP server**. Instead of building a custom database and state store, we can use GitHub Issues as the coordination layer:
+*   **Reading Intents:** A local agent reads open GitHub issues and their labels to determine if an issue is a standard "task" fix or a "wicked problem" requiring deliberation.
+*   **Posting Transcripts:** If local agents run a `/committee` debate on an issue, the Director script extracts the consensus and reasoning chain, and uses the GitHub MCP to post it directly as a comment on the Github Issue or Pull Request, satisfying the "Audit Trail" requirement.
+*   **Managing Scope:** The Director agent can autonomously split wicked problems into discrete architectural tasks by generating new, linked GitHub Issues based on the committee's findings.

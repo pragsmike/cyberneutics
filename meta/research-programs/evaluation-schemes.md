@@ -416,6 +416,8 @@ These dimensions operationalize what "better" means without requiring ground tru
 
 **Note**: This design may show that methodology does *not* beat baselines at prediction, and that's okay. If methodology's advantage is "better decision-making under uncertainty" rather than "better prediction," then a different dimension (scenario robustness, assumption coverage) would be the relevant measure.
 
+**Related**: The [Black Swan Hindsight Framework](evaluating-deliberative-architectures.md) shares the same core idea (historical cases with known outcomes) but tests *anticipation of structural risks* rather than prediction accuracy, uses explicit contamination mitigations, and includes constructed scenarios alongside historical cases. See [its Section XI](evaluating-deliberative-architectures.md#xi-relationship-to-evaluation-schemes-design-c) for the detailed comparison. Consider running both designs on overlapping cases.
+
 ---
 
 ### Design D: Information-Theoretic Comparison (Automated Baseline)
