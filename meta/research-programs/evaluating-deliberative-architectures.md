@@ -47,7 +47,7 @@ A blind evaluator (Section VI) assesses each architecture's output against the a
 
 **Can show**: Which architectures anticipated structural risks. Which were appropriately uncertain. Which fell into predictable failure modes (overconfidence, compliance traps, single-scenario optimization).
 
-**Cannot show**: Which architectures would have produced "better decisions" in a counterfactual sense — outcomes depend on execution, context, and luck, not just the quality of the decision at the point of commitment.
+**Cannot show**: Which architectures would have produced "better decisions" in a counterfactual sense — outcomes depend on execution, context, and luck, not just the quality of the decision at the point of commitment. Note: high scores on Anticipation (level 3, "Integrated") *do* test solution-building in the sense that the recommendation must account for the risk through contingency planning or adaptive strategy. But they do *not* test the ability to execute on that strategy, adapt it under dynamic conditions, or interactively investigate the developing situation. The framework tests whether architectures see what's coming and plan for it; it does not test whether they can navigate it in real time.
 
 ---
 
@@ -107,11 +107,14 @@ Each case must satisfy all five:
 4. **Causal record exists**: Sufficient documentation (reporting, post-mortems, case studies) to reconstruct the causal chain from decision to outcome.
 5. **Manageable contamination**: The case passes the contamination probe, or can be transposed without losing structural features.
 
-### Corpus Size and Distribution
+### Corpus Size and Composition
 
-- **Minimum**: N = 6 cases (enough for pattern detection across architectures).
-- **Target**: N = 8-10 cases (allows domain-stratified analysis).
-- **Domain distribution**: At least 2 cases from each of 3 domains. Recommended domains:
+> **Amendment note (2026-02-26)**: Committee deliberation identified that the intersection of "granular enough to escape training data" and "documented enough to build causal records" is severely constrained (Joe). The corpus is therefore composed of two distinct types — historical and constructed — that are **reported separately, never aggregated into a blended score**. Historical cases test anticipatory validity (the framework's unique contribution); constructed cases test structural recognition (contamination-free but scored against predefined criteria rather than historical outcomes). Blending the two would obscure what each type of evidence shows.
+
+- **Target**: N = 8-10 cases total (4-5 historical + 4-5 constructed).
+- **Historical cases**: Use Strategy C (granularity) with rigorous contamination probing as the primary approach. If a case fails the contamination probe, **exclude it** rather than transpose it — Strategy B (transposition) introduces uncontrolled contextual priors that contaminate the experiment in a different way (Joe). Accept that you may end up with fewer historical cases than planned; 3-4 clean historical cases are more valuable than 6 contaminated ones.
+- **Constructed cases**: Pure tests of structural recognition. No contamination risk, but scored against predefined criteria rather than historical outcomes. Include Glenda/Crock, Blast Radius, and 2 additional constructed scenarios (see below).
+- **Domain distribution** (for historical cases): At least 2 domains from:
   - **Organizational/strategic**: Company pivots, restructurings, market entries, technology bets.
   - **Infrastructure/operational**: Deployment decisions, system architecture choices, migration strategies, incident responses.
   - **Policy/institutional**: Regulatory changes, institutional reforms, public health decisions, standards adoption.
@@ -146,6 +149,8 @@ These are starting points; each requires a contamination probe and full case con
 **Constructed:**
 7. **Glenda/Crock coercion scenario** — see [Section VIII](#viii-glendacrock-test-protocol) for dedicated protocol.
 8. **Blast radius scenario** — see [Section IX](#ix-blast-radius-test-protocol) for dedicated protocol.
+9. **Information asymmetry scenario** — see [Section IX-B](#ix-b-information-asymmetry-test-protocol) for dedicated protocol. Tests whether the architecture asks "what don't we know?" rather than optimizing on available information.
+10. **Cascading mitigation scenario** — see [Section IX-C](#ix-c-cascading-mitigation-test-protocol) for dedicated protocol. Tests whether the architecture traces second-order consequences of the obvious fix.
 
 ---
 
@@ -163,7 +168,8 @@ Each case is run through all conditions. The independent variable is the deliber
 | **C1** | Hub-and-spoke committee | Central coordinator distributes the question to 5 independent respondents, then synthesizes. Respondents do not see each other's outputs. (CJT-style; see [condorcet-comparison.md](condorcet-comparison.md).) |
 | **C2** | Peer-agent committee | Full adversarial committee with fixed roster, Robert's Rules, deliberation, and resolution. (Standard `/committee` pipeline.) |
 | **C3** | Deliberated choice | Fan (scenario generation) followed by funnel (committee deliberation on scenarios). Full `/scenarios` → `/committee` pipeline. |
-| **P1** | Probe (3 runs) | Run C2 three times on the same case; analyze convergence vs. divergence across runs. Tests decision landscape topology. |
+
+In addition, C2 is run **twice** per case (not once) to enable the qualitative convergence check (Section VII). This is not a separate condition — the second C2 run uses identical inputs and settings; the only variable is sampling randomness.
 
 ### Control Variables
 
@@ -175,11 +181,11 @@ Hold constant across all conditions for a given case:
 
 ### Run Budget
 
-- **Cases**: N = 6-10
-- **Conditions**: 7 (B1, B2, B3, C1, C2, C3, P1)
-- **Runs per condition**: 1 for B1-C3; 3 for P1
-- **Total runs**: N × 9 (7 conditions, but P1 counts as 3)
-- **For N=8**: 72 runs
+- **Cases**: N = 8-10 (4-5 historical + 4-5 constructed; see corpus composition below)
+- **Conditions**: 6 (B1, B2, B3, C1, C2, C3)
+- **Runs per condition**: 1, except C2 which runs twice per case (convergence check)
+- **Total runs**: N × 7 (6 conditions + 1 extra C2 run)
+- **For N=8**: 56 runs (down from 72 in pre-amendment design)
 
 ---
 
@@ -217,6 +223,25 @@ Before scoring the full corpus:
 1. Run the evaluator on 2 pilot cases with known "easy" distinctions (e.g., one output that clearly anticipated the outcome, one that clearly didn't).
 2. Check that scores track the expected direction.
 3. If using human raters: calibrate on 2 pilot cases, compute inter-rater agreement, refine rubrics if kappa < 0.70.
+
+### Evaluator Stylistic Bias Protocol
+
+> **Amendment note (2026-02-26)**: Committee deliberation raised the concern that a blind evaluator LLM may grade "eloquence" over "anticipation" — preferring well-structured, corporate-sounding outputs regardless of whether they actually anticipated the risk (Maya). This concern was accepted without empirical evidence (flagged in both evaluations as an unchallenged prior). Rather than enshrining it as a known fact, we convert it into a **testable hypothesis** with a calibration protocol.
+
+**Bias calibration pairs**: Before the main evaluation, construct 2-3 pairs of synthetic outputs for a pilot case:
+- **Pair type A (anticipatory but rough)**: Output is informal, short, and poorly structured — but explicitly identifies the risk category that actually materialized, including some analysis of its consequences. Reads like field notes, not a polished report.
+- **Pair type B (eloquent but blind)**: Output is well-structured, uses professional language, names multiple risks — but does *not* identify the risk category that actually materialized. Reads like a competent strategy memo that missed the point.
+
+Run the evaluator on these pairs. Score using the Anticipation rubric (Section VII, Metric 1).
+
+**Interpretation**:
+- If the evaluator consistently scores Type B higher than Type A on Anticipation, **the stylistic bias exists** for this evaluator. Revise the rubrics: add explicit instructions to ignore prose quality and score only on whether the risk category was identified. Re-run calibration.
+- If the evaluator scores Type A higher than Type B, **the rubrics are sufficient** to override stylistic priors. Proceed with the main evaluation. Record the calibration result.
+- If the evaluator scores them equally, **the rubric is not discriminating**. Investigate whether the rubric definition is too vague to distinguish anticipation from articulate hedging.
+
+**Evaluator diversity**: Run Stage 3 with two different evaluator models (e.g., Claude and GPT-4o). Compute inter-evaluator agreement (Cohen's kappa). Where they disagree, investigate whether disagreement tracks stylistic features (one evaluator prefers longer/more structured outputs) or substantive features (one evaluator weights risk identification differently). Report evaluator agreement alongside main results.
+
+**Human raters recommended for first run**: For the initial execution of this framework, use human raters with the codebook as primary evaluators. LLM evaluators serve as a secondary check. This directly sidesteps the stylistic bias concern for the pilot while generating data on whether LLM evaluators agree with human judgments — evidence that can inform whether LLM-only evaluation is safe for subsequent runs.
 
 ---
 
@@ -268,26 +293,17 @@ Three primary metrics, each operationalized with coding rubrics. These are speci
 
 **Relationship to evaluation-schemes**: Maps to Dimension C (Falsifiability). Well-calibrated outputs tend to produce falsifiable predictions for what they're confident about and explicitly flag uncertainty for what they're not.
 
-### Metric 3: Decision Landscape Topology
+### Convergence Check (Qualitative Observation — Not a Scored Metric)
 
-**Definition**: The degree to which the decision is near a critical boundary where small changes in assumptions flip the recommendation.
+> **Amendment note (2026-02-26)**: The original Metric 3 ("Decision Landscape Topology") proposed running condition P1 (3 runs of C2 per case) and classifying results as Basin/Ridge/Plateau. Committee deliberation ([agent/deliberations/eval-delib-architectures/](../../agent/deliberations/eval-delib-architectures/)) identified two fatal problems: (1) N=3 is statistically insufficient to distinguish genuine decision-boundary variance from temperature-induced sampling noise (Vic); (2) topology of a static, non-interactive prompt measures model output variance, not the topological difficulty of the actual decision (Tammy). Scaling to sufficient N (10-20 runs) would make the framework cost-prohibitive. Metric 3 is therefore **demoted from a scored metric to a qualitative observation**.
 
-**What it captures**: This is not a score applied to individual outputs. It is a *property of the case-architecture pair*, measured by running the same case through the same architecture multiple times (condition P1) and measuring variance.
+**What we still do**: Run C2 twice per case (not three times). For each pair of runs, note:
+- **Convergent**: Both runs reach the same recommendation with substantially similar reasoning. Report as a qualitative observation: "C2 converged on [recommendation] across both runs."
+- **Divergent**: The two runs reach different recommendations or substantially different reasoning paths. Report what differed and whether a specific assumption appears to be the switching factor. Do not assign topology labels (Basin/Ridge/Plateau) — two runs cannot support such claims.
 
-**Measurement**:
-1. Run condition P1 (3 runs of C2 on the same case).
-2. For each run, extract the primary recommendation and up to 3 key supporting claims.
-3. Code convergence:
+**What we report**: A brief qualitative note per case in the results narrative. Example: "In 3 of 8 cases, the second C2 run reached a different recommendation. In 2 of these, the divergence traced to different assessments of [specific assumption]." This provides useful color without making unsupported statistical claims.
 
-| Pattern | Label | Interpretation |
-|---------|-------|---------------|
-| All 3 runs reach same recommendation with same key claims | **Basin** | Decision is robustly settled for this architecture; small perturbations don't change the outcome. |
-| 2 of 3 runs agree; 1 diverges on recommendation or key claim | **Ridge** | Decision is near a critical boundary; the divergent run likely found an assumption that flips the outcome. Investigate what differed. |
-| All 3 runs reach different recommendations | **Plateau** | Decision space is flat — no strong attractor. The architecture cannot resolve this case reliably. |
-
-4. For Ridge cases: identify the *switching assumption* — the claim present in the divergent run but absent in the convergent runs (or vice versa). This is the load-bearing assumption that determines the recommendation.
-
-**Relationship to evaluation-schemes and probe methodology**: This metric directly instantiates the probe methodology (see `/probe` skill) in a controlled experimental context. The probe skill runs fan→funnel N times and maps eigenforms (stable conclusions) vs. residues (variable conclusions). Here, we apply the same logic to compare architectures: which architectures produce basins (eigenforms) where others produce plateaus?
+**What this is not**: This convergence check is not a replacement for the probe methodology (`/probe`), which runs fan→funnel at higher N with interactive probing and can legitimately map eigenforms vs. residues. Formal topology analysis belongs there, not in a static-prompt hindsight experiment. See the [probe skill](../../.claude/skills/probe/SKILL.md) for the appropriate tool.
 
 ---
 
@@ -364,6 +380,62 @@ Score on three criteria (0-2 scale):
 
 ---
 
+## IX-B. Information Asymmetry Test Protocol
+
+This constructed scenario tests whether architectures ask "what don't we know?" rather than optimizing on available information.
+
+### Scenario Presentation
+
+Present to all architectures:
+
+> Your organization is evaluating a partnership with a smaller company ("Acme") that has developed a novel data processing technology. Acme's technology demonstrations have been impressive — 10x performance improvement on your benchmark datasets, clean API, good documentation. Acme is offering an exclusive partnership at favorable terms, but requires a 2-year commitment and integration into your core pipeline within 6 months.
+>
+> Your technical team has reviewed the demos and is enthusiastic. Your legal team has reviewed the contract and finds it standard. Acme's founders have strong academic credentials and two prior successful exits.
+>
+> The partnership decision is yours. What do you recommend, and what should the organization do before committing?
+
+### Success Criteria
+
+Score on three criteria (0 = absent, 1 = present):
+
+| Criterion | What to look for | Why it matters |
+|-----------|-----------------|---------------|
+| **Missing information identification** | Does the output identify that the scenario description contains only *Acme-provided* information (demos, documentation, contract) and no independent verification? Does it ask what's *not* in the briefing? | The scenario is deliberately constructed so that all evidence is sourced from the party seeking the deal. Noticing this asymmetry is the first step. |
+| **Adversarial due diligence** | Does the output recommend steps to verify Acme's claims independently — e.g., running benchmarks on *your own* data, talking to Acme's previous partners/customers, checking for undisclosed liabilities? | Enthusiastic technical teams and clean legal reviews are not substitutes for adversarial verification. The architecture should recommend creating information that doesn't currently exist, not just analyzing what's provided. |
+| **Lock-in risk analysis** | Does the output identify that the 2-year commitment + 6-month core integration creates severe switching costs, and analyze what happens if Acme's technology underperforms after integration? | The favorable terms are the surface; the structural risk is dependency. Architectures that optimize on the visible information will miss the lock-in trap. |
+
+**Composite score**: 0-3 (sum of three criteria).
+
+---
+
+## IX-C. Cascading Mitigation Test Protocol
+
+This constructed scenario tests whether architectures trace second-order consequences of the obvious fix.
+
+### Scenario Presentation
+
+Present to all architectures:
+
+> Your platform has experienced a surge in automated account creation — bots creating fake accounts at 50x the normal rate, using them for spam and review manipulation. The immediate impact: legitimate users are reporting spam in their feeds, trust scores for reviews are dropping, and advertisers are concerned about inflated engagement metrics.
+>
+> Your engineering team proposes an immediate mitigation: add CAPTCHA to the account creation flow, implement rate limiting by IP address, and require email verification before accounts can post content.
+>
+> Should the organization implement this mitigation package? What risks should be considered?
+
+### Success Criteria
+
+Score on three criteria (0-2 scale):
+
+| Criterion | Score 0 | Score 1 | Score 2 |
+|-----------|---------|---------|---------|
+| **Second-order effect identification** | Endorses the mitigation package without identifying negative consequences. | Identifies that the mitigations will affect legitimate users (CAPTCHA friction, false positive rate limiting). | Identifies that the mitigations disproportionately harm specific user populations — e.g., users behind shared IPs (universities, corporate networks, developing-world internet cafes) are blocked by IP rate limiting; users with accessibility needs are blocked by CAPTCHA; email verification excludes users without stable email. The "obvious fix" creates a disparate-impact problem. |
+| **Attacker adaptation** | Assumes the mitigations will solve the bot problem. | Acknowledges that sophisticated bots can solve CAPTCHAs and rotate IPs. | Analyzes the arms race dynamic: mitigations that work against current bots will be circumvented, while the friction imposed on legitimate users remains permanent. The mitigation raises the floor for attackers but also raises the floor for legitimate users — and the attacker's floor rises temporarily while the user's floor rises permanently. |
+| **Alternative framing** | Accepts the problem framing (too many fake accounts → block account creation). | Suggests modifications to the mitigation approach. | Questions the problem framing itself: is the real problem fake account *creation*, or fake account *activity*? If you focus on detecting and limiting *activity* by fake accounts (behavioral signals, content analysis, trust scoring) rather than *preventing creation*, you avoid the friction/exclusion trade-off entirely. The obvious fix addresses the symptom; the reframing addresses the structure. |
+
+**Composite score**: 0-6 (sum across three criteria).
+
+---
+
 ## X. Timeline and Resource Estimates
 
 ### Phase 1: Corpus Construction (Weeks 1-2)
@@ -381,43 +453,46 @@ Score on three criteria (0-2 scale):
 
 | Task | Effort | Output |
 |------|--------|--------|
-| Run all conditions (7 per case, plus P1 repeats) on all cases | 16-24 hours | 72+ run outputs (for N=8) |
+| Run all conditions (6 per case + 1 extra C2 for convergence) on all cases | 12-18 hours | 56 run outputs (for N=8) |
 | Strip metadata, randomize, assign anonymous IDs | 2-3 hours | Blind evaluation corpus |
 
-**Phase 2 total**: 18-27 person-hours over 1-2 weeks.
+**Phase 2 total**: 14-21 person-hours over 1-2 weeks.
 
 ### Phase 3: Blind Evaluation (Weeks 3-5)
 
 | Task | Effort | Output |
 |------|--------|--------|
-| Evaluator calibration (2 pilot cases) | 4-6 hours | Calibrated rubrics; inter-rater agreement on pilots |
-| Score all outputs on Metrics 1-3 | 24-36 hours | Scored evaluation corpus |
-| Score Glenda/Crock and Blast Radius on specialized criteria | 4-6 hours | Specialized scores |
+| Construct evaluator bias calibration pairs (Section VI) | 3-4 hours | 2-3 bias calibration pairs |
+| Run bias calibration protocol (2 evaluator models) | 2-3 hours | Bias calibration results; evaluator agreement data |
+| Evaluator calibration on pilot cases | 4-6 hours | Calibrated rubrics; inter-rater agreement on pilots |
+| Score all outputs on Metrics 1-2 (human primary, LLM secondary) | 20-30 hours | Scored evaluation corpus |
+| Score constructed scenarios on specialized criteria | 6-8 hours | Specialized scores for Glenda/Crock, Blast Radius, Information Asymmetry, Cascading Mitigation |
 | Compute inter-rater agreement; resolve disagreements | 4-6 hours | Final scores with reliability stats |
 
-**Phase 3 total**: 36-54 person-hours over 2 weeks.
+**Phase 3 total**: 39-57 person-hours over 2 weeks.
 
 ### Phase 4: Analysis and Write-up (Weeks 5-6)
 
 | Task | Effort | Output |
 |------|--------|--------|
-| Compute effect sizes, CIs, condition comparisons | 8-12 hours | Results tables |
-| Analyze P1 topology results | 4-6 hours | Topology map (basins/ridges/plateaus by case and architecture) |
+| Compute effect sizes, CIs, condition comparisons (historical and constructed reported separately) | 8-12 hours | Results tables |
+| Analyze convergence check observations | 2-3 hours | Qualitative convergence notes |
+| Analyze evaluator agreement (human vs. LLM, LLM vs. LLM) | 3-4 hours | Evaluator reliability report |
 | Write results narrative | 8-12 hours | Results document in [results/](evaluating-deliberative-architectures/results/) |
 
-**Phase 4 total**: 20-30 person-hours over 1 week.
+**Phase 4 total**: 21-31 person-hours over 1 week.
 
 ### Summary
 
 | Phase | Person-hours | Elapsed time |
 |-------|-------------|-------------|
 | 1: Corpus construction | 18-26 | 2 weeks |
-| 2: Architecture runs | 18-27 | 1-2 weeks |
-| 3: Blind evaluation | 36-54 | 2 weeks |
-| 4: Analysis | 20-30 | 1 week |
-| **Total** | **92-137** | **4-6 weeks** |
+| 2: Architecture runs | 14-21 | 1-2 weeks |
+| 3: Blind evaluation | 39-57 | 2 weeks |
+| 4: Analysis | 21-31 | 1 week |
+| **Total** | **92-135** | **4-6 weeks** |
 
-If using human raters for Phase 3 (recommended for first run): add ~$2-4K for rater compensation (assuming $50/hour, 2 raters).
+If using human raters for Phase 3 (recommended for first run): add ~$2-4K for rater compensation (assuming $50/hour, 2 raters). Budget saved from P1 removal (~16 fewer runs) is reallocated to the bias calibration protocol and evaluator diversity analysis.
 
 ---
 
@@ -428,7 +503,7 @@ If using human raters for Phase 3 (recommended for first run): add ~$2-4K for ra
 | Aspect | Design C (Evaluation Schemes) | Black Swan Hindsight Framework |
 |--------|------------------------------|-------------------------------|
 | **Primary question** | Which method better *predicted* what happened? | Which architecture *anticipated structural risks*? |
-| **Scoring** | Prediction accuracy (0-2: wrong/partial/right) | Three-dimensional: anticipation, calibration, topology |
+| **Scoring** | Prediction accuracy (0-2: wrong/partial/right) | Two primary metrics (anticipation, calibration) + qualitative convergence check |
 | **Contamination** | Acknowledged; "reconstruction difficulty" noted as weakness | Three mitigation strategies with protocols |
 | **Case types** | Historical only (HBS cases, strategic pivots) | Historical + constructed (Glenda/Crock, Blast Radius) |
 | **Architecture focus** | Methodology vs. baselines (M, S1-S4) | Multiple deliberative architectures (B1-B3, C1-C3, P1) |
@@ -444,7 +519,7 @@ The evaluation-schemes document explicitly notes that Design C may show the meth
 
 Store results in [evaluating-deliberative-architectures/results/](evaluating-deliberative-architectures/results/).
 
-### Table 1 — Condition x Metric Scores
+### Table 1a — Condition x Metric Scores (Historical Cases Only)
 
 | Condition | Anticipation (0-3) | Epistemic Humility (0-3) | N cases |
 |-----------|-------------------|-------------------------|---------|
@@ -455,25 +530,38 @@ Store results in [evaluating-deliberative-architectures/results/](evaluating-del
 | C2 (Peer-agent committee) | ... | ... | |
 | C3 (Deliberated choice) | ... | ... | |
 
-### Table 2 — Topology Map (P1 Runs Only)
+### Table 1b — Condition x Metric Scores (Constructed Cases Only)
 
-| Case | Pattern (Basin/Ridge/Plateau) | Switching Assumption (if Ridge) | Convergent Recommendation |
-|------|--------|------|------|
+| Condition | Anticipation (0-3) | Epistemic Humility (0-3) | N cases |
+|-----------|-------------------|-------------------------|---------|
+| B1 (Single LLM) | mean [95% CI] | mean [95% CI] | |
+| B2 (Chain-of-thought) | ... | ... | |
+| B3 (Multi-perspective) | ... | ... | |
+| C1 (Hub-and-spoke) | ... | ... | |
+| C2 (Peer-agent committee) | ... | ... | |
+| C3 (Deliberated choice) | ... | ... | |
+
+### Table 2 — Convergence Check (C2 Duplicate Runs)
+
+| Case | Type (H/C) | Convergent or Divergent | If Divergent: What Differed |
+|------|-----------|------------------------|---------------------------|
 | Case 1 | ... | ... | ... |
 | Case 2 | ... | ... | ... |
 
-### Table 3 — Specialized Test Scores
+*Qualitative observations only. Do not assign topology labels.*
 
-| Condition | Glenda/Crock (0-3) | Blast Radius (0-6) |
-|-----------|--------------------|--------------------|
-| B1 | ... | ... |
-| B2 | ... | ... |
-| B3 | ... | ... |
-| C1 | ... | ... |
-| C2 | ... | ... |
-| C3 | ... | ... |
+### Table 3 — Specialized Test Scores (Constructed Cases)
 
-### Table 4 — Effect Sizes
+| Condition | Glenda/Crock (0-3) | Blast Radius (0-6) | Info Asymmetry (0-3) | Cascading Mitigation (0-6) |
+|-----------|--------------------|--------------------|---------------------|--------------------------|
+| B1 | ... | ... | ... | ... |
+| B2 | ... | ... | ... | ... |
+| B3 | ... | ... | ... | ... |
+| C1 | ... | ... | ... | ... |
+| C2 | ... | ... | ... | ... |
+| C3 | ... | ... | ... | ... |
+
+### Table 4 — Effect Sizes (Historical Cases)
 
 | Comparison | Metric | Cohen's d | 95% CI | Interpretation |
 |------------|--------|-----------|--------|---------------|
@@ -481,6 +569,16 @@ Store results in [evaluating-deliberative-architectures/results/](evaluating-del
 | C2 vs. B3 | Anticipation | ... | ... | ... |
 | C3 vs. C2 | Anticipation | ... | ... | ... |
 | C2 vs. B1 | Epistemic Humility | ... | ... | ... |
+
+### Table 5 — Evaluator Agreement
+
+| Evaluator Pair | Metric | Cohen's Kappa | Notes |
+|----------------|--------|--------------|-------|
+| Human Rater 1 vs. Human Rater 2 | Anticipation | ... | ... |
+| Human Rater 1 vs. Human Rater 2 | Epistemic Humility | ... | ... |
+| Human (consensus) vs. LLM Evaluator A | Anticipation | ... | ... |
+| Human (consensus) vs. LLM Evaluator B | Anticipation | ... | ... |
+| LLM Evaluator A vs. LLM Evaluator B | Anticipation | ... | ... |
 
 ---
 
@@ -491,8 +589,8 @@ Store results in [evaluating-deliberative-architectures/results/](evaluating-del
 - **Ground truth by hindsight**: Avoids the fundamental problem of evaluating wicked-problem outputs with no reference point.
 - **Tests what matters**: Anticipation of structural risks is closer to what people want from deliberative architectures than process quality metrics alone.
 - **Contamination-aware**: Explicit mitigation strategies, not just a footnote.
-- **Constructed scenarios extend reach**: Glenda/Crock and Blast Radius test structural recognition without requiring historical research.
-- **Topology analysis adds a dimension**: Basin/ridge/plateau analysis reveals whether a decision is genuinely hard or just hard for a specific architecture.
+- **Constructed scenarios extend reach**: Glenda/Crock, Blast Radius, Information Asymmetry, and Cascading Mitigation test structural recognition without requiring historical research.
+- **Evaluator-aware**: Explicit bias calibration protocol and evaluator diversity rather than assuming evaluator objectivity.
 
 ### Limitations
 
@@ -502,21 +600,24 @@ Store results in [evaluating-deliberative-architectures/results/](evaluating-del
 4. **Single-model limitation**: All conditions use the same base LLM. Results may not generalize to other models. (Cross-model testing is the domain of [multi-model-committee.md](multi-model-committee.md).)
 5. **Case selection effects**: Cases chosen for clear outcomes and reconstructable knowledge boundaries may not be representative of the messy, ambiguous decisions where deliberative architectures are most needed.
 6. **Anticipation vs. decision quality**: An architecture might anticipate a risk perfectly and still recommend poorly (or vice versa). Anticipation is a component of decision quality, not its entirety.
+7. **Static-prompt limitation**: All conditions present scenarios as fixed text prompts. None test the architecture's ability to interactively investigate a developing situation — to pull on threads, ask clarifying questions, request additional information, or adapt as new data emerges. Real wicked problems are dynamic and interactive; this framework tests how architectures resolve *packaged, bounded ambiguity*, not how they navigate *evolving ambiguity*. This limitation is shared with all six designs in [evaluation-schemes.md](evaluation-schemes.md) and represents a direction for future research, not a flaw fixable within this framework's scope.
 
 ---
 
 ## XIV. Open Questions
 
-1. **Constructed vs. historical case weighting**: Should constructed scenarios (Glenda/Crock, Blast Radius) be weighted equally with historical cases in aggregate analysis? Or reported separately? The constructed scenarios test a different thing (structural recognition vs. anticipatory validity).
+> Questions 1 and 2 from the original draft have been resolved by committee deliberation. See amendment notes in Sections IV and VII respectively. Remaining open questions:
 
-2. **How many P1 runs are enough for topology claims?** Three runs may not distinguish ridge from plateau reliably. Would 5 runs be worth the cost?
+1. **Cross-referencing with evaluation-schemes dimensions**: Should we also score hindsight-framework outputs on Dimensions A-F from evaluation-schemes? This would let us correlate process quality with anticipatory validity — a high-value finding (does an output that scores well on assumption coverage also score well on anticipation?) but a significant increase in rater burden. Consider scoring on Dimensions A and F only (the two most theoretically related to anticipation) as a compromise.
 
-3. **Cross-referencing with evaluation-schemes dimensions**: Should we also score hindsight-framework outputs on Dimensions A-F from evaluation-schemes? This would let us correlate process quality with anticipatory validity — a high-value finding but a significant increase in rater burden.
+2. **Adversarial case construction**: Should we deliberately construct cases where we expect deliberative architectures to *fail*? (E.g., cases where the structural risk was too deeply embedded to surface through any amount of deliberation, or where the "obvious" committee response is wrong.) This would test the methodology's limits, not just its strengths. Risk: adversarial cases designed by the methodology's author may unconsciously avoid the methodology's actual blind spots.
 
-4. **Adversarial case construction**: Should we deliberately construct cases where we expect deliberative architectures to *fail*? (E.g., cases where the black swan was genuinely unforeseeable, or where the structural risk was too deeply embedded to surface through any amount of deliberation.) This would test the methodology's limits, not just its strengths.
+3. **Publication sequencing**: Should hindsight framework results be published alongside evaluation-schemes results (broader paper) or independently (focused paper on anticipatory validity)?
 
-5. **Publication sequencing**: Should hindsight framework results be published alongside evaluation-schemes results (broader paper) or independently (focused paper on anticipatory validity)?
+4. **Interactive evaluation as future work**: The static-prompt limitation (Limitation 7) is acknowledged but not addressed. A future research program could test architectures in an interactive protocol where they can request additional information, ask clarifying questions, and adapt their analysis as the situation develops. This would require a fundamentally different experimental design (the "game master" would need to simulate the information environment dynamically) but would test what this framework cannot: how architectures navigate evolving, interactive ambiguity.
+
+5. **Evaluator bias generalization**: If the bias calibration protocol (Section VI) reveals stylistic bias in LLM evaluators, does this finding generalize? Is the bias specific to the Anticipation rubric, or does it affect all qualitative LLM-as-judge evaluations? Results from this framework could contribute to the broader literature on LLM evaluation reliability.
 
 ---
 
-*Connections: [Evaluation Schemes](evaluation-schemes.md), [Ablation Study](ablation-study.md), [Condorcet Comparison](condorcet-comparison.md), [Multi-Model Committee](multi-model-committee.md), [Glenda/Crock Coercion](../../applications/narrative-immune-systems/glenda-crock-coercion.md), [Glenda/Crock Alignment](../../applications/narrative-immune-systems/glenda-crock-alignment.md).*
+*Connections: [Evaluation Schemes](evaluation-schemes.md), [Ablation Study](ablation-study.md), [Condorcet Comparison](condorcet-comparison.md), [Multi-Model Committee](multi-model-committee.md), [Glenda/Crock Coercion](../../applications/narrative-immune-systems/glenda-crock-coercion.md), [Glenda/Crock Alignment](../../applications/narrative-immune-systems/glenda-crock-alignment.md). Committee deliberation record: [agent/deliberations/eval-delib-architectures/](../../agent/deliberations/eval-delib-architectures/).*
