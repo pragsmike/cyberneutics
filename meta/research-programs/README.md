@@ -49,6 +49,7 @@ These programs are ordered by how much they reduce the main open uncertainties: 
 
 | Plan | Summary |
 |------|---------|
+| [evaluating-deliberative-architectures.md](evaluating-deliberative-architectures.md) | Research design for testing deliberative architectures (like peer-agent vs hub-and-spoke) using the Black Swan Hindsight Framework, evaluating anticipation and epistemic humility over historically wicked problems. |
 | [societies-of-thought-research-plan.md](societies-of-thought-research-plan.md) | Ten action items from the Societies of Thought paper: strengthen infrastructure (Big Five, balance metrics, reconciliation), test generalization (transfer, domain variants), formalize theory (information-theory essay, social scaling), expand evidence (worked examples, comparative study), MOOLLM integration. Phased roadmap. |
 | [evaluation-schemes.md](evaluation-schemes.md) | Research design for evaluating the methodology: core questions, why direct evaluation is hard, proposed dimensions (assumption coverage, trade-off explicitness, etc.), protocols. No ground truth required. |
 | [ablation-study.md](ablation-study.md) | Component contribution and interaction effects (Design F). Full procedure, factor definitions, run budget, results tabulation. Results: [ablation-study/results/](ablation-study/results/). |

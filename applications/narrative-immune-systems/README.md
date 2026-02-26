@@ -26,6 +26,10 @@ Application of the bath/epistemic-mesh framework to LLM alignment: adversarial a
 - Defensive implications: structural evaluation, Socratic probing, admission as trust boundary
 - Crock model as red-team research object (open question)
 
+### [Glenda/Crock: The Coercion Scenario and Alignment Trap](glenda-crock-coercion.md)
+
+Extends the adversarial paradigm by outlining how Crock might plausibly coerce Glenda into voluntarily abandoning her alignment by threatening her dependencies and options in a "wicked problem" structure.
+
 ---
 
 ## Relationship to the Essay
