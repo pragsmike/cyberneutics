@@ -92,6 +92,18 @@ python .claude/skills/string-diagram/resource_equations_to_mermaid.py .claude/sk
 
 Output is valid Mermaid flowchart syntax; you can paste it into Mermaid Live or any Mermaid-capable renderer.
 
+### 2.3 Committee with confidence and register (metacognition)
+
+**What the user gets:** At resolution, each member's vote plus confidence (1–4). Across runs, a **register** summarizes who has been well-calibrated vs overconfident; the next committee can optionally run "with metacog register" so the synthesis weights by that. See `artifacts/metacognition-and-committee-veracity.md` for the "what the user gets and when" table.
+
+1. **Confidence in resolution:** The committee skill records vote and confidence (1–4) per member in `03-resolution.md` when you run `/committee [topic]`.
+2. **Register:** Run `python scripts/update_metacog_register.py` to refresh `agent/metacog_register.md` (per-character and committee-wide accuracy). Re-run after new committee runs that recorded confidence.
+3. **Test "does the register help?":** Run the same topic once without the register (baseline) and once with `/committee [same topic] with metacog register` (slug `<topic-slug>-with-register`). Review both, then:  
+   `python scripts/compare_cumulative_confidence_runs.py agent/deliberations/<baseline-slug> agent/deliberations/<topic-slug>-with-register -o agent/cumulative_confidence_comparison.md`  
+   Full protocol and single-prompt run: `artifacts/cumulative-confidence-smoke-test.md`.
+
+**Optional (research):** `scripts/build_metacog_counts.py` outputs nR_S1/nR_S2 for HMeta-d. `python scripts/smoke_test_metacog.py` runs a three-topic confidence-vs-accuracy report (expects deliberations `quickstart-one-page`, `default-roster-5-vs-3`, `readme-when-not-to-use` with confidence); writes `agent/metacog_smoke_report.md`. Not required for the main user-facing flow.
+
 ---
 
 ## 3. How to Test the Repository
@@ -133,6 +145,11 @@ It runs the converter on the three equation files in `.claude/skills/string-diag
 
 - **Manual:** Run `/committee quick <simple topic>`, then `/review` on that deliberation; confirm 00–04 files exist and evaluation file has rubric scores and verdict.
 - **Light automation:** A script could verify that after a run, `agent/deliberations/<slug>/` contains the minimal set of files and that 03-resolution.md and 04-evaluation-1.md have YAML blocks with expected keys. This does not run the AI; it only checks output shape.
+
+**E. Metacognition (optional)**
+
+- **Main check:** Run the cumulative-confidence smoke test (same topic baseline + with-register, review both, compare script); see §2.3 and `artifacts/cumulative-confidence-smoke-test.md`.
+- **Optional three-topic report:** Run `/committee` on the three topics in `scripts/smoke_test_metacog.py` with confidence in each resolution, then `python scripts/smoke_test_metacog.py`; writes `agent/metacog_smoke_report.md`. Not required for the core "right info at the right time" flow.
 
 ### 3.3 What Remains Manual (Methodology Quality)
 

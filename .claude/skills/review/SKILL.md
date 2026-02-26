@@ -46,6 +46,8 @@ compensates by:
 5. **Produces actionable feedback** — what would raise each score
 6. **Delivers a verdict** — trustworthiness as decision input
 
+**Metacognition and confidence:** If the resolution includes a `confidence` block (1–4 per member), that data supports a separate layer — **helping the end user interpret and weight the committee's advice** (e.g. whose confidence to trust). The review skill scores the *deliberation* (rigor, reasoning, etc.); metacognition does not change the committee's decision and is not part of the rubric scores. It is for the user when they decide what to do with the committee's output. See `artifacts/metacognition-and-committee-veracity.md`.
+
 ## The five rubrics
 
 Each rubric is scored 0-3. Every score MUST cite specific transcript passages.

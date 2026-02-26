@@ -82,6 +82,21 @@ When the user provides `scenario_context:` (a path to a `/scenarios` output dire
 
 For the full workflow, see `artifacts/deliberated-choice-workflow.md`.
 
+## With cumulative confidence (metacog register)
+
+When the user asks to run the committee **with the metacog register** or **with cumulative confidence** (e.g. "committee [topic] with metacog register" or "same topic with cumulative confidence"), the committee uses past calibration data so the synthesis can weight or hedge by who has been well-calibrated in prior runs. This supports the smoke test in `artifacts/cumulative-confidence-smoke-test.md`.
+
+**How to detect:** User includes "with metacog register", "with cumulative confidence", or "with register" in the invocation, or asks to run the same topic again "using the register".
+
+**What to do:**
+
+1. **Topic slug:** Use **`<topic-slug>-with-register`** so this run is distinct from a baseline run on the same topic (e.g. `readme-glossary-with-register`).
+2. **Read the register:** If `agent/metacog_register.md` exists, read it. Extract the "Per-character summary" (or the short committee-wide summary). If the file does not exist or is empty, proceed without register and note in the charter that the register was requested but unavailable.
+3. **Charter context:** Add to the charter a **metacog_context** (or a paragraph in `context`) that states: "Past calibration (across prior committee runs): [one- or two-sentence summary from the register, e.g. which characters have had high vs low confidence-accuracy in past runs]. When synthesizing, the committee should take this into account: weight or hedge recommendations by past calibration where relevant (e.g. discount high-confidence claims from characters who have been overconfident when wrong, or weight well-calibrated characters more)."
+4. **Deliberation:** Run the deliberation as usual. During synthesis, the committee should explicitly consider past calibration — the resolution or summary may mention weighting, hedging, or veracity. Record votes and confidence (1–4) as usual.
+
+**Purpose:** This does not change the committee's mandate to deliberate adversarially; it adds information so the *synthesis* can produce a resolution that is better informed by who has been well-calibrated in the past. Used for testing whether cumulative confidence improves decision quality (see cumulative-confidence-smoke-test.md).
+
 ## Deliberation requirements
 
 The skill enforces these constraints:
@@ -117,6 +132,8 @@ Not consensus, but clarity on:
 - What trade-offs are unavoidable
 - What evidence would resolve key uncertainties
 - What the decision actually optimizes for
+
+**Vote and confidence:** When recording the resolution, each character states their vote (Aye/Nay or YES/NO/ABSTAIN) and their **confidence** in that vote on a scale of 1–4 (1 = low, 4 = high). Write both to 03-resolution.md: `votes` as usual, and `confidence` with the same member keys (e.g. `Maya: 3`). This enables metacognitive efficiency (meta-d'/d') analysis across runs; see `artifacts/metacognition-and-committee-veracity.md`.
 
 ## Problem framing guidance
 
@@ -182,6 +199,14 @@ The skill recognizes sufficient context and proceeds directly to deliberation.
 ```
 
 Reads the scenario set from the specified directory and runs in scenario-aware mode. Each character engages with the scenarios from their propensity. The resolution distinguishes robust actions from scenario-dependent ones.
+
+### With cumulative confidence (metacog register)
+```
+/committee [topic] with metacog register
+/committee [same topic as before] with cumulative confidence
+```
+
+Use slug **`<topic-slug>-with-register`**. Reads `agent/metacog_register.md`, adds past calibration summary to the charter, and instructs the committee to weight or hedge by calibration when synthesizing. The **full smoke test** (baseline + with-register + review both + compare) can be run from a **single user prompt**; see `artifacts/cumulative-confidence-smoke-test.md` (section "Single prompt: run the full smoke test"). The user pastes one block; you run both committee runs in sequence, then review both, then run the comparison script.
 
 ### Scoped invocation
 ```
@@ -254,7 +279,8 @@ Every committee run writes a deliberation record to a dedicated directory. There
      - Then the standard output blocks: **KEY TENSIONS IDENTIFIED**, **ASSUMPTIONS SURFACED**, **EVIDENCE REQUIREMENTS**, **DECISION SPACE MAP**, **RECOMMENDED NEXT STEPS**, and if applicable **VERDICT** or **CONCLUSION**.
 
 3. **After synthesis:**
-   - **03-resolution.md** — Markdown with YAML front matter. From Final Consensus and DECISION SPACE MAP / VERDICT. Structure: `resolution:` with `date` (YYYY-MM-DD), `topic`, `outcome` (PASSED | DEFERRED | NO_CONSENSUS), `decision` (one line), `summary` (paragraph), optional `details`, optional `implementation_plan` (list of action/description), `votes` (one entry per roster member: YES | NO | ABSTAIN or conditional text), `signatures` (chair: "Committee (Cyberneutics)", ratified_by: "User").
+   - **03-resolution.md** — Markdown with YAML front matter. From Final Consensus and DECISION SPACE MAP / VERDICT. Structure: `resolution:` with `date` (YYYY-MM-DD), `topic`, `outcome` (PASSED | DEFERRED | NO_CONSENSUS), `decision` (one line), `summary` (paragraph), optional `details`, optional `implementation_plan` (list of action/description), `votes` (one entry per roster member: YES | NO | ABSTAIN or conditional text), **`confidence`** (optional — one integer per roster member, same keys as `votes`; scale 1–4: 1=low, 4=high; used for metacognition/veracity analysis; see `artifacts/metacognition-and-committee-veracity.md`), `signatures` (chair: "Committee (Cyberneutics)", ratified_by: "User").
+   - **Confidence at resolution:** When producing the resolution, have each character state both their vote and their confidence in that vote (1–4). Record confidence in the `confidence:` block so it can be used for meta-d'/d' analysis across runs. If you omit confidence (e.g. for backward compatibility with existing records), leave the `confidence` key out entirely.
 
 After writing the record, you may summarize the decision space map (KEY TENSIONS, RECOMMENDED NEXT STEPS) inline for the user's convenience; the authoritative output remains the directory.
 
