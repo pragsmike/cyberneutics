@@ -115,3 +115,23 @@ But the system boundary of the "cases" is severely constrained. In the real worl
 - **Remove Metric 3**: Delete the Condition P1 requirement from the run budget and remove the Topology map from the primary scoring tables. Replace it with qualitative notes on model variance if desired.
 - **Rebalance the Corpus**: Shift the N=8-10 corpus from primarily historical cases to a 50/50 split with Constructed scenarios.
 - **Acknowledge the Output Gap**: Explicitly state that high scores on Anticipation (diagnostic) do not prove the architecture will successfully navigate or *solve* the problem under dynamic conditions.
+
+## Response to evaluation (motion to recommit)
+
+The committee has received two independent evaluations criticizing gaps in our evidentiary standards and reasoning completeness. Specifically: our uncritical acceptance of Maya's evaluator-bias claim, the missing mechanical explanation for why static prompts fail at topology mapping, and our failure to acknowledge the identity-level trade-off of heavily weighting constructed scenarios over historical ones. The author has also submitted an amended research program that incorporates our prior feedback. We recommit to address these gaps.
+
+## Round 3: Evidentiary Standards and Mechanisms
+
+**Vic:** Maya, the evaluations correctly call me out for dropping the ball on your evaluator-bias claim in Round 2. You asserted that the Blind Evaluator will smuggle in stylistic priors, favoring corporate eloquence over genuine anticipation. Provide a published study demonstrating this specific failure mode in LLM-as-a-judge setups, or withdraw the claim as unreferenced speculation. 
+
+**Maya:** I cannot cite a study specifically testing "anticipation vs. eloquence" on historical case data, because this framework is the first to test it. However, the author's amended document provides the exact mechanism we need: the "Evaluator Stylistic Bias Protocol" (Section VI). Rather than debating the prior, the new protocol constructs synthetic pairs (rough-but-accurate vs. eloquent-but-blind) to *test* whether the specific evaluator model carries this bias before scoring the main corpus. This converts my unfalsifiable suspicion into an empirical calibration step. I accept this mitigation.
+
+**Frankie:** And what about the corpus reweighting? The evaluations rightly point out that we pushed the author to rely heavier on Constructed Scenarios, which the author has now done (a 50/50 split and distinct reporting tables 1a and 1b). But we must explicitly acknowledge the cost: by filling the corpus with Glenda/Crock and Blast Radius scenarios, the framework drifts away from its core innovation—using actual historical outcomes as ground truth. Constructed cases only test whether the architecture recognizes structural traps we predefined. 
+
+**Joe:** Frankie is correct. The trade-off is purity vs. reality. Historical cases are muddy and contaminated, but they actually happened. Constructed cases are clean, but artificial. The author's new amendment handles this correctly by enforcing structurally separate reporting. They are never blended into a single "Anticipation" aggregate, because they measure fundamentally different types of anticipation. I accept the author's solution to prioritize 3-4 clean historical cases and augment with 4-5 pure constructed ones.
+
+**Tammy:** To the final evaluation point regarding my topology critique. The evaluator asked for the specific mechanical difference between Metric 3's output variance and genuine decision topology. Here it is: When you run a static prompt three times (or even twenty times), the variance you see is a function of the LLM's softmax sampling temperature. You are mapping the probability distribution of the *model's training weights* responding to those specific tokens. Genuine decision topology requires interactive probing—you must establish a baseline, then systematically perturb the inputs (e.g., "what if the budget is halved?") to see where the system's recommendation flips. A fixed prompt cannot be perturbed; therefore, any variance is just sampling noise, not a map of the problem's structural boundaries. The author was correct to demote it to a qualitative convergence check.
+
+## Round 3 Analysis
+- **Emerging consensus:** The committee fully endorses the author's amendments (Evaluator Bias Calibration, separate reporting for Historical vs. Constructed cases, and demotion of Metric 3).
+- **Status:** DELIBERATION COMPLETE. The structural gaps identified in the evaluations have been closed via the author's amendments and Tammy's mechanical clarification.

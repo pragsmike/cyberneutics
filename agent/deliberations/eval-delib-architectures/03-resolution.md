@@ -2,35 +2,31 @@
 resolution:
   date: "2026-02-26"
   topic: "Evaluating Deliberative Architectures"
-  outcome: "PASSED (With Major Amendments)"
-  decision: "Execute the research program after demoting Metric 3 (Topology) and reweighting the corpus to favor Constructed Scenarios."
-  summary: "The committee found the structural focus of the Black Swan Hindsight Framework highly valuable but identified critical flaws in its execution. The reliance on historical datasets for non-contaminated 'ground truth' is dangerously fragile, and Metric 3 (Topology) is statistically invalid at the proposed run budget. The framework must be amended to prioritize Constructed Scenarios (e.g., Glenda/Crock) and remove Topology from formal scoring."
+  outcome: "PASSED (Fully Ratified)"
+  decision: "Execute the amended research program. The newly added calibration protocols and separated reporting tables resolve the committee's major structural concerns."
+  summary: "After a remediation round incorporating independent evaluations and the author's amendments, the committee formally endorses the research program. The addition of the Evaluator Stylistic Bias Protocol successfully converts an unfalsifiable risk into a testable calibration step. The separation of Historical and Constructed cases into distinct reporting tables explicitly acknowledges the trade-off between contamination-free structural testing and messy historical ground truth. Finally, the demotion of the static Topology metric correctly prevents sampling variance from being mischaracterized as decision boundary mapping."
   implementation_plan:
-    - "Amend the research document to demote or remove Metric 3."
-    - "Update the run budget to redistribute resources to Metrics 1 & 2."
-    - "Redefine the 8-10 case corpus to be at least 50% Constructed Scenarios."
-    - "Add specific warnings about Evaluator LLM stylistic biases when measuring Anticipation."
+    - "Execute the Phase 1 Evaluator Bias Calibration Protocol before scoring cases."
+    - "Maintain strict separation between Historical and Constructed case reporting (Tables 1a/1b)."
+    - "Treat any convergence/divergence in the dual C2 runs strictly as qualitative observation, not topological proof."
   votes:
-    Maya: "YES (conditionally)"
+    Maya: "YES"
     Frankie: "YES"
-    Joe: "YES (conditionally)"
-    Vic: "YES (with Metric 3 removal)"
-    Tammy: "YES (conditionally)"
+    Joe: "YES"
+    Vic: "YES"
+    Tammy: "YES"
   signatures:
     chair: "Committee (Cyberneutics)"
     ratified_by: "User"
 ---
 
-# Resolution: Evaluating Deliberative Architectures
+# Resolution: Evaluating Deliberative Architectures (Amended)
 
-The Black Swan Hindsight Framework is documented well enough to be executed by competent researchers. The operationalized metrics (Anticipation and Epistemic Humility) are well-defined and mapped to the existing `evaluation-schemes.md`.
+The Black Swan Hindsight Framework, as amended on 2026-02-26, represents a rigorous, executable research design. The committee's initial concerns regarding knowledge contamination, evaluator bias, and statistical invalidity have been systematically addressed through structural amendments.
 
-However, the committee identifies three major weaknesses:
-1.  **Metric 3 is statistically unusable**: Defining a problem's topological variance (Basin vs Ridge) with a sample size of N=3 (Condition P1) will only measure noise. Increasing the sample size destroys the token budget.
-2.  **Historical Contamination Mitigations are fragile**: The intersection of cases that are "granular enough to escape training data" but "documented enough to build causal records" is effectively zero. Strategy B (Transposition) adds uncontrolled variables.
-3.  **The Blind Evaluator's Prior**: Even when blinded to the condition, the evaluating LLM will bias its scores toward "business eloquence" rather than true structural anticipation, subverting the Anticipation metric.
+Key ratifications from the Remediation Round:
+1. **Evaluator Bias is now empirical**: Rather than resting on an untested assumption of LLM bias toward "eloquence," the new calibration protocol guarantees this bias will be tested and accounted for prior to execution.
+2. **Corpus Trade-offs are honest**: The framework correctly bifurcates Historical cases (high reality, high contamination risk) and Constructed cases (pure structural recognition, artificial ground truth), reporting them independently.
+3. **Topology mechanism clarified**: The committee confirms that variance on a static prompt measures model sampling noise, not decision topology. The demotion of Metric 3 to a qualitative observation is mathematically sound.
 
-The framework can be improved by:
-1.  Formally demoting or deleting Metric 3 from quantitative analysis.
-2.  Reweighting the corpus to favor "Constructed Scenarios," which provide pure tests of structural recognition without historical contamination risks.
-3.  Adding stringent calibration requirements (e.g., a Cohen's Kappa > 0.70 threshold) for the manual evaluators regarding stylistic bias in the LLM outputs.
+The research program is cleared for execution.
