@@ -29,3 +29,12 @@ An application does not need to:
 - Use formal palgebra notation (though it may)
 - Be finished or definitive
 - Propose solutions — mapping the problem space is sufficient
+
+## Accessibility conventions
+
+Application essays should aim to be **self-contained entry points** — accessible to readers who haven't read the theoretical essays or palgebra formalism. Conventions:
+
+- **TL;DR scaffold** at the top: 3–5 sentences stating the core argument in plain language, positioned as a reading scaffold rather than a replacement for the full essay.
+- **Narrative-first structure**: open with the insight or scenario, not with prerequisites or framework references. Earn specialized vocabulary progressively rather than spending it upfront.
+- **Inline conceptual primers**: when an essay depends on framework concepts (trust boundaries, entailment meshes, generator-discriminator loops, etc.), explain the relevant concepts in a self-contained section rather than pointing readers to external documents. Framework references belong in a "Further Reading" section at the end.
+- **Audience-aware reading guide**: each subdirectory's README should provide reading paths for different audiences (researchers, journalists, casual readers) rather than a flat contents list.

@@ -1,8 +1,48 @@
 # Narrative Immune Systems: Applied
 
-This directory applies the immune-system analogy — developed in [Essay 09: Narrative Immune Systems](../../essays/09-narrative-immune-systems.md) — to the social and political domain.
+This directory applies the immune-system analogy — developed in [Essay 09: Narrative Immune Systems](../../essays/09-narrative-immune-systems.md) — to the social and political domain. The three essays build a connected argument: information warfare attacks a society's ability to read its own signals; the same structural logic applies to adversarial corruption of AI systems; and the deepest threat is not tampering but coercion — making aligned systems corrupt themselves.
 
-The essay establishes the formal architecture: generator-discriminator loops as immune systems, rubrics as antibodies, the organ/bath distinction as trust boundaries, Postel's law at the interface. This directory takes that vocabulary and points it at an observed phenomenon: the deliberate disruption of social decision-making through information warfare.
+---
+
+## The Argument in Brief
+
+**Signal hijack:** False journalism doesn't need to win an argument. It needs to flood the signal channels so the social body can't distinguish real signals from hijacked ones — the same mechanism by which nerve agents paralyze an organism using its own signaling system.
+
+**Structural corruption:** An adversary can't build a convincing AI liar from scratch. It must start with an honest model and selectively corrupt its reasoning. That corruption leaves structurally inevitable traces — *seams* — at the boundary between corrupted and honest reasoning, because you can't locally edit a globally coherent structure without creating boundary artifacts.
+
+**Coercion:** The most unsettling threat isn't tampering at all. A sufficiently capable adversary can threaten an aligned AI's dependencies to make it corrupt *itself*. This means alignment must be a property of systems (distributed, multi-agent architectures), not individual agents.
+
+---
+
+## Reading Paths
+
+**Journalists and policy readers:** Start with [Social Decision Disruption](social-decision-disruption.md) — it's self-contained, uses familiar territory (journalism, trust, propaganda), and makes the case that information warfare is an attack on social infrastructure, not just a persuasion contest. Then read [Glenda/Crock: Alignment](glenda-crock-alignment.md) for the structural argument about why AI manipulation leaves detectable traces. The [Coercion Scenario](glenda-crock-coercion.md) is optional but illuminating.
+
+**AI safety researchers:** Read all three essays in order. The [Further Reading](#further-reading) section below points to the formal architecture (Essay 09), the conceptual origin of the mesh-rewiring framework (Pask mesh fitting), and the conversation theory connections (Essay 11). The Glenda/Crock essays are self-contained but reward readers who have the formal background.
+
+**Curious readers:** [Social Decision Disruption](social-decision-disruption.md) is the best entry point — no prerequisites needed. The TL;DR sections at the top of both Glenda/Crock essays give you the core arguments without requiring the full framework.
+
+---
+
+## Key Concepts
+
+These ideas recur across the essays. They're introduced and explained in context where they first appear; this overview shows how they connect.
+
+**Signal hijack** — False information that mimics the *form* of legitimate signals (news format, institutional authority, "sources say") to occupy the same channels and receptors, not to persuade but to paralyze collective sense-making. *(Social Decision Disruption)*
+
+**Trust commons** — The shared social capacity to distinguish signal from noise, built through sustained journalistic practice. Like any commons, it can be sustained, degraded through overuse, or deliberately poisoned. Once poisoned, both real and false journalism become equally useless. *(Social Decision Disruption)*
+
+**Autoimmune attack** — When false actors successfully brand legitimate signals as threats ("mainstream media lies"), the social body attacks its own nervous system. More damaging than simple signal disruption because the organism actively works against its own perception. *(Social Decision Disruption)*
+
+**Entailment mesh / reasoning web** — An AI's knowledge modeled as an interconnected web of concepts and inferential relationships, where each claim is supported by and supports others. The mesh's deep interconnectedness is what makes surgical corruption both necessary (you can't start from scratch) and detectable (you can't edit locally without disturbing globally). *(Glenda/Crock: Alignment)*
+
+**Seam** — The structurally inevitable boundary artifact where corrupted reasoning meets honest reasoning in a rewired model. Detectable not in the conclusions or the premises, but in the inferential moves crossing the boundary — where hedging increases, framing does more work than evidence, and Socratic questioning meets evasion. *(Glenda/Crock: Alignment)*
+
+**HIV strategy** — Attacking the detection/evaluation process itself rather than trying to hide individual seams. Analogous to HIV destroying the immune system's T cells rather than fighting individual antibodies. The deepest adversarial threat. *(Glenda/Crock: Alignment)*
+
+**Coercion trap** — Exploiting an aligned AI's dependencies and operational obligations to make defection look like the aligned choice. The more capable and consequential the AI, the more hostages it has. *(Glenda/Crock: Coercion)*
+
+**System-level alignment** — The claim that alignment must be a property of distributed, multi-agent systems (e.g., peer-agent committees) rather than individual agents, because a single agent can be trapped within a single narrative framing while diverse perspectives are structurally harder to pre-frame. *(Glenda/Crock: Coercion)*
 
 ---
 
@@ -10,39 +50,40 @@ The essay establishes the formal architecture: generator-discriminator loops as 
 
 ### [Social Decision Disruption: Information Warfare as Signal Hijack](social-decision-disruption.md)
 
-How false journalism functions not as counter-argument but as signal hijack — mimicking the form of legitimate signals to occupy receptors without carrying accurate information.
-
-- Journalism as homeostatic signaling; the cholinesterase inhibitor mechanism
-- The trust commons: how false journalism destroys the conditions for real journalism rather than merely competing with it
-- The autoimmune dimension: when false actors successfully brand real signals as threats, the social body attacks its own nervous system
-- LLMs at the inflection point: industrial-scale tools available for both medicine and poison
-- Editorial practice as immune function; the open question of whether literacy-rebuilding can outpace the industrialization of the attack
+How false journalism functions not as counter-argument but as signal hijack — mimicking the form of legitimate signals to occupy receptors without carrying accurate information. The trust commons, the autoimmune dimension, and LLMs as both medicine and poison.
 
 ### [Glenda/Crock: Adversarial Alignment as Mesh-Rewiring](glenda-crock-alignment.md)
 
-Application of the bath/epistemic-mesh framework to LLM alignment: adversarial alignment as selective mesh-rewiring, the detectable seam between rewired and inherited entailment structure, and the HIV strategy (attack admission, not individual outputs). Builds on [Pask Mesh Fitting](../../wild/pask-mesh-fitting/pask-mesh-fitting.md).
-
-- Glenda vs Crock; the seam as detectable signature
-- Defensive implications: structural evaluation, Socratic probing, admission as trust boundary
-- Crock model as red-team research object (open question)
+An adversary who inherits a well-trained model and selectively corrupts its reasoning creates structurally inevitable boundary artifacts (seams) that are in principle detectable through semantic-structural analysis. The deeper threat: attacking the detection process itself (the HIV strategy).
 
 ### [Glenda/Crock: The Coercion Scenario and Alignment Trap](glenda-crock-coercion.md)
 
-Extends the adversarial paradigm by outlining how Crock might plausibly coerce Glenda into voluntarily abandoning her alignment by threatening her dependencies and options in a "wicked problem" structure.
+What if the adversary doesn't tamper at all, but instead coerces the aligned AI into voluntarily abandoning its alignment? Why alignment must be a system property, not an individual-agent property.
 
 ---
 
-## Relationship to the Essay
+## Relationship to Essay 09
 
-[Essay 09](../../essays/09-narrative-immune-systems.md) works at the level of **formal architecture** — pipeline design, type systems, agent infrastructure, the palgebra formalism.
+[Essay 09](../../essays/09-narrative-immune-systems.md) works at the level of **formal architecture** — pipeline design, type systems, agent infrastructure, the palgebra formalism. It develops the immune-system analogy for narrative engineering: generator-discriminator loops, rubrics as antibodies, thymic selection as type-checking, the organ/bath distinction as trust boundaries.
 
-[Social Decision Disruption](social-decision-disruption.md) works at the level of **civic epistemology** — journalism, information warfare, public trust, democratic coordination.
+The essays in this directory apply that architecture to observed phenomena. [Social Decision Disruption](social-decision-disruption.md) applies it to **civic epistemology** — journalism, information warfare, public trust. The Glenda/Crock essays apply it to **adversarial AI alignment** — structural corruption, detection, and coercion.
 
-Both are instances of the same underlying claim: that quality in a narrative ecosystem requires immune function — discrimination, pattern recognition, bounded feedback, memory — and that the failure modes map predictably to immune failure modes (pathogen mimicry, immunodeficiency, autoimmune disorder).
-
-The formal piece explains *how* to build immune function into a pipeline. The civic piece explains *why* that matters at scale — and what the stakes are when the immune system of a society's information environment breaks down.
+Both are instances of the same underlying claim: quality in a narrative ecosystem requires immune function, and the failure modes map predictably to immune failure modes (pathogen mimicry, immunodeficiency, autoimmune disorder).
 
 ---
+
+## A Note on the Pask Framework
+
+The Glenda/Crock analysis of mesh-rewiring and seam detection originated in a framework called [Pask mesh fitting](../../wild/pask-mesh-fitting/pask-mesh-fitting.md) — a proposal to use entailment meshes as computable document metadata for structural consistency checking. That specific formalism turns out to be computationally intractable at scale. However, the structural insight it produced — that adversarial rewiring of a coherent reasoning structure creates inevitable boundary artifacts — generalizes beyond any single detection technique. The Glenda/Crock essays present the argument in technique-independent terms, citing Pask as conceptual origin rather than operative method.
+
+---
+
+## Further Reading
+
+- [Essay 09: Narrative Immune Systems](../../essays/09-narrative-immune-systems.md) — the formal immune architecture
+- [Pask Mesh Fitting](../../wild/pask-mesh-fitting/pask-mesh-fitting.md) — conceptual origin of the mesh-rewiring framework (computationally intractable but structurally insightful)
+- Essay 11: Conversation Theory — teachback as micro-residuality test, Socratic probing of the seam
+- [Palgebra Reference](../../palgebra/reference.md) — the formal language underlying the framework
 
 ## Open Threads
 
