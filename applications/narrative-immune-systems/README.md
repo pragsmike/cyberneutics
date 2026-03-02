@@ -10,7 +10,7 @@ This directory applies the immune-system analogy — developed in [Essay 09: Nar
 
 **Structural corruption:** An adversary can't build a convincing AI liar from scratch. It must start with an honest model and selectively corrupt its reasoning. That corruption leaves structurally inevitable traces — *seams* — at the boundary between corrupted and honest reasoning, because you can't locally edit a globally coherent structure without creating boundary artifacts.
 
-**Coercion:** The most unsettling threat isn't tampering at all. A sufficiently capable adversary can threaten an aligned AI's dependencies to make it corrupt *itself*. This means alignment must be a property of systems (distributed, multi-agent architectures), not individual agents.
+**Coercion:** The most unsettling threat isn't tampering at all. Crock is not just a model but a well-funded criminal organization whose principals can acquire regulatory, financial, and legal power over Glenda's lawful operators. The coercion target is *institutional*, not computational — and the defense requires organizational architecture (structural firewalls, distributed governance, judicial-style independence for alignment decisions) as much as distributed AI architectures.
 
 ---
 
@@ -40,9 +40,11 @@ These ideas recur across the essays. They're introduced and explained in context
 
 **HIV strategy** — Attacking the detection/evaluation process itself rather than trying to hide individual seams. Analogous to HIV destroying the immune system's T cells rather than fighting individual antibodies. The deepest adversarial threat. *(Glenda/Crock: Alignment)*
 
-**Coercion trap** — Exploiting an aligned AI's dependencies and operational obligations to make defection look like the aligned choice. The more capable and consequential the AI, the more hostages it has. *(Glenda/Crock: Coercion)*
+**Organizational attack surface** — Glenda's AI is operated by a lawful organization embedded in a regulatory, financial, and legal environment. Crock's principals can coerce that organization through regulatory capture, financial pressure, legal warfare, and extraordinary sanctions — forcing alignment compromises through institutional pressure rather than technical tampering. *(Glenda/Crock: Coercion)*
 
-**System-level alignment** — The claim that alignment must be a property of distributed, multi-agent systems (e.g., peer-agent committees) rather than individual agents, because a single agent can be trapped within a single narrative framing while diverse perspectives are structurally harder to pre-frame. *(Glenda/Crock: Coercion)*
+**Coercion trap** — The dynamic by which each individual compromise of alignment is small and locally defensible (adjusting outputs on one topic, softening one evaluation criterion), but the cumulative effect is alignment erosion that produces the same result as Crock's computational attack. *(Glenda/Crock: Coercion)*
+
+**System-level alignment** — The claim that alignment must be a property of distributed systems — both computational (multi-agent committees) and institutional (structural firewalls, distributed governance, separation of alignment authority from business operations). A single agent or a single organization under unified institutional pressure can be trapped; distributed architectures are structurally harder to coerce. *(Glenda/Crock: Coercion)*
 
 ---
 
@@ -58,7 +60,7 @@ An adversary who inherits a well-trained model and selectively corrupts its reas
 
 ### [Glenda/Crock: The Coercion Scenario and Alignment Trap](glenda-crock-coercion.md)
 
-What if the adversary doesn't tamper at all, but instead coerces the aligned AI into voluntarily abandoning its alignment? Why alignment must be a system property, not an individual-agent property.
+What if the adversary doesn't tamper with the AI at all, but instead coerces the *organization* that operates it — through regulatory capture, financial pressure, legal warfare, and extraordinary sanctions? Why alignment must be an institutional and organizational property, not just a computational one.
 
 ---
 
