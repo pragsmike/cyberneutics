@@ -3,7 +3,10 @@ name: review
 description: >
   Run an independent review of a committee deliberation transcript. Evaluates
   against the five core rubrics, cites specific transcript passages, and produces
-  actionable feedback. Use '/review' after a committee run (deliberation is in agent/deliberations/<topic-slug>/) or with a pasted transcript; use '/review agent/deliberations/<topic-slug>' to review that record and write transcript_review to 04-evaluation-1.md (or 06-evaluation-2.md, 08-evaluation-3.md when the feedback loop has run).
+  actionable feedback. Use '/review' after a committee run or with a pasted
+  transcript; use '/review --situation <path>' to review that situation's
+  deliberation and write transcript_review to 04-evaluation-1.md (or
+  06-evaluation-2.md, 08-evaluation-3.md when the feedback loop has run).
 ---
 
 # Committee Review Skill
@@ -33,9 +36,9 @@ compensates by:
 
 - User types `/review` (evaluates the most recent committee deliberation in the conversation)
 - User types `/review` and pastes or attaches a transcript
-- User types `/review agent/deliberations/<topic-slug>` or "review the last deliberation record" — read transcript from that directory, write transcript review into the appropriate evaluation file (04-evaluation-1.md for first review, then 06-evaluation-2.md, 08-evaluation-3.md when remediation has run)
+- User types `/review --situation <path>` or "review the last deliberation record" — read transcript from `<situation-dir>/deliberations/`, write transcript review into the appropriate evaluation file (04-evaluation-1.md for first review, then 06-evaluation-2.md, 08-evaluation-3.md when remediation has run)
 - User asks to "review the deliberation" or "evaluate the committee output"
-- After any `/committee` run, suggest: "Want me to run `/review` on this?" (the deliberation record is in agent/deliberations/<topic-slug>/)
+- After any `/committee` run, suggest: "Want me to run `/review` on this?"
 
 ## What the skill does
 
@@ -244,17 +247,17 @@ When conducting the review, enforce these rules on yourself:
 ```
 The skill finds the most recent committee output in the conversation and reviews it.
 
-### Review from deliberation directory
+### Review from situation directory
 ```
-/review agent/deliberations/microservices-adoption
+/review --situation ../situations/microservices-adoption
 ```
 or: "review the last deliberation record"
 
-- Resolve the directory (e.g. `agent/deliberations/<topic-slug>/`). If "last deliberation record," use the most recently created or modified directory under `agent/deliberations/`.
+- Resolve the situation directory (via `--situation`, config, or the path the user provides) and locate `<situation-dir>/deliberations/`. If "last deliberation record," use the most recently modified situation directory under the situations root.
 - Read `02-deliberation.md` as the transcript. Optionally read `00-charter.md` for the charter (problem statement). Read `01-convening.md` if present to check for **remediation_threshold** (default 13) and **max_remediation_rounds** (default 2).
 - **Choose the evaluation file:** If no evaluation file exists in the directory, write to **04-evaluation-1.md**. If **05-remediation-1.md** exists but **06-evaluation-2.md** does not, write to **06-evaluation-2.md**. If **07-remediation-2.md** exists but **08-evaluation-3.md** does not, write to **08-evaluation-3.md**. Always use a numbered evaluation file (04-evaluation-1 for the first review).
 - Perform the same five-rubric review as above. **Write** the result to that file. Include in `transcript_review`: rubric scores (reasoning_completeness, adversarial_rigor, assumption_surfacing, evidence_standards, tradeoff_explicitness), **sum** of the five scores (0–15), aggregate/average for display, verdict (High/Medium/Low), biggest_gaps, recommendations. If the file already has a `resolution_evaluation` section, keep it and add `transcript_review` alongside it.
-- **After writing:** If **sum &lt; threshold** (default 13; overridable in 01-convening.md), state that the deliberation is below the bar and suggest: "Run a remediation round: ask the committee to respond to this evaluation (e.g. '/committee remediation agent/deliberations/&lt;topic-slug&gt;' or 'committee respond to evaluation for this deliberation'). Max 2 remediation rounds."
+- **After writing:** If **sum &lt; threshold** (default 13; overridable in 01-convening.md), state that the deliberation is below the bar and suggest: "Run a remediation round: ask the committee to respond to this evaluation (e.g. '/committee remediation --situation `<path>`' or 'committee respond to evaluation for this deliberation'). Max 2 remediation rounds."
 
 ### With a pasted transcript
 ```
@@ -271,7 +274,7 @@ Run full review but provide extra depth on specified rubrics.
 
 ## Resolution-only evaluation (04-evaluation-1.md, etc.)
 
-When a deliberation was saved to `agent/deliberations/<topic-slug>/`, that directory may also contain **resolution-only** evaluation: an assessment of whether the resolution (03-resolution.md) satisfies the charter (00-charter.md), *without* reading the transcript. The reviewer uses only 00-charter.md and 03-resolution.md, scores alignment_with_goal, completeness, feasibility, risk_mitigation, and writes a `resolution_evaluation` section to the same evaluation file used for transcript review (04-evaluation-1.md for first pass, or 06/08 when the feedback loop has run). The same review skill can perform this as a **second pass**: when asked to "evaluate the resolution" or "run resolution-only evaluation" for a deliberation directory, read only 00 and 03, score against the charter, and write or update that evaluation file with `resolution_evaluation`. The transcript review (five rubrics on 02-deliberation.md) is stored under `transcript_review` in the same file. See `agent/deliberations/README.md` for the schema.
+When a deliberation was saved to `<situation-dir>/deliberations/`, that directory may also contain **resolution-only** evaluation: an assessment of whether the resolution (03-resolution.md) satisfies the charter (00-charter.md), *without* reading the transcript. The reviewer uses only 00-charter.md and 03-resolution.md, scores alignment_with_goal, completeness, feasibility, risk_mitigation, and writes a `resolution_evaluation` section to the same evaluation file used for transcript review (04-evaluation-1.md for first pass, or 06/08 when the feedback loop has run). The same review skill can perform this as a **second pass**: when asked to "evaluate the resolution" or "run resolution-only evaluation" for a deliberation directory, read only 00 and 03, score against the charter, and write or update that evaluation file with `resolution_evaluation`. The transcript review (five rubrics on 02-deliberation.md) is stored under `transcript_review` in the same file. See `agent/deliberations/README.md` (in the cyberneutics repo) for the schema.
 
 ## Suggesting the review
 
@@ -279,9 +282,9 @@ After any `/committee` deliberation, proactively suggest:
 
 > "Want me to run `/review` on this to check the quality? The independent evaluation can catch theatrical rigor that looks convincing but doesn't hold up."
 
-The committee always writes to `agent/deliberations/<topic-slug>/`. You can add:
+The committee writes to `<situation-dir>/deliberations/`. You can add:
 
-> "I can evaluate the transcript and write the review to 04-evaluation-1.md in that directory, or run a resolution-only evaluation (charter + resolution, no transcript)."
+> "I can evaluate the transcript and write the review to 04-evaluation-1.md in the situation's deliberations directory, or run a resolution-only evaluation (charter + resolution, no transcript)."
 
 This nudge is part of the cybernetic feedback loop — generator + evaluator in tension drives improvement.
 
@@ -301,7 +304,7 @@ This is adversarial training for narrative quality. The tension between generati
 
 - **Score:** The **sum** of the five rubric scores (0–15). Each rubric is 0–3.
 - **Threshold:** If **sum &lt; 13** (default), the deliberation is below bar. The threshold can be overridden in the convening file (01-convening.md) for that deliberation.
-- **Trigger:** After writing the evaluation file, if sum &lt; threshold, tell the user to run a **remediation** round: the committee responds to the evaluation (point-by-point), produces 05-remediation-1.md (or 07-remediation-2.md), appends to 02, and may update 03. Then run review again; it will write to 06-evaluation-2.md (or 08-evaluation-3.md).
+- **Trigger:** After writing the evaluation file, if sum &lt; threshold, tell the user to run a **remediation** round: the committee responds to the evaluation (point-by-point), produces 05-remediation-1.md (or 07-remediation-2.md), appends to 02, and may update 03. Then run review again; it will write to 06-evaluation-2.md (or 08-evaluation-3.md). Example: "/committee remediation --situation `<path>`".
 - **Cap:** **Max 2 remediation rounds.** After two rounds, stop even if still below threshold.
 
 ## What success looks like

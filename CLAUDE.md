@@ -8,7 +8,7 @@ Cyberneutics is a methodology for working with LLMs as collaborative sense-makin
 
 1. **Read the most recent handoff**: `agent/handoff-[YYYY-MM-DD].md` (pick the largest date). It captures current context, what was just worked on, open questions, and next steps. Skipping this loses continuity.
 2. **Check `agent/gap_analysis.md`** for known gaps and planned documents.
-3. **If a `/committee` deliberation is relevant**, look in `agent/deliberations/` for records of prior runs on related topics before starting a new one.
+3. **If a `/committee` deliberation is relevant**, look in the situations root (see `.claude/cyberneutics-config.yaml` or default `~/situations/`) for records of prior runs on related topics before starting a new one.
 
 ## Repository map
 
@@ -28,13 +28,31 @@ Cyberneutics is a methodology for working with LLMs as collaborative sense-makin
 - `handoff-[YYYY-MM-DD].md` — most recent session handoff; **read this first at session start**
 - `roster.md` — committee character roster; read by the committee and review skills at invocation time
 - `scenario-roster.md` — scenario character roster (divergent exploration lenses); read by the scenarios skill. Distinct from committee roster — different purpose, different characters.
-- `deliberations/<topic-slug>/` — committee run records (00-charter through 04-evaluation); see `agent/deliberations/README.md` for schema
-- `scenarios/<topic-slug>/` — scenario generation records (00-situation through 03-assessment); produced by `/scenarios`
-- `probes/<topic-slug>/` — probe records (run-01/ through run-0N/, variance report, landscape map); produced by `/probe`
 - `comparisons/<topic-slug>/` — comparison runs (deliberative vs. CJT-style on the same question); see `agent/comparisons/README.md` and `artifacts/comparison-protocol-deliberative-vs-cjt.md`
 - `diary/` — exploratory writing between sessions; read when you want recent thinking that hasn't made it into a document yet. **Write to diary** for speculative or exploratory ideas mid-session that don't yet belong in a handoff; **write to handoff** for conclusions, decisions, and next steps.
 - `gap_analysis.md` — known gaps and planned documents
 - `archive/` — previous handoffs, completed plans; historical reference
+- `deliberations/README.md` — schema documentation for deliberation records (reference only; deliberation outputs now go to situation directories)
+
+### Situations (skill output)
+
+Skill outputs (scenarios, deliberations, probes) are written **outside** the cyberneutics repo, into **situation directories**. Cyberneutics is the methodology (the "compiler"); situation directories hold the work product (the "compiled output").
+
+**Location resolution** (used by all skills):
+1. `--situation <path>` on invocation — use that path directly
+2. `situations_root` in `.claude/cyberneutics-config.yaml` — append `<topic-slug>/`
+3. Default: `~/situations/<topic-slug>/`
+
+**Situation directory structure:**
+```
+<situations_root>/<situation-slug>/
+  situation.md                # YAML frontmatter + narrative
+  scenarios/                  # scenario generation output (at most one set)
+  deliberations/              # committee deliberation output (at most one)
+  probes/                     # probe output (self-contained with run-0N/ subdirs)
+```
+
+Each situation has a `situation.md` with YAML frontmatter (created, topic, slug). Skills create this file automatically when writing to a new situation directory.
 
 ### `meta/` in more detail
 
@@ -57,10 +75,10 @@ Six slash commands are available. **Before invoking any skill, read its SKILL.md
 
 | Command | SKILL.md location | Suggest when… |
 |---------|------------------|---------------|
-| `/committee [topic]` | `.claude/skills/committee/SKILL.md` | User faces a complex decision, competing values, or asks "what are we missing?" Supports `scenario_context:` for deliberated choice. |
-| `/scenarios [situation]` | `.claude/skills/scenarios/SKILL.md` | User faces genuine uncertainty about *what might happen* — explore possible futures before committing. The divergent (fan) half of the fan/funnel duality. |
-| `/probe [situation]` | `.claude/skills/probe/SKILL.md` | High-stakes decisions where understanding the *decision landscape* matters — runs fan→funnel N times, compares resolutions, identifies eigenforms vs. residues. |
-| `/review` | `.claude/skills/review/SKILL.md` | After any `/committee` run — evaluates the transcript against five rubrics, closes the feedback loop |
+| `/committee [topic]` | `.claude/skills/committee/SKILL.md` | User faces a complex decision, competing values, or asks "what are we missing?" Auto-detects scenarios in the same situation directory. Supports `--situation` and `scenario_context:`. |
+| `/scenarios [situation]` | `.claude/skills/scenarios/SKILL.md` | User faces genuine uncertainty about *what might happen* — explore possible futures before committing. The divergent (fan) half of the fan/funnel duality. Supports `--situation`. |
+| `/probe [situation]` | `.claude/skills/probe/SKILL.md` | High-stakes decisions where understanding the *decision landscape* matters — runs fan→funnel N times, compares resolutions, identifies eigenforms vs. residues. Supports `--situation`. |
+| `/review` | `.claude/skills/review/SKILL.md` | After any `/committee` run — evaluates the transcript against five rubrics, closes the feedback loop. Supports `--situation`. |
 | `/handoff` | `.claude/skills/handoff/SKILL.md` | End of a significant session, before a break, after major milestones |
 | `/string-diagram` | `.claude/skills/string-diagram/SKILL.md` | User describes a pipeline or workflow that could be formalized as resource equations. Supports `{spider: fan/funnel}` annotations for fan/funnel topology. |
 

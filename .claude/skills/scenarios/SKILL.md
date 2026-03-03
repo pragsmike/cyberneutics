@@ -5,7 +5,7 @@ description: >
   defined in agent/scenario-roster.md. Takes a situation description and
   produces a set of distinct narrative scenarios exploring different
   possible futures. Every run writes a scenario record to
-  agent/scenarios/<topic-slug>/ (00–03 files). Use when the user types
+  <situation-dir>/scenarios/ (00–03 files). Use when the user types
   '/scenarios [situation]' or asks for scenario generation.
 ---
 
@@ -22,6 +22,33 @@ This is the **fan** operation — the divergent half of the fan/funnel duality
 formalized in `palgebra/duality-and-composition.md`. The convergent half is
 the committee (`/committee`). The composition — fan then funnel — is the
 **deliberated choice** pipeline.
+
+## Situation resolution
+
+The skill determines where to write output using this precedence:
+
+1. **`--situation <path>`** — if the user provides this on invocation, use `<path>` as the situation directory directly.
+2. **Config file** — read `situations_root` from `.claude/cyberneutics-config.yaml` (path relative to cyberneutics repo root), then append `<topic-slug>/`.
+3. **Default** — use `~/situations/<topic-slug>/`.
+
+Once the situation directory is resolved:
+- Create the directory if it doesn't exist.
+- If `situation.md` doesn't exist, create it with this template:
+  ```yaml
+  ---
+  situation:
+    created: YYYY-MM-DD
+    topic: "short topic description"
+    slug: "topic-slug"
+  ---
+
+  # [Topic]
+
+  [Narrative description from the user's input]
+  ```
+- Write scenario output to `<situation-dir>/scenarios/`.
+
+**Rosters** (`agent/scenario-roster.md`) are always read from the cyberneutics repo — they are part of the methodology, not the situation output.
 
 ## When to use
 
@@ -109,13 +136,14 @@ defaulted:
 
 ## Scenario record directory
 
-Every `/scenarios` run writes a record to a dedicated directory.
+Every `/scenarios` run writes a record to the situation's scenarios directory.
 
-**Location:** `agent/scenarios/<topic-slug>/`
+**Location:** `<situation-dir>/scenarios/` (see **Situation resolution** above for how `<situation-dir>` is determined).
 
 **Topic-slug:** Derive from the situation: lowercase, replace spaces with `-`,
 remove special characters. Example: "acquisition offer from competitor" →
-`acquisition-offer`.
+`acquisition-offer`. The slug is used to name the situation directory when one
+isn't specified via `--situation`.
 
 **Files, in order:**
 
@@ -260,7 +288,16 @@ Body: narrative assessment of the scenario set's coverage.
 ```
 
 The skill frames the situation, generates scenarios with the core roster,
-and assesses coverage.
+and assesses coverage. Output goes to the situation directory resolved via
+config or default (`~/situations/<topic-slug>/scenarios/`).
+
+### With explicit situation directory
+
+```
+/scenarios --situation ../situations/product-disruption Our main product line faces potential disruption from open-source alternatives
+```
+
+Writes output to `../situations/product-disruption/scenarios/`.
 
 ### With extensions
 
@@ -281,10 +318,18 @@ Generates core scenarios plus one additional from the Regulator lens.
 
 ### Feeding into committee (the deliberated choice)
 
-After a `/scenarios` run, the scenario set can serve as input to `/committee`:
+After a `/scenarios` run, the scenario set can serve as input to `/committee`.
+If both skills target the same situation directory (via `--situation` or config),
+the committee automatically detects existing scenarios:
 
 ```
-/committee [decision question] scenario_context: agent/scenarios/<topic-slug>/
+/committee --situation ../situations/acquisition-offer What should we do about the acquisition offer?
+```
+
+Or explicitly specify the scenario context:
+
+```
+/committee [decision question] scenario_context: <situation-dir>/scenarios/
 ```
 
 The committee then deliberates across the generated scenarios — which futures
@@ -339,7 +384,7 @@ which one is materializing.
 
 | Skill | Relationship |
 |-------|-------------|
-| `/committee` | Downstream — scenario set feeds as `scenario_context` into committee deliberation |
+| `/committee` | Downstream — scenario set feeds into committee deliberation (auto-detected when both target the same situation, or via explicit `scenario_context:`) |
 | `/review` | Does not apply directly to scenarios (review evaluates committee transcripts) |
 | `/probe` | Upstream — probe runs the composed scenarios→committee pipeline N times |
 | `/string-diagram` | The fan operation can be visualized as a one-to-many spider |

@@ -4,7 +4,7 @@ description: >
   Run an adversarial committee deliberation using the roster defined in
   agent/roster.md to explore decision spaces, surface assumptions,
   and map trade-offs. Every run writes a deliberation record to
-  agent/deliberations/<topic-slug>/ (00–04 files). Use when the user types
+  <situation-dir>/deliberations/ (00–04 files). Use when the user types
   '/committee [topic]' or asks for a committee deliberation.
 ---
 
@@ -15,15 +15,43 @@ methodology. The committee explores problem spaces through genuine conflict
 rather than convergent consensus, surfacing assumptions, trade-offs, and
 blind spots.
 
+## Situation resolution
+
+The skill determines where to write output using this precedence:
+
+1. **`--situation <path>`** — if the user provides this on invocation, use `<path>` as the situation directory directly.
+2. **Config file** — read `situations_root` from `.claude/cyberneutics-config.yaml` (path relative to cyberneutics repo root), then append `<topic-slug>/`.
+3. **Default** — use `~/situations/<topic-slug>/`.
+
+Once the situation directory is resolved:
+- Create the directory if it doesn't exist.
+- If `situation.md` doesn't exist, create it with this template:
+  ```yaml
+  ---
+  situation:
+    created: YYYY-MM-DD
+    topic: "short topic description"
+    slug: "topic-slug"
+  ---
+
+  # [Topic]
+
+  [Narrative description from the user's input]
+  ```
+- Write deliberation output to `<situation-dir>/deliberations/`.
+- **Auto-detect scenarios**: If `<situation-dir>/scenarios/` exists and contains `02-scenarios.md`, automatically operate in scenario-aware mode (see below). The user can still provide an explicit `scenario_context:` to override this.
+
+**Rosters** (`agent/roster.md`) are always read from the cyberneutics repo — they are part of the methodology, not the situation output.
+
 ## When to use
 
 - User types `/committee [topic/question]`
 - User asks to "run a committee on [X]" or "deliberate on [Y]"
-- User asks for **remediation** (e.g. "committee respond to evaluation for agent/deliberations/&lt;topic-slug&gt;" or "/committee remediation agent/deliberations/&lt;topic-slug&gt;") when an evaluation scored below threshold and the committee should address the critique
+- User asks for **remediation** (e.g. "committee respond to evaluation for `<situation-dir>`" or "/committee remediation --situation `<path>`") when an evaluation scored below threshold and the committee should address the critique
 - Complex sociotechnical problems where single perspectives miss important angles
 - Decisions with competing values, unclear trade-offs, or political dimensions
 - Situations where "what are we missing?" matters more than "what's the answer?"
-- **After `/scenarios`**: User provides `scenario_context: agent/scenarios/<topic-slug>/` to deliberate across previously generated scenarios (the deliberated choice workflow)
+- **After `/scenarios`**: When the same situation directory already contains scenarios, the committee auto-detects them and deliberates across previously generated scenarios (the deliberated choice workflow). Or provide `scenario_context:` explicitly.
 
 ## The Committee Roster
 
@@ -36,7 +64,7 @@ If `agent/roster.md` does not exist or is unreadable, tell the user and stop. Do
 When invoked, the skill:
 
 1. **Reads the roster** from `agent/roster.md` to get character definitions, interaction dynamics, and voice notes.
-2. **Creates the deliberation record directory** `agent/deliberations/<topic-slug>/` and writes 00-charter.md, 01-roster.md, 01-convening.md.
+2. **Resolves the situation directory** (see Situation resolution above) and **creates the deliberation record directory** `<situation-dir>/deliberations/`, writing 00-charter.md, 01-roster.md, 01-convening.md.
 3. **Initializes the committee** with all characters and their propensities
 4. **Presents the problem** as stated by the user (or prompts for clarification if vague)
 5. **Generates initial perspectives** from each character (2-3 paragraphs each)
@@ -48,16 +76,16 @@ The canonical output is the **deliberation record directory** (00–04). The sub
 
 ## Scenario-aware mode (deliberated choice)
 
-When the user provides `scenario_context:` (a path to a `/scenarios` output directory), the committee operates in **scenario-aware mode** — the convergent half of the fan→funnel composition.
+When the situation directory contains scenarios, or the user provides an explicit `scenario_context:`, the committee operates in **scenario-aware mode** — the convergent half of the fan→funnel composition.
 
-**How to detect**: The user includes `scenario_context: agent/scenarios/<topic-slug>/` in their invocation, or says "deliberate across the scenarios in [path]."
+**How to detect**: Either (a) the resolved `<situation-dir>/scenarios/` contains `02-scenarios.md` (auto-detected), or (b) the user includes `scenario_context: <path>` in their invocation, or (c) the user says "deliberate across the scenarios in [path]."
 
 **What changes**:
 
 1. **Read the scenario set**: Read `02-scenarios.md` and `00-situation.md` from the specified directory. Extract scenario titles, narrators, assumptions, and key implications.
 2. **Charter includes scenario context**: The `00-charter.md` gets additional fields:
    ```yaml
-   scenario_context: "agent/scenarios/<topic-slug>/"
+   scenario_context: "<situation-dir>/scenarios/"
    scenarios_summary:
      - id: 1
        title: "scenario title"
@@ -176,12 +204,19 @@ The skill should then:
 
 The skill recognizes sufficient context and proceeds directly to deliberation.
 
-### With scenario context (deliberated choice)
+### With situation directory (deliberated choice)
 ```
-/committee [decision question] scenario_context: agent/scenarios/<topic-slug>/
+/committee --situation ../situations/acquisition-offer What should we do about the acquisition offer?
 ```
 
-Reads the scenario set from the specified directory and runs in scenario-aware mode. Each character engages with the scenarios from their propensity. The resolution distinguishes robust actions from scenario-dependent ones.
+If the situation directory contains scenarios, auto-detects them and runs in scenario-aware mode. Each character engages with the scenarios from their propensity. The resolution distinguishes robust actions from scenario-dependent ones.
+
+### With explicit scenario context
+```
+/committee [decision question] scenario_context: <path-to-scenarios-dir>/
+```
+
+Reads the scenario set from the specified directory. Use when the scenarios are in a different location than the situation directory.
 
 ### Scoped invocation
 ```
@@ -220,9 +255,9 @@ Not "do this" but "if you optimize for X, you sacrifice Y, and here's what each 
 
 ## Integration with other artifacts
 
-The committee skill can reference (all paths under cyberneutics only):
+The committee skill can reference:
 
-- **Previous deliberations**: Other runs under `agent/deliberations/<topic-slug>/`; if a similar problem was deliberated before, note lessons learned from those records
+- **Previous deliberations**: Other situation directories under the situations root; if a similar problem was deliberated before, note lessons learned from those records
 - **Character propensity reference**: `artifacts/character-propensity-reference.md` for detailed character calibration
 - **Setup templates**: `artifacts/committee-setup-template.md` for advanced customization
 - **Examples**: `artifacts/examples/` for precedent
@@ -232,9 +267,9 @@ The committee skill can reference (all paths under cyberneutics only):
 
 Every committee run writes a deliberation record to a dedicated directory. There is no single-file or inline-only mode—the directory is the canonical output.
 
-**Location:** `agent/deliberations/<topic-slug>/`
+**Location:** `<situation-dir>/deliberations/` (see **Situation resolution** above for how `<situation-dir>` is determined).
 
-**Topic-slug:** Derive from the topic: lowercase, replace spaces with `-`, remove or replace special characters. Examples: "Should we adopt microservices?" → `microservices-adoption`; "Is the author a crackpot?" → `is-author-crackpot`.
+**Topic-slug:** Derive from the topic: lowercase, replace spaces with `-`, remove or replace special characters. Examples: "Should we adopt microservices?" → `microservices-adoption`; "Is the author a crackpot?" → `is-author-crackpot`. The slug is used to name the situation directory when one isn't specified via `--situation`.
 
 **Phased file production:** Create the directory and write files in order.
 
@@ -262,9 +297,9 @@ After writing the record, you may summarize the decision space map (KEY TENSIONS
 
 ## Remediation mode (Committee respond to evaluation)
 
-When the user or workflow invokes the committee for **remediation** (e.g. "committee respond to evaluation for agent/deliberations/&lt;topic-slug&gt;" or "/committee remediation agent/deliberations/&lt;topic-slug&gt;" or "run a remediation round for this deliberation"):
+When the user or workflow invokes the committee for **remediation** (e.g. "committee respond to evaluation for `<situation-dir>`" or "/committee remediation --situation `<path>`" or "run a remediation round for this deliberation"):
 
-1. **Resolve the deliberation directory** (e.g. `agent/deliberations/<topic-slug>/`).
+1. **Resolve the situation directory** (via `--situation`, config, or the path the user provides) and locate `<situation-dir>/deliberations/`.
 2. **Read:** 00-charter.md, 02-deliberation.md, and the **latest evaluation file** (04-evaluation-1.md, or 06-evaluation-2.md if the first remediation already ran, or 08-evaluation-3.md if two remediations exist). From the evaluation file use `transcript_review`: rubric scores, biggest_gaps, recommendations.
 3. **Check:** If 05-remediation-1.md and 07-remediation-2.md already exist, do not run again (max 2 remediation rounds). Tell the user the deliberation has already had two remediation rounds.
 4. **Produce:**
@@ -361,7 +396,7 @@ Or I can proceed with general deliberation if you'd like to keep it abstract.
 
 **User provides context**
 
-**Skill**: Reads roster from `agent/roster.md`, runs full deliberation with all roster members. With the standard roster, this surfaces things like:
+**Skill**: Reads roster from `agent/roster.md`, resolves the situation directory, runs full deliberation with all roster members. With the standard roster, this surfaces things like:
 - The institutional-memory character notes a prior failed attempt and specific reasons
 - The political-awareness character questions if the tech lead is empire-building
 - The values-guardian asks if this serves actual mission or is resume-driven

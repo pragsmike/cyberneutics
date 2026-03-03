@@ -4,8 +4,9 @@ description: >
   Run the composed fan→funnel pipeline N times on the same situation to
   map the decision landscape. Produces a variance report (what's stable
   vs. variable across runs) and a decision landscape map (basins, ridges,
-  load-bearing assumptions). Use when the user types '/probe [situation]'
-  or asks to probe a decision space.
+  load-bearing assumptions). Writes to <situation-dir>/probes/ with
+  self-contained run-0N/ subdirectories. Use when the user types
+  '/probe [situation]' or asks to probe a decision space.
 ---
 
 # Probe Skill
@@ -20,6 +21,22 @@ This is the **iteration** operation from `palgebra/duality-and-composition.md`:
 the Deleuzian walk through the decision space. Each run is an architectural
 walk (in residuality theory terms). The walks are never identical — each
 actualizes a different trajectory — and the differences reveal structure.
+
+## Situation resolution
+
+The skill determines where to write output using this precedence:
+
+1. **`--situation <path>`** — if the user provides this on invocation, use `<path>` as the situation directory directly.
+2. **Config file** — read `situations_root` from `.claude/cyberneutics-config.yaml` (path relative to cyberneutics repo root), then append `<topic-slug>/`.
+3. **Default** — use `~/situations/<topic-slug>/`.
+
+Once the situation directory is resolved:
+- Create the directory if it doesn't exist.
+- If `situation.md` doesn't exist, create it (see scenarios or committee skill for template).
+- Write probe output to `<situation-dir>/probes/`.
+- Each run's self-contained artifacts go in `<situation-dir>/probes/run-0N/`.
+
+**Rosters** (`agent/roster.md`, `agent/scenario-roster.md`) are always read from the cyberneutics repo — they are part of the methodology, not the situation output.
 
 ## When to use
 
@@ -55,8 +72,7 @@ into an actionable decision landscape.
 
 When invoked, the skill:
 
-1. **Frames the situation** (or reuses an existing framing if the user points
-   to a previous `/scenarios` run)
+1. **Resolves the situation directory** (see Situation resolution above) and **frames the situation** (or reuses an existing framing if the situation already contains scenarios)
 2. **Runs N independent deliberated choice cycles** (default N=3):
    - Each run generates scenarios independently (fresh fan)
    - Each run deliberates independently (fresh funnel)
@@ -83,7 +99,7 @@ structure, not cross-contamination.
 |-----------|---------|-------------|
 | **N** (run count) | 3 | Number of independent runs. Minimum 2, recommended 3, maximum 5 unless user overrides. |
 | **Scenario parameters** | Per-run defaults | Optionally fix scenario parameters across runs (same axes, same horizon) to isolate committee-level variance, or let them vary to capture full pipeline variance. |
-| **scenario_context** | None | Optionally point to an existing scenario set to reuse across runs (only the committee varies). This isolates funnel-level instability. |
+| **scenario_context** | None | Optionally point to an existing scenario set (e.g. `<situation-dir>/scenarios/`) to reuse across runs (only the committee varies). This isolates funnel-level instability. |
 
 ### Variance isolation modes
 
@@ -99,7 +115,7 @@ reveals instability and you want to locate its source.
 
 ## Probe record directory
 
-**Location:** `agent/probes/<topic-slug>/`
+**Location:** `<situation-dir>/probes/` (see **Situation resolution** above for how `<situation-dir>` is determined).
 
 **Files:**
 
@@ -113,7 +129,7 @@ probe:
   N: 3
   mode: full_variance | funnel_only | fan_only
   scenario_parameters: {} | {fixed parameters}
-  situation_source: "user input" | "agent/scenarios/<slug>/"
+  situation_source: "user input" | "<situation-dir>/scenarios/"
 ---
 ```
 
