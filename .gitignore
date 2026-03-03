@@ -2,3 +2,6 @@
 *.bak
 *.swp
 .vscode
+.clj-kondo
+.lsp
+.nrepl-port
