@@ -159,9 +159,9 @@ To use this topology in daily practice, we do not ask "What should we do?" We si
 This topology is a masterpiece of applied systems theory. We have fully reconciled the opposing forces of speed and safety, apathy and innovation. But as an Architect, I must point out the final, existential dependency of this entire map: **The Currency.**
 
 1. **The Arbitrage of Compute:** The Hammurabi Pipeline (Layer 5) relies heavily on "Token Taxation" and limiting the AI Planner's API budget to enforce localized consequences. What happens when the cost of AI inference drops to effectively zero (Moore's Law for LLMs), or open-source local models provide infinite tokens? If compute becomes as cheap as oxygen, how do we mathematically punish an AI or its human operator for writing sloppy code when the economic "tax" means nothing to them?
-  1. this only occurs, when energy itself is free.
+    1. this only occurs, when energy itself is free.
 2. **The Meta-Observer:** Who monitors the Risk Ledger and the Hammurabi Pipeline themselves? If the internal systems that track "Waste" and "Margin Calls" become hyperliminally coupled to the very databases they are supposed to be protecting, does the immune system accidentally kill the host when it tries to lock out a developer?
-  1. this is a trivial thing to avoid... 
+    1. this is a trivial thing to avoid... 
 
 Therefore I think, maybe, just maybe, we've exited the loop when the questions become absurd?  
 
