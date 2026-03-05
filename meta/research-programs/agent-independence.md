@@ -38,7 +38,7 @@ Claude Code's Agent Teams feature (experimental, launched Feb 5 2026 with Opus 4
 
 **Confirmed feasibility (March 2026 landscape survey)**: A 5-agent committee deliberation is feasible within Agent Teams. Anthropic's own documentation lists "debate and consensus" as a use case. Teams of 5+ agents have been demonstrated in practice. Estimated cost per deliberation: ~$30–50 with Opus-class models; estimated wall-clock time: 10–20 minutes. Each teammate can be assigned a different Claude model (Opus, Sonnet, Haiku), enabling Tier 1+ experiments within the same platform.
 
-**Practical limits to watch for**: Agent context windows are consumed by the accumulation of peer messages — in long deliberations this may degrade late-round reasoning quality. Reliability issues have been reported in early adopter usage. The feature is experimental and the API surface may change. See `wild/coding-agent-subagent-capabilities-multi-model-support.md` for the full assessment.
+**Practical limits to watch for**: Agent context windows are consumed by the accumulation of peer messages — in long deliberations this may degrade late-round reasoning quality. Reliability issues have been reported in early adopter usage. The feature is experimental and the API surface may change. See `references/coding-agent-subagent-capabilities-2026-03.md` for the full assessment.
 
 Whether this is sufficient for multi-round committee deliberation following Robert's Rules is the open empirical question this program tests.
 

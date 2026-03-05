@@ -77,7 +77,7 @@ Use an API multiplexer ([LiteLLM](https://github.com/BerriAI/litellm) or [Ollama
 
 **Trade-off vs. Tier 1**: Tier 3 gives model diversity but the orchestrator is hub-and-spoke by construction — a `reduce` over sequential (or parallel) API calls. There are no persistent independent reasoning threads. Tier 1 gives agent independence but no model diversity. Tier 2 partially exists but no product yet combines cross-provider models with peer-to-peer communication. Tier 2.5 is currently the best practical compromise: native peer-to-peer architecture with cross-provider perspectives accessed as tool evidence.
 
-**LiteLLM vs. Ollama**: LiteLLM multiplexes across cloud providers (Anthropic, OpenAI, Google, etc.) through a single OpenAI-compatible endpoint. Ollama does the same for locally-hosted models. Both expose the same API shape. pcrit-llm works with either by changing the endpoint URL. LiteLLM is needed for frontier model access; Ollama opens the door to experiments with open-weight models at no marginal cost. See `wild/ollama-vs-LiteLLM-as-unified-LLM-proxy.md` for the comparison.
+**LiteLLM vs. Ollama**: LiteLLM multiplexes across cloud providers (Anthropic, OpenAI, Google, etc.) through a single OpenAI-compatible endpoint. Ollama does the same for locally-hosted models. Both expose the same API shape. pcrit-llm works with either by changing the endpoint URL. LiteLLM is needed for frontier model access; Ollama opens the door to experiments with open-weight models at no marginal cost.
 
 ---
 
@@ -129,5 +129,4 @@ This taxonomy was developed from several sources within the repository:
 - `agent/diary/2026-02-26-cyberneutics-field-notes.md` §I, §II — identified the hub-and-spoke vs. peer-agent distinction as epistemically fundamental and documented the agentic coding landscape.
 - `agent/diary/2026-03-05-implementation-convergence.md` — first articulation of the three-tier framework and the convergence observation.
 - `artifacts/integration-with-moollm.md` — four escalating patterns (single instance through parallel multi-instance) that map to this taxonomy.
-- `wild/ollama-vs-LiteLLM-as-unified-LLM-proxy.md` — comparison of LiteLLM and Ollama as API multiplexers.
-- `wild/coding-agent-subagent-capabilities-multi-model-support.md` — comprehensive landscape survey (March 2026) of coding agent subagent capabilities, multi-model support, agent frameworks, and MCP servers. Source for the Tier 1+/2/2.5 refinements and the "partially exists" assessment of Tier 2.
+- `references/coding-agent-subagent-capabilities-2026-03.md` — comprehensive landscape survey (March 2026) of coding agent subagent capabilities, multi-model support, agent frameworks, and MCP servers. Source for the Tier 1+/2/2.5 refinements and the "partially exists" assessment of Tier 2.

@@ -254,4 +254,4 @@ The full architectural analysis, model personality profiles, implementation code
 - [committee-implementation-taxonomy.md](committee-implementation-taxonomy.md) — the design space for committee implementations; this program is Tier 3
 - [agent-independence.md](agent-independence.md) — the complementary program testing architectural independence (Tier 1)
 - [evaluating-deliberative-architectures.md](evaluating-deliberative-architectures.md) — architecture-agnostic framework for testing deliberative structures; reusable across all tiers
-- `wild/ollama-vs-LiteLLM-as-unified-LLM-proxy.md` — comparison of LiteLLM and Ollama as API multiplexers
+- `references/coding-agent-subagent-capabilities-2026-03.md` — landscape survey of coding agent capabilities (March 2026)
