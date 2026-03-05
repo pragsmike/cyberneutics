@@ -34,7 +34,13 @@ Independent agent processes address this directly. Each agent builds its own rea
 
 A Cowork plugin attempt (2026-02-24) instantiated committee characters as separate agent definitions (`.md` system prompts). The attempt failed because the agents had no mechanism to communicate with each other — they were isolated oracles that only spoke when addressed by a central orchestrator. This produced simulated hub-and-spoke, not genuine peer debate. The lesson: agent independence requires both separate context *and* a communication mechanism.
 
-Claude Code's Agent Teams feature addresses both requirements. Agents are spawned into separate processes and communicate peer-to-peer via a `sendMessage` tool. Whether this is sufficient for multi-round committee deliberation is an open empirical question — the feature is designed for coding tasks, not structured debate.
+Claude Code's Agent Teams feature (experimental, launched Feb 5 2026 with Opus 4.6) addresses both requirements. Agents are spawned into separate processes and communicate peer-to-peer via a `SendMessage` tool backed by a file-based mailbox system. Each agent runs in its own process with an independent context window.
+
+**Confirmed feasibility (March 2026 landscape survey)**: A 5-agent committee deliberation is feasible within Agent Teams. Anthropic's own documentation lists "debate and consensus" as a use case. Teams of 5+ agents have been demonstrated in practice. Estimated cost per deliberation: ~$30–50 with Opus-class models; estimated wall-clock time: 10–20 minutes. Each teammate can be assigned a different Claude model (Opus, Sonnet, Haiku), enabling Tier 1+ experiments within the same platform.
+
+**Practical limits to watch for**: Agent context windows are consumed by the accumulation of peer messages — in long deliberations this may degrade late-round reasoning quality. Reliability issues have been reported in early adopter usage. The feature is experimental and the API surface may change. See `wild/coding-agent-subagent-capabilities-multi-model-support.md` for the full assessment.
+
+Whether this is sufficient for multi-round committee deliberation following Robert's Rules is the open empirical question this program tests.
 
 ---
 
@@ -52,13 +58,12 @@ Claude Code's Agent Teams feature addresses both requirements. Agents are spawne
 
 2. **Condition A (Roleplay baseline)**: Run a standard `/committee` deliberation using the current single-context pipeline. Record the full transcript.
 
-3. **Condition B (Independent agents)**: Run the same topic using Claude Code Agent Teams (or equivalent). Each of the five committee characters is instantiated as a separate agent with:
-   - Its character brief from `agent/roster.md` as its system prompt
+3. **Condition B (Independent agents)**: Run the same topic using Claude Code Agent Teams. Each of the five committee characters is spawned as a separate teammate with a spawn prompt containing:
+   - Its character brief from `agent/roster.md`
    - Instructions to follow Robert's Rules of Order for debate
-   - The `sendMessage` tool for peer-to-peer communication
-   - A shared topic prompt identical to Condition A
+   - The topic under deliberation (identical to Condition A)
 
-   The Chair (Joe) manages turn-taking and progression. All agents see messages addressed to them or broadcast to the group. Record all messages.
+   Teammates communicate peer-to-peer via the `SendMessage` tool. The Chair (Joe) manages turn-taking and progression. All agents see messages addressed to them or broadcast to the group. Record all messages. Note: Agent Teams supports specifying different Claude models per teammate (Opus, Sonnet, Haiku) — for the Tier 1 experiment, hold model constant; a follow-up Tier 1+ experiment can vary models.
 
 4. **Evaluate both transcripts** using the existing 5-rubric system (comprehensiveness, adversarial rigor, assumption coverage, reasoning depth, decision readiness). Use the `/review` skill or manual scoring.
 
@@ -119,7 +124,7 @@ Extended with two independence-specific observations (not scored, qualitative):
 | Risk | Probability | Impact | Mitigation |
 |------|-------------|--------|------------|
 | Agent Teams feature is too unstable or limited for 5-agent multi-round debate | Medium | High | Run a dry run with 2 agents first to test feasibility. If the feature can't handle it, document the limitation and defer until the platform matures. |
-| Token cost is prohibitive (5 separate context windows) | Medium | Medium | Run Phase 1 first (one topic) to measure actual cost before committing to Phase 2. |
+| Token cost is prohibitive (5 separate context windows) | Medium | Medium | Landscape survey estimates ~$30–50 per 5-agent deliberation with Opus-class models. Run Phase 1 first (one topic) to measure actual cost before committing to Phase 2. Using Sonnet for teammates (Tier 1+ configuration) would reduce cost significantly. |
 | No observable difference (roleplay is already good enough) | Medium | Low | This is a valid finding. Document it — it means the current approach is more robust than expected and the multi-model program becomes the higher-priority path. |
 | The Chair agent can't effectively manage turn-taking via sendMessage | Medium | Medium | Provide explicit procedural instructions. If peer coordination fails, fall back to a lightweight orchestrator that manages turn order but not content — less pure than full peer-to-peer but still better than single-context roleplay. |
 

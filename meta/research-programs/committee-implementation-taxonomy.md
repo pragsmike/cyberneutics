@@ -39,13 +39,31 @@ Use the subagent mechanism provided by a commercial coding agent (e.g., Claude C
 
 **What it tests**: Does agent independence alone improve deliberation quality? (See [agent-independence.md](agent-independence.md).)
 
-### Tier 2: Built-in subagents, multiple models
+### Tier 1+: Built-in subagents, intra-family model selection
 
-A coding agent that allows spawning subagents on different models. This is the convergence point — genuine agent independence *and* genuine model diversity, with no orchestration code.
+Claude Code Agent Teams supports specifying different Claude models per teammate (Opus for the lead, Sonnet for teammates, Haiku for sub-subagents). This introduces *some* model diversity (different capability tiers, different cost profiles) while retaining native peer-to-peer communication — but all models share the same provider's training distribution. This is a half-step beyond Tier 1: more than single-model, less than cross-provider diversity.
 
-**Who can use it**: Anyone with the product, if the product supports it. As of March 2026, no commercial coding agent offers this capability. See [agent/prompts/2026-03-05-coding-agent-subagent-capabilities.md](../../agent/prompts/2026-03-05-coding-agent-subagent-capabilities.md) for the research prompt tracking this question.
+**Who can use it**: Anyone with Claude Code. No external infrastructure.
+
+**What it tests**: Whether intra-family model diversity (capability tiers) adds value beyond single-model independence.
+
+### Tier 2: Built-in subagents, cross-provider models
+
+A coding agent that allows spawning subagents on genuinely different models from different providers. This is the convergence point — genuine agent independence *and* genuine model diversity, with no orchestration code.
+
+**Current state (March 2026)**: Partially exists. Cursor 2.4 supports cross-provider model selection per agent (Claude, GPT, Gemini) but uses hub-and-spoke communication — no peer-to-peer debate. Claude Code Agent Teams has peer-to-peer but is Claude-only. OpenCode has a design proposal (issue #12711) for cross-provider agent teams with peer-to-peer messaging, but the feature is still in development. **No product currently combines cross-provider multi-model with peer-to-peer agent communication.** See `wild/coding-agent-subagent-capabilities-multi-model-support.md` for the full landscape survey.
 
 **What it tests**: The full hypothesis — both axes at once.
+
+### Tier 2.5: Native agents + cross-provider MCP tools
+
+Use Claude Code Agent Teams for the deliberation architecture (peer-to-peer communication, independent context windows) and a LiteLLM MCP server for cross-provider model access. Each teammate's own reasoning runs on Claude, but it can invoke an MCP tool backed by LiteLLM to query GPT-5, Gemini, or local models and incorporate those perspectives as evidence.
+
+**What you get**: The peer-to-peer deliberation architecture of Tier 1, augmented with cross-provider model perspectives. Not a full model swap for each agent's reasoning (that's Tier 2), but genuine access to diverse model outputs during deliberation.
+
+**Who can use it**: Users comfortable with Claude Code, LiteLLM deployment, and MCP configuration. Setup: ~2 hours.
+
+**What it tests**: Whether incorporating diverse model perspectives as tool-accessed evidence (rather than as each agent's native reasoning) provides meaningful diversity benefit.
 
 ### Tier 3: External orchestration via LiteLLM
 
@@ -57,7 +75,7 @@ Use an API multiplexer ([LiteLLM](https://github.com/BerriAI/litellm) or [Ollama
 
 **What it tests**: Does model diversity improve deliberation quality? (See [multi-model-committee.md](multi-model-committee.md).)
 
-**Trade-off vs. Tier 1**: Tier 3 gives model diversity but the orchestrator is hub-and-spoke by construction — a `reduce` over sequential (or parallel) API calls. There are no persistent independent reasoning threads. Tier 1 gives agent independence but no model diversity. Tier 2 would give both but doesn't exist yet.
+**Trade-off vs. Tier 1**: Tier 3 gives model diversity but the orchestrator is hub-and-spoke by construction — a `reduce` over sequential (or parallel) API calls. There are no persistent independent reasoning threads. Tier 1 gives agent independence but no model diversity. Tier 2 partially exists but no product yet combines cross-provider models with peer-to-peer communication. Tier 2.5 is currently the best practical compromise: native peer-to-peer architecture with cross-provider perspectives accessed as tool evidence.
 
 **LiteLLM vs. Ollama**: LiteLLM multiplexes across cloud providers (Anthropic, OpenAI, Google, etc.) through a single OpenAI-compatible endpoint. Ollama does the same for locally-hosted models. Both expose the same API shape. pcrit-llm works with either by changing the endpoint URL. LiteLLM is needed for frontier model access; Ollama opens the door to experiments with open-weight models at no marginal cost. See `wild/ollama-vs-LiteLLM-as-unified-LLM-proxy.md` for the comparison.
 
@@ -68,7 +86,9 @@ Use an API multiplexer ([LiteLLM](https://github.com/BerriAI/litellm) or [Ollama
 | Program | Tier | Axis tested | Relationship |
 |---------|------|------------|--------------|
 | [agent-independence.md](agent-independence.md) | 1 | Agent independence (model held constant) | Fast, cheap precursor experiment. Tests whether architectural independence alone improves deliberation. |
+| [agent-independence.md](agent-independence.md) | 1+ | Intra-family model diversity | Extension of Tier 1: same platform (Agent Teams), different Claude models per teammate. Tests whether capability-tier diversity adds value. |
 | [multi-model-committee.md](multi-model-committee.md) | 3 | Model diversity (via LiteLLM orchestration) | The main multi-model experiment. Tests whether different models for different characters improves deliberation. |
+| (future) | 2.5 | Cross-provider perspectives via MCP tools | Agent Teams architecture + LiteLLM MCP server. Tests whether tool-accessed diverse model outputs provide meaningful diversity within a native peer-to-peer architecture. |
 | [evaluating-deliberative-architectures.md](evaluating-deliberative-architectures.md) | Any | Deliberative *structure* (architecture-agnostic) | Tests which deliberative structures (single prompt, hub-and-spoke, peer-agent, deliberated choice) anticipate risks. Holds model constant; holds implementation mechanism constant within a run. Reusable across all tiers — its conditions (B1–B3, C1–C3) characterize whatever mechanism implements them. |
 
 The ablation study, condorcet comparison, and societies-of-thought program are process-level investigations (which *components* of the pipeline matter, not which *implementation* carries them) and are unaffected by this taxonomy.
@@ -77,9 +97,11 @@ The ablation study, condorcet comparison, and societies-of-thought program are p
 
 ## The Convergence Observation
 
-Tiers 1 and 3 are currently the viable paths. They test different axes. If a commercial coding agent adds multi-model subagent support (Tier 2), the two programs collapse into one: run the existing `/committee` skill with each character routed to a different model via the platform's native mechanism. No orchestration code, no LiteLLM, no separate infrastructure. The experimental protocols from both programs remain valid — only the implementation simplifies.
+Tiers 1 and 3 are currently the most accessible paths — Tier 1 for anyone with the product, Tier 3 for power users with API keys. They test different axes. Tier 2.5 is a viable middle ground that combines the peer-to-peer architecture of Tier 1 with cross-provider model access via MCP, though it requires more setup than either pure path.
 
-Until Tier 2 arrives, the two programs are complementary. A positive result from either one (agent independence helps, or model diversity helps) motivates pursuing the other. A positive result from both motivates pursuing Tier 2 aggressively.
+If a commercial coding agent adds cross-provider multi-model subagent support with peer-to-peer communication (full Tier 2), the programs collapse into one: run the existing `/committee` skill with each character routed to a different model via the platform's native mechanism. As of March 2026, Tier 2 partially exists — Cursor 2.4 has cross-provider model selection but hub-and-spoke communication; Claude Code Agent Teams has peer-to-peer but is Claude-only; OpenCode has a design proposal for the combination but hasn't shipped it.
+
+Until full Tier 2 arrives, the programs are complementary. A positive result from either one (agent independence helps, or model diversity helps) motivates pursuing the other. A positive result from both motivates pursuing Tier 2 aggressively — or using Tier 2.5 as an interim solution.
 
 ---
 
@@ -95,7 +117,7 @@ The [pcrit-llm](https://github.com/pragsmike/pcrit-llm) library provides a clean
 
 ### MCP considerations
 
-For Tier 3, the orchestrator is a standalone Clojure process that talks to LiteLLM over HTTP. No MCP integration is needed. If a future use case requires running multi-model committees from *within* a coding agent (mixing Tier 1 and Tier 3), LiteLLM's REST API could be wrapped as an MCP tool. This is feasible but premature until the basic experiments are done.
+For Tier 3, the orchestrator is a standalone Clojure process that talks to LiteLLM over HTTP. No MCP integration is needed. For Tier 2.5, LiteLLM v1.65.0+ already functions as an MCP Gateway — it can expose cross-provider model access as MCP tools directly, with no custom wrapper needed. This makes the Tier 2.5 setup concrete: deploy LiteLLM with MCP enabled, configure Claude Code to use it as an MCP server, and each Agent Teams teammate gains access to cross-provider model queries as a tool alongside its native Claude reasoning.
 
 ---
 
@@ -108,3 +130,4 @@ This taxonomy was developed from several sources within the repository:
 - `agent/diary/2026-03-05-implementation-convergence.md` — first articulation of the three-tier framework and the convergence observation.
 - `artifacts/integration-with-moollm.md` — four escalating patterns (single instance through parallel multi-instance) that map to this taxonomy.
 - `wild/ollama-vs-LiteLLM-as-unified-LLM-proxy.md` — comparison of LiteLLM and Ollama as API multiplexers.
+- `wild/coding-agent-subagent-capabilities-multi-model-support.md` — comprehensive landscape survey (March 2026) of coding agent subagent capabilities, multi-model support, agent frameworks, and MCP servers. Source for the Tier 1+/2/2.5 refinements and the "partially exists" assessment of Tier 2.
