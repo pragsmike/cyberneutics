@@ -109,7 +109,7 @@ Until full Tier 2 arrives, the programs are complementary. A positive result fro
 
 ### Clojure over Python
 
-The multi-model reference document (`multi-model-committee-reference.md`) contains Python orchestrator code (the `SimpleChair`/`SmartChair` classes). The preferred implementation language is Clojure, for reasons documented in the reference and summarized here: a deliberation is a fold over rounds, each round a map over characters, each character invocation a stateless function call. Clojure makes this pipeline structure visible where Python obscures it with class hierarchies. Immutable data, composable transformations, and REPL-driven development match the exploratory workflow cyberneutics advocates.
+The multi-model reference document (`multi-model-committee/reference.md`) contains Python orchestrator code (the `SimpleChair`/`SmartChair` classes). The preferred implementation language is Clojure, for reasons documented in the reference and summarized here: a deliberation is a fold over rounds, each round a map over characters, each character invocation a stateless function call. Clojure makes this pipeline structure visible where Python obscures it with class hierarchies. Immutable data, composable transformations, and REPL-driven development match the exploratory workflow cyberneutics advocates.
 
 ### pcrit-llm
 
