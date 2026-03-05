@@ -10,9 +10,12 @@ state** and **brief trajectory**. For a dated event log, see
 
 ---
 
-## Current state (as of Feb 2026)
+## Current state (as of March 2026)
 
-- **Two external forks** — one focused on committee makeup and Condorcet/jury-theorem comparison (with merged PR and new artifacts), one on Deleuzian walks and Residuality Theory. Both show the methodology is comprehensible and extensible by outsiders; the first produced the first controlled comparison of deliberative vs. independent-aggregation pipelines (opposite verdicts on a value-laden question).
+- **Two external forks, both active** — one focused on committee makeup and Condorcet/jury-theorem comparison (with merged PR and new artifacts), one on Deleuzian walks and Residuality Theory. Both show the methodology is comprehensible and extensible by outsiders; the first produced the first controlled comparison of deliberative vs. independent-aggregation pipelines (opposite verdicts on a value-laden question).
+- **Two new PRs outstanding** (as of 2026-03-05):
+  - *Condorcet contributor*: Proposes a method for tracking individual committee member performance longitudinally — examining how each character contributes across multiple deliberations over time. A meeting is scheduled (2026-03-06) to discuss how the new agent architecture taxonomy (roleplay vs. independent subagents vs. multi-model) might affect longitudinal tracking, since character identity works differently when characters are independent processes vs. roles within a single context.
+  - *Residuality contributor*: Essay on software engineering practice and agents, arguing that implementation language familiarity is becoming less important to programmers in the age of AI coding assistants, and that Clojure yields simpler code structures that are easier for both humans and agents to reason about. This aligns with and independently supports the project’s recent decision to prefer Clojure over Python for the multi-model committee orchestrator (see `meta/research-programs/committee-implementation-taxonomy.md`).
 - **MOOLLM integration** — the adversarial committee mechanism has been incorporated into the MOOLLM platform, making the technique available to that platform’s user base.
 - **Repository stars** — as of 2026-02-23, the git repository had two stars on the hosting platform (lightweight adoption signal).
 - **Evidence so far**: Internal comparison runs and one external deliberation review (Condorcet run scored 13/15 High) support “suitable for early adopters” and give initial empirical evidence that deliberation structure (Robert’s Rules, adversarial back-and-forth) changes outcomes vs. independent vote. No failure reports or sustained multi-session external use reported yet; no rubric scores from purely external deliberations.
@@ -21,7 +24,11 @@ state** and **brief trajectory**. For a dated event log, see
 
 ## Trajectory in brief
 
-Uptake moved quickly after the Feb 1 gap call: two forks and MOOLLM integration by mid–late Feb 2026. One fork delivered concrete artifacts (Condorcet–committee relationship, comparison protocol, two comparison runs) and demonstrated that process structure can flip verdicts. The other fork engaged with theory (Deleuze, Residuality). That combination — portable technique plus theoretical extension — is a stronger signal than originally expected at this stage. The full dated event log is in [usage-and-uptake-chronology.md](usage-and-uptake-chronology.md).
+Uptake moved quickly after the Feb 1 gap call: two forks and MOOLLM integration by mid–late Feb 2026. One fork delivered concrete artifacts (Condorcet–committee relationship, comparison protocol, two comparison runs) and demonstrated that process structure can flip verdicts. The other fork engaged with theory (Deleuze, Residuality). That combination — portable technique plus theoretical extension — is a stronger signal than originally expected at this stage.
+
+By early March 2026, both contributors remain active with new PRs. The contributions are deepening: the Condorcet contributor is moving from "does deliberation structure matter?" (answered: yes) toward "can we track individual character contributions over time?" — a longitudinal dimension the methodology hasn't explored. The Residuality contributor is connecting the project's Clojure implementation preference to a broader argument about language simplicity and agent-readability in software engineering practice. Both PRs extend the methodology in directions the core team was already moving, which suggests the design is legible enough that independent contributors converge on productive directions without coordination.
+
+The full dated event log is in [usage-and-uptake-chronology.md](usage-and-uptake-chronology.md).
 
 ---
 
@@ -42,4 +49,4 @@ feedback would be:
 
 ---
 
-**Last updated**: February 24, 2026
+**Last updated**: March 5, 2026

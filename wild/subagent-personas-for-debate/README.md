@@ -1,5 +1,14 @@
 # Subagent Personas for Debate: Coordination & Architecture
 
+> **Superseded.** The content of this document has been incorporated into the research programs:
+> - [committee-implementation-taxonomy.md](../../meta/research-programs/committee-implementation-taxonomy.md) — the design space and three implementation tiers
+> - [agent-independence.md](../../meta/research-programs/agent-independence.md) — the experimental program for testing subagent-based deliberation
+> - [multi-model-committee.md](../../meta/research-programs/multi-model-committee.md) — the multi-model experimental program (updated with taxonomy references)
+>
+> This file is retained for historical context. Read the research programs instead.
+
+---
+
 ## The Holy Grail: Native Inter-Agent Communication
 Before diving into the history of our experiments, it is crucial to note that **Claude Code does offer an experimental, native inter-agent communication protocol called "Agent Teams."** 
 

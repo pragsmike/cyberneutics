@@ -13,7 +13,8 @@ This directory collects research plans, experiment designs, evidence-building pr
 | **Run an experiment** | [ablation-study.md](ablation-study.md) — self-contained experimental protocol with clear procedure and factor definitions | Month |
 | **See how a completed study looks** | [condorcet-comparison.md](condorcet-comparison.md) — finished 2-run study with results; good template for your own | Afternoon per new run |
 | **Improve the methodology's infrastructure** | [societies-of-thought-research-plan.md](societies-of-thought-research-plan.md) Item 1 (Big Five mapping) — small, self-contained, one-session task | Afternoon |
-| **Explore multi-model architectures** | [multi-model-committee.md](multi-model-committee.md) Phase 1 (baseline + model profiling) — requires API access to 2+ LLM providers | 1–2 weeks |
+| **Test whether agent independence helps** | [agent-independence.md](agent-independence.md) Phase 1 (paired comparison) — requires Claude Code with Agent Teams | Afternoon |
+| **Explore multi-model architectures** | [multi-model-committee.md](multi-model-committee.md) Phase 1 (baseline + model profiling) — requires LiteLLM + API keys for 2+ providers | 1–2 weeks |
 | **Understand the evaluation framework** | [evaluation-schemes.md](evaluation-schemes.md) Sections I–III — the theoretical foundation for all empirical work here | Reading (no code) |
 
 Each plan file has a **Contributing to this program** block at the top with skills needed, scope estimate, and a specific entry point.
@@ -37,7 +38,7 @@ These programs are ordered by how much they reduce the main open uncertainties: 
 | Priority | Uncertainty reduced | Plan(s) |
 |----------|---------------------|---------|
 | **Highest** | Does committee-based deliberation beat simpler prompting? When is it worth the cost? | [evaluation-schemes.md](evaluation-schemes.md) — research design for empirical comparison; [ablation-study.md](ablation-study.md) — component contribution (Phase 1); [condorcet-comparison.md](condorcet-comparison.md) — deliberative vs. CJT-style comparison (2 runs, completed); [societies-of-thought-research-plan.md](societies-of-thought-research-plan.md) Item 10 (comparative effectiveness study) |
-| **High** | Would different LLMs per character improve deliberation? | [multi-model-committee.md](multi-model-committee.md) — experimental protocol (4 phases); [reference](multi-model-committee-reference.md) for architectural patterns and model profiles |
+| **High** | Does committee implementation architecture matter? | [committee-implementation-taxonomy.md](committee-implementation-taxonomy.md) — design space (model diversity × agent independence); [agent-independence.md](agent-independence.md) — Tier 1 (same model, separate agents); [multi-model-committee.md](multi-model-committee.md) — Tier 3 (different models via LiteLLM, 4 phases); [reference](multi-model-committee-reference.md) for architectural patterns and model profiles |
 | **High** | Does the methodology transfer across domains? When does roster composition matter? | [societies-of-thought-research-plan.md](societies-of-thought-research-plan.md) Items 4, 5, 9 (transfer learning, domain variants, worked examples) |
 | **Medium** | Why does it work? Can we formalize and cite it? | [societies-of-thought-research-plan.md](societies-of-thought-research-plan.md) Items 1–3, 6–7 (personality/balance/reconciliation, information-theory essay, social scaling theory) |
 | **Medium** | How do we implement it in a formal platform? | [societies-of-thought-research-plan.md](societies-of-thought-research-plan.md) Item 8 (MOOLLM integration) |
@@ -53,7 +54,9 @@ These programs are ordered by how much they reduce the main open uncertainties: 
 | [societies-of-thought-research-plan.md](societies-of-thought-research-plan.md) | Ten action items from the Societies of Thought paper: strengthen infrastructure (Big Five, balance metrics, reconciliation), test generalization (transfer, domain variants), formalize theory (information-theory essay, social scaling), expand evidence (worked examples, comparative study), MOOLLM integration. Phased roadmap. |
 | [evaluation-schemes.md](evaluation-schemes.md) | Research design for evaluating the methodology: core questions, why direct evaluation is hard, proposed dimensions (assumption coverage, trade-off explicitness, etc.), protocols. No ground truth required. |
 | [ablation-study.md](ablation-study.md) | Component contribution and interaction effects (Design F). Full procedure, factor definitions, run budget, results tabulation. Results: [ablation-study/results/](ablation-study/results/). |
-| [multi-model-committee.md](multi-model-committee.md) | Using different LLMs for different committee characters: experimental protocol (4 phases), evaluation framework, risks, recommendations. Reference material (architectural patterns, model profiles, implementation code) in [multi-model-committee-reference.md](multi-model-committee-reference.md). |
+| [committee-implementation-taxonomy.md](committee-implementation-taxonomy.md) | Design space for committee implementations: two axes (model diversity × agent independence), three tiers (built-in single-model subagents, built-in multi-model subagents, external orchestration via LiteLLM). Umbrella document linking the implementation-focused research programs. |
+| [agent-independence.md](agent-independence.md) | Does architectural separation improve deliberation? Tests whether running committee characters as independent agent processes (e.g., Claude Code Agent Teams) produces better results than single-context roleplay. Tier 1 in the taxonomy. Fast, cheap precursor experiment (Phase 1 is an afternoon). |
+| [multi-model-committee.md](multi-model-committee.md) | Using different LLMs for different committee characters via LiteLLM: experimental protocol (4 phases), evaluation framework, risks, recommendations. Tier 3 in the taxonomy. Clojure/pcrit-llm preferred for orchestration. Reference material (architectural patterns, model profiles, implementation code) in [multi-model-committee-reference.md](multi-model-committee-reference.md). |
 
 ---
 
@@ -78,7 +81,8 @@ These plans have been executed or implemented. They live in [agent/archive/](../
 | **Validation / evidence** | evaluation-schemes, ablation-study, condorcet-comparison, societies-of-thought Items 9–10 | Active / Completed |
 | **Theory / foundations** | societies-of-thought Items 6–7 | Active |
 | **Infrastructure / process** | societies-of-thought Items 1–3, 8; augmentation | Active / Implemented |
-| **Integration** | wild-material-incorporation, multi-model-committee | Executed / Active |
+| **Implementation architecture** | committee-implementation-taxonomy, agent-independence, multi-model-committee | Active |
+| **Integration** | wild-material-incorporation | Executed |
 
 ---
 

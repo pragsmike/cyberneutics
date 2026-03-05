@@ -102,6 +102,30 @@ The contributor produced a substantial body of work that has been reviewed and m
 
 ---
 
+### 2026-03-05 — PR from Condorcet contributor: longitudinal character tracking
+
+**Who**: Fork #1 (Condorcet contributor)
+**What**: Pull request proposing a method for tracking individual committee member performance longitudinally — how each character (Maya, Frankie, Joe, Vic, Tammy) contributes across multiple deliberations over time.
+
+**Why this is interesting**: The methodology has always treated deliberation as a unit — the committee produces a resolution, the resolution is evaluated. This PR proposes looking *inside* the unit at individual character trajectories: does Maya consistently surface risks that others miss? Does Frankie's values framing improve or calcify across runs? Does Joe's synthesis integrate more perspectives as deliberation count grows? This is a new evaluation dimension that complements the existing 5-rubric system.
+
+**Interaction with agent architectures**: A meeting is scheduled for 2026-03-06 to discuss how the new implementation taxonomy (see `meta/research-programs/committee-implementation-taxonomy.md`) affects longitudinal tracking. When characters are independent subagent processes (Tier 1) rather than roleplay within a single context, "character identity" means something different — each agent has its own persistent context and reasoning history. Longitudinal tracking of an independent agent is qualitatively different from tracking a role performed by the same model across sessions.
+
+**What this validates**: The methodology is generating research questions in external contributors that the core team hadn't prioritized. The contributor's direction (longitudinal analysis of character performance) is a natural extension of the Condorcet work (which asked "does process structure matter?") toward "which characters matter most and when?"
+
+---
+
+### 2026-03-05 — PR from Residuality contributor: Clojure and agent-era software engineering
+
+**Who**: Fork #2 (Residuality/Deleuzian walks contributor)
+**What**: Pull request containing an essay on software engineering practice in the age of AI coding agents, arguing that implementation language familiarity is becoming less important as agents mediate between programmers and code, and that Clojure's simpler code structures (immutable data, composable transformations, minimal ceremony) make code easier for both humans and agents to reason about.
+
+**Why this is interesting**: The cyberneutics project independently arrived at a Clojure preference for the multi-model committee orchestrator (pcrit-llm library, documented in `meta/research-programs/committee-implementation-taxonomy.md`), motivated by the observation that a deliberation is a fold over rounds — a pipeline that Clojure makes visible where Python obscures with class hierarchies. The contributor's essay provides a broader argument for the same conclusion from a different direction: not just "Clojure is better for this specific pipeline" but "Clojure is better for agent-era software engineering in general."
+
+**What this validates**: Two independent lines of reasoning (one from implementation experience, one from software engineering theory) converging on the same language preference. The contributor's essay also connects to wild/residuality-theory — the residuality perspective on what survives technological disruption (in this case: code structure clarity survives the disruption of AI-mediated programming, while language-specific API familiarity does not).
+
+---
+
 ## Feedback log (chronological)
 
 *(Record practitioner feedback here as it arrives — date, source, verbatim if possible, brief analysis.)*
@@ -110,4 +134,4 @@ No feedback received yet beyond the adoption events above.
 
 ---
 
-**Chronology last updated**: February 24, 2026
+**Chronology last updated**: March 5, 2026

@@ -313,6 +313,27 @@ See [meta/uptake-and-usage.md](uptake-and-usage.md) for details and analysis.
 
 **Key Learning**: The comparison protocol is a reusable tool for accumulating evidence. Two runs are datapoints, not a study, but they establish the pattern: on value-laden questions with hidden enforcement or second-order concerns, deliberation produces materially different results than aggregation. The contributor's investigation strengthened the methodology's empirical base rather than changing its process — which is itself evidence that the design is robust.
 
+### March 5, 2026: Implementation Taxonomy and Research Program Restructuring
+
+**Created**:
+- `meta/research-programs/committee-implementation-taxonomy.md` — umbrella document describing the design space for committee implementations: two axes (model diversity × agent independence), three tiers (built-in single-model subagents, built-in multi-model subagents, external orchestration via LiteLLM), and how each research program maps to the taxonomy.
+- `meta/research-programs/agent-independence.md` — new research program (Tier 1) testing whether running committee characters as independent subagent processes improves deliberation over single-context roleplay. Phase 1 is a single-afternoon paired comparison.
+- `agent/diary/2026-03-05-implementation-convergence.md` — first articulation of the three-tier framework and the convergence observation.
+- `agent/prompts/2026-03-05-coding-agent-subagent-capabilities.md` — deep-research prompt for surveying which commercial coding agents support multi-model subagents.
+
+**Updated**:
+- `meta/research-programs/multi-model-committee.md` — taxonomy position, Clojure/pcrit-llm as preferred implementation, LiteLLM as infrastructure assumption.
+- `meta/research-programs/README.md` — new programs indexed.
+- `wild/subagent-personas-for-debate/README.md` — marked superseded; content incorporated into the research programs.
+
+**Key Finding — the two research programs were artificially separated**: The multi-model committee program (testing model diversity via API orchestration) and the subagent exploration (testing agent independence via coding agent features) address orthogonal axes of the same design space. A single platform feature — "spawn subagent on model X" — would collapse both into one. Until that exists, the two programs are complementary: Tier 1 (agent independence, accessible to anyone with the product) and Tier 3 (model diversity, requires LiteLLM + API keys).
+
+**Clojure preference established**: The multi-model orchestrator's preferred implementation language is Clojure, using pcrit-llm (a library from the PromptCritical project) to interface with LLMs through a LiteLLM proxy. The rationale: a deliberation is a fold over rounds, each round a map over characters, each character invocation a stateless function call. Clojure makes this pipeline structure visible; Python obscures it with class hierarchies.
+
+**External contributions**: Two new PRs from existing contributors — one proposing longitudinal tracking of individual committee member performance (Condorcet contributor), one arguing for Clojure as the natural language for agent-era software engineering (Residuality contributor). Both extend the methodology in directions the core team was already moving.
+
+**Key Learning**: The taxonomy crystallized from practice — three different attempts to implement multi-agent deliberation (API orchestration, Cowork plugin, Agent Teams) revealed that model diversity and agent independence are orthogonal axes, not a single "multi-agent" dimension. Making this explicit as a research design unblocked the field: instead of one large, vague "how do we do multi-agent committees" question, there are now two small, testable questions with concrete experimental protocols.
+
 ---
 
 ## What This Shows About Methodology Maturity
@@ -352,7 +373,7 @@ See [meta/uptake-and-usage.md](uptake-and-usage.md) for details and analysis.
 - Repository forked by practitioner intending to extend committee makeups
 - MOOLLM platform incorporated adversarial committee mechanism
 
-**What This Means**: The Feb 1 self-evaluation's #1 gap — "do other practitioners succeed with this?" — now has first data points. Two independent signals of adoption, both targeting the committee system. Neither is sustained usage yet, but both indicate the methodology is being understood as intended. **New** (Feb 22): Fork #1's Condorcet investigation has been completed and merged — producing the first empirical comparison of deliberative vs. independent-aggregation pipelines. See [uptake-and-usage.md](uptake-and-usage.md).
+**What This Means**: The Feb 1 self-evaluation's #1 gap — "do other practitioners succeed with this?" — now has first data points. Two independent signals of adoption, both targeting the committee system. Neither is sustained usage yet, but both indicate the methodology is being understood as intended. **New** (Feb 22): Fork #1's Condorcet investigation has been completed and merged — producing the first empirical comparison of deliberative vs. independent-aggregation pipelines. **New** (March 5): Both contributors remain active with new PRs — one proposing longitudinal character tracking, one contributing an essay on Clojure and agent-era software engineering. Contributions are deepening from "can I use this?" to "how can I extend this?" See [uptake-and-usage.md](uptake-and-usage.md).
 
 ---
 
@@ -426,15 +447,15 @@ If it couldn't do that, it wouldn't be rigorous. Since it can, we have evidence 
 2. **What's the failure rate?** How often do committees produce unhelpful deliberations? *The evaluation feedback loop (review → remediation → re-review) now provides quantitative data: rubric scores per deliberation, score trends over remediation rounds. We can start answering this empirically.*
 3. **Domain boundaries**: Complex sociotechnical problems, yes. But what else? Scientific research? Creative work? Personal decisions? *The fork practitioner intends to test different committee makeups for different problem types — exactly the extensibility experiment we need.*
 4. **Scalability**: Does this work for 10-person organizations? 1000-person? Governments?
-5. **Tool dependence**: Does this require Claude specifically? Or work with other LLMs? *MOOLLM integration suggests platform-agnostic potential, but untested with non-Claude models.*
+5. **Tool dependence**: Does this require Claude specifically? Or work with other LLMs? *MOOLLM integration suggests platform-agnostic potential. The committee implementation taxonomy (March 2026) formally separates the question: Tier 1 (built-in subagents) is platform-dependent; Tier 3 (LiteLLM orchestration) is model-agnostic by design. The multi-model committee program will test non-Claude models directly.*
 6. **Can palgebra specify pipelines beyond the committee?** The dark factory analysis (`wild/software-factories/palgebra-and-dark-factories.md`) maps palgebra onto an entirely different domain. Whether agents can bootstrap a pipeline from resource equations is testable.
 7. **Does the immune system analogy predict useful architecture?** The narrative immune systems work (`essays/09-narrative-immune-systems.md`) predicts adaptive rubrics, regulatory mechanisms, and an organ/bath boundary formalism. These are concrete engineering targets. The civic application (`applications/narrative-immune-systems/`) shows what this looks like at the social scale.
 8. **Does the decision monad hold up in practice?** Fan/funnel composition is formalized (`palgebra/duality-and-composition.md`, `essays/10-decisions-under-uncertainty.md`). Implementation phases: `/scenarios` skill, scenario roster design (distinct from committee roster), composed fan→funnel pipeline, `/probe` for N-run variance and decision-landscape mapping. Open design questions: scenario roster composition, variance-report and decision-landscape-map structure, monad laws as executable tests.
 
-We're past "early-stage documentation" and into "methodology with executable skills, a formal algebra, first external adoption, and initial empirical evidence." The formalism now includes a compositional duality (fan/funnel) and an explicit prescription for decisions under uncertainty; the committee remains the only fully implemented half. The Condorcet comparison runs (Feb 22) provide the first controlled evidence that the deliberative pipeline produces different outcomes than independent aggregation — specifically, that Robert's Rules as forcing function prevents premature consensus on value-laden questions. Still not "ready for all practitioners" — but the gap is narrowing, and we now have empirical signals to steer by.
+We're past "early-stage documentation" and into "methodology with executable skills, a formal algebra, active external contributors, initial empirical evidence, and a structured implementation research program." The formalism now includes a compositional duality (fan/funnel) and an explicit prescription for decisions under uncertainty; the committee remains the only fully implemented half. The Condorcet comparison runs (Feb 22) provide the first controlled evidence that the deliberative pipeline produces different outcomes than independent aggregation. The implementation taxonomy (March 5) decomposes "how do we do multi-agent committees" into two testable axes (model diversity × agent independence) with concrete experimental protocols for each. External contributors are deepening from initial adoption to active research contributions — longitudinal character tracking and language-choice arguments for agent-era software engineering. Still not "ready for all practitioners" — but the gap is narrowing, we have empirical signals to steer by, and the research programs are now structured to produce the evidence that would close the gap.
 
 ---
 
-**Last Updated**: February 22, 2026
+**Last Updated**: March 5, 2026
 **Status**: Living document—will update as methodology evolves
 **Contribute**: If you use this methodology, please share your results (successes AND failures)
