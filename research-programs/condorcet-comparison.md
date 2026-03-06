@@ -5,10 +5,10 @@
 **Results**: [condorcet-comparison/results/](condorcet-comparison/results/)
 
 > **Contributing to this program**
-> - **Skills needed**: Ability to run `/committee` deliberations and generate independent CJT-style votes per the [comparison protocol](../../artifacts/comparison-protocol-deliberative-vs-cjt.md). Analytical writing for comparison summaries.
+> - **Skills needed**: Ability to run `/committee` deliberations and generate independent CJT-style votes per the [comparison protocol](../artifacts/comparison-protocol-deliberative-vs-cjt.md). Analytical writing for comparison summaries.
 > - **Estimated scope**: Afternoon per additional run (one question, both pipelines, comparison write-up).
 > - **Contributor type**: Solo.
-> - **Entry point**: Read the [comparison protocol](../../artifacts/comparison-protocol-deliberative-vs-cjt.md), then review one completed run (e.g., [code-of-conduct results](condorcet-comparison/results/code-of-conduct/)) as a template. Pick a new binary question and run both pipelines.
+> - **Entry point**: Read the [comparison protocol](../artifacts/comparison-protocol-deliberative-vs-cjt.md), then review one completed run (e.g., [code-of-conduct results](condorcet-comparison/results/code-of-conduct/)) as a template. Pick a new binary question and run both pipelines.
 
 ---
 
@@ -16,15 +16,15 @@
 
 Compare the deliberative committee pipeline (adversarial debate via `/committee`) against a CJT-style (Condorcet jury theorem) independent-vote-then-aggregate pipeline on the **same** questions, to test whether structured deliberation produces different — and better-mapped — outcomes than independent aggregation.
 
-**Conceptual foundation**: [Condorcet's Jury Theorem and the Committee](../../artifacts/condorcet-jury-theorem-and-committee.md) — establishes that the committee deliberately violates CJT's conditions (independence, binary outcome, literal competence probability), and that a CJT-compliant variant would be a different pipeline.
+**Conceptual foundation**: [Condorcet's Jury Theorem and the Committee](../artifacts/condorcet-jury-theorem-and-committee.md) — establishes that the committee deliberately violates CJT's conditions (independence, binary outcome, literal competence probability), and that a CJT-compliant variant would be a different pipeline.
 
-**Reusable protocol**: [Comparison Protocol: Deliberative vs. CJT-Style](../../artifacts/comparison-protocol-deliberative-vs-cjt.md) — defines how to run both pipelines on the same question with the same roster and charter.
+**Reusable protocol**: [Comparison Protocol: Deliberative vs. CJT-Style](../artifacts/comparison-protocol-deliberative-vs-cjt.md) — defines how to run both pipelines on the same question with the same roster and charter.
 
 ---
 
 ## Procedure
 
-Per the [comparison protocol](../../artifacts/comparison-protocol-deliberative-vs-cjt.md):
+Per the [comparison protocol](../artifacts/comparison-protocol-deliberative-vs-cjt.md):
 
 1. **Choose a binary or categorical question** and write a shared charter (goal, context, success criteria).
 2. **Pipeline A (Deliberative)**: Run `/committee [question]` with the standard roster. Characters see each other's arguments and debate. Record deliberation transcript and resolution with per-character votes.

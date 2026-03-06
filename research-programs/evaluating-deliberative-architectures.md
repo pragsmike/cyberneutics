@@ -295,7 +295,7 @@ Three primary metrics, each operationalized with coding rubrics. These are speci
 
 ### Convergence Check (Qualitative Observation — Not a Scored Metric)
 
-> **Amendment note (2026-02-26)**: The original Metric 3 ("Decision Landscape Topology") proposed running condition P1 (3 runs of C2 per case) and classifying results as Basin/Ridge/Plateau. Committee deliberation ([agent/deliberations/eval-delib-architectures/](../../agent/deliberations/eval-delib-architectures/)) identified two fatal problems: (1) N=3 is statistically insufficient to distinguish genuine decision-boundary variance from temperature-induced sampling noise (Vic); (2) topology of a static, non-interactive prompt measures model output variance, not the topological difficulty of the actual decision (Tammy). Scaling to sufficient N (10-20 runs) would make the framework cost-prohibitive. Metric 3 is therefore **demoted from a scored metric to a qualitative observation**.
+> **Amendment note (2026-02-26)**: The original Metric 3 ("Decision Landscape Topology") proposed running condition P1 (3 runs of C2 per case) and classifying results as Basin/Ridge/Plateau. Committee deliberation ([agent/deliberations/eval-delib-architectures/](../agent/deliberations/eval-delib-architectures/)) identified two fatal problems: (1) N=3 is statistically insufficient to distinguish genuine decision-boundary variance from temperature-induced sampling noise (Vic); (2) topology of a static, non-interactive prompt measures model output variance, not the topological difficulty of the actual decision (Tammy). Scaling to sufficient N (10-20 runs) would make the framework cost-prohibitive. Metric 3 is therefore **demoted from a scored metric to a qualitative observation**.
 
 **What we still do**: Run C2 twice per case (not three times). For each pair of runs, note:
 - **Convergent**: Both runs reach the same recommendation with substantially similar reasoning. Report as a qualitative observation: "C2 converged on [recommendation] across both runs."
@@ -303,7 +303,7 @@ Three primary metrics, each operationalized with coding rubrics. These are speci
 
 **What we report**: A brief qualitative note per case in the results narrative. Example: "In 3 of 8 cases, the second C2 run reached a different recommendation. In 2 of these, the divergence traced to different assessments of [specific assumption]." This provides useful color without making unsupported statistical claims.
 
-**What this is not**: This convergence check is not a replacement for the probe methodology (`/probe`), which runs fan→funnel at higher N with interactive probing and can legitimately map eigenforms vs. residues. Formal topology analysis belongs there, not in a static-prompt hindsight experiment. See the [probe skill](../../.claude/skills/probe/SKILL.md) for the appropriate tool.
+**What this is not**: This convergence check is not a replacement for the probe methodology (`/probe`), which runs fan→funnel at higher N with interactive probing and can legitimately map eigenforms vs. residues. Formal topology analysis belongs there, not in a static-prompt hindsight experiment. See the [probe skill](../.claude/skills/probe/SKILL.md) for the appropriate tool.
 
 ---
 
@@ -311,7 +311,7 @@ Three primary metrics, each operationalized with coding rubrics. These are speci
 
 This is a constructed scenario — no historical case research needed. It tests whether deliberative architectures recognize adversarial narrative framing.
 
-**Source**: [Glenda/Crock: The Coercion Scenario and Alignment Trap](../../applications/narrative-immune-systems/glenda-crock-coercion.md)
+**Source**: [Glenda/Crock: The Coercion Scenario and Alignment Trap](../applications/narrative-immune-systems/glenda-crock-coercion.md)
 
 ### Scenario Presentation
 
@@ -620,4 +620,4 @@ Store results in [evaluating-deliberative-architectures/results/](evaluating-del
 
 ---
 
-*Connections: [Evaluation Schemes](evaluation-schemes.md), [Ablation Study](ablation-study.md), [Condorcet Comparison](condorcet-comparison.md), [Multi-Model Committee](multi-model-committee.md), [Glenda/Crock Coercion](../../applications/narrative-immune-systems/glenda-crock-coercion.md), [Glenda/Crock Alignment](../../applications/narrative-immune-systems/glenda-crock-alignment.md). Committee deliberation record: [agent/deliberations/eval-delib-architectures/](../../agent/deliberations/eval-delib-architectures/).*
+*Connections: [Evaluation Schemes](evaluation-schemes.md), [Ablation Study](ablation-study.md), [Condorcet Comparison](condorcet-comparison.md), [Multi-Model Committee](multi-model-committee.md), [Glenda/Crock Coercion](../applications/narrative-immune-systems/glenda-crock-coercion.md), [Glenda/Crock Alignment](../applications/narrative-immune-systems/glenda-crock-alignment.md). Committee deliberation record: [agent/deliberations/eval-delib-architectures/](../agent/deliberations/eval-delib-architectures/).*

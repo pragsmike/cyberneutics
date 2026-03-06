@@ -4,7 +4,7 @@
 
 ---
 
-This directory holds **comparison runs** that pit the deliberative committee pipeline against a CJT-style (independent vote, then aggregate) pipeline on the **same** question. Purpose: test whether outcomes differ and how (see [comparison protocol](../../../../artifacts/comparison-protocol-deliberative-vs-cjt.md)).
+This directory holds **comparison runs** that pit the deliberative committee pipeline against a CJT-style (independent vote, then aggregate) pipeline on the **same** question. Purpose: test whether outcomes differ and how (see [comparison protocol](../../../artifacts/comparison-protocol-deliberative-vs-cjt.md)).
 
 ## Layout per run
 

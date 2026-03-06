@@ -280,4 +280,4 @@ reduce marginal cost to near zero for phases that use them.
 - [reference.md](reference.md) — architectural patterns, model profiles, implementation code, cost analysis
 - [../committee-implementation-taxonomy.md](../committee-implementation-taxonomy.md) — design space; this program is Tier 3
 - [pcrit-llm](https://github.com/pragsmike/pcrit-llm) — the Clojure orchestration library
-- [pcrit-llm USAGE.md](../../../../pcrit-llm/USAGE.md) — library usage guide
+- [pcrit-llm USAGE.md](../../../pcrit-llm/USAGE.md) — library usage guide

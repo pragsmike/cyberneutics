@@ -80,7 +80,7 @@ resolution:
 
 ## Summary
 
-The contributor experience in `meta/research-programs/` has four specific friction points: missing triage metadata on plans, no curated entry points in the README, unstated prerequisites, and misleading variance in plan scope/length. The resolution is a staged fix: (A) finish applying existing Status conventions, (B) add lightweight metadata blocks to each plan, (C) add a Quick Start section to the README, (D) flag the multi-model-committee restructure for the maintainer.
+The contributor experience in `research-programs/` has four specific friction points: missing triage metadata on plans, no curated entry points in the README, unstated prerequisites, and misleading variance in plan scope/length. The resolution is a staged fix: (A) finish applying existing Status conventions, (B) add lightweight metadata blocks to each plan, (C) add a Quick Start section to the README, (D) flag the multi-model-committee restructure for the maintainer.
 
 The committee explicitly chose *not* to recommend a full CONTRIBUTING.md or project-wide onboarding guide at this time — no evidence of actual external contributors justifies that investment. The recommended changes are implementable in 1-2 sessions with minimal ongoing maintenance cost.
 

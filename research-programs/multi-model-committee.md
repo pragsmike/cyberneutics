@@ -9,7 +9,7 @@
 > - **Skills needed**: A running [LiteLLM](https://github.com/BerriAI/litellm) proxy with API keys for 2+ LLM providers (e.g., Anthropic + OpenAI). Ability to run `/committee` deliberations and basic statistics (rubric scoring, effect sizes). Phase 1 requires only API calls and analysis; later phases require the Clojure orchestrator ([pcrit-llm](https://github.com/pragsmike/pcrit-llm)).
 > - **Estimated scope**: Phase 1 is 1-2 weeks (~20 hours). Phase 2 is 2-4 weeks (~30 hours). Full program is 3-6 months.
 > - **Contributor type**: Solo for Phase 1; collaborative for Phases 2+.
-> - **Entry point**: Read the [implementation taxonomy](committee-implementation-taxonomy.md) for how this program fits the broader design space (this program is Tier 3). Then read the Hypothesis section below and jump to Phase 1. Phase 1 is self-contained and produces publishable results regardless of whether later phases run. For architectural background, see [multi-model-committee-reference.md](multi-model-committee/reference.md).
+> - **Entry point**: Read the [implementation taxonomy](committee-implementation-taxonomy.md) for how this program fits the broader design space (this program is Tier 3). Then read the Hypothesis section below and jump to Phase 1. Phase 1 is self-contained and produces publishable results regardless of whether later phases run. For architectural background, see [reference.md](multi-model-committee/reference.md).
 
 ---
 
@@ -19,11 +19,11 @@ Test whether using different LLM models to play different committee characters p
 
 **Core claim**: A single model simulating five characters must overcome its own training biases to generate genuine disagreement. Different models with genuinely different training distributions could produce more authentic adversarial dynamics at lower cognitive cost.
 
-**Theoretical grounding**: Multi-agent debate literature consistently shows that systems composed of diverse agents outperform systems using the same agent multiple times — but diversity must be genuine (different training, different optimization targets), not simulated. See the full hypothesis and theoretical basis in [multi-model-committee-reference.md § The Hypothesis](multi-model-committee/reference.md#the-hypothesis-why-model-diversity-matters).
+**Theoretical grounding**: Multi-agent debate literature consistently shows that systems composed of diverse agents outperform systems using the same agent multiple times — but diversity must be genuine (different training, different optimization targets), not simulated. See the full hypothesis and theoretical basis in [reference.md § The Hypothesis](multi-model-committee/reference.md#the-hypothesis-why-model-diversity-matters).
 
 **Position in the taxonomy**: This program tests the model-diversity axis of the [committee implementation taxonomy](committee-implementation-taxonomy.md), using Tier 3 (external orchestration via LiteLLM). It is complementary to the [agent-independence](agent-independence.md) program, which tests the other axis (architectural independence, model held constant). The two axes are orthogonal — this program tests whether different training distributions produce better debate; agent-independence tests whether separate context windows do.
 
-**Implementation**: The preferred orchestrator language is Clojure, using [pcrit-llm](https://github.com/pragsmike/pcrit-llm) to interface with LLMs through a LiteLLM proxy. pcrit-llm provides multi-model routing (the model name carries the provider prefix, e.g., `"openai/gpt-4o"`, `"anthropic/claude-sonnet-4-5"`) and automatic cost/provenance tracking via `generation-metadata`. The reference document ([multi-model-committee-reference.md](multi-model-committee/reference.md)) contains Python orchestrator code as an alternative; either implementation can run the experimental protocol.
+**Implementation**: The preferred orchestrator language is Clojure, using [pcrit-llm](https://github.com/pragsmike/pcrit-llm) to interface with LLMs through a LiteLLM proxy. pcrit-llm provides multi-model routing (the model name carries the provider prefix, e.g., `"openai/gpt-4o"`, `"anthropic/claude-sonnet-4-5"`) and automatic cost/provenance tracking via `generation-metadata`. The reference document ([reference.md](multi-model-committee/reference.md)) contains Python orchestrator code as an alternative; either implementation can run the experimental protocol.
 
 ---
 
@@ -241,7 +241,7 @@ The output will be either a new standard for committee deliberations (if multi-m
 
 ## Reference Material
 
-The full architectural analysis, model personality profiles, implementation code, orchestration strategies, cost calculations, open questions, and production checklist are in [multi-model-committee-reference.md](multi-model-committee/reference.md). Consult it for:
+The full architectural analysis, model personality profiles, implementation code, orchestration strategies, cost calculations, open questions, and production checklist are in [reference.md](multi-model-committee/reference.md). Consult it for:
 
 - **Architectural patterns**: Five patterns (Fixed Mapping, Random Assignment, Model-as-Model, Hybrid, Adversarial Selection) with trade-offs and code
 - **Model profiles**: Detailed personality analysis of Claude, GPT-4o, Gemini, Llama, Mistral

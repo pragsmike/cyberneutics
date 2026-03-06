@@ -15,7 +15,7 @@
 - Created `agent/diary/README.md` to document the purpose of the exploratory field notes.
 - Extracted the Glenda/Crock coercion scenario into `applications/narrative-immune-systems/glenda-crock-coercion.md`.
 - Extracted three wild concepts (`cyberneutics-director`, `blast-radius-problem`, `palgebra-graph-ui`) into their own directories under `/wild` for future taming.
-- Massively expanded `meta/research-programs/evaluating-deliberative-architectures.md` (from 49 lines to over 400+) to formally define the Black Swan Hindsight Framework, including contamination mitigations, test protocols, and detailed run budgets.
+- Massively expanded `research-programs/evaluating-deliberative-architectures.md` (from 49 lines to over 400+) to formally define the Black Swan Hindsight Framework, including contamination mitigations, test protocols, and detailed run budgets.
 
 **Key deliverables**:
 - Five new conceptual documentation files across `/wild` and `/applications`.
@@ -48,7 +48,7 @@ It formalized three specific operationalized metrics for evaluating outputs:
 | Blast Radius Problem | `wild/blast-radius-problem/README.md` | Explores role-differentiation for declarative configuration. |
 | Cyberneutics Director | `wild/cyberneutics-director/README.md` | Conceptual MCP routing architecture. |
 | Palgebra Graph UI | `wild/palgebra-graph-ui/README.md` | Conceptual UX using blackbody heat encoding. |
-| Evaluating Architectures | `meta/research-programs/evaluating-deliberative-architectures.md` | Expanded to a full research protocol with 7 run conditions. |
+| Evaluating Architectures | `research-programs/evaluating-deliberative-architectures.md` | Expanded to a full research protocol with 7 run conditions. |
 
 ### From prior handoffs (unchanged)
 - Pask mesh fitting rename still pending.

@@ -44,7 +44,7 @@ The essay [Stories All the Way Down](./essays/stories-all-the-way-down.md) expla
 ## Who is this for?
 
 *   **Practitioners** working with AI on complex sociotechnical problems
-*   **Researchers** exploring human-AI collaboration
+*   **Research collaborators** looking to contribute to open research programs → [start here](research-programs/README.md)
 *   **Anyone frustrated** with shallow AI outputs who suspects there's a better way
 *   **Skeptics** wondering if this is just prompt engineering theater → [start here](essays/README.md#for-skeptics-show-me-why-this-matters)
 *   **Theorists** interested in narrative engineering, cybernetics, or sense-making
@@ -65,6 +65,10 @@ Or step by step:
 **Want practical techniques?**
 *   Start with the [Quick Start Guide](artifacts/quick-start-guide.md) — your first committee deliberation in 30 minutes.
 *   Then explore the full [Artifacts](artifacts/) directory.
+
+**Want to contribute research?**
+*   Browse the [Research Programs](research-programs/README.md) — active experiments ordered by impact on uncertainty, each with a contributing guide.
+*   Pick an item that matches your skills or interests; every program has a "Contributing" block describing what's needed.
 
 ## Why does this matter?
 
@@ -117,6 +121,13 @@ These aren't incremental improvements. They represent a fundamentally different 
 - Adapts Fong and Spivak's resource-theoretic framework (*Seven Sketches in Compositionality*, Ch. 2) to LLM pipelines. Three isomorphic representations: resource equations, string diagrams, and YAML-decorated artifact files
 
 The essays describe *why* narrative engines need narrative engineering. The artifacts provide *how* — concrete techniques like adversarial committees and evaluation rubrics. Palgebra provides *what, precisely* — a formal language for specifying pipelines, their types, their quality propagation, and their composition laws. An adversarial committee is a transformation morphism; a rubric evaluation is an enrichment morphism; a human review gate is a collapse operator. The formalism makes these relationships explicit and composable.
+
+**[Research Programs](research-programs/)** - Active experiments and evidence-building
+- [Research programs index](./research-programs/README.md) — all programs ordered by impact on uncertainty, with quick-start guide for contributors
+- [Societies of Thought research plan](./research-programs/societies-of-thought-research-plan.md) — infrastructure, generalization, theory, and evidence phases
+- [Evaluating deliberative architectures](./research-programs/evaluating-deliberative-architectures.md) — the Black Swan Hindsight Framework for empirical testing
+- [Condorcet comparison](./research-programs/condorcet-comparison.md) — deliberative vs. CJT-style pipelines; initial evidence that deliberation changes outcomes
+- [Committee implementation taxonomy](./research-programs/committee-implementation-taxonomy.md) — the design space for multi-agent implementations (model diversity × agent independence)
 
 **[Applications](applications/)** - Domain analyses applying the framework to real-world phenomena
 - [Narrative Immune Systems](./applications/narrative-immune-systems/) — information warfare, journalism, and the trust commons, analyzed through the immune analogy
@@ -195,7 +206,7 @@ Cyberneutics builds upon the runtime environment of **[MOOLLM](https://github.co
 
 ## Status
 
-This is early-stage documentation of an emerging methodology. The techniques have been refined through iterative practice and have reached stable behavioral equilibrium; the theoretical framework is being formalized. As of Feb 2026, uptake signals include two external forks (one with merged Condorcet/comparison work), MOOLLM integration of the committee mechanism, and two repository stars (as of 2026-02-23). Current state and a brief trajectory are in [Uptake and usage](meta/uptake-and-usage.md); a dated event log is in [usage-and-uptake-chronology](meta/usage-and-uptake-chronology.md).
+This is early-stage documentation of an emerging methodology. The techniques have been refined through iterative practice and have reached stable behavioral equilibrium; the theoretical framework is being formalized. As of Feb 2026, uptake signals include two external forks (one with merged Condorcet/comparison work), MOOLLM integration of the committee mechanism, and two repository stars (as of 2026-02-23). Current state and a brief trajectory are in [Uptake and usage](meta/uptake-and-usage.md); a dated event log is in [Usage and uptake chronology](meta/usage-and-uptake-chronology.md).
 
 **Run and test:** For how to run the methodology (skills in chat, string-diagram script) and how to test the repo (smoke test, structure checks), see the [repository review and run guide](meta/repository-review-and-run-guide.md). For recent session context and maintainer hand-off, see the latest handoff in [agent/](agent/).
 

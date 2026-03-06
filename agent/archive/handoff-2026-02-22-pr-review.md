@@ -63,8 +63,8 @@
 
 ### Plans Awaiting mg's Go-Ahead
 
-- **`meta/research-programs/evaluation-schemes.md`**: Experimental designs for testing whether committees beat simpler methods. Plan only; not executed.
-- **`meta/research-programs/multi-model-committee.md`**: Investigation of using different LLMs for different characters. Plan only; not executed.
+- **`research-programs/evaluation-schemes.md`**: Experimental designs for testing whether committees beat simpler methods. Plan only; not executed.
+- **`research-programs/multi-model-committee.md`**: Investigation of using different LLMs for different characters. Plan only; not executed.
 
 ### Carried Forward (still relevant)
 
@@ -76,7 +76,7 @@
 ## Immediate Next Steps
 
 1. **Comparative evaluation** (highest value): Run one decision through three methods (committee, simple pros/cons, individual LLM call) with same rubric. Requires mg to choose a decision. This is the #1 evidence gap.
-2. **If mg wants to pursue plans**: Evaluation-schemes analysis and/or multi-model-committee analysis — both exist as written plans in `meta/research-programs/`.
+2. **If mg wants to pursue plans**: Evaluation-schemes analysis and/or multi-model-committee analysis — both exist as written plans in `research-programs/`.
 3. **If closing paperwork**: Update `agent/gap_analysis.md` per wild-material-incorporation plan Part 5.
 4. **If testing infrastructure**: Run `/probe` on a topic to validate the probe skill; run `/review` on methodology-adoption with scenario context.
 
@@ -95,7 +95,7 @@
 
 - **CI workflow**: Add the GitHub Actions job for `scripts/test_string_diagram.py`, or defer? Committee recommended it; implementation is straightforward.
 - **Comparative evaluation**: What decision should be used for the three-method comparison? mg needs to choose a real or realistic decision to run through all three pipelines.
-- **Evaluation-schemes / multi-model-committee**: Pursue one or both? Plans exist in `meta/research-programs/`; execution depends on mg.
+- **Evaluation-schemes / multi-model-committee**: Pursue one or both? Plans exist in `research-programs/`; execution depends on mg.
 
 ---
 

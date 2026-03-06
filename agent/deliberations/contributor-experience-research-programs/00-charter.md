@@ -2,7 +2,7 @@
 charter:
   goal: "Evaluate the experience of a researcher looking to contribute to the Cyberneutics project by inspecting the research-programs directory, and identify concrete improvements to make onboarding and contribution easier."
   context: >
-    The meta/research-programs/ directory collects five research plans (societies-of-thought,
+    The research-programs/ directory collects five research plans (societies-of-thought,
     evaluation-schemes, ablation-study, multi-model-committee, condorcet-comparison) plus
     completed/archived programs. The README provides priority ordering, conventions, and
     thematic grouping. Plans vary enormously in maturity, detail level, and length (from
@@ -29,7 +29,7 @@ charter:
 
 ## Problem Statement
 
-A researcher discovers the Cyberneutics project and wants to contribute. They navigate to `meta/research-programs/` as instructed by the README. What happens next? Do they find a clear path to contribution, or do they bounce off the complexity?
+A researcher discovers the Cyberneutics project and wants to contribute. They navigate to `research-programs/` as instructed by the README. What happens next? Do they find a clear path to contribution, or do they bounce off the complexity?
 
 ## Context
 

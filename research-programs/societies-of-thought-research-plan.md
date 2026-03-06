@@ -10,7 +10,7 @@
 > - **Contributor type**: Solo for most items; collaborative for Items 8 and 10.
 > - **Entry point**: Start with Item 1 (Big Five characterization) — it's self-contained, requires only the roster (`agent/roster.md`) and `artifacts/character-propensity-reference.md`, and can be finished in one session. For a bigger commitment, Item 9 (worked examples) builds directly on existing deliberation experience.
 
-This document is derived from the analysis in [Societies of Thought: From Neural Evidence to Methodological Action](../../essays/societies-of-thought-synthesis.md), which examined what the "Reasoning Models Generate Societies of Thought" paper (arXiv:2601.10825) validates, what it reveals we're missing, and what we can contribute back to the field.
+This document is derived from the analysis in [Societies of Thought: From Neural Evidence to Methodological Action](../essays/societies-of-thought-synthesis.md), which examined what the "Reasoning Models Generate Societies of Thought" paper (arXiv:2601.10825) validates, what it reveals we're missing, and what we can contribute back to the field.
 
 **If you're a collaborator looking for a way to help**: each action item below names concrete deliverables, specifies success criteria, and identifies where the work would live in the repository. You don't need to do all of it — pick an item that matches your skills or interests and run with it.
 

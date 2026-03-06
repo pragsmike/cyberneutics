@@ -1,11 +1,11 @@
 # Research-Programs Review & Condorcet Integration Plan
 
 **Date**: 2026-02-24
-**Purpose**: (1) Verify consistency of `meta/research-programs/`, (2) locate and summarize the condorcet experiment, (3) plan its incorporation as a research program.
+**Purpose**: (1) Verify consistency of `research-programs/`, (2) locate and summarize the condorcet experiment, (3) plan its incorporation as a research program.
 
 ---
 
-## Part 1: Review and Verification of `meta/research-programs/`
+## Part 1: Review and Verification of `research-programs/`
 
 ### What was checked
 
@@ -34,12 +34,12 @@ The Conventions section of `research-programs/README.md` specifies three rules: 
 |-------------|-------------|--------|
 | `meta/README.md` | Links to `research-programs/README.md` and lists all four active plans by name with correct paths | **Correct** |
 | `meta/research-plan.md` | Redirect stub pointing to `research-programs/README.md` and three specific plans | **Correct** |
-| `essays/societies-of-thought-synthesis.md` | Links to `meta/research-programs/societies-of-thought-research-plan.md` (two references) | **Correct** |
-| `meta/methodology-evolution.md` | Mentions `meta/research-programs/societies-of-thought-research-plan.md` (one reference, line 280) | **Correct** (path is a narrative mention, not a markdown link, but accurate) |
-| `references/README.md` | Links to `meta/research-programs/README.md` in the MOOLLM entry | **Correct** |
-| `agent/gap_analysis.md` | References extraction of research plan to `meta/research-programs/societies-of-thought-research-plan.md` | **Correct** |
+| `essays/societies-of-thought-synthesis.md` | Links to `research-programs/societies-of-thought-research-plan.md` (two references) | **Correct** |
+| `meta/methodology-evolution.md` | Mentions `research-programs/societies-of-thought-research-plan.md` (one reference, line 280) | **Correct** (path is a narrative mention, not a markdown link, but accurate) |
+| `references/README.md` | Links to `research-programs/README.md` in the MOOLLM entry | **Correct** |
+| `agent/gap_analysis.md` | References extraction of research plan to `research-programs/societies-of-thought-research-plan.md` | **Correct** |
 | `agent/handoff-2026-02-22.md` | Describes research-programs creation, lists all files, notes redirect | **Correct** |
-| `CLAUDE.md` | Does not directly reference `meta/research-programs/` (references `meta/` generally and `agent/gap_analysis.md`) | **No issue** — CLAUDE.md's repo map points to `meta/` broadly |
+| `CLAUDE.md` | Does not directly reference `research-programs/` (references `meta/` generally and `agent/gap_analysis.md`) | **No issue** — CLAUDE.md's repo map points to `meta/` broadly |
 
 **No stale references found.** No documents still point at old locations like `meta/research-plan.md` as the primary plan (the redirect is in place), `agent/evaluation-schemes-analysis.md`, or `agent/multi-model-committee-analysis.md`. The move and reference update from the 2026-02-22 session was thorough.
 
@@ -97,7 +97,7 @@ The PR review (`agent/archive/condorcet-pr-review.md`) provides the most thoroug
 
 ### Current Citation in research-programs
 
-The condorcet work is **not currently cited** in `meta/research-programs/README.md`. It is mentioned in `meta/methodology-evolution.md` (lines 306-309) as a milestone but not as a research program. The `evaluation-schemes.md` "highest priority" row addresses the same overarching question ("Does committee-based deliberation beat simpler prompting?") but does not reference the condorcet comparisons as existing evidence. The gap_analysis does not mention the condorcet work.
+The condorcet work is **not currently cited** in `research-programs/README.md`. It is mentioned in `meta/methodology-evolution.md` (lines 306-309) as a milestone but not as a research program. The `evaluation-schemes.md` "highest priority" row addresses the same overarching question ("Does committee-based deliberation beat simpler prompting?") but does not reference the condorcet comparisons as existing evidence. The gap_analysis does not mention the condorcet work.
 
 ---
 
@@ -107,14 +107,14 @@ The condorcet work is **not currently cited** in `meta/research-programs/README.
 
 Following the conventions in `research-programs/README.md` and using `ablation-study.md` as a structural template:
 
-- **Plan file**: `meta/research-programs/condorcet-comparison.md`
-- **Results directory**: `meta/research-programs/condorcet-comparison/results/`
+- **Plan file**: `research-programs/condorcet-comparison.md`
+- **Results directory**: `research-programs/condorcet-comparison/results/`
 - **Structure**: Objective, Procedure, Status (with Runs), Results link, Findings summary
 - **Key difference from previous plan**: Experimental results (deliberation records, comparison records) are **moved** into the program's results directory so that the completed study is self-contained under `research-programs/`, as if it had been conducted under the current protocols from the start. Handoffs, PR reviews, and published artifacts stay where they are.
 
 ### Inventory: What Moves and What Stays
 
-**Moves into `meta/research-programs/condorcet-comparison/results/`:**
+**Moves into `research-programs/condorcet-comparison/results/`:**
 
 | Current location | Contents | Move to |
 |------------------|----------|---------|
@@ -140,13 +140,13 @@ Following the conventions in `research-programs/README.md` and using `ablation-s
 **Step 1: Create the directory structure**
 
 ```
-meta/research-programs/condorcet-comparison/
-meta/research-programs/condorcet-comparison/results/
-meta/research-programs/condorcet-comparison/results/second-ci-job/
-meta/research-programs/condorcet-comparison/results/second-ci-job-deliberation/
-meta/research-programs/condorcet-comparison/results/code-of-conduct/
-meta/research-programs/condorcet-comparison/results/code-of-conduct-deliberation/
-meta/research-programs/condorcet-comparison/results/condorcet-jury-theorem-process/
+research-programs/condorcet-comparison/
+research-programs/condorcet-comparison/results/
+research-programs/condorcet-comparison/results/second-ci-job/
+research-programs/condorcet-comparison/results/second-ci-job-deliberation/
+research-programs/condorcet-comparison/results/code-of-conduct/
+research-programs/condorcet-comparison/results/code-of-conduct-deliberation/
+research-programs/condorcet-comparison/results/condorcet-jury-theorem-process/
 ```
 
 **Step 2: Move experimental result files**
@@ -170,8 +170,8 @@ Then remove the now-empty source directories from `agent/comparisons/` and `agen
 
 The deliberative-vs-CJT comparison runs have been consolidated into the condorcet-comparison research program:
 
-- **Program plan**: [meta/research-programs/condorcet-comparison.md](../../meta/research-programs/condorcet-comparison.md)
-- **Results**: [meta/research-programs/condorcet-comparison/results/](../../meta/research-programs/condorcet-comparison/results/)
+- **Program plan**: [research-programs/condorcet-comparison.md](../../research-programs/condorcet-comparison.md)
+- **Results**: [research-programs/condorcet-comparison/results/](../../research-programs/condorcet-comparison/results/)
 
 The comparison protocol remains at [artifacts/comparison-protocol-deliberative-vs-cjt.md](../../artifacts/comparison-protocol-deliberative-vs-cjt.md).
 ```
@@ -209,7 +209,7 @@ See the plan and procedure in [../../condorcet-comparison.md](../../condorcet-co
 **Outcome**: Opposite verdicts. CJT Aye 3-2, Deliberative Nay 5-0. Three votes flipped after enforcement/weaponization debate.
 ```
 
-**Step 5: Create the plan file `meta/research-programs/condorcet-comparison.md`**
+**Step 5: Create the plan file `research-programs/condorcet-comparison.md`**
 
 Populate from existing documentation. The content should include:
 
@@ -226,7 +226,7 @@ Populate from existing documentation. The content should include:
 - **Limitations**: Two runs only. Single-model independence caveat. No ground truth. Binary comparison (two pipelines) vs. the three-method comparison in evaluation-schemes.
 - **Connection to other programs**: This is partial evidence toward the evaluation-schemes "highest priority" question. The comparison protocol is a lightweight precursor to the full blind panel evaluation (Design A). Link to `evaluation-schemes.md`.
 
-**Step 6: Update `meta/research-programs/README.md`**
+**Step 6: Update `research-programs/README.md`**
 
 Three changes:
 
@@ -240,7 +240,7 @@ Three changes:
 
 (c) **"By theme" table**: Add condorcet-comparison to the "Validation / evidence" row.
 
-**Step 7: Update `meta/research-programs/evaluation-schemes.md`**
+**Step 7: Update `research-programs/evaluation-schemes.md`**
 
 Add a brief note in Section V (Experimental Designs) or Section VI (Composition and Sequencing) acknowledging that two deliberative-vs-CJT comparison runs have already been executed as a lightweight precursor, with a link to `condorcet-comparison.md`. This contextualizes the ablation/blind-panel designs as building on existing evidence rather than starting from zero.
 
@@ -256,11 +256,11 @@ Add condorcet-comparison to the bullet list of research programs:
 
 Documents that reference the moved files and need path updates:
 
-(a) `artifacts/comparison-protocol-deliberative-vs-cjt.md` — "Where to store comparison runs" section references `agent/comparisons/<topic-slug>/`. Update to point at `meta/research-programs/condorcet-comparison/results/` as the canonical location for these runs, noting the protocol remains reusable for future runs (which could go in either location depending on whether they're part of this program or a new one).
+(a) `artifacts/comparison-protocol-deliberative-vs-cjt.md` — "Where to store comparison runs" section references `agent/comparisons/<topic-slug>/`. Update to point at `research-programs/condorcet-comparison/results/` as the canonical location for these runs, noting the protocol remains reusable for future runs (which could go in either location depending on whether they're part of this program or a new one).
 
-(b) `agent/archive/handoff-2026-02-22-condorcet.md` — References `agent/comparisons/` and `agent/deliberations/` for condorcet-related files in the "Completed This Session" table and elsewhere. Add a note at the top: "Note: The comparison and deliberation records listed below were later moved to `meta/research-programs/condorcet-comparison/results/`."
+(b) `agent/archive/handoff-2026-02-22-condorcet.md` — References `agent/comparisons/` and `agent/deliberations/` for condorcet-related files in the "Completed This Session" table and elsewhere. Add a note at the top: "Note: The comparison and deliberation records listed below were later moved to `research-programs/condorcet-comparison/results/`."
 
-(c) `meta/methodology-evolution.md` (lines 306-309) — Update the paths in the condorcet milestone entries to point at the new locations under `meta/research-programs/condorcet-comparison/results/`, and add a note that the work is now documented as a research program.
+(c) `meta/methodology-evolution.md` (lines 306-309) — Update the paths in the condorcet milestone entries to point at the new locations under `research-programs/condorcet-comparison/results/`, and add a note that the work is now documented as a research program.
 
 (d) `artifacts/adversarial-committees.md` — Has a cross-reference to the Condorcet doc (which stays in `artifacts/`), so no change needed here.
 

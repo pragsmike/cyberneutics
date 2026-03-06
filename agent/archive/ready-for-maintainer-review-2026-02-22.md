@@ -2,7 +2,7 @@
 
 One-page checklist for mg (or any maintainer) picking up after the 2026-02-22 session. Full context: **`agent/handoff-2026-02-22.md`**.
 
-**Note (2026-02-24):** The comparison and deliberation records referenced below were moved to `meta/research-programs/condorcet-comparison/results/`. See [meta/research-programs/condorcet-comparison.md](../../meta/research-programs/condorcet-comparison.md).
+**Note (2026-02-24):** The comparison and deliberation records referenced below were moved to `research-programs/condorcet-comparison/results/`. See [research-programs/condorcet-comparison.md](../../research-programs/condorcet-comparison.md).
 
 ---
 

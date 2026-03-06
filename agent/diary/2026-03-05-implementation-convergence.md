@@ -8,7 +8,7 @@ A session examining the implementation mechanics of committee deliberations — 
 
 ## I. The Artificial Separation
 
-The repo currently treats multi-model committees and subagent-based deliberation as separate research programs with separate implementation paths. The multi-model program (`meta/research-programs/multi-model-committee.md`) assumes Python API orchestration — a `SimpleChair` class iterating through vendor endpoints. The subagent exploration (`wild/subagent-personas-for-debate/`) assumes single-model but architecturally independent agents communicating peer-to-peer via Claude Code's Agent Teams.
+The repo currently treats multi-model committees and subagent-based deliberation as separate research programs with separate implementation paths. The multi-model program (`research-programs/multi-model-committee.md`) assumes Python API orchestration — a `SimpleChair` class iterating through vendor endpoints. The subagent exploration (`wild/subagent-personas-for-debate/`) assumes single-model but architecturally independent agents communicating peer-to-peer via Claude Code's Agent Teams.
 
 This separation is an artifact of current platform limitations, not a conceptual necessity. The two programs are asking complementary questions: *does genuine model diversity improve deliberation?* and *does genuine agent independence improve deliberation?* These are orthogonal axes. A system could have both (different models running as independent peer agents), either one alone, or neither (the current single-model roleplay simulation).
 

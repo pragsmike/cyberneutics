@@ -1,9 +1,9 @@
 # Subagent Personas for Debate: Coordination & Architecture
 
 > **Superseded.** The content of this document has been incorporated into the research programs:
-> - [committee-implementation-taxonomy.md](../../meta/research-programs/committee-implementation-taxonomy.md) — the design space and three implementation tiers
-> - [agent-independence.md](../../meta/research-programs/agent-independence.md) — the experimental program for testing subagent-based deliberation
-> - [multi-model-committee.md](../../meta/research-programs/multi-model-committee.md) — the multi-model experimental program (updated with taxonomy references)
+> - [committee-implementation-taxonomy.md](../../research-programs/committee-implementation-taxonomy.md) — the design space and three implementation tiers
+> - [agent-independence.md](../../research-programs/agent-independence.md) — the experimental program for testing subagent-based deliberation
+> - [multi-model-committee.md](../../research-programs/multi-model-committee.md) — the multi-model experimental program (updated with taxonomy references)
 >
 > This file is retained for historical context. Read the research programs instead.
 
@@ -17,13 +17,13 @@ Unlike earlier constraints where subagents could only talk back to a hub, Agent 
 ---
 
 ## 1. Existing Research Program: API-Based Multi-Model Committees
-The foundation of the current research on multi-agent debate exists in `meta/research-programs/multi-model-committee.md` and `multi-model-committee-reference.md`. 
+The foundation of the current research on multi-agent debate exists in `research-programs/multi-model-committee.md` and `research-programs/multi-model-committee/reference.md`. 
 
 **The Premise:**
 The research correctly identifies the "Single-Model Monoculture Problem." Asking one model (like Claude) to simulate 5 hostile characters (Maya, Frankie, Joe, Vic, Tammy) forces the model to overcome its own training biases (like safety filters or a tendency to hedge). 
 
 **The Approach Found in the Repo:**
-To date, the documented approach to solving this has been almost **exclusively API-based**. The `multi-model-committee-reference.md` explicitly specs out writing custom Python scripts that hit multiple vendor endpoints (Anthropic, OpenAI, Meta, Google). 
+To date, the documented approach to solving this has been almost **exclusively API-based**. The [multi-model-committee reference](../../research-programs/multi-model-committee/reference.md) explicitly specs out writing custom Python scripts that hit multiple vendor endpoints (Anthropic, OpenAI, Meta, Google). 
 *   **The Orchestrator:** Described as a Python `SimpleChair` or `SmartChair` class that iterates through characters in a loop, hitting `API.complete()` and building a single, expanding string of context.
 *   **The Problem:** This is fully programmatic and decoupled from AI coding agents (like Cowork, Antigravity, or Cline). It relies on fixed API keys and deterministic `for` loops, rather than autonomous agents deciding when to speak.
 

@@ -10,7 +10,7 @@
 
 ### Maya (Paranoid Realism)
 
-Let me walk through what actually happens when someone arrives at this directory. They click into `meta/research-programs/README.md` and see a priority table with five programs. Good so far. Then they click on, say, `multi-model-committee.md` — the one listed as "High" priority — and they hit *1,730 lines*. That's not a research plan. That's a finished monograph. It has Python implementation code, API pricing calculations, YAML configuration templates. A contributor reading that will either think "this is already done, what's left for me?" or "I cannot possibly enter this in the middle."
+Let me walk through what actually happens when someone arrives at this directory. They click into `research-programs/README.md` and see a priority table with five programs. Good so far. Then they click on, say, `multi-model-committee.md` — the one listed as "High" priority — and they hit *1,730 lines*. That's not a research plan. That's a finished monograph. It has Python implementation code, API pricing calculations, YAML configuration templates. A contributor reading that will either think "this is already done, what's left for me?" or "I cannot possibly enter this in the middle."
 
 Now consider the incentive structure. Who benefits from the current opacity? The project maintainer. If the barrier to entry is high, only deeply committed people contribute — which filters for quality but also filters for everyone. If the stated goal is "pick a plan that matches your skills and interests," but the plans don't *tell you* what skills are needed, the real message is: "figure it out yourself, and if you can't, you're not the right contributor." That's a gatekeeping function disguised as an open invitation.
 
