@@ -80,6 +80,16 @@ Sources are organized by theoretical tradition. For a reading-path view (which s
 
 ---
 
+## Metacognition & Judgment
+
+**Fleming, Stephen M.** "HMeta-d: hierarchical Bayesian estimation of metacognitive efficiency from confidence ratings." *Neuroscience of Consciousness* 2017(1): nix007 (2017). https://doi.org/10.1093/nc/nix007. — Metacognition as the ability to reflect on and monitor one's cognitive processes. Introduces hierarchical Bayesian estimation of *metacognitive efficiency* (meta-d'/d'): how well an observer's confidence ratings predict objective success, controlling for type 1 performance (d') and response bias. meta-d' is the sensitivity of confidence to correct/incorrect; meta-d'/d' &lt; 1 indicates suboptimal use of available information when reporting confidence. HMeta-d outperforms point-estimate methods when data are limited. **Software (canonical):** [metacoglab/HMeta-d](https://github.com/metacoglab/HMeta-d) (MATLAB and R; JAGS). **Tutorial:** [HMeta-d tutorial (wiki)](https://github.com/metacoglab/HMeta-d/wiki/HMeta-d-tutorial). Cited in: [Metacognition and committee veracity](../artifacts/metacognition-and-committee-veracity.md).
+
+**Maniscalco, Brian, and Hakwan Lau.** "A signal detection theoretic approach for estimating metacognitive sensitivity from confidence ratings." *Consciousness and Cognition* 21(1): 422–430 (2012). — Original meta-d' model: confidence reports modelled within signal detection theory; meta-d' recovered by inverting the type 2 ROC. Grounds bias-free measurement of metacognitive sensitivity. Cited in: [Metacognition and committee veracity](../artifacts/metacognition-and-committee-veracity.md).
+
+**Fleming, Stephen M., and Hakwan C. Lau.** "How to measure metacognition." *Frontiers in Human Neuroscience* 8: 443 (2014). — Review of confidence–accuracy approaches and why simple correlations are confounded; meta-d' as the principled alternative. Cited in: [Metacognition and committee veracity](../artifacts/metacognition-and-committee-veracity.md).
+
+---
+
 ## Narrative Engineering
 
 **Boland, Alex.** "Narrative Engineering." https://alexbo.land/essays/narrative_engineering_2023.html (2023). — Independent convergence on the narrative computing insight: LLMs as engines of narrative potential, prompting as steering diegetic frames. The closest external theoretical parallel to Cyberneutics. Discussed in: [Boland's Narrative Engineering](../essays/07-bolands-narrative-engineering.md).

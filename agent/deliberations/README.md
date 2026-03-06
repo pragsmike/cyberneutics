@@ -20,7 +20,7 @@ So the "real" type is the type name (charter, deliberation, …); the number is 
 | `01-roster.md` | roster | Committee roster (copied from `agent/roster.md`); roles and propensities |
 | `01-convening.md` | convening | Selection rationale, composition notes, outcome. Optional **Remediation parameters** (for the evaluation feedback loop): **remediation_threshold** (default 13; pass if sum of five rubric scores ≥ this), **max_remediation_rounds** (default 2). Add a short "Remediation parameters" section when this deliberation uses non-default values. |
 | `02-deliberation.md` | deliberation | Full transcript: opening statements, rounds, analyses, consensus, decision space map |
-| `03-resolution.md` | resolution | Decision, summary, votes, implementation plan, signatures |
+| `03-resolution.md` | resolution | Decision, summary, votes, optional **confidence** (per-member integer 1–4 for metacognition; see `artifacts/metacognition-and-committee-veracity.md`), implementation plan, signatures |
 | `04-evaluation-1.md` | evaluation | First review: resolution-only evaluation and/or transcript review (rubric scores, verdict). **Always use a number** for the first evaluation file (04-evaluation-1.md). |
 | `04-evaluation-2.md`, … | evaluation | Subsequent reviews after remediation rounds (suffix -2, -3, …). |
 | `05-remediation-1.md`, … | remediation | Committee's response to evaluation (point-by-point, new round in 02). Present when the deliberation "went overtime." Suffix for each remediation round. |
@@ -35,6 +35,8 @@ Optional (when evaluation feedback loop runs): `05-remediation-1.md`, then `06-e
 All paths and references stay **under the cyberneutics repository**. Roster and character details come from `agent/roster.md` (operational definitions) and `artifacts/character-propensity-reference.md` (extended commentary); evaluation rubrics from `.claude/skills/review/SKILL.md` and `artifacts/evaluation-rubrics-reference.md`.
 
 See **agent/archive/augmentation-plan.md** for full schemas and implementation details; **agent/investigation-report.md** for how this structure was derived.
+
+**Resolution and metacognition:** When the committee records confidence (1–4 per member at resolution), it is stored in `03-resolution.md` under `confidence:` (same keys as `votes`). **Purpose:** Metacognition helps the end user interpret the committee — whose confidence to trust — not change the committee's decision. To track confidence and accuracy **across runs**, run `python scripts/update_metacog_register.py`; the result is `agent/metacog_register.md`. See `artifacts/metacognition-and-committee-veracity.md` for the full picture and optional HMeta-d/build_metacog_counts.
 
 ## File format: all files are Markdown
 
