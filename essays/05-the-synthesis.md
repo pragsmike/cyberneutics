@@ -108,6 +108,10 @@ We don't "use" AI. We couple with it. We form a temporary system that can traver
 
 The goal isn't to get the machine to be right. It's to get the system (You + Machine) to become wise.
 
+### From Theory to Practice
+
+If you've read this far, you have the theoretical grounding for why the methodology is designed the way it is: gaps produce bridges, bridges are feedback loops, feedback produces difference, and the whole process is steered by the observer. The remaining essays deepen specific aspects of the synthesis, but you don't need them to start using the methodology. **[Start Here](../artifacts/start-here.md)** provides a guided 15-minute onboarding; the **[Quick Start Guide](../artifacts/quick-start-guide.md)** gets you running your first committee deliberation in about 30 minutes. The essays will still be here when you want to understand *why* a technique works after you've seen *that* it works.
+
 ---
 
 **Previous essay**: [Cybernetics and the Observer Problem](./04-cybernetics-and-observation.md) — the "physics" of the loop

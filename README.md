@@ -49,6 +49,14 @@ The essay [Stories All the Way Down](./essays/stories-all-the-way-down.md) expla
 *   **Skeptics** wondering if this is just prompt engineering theater → [start here](essays/README.md#for-skeptics-show-me-why-this-matters)
 *   **Theorists** interested in narrative engineering, cybernetics, or sense-making
 
+## Three doors in
+
+**Want to use the methodology?** → **[Start Here](artifacts/start-here.md)** — 15-minute onboarding, then your first committee run.
+
+**Want to understand the theory?** → **[Essays](essays/README.md#reading-paths)** — curated reading paths for Practitioners, Theorists, Skeptics, and Formalists.
+
+**Want to assess the evidence?** → **[When This Methodology Fails](essays/when-methodology-fails.md)** — six failure modes, detection heuristics, and scope boundaries. Start with the honest accounting.
+
 ## Getting started
 
 **New to these ideas?** → **[Start Here](artifacts/start-here.md)** — 15-minute onboarding path, then your first committee run.
@@ -69,6 +77,8 @@ Or step by step:
 **Want to contribute research?**
 *   Browse the [Research Programs](research-programs/README.md) — active experiments ordered by impact on uncertainty, each with a contributing guide.
 *   Pick an item that matches your skills or interests; every program has a "Contributing" block describing what's needed.
+
+**Repository map**: For a structured overview of every directory and how the pieces fit together, see [CLAUDE.md](CLAUDE.md). (It's addressed to AI assistants, but the directory map and skill table are useful for human readers too.)
 
 ## Why does this matter?
 

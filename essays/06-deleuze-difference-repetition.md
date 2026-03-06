@@ -98,45 +98,9 @@ Understanding this changes how you work with the technology:
 
 ## The Category Theory Connection
 
-Pask wrote that "cybernetics is the science or the art of manipulating defensible metaphors; showing how they may be constructed and what can be inferred as a result of their existence," in the context of his work *The Cybernetics of Human Learning and Performance* (1966). 
+There's a formal parallel between Deleuzian philosophy and category theory: category theory privileges *arrows over objects* (difference over identity), replaces equality with isomorphism (structural equivalence for relevant purposes), and explains what LLMs preserve under compression (relational structure) versus what they lose (particular facts). The upshot for narrative engineering: two committee outputs can be isomorphic in recommendation structure even when they differ in wording; multiple interpretations can be categorically equivalent — different objects, same morphisms. For the full development of this parallel, including the lossy-compression argument and the charts-on-a-manifold categorical framing, see **[Category Theory and Narrative Engineering](../artifacts/category-theory-connection.md)**. For the formalism applied to pipelines, see the **[Palgebra Reference](../palgebra/reference.md)**.
 
-That's also an excellent description of category theory.
-
-There's a formal parallel between Deleuzian philosophy and category theory that illuminates both.
-
-**Category theory privileges arrows over objects.** In traditional mathematics, you define objects (sets, groups, spaces) and then study functions between them. In category theory, the morphisms (arrows, transformations) are primary. Objects are just the sources and targets of morphisms. What matters is how things relate, not what things "are."
-
-This is Deleuze's inversion in mathematical form. Identity (what an object IS) becomes secondary to difference (how objects relate and transform).
-
-**Isomorphism and equivalence replace equality.** In category theory, you rarely ask whether two things are "equal." You ask whether they're isomorphic—structurally the same for relevant purposes, even if not identical. Two groups can be isomorphic without being the same group. Two categories can be equivalent without containing the same objects.
-
-This is a weaker notion than equality, and it's more useful. It lets you say "these are the same in the ways that matter" without claiming they're identical in all respects.
-
-For narrative engineering, this matters:
-
-- Two stories can be "equivalent" for decision-making purposes without being the same story
-- Two committee outputs can be isomorphic in their recommendation structure even if they differ in wording
-- Multiple interpretations can be categorically equivalent—different objects, same morphisms
-
-**LLMs as lossy compression.** LLMs have been described as "lossy but extremely capacious compression algorithms." Category theory helps explain what's preserved and what's lost.
-
-What's preserved: **structure**. The relationships between concepts, the patterns of narrative, the morphisms that connect ideas. When the model compresses "all of human text," it keeps the arrows—how things relate to other things.
-
-What's lost: **particulars**. Specific facts, exact quotes, ground truth. The objects get fuzzy; the arrows stay sharp.
-
-This is why LLMs are good at:
-- Generating plausible continuations (following structural patterns)
-- Producing multiple valid framings (different objects, same morphisms)
-- Recognizing genre and style (structural, not particular)
-
-And bad at:
-- Precise factual recall (particulars, not structure)
-- Exact quotation (specific objects, not relationships)
-- Distinguishing between structurally similar but factually different claims
-
-Deleuze would say: the compression preserves difference (relations) and loses identity (fixed objects). That's not a bug. That's what compression that respects the primacy of difference looks like.
-
-Gordon Pask's **entailment meshes** provide a concrete instantiation of this rhizomatic structure. In Pask's Conversation Theory, concepts are not isolated facts arranged in a tree of prerequisites; they are cyclically mutually-entailing topic relations — a network where any concept can serve as an entry point, and understanding proceeds through lateral jumps, analogies, and exploratory traversals. The entailment mesh is already rhizomatic in the Deleuzian sense: non-hierarchical, with multiple entry points, oriented toward experimentation rather than tracing a fixed structure. That a cybernetics theorist working on learning and teaching machines arrived independently at a structure isomorphic to Deleuze's rhizome reinforces the claim that these are not metaphors but formal features of how knowledge actually organizes.
+Gordon Pask's **entailment meshes** provide a concrete instantiation of rhizomatic structure. In Pask's Conversation Theory, concepts are not isolated facts arranged in a tree of prerequisites; they are cyclically mutually-entailing topic relations — a network where any concept can serve as an entry point, and understanding proceeds through lateral jumps, analogies, and exploratory traversals. The entailment mesh is already rhizomatic in the Deleuzian sense: non-hierarchical, with multiple entry points, oriented toward experimentation rather than tracing a fixed structure. That a cybernetics theorist working on learning and teaching machines arrived independently at a structure isomorphic to Deleuze's rhizome reinforces the claim that these are not metaphors but formal features of how knowledge actually organizes.
 
 ## Eigenforms: When Processes Stabilize
 
@@ -275,7 +239,7 @@ Theory without practice is sterile. Practice without theory is blind. This essay
 - [The Synthesis](./05-the-synthesis.md) — How Deleuze, Dervin, and cybernetics compose
 - Eigenforms and Narrative Convergence — Technical deep-dive on recursive stabilization (coming soon)
 
-**Category Theory Background**:
+**Category Theory Background** (see also [Category Theory and Narrative Engineering](../artifacts/category-theory-connection.md)):
 - Lawvere, F. William and Schanuel, Stephen. *Conceptual Mathematics* (1997) — Accessible introduction emphasizing conceptual over technical
 - Spivak, David. *Category Theory for the Sciences* (2014) — Applications-focused introduction
 

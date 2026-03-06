@@ -108,6 +108,10 @@ They are the "driving lessons" for the vehicle we actually have, rather than the
 
 If we accept that LLMs are storytelling machines and impose game-theoretic constraints on them, we can stop trying to force them to be calculators. Instead, we can stop fighting the stochastic imps and start using these tools to help us write better, truer stories about the wicked problems we face.
 
+### Ready to Try It?
+
+You now have enough grounding to run the methodology yourself. The committee, the rules, the evaluation loop — they're all documented as concrete, step-by-step techniques. **[Start Here](../artifacts/start-here.md)** walks you through a guided first run in about 15 minutes; the **[Quick Start Guide](../artifacts/quick-start-guide.md)** gets you into your first committee deliberation in about 30 minutes. If you want to understand the theoretical foundations more deeply first, continue with the next essays — but theory is not a prerequisite for practice.
+
 ---
 
 **Previous essay**: [Why Narrative Engines Change Everything](./01-why-narrative-engines-change-everything.md) — The paradigm shift from symbolic to narrative computing

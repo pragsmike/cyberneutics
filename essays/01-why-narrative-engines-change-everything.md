@@ -188,6 +188,8 @@ The same mechanism that makes LLMs useful makes them **profoundly unreliable**:
 
 **They generate locally coherent narratives that sound plausible.**
 
+By "locally coherent" we mean: internally consistent and plausible *within its own framing* — each sentence follows from the previous one, the genre conventions are respected, the vocabulary is appropriate — but without any guarantee that the narrative as a whole is true, complete, or consistent with external reality. A coherent narrative is one that hangs together as a story; local coherence is what makes it sound convincing even when it's wrong.
+
 That's it. That's the entire capability.
 
 Sometimes those narratives are:

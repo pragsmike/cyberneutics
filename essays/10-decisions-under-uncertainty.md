@@ -46,6 +46,48 @@ What the composition guarantees:
 
 Neither half alone is sufficient. Scenarios without a committee is storytelling — creative but uncommitted, endlessly exploring without deciding. A committee without scenarios is debate — rigorous but anchored, evaluating whatever framing the problem arrived in without questioning whether it's the right framing.
 
+### The pipeline, visually
+
+```
+                          ┌─────────────────────────────────────────────┐
+                          │              REMEDIATION LOOP               │
+                          │         (bounded, max 2 rounds)             │
+                          └────────────────┬────────────────────────────┘
+                                           │
+                                           ▼
+ ┌───────────┐    ┌──────────────┐    ┌──────────┐    ┌──────────────┐    ┌──────────────┐
+ │           │    │              │    │          │    │              │    │              │
+ │ SITUATION ├───►│  FAN         ├───►│ FUNNEL   ├───►│  EVALUATION  ├───►│ QUALITY GATE │
+ │           │    │ (scenarios)  │    │(committee│    │  (rubrics)   │    │  pass/fail   │
+ │           │    │              │    │ debate)  │    │              │    │              │
+ └───────────┘    └──────────────┘    └──────────┘    └──────────────┘    └──────┬───────┘
+                                                                                 │
+                                                              ┌──────────────────┼──────────┐
+                                                              │                  │          │
+                                                              ▼                  ▼          │
+                                                        ┌──────────┐     ┌────────────┐    │
+                                                        │ REMEDIATE│     │  RESOLVE   │    │
+                                                        │ (fix &   │     │            │    │
+                                                        │ re-run)  │     └─────┬──────┘    │
+                                                        └──────────┘           │           │
+                                                                               ▼           │
+                                                                        ┌────────────┐    │
+                                                                        │ HUMAN GATE │    │
+                                                                        │ (editorial │    │
+                                                                        │  judgment) │    │
+                                                                        └─────┬──────┘    │
+                                                                              │           │
+                                                                              ▼           │
+                                                                        ┌────────────┐    │
+                                                                        │ RESOLUTION │    │
+                                                                        │ (committed │    │
+                                                                        │  decision) │    │
+                                                                        └────────────┘    │
+                                                                                          │
+     PROBE: run entire pipeline N times, compare resolutions ─────────────────────────────┘
+     to map the decision landscape (eigenforms vs. residues)
+```
+
 The composed operation is Bruner's binocular vision made operational: narrative mode to explore, paradigmatic mode to evaluate, composed into a single pipeline that *does the thing we actually need* — makes a decision we can trace, defend, and learn from.
 
 ---

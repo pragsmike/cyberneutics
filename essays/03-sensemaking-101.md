@@ -79,7 +79,7 @@ This is Dervin's bridge-building made operational. The bridge isn't the informat
 
 In Pask's terms, understanding is a cyclically maintained network of mutually-entailing concepts — an **entailment mesh**. Each successful teachback strengthens edges in the mesh. Each failure reveals where the mesh is thin. The mesh is not a static knowledge structure but a living record of gaps that have been bridged and how.
 
-The integrated picture: the learner walks a rhizomatic space (in the sense Deleuze describes — see [Essay 06](./06-deleuze-difference-repetition.md)), encounters gaps (Dervin), and uses conversation to construct bridges that stabilize through teachback (Pask). Three frameworks, one process.
+The integrated picture: the learner walks a rhizomatic space (a non-hierarchical network with multiple entry points, where any concept can connect to any other — see [Essay 06](./06-deleuze-difference-repetition.md) for the full Deleuzian treatment), encounters gaps (Dervin), and uses conversation to construct bridges that stabilize through teachback (Pask). Three frameworks, one process.
 
 ## Why This Matters for AI Interaction
 
@@ -241,7 +241,7 @@ Deleuzian philosophy explains **how** repetition produces difference.
 
 Together, they form **Cyberneutics**: a methodology for collaborative navigation of complexity using narrative engines.
 
-The next essay explores the cybernetic foundations—how feedback loops, eigenforms, and observer effects structure the sense-making process itself.
+The next essay explores the cybernetic foundations—how feedback loops, eigenforms (stable patterns that emerge when a process reproduces itself — see [Essay 04](./04-cybernetics-and-observation.md) for the full treatment), and observer effects structure the sense-making process itself.
 
 ---
 

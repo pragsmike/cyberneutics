@@ -4,12 +4,25 @@ This directory contains essays exploring the theoretical foundations of Cyberneu
 
 ## Terminology
 
-Four terms recur across this collection with distinct meanings:
+A **[Glossary](./glossary.md)** of 20 key terms is available as a standalone reference. The four most frequently confused terms:
+
 
 - **Narrative Computing** — what the machine does: an LLM takes a prompt and generates a narrative. The primitive operation — the transistor of this discipline.
 - **Narrative Engineering** — the discipline of composing primitive narrative computers into reliable systems through redundancy, feedback, iteration, and staged composition. Analogous to how software engineering grew from symbolic computing. (Developed in [Essay 07](./07-bolands-narrative-engineering.md))
 - **Cyberneutics** — one methodology within narrative engineering: the specific techniques (adversarial committees, parliamentary procedures, RUBRIC evaluation) implemented within this repository
 - **Cybernetic Hermeneutics** — the theoretical synthesis: interpretation as a regulated, dynamic feedback loop (defined in [Essay 05](./05-the-synthesis.md))
+
+## Reading Time Estimates
+
+The numbered essays total roughly 30,000 words. At a comfortable pace for dense theoretical prose:
+
+| Path | Essays | Approximate time |
+|------|--------|-----------------|
+| Practitioner | 01, 02, Stories, 03 | ~40 minutes |
+| Theorist (minimal) | 01, History, 02, 03, 04, 05, 06, 11, 10 | ~100 minutes |
+| Skeptic | 01, Stories, Imps, When-Fails | ~55 minutes |
+| Formalist | Palgebra refs + 08, 09, 10 | ~50 minutes (essays only; palgebra reference adds ~30 min) |
+| Full numbered sequence (01–11) | All 11 | ~120 minutes |
 
 ## Reading Paths
 
@@ -17,10 +30,10 @@ Four terms recur across this collection with distinct meanings:
 
 If you want to understand why this methodology works and what problem it solves:
 
-1. **[Why Narrative Engines Change Everything](./01-why-narrative-engines-change-everything.md)** - The paradigm shift from symbolic to narrative computing
-2. **[From Practice to Theory: How We Got Here](./02-from-practice-to-theory.md)** - How operational failures led to the methodology (personal narrative)
-3. **[Stories All the Way Down](./stories-all-the-way-down.md)** - Why everything is narrative and what that means for AI use
-4. **[Introduction to Sense-Making](./03-sensemaking-101.md)** - Dervin's framework for understanding information-seeking as active construction
+1. **[Why Narrative Engines Change Everything](./01-why-narrative-engines-change-everything.md)** (~12 min) - The paradigm shift from symbolic to narrative computing
+2. **[From Practice to Theory: How We Got Here](./02-from-practice-to-theory.md)** (~6 min) - How operational failures led to the methodology (personal narrative)
+3. **[Stories All the Way Down](./stories-all-the-way-down.md)** (~8 min) - Why everything is narrative and what that means for AI use
+4. **[Introduction to Sense-Making](./03-sensemaking-101.md)** (~8 min) - Dervin's framework for understanding information-seeking as active construction
 
 Ready to try it? Start with **[Start Here](../artifacts/start-here.md)** for a guided first run, or **[Quick Start Guide](../artifacts/quick-start-guide.md)** for a faster on-ramp.
 
@@ -28,26 +41,26 @@ Ready to try it? Start with **[Start Here](../artifacts/start-here.md)** for a g
 
 If you want to understand the theoretical synthesis:
 
-1. **[Why Narrative Engines Change Everything](./01-why-narrative-engines-change-everything.md)** - Historical context
-2. **[Narrative Computing as Historical Progression](./narrative-computing-history.md)** - Deeper historical grounding: cognitive, computational, and systems-theoretic threads
-3. **[From Practice to Theory: How We Got Here; The Game within a Game](./02-from-practice-to-theory.md)** - How operational failures led to the "Game within a Game" framework
-4. **[Introduction to Sense-Making](./03-sensemaking-101.md)** - Dervin's Situation-Gap-Bridge model
-5. **[Cybernetics and the Observer Problem](./04-cybernetics-and-observation.md)** - Second-order cybernetics and why observation changes state
-6. **[The Synthesis](./05-the-synthesis.md)** - How sense-making is inherently cybernetic
-7. **[Deleuzian Foundations](./06-deleuze-difference-repetition.md)** - Becoming, difference, and why repetition produces novelty
-8. **[Conversation Theory](./11-conversation-theory.md)** - Pask's micro-mechanics of understanding: teachback, entailment meshes, and conversational architecture
-9. **[Decisions Under Uncertainty](./10-decisions-under-uncertainty.md)** - How the duality of exploration and commitment yields rigorous decision-making
+1. **[Why Narrative Engines Change Everything](./01-why-narrative-engines-change-everything.md)** (~12 min) - Historical context
+2. **[Narrative Computing as Historical Progression](./narrative-computing-history.md)** (~16 min) - Deeper historical grounding: cognitive, computational, and systems-theoretic threads
+3. **[From Practice to Theory: How We Got Here; The Game within a Game](./02-from-practice-to-theory.md)** (~6 min) - How operational failures led to the "Game within a Game" framework
+4. **[Introduction to Sense-Making](./03-sensemaking-101.md)** (~8 min) - Dervin's Situation-Gap-Bridge model
+5. **[Cybernetics and the Observer Problem](./04-cybernetics-and-observation.md)** (~7 min) - Second-order cybernetics and why observation changes state
+6. **[The Synthesis](./05-the-synthesis.md)** (~5 min) - How sense-making is inherently cybernetic
+7. **[Deleuzian Foundations](./06-deleuze-difference-repetition.md)** (~12 min) - Becoming, difference, and why repetition produces novelty
+8. **[Conversation Theory](./11-conversation-theory.md)** (~13 min) - Pask's micro-mechanics of understanding: teachback, entailment meshes, and conversational architecture
+9. **[Decisions Under Uncertainty](./10-decisions-under-uncertainty.md)** (~12 min) - How the duality of exploration and commitment yields rigorous decision-making
 
-The path above is a minimal theorist sequence. Also recommended: **[Essay 07: Narrative Engineering](./07-bolands-narrative-engineering.md)** (independent convergence from philosophy validates the synthesis) and **[Essay 09: Narrative Immune Systems](./09-narrative-immune-systems.md)** (extends the formalism to trust boundaries and evaluation as immune function).
+The path above is a minimal theorist sequence. Also recommended: **[Essay 07: Narrative Engineering](./07-bolands-narrative-engineering.md)** (~22 min; independent convergence from philosophy validates the synthesis) and **[Essay 09: Narrative Immune Systems](./09-narrative-immune-systems.md)** (~8 min; extends the formalism to trust boundaries and evaluation as immune function).
 
 ### For Skeptics (Show Me Why This Matters)
 
 If you're not convinced this is necessary:
 
-1. **[Why Narrative Engines Change Everything](./01-why-narrative-engines-change-everything.md)** - The problem space
-2. **[Stories All the Way Down](./stories-all-the-way-down.md)** - Concrete examples of narrative in action
-3. **[The Stochastic Imps of Happenstance](./the-stochastic-imps-of-happenstance.md)** - Why most failures are noise, not malice, and what that means
-4. **[When This Methodology Fails](./when-methodology-fails.md)** - Honest engineering assessment of failure modes and scope boundaries
+1. **[Why Narrative Engines Change Everything](./01-why-narrative-engines-change-everything.md)** (~12 min) - The problem space
+2. **[Stories All the Way Down](./stories-all-the-way-down.md)** (~8 min) - Concrete examples of narrative in action
+3. **[The Stochastic Imps of Happenstance](./the-stochastic-imps-of-happenstance.md)** (~11 min) - Why most failures are noise, not malice, and what that means
+4. **[When This Methodology Fails](./when-methodology-fails.md)** (~23 min) - Honest engineering assessment of failure modes and scope boundaries
 
 ### For Formalists (The Algebra)
 
@@ -56,9 +69,9 @@ If you want the precise machinery underneath the methodology:
 1. **[Palgebra Reference](../palgebra/reference.md)** - Start here: syntax, operators, morphism types, propagation rules, composition laws
 2. **[Decorated Texts](../palgebra/decorated-texts.md)** - The full essay developing the pipeline algebra from first principles
 3. **[Committee as Palgebra](../palgebra/committee-as-palgebra.md)** - Worked example: the adversarial committee pipeline formalized as resource equations
-4. **[From Methodology to Formalism](./08-from-methodology-to-formalism.md)** - The bridge: how the philosophical foundations and the algebra describe the same phenomenon
-5. **[Narrative Immune Systems](./09-narrative-immune-systems.md)** - Evaluation as immune function, trust boundaries, the organ/bath distinction
-6. **[Decisions Under Uncertainty](./10-decisions-under-uncertainty.md)** - The fan/funnel duality, decision monads, and rigorous decision-making through composition and iteration
+4. **[From Methodology to Formalism](./08-from-methodology-to-formalism.md)** (~15 min) - The bridge: how the philosophical foundations and the algebra describe the same phenomenon
+5. **[Narrative Immune Systems](./09-narrative-immune-systems.md)** (~8 min) - Evaluation as immune function, trust boundaries, the organ/bath distinction
+6. **[Decisions Under Uncertainty](./10-decisions-under-uncertainty.md)** (~12 min) - The fan/funnel duality, decision monads, and rigorous decision-making through composition and iteration
 
 The essays in this directory establish *why* narrative engines need narrative engineering. The palgebra provides *how, precisely* — a formal language where adversarial committees are transformation morphisms, rubric evaluation is enrichment, and human review gates are collapse operators. [From Methodology to Formalism](./08-from-methodology-to-formalism.md) bridges the two vocabularies explicitly. See the [palgebra directory](../palgebra/) for the full formalism.
 
