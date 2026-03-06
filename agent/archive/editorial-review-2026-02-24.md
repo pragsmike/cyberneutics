@@ -8,7 +8,7 @@
 
 ## Executive Summary
 
-The Cyberneutics essay collection is an intellectually ambitious and largely successful body of work. Its greatest strengths are the quality of the theoretical synthesis (the four-pillar integration of Dervin, von Foerster, Deleuze, and Pask is genuinely novel and well-argued), the honesty of the self-assessment (`when-methodology-fails` is among the best pieces in the collection), and the vividness of the core metaphors (game within a game, charts on a manifold, pachinko of stored literature). The writing voice is distinctive and engaging — it earns the right to introduce difficult concepts by keeping the reader oriented with concrete examples and direct address.
+The Cyberneutics essay collection is an intellectually ambitious and largely successful body of work. Its greatest strengths are the quality of the theoretical synthesis (the four-pillar integration of Dervin, von Foerster, Deleuze, and Pask is genuinely novel and well-argued), the honesty of the self-assessment (`when-methodology-fails` is among the best pieces in the collection), and the vividness of the core metaphors (charts on a manifold, pachinko of stored literature) and conceptual frameworks (game within a game — the principle of using process to impose local order against entropic tendency, of which the adversarial committee is one instantiation). The writing voice is distinctive and engaging — it earns the right to introduce difficult concepts by keeping the reader oriented with concrete examples and direct address.
 
 The systemic weaknesses cluster around two themes: **inconsistent navigation infrastructure** and **uneven audience calibration**. The Previous/Next essay links are incomplete and use inconsistent formatting across the numbered sequence. The four reading paths defined in `essays/README.md` are reasonable in structure but the Practitioner path dead-ends in theory without bridging to doing, and the Theorist path omits two core essays (07, 09) that its own path description acknowledges elsewhere. Several essays have substantial overlap that could be compressed or explicitly cross-referenced rather than restated. The register shifts across the collection — from the informal storytelling of Tilt Sound Collective to the category-theoretic density of Essay 08 — are mostly appropriate to audience but not always signposted for readers following a path.
 
@@ -26,7 +26,7 @@ Against the rubric, the repo currently scores in the **low-to-mid 2 range** on m
 | **4. Actionability** | **2** | Artifacts exist and are well-developed (adversarial-committees, quick-start-guide, start-here). But the essay collection itself rarely bridges to action. Essay 08 bridges to palgebra. `when-methodology-fails` has an excellent scope map. The Practitioner reading path doesn't end with "now go try this." Formalists get strong material. Skeptics get `when-methodology-fails`. Theorists get the full argument. The gap is: Practitioners reading essays don't know when to stop reading and start doing. |
 | **5. Trust and Honesty** | **3** | The collection's standout dimension. `when-methodology-fails` is exceptional: six failure modes with mechanisms, detection heuristics, self-application, and honest acknowledgment that the essay itself shares the limitations it describes. Root README's Status section is calibrated ("early-stage documentation"). The Condorcet non-claim is explicit. The evidence base section distinguishes what's validated from what remains to be validated. The caveat that failure modes are predicted rather than empirical is exactly the right epistemic posture. |
 | **6. Navigation and Findability** | **2-** | `essays/README.md` is detailed and accurate. Root README lists all files. But: Previous/Next links are incomplete across the numbered sequence (Essays 03, 04, 05, 06, 07 have inconsistent or missing sequential navigation). Link formatting is inconsistent (some use "Previous essay" / "Next essay," others use "Related essays" or "See also"). All internal file links appear valid (artifacts, palgebra, essays all resolve). `essays/README.md` line 323 promises a standalone "Pachinko of Stored Literature" treatment that doesn't exist — minor but a broken promise. |
-| **7. Delight / Experience** | **2** | The writing is engaging. Core metaphors (game within a game, charts on a manifold, pachinko) are vivid and memorable. The opening scenario of `when-methodology-fails` is excellent — it hooks instantly by showing a confident wrong answer. The Tilt Sound Collective story is genuinely entertaining. Friction points: the sheer volume (18 essays plus artifacts plus palgebra) can overwhelm. Some essays (07, `narrative-computing-history`) are long and could be tightened. The bridge from "I understand the theory" to "I can do something" requires leaving the essay collection entirely. |
+| **7. Delight / Experience** | **2** | The writing is engaging. Core metaphors (charts on a manifold, pachinko) and the "game within a game" framework (self-organization against entropy, not merely the committee mechanism) are vivid and memorable. The opening scenario of `when-methodology-fails` is excellent — it hooks instantly by showing a confident wrong answer. The Tilt Sound Collective story is genuinely entertaining. Friction points: the sheer volume (18 essays plus artifacts plus palgebra) can overwhelm. Some essays (07, `narrative-computing-history`) are long and could be tightened. The bridge from "I understand the theory" to "I can do something" requires leaving the essay collection entirely. |
 
 **Priority dimensions**: Navigation (2-) and Audience Paths (2) are the lowest-scoring and most impactful to fix. Trust (3) is the strongest and should be preserved.
 
@@ -44,7 +44,7 @@ Against the rubric, the repo currently scores in the **low-to-mid 2 range** on m
 
 ### Essay 02: `02-from-practice-to-theory.md`
 - **Tone**: Personal narrative register — "how we got here." Appropriate and engaging.
-- **Exposition**: MOOLLM is mentioned (§ "Connection to MOOLLM") without enough context for readers who don't know what it is. A one-sentence gloss would help.
+- **Exposition**: This is where the "Game Within the Game" concept is given its theoretical foundation — the Outer Game is rigged by entropy, and the Game Within the Game is the general principle of constructing local order against entropic tendency ("exactly what biological life does to cheat entropy"). The adversarial committee is then introduced as one concrete instantiation of this principle (§ "Rediscovering the Committee"). The conceptual hierarchy — abstract principle first, committee as instance — is clear in the text. MOOLLM is mentioned (§ "Connection to MOOLLM") without enough context for readers who don't know what it is. A one-sentence gloss would help.
 - **Accessibility**: Strong for Practitioners (it's a practice story). Adequate for Theorists. May bore Skeptics who want evidence, not origin stories.
 - **Specific issues**:
   - Has a "Next" link to 03. Missing an explicit "Previous" link back to 01.
@@ -127,14 +127,14 @@ Against the rubric, the repo currently scores in the **low-to-mid 2 range** on m
 
 ### `stories-all-the-way-down.md`
 - **Tone**: Accessible, example-rich. Good entry point for Practitioners and Skeptics.
-- **Exposition**: "Charts on a manifold" introduced here and in Essay 06. The legal theory parallel and math proofs examples are effective.
+- **Exposition**: "Charts on a manifold" introduced here and in Essay 06. The legal theory parallel and math proofs examples are effective. The § "The Game Within the Game" section develops the concept as a general principle of self-organization against entropy — generating candidate stories, stress-testing them, catching bad assumptions — before the committee is mentioned as its mechanism. This is one of the clearest statements in the collection that the "game within a game" is an abstract principle (local order against entropic tendency) of which the committee is one implementation.
 - **Accessibility**: Excellent for Practitioners and Skeptics. On both reading paths.
 - **Specific issues**:
   - Character names (Maya, Frankie, Joe, Vic, Tammy) are used in examples without introduction — assumes the reader has encountered them. On the Practitioner path, this essay comes before any character introduction (which lives in `stochastic-imps`). This is a forward reference.
 
 ### `the-stochastic-imps-of-happenstance.md`
 - **Tone**: The most personal and essayistic piece. Includes the character sheets (the original introduction of Maya, Frankie, Joe, Vic, Tammy).
-- **Exposition**: "Game within a game" framework clearly developed. Character introductions are vivid and memorable.
+- **Exposition**: The "game within a game" concept is developed here in its broadest form — the concluding lines state it as a general principle of self-organization ("making your own rules in a world that won't give you permission"), distinct from any particular mechanism. The committee character introductions are vivid and memorable, but they are one instantiation of the framework, not the framework itself. The essay's structure moves from the abstract problem (entropy, hypervigilance, game theory) to the specific solution (the committee), then back to the abstract principle in the closing.
 - **Accessibility**: Excellent for Skeptics (it's about trust calibration). On the Skeptic path.
 - **Specific issues**:
   - This is where the committee characters are first introduced in the essay collection. But on the Practitioner and Theorist paths, readers may encounter character names in other essays first (e.g., `stories-all-the-way-down` uses them).
@@ -211,11 +211,15 @@ Scene-1 uses Kaelen (Entropy), Elena (Constraint), Silas (Integration) — a sep
 
 This essay uses second-person "you" and "your" throughout ("Your edge: ...", "What we're missing: ..."), reading like internal project notes rather than a published essay. The rest of the collection uses first-person plural ("we") or third-person. The tone should be standardized.
 
-### 7. Theorist path omits core essays (affects: Audience Paths)
+### 7. "Game within a game" is a theoretical framework, not a metaphor (affects: Coherence)
+
+**[Correction — 2026-03-06]**: An earlier version of this review treated "game within a game" as a core *metaphor* alongside "charts on a manifold" and "pachinko of stored literature." This conflated the concept with its primary concrete instantiation (the adversarial committee). The essays are clear that "game within a game" is a general principle: using process to impose local order against entropic tendency — "exactly what biological life does to cheat entropy" (Essay 02), "making your own rules in a world that won't give you permission" (`stochastic-imps`). The committee is *one* game-within-a-game. Deposits and revision limits in the Tilt Sound Collective story are another. Any constructed system of constraints that creates a local pocket of useful work against dissolution qualifies. The review's per-essay notes have been corrected to reflect this hierarchy. The source essays have also been updated to strengthen this distinction — see Recommended Actions § Completed, item 13.
+
+### 8. Theorist path omits core essays (affects: Audience Paths)
 
 The Theorist reading path in `essays/README.md` acknowledges (line 39) that Essays 07 and 09 "are in Core Essays below" but doesn't include them. A Theorist following the path would miss the narrative-engineering distinction (07) and the immune-system extension (09). The "minimal theorist sequence" framing is reasonable but should include at least a note: "Also recommended: 07 (independent convergence validates the synthesis) and 09 (extends the formalism to trust boundaries)."
 
-### 8. No "What's next" at the end of the numbered sequence (affects: Delight, Actionability)
+### 9. No "What's next" at the end of the numbered sequence (affects: Delight, Actionability)
 
 Essay 11 is the final numbered essay. It has a Previous link but no forward pointer. A reader who's just finished the full theoretical sequence deserves a "congratulations, here's what to do now" paragraph pointing to artifacts, palgebra, and applications.
 
@@ -251,12 +255,15 @@ Essay 11 is the final numbered essay. It has a Previous link but no forward poin
 
 11. **Remove or flag the "Pachinko of Stored Literature" standalone treatment** mentioned in `essays/README.md` line 323. Currently reads as a promise ("A standalone treatment may follow") for content that doesn't exist. Either remove the mention or change to "The pachinko metaphor appears in Essay 01 and Stories All the Way Down; no standalone treatment is currently planned." Affects Navigation (broken promise).
 
-12. **Tighten `stochastic-imps` Preamble and Threat Landscape sections** — the material is good but could be more concise. The character sheets and committee dynamics are the irreplaceable parts. Affects Delight.
+12. **Tighten `stochastic-imps` Preamble and Threat Landscape sections** — the material is good but could be more concise. The "Game Within the Game" framework section, the character sheets, and the committee dynamics are the irreplaceable parts. Affects Delight.
+
+### Completed (2026-03-06)
+
+13. **Clarify "game within a game" conceptual hierarchy across three essays.** Essay 02 now expands the Game Within the Game section with non-committee examples (cell membranes, legal systems, engineering redundancy) and a bridging sentence framing the committee as "the most powerful instance we've found so far." `stochastic-imps` now has a `### The Game Within the Game` section heading with two paragraphs restating the general principle and explicitly framing the committee as one instantiation, with forward references to the Tilt Sound Collective for others. `tilt-sound-collective-story` epilogue now explicitly names the committee as one of several games-within-the-game alongside deposits/revision-limits, knowledge compartmentalization, diversified advice sources, and small experiments. Affects Coherence. [Resolves Cross-Cutting Issue #7.]
 
 ### Fine As-Is
 
 - `when-methodology-fails.md` — leave untouched. It's the collection's strongest piece.
-- `tilt-sound-collective-story.md` — works perfectly in its current role.
 - The root README — well-structured, honest, comprehensive.
 - The four-term glossary in `essays/README.md` — clear and correct.
 - The palgebra cross-references from Essay 08 — accurate and helpful.
@@ -272,7 +279,7 @@ Raise all rubric dimensions to a consistent 2–3. Current priority targets:
 | Dimension | Current | Target | Primary lever |
 |-----------|---------|--------|---------------|
 | Audience Paths | 2 | 3 | Fix Practitioner endpoint; expand Theorist path |
-| Conceptual Coherence | 2 | 2-3 | Cross-references; MOOLLM gloss; Scene-1 note |
+| Conceptual Coherence | 2 | 2-3 | Cross-references; MOOLLM gloss; Scene-1 note; game-within-a-game hierarchy clarification (done — see Completed item 13) |
 | Tone and Register | 2 | 2-3 | Standardize `societies-of-thought-synthesis` |
 | Actionability | 2 | 2-3 | "Now try it" pointers at path endpoints |
 | Trust and Honesty | 3 | 3 | Preserve — no changes needed |
@@ -305,7 +312,7 @@ Raise all rubric dimensions to a consistent 2–3. Current priority targets:
 
 12. Tighten Essay 07 §§ II.D and III.A with cross-references to 01 and 06. [Delight]
 13. Compress `narrative-computing-history` § "Early Story Generation." [Delight]
-14. Tighten `stochastic-imps` Preamble and Threat Landscape sections. [Delight]
+14. Tighten `stochastic-imps` Preamble and Threat Landscape sections. Preserve the § "The Game Within the Game" framework section — it carries the conceptual hierarchy. [Delight]
 
 ### Dependencies
 

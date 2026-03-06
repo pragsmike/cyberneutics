@@ -50,7 +50,9 @@ The Outer Game is rigged by entropy; the stochastic imps will always try to pull
 
 But we can construct a **Game Within the Game**.
 
-This is exactly what biological life does to cheat entropy (locally, anyway).
+This is exactly what biological life does to cheat entropy (locally, anyway). A cell membrane is a game within a game — a constructed boundary that maintains local order against thermodynamic dissolution. A legal system is a game within a game — an imposed structure of rules and roles that makes cooperative action possible in a world that doesn't require it. An engineering redundancy protocol is a game within a game — a deliberate multiplication of effort that trades efficiency for survivability. In every case, the pattern is the same: you cannot change the outer game, but you can construct a local process with its own rules, its own winning conditions, and its own constraints that make useful work possible *despite* the entropy.
+
+The adversarial committee — the technique that became central to Cyberneutics — is one such game. But the principle is general. Any constructed system of constraints that creates a local pocket of rigor against the pull toward the generic qualifies. What follows is how we discovered the most powerful instance we've found so far.
 
 ## Rediscovering the Committee
 

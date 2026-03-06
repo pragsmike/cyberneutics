@@ -64,7 +64,13 @@ This creates a dilemma. You need to be skeptical of AI advice, but hypervigilanc
 
 Hypervigilance makes you more vulnerable, not less, because while you're tearing apart your metaphorical apartment looking for bugs, you're not building relationships, developing your craft, taking care of yourself, or asking for help. You isolate, spiral, and eventually flee—not from an actual threat, but from the exhaustion of constant vigilance.
 
+### The Game Within the Game
+
 There's a game-theoretic view of this problem. You can't always win, because the outer game is rigged—but you can make a game within the game where you win most of the time.
+
+The principle is general: construct a local process with its own rules, its own constraints, its own winning conditions — a pocket of deliberate order against the entropic pull toward the generic and the failed. A cell membrane does this against thermodynamic dissolution. A legal system does it against the chaos of uncoordinated self-interest. An adversarial committee does it against the plausibility wall of a single-query LLM interaction. The specific mechanism varies; the pattern — self-organization against entropy — is always the same.
+
+What follows is one such mechanism: a committee of five characters, each with a defined role and a specific winning condition. It is the instantiation of the game-within-a-game that became central to Cyberneutics — but it is not the only one. The [Tilt Sound Collective](./tilt-sound-collective-story.md) story dramatizes several others (deposits and revision limits, knowledge compartmentalization, diversified advice sources, small experiments before commitment).
 
 ---
 

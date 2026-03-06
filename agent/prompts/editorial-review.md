@@ -61,6 +61,7 @@ For each dimension below, flag specific problems with file name, line numbers or
 
 - **First-use definitions**: Is every key concept defined clearly the first time it appears? Flag concepts used before definition.
 - **Consistent terminology**: Is the same concept called the same thing throughout? Flag synonyms used without acknowledgment.
+- **Conceptual hierarchy**: Distinguish abstract principles from their concrete instantiations. A general framework and a specific technique that implements it are *not* synonyms — they are different levels of abstraction. Flag places where the text conflates them, and flag places where they are correctly distinguished. (Example: "game within a game" is a general principle of self-organization against entropy; the adversarial committee is one instantiation of it. Treating them as the same concept would be an error.)
 - **Logical progression**: Within each essay and across the numbered sequence, does each idea build on what came before? Flag forward dependencies.
 - **Cross-references**: Are forward and backward references accurate and helpful? Flag broken links, missing cross-references, or circular dependencies.
 
@@ -80,7 +81,7 @@ For each reading path, walk the recommended sequence and flag:
 ### 5. Writing Quality
 
 - **Clarity**: Convoluted sentences, ambiguous pronouns, paragraphs that could be tightened.
-- **Metaphor hygiene**: Extended metaphors (pachinko, immune system, charts on a manifold, game within a game) — flag mixed or overextended use.
+- **Metaphor hygiene**: Extended metaphors (pachinko, immune system, charts on a manifold) — flag mixed or overextended use. Note: "game within a game" is not a metaphor but a theoretical framework (self-organization against entropy); assess whether it is clearly distinguished from its primary instantiation (the adversarial committee).
 - **Evidence and attribution**: Claims without citation or argument; places where a citation would help.
 - **Length**: Padded sections that could be tightened without losing substance.
 

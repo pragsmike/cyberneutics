@@ -383,9 +383,9 @@ They look at each other, then laugh.
 
 The outer game—the one Sal was playing—was rigged from the start. Client demands, unfavorable payment terms, scope creep, the relentless pressure to always say yes. Those are the rules of the industry, the water everyone swims in. You can't change them.
 
-But you can build a game within the game.
+But you can build a game within the game — a constructed process with its own rules, its own constraints, its own winning conditions that make useful work possible despite the entropy. The adversarial committee is one such game. But it's not the only one. Deposits and revision limits are a game within the game. Knowledge compartmentalization is a game within the game. Diversified advice sources, small experiments before commitment, retrospectives that learn from near-misses — each is a local pocket of imposed order against dissolution.
 
-That's what the five members of Tilt Sound Collective figured out, partly through hard-won experience and partly through their willingness to use every tool at their disposal—including AI—as a collaborative stress-test rather than an oracle.
+That's what the five members of Tilt Sound Collective figured out, partly through hard-won experience and partly through their willingness to use every tool at their disposal—including AI—as a collaborative stress-test rather than an oracle. They didn't build *one* game within the game. They built *several*, layered and reinforcing.
 
 ### The Distributed Defense
 
