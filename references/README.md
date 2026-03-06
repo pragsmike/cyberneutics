@@ -125,3 +125,49 @@ Sources are organized by theoretical tradition. For a reading-path view (which s
 **StrongDM.** Attractor. https://github.com/strongdm/attractor. — NL-spec-driven software factory implementation; reference implementation for agentic coding patterns. Referenced in: [references/README.md](./README.md).
 
 **Rasheed, Haris, et al.** "Agentsway: Software Development Methodology for AI Agents-based Teams." arXiv:2510.23664 (2025). — Proposes a structured methodology for AI-agent-based software development teams; relevant to the formalization of Cyberneutics workflows. Referenced in: [references/README.md](./README.md).
+
+---
+
+## Multi-Agent Deliberation & Metacognition
+
+The landscape survey [LLM-deliberation-prior-art--metacognition.md](LLM-deliberation-prior-art--metacognition.md) covers the full field as of March 2026. Key works are listed below; the survey provides the complete reference list with 55 citations.
+
+### Foundational Multi-Agent Debate
+
+**Irving, Geoffrey, et al.** "AI Safety via Debate." arXiv:1805.00899 (2018). — Proposed adversarial debate between AI systems as an alignment mechanism; the origin point for the field. Extended with complexity-theoretic formalization (arXiv:2311.14125). Referenced in: [LLM-deliberation-prior-art--metacognition.md](LLM-deliberation-prior-art--metacognition.md).
+
+**Liang, Tian, et al.** "Encouraging Divergent Thinking in Large Language Models through Multi-Agent Debate." ACL/EMNLP (2024). — The MAD framework; introduced "tit-for-tat" debate to combat degeneration-of-thought in self-reflection. Open-source implementation on GitHub. Referenced in: [LLM-deliberation-prior-art--metacognition.md](LLM-deliberation-prior-art--metacognition.md).
+
+**Du, Yilun, et al.** "Improving Factuality and Reasoning in Language Models through Multiagent Debate." (2023). — Independent demonstration that multi-round debate enables LLMs to correct each other's errors. Referenced in: [LLM-deliberation-prior-art--metacognition.md](LLM-deliberation-prior-art--metacognition.md).
+
+### Confidence and Calibration in Debate
+
+**Chen, Justin, Swarnadeep Saha, and Mohit Bansal.** "ReConcile: Round-Table Conference Improves Reasoning via Consensus Among Diverse LLMs." ACL (2024). — Heterogeneous LLMs (ChatGPT, Bard, Claude2) with confidence-weighted voting; 7.7% improvement over single-agent baselines. The most established approach to intra-debate confidence. Referenced in: [LLM-deliberation-prior-art--metacognition.md](LLM-deliberation-prior-art--metacognition.md).
+
+**Lin & Hooi.** "ConfMAD: Enhancing Multi-Agent Debate System Performance via Confidence." (Sep 2025). — Integrates explicit numeric confidence expression throughout all debate phases, not just at resolution. The most direct academic treatment of intra-debate confidence, though without cross-run tracking. Referenced in: [LLM-deliberation-prior-art--metacognition.md](LLM-deliberation-prior-art--metacognition.md).
+
+**Kadavath, Saurav, et al.** "Language Models (Mostly) Know What They Know." (2022). — Foundational calibration result: larger models are well-calibrated on multiple choice and true/false when prompted correctly. Cited extensively in the calibration literature. Referenced in: [LLM-deliberation-prior-art--metacognition.md](LLM-deliberation-prior-art--metacognition.md).
+
+**PNAS Nexus (Apr 2025).** "The key to calibrating trust and optimal decision making with AI." — Proposes four levels of metacognitive assessment: type 1 decisions, type 2 confidence, type 3 long-run correspondence tracking (analogous to Cyberneutics' register), type 4 introspection. Referenced in: [LLM-deliberation-prior-art--metacognition.md](LLM-deliberation-prior-art--metacognition.md).
+
+**Peters, Charles & Maniscalco.** "Optimal metacognitive decision strategies in Signal Detection Theory." *Journal of Vision* (2024). — Definitive treatment of optimal type 2 (confidence) criteria under SDT. No published work was found applying meta-d'/d' to LLM outputs — a research gap Cyberneutics could pioneer. Referenced in: [LLM-deliberation-prior-art--metacognition.md](LLM-deliberation-prior-art--metacognition.md).
+
+### Cross-Run Tracking and Persistent Metacognition
+
+**DS-MCM (Deep Search with Meta-Cognitive Monitoring).** arXiv (Jan 2026). — Persistent metacognitive experience memory from historical agent trajectories, organized into success and failure pools; retrieves relevant experiences to condition real-time decisions. The closest academic parallel to Cyberneutics' calibration register, though targeting deep search rather than committee deliberation. Referenced in: [LLM-deliberation-prior-art--metacognition.md](LLM-deliberation-prior-art--metacognition.md).
+
+**DRF (Dynamic Reputation Filtering).** arXiv (Sep 2025). — Tracks agent reputation dynamically across tasks using a rating network; UCB-based selection prioritizes high-reputation agents. Closest system to cross-run persona weighting, though it tracks task accuracy rather than confidence calibration. Referenced in: [LLM-deliberation-prior-art--metacognition.md](LLM-deliberation-prior-art--metacognition.md).
+
+**Empirica.** Community-built epistemic tracking system for Claude Code. — Records knowledge states, uncertainties, and insights across sessions anchored to git commits; implements overconfidence detection across 500+ sessions with bias correction. The most direct deployed parallel to Cyberneutics' calibration register. Referenced in: [LLM-deliberation-prior-art--metacognition.md](LLM-deliberation-prior-art--metacognition.md).
+
+### Failure Modes and Controls
+
+**Tang, Kexun, et al.** "How Sycophancy Shapes Multi-Agent Debate." (Sep 2025). — Inter-agent sycophancy amplifies disagreement collapse; can yield lower accuracy than single-agent baselines. Recommends 2–3 round cap, diminishing-returns detection, and heterogeneous agents. Referenced in: [LLM-deliberation-prior-art--metacognition.md](LLM-deliberation-prior-art--metacognition.md).
+
+**AgentAuditor.** (Feb 2026). — Replaces majority voting with evidence-based auditing over a Reasoning Tree; Anti-Consensus Preference Optimization recovers 65–82% of minority-correct cases. Referenced in: [LLM-deliberation-prior-art--metacognition.md](LLM-deliberation-prior-art--metacognition.md).
+
+### Packaged Implementations
+
+**Clear Thought MCP Server** (waldzellai). — MCP server with structured argumentation, collaborative reasoning, and metacognitive monitoring (knowledge boundary assessment, confidence calibration). The most feature-rich packaged deliberation toolset found. Referenced in: [LLM-deliberation-prior-art--metacognition.md](LLM-deliberation-prior-art--metacognition.md).
+
+**MARS (Metacognitive Agent with Reflective Self-improvement).** arXiv (Jan 2026). — Triple-pathway reflection mechanism extracting normative principles for error avoidance, procedural strategies for success replication, and unified synthesis. Referenced in: [LLM-deliberation-prior-art--metacognition.md](LLM-deliberation-prior-art--metacognition.md).
