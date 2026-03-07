@@ -22,7 +22,9 @@
       "Bash(py -3 -c \":*)",
       "Bash(py -3 scripts/render_mermaid.py .claude/skills/string-diagram/ai-study-flow-v3.mermaid -o palgebra/assets/ai-study-flow.svg)",
       "Bash(py -3 scripts/render_mermaid.py .claude/skills/string-diagram/committee-flow.mermaid -o palgebra/assets/committee-flow.svg)",
-      "Bash(py -3 scripts/render_mermaid.py .claude/skills/string-diagram/deliberated-choice-flow.mermaid -o palgebra/assets/deliberated-choice-flow.svg)"
+      "Bash(py -3 scripts/render_mermaid.py .claude/skills/string-diagram/deliberated-choice-flow.mermaid -o palgebra/assets/deliberated-choice-flow.svg)",
+      "Bash(test -f \"C:\\\\Users\\\\prags\\\\Documents\\\\sense\\\\cyberneutics\\\\agent\\\\archive\\\\investigation-report.md\")",
+      "Bash(test -d \"C:\\\\Users\\\\prags\\\\Documents\\\\sense\\\\cyberneutics\\\\agent\\\\comparisons\")"
     ]
   }
 }

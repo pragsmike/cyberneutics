@@ -45,4 +45,4 @@ In-depth review of the repo and a concrete run/test guide: what is runnable, how
 
 The methodology claims to be self-improving: applying Cyberneutics to itself should produce measurable improvements. This directory is where that claim gets tested and tracked.
 
-Future `/committee` deliberations about project direction should read this directory and `meta/project-state.md` first.
+Future `/committee` deliberations about project direction should read this directory and [project-state.md](project-state.md) first.

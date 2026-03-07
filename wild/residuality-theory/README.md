@@ -29,8 +29,8 @@ O'Reilly explicitly roots this in Deleuze: the walk is an instance of process ph
 O'Reilly's philosophical sources overlap substantially with cyberneutics's:
 
 - He explicitly cites Deleuze's process philosophy, difference over essence, and the primacy of change
-- His walk-as-knowledge-building directly parallels cyberneutics's "repetition produces difference" insight from `essays/06-deleuze-difference-repetition.md`
-- His positivism critique (architects who model reality until nothing of reality remains) echoes the second-order cybernetics material in `essays/04-cybernetics-and-observation.md`
+- His walk-as-knowledge-building directly parallels cyberneutics's "repetition produces difference" insight from [essays/06-deleuze-difference-repetition.md](../../essays/06-deleuze-difference-repetition.md)
+- His positivism critique (architects who model reality until nothing of reality remains) echoes the second-order cybernetics material in [essays/04-cybernetics-and-observation.md](../../essays/04-cybernetics-and-observation.md)
 
 The committee deliberation process can be read as an architectural walk through a problem space: each character follows their propensity-driven line of flight through the problem; the deliberation traces the topology of the decision space; the 02-deliberation.md transcript is what the walk leaves behind.
 
@@ -42,7 +42,7 @@ A potential contributor raised the question: are residues akin to eigenforms?
 
 Both are about what *survives transformation* — what is invariant under a process. But:
 
-- **Eigenform** (von Foerster): a fixed point of a *recursive self-referential* process — x such that F(x) = x. The stability emerges from repeated self-application; the eigenform is what the process converges *to* when run on its own outputs. See `essays/04-cybernetics-and-observation.md`.
+- **Eigenform** (von Foerster): a fixed point of a *recursive self-referential* process — x such that F(x) = x. The stability emerges from repeated self-application; the eigenform is what the process converges *to* when run on its own outputs. See [essays/04-cybernetics-and-observation.md](../../essays/04-cybernetics-and-observation.md).
 - **Residue** (O'Reilly): what persists after *external* transformation — what survives disruption, refactoring, unknown stressors. Found by walking; what you discover when you return.
 
 In the committee context this distinction is useful:
@@ -94,7 +94,7 @@ A deliberation record (00-04 files) is both a palgebra artifact chain *and* the 
 - **Residues vs. eigenforms**: A single deliberation produces a residue; repeated runs hunt eigenforms. The remediation loop within a run hunts local eigenforms; the Probe operation hunts global ones. See [Decisions Under Uncertainty](../../essays/10-decisions-under-uncertainty.md) for the philosophical bridge.
 - **Criticality → survival constraint**: The appropriate optimization target for wicked problems shifts from maximizing expected value to satisficing subject to a survival constraint. This is O'Reilly's "criticality over correctness" made operational.
 
-This directory was created because an external contributor (second fork, February 2026) noted the Deleuzian walks → Architectural walks connection and because the eigenform question opened a productive theoretical seam. See `meta/uptake-and-usage.md` for context.
+This directory was created because an external contributor (second fork, February 2026) noted the Deleuzian walks → Architectural walks connection and because the eigenform question opened a productive theoretical seam. See [meta/uptake-and-usage.md](../../meta/uptake-and-usage.md) for context.
 
 ### Remaining directions
 - Whether the 2-round remediation cap makes sense in eigenform terms — are we stopping at local fixed points? (Documented as open question in the palgebra treatment.)

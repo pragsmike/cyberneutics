@@ -13,7 +13,7 @@ charter:
     generated exploring different futures. The committee deliberates across
     these scenarios to identify robust actions, scenario-dependent actions,
     and a monitoring plan.
-  scenario_context: "agent/scenarios/regulatory-capture-coercion/"
+  scenario_context: "examples/scenarios/regulatory-capture-coercion/"
   scenarios_summary:
     - id: 1
       title: "The Slow Anneal"

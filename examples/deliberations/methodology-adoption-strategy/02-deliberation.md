@@ -2,7 +2,7 @@
 
 **Topic**: Given four adoption scenarios, what strategic direction should cyberneutics pursue?
 **Protocol**: Robert's Rules (modified for adversarial committee)
-**Scenario context**: `agent/scenarios/methodology-adoption-strategy/`
+**Scenario context**: [examples/scenarios/methodology-adoption-strategy/](../../scenarios/methodology-adoption-strategy/)
 
 ---
 

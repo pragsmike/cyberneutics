@@ -6,7 +6,7 @@
 
 **Rationale**: Strategic direction is a full-roster problem. Political dynamics (Maya: who benefits from each strategy?), values (Frankie: does breadth betray the project's intellectual mission?), history (Joe: what happened to similar projects?), evidence (Vic: what data supports each scenario's probability?), and systems (Tammy: what feedback loops connect the strategy choice to the outcome?) all matter.
 
-**Scenario context**: This deliberation operates in scenario-aware mode, reading from `agent/scenarios/methodology-adoption-strategy/`. The committee deliberates across four scenarios spanning the depth/breadth × growth/stagnation space.
+**Scenario context**: This deliberation operates in scenario-aware mode, reading from [examples/scenarios/methodology-adoption-strategy/](../../scenarios/methodology-adoption-strategy/). The committee deliberates across four scenarios spanning the depth/breadth × growth/stagnation space.
 
 **Composition notes**:
 - **Maya × Frankie**: Maya will be suspicious of the "Condorcet Bridge" scenario as too convenient — a story the project tells itself about being discovered for its brilliance. Frankie will defend the intellectual mission against breadth strategies that dilute it. This tension (cynicism about growth narratives vs. idealism about quality) will pressure-test the recommendation.

@@ -26,7 +26,7 @@ The general document-evaluation framework:
 
 *(Application of the Pask mesh fitting framework to LLM alignment.)*
 
-Application of the mesh-comparison framework to LLM alignment (lives under `applications/narrative-immune-systems/`):
+Application of the mesh-comparison framework to LLM alignment (lives under [applications/narrative-immune-systems/](../../applications/narrative-immune-systems/)):
 
 - Glenda vs Crock; adversarial alignment as selective mesh-rewiring; the **seam** (detectable boundary between rewired and inherited mesh).
 - **HIV strategy** — attack the admission process, not individual documents.

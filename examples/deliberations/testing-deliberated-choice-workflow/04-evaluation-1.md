@@ -3,8 +3,8 @@ test_assessment:
   date: 2026-02-21
   pipeline_tested: "deliberated-choice-workflow (fan→funnel)"
   test_problem: "Cyberneutics methodology adoption strategy over 12 months"
-  scenario_directory: "agent/scenarios/methodology-adoption-strategy/"
-  deliberation_directory: "agent/deliberations/methodology-adoption-strategy/"
+  scenario_directory: "examples/scenarios/methodology-adoption-strategy/"
+  deliberation_directory: "examples/deliberations/methodology-adoption-strategy/"
   overall_result: "PASS with DEVIATIONS"
   tier_1_structural:
     result: PASS
@@ -24,7 +24,7 @@ test_assessment:
 
 # Post-Run Assessment: Deliberated Choice Workflow Test
 
-This assessment evaluates the first live run of the deliberated-choice workflow against the three-tier test plan defined in `agent/deliberations/testing-deliberated-choice-workflow/03-resolution.md`.
+This assessment evaluates the first live run of the deliberated-choice workflow against the three-tier test plan defined in [03-resolution.md](03-resolution.md).
 
 ---
 
@@ -34,10 +34,10 @@ All items PASS.
 
 | Check | Criterion | Finding | Status |
 |-------|-----------|---------|--------|
-| Scenarios directory | `agent/scenarios/methodology-adoption-strategy/` exists with 5 files | Directory exists: 00-situation.md, 01-roster.md, 01-parameters.md, 02-scenarios.md, 03-assessment.md | **PASS** |
+| Scenarios directory | `examples/scenarios/methodology-adoption-strategy/` exists with 5 files | Directory exists: 00-situation.md, 01-roster.md, 01-parameters.md, 02-scenarios.md, 03-assessment.md | **PASS** |
 | YAML schemas | Front matter matches SKILL.md spec | All five files have YAML front matter with schema fields per spec (situation, roster, parameters, scenario_set, assessment) | **PASS** |
 | Scenario count | 4 scenarios in 02-scenarios.md | 4 scenarios present (Scholarly Archive, Accidental Standard, Condorcet Bridge, Attention Drought) — one per core character | **PASS** |
-| Deliberation directory | `agent/deliberations/methodology-adoption-strategy/` exists with standard files | Directory exists: 00-charter.md, 01-roster.md, 01-convening.md, 02-deliberation.md, 03-resolution.md | **PASS** |
+| Deliberation directory | `examples/deliberations/methodology-adoption-strategy/` exists with standard files | Directory exists: 00-charter.md, 01-roster.md, 01-convening.md, 02-deliberation.md, 03-resolution.md | **PASS** |
 | Charter bridge — fields | 00-charter.md contains `scenario_context` and `scenarios_summary` | Both fields present in YAML front matter | **PASS** |
 | Summary fidelity | `scenarios_summary` matches scenario set | 4 entries, narrators match (Continuity, Disruption, Opportunity, Constraint), titles match, key assumptions are substantive summaries of the scenarios' assumption sets | **PASS** |
 

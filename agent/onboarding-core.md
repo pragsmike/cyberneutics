@@ -16,9 +16,8 @@ For general orientation, read `README.md`.
 
 1. Read the most recent `agent/handoff-[YYYY-MM-DD]*.md`.
 2. Read `meta/project-state.md` for current architecture truths and open decisions.
-3. If the task touches compatibility migration or documentation cleanup, read `agent/repo-compatibility-remediation-plan-2026-03-07.md`.
-4. If `/committee`, `/scenarios`, or `/probe` is relevant, check the resolved situations root for prior runs on related topics before starting a new one.
-5. Do not search `agent/archive/` during onboarding. It is historical only. Use it only when the task explicitly calls for provenance or historical reconstruction.
+3. If `/committee`, `/scenarios`, or `/probe` is relevant, check the resolved situations root for prior runs on related topics before starting a new one.
+4. Do not search `agent/archive/` during onboarding. It is historical only. Use it only when the task explicitly calls for provenance or historical reconstruction.
 
 ## Repository map
 

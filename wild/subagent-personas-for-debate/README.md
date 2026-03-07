@@ -17,7 +17,7 @@ Unlike earlier constraints where subagents could only talk back to a hub, Agent 
 ---
 
 ## 1. Existing Research Program: API-Based Multi-Model Committees
-The foundation of the current research on multi-agent debate exists in `research-programs/multi-model-committee.md` and `research-programs/multi-model-committee/reference.md`. 
+The foundation of the current research on multi-agent debate exists in [research-programs/multi-model-committee.md](../../research-programs/multi-model-committee.md) and [research-programs/multi-model-committee/reference.md](../../research-programs/multi-model-committee/reference.md). 
 
 **The Premise:**
 The research correctly identifies the "Single-Model Monoculture Problem." Asking one model (like Claude) to simulate 5 hostile characters (Maya, Frankie, Joe, Vic, Tammy) forces the model to overcome its own training biases (like safety filters or a tendency to hedge). 
@@ -28,7 +28,7 @@ To date, the documented approach to solving this has been almost **exclusively A
 *   **The Problem:** This is fully programmatic and decoupled from AI coding agents (like Cowork, Antigravity, or Cline). It relies on fixed API keys and deterministic `for` loops, rather than autonomous agents deciding when to speak.
 
 ## 2. The Cowork Plugin Attempt: Forced Hub-and-Spoke
-The recent attempt to move this out of Python scripts and into an agent ecosystem lives in the `cowork-plugin/` directory built on 2026-02-24.
+The recent attempt to move this out of Python scripts and into an agent ecosystem lives in the [cowork-plugin/](../../cowork-plugin/) directory built on 2026-02-24.
 
 **The Strategy:**
 The plugin attempted to instantiate Maya, Frankie, Joe, Vic, and Tammy as distinct Claude Code "subagents" (`agents/maya.md`, etc.).

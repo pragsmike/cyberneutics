@@ -11,9 +11,7 @@ EXCLUDED_PREFIXES = (
     'agent/diary/',
     'examples/',
 )
-EXCLUDED_FILES = {
-    'agent/repo-compatibility-remediation-plan-2026-03-07.md',
-}
+EXCLUDED_FILES: set[str] = set()
 
 COMMAND_NAMES = (
     'committee',
@@ -31,6 +29,7 @@ INDEX_FILES = (
     'meta/README.md',
     'research-programs/README.md',
     'examples/README.md',
+    'agent/onboarding-core.md',
 )
 
 CONTRIBUTOR_GUIDE = 'meta/contributor-guide.md'
@@ -39,6 +38,7 @@ FORBIDDEN_PATTERNS = {
     'removed gap-analysis path': 'agent/gap_analysis.md',
     'repo-local scenario runtime path': 'agent/scenarios/',
     'repo-local deliberation runtime path': 'agent/deliberations/',
+    'retired comparisons redirect stub': 'agent/comparisons/',
     'duplicate Codex skill tree path': '.Codex/skills',
     'stale transcript contribution path': 'Submit transcripts` in `artifacts/examples/',
 }

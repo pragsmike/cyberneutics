@@ -4,7 +4,7 @@
 
 **Protocol:** Robert's Rules (adapted). Scenario-aware mode.
 
-**Scenario context:** `agent/scenarios/government-blacklisting/`
+**Scenario context:** [examples/scenarios/government-blacklisting/](../../scenarios/government-blacklisting/)
 
 ---
 

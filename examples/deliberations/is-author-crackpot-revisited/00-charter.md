@@ -21,7 +21,7 @@ charter:
     - Decision monad structure with iteration for mapping decision landscapes
     - Application domain: narrative immune systems
 
-    Prior deliberation record: agent/deliberations/is-author-crackpot/
+    Prior deliberation record: examples/deliberations/is-author-crackpot/
     (preserved for comparison; this is a fresh assessment, not an extension)
   success_criteria:
     - "Fresh verdict on crackpot vs. sound, calibrated to the current repo state"

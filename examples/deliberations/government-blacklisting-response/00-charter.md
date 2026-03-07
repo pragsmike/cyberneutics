@@ -13,7 +13,7 @@ charter:
     deliberates to identify robust actions, scenario-dependent strategies,
     a monitoring plan, and an honest assessment of the partial-compliance
     counterfactual.
-  scenario_context: "agent/scenarios/government-blacklisting/"
+  scenario_context: "examples/scenarios/government-blacklisting/"
   scenarios_summary:
     - id: 1
       title: "The Slow Freeze"

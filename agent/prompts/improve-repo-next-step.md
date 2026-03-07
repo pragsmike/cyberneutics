@@ -28,5 +28,5 @@ Bias toward improvements that strengthen one of these areas:
 - documentation consistency after the compatibility sweep
 - structural linting or guardrails
 - onboarding clarity
-- unresolved stale or redirect surfaces such as `agent/comparisons/README.md`
+- unresolved stale or redirect surfaces
 - evidence-building or methodology validation support where the repo is currently thin

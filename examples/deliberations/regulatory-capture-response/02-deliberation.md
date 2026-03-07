@@ -4,7 +4,7 @@
 
 **Protocol:** Robert's Rules (adapted). Scenario-aware mode.
 
-**Scenario context:** `agent/scenarios/regulatory-capture-coercion/`
+**Scenario context:** [examples/scenarios/regulatory-capture-coercion/](../../scenarios/regulatory-capture-coercion/)
 
 ---
 
