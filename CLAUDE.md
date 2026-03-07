@@ -7,8 +7,9 @@ Cyberneutics is a methodology for working with LLMs as collaborative sense-makin
 ## Before you do anything: session start
 
 1. **Read the most recent handoff**: `agent/handoff-[YYYY-MM-DD].md` (pick the largest date). It captures current context, what was just worked on, open questions, and next steps. Skipping this loses continuity.
-2. **Check `agent/gap_analysis.md`** for known gaps and planned documents.
+2. **Read `agent/repo-compatibility-remediation-plan-2026-03-07.md`** for the current cleanup agenda and known documentation/runtime inconsistencies.
 3. **If a `/committee` deliberation is relevant**, look in the situations root (see `.claude/cyberneutics-config.yaml` or default `~/situations/`) for records of prior runs on related topics before starting a new one.
+4. **Do not search `agent/archive/` during onboarding.** It is historical only. Use it only when the task explicitly calls for provenance or historical reconstruction.
 
 ## Repository map
 
@@ -30,8 +31,7 @@ Cyberneutics is a methodology for working with LLMs as collaborative sense-makin
 - `scenario-roster.md` — scenario character roster (divergent exploration lenses); read by the scenarios skill. Distinct from committee roster — different purpose, different characters.
 - `comparisons/<topic-slug>/` — comparison runs (deliberative vs. CJT-style on the same question); see `agent/comparisons/README.md` and `artifacts/comparison-protocol-deliberative-vs-cjt.md`
 - `diary/` — exploratory writing between sessions; read when you want recent thinking that hasn't made it into a document yet. **Write to diary** for speculative or exploratory ideas mid-session that don't yet belong in a handoff; **write to handoff** for conclusions, decisions, and next steps.
-- `gap_analysis.md` — known gaps and planned documents
-- `archive/` — previous handoffs, completed plans; historical reference
+- `archive/` — previous handoffs, completed plans; **historical only — do not use for onboarding or normal repo search unless asked**
 - `deliberations/README.md` — schema documentation for deliberation records (reference only; deliberation outputs now go to situation directories)
 
 ### Situations (skill output)
