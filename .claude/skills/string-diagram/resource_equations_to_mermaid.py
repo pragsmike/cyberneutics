@@ -11,6 +11,8 @@ a Mermaid flowchart in string-diagram style:
   - Waste/discard outputs (red sinks) are rejected byproducts
   - Feedback loops connect outputs back to inputs
   - Spider annotations render fan/funnel topology with distinct shapes
+  - Enrichment morphisms (metadata-only changes) render as outlined boxes
+  - Gate/collapse operations (coproduct + discard) render as purple nodes
 
 Input format (resource equations file):
   Lines of the form:
@@ -21,6 +23,7 @@ Input format (resource equations file):
     A → B      [Op] {feedback: B→X}  (B feeds back to input X)
     A → B + C  [Op] {spider: fan}    (one-to-many spider: trapezoid, blue)
     A × B → C  [Op] {spider: funnel} (many-to-one spider: inv. trapezoid, green)
+    A × R → A  [Op] {enriches: ns}   (enrichment: payload unchanged, metadata updated)
 
   - Type names: hyphenated lowercase identifiers (e.g., experience-reports)
   - Cross product: × (unicode) or * (ascii fallback)
@@ -59,6 +62,7 @@ class Equation:
     discard: set[str] = field(default_factory=set)      # waste/rejected outputs
     feedback: dict[str, str] = field(default_factory=dict)  # output→input feedback mapping
     spider: Optional[str] = None  # 'fan' (one-to-many) or 'funnel' (many-to-one)
+    enriches: Optional[str] = None  # namespace written by enrichment morphism
 
 
 # ---------------------------------------------------------------------------
@@ -89,17 +93,18 @@ def extract_types(expr: str) -> list[str]:
     return [p for p in parts if p]
 
 
-def parse_annotations(ann_str: str) -> tuple[set[str], set[str], dict[str, str], Optional[str]]:
-    """Parse {catalytic: X, Y; discard: Z; feedback: W→V; spider: fan|funnel}."""
+def parse_annotations(ann_str: str) -> tuple[set[str], set[str], dict[str, str], Optional[str], Optional[str]]:
+    """Parse {catalytic: X, Y; discard: Z; feedback: W→V; spider: fan|funnel; enriches: ns}."""
     catalytic = set()
     discard = set()
     feedback = {}
     spider = None
-    
+    enriches = None
+
     ann_str = ann_str.strip().strip('{}')
     if not ann_str:
-        return catalytic, discard, feedback, spider
-    
+        return catalytic, discard, feedback, spider, enriches
+
     for clause in ann_str.split(';'):
         clause = clause.strip()
         if not clause:
@@ -109,7 +114,7 @@ def parse_annotations(ann_str: str) -> tuple[set[str], set[str], dict[str, str],
         key, val = clause.split(':', 1)
         key = key.strip().lower()
         vals = [v.strip() for v in val.split(',')]
-        
+
         if key == 'catalytic':
             catalytic.update(vals)
         elif key == 'discard':
@@ -124,8 +129,10 @@ def parse_annotations(ann_str: str) -> tuple[set[str], set[str], dict[str, str],
             val_str = vals[0].lower() if vals else ''
             if val_str in ('fan', 'funnel'):
                 spider = val_str
-    
-    return catalytic, discard, feedback, spider
+        elif key == 'enriches':
+            enriches = vals[0] if vals else None
+
+    return catalytic, discard, feedback, spider, enriches
 
 
 def parse_equation(line: str, number: int) -> Optional[Equation]:
@@ -163,8 +170,8 @@ def parse_equation(line: str, number: int) -> Optional[Equation]:
     # Parse inputs
     inputs = extract_types(lhs)
     
-    catalytic, discard, feedback, spider = parse_annotations(ann_str)
-    
+    catalytic, discard, feedback, spider, enriches = parse_annotations(ann_str)
+
     return Equation(
         number=number,
         inputs=inputs,
@@ -174,6 +181,7 @@ def parse_equation(line: str, number: int) -> Optional[Equation]:
         discard=discard,
         feedback=feedback,
         spider=spider,
+        enriches=enriches,
     )
 
 
@@ -300,6 +308,11 @@ def generate_mermaid(equations: list[Equation], direction: str = 'LR') -> str:
         if eq.operation:
             for out in eq.outputs:
                 if out not in eq.discard:
+                    # For enrichment morphisms, don't overwrite the upstream producer
+                    # when the output type matches an input type (the artifact passes
+                    # through unchanged — the upstream producer still "owns" it).
+                    if eq.enriches and out in eq.inputs:
+                        continue
                     producer[out] = slugify(eq.operation)
     
     for eq in equations:
@@ -343,8 +356,8 @@ def generate_mermaid(equations: list[Equation], direction: str = 'LR') -> str:
     lines.append('    %% --- Styling ---')
     lines.append('')
     
-    # Operations: dark boxes; spiders get distinct colors
-    lines.append('    %% Operations: dark boxes (fan=blue divergent, funnel=green convergent)')
+    # Operations: dark boxes; spiders, enrichments, gates get distinct colors
+    lines.append('    %% Operations: dark boxes (fan=blue, funnel=green, enrichment=outlined, gate=purple)')
     for eq in equations:
         if eq.operation:
             slug = slugify(eq.operation)
@@ -352,6 +365,12 @@ def generate_mermaid(equations: list[Equation], direction: str = 'LR') -> str:
                 lines.append(f'    style {slug} fill:#1a3a5c,stroke:#0d47a1,color:#bbdefb,stroke-width:2px')
             elif eq.spider == 'funnel':
                 lines.append(f'    style {slug} fill:#1b5e20,stroke:#2e7d32,color:#c8e6c9,stroke-width:2px')
+            elif eq.enriches:
+                # Enrichment morphisms: outlined box (payload unchanged, metadata updated)
+                lines.append(f'    style {slug} fill:#e8eaf6,stroke:#3949ab,color:#1a237e,stroke-width:2px')
+            elif eq.discard and len(eq.outputs) >= 2:
+                # Gate / collapse operators: coproduct with discard (purple)
+                lines.append(f'    style {slug} fill:#4a148c,stroke:#6a1b9a,color:#e1bee7,stroke-width:2px')
             else:
                 lines.append(f'    style {slug} fill:#2d2d2d,stroke:#000,color:#fff,stroke-width:2px')
     lines.append('')

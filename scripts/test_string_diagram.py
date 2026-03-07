@@ -15,7 +15,13 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SCRIPT = REPO_ROOT / ".claude" / "skills" / "string-diagram" / "resource_equations_to_mermaid.py"
 EQUATION_DIR = REPO_ROOT / ".claude" / "skills" / "string-diagram"
-EQUATION_FILES = ["decision-monad-equations.txt", "ai-study-equations.txt", "lemon-pie-equations.txt"]
+EQUATION_FILES = [
+    "decision-monad-equations.txt",
+    "ai-study-equations.txt",
+    "lemon-pie-equations.txt",
+    "committee-equations.txt",
+    "deliberated-choice-equations.txt",
+]
 
 
 def main() -> int:

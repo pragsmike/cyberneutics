@@ -9,7 +9,11 @@
       "Bash(git log:*)",
       "Bash(gh pr view:*)",
       "Bash(find:*)",
-      "Bash(ls:*)"
+      "Bash(ls:*)",
+      "Bash(py -3 scripts/test_string_diagram.py)",
+      "Bash(py -3 .claude/skills/string-diagram/resource_equations_to_mermaid.py .claude/skills/string-diagram/committee-equations.txt -o .claude/skills/string-diagram/committee-flow.mermaid)",
+      "Bash(py -3 .claude/skills/string-diagram/resource_equations_to_mermaid.py .claude/skills/string-diagram/deliberated-choice-equations.txt -o .claude/skills/string-diagram/deliberated-choice-flow.mermaid)",
+      "Bash(py -3 scripts/lint_repo_docs.py)"
     ]
   }
 }
