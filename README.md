@@ -78,6 +78,8 @@ Or step by step:
 *   Browse the [Research Programs](research-programs/README.md) — active experiments ordered by impact on uncertainty, each with a contributing guide.
 *   Pick an item that matches your skills or interests; every program has a "Contributing" block describing what's needed.
 
+**Want to contribute to the repo itself?** See the [Contributor Guide](meta/contributor-guide.md) for a workflow-based entry point that preserves the existing reading paths.
+
 **Repository map**: For a structured overview of every directory and how the pieces fit together, see [agent/onboarding-core.md](agent/onboarding-core.md). The root `AGENTS.md` and `CLAUDE.md` files are thin tool-specific entry points into that canonical guide.
 
 ## Why does this matter?

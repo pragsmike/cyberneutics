@@ -33,11 +33,14 @@ INDEX_FILES = (
     'examples/README.md',
 )
 
+CONTRIBUTOR_GUIDE = 'meta/contributor-guide.md'
+
 FORBIDDEN_PATTERNS = {
     'removed gap-analysis path': 'agent/gap_analysis.md',
     'repo-local scenario runtime path': 'agent/scenarios/',
     'repo-local deliberation runtime path': 'agent/deliberations/',
     'duplicate Codex skill tree path': '.Codex/skills',
+    'stale transcript contribution path': 'Submit transcripts` in `artifacts/examples/',
 }
 
 LINK_RE = re.compile(r'\[[^\]]+\]\(([^)]+)\)')
@@ -119,6 +122,18 @@ def check_expected_index_entries() -> list[str]:
     artifacts_index = (REPO_ROOT / 'artifacts/README.md').read_text(encoding='utf-8')
     if 'category-theory-connection.md' not in artifacts_index:
         errors.append('artifacts/README.md must index artifacts/category-theory-connection.md')
+
+    if not (REPO_ROOT / CONTRIBUTOR_GUIDE).exists():
+        errors.append('meta/contributor-guide.md must exist')
+
+    root_readme = (REPO_ROOT / 'README.md').read_text(encoding='utf-8')
+    if 'Contributor Guide' not in root_readme:
+        errors.append('README.md must link to meta/contributor-guide.md for repo contributors')
+
+    contributing = (REPO_ROOT / 'CONTRIBUTING.md').read_text(encoding='utf-8')
+    if CONTRIBUTOR_GUIDE not in contributing:
+        errors.append('CONTRIBUTING.md must link to meta/contributor-guide.md')
+
     return errors
 
 

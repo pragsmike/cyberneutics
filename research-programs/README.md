@@ -17,7 +17,16 @@ This directory collects research plans, experiment designs, evidence-building pr
 | **Explore multi-model architectures** | [multi-model-committee.md](multi-model-committee.md) Phase 1 (baseline + model profiling) — requires LiteLLM + API keys for 2+ providers | 1–2 weeks |
 | **Understand the evaluation framework** | [evaluation-schemes.md](evaluation-schemes.md) Sections I–III — the theoretical foundation for all empirical work here | Reading (no code) |
 
-Each plan file has a **Contributing to this program** block at the top with skills needed, scope estimate, and a specific entry point.
+Each plan file should have a **Contributing to this program** block at the top with skills needed, scope estimate, and a specific entry point.
+
+### Before you pick a program
+
+Check these before you commit to a track:
+
+- Do you need a specific runtime or toolchain such as Claude Code Agent Teams, LiteLLM, or API keys?
+- Is the task a reading task, a one-session infrastructure task, or a multi-run experiment?
+- Does the plan already define a results location and status convention?
+- Are you improving an existing study or starting a new run within it?
 
 ---
 

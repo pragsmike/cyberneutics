@@ -1,43 +1,55 @@
 # Contributing to Cyberneutics
 
-Thank you for your interest in contributing to Cyberneutics. This methodology evolves through practice, and we welcome contributions that refine the theory or expand the toolkit.
+Thank you for your interest in contributing to Cyberneutics.
 
-## How to Contribute
+For a workflow-based entry point, see [meta/contributor-guide.md](meta/contributor-guide.md). This file is the compact contribution contract: what kinds of work fit here, where they go, and what to verify before opening a PR.
 
-### 1. New Artifacts & Techniques
-If you have developed a new technique (e.g., a specific committee structure, an evaluation protocol, or a forcing function):
-- **Create a new Markdown file** in `artifacts/`.
-- **Follow the structure** of existing artifacts:
-    - Problem Statement (What does this solve?)
-    - The Technique (How do you do it?)
-    - Example/Template
-    - When to use it
-- **Link it** in `artifacts/README.md`.
+## Contribution Types
 
-### 2. Essays & Theory
-Theoretical contributions are welcome but undergo stricter review to ensure consistency with the core axioms (narrative computing as primitive, narrative engineering as discipline, cybernetics, sense-making).
-- **Draft your essay** in `essays/` (you can start with a PR or draft).
-- **Ensure you reference** existing foundational texts.
-- **Tone**: Rigorous but accessible.
+Cyberneutics welcomes contributions in five main categories:
 
-### 3. Examples & Case Studies
-We always need more data points.
-- **Submit transcripts** in `artifacts/examples/`.
-- **Annotate** them with lessons learned.
-- **Ensure anonymity** if the content is sensitive (redact names/specifics).
+- **Techniques and protocols** in `artifacts/`
+- **Essays and theoretical clarification** in `essays/`
+- **Research and validation work** in `research-programs/`
+- **Checked-in examples and historical records** in `examples/`
+- **Repo structure, navigation, and reflective docs** in root docs or `meta/`
 
-## Style Guide
+## Placement Rules
 
-- **Markdown**: Use standard GitHub Flavored Markdown.
-- **Links**: Use relative links (`./file.md` or `../dir/file.md`).
-- **Diagrams**: Mermaid.js is preferred for diagrams.
+- Live committee, scenario, review, and probe runs belong in an external situation directory, not in this repo.
+- Checked-in scenario and deliberation records belong in `examples/` when they are being preserved as examples or historical references.
+- Prose walkthroughs and worked-example writeups belong in `artifacts/examples/`.
+- Agent continuity material belongs in `agent/`.
+- Canonical onboarding and current-state rules live in `agent/onboarding-core.md` and `meta/project-state.md`.
 
-## Pull Request Process
+## Minimum Standard
 
-1. Fork the repo and create your branch from `main`.
-2. If you've added code/artifacts, verify they render correctly.
-3. Ensure your contribution is added to the relevant `README.md` (root or subdirectory).
-4. Issue that PR!
+Every contribution should:
+
+- solve a clear problem or improve a real part of the user experience
+- land in the correct directory for its purpose
+- maintain the repo's existing audience paths for Practitioners, Theorists, Skeptics, Formalists, and Research collaborators
+- keep claims proportionate to evidence
+- use working relative links
+
+## Update the Relevant Index
+
+If you add or substantially change a document that users should discover, update the relevant index or README.
+
+Typical examples:
+- `artifacts/README.md`
+- `essays/README.md`
+- `research-programs/README.md`
+- `meta/README.md`
+- root `README.md`
+
+## Validate Before Opening a PR
+
+1. Run `py -3 scripts/lint_repo_docs.py`.
+2. If your change touches the string-diagram tool or related formalism surfaces, run `py -3 scripts/test_string_diagram.py`.
+3. Re-read the surrounding README or index so your change still fits the local navigation and tone.
+4. Confirm that you did not reintroduce repo-local runtime output instructions.
 
 ## License
+
 By contributing, you agree that your contributions will be licensed under the project's MIT License (for code/artifacts) and CC BY-SA 4.0 (for essays/text), as defined in the root README.

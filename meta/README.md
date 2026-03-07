@@ -17,6 +17,10 @@ This directory contains documentation *about* the methodology's evolution, adopt
 
 Canonical current-state doc for repo architecture, compatibility truths, open decisions, and any remaining documentation sweep work.
 
+### [contributor-guide.md](contributor-guide.md)
+
+Workflow-based contributor onboarding: what kinds of contributions fit here, where they go, how to preserve audience paths, and what to validate before opening a PR.
+
 ### [research-programs/](../research-programs/README.md)
 
 Research plans, experiment designs, evidence-building programs, and their results are collected in **research-programs/**. Start there if you want to contribute evidence or infrastructure work.
