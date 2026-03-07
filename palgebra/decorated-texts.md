@@ -601,6 +601,8 @@ preference-signals × use-cases × guides → candidates  [AssembleCandidates]
 are wires, catalytic inputs are dashed, waste is red. Mechanically
 derivable from the equations.
 
+![String diagram of the AI trade study pipeline](assets/ai-study-flow.svg)
+
 **Decorated artifact files** — the implementation. YAML front matter
 carries metadata; the body carries content. Pipeline operations read
 input files and produce output files, stamping the front matter as they

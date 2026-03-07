@@ -159,6 +159,8 @@ transcript → evaluation  [Evaluate]  {feedback: transcript→transcript}
 passed-evaluation × resolution → accepted-resolution + rejected-resolution  [HumanGate]  {discard: rejected-resolution}
 ```
 
+![String diagram of the committee deliberation pipeline](assets/committee-flow.svg)
+
 ## Reading the equations
 
 ### Nine operations, four structural kinds

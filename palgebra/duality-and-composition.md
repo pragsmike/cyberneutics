@@ -201,6 +201,8 @@ passed-evaluation × resolution → accepted-resolution + rejected-resolution  [
   {discard: rejected-resolution}
 ```
 
+![String diagram of the deliberated choice pipeline](assets/deliberated-choice-flow.svg)
+
 Note a key structural difference from the standalone committee pipeline: the Deliberate operation now receives `adequate-set` (the scenario collection) as input alongside the charter. The committee doesn't just debate a problem statement — it debates *across scenarios*, weighing which futures matter most and which actions are robust across them. The scenarios are consumed by the deliberation (their content is folded into the transcript) but the scenario roster and parameters that generated them are not.
 
 ### What the composition guarantees
