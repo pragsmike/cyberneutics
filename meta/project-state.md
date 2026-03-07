@@ -28,7 +28,6 @@ This document is the canonical current-state reference for repo structure, compa
 
 - Whether to record rubric scores as persistent metadata beyond the current review artifacts.
 - Whether the cowork plugin should ship under MIT, and whether its runtime behavior needs additional validation before stronger claims are made.
-- Whether the Pask mesh-fitting terminology should be renamed in the main docs.
 - When to rerun the editorial review after the compatibility sweep settles.
 
 ## Blocked or prerequisite-dependent items
