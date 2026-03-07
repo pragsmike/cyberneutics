@@ -1162,7 +1162,7 @@ If multi-model approach is adopted:
 - [ ] Cost monitoring in place (track per-deliberation spend)
 - [ ] Model personality profiles documented and updated as models change
 - [ ] Logging/audit trail system to track which model played which character (important for reproducibility)
-- [ ] Documentation of results from Phases 1–4 (published to `/agent/deliberations/` and summarized in handoff)
+- [ ] Documentation of results from Phases 1–4 (published to situation-directory deliberation records and summarized in handoff)
 
 ---
 

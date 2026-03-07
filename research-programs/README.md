@@ -42,7 +42,7 @@ These programs are ordered by how much they reduce the main open uncertainties: 
 | **High** | Does the methodology transfer across domains? When does roster composition matter? | [societies-of-thought-research-plan.md](societies-of-thought-research-plan.md) Items 4, 5, 9 (transfer learning, domain variants, worked examples) |
 | **Medium** | Why does it work? Can we formalize and cite it? | [societies-of-thought-research-plan.md](societies-of-thought-research-plan.md) Items 1–3, 6–7 (personality/balance/reconciliation, information-theory essay, social scaling theory) |
 | **Medium** | How do we implement it in a formal platform? | [societies-of-thought-research-plan.md](societies-of-thought-research-plan.md) Item 8 (MOOLLM integration) |
-| **Reference** | What docs and TODOs are still open? | [agent/gap_analysis.md](../agent/gap_analysis.md) — planned essays, artifacts, and follow-ups (not a single experiment; kept in agent/ for session continuity) |
+| **Reference** | What docs and TODOs are still open? | [meta/project-state.md](../meta/project-state.md) — current architecture truths, open decisions, and active repo-level follow-ups |
 
 ---
 
@@ -90,4 +90,4 @@ These plans have been executed or implemented. They live in [agent/archive/](../
 
 - [meta/README.md](../meta/README.md) — overview of the meta directory and link to this collection
 - [essays/societies-of-thought-synthesis.md](../essays/societies-of-thought-synthesis.md) — source analysis for the Societies of Thought research plan
-- [agent/gap_analysis.md](../agent/gap_analysis.md) — planned documents and TODOs (referenced by CLAUDE.md and when-methodology-fails)
+- [meta/project-state.md](../meta/project-state.md) — canonical current-state doc for repo architecture, open decisions, and documentation follow-ups

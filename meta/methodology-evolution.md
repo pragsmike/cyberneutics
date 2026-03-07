@@ -191,7 +191,7 @@ This document captures key insights about how the Cyberneutics methodology evolv
 ### Feb 16-18, 2026: Skills Implementation and Operational Maturity
 
 **Created**:
-- `/committee` skill — executable adversarial committee deliberation, writes structured output to `agent/deliberations/<topic-slug>/` (files 00-03)
+- `/committee` skill — executable adversarial committee deliberation, writes structured output to `<situation-dir>/deliberations/` (files 00-03)
 - `/review` skill — independent evaluation against five rubrics, writes to 04-evaluation-1.md (and 06/08 for feedback loop rounds)
 - `/string-diagram` skill — resource equations → Mermaid diagram converter (`resource_equations_to_mermaid.py`, no dependencies)
 - `/handoff` skill — session handoff generation with archival of previous handoff
@@ -294,7 +294,7 @@ See [meta/uptake-and-usage.md](uptake-and-usage.md) for details and analysis.
 - `palgebra/duality-and-composition.md` — formal treatment: fan as coproduct (one-to-many), funnel as product (many-to-one); resource equations for the fan operation; composed fan→funnel pipeline; monad structure with unit and associativity laws as quality criteria; Probe/Map operations for N-run variance analysis and decision-landscape mapping; new types (situation, scenario, scenario-set, variance-report, decision-landscape-map); two rosters (committee vs scenario); six open design questions
 - `essays/10-decisions-under-uncertainty.md` — Essay 10: fan/funnel as Bruner's binocular vision (narrative mode explore, paradigmatic mode evaluate); monad laws as testable quality; repetition as stability test; residues vs eigenforms; Sagan analogy (baloney detection kit for wicked problems); connection to residuality theory and architectural walks; practical prescription (explore, deliberate, repeat, trace, fix quality at source)
 
-**Updated**: README.md (decision-under-uncertainty value proposition near top, new doc links); essays/README.md (Essay 10 on Theorist and Formalist paths, Core Essays entry); palgebra/reference.md (spider patterns: fan, funnel, decision monad; cheat sheet); wild/residuality-theory/README.md (status → partially integrated); agent/gap_analysis.md (diary/residuality TODO marked theory-complete, remaining implementation phases noted).
+**Updated**: README.md (decision-under-uncertainty value proposition near top, new doc links); essays/README.md (Essay 10 on Theorist and Formalist paths, Core Essays entry); palgebra/reference.md (spider patterns: fan, funnel, decision monad; cheat sheet); wild/residuality-theory/README.md (status → partially integrated); the then-current state-tracking doc (diary/residuality TODO marked theory-complete, remaining implementation phases noted).
 
 **Residuality integration**: Architectural walks = N runs of fan→funnel; residue = single-run output; eigenform = what persists across runs. Remediation loop hunts local eigenforms; Probe hunts global. O'Reilly's "criticality over correctness" mapped to satisficing subject to survival constraint for wicked problems.
 

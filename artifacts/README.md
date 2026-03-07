@@ -87,8 +87,11 @@ Deep dive into each committee character:
 
 Including: when each is essential, failure modes, calibration notes, interaction patterns.
 
+### [Category Theory Connection](./category-theory-connection.md)
+Bridge essay connecting the methodology to category-theoretic intuitions: arrows over objects, isomorphism over equality, and why compositional structure matters more than object identity.
+
 ### Deliberation records (directory structure)
-When using the committee and review skills (`.claude/skills/committee/`, `.claude/skills/review/`), every committee run writes a deliberation record to `agent/deliberations/<topic-slug>/` with files `00-charter.md`, `01-roster.md`, `01-convening.md`, `02-deliberation.md`, and `03-resolution.md`. Use `/review agent/deliberations/<topic-slug>` to evaluate the transcript and write to `04-evaluation-1.md` (and, when the feedback loop runs, `06-evaluation-2.md`, etc.). **Evaluation feedback loop (remediation):** when the evaluation sum is below threshold (default 13), the committee can run a remediation round; see [Independent Evaluation — Evaluation Feedback Loop](./independent-evaluation.md#evaluation-feedback-loop-remediation) and `agent/deliberations/README.md`.
+When using the committee and review skills (`.claude/skills/committee/`, `.claude/skills/review/`), every committee run writes a deliberation record to `<situation-dir>/deliberations/` with files `00-charter.md`, `01-roster.md`, `01-convening.md`, `02-deliberation.md`, and `03-resolution.md`. Use `/review --situation <path-to-situation-dir>` to evaluate the transcript and write to `04-evaluation-1.md` (and, when the feedback loop runs, `06-evaluation-2.md`, etc.). **Evaluation feedback loop (remediation):** when the evaluation sum is below threshold (default 13), the committee can run a remediation round; see [Independent Evaluation — Evaluation Feedback Loop](./independent-evaluation.md#evaluation-feedback-loop-remediation) and `../examples/deliberations/README.md`. Checked-in records under `../examples/` are examples or historical references, not live runtime outputs.
 
 ## Integration
 

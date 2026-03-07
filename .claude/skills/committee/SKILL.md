@@ -261,7 +261,7 @@ The committee skill can reference:
 - **Character propensity reference**: `artifacts/character-propensity-reference.md` for detailed character calibration
 - **Setup templates**: `artifacts/committee-setup-template.md` for advanced customization
 - **Examples**: `artifacts/examples/` for precedent
-- **Deliberation record layout**: `agent/deliberations/README.md` and `agent/archive/augmentation-plan.md` for the 00–04 directory structure
+- **Deliberation record layout**: `examples/deliberations/README.md` and `agent/archive/augmentation-plan.md` for the 00–04 directory structure
 
 ## Deliberation record directory (always)
 
@@ -293,7 +293,7 @@ Every committee run writes a deliberation record to a dedicated directory. There
 
 After writing the record, you may summarize the decision space map (KEY TENSIONS, RECOMMENDED NEXT STEPS) inline for the user's convenience; the authoritative output remains the directory.
 
-**Reference:** Full schemas and rationale in `agent/archive/augmentation-plan.md`; overview in `agent/deliberations/README.md`.
+**Reference:** Full schemas and rationale in `agent/archive/augmentation-plan.md`; overview in `examples/deliberations/README.md`.
 
 ## Remediation mode (Committee respond to evaluation)
 

@@ -10,7 +10,7 @@ This is the **minimal viable implementation**—enough to see if the approach wo
 
 If you're working with an AI agent on this repository, the methodology is available as executable skills:
 
-- **`/committee [topic]`** — runs a full adversarial committee deliberation, writes structured output to `agent/deliberations/`
+- **`/committee [topic]`** — runs a full adversarial committee deliberation, writes structured output to `<situation-dir>/deliberations/`
 - **`/review`** — independent evaluation of the transcript against five rubrics, with remediation feedback loop
 
 Other skills: **`/scenarios [situation]`** (explore possible futures), **`/probe [situation]`** (map decision landscape), **`/handoff`**, **`/string-diagram`** — see the [repository README](../README.md) or [repository review and run guide](../meta/repository-review-and-run-guide.md).

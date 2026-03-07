@@ -21,7 +21,7 @@ The Feb 21 numbers are post-remediation: the initial deliberation scored 12/15 o
 
 ### Run 1: February 17, 2026
 
-**Record**: `agent/deliberations/is-author-crackpot/`
+**Record**: `examples/deliberations/is-author-crackpot/`
 
 **Repo state at the time**: ~8 essays, a handful of artifacts, no worked examples, no formal algebra, no failure-modes documentation, no onboarding path.
 
@@ -35,7 +35,7 @@ The Feb 21 numbers are post-remediation: the initial deliberation scored 12/15 o
 
 ### Run 2: February 21, 2026
 
-**Record**: `agent/deliberations/is-author-crackpot-revisited/`
+**Record**: `examples/deliberations/is-author-crackpot-revisited/`
 
 **Repo state at the time**: 18 essays, 17+ artifacts with three worked examples, five palgebra documents, five completed deliberations, a live fan→funnel pipeline test, the `when-methodology-fails.md` essay, and onboarding documentation (Start Here path, Quick Start Guide).
 

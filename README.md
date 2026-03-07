@@ -78,7 +78,7 @@ Or step by step:
 *   Browse the [Research Programs](research-programs/README.md) — active experiments ordered by impact on uncertainty, each with a contributing guide.
 *   Pick an item that matches your skills or interests; every program has a "Contributing" block describing what's needed.
 
-**Repository map**: For a structured overview of every directory and how the pieces fit together, see [CLAUDE.md](CLAUDE.md). (It's addressed to AI assistants, but the directory map and skill table are useful for human readers too.)
+**Repository map**: For a structured overview of every directory and how the pieces fit together, see [agent/onboarding-core.md](agent/onboarding-core.md). The root `AGENTS.md` and `CLAUDE.md` files are thin tool-specific entry points into that canonical guide.
 
 ## Why does this matter?
 
@@ -120,8 +120,13 @@ These aren't incremental improvements. They represent a fundamentally different 
 - [Adversarial committees with fixed character rosters](./artifacts/adversarial-committees.md)
 - [Robert's Rules as forcing functions](./artifacts/roberts-rules-forcing-function.md)
 - [Independent evaluation protocols](./artifacts/independent-evaluation.md)
+- [Category theory connection](./artifacts/category-theory-connection.md)
 - [Hiring Decision Example](./artifacts/examples/hiring-decision-example.md)
 - [Worked examples and transcripts](./artifacts/examples/README.md)
+
+**[Examples](examples/)** - Checked-in scenario and deliberation records kept as examples or historical references
+- [Scenario records](./examples/scenarios/)
+- [Deliberation records](./examples/deliberations/)
 
 **[Palgebra](palgebra/)** - Formal algebra for LLM pipelines
 - **[Reference Card](./palgebra/reference.md)** — start here: syntax, operators, morphism types, propagation rules, composition laws
@@ -159,7 +164,7 @@ The essays describe *why* narrative engines need narrative engineering. The arti
 | `/string-diagram` | Converts resource equations to Mermaid diagrams | Visualizing pipelines, formalizing workflows, editing equation sets |
 | `/handoff` | Generates a session handoff for successor agents | End of work sessions, before breaks, after major milestones |
 
-These skills are the methodology made executable: `/committee` operationalizes the adversarial committee technique, `/scenarios` the fan (explore futures), `/probe` the repeated fan→funnel for landscape mapping, `/review` independent evaluation, `/string-diagram` the palgebra formalism, and `/handoff` continuity across agent sessions.
+These skills are the methodology made executable: `/committee` operationalizes the adversarial committee technique, `/scenarios` the fan (explore futures), `/probe` the repeated fan→funnel for landscape mapping, `/review` independent evaluation, `/string-diagram` the palgebra formalism, and `/handoff` continuity across agent sessions. Canonical skill bodies live in `.claude/skills/`; Claude and Cursor discover them through thin wrappers in `.claude/commands/` and `.cursor/commands/`, while Codex reads the skill docs manually.
 
 **[Cowork Plugin](cowork-plugin/)** — Portable, installable version of these capabilities for Claude Code and Claude Cowork
 
@@ -220,7 +225,7 @@ This is early-stage documentation of an emerging methodology. The techniques hav
 
 **Run and test:** For how to run the methodology (skills in chat, string-diagram script) and how to test the repo (smoke test, structure checks), see the [repository review and run guide](meta/repository-review-and-run-guide.md). For recent session context and maintainer hand-off, see the latest handoff in [agent/](agent/).
 
-**Evidence base**: The adversarial committee technique has empirical support from research on multi-agent reasoning — see [Societies of Thought](essays/societies-of-thought-synthesis.md) for a synthesis of findings from Google, UChicago, and the Santa Fe Institute. Comparison runs ([deliberative vs. CJT-style independent vote](artifacts/comparison-protocol-deliberative-vs-cjt.md)) provide initial evidence that deliberation with Robert's Rules produces materially different outcomes than independent aggregation; on a value-laden question the two pipelines gave opposite verdicts (see [comparison records](agent/comparisons/)). The theoretical foundations draw on sense-making methodology (Dervin), second-order cybernetics (von Foerster, Bateson), and process philosophy (Deleuze). The relationship to Condorcet's jury theorem is [explicitly documented](artifacts/condorcet-jury-theorem-and-committee.md): we use CJT as a motivating analogy but do not satisfy its conditions, by design. What remains to be validated is the specific combination of techniques and their calibration across problem domains.
+**Evidence base**: The adversarial committee technique has empirical support from research on multi-agent reasoning — see [Societies of Thought](essays/societies-of-thought-synthesis.md) for a synthesis of findings from Google, UChicago, and the Santa Fe Institute. Comparison runs ([deliberative vs. CJT-style independent vote](artifacts/comparison-protocol-deliberative-vs-cjt.md)) provide initial evidence that deliberation with Robert's Rules produces materially different outcomes than independent aggregation; on a value-laden question the two pipelines gave opposite verdicts (see [comparison records](research-programs/condorcet-comparison/results/)). The theoretical foundations draw on sense-making methodology (Dervin), second-order cybernetics (von Foerster, Bateson), and process philosophy (Deleuze). The relationship to Condorcet's jury theorem is [explicitly documented](artifacts/condorcet-jury-theorem-and-committee.md): we use CJT as a motivating analogy but do not satisfy its conditions, by design. What remains to be validated is the specific combination of techniques and their calibration across problem domains.
 
 Feedback, questions, and contributions welcome.
 

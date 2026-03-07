@@ -1,6 +1,6 @@
 # Deliberation Records
 
-This directory holds **directory-structured deliberation records** produced by the cyberneutics committee skill. Every `/committee [topic]` run creates a new subdirectory here (e.g. `agent/deliberations/microservices-adoption/`) and writes the standard set of files; there is no single-file or inline-only output. The review skill reads from these directories and can write the evaluation file. The **example/** subdirectory contains minimal template files showing the structure.
+This directory holds **checked-in directory-structured deliberation records** kept as examples or historical references. Live `/committee` runs write to `<situation-dir>/deliberations/`, not here. The review skill reads from situation directories at runtime; this directory exists so the repo can preserve representative records and the `example/` template files.
 
 ## Naming convention
 
@@ -30,9 +30,9 @@ Optional (when evaluation feedback loop runs): `05-remediation-1.md`, then `06-e
 **Evaluation files** (04-evaluation-1.md, 04-evaluation-2.md, …) can contain (both optional):
 
 - **resolution_evaluation** — Charter vs resolution only (no transcript). Reviewer reads `00-charter.md` and `03-resolution.md`, scores alignment_with_goal, completeness, feasibility, risk_mitigation; writes outcome (RATIFIED | REVISE | REJECT), critique, recommendation. Request via the review skill: e.g. "evaluate the resolution" or "run resolution-only evaluation" for this directory.
-- **transcript_review** — Full transcript evaluation. Reviewer reads `02-deliberation.md` (and optionally `00-charter.md`), scores the five rubrics (reasoning completeness, adversarial rigor, assumption surfacing, evidence standards, trade-off explicitness), writes verdict (High/Medium/Low), biggest_gaps, recommendations. Produced when you run `/review agent/deliberations/<topic-slug>`; the review skill writes to the appropriate evaluation file (04-evaluation-1.md for first review, 04-evaluation-2.md after first remediation, etc.).
+- **transcript_review** — Full transcript evaluation. Reviewer reads `02-deliberation.md` (and optionally `00-charter.md`), scores the five rubrics (reasoning completeness, adversarial rigor, assumption surfacing, evidence standards, trade-off explicitness), writes verdict (High/Medium/Low), biggest_gaps, recommendations. Produced when you run `/review --situation <path-to-situation-dir>`; the review skill writes to the appropriate evaluation file in `<situation-dir>/deliberations/` (04-evaluation-1.md for first review, 04-evaluation-2.md after first remediation, etc.).
 
-All paths and references stay **under the cyberneutics repository**. Roster and character details come from `agent/roster.md` (operational definitions) and `artifacts/character-propensity-reference.md` (extended commentary); evaluation rubrics from `.claude/skills/review/SKILL.md` and `artifacts/evaluation-rubrics-reference.md`.
+These checked-in examples live under the cyberneutics repository, but live outputs do not. Roster and character details still come from `agent/roster.md` (operational definitions) and `artifacts/character-propensity-reference.md` (extended commentary); evaluation rubrics come from `.claude/skills/review/SKILL.md` and `artifacts/evaluation-rubrics-reference.md`.
 
 See **agent/archive/augmentation-plan.md** for full schemas and implementation details; **agent/investigation-report.md** for how this structure was derived.
 

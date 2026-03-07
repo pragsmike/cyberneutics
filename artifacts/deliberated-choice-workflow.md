@@ -34,7 +34,7 @@ Optionally with extensions or parameters:
   horizon: 3 years
 ```
 
-This produces `agent/scenarios/<topic-slug>/` containing:
+This produces `<situation-dir>/scenarios/` containing:
 - `00-situation.md` — the framed situation
 - `01-roster.md` — roster snapshot
 - `01-parameters.md` — divergence axes used
@@ -57,7 +57,7 @@ This step is where the user exercises editorial judgment. The scenarios are *pro
 ### Step 3: Run Committee with Scenario Context (Funnel)
 
 ```
-/committee [decision question] scenario_context: agent/scenarios/<topic-slug>/
+/committee [decision question] --situation <path-to-situation-dir>
 ```
 
 The `scenario_context` parameter tells the committee to read the scenario set and deliberate across those futures. The committee:
@@ -75,12 +75,12 @@ The `scenario_context` parameter tells the committee to read the scenario set an
 
 ### Step 4: Review Resolution (User as Editor)
 
-The committee produces its standard output in `agent/deliberations/<topic-slug>/`:
+The committee produces its standard output in `<situation-dir>/deliberations/`:
 - `02-deliberation.md` — transcript
 - `03-resolution.md` — resolution with votes
 
 The user reviews the resolution. Optionally:
-- Run `/review agent/deliberations/<topic-slug>/` for independent evaluation
+- Run `/review --situation <path-to-situation-dir>` for independent evaluation
 - Run remediation if the evaluation score is below threshold
 - Accept or reject the resolution
 
@@ -92,8 +92,8 @@ The bridge between fan output and funnel input is the **charter**. When `scenari
 ---
 charter:
   goal: "[the decision question]"
-  context: "Deliberating across scenario set generated in agent/scenarios/<topic-slug>/."
-  scenario_context: "agent/scenarios/<topic-slug>/"
+  context: "Deliberating across scenario set generated in <situation-dir>/scenarios/."
+  scenario_context: "<situation-dir>/scenarios/"
   scenarios_summary:
     - id: 1
       title: "scenario title"
@@ -148,7 +148,7 @@ A deliberated choice resolution should include:
 
 **Step 2**: User reviews. Notices no scenario explores "accept and integrate well." Adds: "What about the scenario where the acquisition goes well?" Decides this is the committee's job — the committee can argue for acceptance. Proceeds.
 
-**Step 3**: `/committee Should we accept or decline the acquisition offer? scenario_context: agent/scenarios/acquisition-approach/`
+**Step 3**: `/committee Should we accept or decline the acquisition offer? --situation <path-to-acquisition-approach-situation-dir>`
 - Committee deliberates across all four scenarios
 - Maya: "The Talent Exodus is the real risk — but it's also leverage. If we decline, we need a retention plan within 30 days."
 - Vic: "Show me the data on post-acquisition retention rates in our sector. The acquirer's track record matters more than our scenarios."

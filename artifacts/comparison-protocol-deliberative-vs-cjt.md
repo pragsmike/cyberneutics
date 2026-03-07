@@ -27,9 +27,9 @@ See [Condorcet's Jury Theorem and the Committee](condorcet-jury-theorem-and-comm
 ## Pipeline A: Deliberative
 
 1. Run `/committee [question]` (or `/committee quick [question]`) with the chosen topic and context.
-2. Record: `agent/deliberations/<topic-slug>/` (00-charter, 02-deliberation, 03-resolution).
+2. Record the deliberative output in `<situation-dir>/deliberations/` (00-charter, 02-deliberation, 03-resolution).
 3. From the resolution, extract: **outcome** (PASSED/DEFERRED/NO_CONSENSUS), **decision** (one line), and **votes** (per character: Aye/Nay/Abstain).
-4. Optional: run `/review` on the deliberation and record the rubric sum.
+4. Optional: run `/review --situation <path-to-situation-dir>` and record the rubric sum.
 
 ---
 
@@ -38,7 +38,7 @@ See [Condorcet's Jury Theorem and the Committee](condorcet-jury-theorem-and-comm
 1. **Isolation:** For each roster member, generate exactly one response: "You are [character]. Here is the question and context. Give your vote: **Aye** or **Nay** (or Abstain). Then give one short paragraph rationale. You have not seen and must not reference any other character's response."
 2. **No cross-reading:** Each character's response must be produced without access to the others' responses. (In practice: separate prompts or one batch with strict instruction that each response is written in isolation.)
 3. **Aggregation:** Collect the five votes. Compute majority (Aye vs Nay; treat Abstain as no vote). If tie, record as tie.
-4. **Record:** Save the five independent rationales and the aggregate result (e.g. in `agent/comparisons/<topic-slug>/cjt-style-votes.md` and `cjt-style-result.md`, or similar).
+4. **Record:** Save the five independent rationales and the aggregate result in a dedicated study directory (for example `research-programs/<study>/results/<topic-slug>/` or another explicit workspace outside `agent/`).
 
 ---
 
@@ -71,13 +71,17 @@ See [Condorcet's Jury Theorem and the Committee](condorcet-jury-theorem-and-comm
 
 Runs that are part of the **condorcet-comparison research program** live in [research-programs/condorcet-comparison/results/](../research-programs/condorcet-comparison/results/). The first two runs (second-ci-job and code-of-conduct, 2026-02-22) are stored there.
 
-For **future runs** not yet assigned to a research program, or ad-hoc comparisons, use this layout:
+For **future runs** not yet assigned to a research program, keep the comparison in an explicit study workspace rather than under `agent/`. Two good options are:
 
-- `agent/comparisons/<topic-slug>/`
-  - `00-charter.md` (shared question and context)
-  - `01-deliberative/` — copy or link to `agent/deliberations/<topic-slug>/` if the same topic, or summary of resolution + votes
-  - `02-cjt-style-votes.md` — five independent rationales and votes
-  - `03-cjt-style-result.md` — aggregate (e.g. "Majority: Aye (3–2)")
-  - `04-comparison-summary.md` — outcome agreement, notes on differences
+- `research-programs/<study>/results/<topic-slug>/` when the run is part of a tracked study
+- a dedicated situation or experiment workspace that stores the deliberative record, the CJT-style votes, and the comparison summary together
 
-This keeps comparison runs distinct from standard deliberation records.
+A minimal comparison record should include:
+
+- `00-charter.md` - shared question and context
+- `01-deliberative/` - copy or link to the relevant `<situation-dir>/deliberations/` record when applicable
+- `02-cjt-style-votes.md` - five independent rationales and votes
+- `03-cjt-style-result.md` - aggregate result
+- `04-comparison-summary.md` - outcome agreement and notes on differences
+
+The key rule is simple: do not use `agent/` as runtime storage for new comparison runs.

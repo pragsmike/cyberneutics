@@ -104,4 +104,4 @@ This study provides partial evidence toward the [evaluation-schemes](evaluation-
 
 ## Origin
 
-Produced in a single session on 2026-02-22. Session handoff: `agent/archive/handoff-2026-02-22-condorcet.md`. PR review: `agent/archive/condorcet-pr-review.md`. These records were originally stored in `agent/comparisons/` and `agent/deliberations/` and consolidated here on 2026-02-24.
+Produced in a single session on 2026-02-22. Session handoff: `agent/archive/handoff-2026-02-22-condorcet.md`. PR review: `agent/archive/condorcet-pr-review.md`. These records were originally stored in repo-local comparison and deliberation directories and consolidated here on 2026-02-24.

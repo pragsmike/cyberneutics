@@ -56,7 +56,7 @@ When the independent evaluation scores a deliberation **below a configurable thr
 - **Remediation:** Committee reads the charter, transcript, and latest evaluation; produces a point-by-point response in a **remediation** file (e.g. `05-remediation-1.md`) and appends a new round to the deliberation; may update the resolution. Then review runs again and writes the next evaluation file (e.g. `06-evaluation-2.md`).
 - **Cap:** **Max 2 remediation rounds.** After that, stop even if still below threshold; document “improved but below bar.”
 
-See `agent/archive/augmentation-plan.md` §8–9 for full design and implementation status; `agent/deliberations/README.md` for file naming (04-evaluation-1, 05-remediation-1, 06-evaluation-2, …).
+See `agent/archive/augmentation-plan.md` §8–9 for full design and implementation status; `examples/deliberations/README.md` for file naming (04-evaluation-1, 05-remediation-1, 06-evaluation-2, …).
 
 ## Core Evaluation Rubrics
 

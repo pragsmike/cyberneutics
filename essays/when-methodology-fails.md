@@ -16,7 +16,7 @@ This is what failure looks like. Not a crash. Not an obviously bad output. A con
 
 ## Why this essay exists
 
-The [gap analysis](../agent/gap_analysis.md) lists this essay as planned but unwritten. The [adoption strategy committee](../agent/deliberations/methodology-adoption-strategy/02-deliberation.md) identified it as one of four robust actions — Maya argued it was "the single most credibility-building thing the project could produce." She was right.
+The [adoption strategy committee](../examples/deliberations/methodology-adoption-strategy/02-deliberation.md) identified this essay as one of four robust actions — Maya argued it was "the single most credibility-building thing the project could produce." She was right.
 
 Every methodology has a failure envelope. Knowing where the boundary is lets you work near it safely instead of accidentally crossing it. This essay maps that boundary for cyberneutics — not to undermine the methodology, but because understanding *where* a tool breaks is what distinguishes engineering from salesmanship.
 

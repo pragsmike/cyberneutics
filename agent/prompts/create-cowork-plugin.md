@@ -256,7 +256,7 @@ Structure:
 
 **Committee agents vs. simulation**: The agent files are the critical innovation. They must be written so that each character runs independently, with a genuinely distinct worldview, not as a polite variation on the same answer. If the five agents produce similar outputs, the system has failed. Build in explicit resistance to premature convergence.
 
-**What not to include**: Do not bundle the essays, the `agent/deliberations/` archive, or the `palgebra/duality-and-composition.md` deep theory into the plugin. The plugin is an interface to the methodology, not the methodology's full documentation. Users who want depth can explore the repo.
+**What not to include**: Do not bundle the essays, the `examples/deliberations/` archive, or the `palgebra/duality-and-composition.md` deep theory into the plugin. The plugin is an interface to the methodology, not the methodology's full documentation. Users who want depth can explore the repo.
 
 **Palgebra in commands**: String-diagram aside, the other commands should not require the user to understand palgebra. Internally, the commands can use resource equation logic to structure their output — but this should be invisible to the user unless they ask for it.
 

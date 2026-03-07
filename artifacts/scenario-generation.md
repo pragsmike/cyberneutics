@@ -95,7 +95,7 @@ Two axes give four quadrants. Three axes give eight corners. More than three axe
 
 ## How to Read the Output
 
-The scenario set is in `agent/scenarios/<topic-slug>/02-scenarios.md`. For each scenario:
+The scenario set is in `<situation-dir>/scenarios/02-scenarios.md`. For each scenario:
 
 1. **Read the assumptions first.** The assumptions are the scenario's premises. If you reject the premises, the scenario is still useful — it tells you which assumptions are load-bearing.
 

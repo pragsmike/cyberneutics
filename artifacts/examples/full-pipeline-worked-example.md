@@ -8,11 +8,11 @@ The run is the same one that produced that resolution — the committee delibera
 
 | Stage | Artifact | Location |
 |-------|----------|----------|
-| Situation | What’s at stake, uncertainties, actors, time horizon | [00-situation.md](../../agent/scenarios/methodology-adoption-strategy/00-situation.md) |
-| Scenarios | Four divergent futures (fan) | [01-parameters.md](../../agent/scenarios/methodology-adoption-strategy/01-parameters.md), [02-scenarios.md](../../agent/scenarios/methodology-adoption-strategy/02-scenarios.md), [03-assessment.md](../../agent/scenarios/methodology-adoption-strategy/03-assessment.md) |
-| Charter | Goal, scenario context, success criteria | [00-charter.md](../../agent/deliberations/methodology-adoption-strategy/00-charter.md) |
-| Deliberation | Committee debate across scenarios (funnel) | [01-convening.md](../../agent/deliberations/methodology-adoption-strategy/01-convening.md), [02-deliberation.md](../../agent/deliberations/methodology-adoption-strategy/02-deliberation.md) |
-| Resolution | Decision, robust actions, scenario-dependent actions | [03-resolution.md](../../agent/deliberations/methodology-adoption-strategy/03-resolution.md) |
+| Situation | What’s at stake, uncertainties, actors, time horizon | [00-situation.md](../../examples/scenarios/methodology-adoption-strategy/00-situation.md) |
+| Scenarios | Four divergent futures (fan) | [01-parameters.md](../../examples/scenarios/methodology-adoption-strategy/01-parameters.md), [02-scenarios.md](../../examples/scenarios/methodology-adoption-strategy/02-scenarios.md), [03-assessment.md](../../examples/scenarios/methodology-adoption-strategy/03-assessment.md) |
+| Charter | Goal, scenario context, success criteria | [00-charter.md](../../examples/deliberations/methodology-adoption-strategy/00-charter.md) |
+| Deliberation | Committee debate across scenarios (funnel) | [01-convening.md](../../examples/deliberations/methodology-adoption-strategy/01-convening.md), [02-deliberation.md](../../examples/deliberations/methodology-adoption-strategy/02-deliberation.md) |
+| Resolution | Decision, robust actions, scenario-dependent actions | [03-resolution.md](../../examples/deliberations/methodology-adoption-strategy/03-resolution.md) |
 
 ## The Situation
 
@@ -73,4 +73,4 @@ The resolution format that emerged — robust vs. scenario-dependent actions, mo
 
 ---
 
-**Summary**: This run is the full-pipeline worked example. The records live under `agent/scenarios/methodology-adoption-strategy/` and `agent/deliberations/methodology-adoption-strategy/`. The resolution is in [03-resolution.md](../../agent/deliberations/methodology-adoption-strategy/03-resolution.md). The limitations document (when-methodology-fails.md) and Start Here path are separate deliverables from the same robust-action set.
+**Summary**: This run is the full-pipeline worked example. The records live under `examples/scenarios/methodology-adoption-strategy/` and `examples/deliberations/methodology-adoption-strategy/`. The resolution is in [03-resolution.md](../../examples/deliberations/methodology-adoption-strategy/03-resolution.md). The limitations document (when-methodology-fails.md) and Start Here path are separate deliverables from the same robust-action set.

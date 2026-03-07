@@ -274,7 +274,7 @@ Run full review but provide extra depth on specified rubrics.
 
 ## Resolution-only evaluation (04-evaluation-1.md, etc.)
 
-When a deliberation was saved to `<situation-dir>/deliberations/`, that directory may also contain **resolution-only** evaluation: an assessment of whether the resolution (03-resolution.md) satisfies the charter (00-charter.md), *without* reading the transcript. The reviewer uses only 00-charter.md and 03-resolution.md, scores alignment_with_goal, completeness, feasibility, risk_mitigation, and writes a `resolution_evaluation` section to the same evaluation file used for transcript review (04-evaluation-1.md for first pass, or 06/08 when the feedback loop has run). The same review skill can perform this as a **second pass**: when asked to "evaluate the resolution" or "run resolution-only evaluation" for a deliberation directory, read only 00 and 03, score against the charter, and write or update that evaluation file with `resolution_evaluation`. The transcript review (five rubrics on 02-deliberation.md) is stored under `transcript_review` in the same file. See `agent/deliberations/README.md` (in the cyberneutics repo) for the schema.
+When a deliberation was saved to `<situation-dir>/deliberations/`, that directory may also contain **resolution-only** evaluation: an assessment of whether the resolution (03-resolution.md) satisfies the charter (00-charter.md), *without* reading the transcript. The reviewer uses only 00-charter.md and 03-resolution.md, scores alignment_with_goal, completeness, feasibility, risk_mitigation, and writes a `resolution_evaluation` section to the same evaluation file used for transcript review (04-evaluation-1.md for first pass, or 06/08 when the feedback loop has run). The same review skill can perform this as a **second pass**: when asked to "evaluate the resolution" or "run resolution-only evaluation" for a deliberation directory, read only 00 and 03, score against the charter, and write or update that evaluation file with `resolution_evaluation`. The transcript review (five rubrics on 02-deliberation.md) is stored under `transcript_review` in the same file. See `examples/deliberations/README.md` (in the cyberneutics repo) for the schema.
 
 ## Suggesting the review
 
@@ -325,4 +325,4 @@ All paths under cyberneutics only:
 - **Committee skill**: `.claude/skills/committee/SKILL.md`
 - **Operational roster**: `agent/roster.md`
 - **Extended character reference**: `artifacts/character-propensity-reference.md`
-- **Deliberation record layout**: `agent/deliberations/README.md`, `agent/archive/augmentation-plan.md`
+- **Deliberation record layout**: `examples/deliberations/README.md`, `agent/archive/augmentation-plan.md`
