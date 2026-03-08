@@ -1,0 +1,127 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "autoupdate": true,
+  "model": "anthropic/claude-sonnet-4-20250514",
+  "small_model": "anthropic/claude-haiku-4-5",
+  "share": "auto",
+  "snapshot": true,
+  "disabled_providers": [],
+  "plugin": [],
+  "instructions": [
+    "CONTRIBUTING.md",
+    "docs/guidelines.md"
+  ],
+  "permission": {
+    "edit": "ask",
+    "bash": {
+      "*": "ask",
+      "git *": "allow",
+      "git commit *": "ask",
+      "git push *": "deny",
+      "npm *": "allow",
+      "rm *": "deny",
+      "grep *": "allow"
+    },
+    "external_directory": {
+      "*": "ask"
+    },
+    "webfetch": "allow",
+    "skill": {
+      "*": "allow",
+      "dangerous-*": "deny"
+    }
+  },
+  "tools": {
+    "bash": true,
+    "read": true,
+    "write": true,
+    "edit": true,
+    "glob": true,
+    "grep": true,
+    "list": true,
+    "webfetch": true,
+    "task": true,
+    "todowrite": true,
+    "todoread": true
+  },
+  "agent": {
+    "Maya": {
+      "description": "Reviews code without making edits.",
+      "mode": "subagent",
+      "model": "opencode/big-pickle",
+      "prompt": "{file:./.agents/maya.md}",
+      "permission": {
+        "edit": "deny",
+        "bash": "ask",
+        "webfetch": "deny",
+        "external_directory": {
+          "*": "ask"
+        },
+      }
+    },
+    "Frankie": {
+      "description": "Reviews code without making edits.",
+      "mode": "subagent",
+      "model": "opencode/big-pickle",
+      "prompt": "{file:./.agents/frankie.md}",
+      "permission": {
+        "edit": "deny",
+        "bash": "ask",
+        "webfetch": "deny",
+        "external_directory": {
+          "*": "ask"
+        },
+      }
+    },
+    "Vic": {
+      "description": "Reviews code without making edits.",
+      "mode": "subagent",
+      "model": "opencode/big-pickle",
+      "prompt": "{file:./.agents/vic.md}",
+      "permission": {
+        "edit": "deny",
+        "bash": "ask",
+        "webfetch": "deny",
+        "external_directory": {
+          "*": "ask"
+        },
+      }
+    },
+    "Tammy": {
+      "description": "Analyzes for security vulnerabilities.",
+      "mode": "all",
+      "model": "opencode/big-pickle",
+      "prompt": "{file:./.agents/tammy.md}",
+      "permission": {
+        "edit": "deny",
+        "bash": {
+          "*": "ask",
+          "grep *": "allow",
+          "find *": "allow"
+        },
+        "webfetch": "allow",
+        "external_directory": {
+          "*": "ask"
+        },
+      }
+    },
+    "Joe": {
+      "description": "Builds the project using npm and handles dependencies.",
+      "mode": "primary",
+      "model": "opencode/big-pickle",
+      "prompt": "{file:./.agents/joe.md}",
+      "temperature": 0.3,
+      "top_p": 0.9,
+      "permission": {
+        "external_directory": {
+          "*": "ask"
+        },
+        "bash": {
+          "*": "ask",
+          "git *": "ask",
+        },
+        "edit": "ask"
+      }
+    },
+  }
+}
