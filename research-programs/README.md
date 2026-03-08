@@ -21,6 +21,8 @@ Each plan file should have a **Contributing to this program** block at the top w
 
 ### Before you pick a program
 
+*This checklist applies to formal research programs with defined protocols and results locations. If you have an exploratory idea that isn't ready for this level of structure, start at [`wild/`](../wild/) instead.*
+
 Check these before you commit to a track:
 
 - Do you need a specific runtime or toolchain such as Claude Code Agent Teams, LiteLLM, or API keys?

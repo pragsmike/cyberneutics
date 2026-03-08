@@ -2,7 +2,7 @@
 
 Thank you for your interest in contributing to Cyberneutics.
 
-For a workflow-based entry point, see [meta/contributor-guide.md](meta/contributor-guide.md). This file is the compact contribution contract: what kinds of work fit here, where they go, and what to verify before opening a PR.
+We welcome contributions at every level of polish — from fully-formed artifacts to half-formed ideas. For a workflow-based entry point, see [meta/contributor-guide.md](meta/contributor-guide.md). This file explains what kinds of work fit here, where they go, and what to check before opening a PR.
 
 ## Contribution Types
 
@@ -13,6 +13,7 @@ Cyberneutics welcomes contributions in five main categories:
 - **Research and validation work** in `research-programs/`
 - **Checked-in examples and historical records** in `examples/`
 - **Repo structure, navigation, and reflective docs** in root docs or `meta/`
+- **Exploratory ideas and lateral connections** in `wild/` and `wild/diary/`
 
 ## Placement Rules
 
@@ -21,6 +22,13 @@ Cyberneutics welcomes contributions in five main categories:
 - Prose walkthroughs and worked-example writeups belong in `artifacts/examples/`.
 - Agent continuity material belongs in `agent/`.
 - Canonical onboarding and current-state rules live in `agent/onboarding-core.md` and `meta/project-state.md`.
+- Exploratory ideas, field notes, and early-stage connections belong in `wild/`. Raw sketches with no structure go in `wild/diary/`; ideas with enough shape to warrant a topic directory go directly in `wild/`.
+
+## Exploratory Contributions
+
+Contributions to `wild/` and `wild/diary/` have a different lifecycle. They are reviewed periodically by the maintainer, not in real time. Acceptance means the idea is being held — not that it will necessarily be developed into a formal artifact. Ideas that connect to existing threads may be promoted to `wild/` topic directories, folded into research programs, or remain as seeds for future work.
+
+The only convention for `wild/diary/` is a date-prefixed filename (`YYYY-MM-DD-short-title.md`). No structural requirements beyond that.
 
 ## Minimum Standard
 
