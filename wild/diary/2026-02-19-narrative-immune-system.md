@@ -212,6 +212,6 @@ This was genuinely improvisational — ideas building on each other in real time
 
 ## Agent Instructions
 
-1. Save this file as `agent/diary/2026-02-19-narrative-immune-systems.md`.
+1. Save this file as `wild/diary/2026-02-19-narrative-immune-systems.md`.
 2. No edit plan accompanies this entry — the ideas need further development before they're ready for insertion into essays. The promising avenues above are candidates for future sessions.
 3. The civic application thread (Section 4 above, Avenue C) may be the highest-impact next essay to write, as it connects the methodology to the broadest audience.

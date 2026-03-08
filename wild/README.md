@@ -1,6 +1,10 @@
 This is where ideas come in to be tamed.
 They may be further developed, but don't count on it.
 
+## Diary
+
+The [diary/](diary/) directory holds field notes and idea-connection sketches from exploratory conversations. These are even less structured than the topic directories below — raw material that may eventually feed into them, or into formal artifacts. Contributors who want to explore a half-formed idea before committing to structure can start here.
+
 ## Known Limitations
 
 - **[Blast Radius Problem](blast-radius-problem/)**: Exploring role-differentiation in an agent committee as a load-bearing architectural requirement for tasks with asymmetric failure modes (e.g., declarative fleet management).

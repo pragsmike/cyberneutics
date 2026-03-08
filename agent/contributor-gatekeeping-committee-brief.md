@@ -102,9 +102,9 @@ inadvertently gatekeeps lateral, exploratory contributions while
 successfully serving structured, technically-prepared ones. A real
 contributor self-selected out after reading the guidelines. The `wild/`
 directory is the natural home for early-stage ideas but is invisible to
-contributors. The `agent/diary/` directory is mislocated relative to its
-actual purpose. The problem is not structural complexity but a missing
-on-ramp.
+contributors. The diary directory (now at `wild/diary/`) was previously
+mislocated inside `agent/` relative to its actual purpose; that move is
+done. The problem is not structural complexity but a missing on-ramp.
 
 **Question for deliberation**: How should the contributor documentation
 be revised — and how should the repository structure be adjusted — to
