@@ -29,9 +29,9 @@ For general orientation, read `README.md`.
 | `applications/` | Domain analyses | See the methodology applied to a real subject area. |
 | `meta/` | Methodology evolution and project state | Understand current truths, open decisions, and validation status. |
 | `examples/` | Checked-in scenario and deliberation records | Reference example runs and historical records that stay in the repo. |
-| `wild/` | Incoming ideas and external material | Explore adjacent territory that is not yet integrated. |
+| `wild/` | Incoming ideas, external material, diary | Explore adjacent territory that is not yet integrated. |
 | `references/` | Background reading | Find cited theoretical sources. |
-| `agent/` | Handoffs, rosters, prompts, rubrics, diary | Continue ongoing work inside this repo. |
+| `agent/` | Handoffs, rosters, prompts, rubrics | Continue ongoing work inside this repo. |
 | `.claude/skills/` | Canonical skill definitions | Follow cyberneutics workflows. |
 | `.claude/commands/` | Thin Claude command wrappers | Discover slash commands in Claude without duplicating skill bodies. |
 | `.cursor/commands/` | Thin Cursor command wrappers | Discover slash commands in Cursor without duplicating skill bodies. |
@@ -43,8 +43,12 @@ For general orientation, read `README.md`.
 - `scenario-roster.md`: scenario-generation roster
 - `prompts/`: reusable prompts for repo maintenance and research
 - `rubrics/`: repo-review rubrics and evaluation criteria
-- `diary/`: exploratory notes that do not belong in a handoff
 - `archive/`: historical only; excluded from onboarding unless explicitly needed
+
+### `wild/` in more detail
+
+- `diary/`: field notes and idea-connection sketches; the most exploratory material in the repo
+- Topic directories (e.g. `residuality-theory/`, `pask-mesh-fitting/`): incoming ideas being tamed
 
 ### `examples/` in more detail
 

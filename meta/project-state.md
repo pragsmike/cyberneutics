@@ -30,6 +30,10 @@ This document is the canonical current-state reference for repo structure, compa
 - Whether the cowork plugin should ship under MIT, and whether its runtime behavior needs additional validation before stronger claims are made.
 - When to rerun the editorial review after the compatibility sweep settles.
 
+## Scheduled reviews
+
+- **2026-06-08 — Contributor gatekeeping changes**: Has anyone contributed to `wild/` or `wild/diary/`? Has the diary-to-wild-to-formalization pipeline worked for external contributors? Has the maintainer labor model held? Source: `meta/deliberations/contributor-gatekeeping/03-resolution.md`.
+
 ## Blocked or prerequisite-dependent items
 
 - A full empirical failure case for `essays/when-methodology-fails.md` still depends on real practice data.

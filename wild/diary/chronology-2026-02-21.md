@@ -6,7 +6,7 @@ A single-day chronology of work on the Cyberneutics repository, reconstructed fr
 
 ## 1. Diary: Conceptual Source
 
-**`agent/diary/2026-02-21-cyberneutics-dual-operations.md`**
+**`wild/diary/2026-02-21-cyberneutics-dual-operations.md`**
 
 Improvisational conversation (likely early in the day or immediately prior) produced the conceptual backbone for the rest of the day:
 
@@ -147,7 +147,7 @@ Session 2 handoff: push, test /scenarios on a real problem, test deliberated-cho
 
 | Phase | Main outcome | Key artifacts / commits |
 |-------|----------------|-------------------------|
-| Diary | Naming, fan/funnel, monad, /probe, inventory | `agent/diary/2026-02-21-cyberneutics-dual-operations.md` |
+| Diary | Naming, fan/funnel, monad, /probe, inventory | `wild/diary/2026-02-21-cyberneutics-dual-operations.md` |
 | Housekeeping | Rename, narrative computing/engineering, extractions, references | d8d8359, f5ee32d, 5d14cc3, ef134c6, da2dd15, bdee328 |
 | Formalization | Fan/funnel duality, decision monad, Essay 10 | 4ef7ad8 — duality-and-composition, 10-decisions-under-uncertainty |
 | Methodology evolution | Fan/funnel and value proposition in evolution doc | 4d91fb6 |

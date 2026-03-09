@@ -8,7 +8,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 
 EXCLUDED_PREFIXES = (
     'agent/archive/',
-    'agent/diary/',
+    'wild/diary/',
     'examples/',
 )
 EXCLUDED_FILES: set[str] = set()

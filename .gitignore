@@ -4,3 +4,4 @@
 .vscode
 .clj-kondo/
 .lsp/
+*/__pycache__

@@ -156,7 +156,7 @@ Where *Stories All the Way Down* argues narrative is primary, add brief referenc
 
 ## Agent Instructions
 
-1. **First**: Save this file as `agent/diary/2026-02-17-bruner-kahneman-synthesis.md` (create the `agent/diary/` directory if it doesn't exist).
+1. **First**: Save this file as `wild/diary/2026-02-17-bruner-kahneman-synthesis.md` (create the `wild/diary/` directory if it doesn't exist).
 
 2. **Then execute edits 1-9** in the order listed above. For each edit:
    - Read the target file first to find the exact insertion point

@@ -13,6 +13,7 @@ Cyberneutics already has explicit reading and usage paths for several audiences:
 | **Skeptics** | Evaluate evidence, limits, and failure modes | `essays/README.md` and `essays/when-methodology-fails.md` |
 | **Formalists** | Work with the precise machinery and notation | `palgebra/reference.md` and `essays/README.md` |
 | **Research collaborators** | Contribute evidence, experiments, and validation work | `research-programs/README.md` |
+| **Explorers** | Try an idea before committing to structure | `wild/diary/README.md` |
 
 Contributor-facing changes should preserve these paths rather than flatten them into a single generic onboarding flow.
 
@@ -55,6 +56,18 @@ Use `artifacts/examples/` for prose walkthroughs and worked-example writeups, no
 
 Work in root docs, `meta/`, or carefully selected README files when you are improving findability, contributor guidance, or architectural clarity.
 
+### Explore an idea or connection
+
+Work in `wild/` when you have an idea that isn't ready for the structure of `artifacts/`, `essays/`, or `research-programs/`.
+
+Typical contributions:
+- a half-formed theoretical connection
+- field notes from applying the methodology
+- a lateral analogy worth exploring
+- raw material that might feed into a formal program later
+
+For raw sketches, use `wild/diary/` with a date-prefixed filename (`YYYY-MM-DD-short-title.md`). For ideas with enough shape to warrant their own topic, create a directory under `wild/`.
+
 ## First Contributions
 
 If you are new to the repo, prefer one of these bounded tasks first:
@@ -64,6 +77,7 @@ If you are new to the repo, prefer one of these bounded tasks first:
 3. Tighten a contributor-facing doc so it matches the current runtime-vs-example architecture.
 4. Add or improve a short worked-example pointer in `artifacts/README.md` or another index page.
 5. Preserve a checked-in example under `examples/` and annotate what makes it worth keeping.
+6. Drop an exploratory note in `wild/diary/` connecting the methodology to something from your own domain.
 
 ## Where Things Go
 
@@ -72,6 +86,7 @@ If you are new to the repo, prefer one of these bounded tasks first:
 - Worked-example prose belongs under `artifacts/examples/`.
 - Operational agent continuity material belongs under `agent/`.
 - Current project-state and reflective repo documentation belong under `meta/`.
+- Exploratory ideas and raw field notes belong in `wild/` or `wild/diary/`.
 
 Canonical runtime/output rules live in `agent/onboarding-core.md` and `meta/project-state.md`.
 

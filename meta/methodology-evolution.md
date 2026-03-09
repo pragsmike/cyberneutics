@@ -320,7 +320,7 @@ See [meta/uptake-and-usage.md](uptake-and-usage.md) for details and analysis.
 **Created**:
 - `research-programs/committee-implementation-taxonomy.md` — umbrella document describing the design space for committee implementations: two axes (model diversity × agent independence), three tiers (built-in single-model subagents, built-in multi-model subagents, external orchestration via LiteLLM), and how each research program maps to the taxonomy.
 - `research-programs/agent-independence.md` — new research program (Tier 1) testing whether running committee characters as independent subagent processes improves deliberation over single-context roleplay. Phase 1 is a single-afternoon paired comparison.
-- `agent/diary/2026-03-05-implementation-convergence.md` — first articulation of the three-tier framework and the convergence observation.
+- `wild/diary/2026-03-05-implementation-convergence.md` — first articulation of the three-tier framework and the convergence observation.
 - `agent/prompts/2026-03-05-coding-agent-subagent-capabilities.md` — deep-research prompt for surveying which commercial coding agents support multi-model subagents.
 
 **Updated**:
