@@ -397,6 +397,13 @@ A₁ × A₂ × A₃ → B  [Op]                          # funnel (many-to-one)
   Cambridge University Press. Chapter 2: Resource Theories.
 - Fong, B. (2016). *The Algebra of Open and Interconnected Systems.*
   PhD thesis, University of Oxford. (Decorated cospans.)
+- Fritz, T. (2020). "A synthetic approach to Markov kernels,
+  conditional independence and theorems on sufficient statistics."
+  *Advances in Mathematics* 370, 107239. arXiv:1908.07021.
+  (Markov categories as the categorical framework for stochastic
+  maps. Provides the comonoid/copy structure that palgebra uses
+  informally for catalytic inputs, and a principled treatment of
+  deterministic vs. stochastic morphisms within one framework.)
 - De Wynter et al. (2023). "On Meta-Prompting." arXiv:2312.06562.
   (Category-theoretic framework for LLM interactions.)
 - Liang et al. (2024). "Prompts Are Programs Too!" arXiv:2409.12447.
