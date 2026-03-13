@@ -34,6 +34,17 @@ LLM-generated artifacts.
   Kleisli categories for nondeterminism). Read this to understand *why*
   the formalism has the shape it does, not just *how* to use it.
 
+- **[categorical-structures.md](categorical-structures.md)** — A
+  pedagogical treatment of category-theoretic constructions as they
+  appear in the pipeline. Terminal and initial objects (vacuous
+  resolution, empty prompt), products (charter, transcript), coproducts
+  (scenario-set, variance report), equalizers (cross-scenario
+  triangulation), pullbacks and pushouts (load-bearing claims, resolution
+  as amalgamation), fan and funnel as coproduct and product spiders, and
+  the Probe as an empirical universal property test. Shows how each
+  abstract construction corresponds to a concrete pipeline operation and
+  why the categorical perspective makes quality failures visible.
+
 ### Worked examples
 
 - **[committee-as-palgebra.md](committee-as-palgebra.md)** — The
