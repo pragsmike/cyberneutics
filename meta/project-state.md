@@ -77,6 +77,10 @@ Pass 2 complete (2026-03-13). mg reviewed Pass 1 findings and approved remediati
 
 Sprint status: **Complete**. Remaining items are longer-term (worked example, essay promotions from wild/, Bruner edits 2/5/8) and belong in future sprints.
 
+### Post-sprint: categorical-structures.md focused review (2026-03-13)
+
+`palgebra/categorical-structures.md` received a focused mathematical consistency review against the older palgebra documents. Review report: `agent/archive/categorical-structures-review-2026-03.md`. Key changes: lax/approximate coherence framing added (Mac Lane coherence doesn't hold strictly in stochastic pipelines); overclaimed universal properties weakened to design targets; category **Text** precisely defined; Kleisli and enriched category structures acknowledged; cross-references to committee-games open-game formalization and furry logic distributional types added. Also fixed monad composition direction bug in `palgebra/duality-and-composition.md` (was "Fan ∘ Funnel", should be "Funnel ∘ Fan").
+
 ## Scheduled reviews
 
 - **2026-06-08 — Contributor gatekeeping changes**: Has anyone contributed to `wild/` or `wild/diary/`? Has the diary-to-wild-to-formalization pipeline worked for external contributors? Has the maintainer labor model held? Source: `meta/deliberations/contributor-gatekeeping/03-resolution.md`.

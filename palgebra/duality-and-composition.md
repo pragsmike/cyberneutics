@@ -221,7 +221,7 @@ If the fan (free exploration) is left adjoint to the funnel (constrained selecti
 
 ### The monad in brief
 
-The decision monad M is the composition Fan ∘ Funnel:
+The decision monad M is the composition Funnel ∘ Fan:
 
 ```
 M(situation) = Funnel(Fan(situation))

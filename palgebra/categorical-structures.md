@@ -16,7 +16,7 @@ committee positions it supports, what resolutions it licenses. The objects
 (texts, transcripts, resolutions) are just the sources and targets of those
 transformations.
 
-Two foundational commitments follow from this:
+Three foundational commitments follow from this:
 
 **Isomorphism replaces equality.** We rarely ask whether two pipeline outputs
 are the same document. We ask whether they are *equivalent for the purposes at
@@ -34,18 +34,78 @@ input type of `g`. This is not a trivial constraint — it is what prevents
 pipelines from drifting into type-confusion, passing a `transcript` where a
 `charter` was expected.
 
+**Coherence is approximate, not strict.** Mac Lane's coherence theorem
+guarantees that in a well-behaved monoidal category, all diagrams built from
+the canonical structural isomorphisms commute — there is exactly one way to
+rearrange inputs, and the result doesn't depend on which path you take. In a
+stochastic text-processing pipeline, this guarantee does not hold on the nose.
+Running the same pipeline twice on the same inputs will not produce identical
+outputs. Diagrams that should commute will commute *up to distributional
+equivalence*: the two paths through the diagram produce outputs drawn from the
+same distribution, but not the same text.
+
+This means the categorical structures described in this document are not strict
+but *lax*. Products are approximate products — the projections recover the
+original inputs only up to paraphrase and information loss. Coproducts are
+approximate coproducts — the injections carry provenance, but the
+componentwise extension property holds only to the degree that the pipeline
+handles each component consistently. The universal properties described below
+are *design targets* that a well-constructed pipeline approximates, not
+theorems that the pipeline satisfies exactly. The Probe operation (§9) is the
+empirical test of how close the approximation is.
+
+This situation is not a deficiency to be apologised for. It reflects a genuine
+feature of the domain. Meaning in LLM-mediated text processing is a temporary
+stabilisation in a coupled system, not a fixed object
+([From Semantic Potential to Situated Sense](../wild/potential-to-sense/from_semantic_potential_to_situated_sense.md)).
+Concepts are eigenforms of conversational processes — stable enough to function,
+dependent on the ongoing dynamics that produce them. The categorical framework
+captures the *structural* relationships between pipeline stages even when the
+*content* those stages produce is stochastic. The structure is the part that
+composes reliably; the content is the part that varies. Keeping both in view is
+what the formalism is for.
+
+### A note on universal properties
+
+The constructions in this document — products, coproducts, equalizers,
+pullbacks, pushouts — are all defined by *universal properties*. A universal
+property says: this construction is the *best* object for a given purpose,
+where "best" means most economical. Specifically, any other object that serves
+the same purpose maps to (or from) this one in exactly one way. The product
+A × B is the best way to package A and B together — anyone who needs both can
+get them from A × B, and there's only one way to do so that respects both
+projections. The coproduct A + B is the best way to combine A and B as
+alternatives — anyone who can handle both cases can handle A + B, and there's
+only one consistent way to do so.
+
+Uniqueness is the key word. It is what distinguishes a genuine categorical
+construction from an arbitrary aggregation. And it is precisely where the
+stochastic pipeline softens the classical picture: the "unique" map becomes
+"the map that the pipeline will produce with high probability across runs." The
+Probe operation tests whether uniqueness holds empirically.
+
 ---
 
 ## 2. Objects and Morphisms
 
-In the category **Text**, objects are *soft types*: `(template, rubric)` pairs
-that define what a well-formed artifact of a given kind looks like. The template
-is structural (required sections, metadata fields); the rubric is semantic
-(quality criteria evaluated by scoring). Objects include types such as
-`situation`, `charter`, `scenario-set`, `transcript`, and `resolution`.
+The category **Text** has the following structure:
 
-Morphisms are *pipeline operations*: typed transformations that consume input
-artifacts and produce output artifacts. The morphism
+- **Objects** are *soft types*: `(template, rubric)` pairs that define what a
+  well-formed artifact of a given kind looks like. The template is structural
+  (required sections, metadata fields); the rubric is semantic (quality criteria
+  evaluated by scoring). Objects include types such as `situation`, `charter`,
+  `scenario-set`, `transcript`, and `resolution`.
+- **Morphisms** are *pipeline operations*: typed transformations that consume
+  input artifacts and produce output artifacts.
+- **Composition** is sequential wiring: if `f: A → B` and `g: B → C`, then
+  `g ∘ f: A → C` is the pipeline that runs f then g.
+- **Identity** on a type A is the pass-through operation that leaves an artifact
+  unchanged.
+- **Monoidal structure**: `×` (cross product) is the monoidal product, with the
+  trivial empty artifact as unit. The category is symmetric monoidal — input
+  order does not affect the operation.
+
+The morphism
 
 ```
 Deliberate : charter × scenario-set × roster → transcript
@@ -53,7 +113,25 @@ Deliberate : charter × scenario-set × roster → transcript
 
 takes three inputs and produces one output. The annotation `{catalytic: roster}`
 marks the roster as non-consumed — it participates in the transformation without
-being altered, a dashed wire in the string diagram.
+being altered (a dashed wire in the string diagram). Catalytic inputs are
+comonoid objects — equipped with a copy map that lets them feed into multiple
+operations without depletion.
+
+**Two important refinements apply to all morphisms in this category.** First,
+every morphism is properly a *Kleisli arrow* of a nondeterminism monad: a
+pipeline operation is not a pure function `(Text, Meta) → (Text, Meta)` but a
+stochastic map `(Text, Meta) → M(Text, Meta)` where M captures the probability
+distribution over possible outputs (see
+[Decorated Texts, §Related Work](decorated-texts.md) for the full discussion).
+The constructions in this document are therefore constructions in the Kleisli
+category, not the base category. Second, the hom-sets carry graded information:
+not just "does this morphism exist?" but "at what confidence level does the
+output inhabit its target type?" This makes **Text** an *enriched category* over
+a confidence lattice (see Kelly, *Basic Concepts of Enriched Category Theory*,
+and the confidence propagation rules in [reference.md](reference.md)). The
+enrichment is what makes the soft type system compositional — confidence
+degrades monotonically through composition, and this degradation is tracked by
+the enriched hom-structure.
 
 Two morphism kinds are distinguished:
 
@@ -80,23 +158,34 @@ isomorphic to the terminal object, the funnel has collapsed without doing work.
 
 In a typed pipeline, `Unit` is the terminal type. Every pipeline stage has a
 unique morphism into Unit (discard all output). The `{discard: C}` annotation in
-palgebra resource equations is the morphism from C to Unit.
+palgebra resource equations marks the *site* where this morphism is applied —
+the point where an output is dropped from the pipeline.
 
 An **initial object** 0 has exactly one morphism from it to every object X.
 It is the universal source — anything can be generated from it, which means
 nothing is constrained.
 
-The *empty prompt* (or maximally ambiguous situation description) is initial:
-every text is reachable from it because no consistency constraint rules anything
-out. This is why the quality of the fan's input situation matters so much. A
-poorly framed situation is close to initial — the narrators have no surface to
-push against, and the scenarios they generate are unconstrained artifacts rather
-than genuine explorations of a determinate possibility space.
+Two complementary perspectives illuminate how this works in the pipeline:
 
-In type-theoretic terms, `False` (⊥) is the initial type: from an incoherent
+*Operationally*, the maximally ambiguous situation description is close to
+initial: when the input constrains nothing, the narrators have no surface to
+push against, and the scenarios they generate are unconstrained artifacts rather
+than genuine explorations of a determinate possibility space. This is "close to"
+rather than "exactly" initial because the uniqueness condition does not hold
+strictly — there is no single canonical way to generate a transcript from an
+empty prompt, only an unconstrained distribution over possible transcripts.
+
+*Type-theoretically*, `False` (⊥) is the initial type: from an incoherent
 premise, any conclusion follows. The practical analog is a charter that contains
 a contradiction: a committee chartered on inconsistent premises can justify any
-resolution, which is precisely no justification at all.
+resolution, which is precisely no justification at all. This is a different
+pathology from the operational one — not "too little constraint" but "incoherent
+constraint" — but both move the pipeline toward initial-object behaviour, where
+the output carries no information traceable to the input.
+
+The quality of the fan's input situation can be understood as its distance from
+the initial object: a well-framed situation is far from initial (it constrains
+the pipeline's output space meaningfully), and a poorly framed one is close.
 
 ---
 
@@ -108,22 +197,39 @@ equipped with maps f: X → A and g: X → B factors uniquely through A × B via
 pairing ⟨f, g⟩: X → A × B. The product is the *minimal object* from which both
 A and B are recoverable.
 
-**The charter as product of situation and scenario-set.** The charter carries
-both the framed problem and the scenario context into the deliberation. Its two
-projections recover the original situation (strip the scenarios) and the
-scenario-set (strip the problem framing). Any pipeline operation needing both —
-the Deliberate operation most prominently — routes through the charter. This is
-not merely organisational: if the charter garbles one of its projections, the
-downstream operation is working in a degraded product, and provenance breaks.
+**The charter as approximate product of situation and scenario-set.** In the
+composed pipeline, the charter carries both the framed problem and the scenario
+context into the deliberation. A well-constructed charter should support two
+approximate projections: recover the original situation framing (strip the
+scenarios) and recover the scenario-set context (strip the problem framing). Any
+pipeline operation needing both — the Deliberate operation most prominently —
+routes through the charter.
 
-**The transcript as product of character positions.** The deliberation transcript
-is the product of all five character position-streams. Each character's
-contribution is a projection: π_Maya: transcript → Maya's position record, and
-so on for Frankie, Joe, Vic, and Tammy. The universal property of the product
-says that any operation reasoning about what a character said must route through
-the transcript. A transcript that summarises rather than records is a *lossy*
-product: the projections are no longer faithful, and auditability is lost. This
-is why the palgebra insists transcripts are full records.
+In practice, the charter is produced by a `DraftCharter` transformation that
+*compresses* its inputs, not a genuine categorical product that preserves them
+faithfully. The projections are lossy: the charter summarises and reframes
+rather than merely packaging. This means the charter is a product *target* — a
+design criterion that says "both the situation and the scenario-set should be
+recoverable from the charter" — rather than a product *fact*. The charter rubric
+can enforce this: a charter that garbles either projection scores lower on
+completeness, and the quality gate catches it. The product structure is
+maintained by design discipline, not by categorical necessity. (This laxness is
+characteristic of the domain: see §1 on approximate coherence.)
+
+**The transcript as approximate product of character positions.** The
+deliberation transcript carries all five character position-streams. Each
+character's contribution defines an approximate projection: π_Maya:
+transcript → Maya's position record, and so on for Frankie, Joe, Vic, and
+Tammy. The product interpretation says that any operation reasoning about what
+a character said must route through the transcript.
+
+The transcript is closer to a genuine product than the charter, because it is a
+*full record* rather than a summary: the template requires that all speech acts
+are preserved verbatim. A transcript that summarises rather than records is a
+*lossy* product: the projections are no longer faithful, and auditability is
+lost. This is why the palgebra insists transcripts are full records — the
+product structure is worth maintaining, and it is maintained by the structural
+constraint (the template), not by any abstract guarantee.
 
 ---
 
@@ -180,8 +286,10 @@ e: E → A such that f ∘ e = g ∘ e, universal among all such objects. The
 equalizer picks out the *subobject of A where f and g agree*.
 
 **Cross-scenario triangulation.** Let A be a collection of situation
-descriptions, B the space of factual claims, and let f and g be the
-claim-extraction maps of two different narrators. The equalizer E is the
+descriptions, B the space of factual claims, and let f and g be claim-extraction
+maps of two different narrators. (These maps are not yet formalized as named
+operations in the palgebra resource equations — they are *potential* operations
+that the equalizer construction motivates defining.) The equalizer E is the
 sub-collection of situation descriptions on which both narrators produce the
 same claim — the *zone of uncontested framing*. Claims in the equalizer are
 load-bearing: they survive independent lenses and deserve the most scrutiny in
@@ -199,10 +307,12 @@ both f and g inject consistently.
 
 **The resolution as quotient of competing positions.** Let A be the space of
 situations, B the space of position-texts, and let f and g be two characters'
-interpretation maps from shared evidence. The coequalizer Q is the resolution
-that identifies f(a) and g(a) for every situation a — the text in which the
-distinction between the two characters' framings has been absorbed into a
-justified commitment.
+interpretation maps from shared evidence. (As with the claim-extraction maps
+above, these interpretation maps are a categorical reading of what the
+characters do, not named operations in the current resource equations.) The
+coequalizer Q is the resolution that identifies f(a) and g(a) for every
+situation a — the text in which the distinction between the two characters'
+framings has been absorbed into a justified commitment.
 
 The funnel constructs this coequalizer. The adversarial deliberation is the
 process of finding the right quotient: coarse enough to subsume both positions,
@@ -254,6 +364,13 @@ is therefore the quality of the common base C in the pushout diagram.
 
 The two core pipeline operations are *spiders* in the string diagram calculus:
 nodes of higher arity that generalise the basic binary product and coproduct.
+(A note on terminology: this document names these by the *type-theoretic*
+construction they instantiate — the fan is a coproduct spider because it
+produces a coproduct, the funnel is a product spider because it constructs a
+product. In [duality-and-composition.md](duality-and-composition.md), they are
+named by their *algebraic* role in the Frobenius structure — the fan is a
+multiplication (monoid), the funnel a comultiplication (comonoid). Both
+conventions are standard; the difference is one of perspective, not substance.)
 
 **The fan (coproduct spider / one-to-many)** injects a single situation into
 multiple distinct narrative contexts:
@@ -322,6 +439,44 @@ reflects particular deliberation dynamics rather than the structure of the
 situation. The Probe separates these empirically, which is what Deleuzian
 repetition does philosophically: difference produced by repetition reveals the
 topology of the space.
+
+The eigenform concept connects the categorical treatment to a broader picture of
+meaning in LLM-mediated systems. Concepts in a human-LLM exchange are themselves
+eigenforms of the conversational process — temporary stabilisations produced by
+recursive interaction, not fixed objects stored in either participant
+([From Semantic Potential to Situated Sense](../wild/potential-to-sense/from_semantic_potential_to_situated_sense.md)).
+The pipeline's categorical structures are the *structural* eigenforms: the
+patterns of composition, projection, and injection that stabilise across runs
+even when the *content* varies. This is why the lax/approximate reading of the
+categorical constructions (§1) is not a weakness but a feature — it correctly
+reflects a domain where structure composes reliably and content does not.
+
+---
+
+## 10. Connections
+
+The categorical treatment of the committee pipeline has a complementary
+game-theoretic formalization in
+[The Adversarial Committee as an Open Game](../wild/committee-games/committee-as-open-game.md).
+Where this document asks "what categorical constructions does the pipeline
+instantiate?", the open-game treatment asks "what does equilibrium mean for a
+committee whose goal is coverage rather than utility maximization?" The pushout
+treatment of resolutions in §7 — amalgamation of competing positions over shared
+evidence — is closely related to the game-theoretic equilibrium structure: both
+describe the resolution as the minimal object that honestly integrates all
+perspectives. The backward-flowing evaluation signal in the open-game framework
+(rubric scores as continuation functions) provides the strategic dimension that
+the categorical treatment leaves implicit.
+
+The distributional type membership explored in
+[Furry Logic](../wild/diary/2026-03-13-furry-logic.md) extends the soft type
+system from graded single-type membership to distributional membership across
+type-space. In the categorical framing, this means objects are not points in a
+type lattice but probability measures on type-space, and morphisms must respect
+this distributional structure. The enriched category structure (§2) is the
+natural home for this extension: the confidence lattice over which **Text** is
+enriched would generalise to a richer structure that tracks distributional type
+information through composition.
 
 ---
 
