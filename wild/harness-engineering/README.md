@@ -1,5 +1,7 @@
 # Harness Engineering
 
+> **Status**: DORMANT — Runtime harness engineering notes. Candidate for move to references/. See [wild triage report](../../agent/archive/wild-triage-2026-03.md).
+
 Ideas and notes collected from the talk **"No Vibes Allowed: Solving Hard Problems in Complex Codebases"** by Dex Horthy (HumanLayer), presented at the AI Engineer Code Summit, November 2025.
 
 ## Source Video

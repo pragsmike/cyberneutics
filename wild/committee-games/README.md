@@ -1,5 +1,7 @@
 # Committee Games
 
+> **Status**: ACTIVE — Game-theoretic formalization of the adversarial committee; ready for publication as bridge paper for ACT community. See [wild triage report](../../agent/archive/wild-triage-2026-03.md).
+
 A translation of the cyberneutics adversarial committee into the language of compositional game theory (open games), building a bridge to the ACT / Cybercat research community.
 
 ## Contents

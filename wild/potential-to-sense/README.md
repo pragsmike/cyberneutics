@@ -1,5 +1,7 @@
 # From Semantic Potential to Situated Sense
 
+> **Status**: ACTIVE — Polished essay ready for immediate promotion to essays/. See [wild triage report](../../agent/archive/wild-triage-2026-03.md).
+
 An essay arguing that meaning in LLM interactions is co-produced in conversation rather than stored in model weights or extracted by prompting. The essay develops the claim through distributional semantics, Pask's conversation theory, von Foerster's eigenforms, and a cybernetic model of the human-LLM control loop.
 
 ## Contents

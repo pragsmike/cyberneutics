@@ -1,5 +1,7 @@
 # wild/cybernetics — Pask, von Foerster, and narrative thinking
 
+> **Status**: ACTIVE — Mature reference material suitable for graduation to essays/ or applications/. See [wild triage report](../../agent/archive/wild-triage-2026-03.md).
+
 Material on Gordon Pask, Heinz von Foerster, and conversation theory. We keep it here to learn **what Pask can add to our picture of narrative thinking and computing**.
 
 Conversation theory offers a way to think about human–machine communication that is done in **natural language**, rather than the stilted not-even-pidgin languages we had before. It is closer to a conversation between people—except that only the **person** truly has "understanding." What passes for "understanding" in the LLM, or in the engineered system composed from them, is nothing like it. Pask’s framework (teachback, entailment meshes, conversational architecture) still gives a vocabulary and a target: we can ask how far a given system approximates the structure of a learning conversation, and where it necessarily falls short.

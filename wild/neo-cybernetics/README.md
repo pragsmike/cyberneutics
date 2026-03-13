@@ -1,5 +1,7 @@
 # wild/neo-cybernetics — Neo-Cybernetics and cyberneutics
 
+> **Status**: DORMANT — Reference material on the Neo-Cybernetics initiative. Candidate for move to references/ post-WS-4. See [wild triage report](../../agent/archive/wild-triage-2026-03.md).
+
 Material on the **Neo-Cybernetics** initiative: a summary of the Neo-Cybernetics Manifesto and analysis of how the initiative relates to cyberneutics.
 
 **Intake convention:** See [about-the-neo-cybernetics-initiative.md](about-the-neo-cybernetics-initiative.md) for provenance and context before drawing on this material. Content here is not yet settled methodology.

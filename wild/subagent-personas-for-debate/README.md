@@ -1,5 +1,7 @@
 # Subagent Personas for Debate: Coordination & Architecture
 
+> **Status**: SUPERSEDED — Content absorbed into research programs. Archive with extraction in WS-4. See [wild triage report](../../agent/archive/wild-triage-2026-03.md).
+
 > **Superseded.** The content of this document has been incorporated into the research programs:
 > - [committee-implementation-taxonomy.md](../../research-programs/committee-implementation-taxonomy.md) — the design space and three implementation tiers
 > - [agent-independence.md](../../research-programs/agent-independence.md) — the experimental program for testing subagent-based deliberation

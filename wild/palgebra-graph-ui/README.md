@@ -1,5 +1,7 @@
 # Palgebra Graph Visualization: The UX of Computational Structure
 
+> **Status**: ACTIVE — UX/UI concepts for visualizing computational structure via heat encoding. Keep in wild; prioritize for Q2 implementation. See [wild triage report](../../agent/archive/wild-triage-2026-03.md).
+
 *Extracted from the 2026-02-26 field notes.*
 
 ## Kanban vs. Palgebra Graphs

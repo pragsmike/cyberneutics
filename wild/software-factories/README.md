@@ -1,5 +1,7 @@
 # Software Factories
 
+> **Status**: DORMANT — Investigation of dark factory workflows and palgebra formalism as typed specification language. Keep in wild; clarify research direction. See [wild triage report](../../agent/archive/wild-triage-2026-03.md).
+
 Can we build a dark factory coding agent workflow using palgebra?
 
 NLSpecs as used by StrongDM are restricted GraphViz DOT files.

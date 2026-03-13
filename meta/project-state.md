@@ -63,7 +63,19 @@ Pass 1 audit phase complete (2026-03-13). Reports:
 - WS-3 research program triage: `agent/archive/research-program-triage-2026-03.md` — all 8 programs relevant; ablation study and agent-independence ready to start.
 - WS-7 rubric extensions: `agent/rubrics/repo-consistency.md` — draft of 5 new dimensions (internal consistency, currency, pipeline velocity, formal consistency, practical validation).
 
-Next: mg reviews reports → WS-4 remediation execution → Pass 2 (WS-5/WS-6 wild content).
+Pass 2 complete (2026-03-13). mg reviewed Pass 1 findings and approved remediation (directive: "don't reorder the essays"). Completed:
+- WS-4 editorial remediation:
+  - Character roster introduction added to `essays/README.md` (Note on the Committee Characters section).
+  - Principles vs. Instantiations section added to `essays/05-the-synthesis.md`.
+  - Pask forward reference resolved in `essays/05-the-synthesis.md` (Essay 11 callout).
+  - Reading difficulty note added to theorist path in `essays/README.md`.
+  - Concepts and Definitions index table (19 entries) added to `essays/README.md`.
+  - Status and Evolution section rewritten with validated/theoretical/gaps distinction.
+  - Societies of Thought arXiv DOI added to README entry.
+- WS-5 wild triage: `agent/archive/wild-triage-2026-03.md` — 2 directories ready to promote (potential-to-sense, committee-games); 7 graduation-ready within 4 weeks; 4 remain active research; 1 superseded.
+- WS-6 wild cleanup: Status notes added to all 12 wild subdirectory READMEs. Status indicators added to `wild/README.md` with triage report link.
+
+Sprint status: **Complete**. Remaining items are longer-term (worked example, essay promotions from wild/, Bruner edits 2/5/8) and belong in future sprints.
 
 ## Scheduled reviews
 

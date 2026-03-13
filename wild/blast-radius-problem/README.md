@@ -1,5 +1,7 @@
 # The Blast Radius Problem in Declarative Systems
 
+> **Status**: ACTIVE — Explores role-differentiation as load-bearing architecture for asymmetric failure modes. Keep in wild; create design doc if Ops contributor available. See [wild triage report](../../agent/archive/wild-triage-2026-03.md).
+
 *Extracted from the 2026-02-26 field notes.*
 
 ## The Context

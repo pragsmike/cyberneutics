@@ -51,6 +51,8 @@ If you want to understand the theoretical synthesis:
 8. **[Conversation Theory](./11-conversation-theory.md)** (~13 min) - Pask's micro-mechanics of understanding: teachback, entailment meshes, and conversational architecture
 9. **[Decisions Under Uncertainty](./10-decisions-under-uncertainty.md)** (~12 min) - How the duality of exploration and commitment yields rigorous decision-making
 
+Essays 06–08 are more technically demanding than the rest of the collection — Deleuzian philosophy (06), Boland's narrative engineering (07), and the methodology-to-formalism bridge (08) each require sustained attention. If Essay 06 feels too dense, you can safely skip to Essay 07; it's largely independent.
+
 The path above is a minimal theorist sequence. Also recommended: **[Essay 07: Narrative Engineering](./07-bolands-narrative-engineering.md)** (~22 min; independent convergence from philosophy validates the synthesis) and **[Essay 09: Narrative Immune Systems](./09-narrative-immune-systems.md)** (~8 min; extends the formalism to trust boundaries and evaluation as immune function).
 
 ### For Skeptics (Show Me Why This Matters)
@@ -72,6 +74,10 @@ If you want the precise machinery underneath the methodology:
 4. **[From Methodology to Formalism](./08-from-methodology-to-formalism.md)** (~15 min) - The bridge: how the philosophical foundations and the algebra describe the same phenomenon
 5. **[Narrative Immune Systems](./09-narrative-immune-systems.md)** (~8 min) - Evaluation as immune function, trust boundaries, the organ/bath distinction
 6. **[Decisions Under Uncertainty](./10-decisions-under-uncertainty.md)** (~12 min) - The fan/funnel duality, decision monads, and rigorous decision-making through composition and iteration
+
+### A Note on the Committee Characters
+
+Several essays reference five named committee members — **Maya** (devil's advocate, paranoid realism), **Frankie** (opportunity scout, idealism), **Joe** (historian, continuity guardian), **Vic** (evidence checker, evidence prosecutor), and **Tammy** (systems analyst, systems thinking). These characters are formally defined in the [Adversarial Committees](../artifacts/adversarial-committees.md) artifact with detailed propensity profiles in the [Character Propensity Reference](../artifacts/character-propensity-reference.md). They appear throughout Essays 07–11 and in the [Stochastic Imps](./the-stochastic-imps-of-happenstance.md) character sheets. If you encounter them before reading the artifacts, the short version: each character is designed to "win" by finding a specific kind of problem (Maya finds hidden risks, Vic demands evidence, Frankie checks values alignment, Joe checks precedent, Tammy maps system effects).
 
 The essays in this directory establish *why* narrative engines need narrative engineering. The palgebra provides *how, precisely* — a formal language where adversarial committees are transformation morphisms, rubric evaluation is enrichment, and human review gates are collapse operators. [From Methodology to Formalism](./08-from-methodology-to-formalism.md) bridges the two vocabularies explicitly. See the [palgebra directory](../palgebra/) for the full formalism.
 
@@ -276,7 +282,7 @@ The essays in this directory establish *why* narrative engines need narrative en
 
 ### [Societies of Thought: From Neural Evidence to Methodological Action](./societies-of-thought-synthesis.md)
 
-**The validation**: Analyzes how recent research on "Societies of Thought" provides empirical backing for Cyberneutics techniques (adversarial roles, perspective switching).
+**The validation**: Analyzes how recent research on "Societies of Thought" ([arXiv:2601.10825](https://arxiv.org/abs/2601.10825), Google/UChicago/Santa Fe Institute) provides empirical backing for Cyberneutics techniques (adversarial roles, perspective switching).
 
 **Key insight**: Surprise markers in discourse correlate with better reasoning. Adversarial committees are engines for generating this surprise (entropy reduction).
 
@@ -387,6 +393,34 @@ These remain directions for future essays. The practical techniques are document
 
 ---
 
+## Concepts and Definitions Index
+
+The [Glossary](./glossary.md) provides one-sentence definitions for 20 key terms. The table below maps core concepts to their primary definition locations and the essays that develop them further.
+
+| Concept | Defined in | Used across | Short description |
+|---------|-----------|-------------|-------------------|
+| Narrative computing | [Essay 01](./01-why-narrative-engines-change-everything.md) | 02, 05, 07, History | Machine generating coherent text by traversing latent space |
+| Narrative engineering | [Essay 07](./07-bolands-narrative-engineering.md) | 01, 08, 09 | Discipline composing narrative systems through redundancy and feedback |
+| Cybernetic hermeneutics | [Essay 05](./05-the-synthesis.md) | History, 08 | Interpretation as regulated, dynamic feedback loop |
+| Sense-making (Situation-Gap-Bridge) | [Essay 03](./03-sensemaking-101.md) | 04, 05, 11 | Dervin's model: people encounter gaps, construct bridges |
+| Second-order cybernetics | [Essay 04](./04-cybernetics-and-observation.md) | 05, 08, 11 | Cybernetics of observing systems; observer changes observed |
+| Eigenform | [Essay 04](./04-cybernetics-and-observation.md) | 05, 06, 11 | Stable distinction produced by recursive interaction |
+| Virtual/actual | [Essay 06](./06-deleuze-difference-repetition.md) | 05, 08 | Virtual: real potentials; actual: specific realized manifestation |
+| Game within a game | [Essay 02](./02-from-practice-to-theory.md) | 05, 07, 09 | Constructed local process imposing order against entropy |
+| Adversarial committee | [Essay 02](./02-from-practice-to-theory.md) | 07, 09, 10, Imps | Game structure with incompatible propensities forcing exploration |
+| Propensity | [Character Reference](../artifacts/character-propensity-reference.md) | 02, 07, Imps | Stable interpretive stance constraining engagement |
+| Teachback | [Essay 11](./11-conversation-theory.md) | 05 | Demonstrate understanding by teaching back in own terms |
+| Entailment mesh | [Essay 11](./11-conversation-theory.md) | 05 | Non-hierarchical network of mutually-supporting concepts |
+| Decorated text | [Palgebra: Decorated Texts](../palgebra/decorated-texts.md) | 08, 09, 10 | Text-metadata pair carrying scores, provenance, type |
+| Soft types | [Essay 08](./08-from-methodology-to-formalism.md) | [Palgebra ref](../palgebra/reference.md) | Graded membership degrees, not boolean classification |
+| Enrichment morphism | [Essay 08](./08-from-methodology-to-formalism.md) | [Palgebra ref](../palgebra/reference.md) | Operation updating metadata while leaving content unchanged |
+| Collapse operator / human gate | [Essay 08](./08-from-methodology-to-formalism.md) | 09, 10 | Projects graded uncertainty to crisp commitment |
+| Narrative immune system | [Essay 09](./09-narrative-immune-systems.md) | 10 | Generator-discriminator architecture with graded recognition |
+| Fan/funnel duality | [Essay 10](./10-decisions-under-uncertainty.md) | [Palgebra ref](../palgebra/reference.md) | Fan diverges exploring; funnel converges to commitment |
+| Robert's Rules | [Artifact](../artifacts/roberts-rules-forcing-function.md) | 02, 05, 07 | Parliamentary procedure preventing premature convergence |
+
+---
+
 ## Future Directions
 
 Possible future essays, not yet written:
@@ -418,15 +452,15 @@ Possible future essays, not yet written:
 
 ## Status and Evolution
 
-These essays represent an emerging theoretical framework. The core insights are stable (narrative computing as primitive, narrative engineering as discipline, cybernetic sense-making, iterative co-evolution). The formalization is now bridged to the essay series via [Essay 08](./08-from-methodology-to-formalism.md).
+These essays represent an emerging theoretical framework at different stages of maturity.
 
-**Feedback welcome**. If these essays:
-- Clarify something → let us know what clicked
-- Confuse something → let us know what needs better explanation  
-- Miss something → let us know what's not covered
-- Get something wrong → let us know what needs correction
+**Validated through practice**: The core methodology — adversarial committees, parliamentary procedure, independent evaluation, iterative refinement — has been used in real deliberations (see [examples/](../examples/)) and produces measurably different outputs than naive prompting. The narrative computing framing (Essays 01–02) and sense-making foundations (Essays 03–05) are stable.
 
-This is living documentation that should improve as understanding deepens.
+**Theoretically grounded, empirically early**: The Deleuzian foundations (Essay 06), the Boland convergence (Essay 07), and the conversation-theory synthesis (Essay 11) draw on established academic frameworks but the specific claims about how they apply to LLM collaboration have not been independently tested. The formalism (Essay 08, palgebra) is internally consistent and covers the existing methodology, but has not yet been validated against workflows beyond the adversarial committee pattern.
+
+**Known gaps**: No controlled ablation study yet comparing methodology components in isolation. No longitudinal data on whether the methodology's benefits persist as users gain experience. The failure mode analysis (When This Methodology Fails) is based on theoretical reasoning and limited practice, not systematic empirical study. See [research programs](../research-programs/) for the active agenda addressing these gaps.
+
+**Feedback welcome**. If these essays clarify something, confuse something, miss something, or get something wrong — let us know. This is living documentation that should improve as understanding deepens.
 
 ## Contributing
 

@@ -1,5 +1,7 @@
 # Residuality Theory
 
+> **Status**: DORMANT — Mature reference material suitable for graduation to essays/ or applications/. See [wild triage report](../../agent/archive/wild-triage-2026-03.md).
+
 > "Every time I repeat the walk I notice small differences from my previous experiences, and those small differences add up to solid knowledge about this walk." — Barry O'Reilly
 
 Barry O'Reilly's Residuality Theory is a philosophy of software architecture that treats **residues** — what remains after a stressor impacts a system — as the fundamental unit of architectural design. Rather than designing for anticipated failures, you design with residues as building blocks so the system can survive stressors it wasn't designed for: antifragility rather than correctness.

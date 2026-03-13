@@ -1,5 +1,7 @@
 # The Cyberneutics Director: Deliberative Routing Architecture
 
+> **Status**: ACTIVE — Conceptual deliberative routing architecture for multi-agent workflows. Keep in wild; escalate if orchestration prioritized. See [wild triage report](../../agent/archive/wild-triage-2026-03.md).
+
 *Extracted from the 2026-02-26 field notes.*
 
 ## Concept
