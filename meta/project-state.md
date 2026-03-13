@@ -55,7 +55,15 @@ Complete as of 2026-03-07. All items resolved:
 
 ## Active sprint
 
-A refactoring sprint plan is at `agent/prompts/refactoring-sprint-2026-03.md`. It defines seven workstreams across two passes (core content first, then wild). Workstreams 1–3 can run in parallel. See that document for details.
+A refactoring sprint plan is at `agent/prompts/refactoring-sprint-2026-03.md`. It defines seven workstreams across two passes (core content first, then wild).
+
+Pass 1 audit phase complete (2026-03-13). Reports:
+- WS-1 editorial review: `agent/archive/editorial-review-report-2026-03.md` — all 7 dimensions score 2/3; 10-item remediation plan.
+- WS-2 cross-reference audit: `agent/archive/cross-reference-audit-2026-03.md` — zero broken links; Bruner edit plan partially executed (6/9).
+- WS-3 research program triage: `agent/archive/research-program-triage-2026-03.md` — all 8 programs relevant; ablation study and agent-independence ready to start.
+- WS-7 rubric extensions: `agent/rubrics/repo-consistency.md` — draft of 5 new dimensions (internal consistency, currency, pipeline velocity, formal consistency, practical validation).
+
+Next: mg reviews reports → WS-4 remediation execution → Pass 2 (WS-5/WS-6 wild content).
 
 ## Scheduled reviews
 
@@ -65,7 +73,7 @@ A refactoring sprint plan is at `agent/prompts/refactoring-sprint-2026-03.md`. I
 
 - A full empirical failure case for `essays/when-methodology-fails.md` still depends on real practice data.
 - Some evidence-building tasks in `research-programs/` still depend on running fresh situation-directory workflows rather than repo-local examples.
-- The Bruner-Kahneman diary entry (`wild/diary/2026-02-17-bruner-kahneman-synthesis.md`) contains an unexecuted 9-edit plan for essay cross-references. Decision needed: execute, revise, or archive.
+- The Bruner-Kahneman diary entry (`wild/diary/2026-02-17-bruner-kahneman-synthesis.md`) contains a 9-edit plan for essay cross-references, of which 6 have been applied. Edits 2, 5, and 8 remain unapplied. Decision needed: complete remaining edits, revise, or close.
 
 ## Docs still needing sweep
 
