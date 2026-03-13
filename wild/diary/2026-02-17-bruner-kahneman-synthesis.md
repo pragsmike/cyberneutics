@@ -10,13 +10,13 @@
 
 ### 1. Bruner's Paradigmatic/Narrative Dichotomy as Master Frame
 
-Jerome Bruner's two irreducible modes of thought — **paradigmatic** (logico-scientific) and **narrative** — map onto multiple dichotomies that run through the Cyber-Sense materials:
+Jerome Bruner's two irreducible modes of thought — **paradigmatic** (logico-scientific) and **narrative** — map onto multiple dichotomies that run through the Cyberneutics materials:
 
 | Paradigmatic | Narrative |
 |---|---|
 | Symbolic AI / production rules | Neural networks / linear algebra |
 | Kahneman's System 2 (slow, deliberate) | Kahneman's System 1 (fast, associative) |
-| mg's Cyber-Sense path (cybernetics, control theory, formal evaluation) | Boland's Narrative Engineering path (continental philosophy, Gödel as parable) |
+| mg's Cyberneutics path (cybernetics, control theory, formal evaluation) | Boland's Narrative Engineering path (continental philosophy, Gödel as parable) |
 | Explainability demand (show me the logic chain) | Observable discourse (surface reasoning through dialog) |
 | GOFAI / symbolic tradition | Connectionist / deep learning tradition |
 
@@ -27,7 +27,7 @@ Once this frame is in hand, existing materials can be "seen stereoscopically" �
 - **System 1** = single forward pass through trained weights. Fast, cheap, associative, pattern-completing. This is what a neural network does natively — and what LLMs do on base inference.
 - **System 2** = iterative loops routing System 1 outputs through additional checking, comparison, and state-holding. Expensive because you're running many passes with executive coordination.
 - At the neural level: individual neocortical columns are fast pattern-matchers (miniature piles of linear algebra). System 1 is a single feedforward sweep through them. System 2 is sustained recurrent activity composing, comparing, and orchestrating results across many columns — "piles of piles" doing logical reasoning at greater energy cost.
-- **LLM parallel**: Base inference is System 1. Chain-of-thought, adversarial committees, and the Societies of Thought internal dialog all induce System 2 behavior in a System 1 substrate — forcing multiple passes with state maintenance. The Societies of Thought paper shows reasoning models learn via RL to do internally what Cyber-Sense does externally.
+- **LLM parallel**: Base inference is System 1. Chain-of-thought, adversarial committees, and the Societies of Thought internal dialog all induce System 2 behavior in a System 1 substrate — forcing multiple passes with state maintenance. The Societies of Thought paper shows reasoning models learn via RL to do internally what Cyberneutics does externally.
 
 ### 3. Explainability Objections Were Mislocated
 
@@ -70,7 +70,7 @@ The act of applying Bruner's framework to the existing materials is itself a dem
 - System 1 as single forward pass (the pile of linear algebra — fast, cheap, associative)
 - System 2 as iterative loops routing System 1 outputs through checking and comparison (piles of piles — neocortical columns composed and orchestrated at higher energy cost)
 - LLMs natively operate in System 1 (base inference is pattern completion). Chain-of-thought, adversarial committees, and Societies of Thought internal dialog all induce System 2 behavior in a System 1 substrate
-- The Societies of Thought paper shows reasoning models learn via RL to do internally what Cyber-Sense methodology does externally through prompt engineering
+- The Societies of Thought paper shows reasoning models learn via RL to do internally what Cyberneutics methodology does externally through prompt engineering
 - This also maps to symbolic AI (paradigmatic/System 2) vs connectionist AI (narrative/System 1) — the 60-year AI debate was Bruner's dichotomy replayed as an engineering argument, with each side insisting its mode was "real" intelligence
 
 **Tone**: Maintain the essay's existing style — accessible but rigorous, with concrete examples.
@@ -81,7 +81,7 @@ The act of applying Bruner's framework to the existing materials is itself a dem
 
 **Location**: End of the Bruner/cognitive thread section, as a brief closing observation before transitioning to the next major section.
 
-**What to add**: A paragraph noting that Bruner's dichotomy itself functions as a sense-making tool — once in hand, existing materials slot into it and illuminate each other stereoscopically. This is Dervin's situation-gap-bridge model operating on the theoretical framework itself. The paradigmatic/narrative split organizes not just the content of the essays but the relationship between Cyber-Sense and Narrative Engineering, between symbolic and connectionist AI, between System 1 and System 2, between the explainability demand and the discourse-based answer.
+**What to add**: A paragraph noting that Bruner's dichotomy itself functions as a sense-making tool — once in hand, existing materials slot into it and illuminate each other stereoscopically. This is Dervin's situation-gap-bridge model operating on the theoretical framework itself. The paradigmatic/narrative split organizes not just the content of the essays but the relationship between Cyberneutics and Narrative Engineering, between symbolic and connectionist AI, between System 1 and System 2, between the explainability demand and the discourse-based answer.
 
 **Length**: ~150-200 words (one paragraph).
 
@@ -122,7 +122,7 @@ The act of applying Bruner's framework to the existing materials is itself a dem
 
 **Location**: In Part I ("The Convergence") or Part III ("What They're Missing"), whichever flows better.
 
-**What to add**: A brief note (~100-150 words) observing that the Societies of Thought findings dissolve the explainability problem from a different angle: what reasoning models do internally (simulate multi-agent dialog) is exactly what Cyber-Sense externalizes and makes observable. The internal process that critics wanted to inspect is, it turns out, dialog — and dialog can be surfaced, read, and evaluated. The explainability objection was asking to see inside a process that, when externalized, becomes naturally legible.
+**What to add**: A brief note (~100-150 words) observing that the Societies of Thought findings dissolve the explainability problem from a different angle: what reasoning models do internally (simulate multi-agent dialog) is exactly what Cyberneutics externalizes and makes observable. The internal process that critics wanted to inspect is, it turns out, dialog — and dialog can be surfaced, read, and evaluated. The explainability objection was asking to see inside a process that, when externalized, becomes naturally legible.
 
 ---
 
@@ -132,7 +132,7 @@ The act of applying Bruner's framework to the existing materials is itself a dem
 
 **Location**: In Section I ("Two Bridges to the Same Shore") or Section V ("Synthesis: The Complete Framework"), where the two paths are compared.
 
-**What to add**: A passage (~200-300 words) noting that Bruner's paradigmatic/narrative dichotomy names why the convergence happened. mg's path through Cyber-Sense was paradigmatic in method (cybernetics, control theory, information theory, formal protocols). Boland's path was narrative in method (continental philosophy, Gödel as philosophical parable, metaphor). Bruner's point is that neither mode reduces to the other and both are necessary. The convergence isn't coincidence — it's the two irreducible modes of thought, applied to the same domain, necessarily arriving at the same structural features. This also explains why the essay collection itself uses both modes (dialog scenes are narrative; information theory essay is paradigmatic) and why both are needed.
+**What to add**: A passage (~200-300 words) noting that Bruner's paradigmatic/narrative dichotomy names why the convergence happened. mg's path through Cyberneutics was paradigmatic in method (cybernetics, control theory, information theory, formal protocols). Boland's path was narrative in method (continental philosophy, Gödel as philosophical parable, metaphor). Bruner's point is that neither mode reduces to the other and both are necessary. The convergence isn't coincidence — it's the two irreducible modes of thought, applied to the same domain, necessarily arriving at the same structural features. This also explains why the essay collection itself uses both modes (dialog scenes are narrative; information theory essay is paradigmatic) and why both are needed.
 
 ---
 

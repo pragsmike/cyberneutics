@@ -27,6 +27,6 @@ resolution:
     vic: "YES (promising worth testing, not validated)"
     tammy: "YES (theory partially load-bearing; meta-stability gap)"
   signatures:
-    chair: "Committee (Cyber-Sense)"
+    chair: "Committee (Cyberneutics)"
     ratified_by: "User"
 ---

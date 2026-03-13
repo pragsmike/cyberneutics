@@ -5,7 +5,7 @@
 
 ## Rationale
 
-The fixed cyber-sense roster provides maximum diversity: paranoid realism (Maya), idealism (Frankie), continuity (Joe), evidence (Vic), systems thinking (Tammy). See `artifacts/character-propensity-reference.md`.
+The fixed cyberneutics roster provides maximum diversity: paranoid realism (Maya), idealism (Frankie), continuity (Joe), evidence (Vic), systems thinking (Tammy). See `artifacts/character-propensity-reference.md`.
 
 ## Composition notes
 

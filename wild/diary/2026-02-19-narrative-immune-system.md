@@ -104,7 +104,7 @@ Critical architectural clarification:
 
 - **Palgebra** = the algebra. Soft types, decorated texts, morphisms, propagation rules. The math. Doesn't care what you build with it.
 - **Immune system for texts** = one application of palgebra. Scores texts against rubrics, rejects failures, feeds back for remediation. An architecture described in palgebra's language.
-- **Cyber-Sense** = the methodology. Practices, habits, design principles. The immune system is one technique; committees, evaluation, remediation are others. Palgebra gives them a shared formal language.
+- **Cyberneutics** = the methodology. Practices, habits, design principles. The immune system is one technique; committees, evaluation, remediation are others. Palgebra gives them a shared formal language.
 
 The palgebra came *after* the practice. Theory in service of engineering. The origin: a person in front of a chat interface, getting back fluent confident plausible text that might be wrong, with no disciplined way to tell. Open loop, single model, no feedback, no discrimination. Immunodeficiency.
 

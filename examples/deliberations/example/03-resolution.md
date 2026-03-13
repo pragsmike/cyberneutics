@@ -13,6 +13,6 @@ resolution:
     vic: "YES"
     tammy: "YES"
   signatures:
-    chair: "Committee (Cyber-Sense)"
+    chair: "Committee (Cyberneutics)"
     ratified_by: "User"
 ---
