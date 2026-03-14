@@ -122,7 +122,10 @@ naturality conditions.
 - Deterministic sub-morphisms: enrichments (payload unchanged).
 
 **C.** State which results from Fritz we import:
-- Theorem 3.1: the category of Markov kernels is a Markov category.
+- Corollary 3.2: the Kleisli category of a symmetric monoidal affine
+  monad on a Markov category is again a Markov category. (Note: Fritz's
+  3.1 is a Proposition establishing that the Kleisli category is
+  symmetric monoidal; the Markov category result is Corollary 3.2.)
 - The treatment of conditional independence (relevant for scenario
   independence assumptions).
 - The copy/delete structure (relevant for catalytic inputs).

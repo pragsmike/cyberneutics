@@ -58,9 +58,10 @@ Here the answer is genuinely approximate. The charter compresses its inputs;
 the projections are lossy. The universal properties described in §§4–7 below
 are *design targets* that a well-constructed pipeline approximates, not
 theorems that the pipeline satisfies exactly. The Probe operation (§9) is the
-empirical test of how close the approximation is. Section 3.2 of the
-[remediation plan](remediation-plan.md) discusses how to give "approximate" a
-precise metric.
+empirical test of how close the approximation is. Section 4.1 below gives
+"approximate" a precise metric: the *reconstruction error* measures how much
+information the approximate projections lose, grounded in the rubric-based
+similarity scores the pipeline already uses for quality assessment.
 
 This situation is not a deficiency to be apologised for. It reflects a genuine
 feature of the domain. Meaning in LLM-mediated text processing is a temporary
@@ -490,51 +491,196 @@ lost. This is why the palgebra insists transcripts are full records — the
 product structure is worth maintaining, and it is maintained by the structural
 constraint (the template), not by any abstract guarantee.
 
+### 4.1 The approximation metric
+
+The preceding discussion calls the charter an "approximate product" and the
+transcript a "closer" one. Without a metric, "approximate" is vacuous — every
+function of two arguments could be called an "approximate product." This
+subsection gives the qualifier a precise meaning.
+
+**Reconstruction error.** For a candidate product P of types A and B, with
+approximate projections π̃₁ : P → A and π̃₂ : P → B and construction morphism
+c : A × B → P, define the *reconstruction error*:
+
+```
+ε(P) = E[ d_A(a, π̃₁(c(a, b))) ] + E[ d_B(b, π̃₂(c(a, b))) ]
+```
+
+where the expectations are over pipeline runs (since c, π̃₁, and π̃₂ are Markov
+kernels — stochastic maps — the expectation averages over their output
+distributions), and d_A, d_B are rubric-based similarity scores on the
+respective artifact types. If P were a genuine categorical product with faithful
+projections, the reconstruction error would be zero: constructing the product
+and projecting back would recover the original inputs exactly (up to equality of
+Markov kernels).
+
+The similarity scores d_A and d_B are not arbitrary — they are derived from the
+rubric's completeness criterion for the relevant type. The situation rubric
+defines what it means for a situation description to be complete; comparing an
+original situation with one reconstructed from the charter via π̃₁ measures how
+much the charter's compression lost. This grounds the metric in the same
+quality infrastructure the pipeline already uses for scoring.
+
+**What "approximate product to within ε" means.** The charter is an
+*approximate product of situation and scenario-set to within ε* when the
+reconstruction error ε(charter) is below the threshold ε. The threshold is a
+design target: the charter rubric's completeness criterion sets the acceptable
+loss. A charter that scores High on completeness has low reconstruction error; a
+charter that scores Low has high reconstruction error and should be caught by
+the quality gate.
+
+**Connection to the Probe.** The Probe operation (§9) provides empirical
+samples of the reconstruction error. Each Probe run produces a charter from the
+same inputs; comparing the N charters' projections against the original inputs
+gives N samples of ε(charter). The variance report quantifies:
+
+- The *mean* reconstruction error — how lossy is the charter on average?
+- The *variance* of reconstruction error — how stable is the compression?
+- Whether the error is *systematic* (the charter consistently loses the same
+  information) or *stochastic* (different runs lose different things).
+
+High mean error with low variance indicates a design problem: the charter
+template or DraftCharter prompt systematically discards important input
+structure. Low mean error with high variance indicates an engineering problem:
+the compression is adequate on average but unreliable. The Probe distinguishes
+these failure modes, which the categorical structure alone cannot.
+
+**The transcript's tighter bound.** The transcript has lower reconstruction
+error than the charter because its template requires verbatim preservation of
+all speech acts. The projections πₖ : transcript → positionₖ are extraction
+operations (filtering by speaker tag), not summarisation. For a well-formed
+transcript, the reconstruction error approaches zero — the projections are
+faithful, and the transcript approaches a genuine product. The template
+constraint is what enforces this: it is a structural guarantee rather than a
+statistical tendency, placing the transcript in the deterministic subcategory
+**Text**_det (§2a) for the purpose of projection.
+
 ---
 
 ## 5. Coproducts
 
-The **coproduct** A + B comes with *injection morphisms* i₁: A → A + B and
-i₂: B → A + B. Its universal property states: any object X equipped with maps
-f: A → X and g: B → X factors uniquely through A + B via [f, g]: A + B → X.
-The coproduct is a *disjoint union that retains provenance* — each element
-remembers which component it came from.
+The **coproduct** A + B comes with *injection morphisms* ι₁: A → A + B and
+ι₂: B → A + B. Its universal property states: for any object X and any family
+of morphisms fₖ: Aₖ → X, there exists a unique morphism [f₁,...,fₙ]: A₁ + ⋯ + Aₙ → X
+such that [f₁,...,fₙ] ∘ ιₖ = fₖ for each k. The coproduct is a *disjoint
+union that retains provenance* — each element remembers which component it came
+from.
 
-**The scenario-set as coproduct of scenarios.** The fan produces four scenarios
-(Continuity, Disruption, Opportunity, Constraint). Their coproduct is the
-`scenario-set`:
+### 5.1 The scenario-set as coproduct of scenarios
+
+The fan produces four scenarios (Continuity, Disruption, Opportunity,
+Constraint). Their coproduct is the `scenario-set`:
 
 ```
 scenario-set = scenario_C + scenario_D + scenario_O + scenario_K
 ```
 
-Each injection carries metadata: the source narrator, the assumption-set, the
-divergence axis. This is the *decorated coproduct* — the injections are not bare
-inclusions but carry the provenance annotations that make scenarios
-distinguishable in committee deliberation. When Fong's decorated cospans appear
-in the palgebra formalism, this is the operative site: the decorations on the
-injection morphisms are exactly the assumption-annotations.
+**The injections, precisely.** Each injection ιₖ : scenarioₖ → scenario-set is
+the operation that:
 
-The universal property has direct operational significance: any pipeline
-operation that handles the full scenario-set — coverage assessment, charter
-drafting, committee deliberation — can be defined *componentwise* (by specifying
-what it does with each scenario) and uniquely extended to the full set. This is
-what licenses the committee's scenario-by-scenario reasoning as a valid method
-for producing a resolution about the whole set.
+1. Tags the scenario with its index k ∈ {C, D, O, K}.
+2. Attaches the source narrator's identity and assumption-set as provenance
+   metadata.
+3. Includes the tagged scenario in the collected set.
 
-**The variance report as coproduct of Probe runs.** Across N runs of the
-composed fan → funnel pipeline, each resolution is an injection into the
-variance report:
+In the Markov category setting (§2a), each ιₖ is a *deterministic morphism* in
+the sense of Fritz (Definition 10.1): it respects the copy structure, because
+tagging and including a scenario is a structural operation that adds no
+stochastic content. Copying a scenario then injecting it gives the same result
+as injecting it then copying the result — the injection commutes with the
+comonoid structure. This places the injections in the cartesian subcategory
+**Text**_det (Fritz, Remark 10.13), which is exactly where structural
+bookkeeping operations belong.
+
+The injections are not bare inclusions — they carry the provenance annotations
+(narrator, assumption-set, divergence axis) that make scenarios distinguishable
+in committee deliberation. This is the *decorated coproduct*: when Fong's
+decorated cospans appear in the palgebra formalism, this is the operative site.
+The decorations on the injection morphisms are exactly the
+assumption-annotations.
+
+**The universal property, precisely.** For any soft type X and any family of
+morphisms fₖ : scenarioₖ → X (one per scenario), there exists a morphism
+[f_C, f_D, f_O, f_K] : scenario-set → X such that:
 
 ```
-variance-report = resolution_1 + resolution_2 + ... + resolution_N
+[f_C, f_D, f_O, f_K] ∘ ιₖ = fₖ    for each k ∈ {C, D, O, K}
 ```
 
-The Map operation is the unique morphism out of this coproduct into the
-decision-landscape-map type. If the coproduct has one non-trivial component
-class (all resolutions isomorphic), the decision landscape has one basin. If it
+In the Markov category setting, "exists uniquely" means *equality as Markov
+kernels*: the induced morphism [f_C, f_D, f_O, f_K] is the unique stochastic
+map (up to equality of the corresponding probability distributions over
+X-artifacts) that extends the componentwise family. The factoring morphism
+operates by dispatching on the tag: given a tagged scenario in the coproduct,
+it reads the tag, selects the corresponding fₖ, and applies it. Since the tag
+is deterministic metadata, the dispatch is deterministic; the stochasticity
+lives entirely inside the individual fₖ.
+
+**What the universal property buys.** Any pipeline operation that handles the
+full scenario-set — coverage assessment, charter drafting, committee
+deliberation — can be defined *componentwise* (by specifying what it does with
+each scenario) and uniquely extended to the full set. This is what licenses the
+committee's scenario-by-scenario reasoning as a valid method for producing a
+resolution about the whole set. The categorical structure is not decorative
+here: it constrains the space of valid operations on scenario-sets to those
+that decompose into per-scenario operations composed with the injections. An
+operation that treats the scenario-set as an opaque blob, ignoring provenance
+tags, is *not* a valid morphism out of the coproduct.
+
+### 5.2 The variance report as coproduct of Probe runs
+
+Across N runs of the composed fan → funnel pipeline, each resolution is an
+injection into the variance report:
+
+```
+variance-report = resolution₁ + resolution₂ + ⋯ + resolution_N
+```
+
+Each injection ιⱼ : resolutionⱼ → variance-report tags the resolution with its
+run index j, the random seed or ordering parameters used, and any metadata
+distinguishing this run from the others. As with the scenario-set injections,
+these are deterministic morphisms in **Text**_det.
+
+**The Map operation as instance of the universal property.** The Map operation
+(see [duality-and-composition.md](duality-and-composition.md)) produces a
+decision-landscape-map from the variance report:
+
+```
+variance-report → decision-landscape-map  [Map]
+```
+
+Map is an instance of the coproduct's universal property. The construction is:
+
+1. For each resolution j, define a morphism fⱼ : resolutionⱼ → decision-landscape-map
+   that extracts the structural features of that resolution — its recommendation,
+   key claims, vote pattern, identified tensions — and records them as a data
+   point in the landscape.
+
+2. The family {f₁, ..., f_N} uniquely determines the factoring morphism
+   [f₁, ..., f_N] : variance-report → decision-landscape-map, which operates
+   componentwise: it processes each resolution according to its corresponding fⱼ,
+   then assembles the results into the landscape summary (basins, ridges,
+   load-bearing assumptions, robust actions).
+
+3. The universal property guarantees that this is the *unique* way to produce a
+   decision-landscape-map from the variance report that is consistent with the
+   per-resolution extractions. Any other morphism variance-report → decision-landscape-map
+   that agrees with each fⱼ on the corresponding component must equal Map (as
+   Markov kernels).
+
+In practice, the fⱼ are identical operations (the same structural-feature
+extraction applied to each resolution), so the factoring morphism is a uniform
+componentwise extension. This is the simplest case of the universal property —
+and the most common one in the palgebra, since the Probe deliberately runs the
+same pipeline under the same conditions, varying only the stochastic seed.
+
+**Interpreting the landscape through the coproduct.** If the coproduct has one
+non-trivial component class (all resolutions produce isomorphic structural
+features), the decision landscape has one basin — the decision is robust. If it
 has multiple non-isomorphic component classes, there are multiple basins and the
-ridge structure requires examination before commitment.
+ridge structure requires examination before commitment. The number of distinct
+component classes in the coproduct is a measure of decision-landscape
+complexity, directly derivable from the coproduct structure.
 
 ---
 
@@ -689,32 +835,159 @@ treatment, including the precise status of the monad claim.
 
 ---
 
-## 9. The Probe as Empirical Universal Property Test
+## 9. The Probe as Statistical Test of Categorical Properties
 
-The strict categorical product and coproduct satisfy their universal properties
-*uniquely up to isomorphism*. In practice the pipeline only approximately
-satisfies them: different model temperatures, ordering effects, and prompt
-variations mean there is not a unique "correct" transcript or a single
-determinate coproduct of scenarios. The pipeline constructs *a* product, not
-*the* product.
+The constructions in §§4–7 claim that pipeline objects satisfy categorical
+universal properties — that the charter is an approximate product, that the
+scenario-set is a coproduct, that the resolution is an approximate pushout.
+Section 4.1 gave "approximate" a metric (reconstruction error). This section
+develops the Probe operation as a *statistical test* of those claims, grounding
+the eigenform concept in the Markov category framework and connecting it to
+well-defined hypothesis testing.
 
-The **Probe** operation — running the composed pipeline N times from the same
-inputs — is the empirical test of how close the funnel comes to a genuine
-categorical product. Its output is a variance report: the coproduct of N
-resolutions. The Map operation synthesises this into a decision-landscape-map
-with basins (resolution-types that recur), ridges (boundaries where small input
-variations flip outcomes), and load-bearing assumptions (parameters whose
-variation produces basin-crossings).
+### The pipeline as Markov kernel
+
+The composed pipeline `M = Funnel ∘ Fan` is a morphism
+`M : situation → resolution` in **Text**. By the Markov category structure
+(§2a), M is a Markov kernel: it assigns to each input situation s a probability
+distribution M(s) over resolution-artifacts. Two runs of M on the same input
+produce different resolution texts, but both are samples from the same
+distribution M(s). The distribution is well-defined even though we cannot write
+it in closed form — it is determined by the pipeline's architecture, the model's
+stochastic generation process, and the template constraints.
+
+The key observation is that M(s) encodes everything the pipeline "knows" about
+situation s. The categorical properties of the pipeline — whether the charter
+is a product, whether the factoring morphisms are unique — are properties of
+M(s) as a distribution. They can therefore be *tested empirically* by sampling
+from M(s).
+
+### The Probe as Monte Carlo sampling
+
+The **Probe** operation runs M on the same input s a total of N times, producing
+resolutions r₁, r₂, ..., r_N. In the Markov category framework, this is a
+precise construction: the copy map `copy_situation` (§2a) produces N identical
+copies of s, and each copy is fed independently to M. The independence of Probe
+runs follows from the comonoid structure: copying then applying M to each copy
+independently is exactly what the Markov category axioms license. In Fritz's
+conditional independence framework (Fritz 2020, Section 12), the N outputs
+display the independence `r_i ⊥ r_j | s` for all i ≠ j — each resolution is
+conditionally independent of every other given the shared input.
+
+The N resolutions are therefore i.i.d. samples from M(s). The variance report
+is their coproduct (§5.2), and the Map operation synthesises it into a
+decision-landscape-map. The landscape's structure — basins, ridges,
+load-bearing assumptions — is an empirical estimate of the structure of M(s).
+
+### Eigenforms as support structure
 
 **Eigenforms** are the resolution-content present in every Probe run: the
-invariant sub-structure that the funnel reliably produces, regardless of
-trajectory. Eigenforms correspond to the "truly universal" part of the product —
-the content no morphism out of the product can fail to factor through.
-**Residues** are run-specific content: the trajectory-dependent part that
-reflects particular deliberation dynamics rather than the structure of the
-situation. The Probe separates these empirically, which is what Deleuzian
-repetition does philosophically: difference produced by repetition reveals the
-topology of the space.
+invariant sub-structure that the pipeline reliably produces regardless of the
+particular stochastic trajectory. In the Markov category framing, eigenforms
+are the *support structure* of the distribution M(s) — specifically, the
+features shared by all (or nearly all) elements in the support. If a
+recommendation appears in every one of N independent samples, it is almost
+certainly in the support of M(s); its presence is a structural feature of the
+distribution, not a stochastic accident.
+
+**Residues** are run-specific content: features that appear in some samples but
+not others. These are the trajectory-dependent parts that reflect particular
+deliberation dynamics — which character spoke first, which analogy happened to
+land, which rhetorical move shifted the vote — rather than the structure of the
+situation itself. The Probe separates eigenforms from residues empirically,
+which is what Deleuzian repetition does philosophically: difference produced by
+repetition reveals the topology of the space.
+
+The eigenform/residue distinction has a precise probabilistic interpretation.
+Let φ be a structural feature extractor (e.g., "extract the primary
+recommendation" or "extract the list of identified risks"). Then:
+
+- φ is an **eigenform** of M at s if `P[φ(r) = v | r ~ M(s)] ≈ 1` for some
+  value v — the feature is deterministic even though the full resolution is
+  stochastic. In the Markov category, this means φ ∘ M is a *deterministic
+  morphism* in the sense of Fritz (Definition 10.1): it respects the copy
+  structure, because applying it to two independent samples gives the same
+  result.
+
+- φ is a **residue** if the distribution of φ(r) under M(s) has high entropy
+  — the feature varies substantially across runs. The morphism φ ∘ M is
+  genuinely stochastic.
+
+This gives the eigenform concept a categorical home: eigenforms are the features
+for which the composed morphism φ ∘ M lands in the deterministic subcategory
+**Text**_det (Fritz, Lemma 10.12, Remark 10.13). The Probe empirically
+identifies which features are deterministic and which are stochastic.
+
+### Universal properties as distributional hypotheses
+
+The connection between eigenforms and universal properties is where the Probe
+becomes a genuine statistical test. Recall that the universal property of a
+product requires a *unique* factoring morphism: for any morphism h into the
+product's components, there is exactly one morphism through the product that
+recovers h. In the Markov category, "exactly one" means equality as Markov
+kernels — a single well-defined distribution.
+
+This uniqueness corresponds to a distributional property of M(s):
+
+**Unimodality hypothesis.** If the pipeline's construction satisfies the
+relevant universal property, then the distribution M(s) should have a single
+mode — one basin in the decision landscape. Multiple distinct modes (multiple
+basins) indicate that the factoring morphism is not unique: the pipeline
+produces categorically distinct resolution-types depending on the stochastic
+trajectory. This is a failure of the universal property.
+
+The Probe converts this into a testable statistical question:
+
+```
+H₀: M(s) is unimodal (universal property holds — one basin)
+H₁: M(s) is multimodal (universal property fails — multiple basins)
+```
+
+The test procedure is:
+
+1. Run the Probe N times, producing resolutions r₁, ..., r_N.
+2. Extract structural features: recommendations, key claims, vote patterns,
+   identified tensions.
+3. Cluster the resolutions by structural similarity.
+4. Test whether the clustering reveals one dominant cluster (unimodal) or
+   multiple distinct clusters (multimodal).
+
+The number of distinct component classes in the variance report's coproduct
+(§5.2) is the empirical estimate of the number of modes. One class means the
+decision is robust — the universal property holds approximately. Multiple
+classes means the decision landscape has structure that requires examination
+before commitment.
+
+### What the Probe measures, precisely
+
+The Probe provides three distinct measurements, each corresponding to a
+different categorical property:
+
+**Mean reconstruction error** (§4.1) tests how close the pipeline's
+construction is to satisfying the universal property. High mean error means
+the construction systematically fails — the charter loses too much information,
+the projections are too lossy. This is a property of the pipeline's *design*
+(templates, prompts, model choice).
+
+**Variance of reconstruction error** tests the *stability* of the construction.
+Low mean with high variance means the pipeline approximates the universal
+property on average but unreliably — some runs produce faithful products, others
+don't. This is an *engineering* problem (temperature settings, prompt
+sensitivity) rather than a design problem.
+
+**Number of modes** tests the *uniqueness* of the factoring morphism. Multiple
+modes with low intra-mode variance means the pipeline has multiple stable
+operating points — it reliably produces one of several categorically distinct
+outputs, and which one depends on the stochastic trajectory. This is the most
+consequential finding: it means the decision landscape has genuine structure
+(ridges, basins) that the single-run pipeline obscures.
+
+These three measurements decompose the gap between the pipeline's actual
+behaviour and the ideal categorical construction into independently actionable
+components. The categorical structure tells us *what to measure*; the Probe
+provides the *samples*; standard statistical methods provide the *test*.
+
+### Connection to broader eigenform theory
 
 The eigenform concept connects the categorical treatment to a broader picture of
 meaning in LLM-mediated systems. Concepts in a human-LLM exchange are themselves
@@ -723,11 +996,15 @@ recursive interaction, not fixed objects stored in either participant
 ([From Semantic Potential to Situated Sense](../wild/potential-to-sense/from_semantic_potential_to_situated_sense.md)).
 The pipeline's categorical structures are the *structural* eigenforms: the
 patterns of composition, projection, and injection that stabilise across runs
-even when the *content* varies. This is why the distinction drawn in §1 — between compositional coherence
+even when the *content* varies.
+
+This is why the distinction drawn in §1 — between compositional coherence
 (which holds exactly in the Markov category) and universal properties (which
 hold approximately) — matters. The structure composes reliably; the content
 varies. The eigenforms are where these meet: structural invariants that
-persist across stochastic variation.
+persist across stochastic variation. The Probe, by sampling from the pipeline's
+Markov kernel and decomposing the results into eigenforms and residues, makes
+this meeting point empirically visible.
 
 ---
 
