@@ -50,7 +50,7 @@ situation × scenario-roster × scenario-parameters → scenario-set  [Fan]
 |----------|-------------------|-----------------|
 | Direction | Many → One | One → Many |
 | Purpose | Convergence: commit | Divergence: explore |
-| Categorical role | Product (with projections) | Coproduct (with injections) |
+| Categorical role | Approximate product (with projections — see [§4.1](categorical-structures.md)) | Coproduct (with injections — see [§5](categorical-structures.md)) |
 | Spider topology | Convergent (many-to-one) | Divergent (one-to-many) |
 | Guards against | Indefinite deferral | Premature convergence |
 | Failure mode | Anchoring on first framing | Storytelling without selection |
@@ -215,7 +215,7 @@ The **evaluation loop** ensures quality. The same feedback mechanism from the co
 
 ---
 
-## The decision monad
+## The decision monad (monad-like structure)
 
 The composed operation M = Funnel ∘ Fan has monad-like structure. Whether it
 is a monad in the strict categorical sense depends on whether the unit and
@@ -408,7 +408,7 @@ The fan, funnel, and their compositions generate a family of reusable pipeline p
 
 | Pattern | Composition | Purpose |
 |---------|-------------|---------|
-| **Deliberated Choice** | Fan → Funnel | Convert ambiguity into justified commitment (the decision monad) |
+| **Deliberated Choice** | Fan → Funnel | Convert ambiguity into justified commitment (monad-like structure — see [Status of the monad claim](#status-of-the-monad-claim)) |
 | **Evaluated Choice** | Fan → Funnel → Evaluate | Deliberated choice with independent quality check |
 | **Stress-Tested Choice** | (Fan → Funnel)^N → Probe → Map | Repeated deliberated choice with variance analysis |
 | **Cascaded Exploration** | Fan → Funnel → Fan | "We chose A; now what might go wrong with A?" — the monad's bind |

@@ -49,6 +49,9 @@ Artifacts **inhabit types to a degree**. A rubric scores each criterion
 0-3, rolling up to a confidence band (High / Medium / Low). The template
 defines the *support* (what could be a member). The rubric defines the
 *membership function* (how well a particular artifact inhabits the type).
+For the formal development of soft types as quantale-valued presheaves
+and the distributional extension, see
+[soft-type-theory.md](soft-type-theory.md).
 
 Type names are **lowercase hyphenated identifiers**: `evidence`,
 `candidates-long-list`, `transcript`, `findings-rollup`.
@@ -371,11 +374,13 @@ Fan → funnel yields a single-input, single-output operation:
 situation → resolution  [DeliberatedChoice]
 ```
 
-This composition has monad structure (unit, associativity), meaning it
-can be iterated and chained. See
-[duality-and-composition.md](duality-and-composition.md) for the full
-treatment, including monad laws as quality criteria and iteration for
-mapping decision landscapes.
+This composition has monad-like structure — operationally well-defined unit
+and multiplication that generate testable quality criteria derived from the
+monad laws. Whether the construction is a formal monad depends on open
+questions about the unit morphism and the resolution-to-situation coercion.
+See [duality-and-composition.md](duality-and-composition.md) for the full
+treatment and [categorical-structures.md, §2c](categorical-structures.md)
+for how this fits the layered categorical framework.
 
 ## Quick reference: annotation cheat sheet
 
@@ -409,6 +414,21 @@ A₁ × A₂ × A₃ → B  [Op]                          # funnel (many-to-one)
 - Liang et al. (2024). "Prompts Are Programs Too!" arXiv:2409.12447.
   (Prompt development as programming phenomenon.)
 - Kelly, G.M. (1982). *Basic Concepts of Enriched Category Theory.*
+  Definition 1.2 (V-category), Ch. 2.1 (V-valued presheaves).
   (Enriched categories over confidence lattices.)
+- Cho, K. and Jacobs, B. (2019). "Disintegration and Bayesian
+  inversion via string diagrams." *MSCS* 29(7), 938–971.
+  (Bayesian inversion in Markov categories; relevant to
+  distributional type membership.)
+- Perrone, P. (2024). "Markov categories and entropy." *IEEE
+  Trans. Information Theory* 70(3), 1666–1693. (Functorial
+  entropy on Markov categories; connects to confidence
+  degradation.)
+- Kock, A. (1970). "Monads on symmetric monoidal closed
+  categories." *Archiv der Mathematik* 21, 1–10. (Commutative
+  monads; prerequisite for Kleisli/Markov category connection.)
+- Heunen, C., Kammar, O., Staton, S., and Yang, H. (2017). "A
+  convenient category for higher-order probability theory." *LICS
+  2017.* (Quasi-Borel spaces as ambient category for Text.)
 - Baez, J. and Stay, M. (2011). "Physics, Topology, Logic and
   Computation: A Rosetta Stone." (String diagrams across domains.)

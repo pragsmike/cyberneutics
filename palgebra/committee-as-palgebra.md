@@ -34,7 +34,12 @@ Several inputs participate in operations without being consumed. In the string d
 | `evaluation-rubrics` | The five-rubric scoring guide (`artifacts/evaluation-rubrics-reference.md`) | Evaluate |
 | `remediation-threshold` | Numeric threshold (default: sum < 13 of 15) | Gate |
 
-These are comonoid objects in the categorical sense — they can be copied and fed into multiple operations without being altered or depleted.
+These are comonoid objects in the categorical sense — they can be copied
+and fed into multiple operations without being altered or depleted. In the
+Markov category framework ([categorical-structures.md, §2a](categorical-structures.md)),
+the copy map is part of the defining structure: every object carries a
+commutative comonoid, and catalytic inputs are precisely the objects where
+this copy map is exercised.
 
 ## Resource equations
 
@@ -262,7 +267,7 @@ Formalizing the committee as palgebra makes several things visible that the proc
 
 2. **The remediation loop is a bounded trace.** The skill files describe it as "if score < 13, remediate and re-evaluate, max 2 rounds." The equations reveal this as a traced monoidal structure with a finite unrolling bound — connecting it to the broader formalism of feedback in compositional systems.
 
-3. **Character propensities are comonoid objects.** They feed into three operations without being consumed or altered. This explains why the roster is fixed: a fixed catalytic input ensures consistency across the pipeline's operations and across multiple deliberation runs. Dynamic characters would require a transformation morphism to produce them, introducing a new source of variance.
+3. **Character propensities are comonoid objects.** They feed into three operations without being consumed or altered — exercising the copy map of the Markov category structure ([categorical-structures.md, §2a](categorical-structures.md)). This explains why the roster is fixed: a fixed catalytic input ensures consistency across the pipeline's operations and across multiple deliberation runs. Dynamic characters would require a transformation morphism to produce them, introducing a new source of variance.
 
 4. **The human gate is a collapse operator.** Before the gate, the pipeline maintains graded uncertainty (evaluation scores, probability distributions, cited gaps). After the gate, there is a crisp commitment. The equations make this boundary explicit — it is the only operation in the pipeline that is not a morphism in the usual sense but a termination of the category's internal composition.
 

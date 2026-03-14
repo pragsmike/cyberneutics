@@ -52,10 +52,15 @@ transformations between them, we get an algebra:
 - **Composition** (sequential wiring) is: if `f : A → B` and
   `g : B → C`, then `g ∘ f : A → C`.
 
-This is a symmetric monoidal category. The string diagram is its
-standard visual representation. The resource equations are its
-term language. They are the same thing in different notation, just as a
-circuit schematic and its netlist are the same circuit.
+This is a symmetric monoidal category. When the morphisms are stochastic
+(as they are when the operations involve LLM generation), the category
+carries additional structure: it is a *Markov category* in the sense of
+Fritz (2020), with stochastic maps composing via the Chapman–Kolmogorov
+equation. See [categorical-structures.md, §2a](categorical-structures.md)
+for the precise treatment. The string diagram is its standard visual
+representation. The resource equations are its term language. They are the
+same thing in different notation, just as a circuit schematic and its
+netlist are the same circuit.
 
 ## A simplified evaluation pipeline
 
@@ -709,6 +714,10 @@ Kelly, *Basic Concepts of Enriched Category Theory* (1982), is the
 standard reference. Our hom-sets carry not just "does this morphism
 exist" but "at what confidence level does the output inhabit its type,"
 which is precisely the data of enrichment over a confidence lattice.
+The enrichment base is specified precisely in
+[categorical-structures.md, §2b](categorical-structures.md) as the
+commutative quantale V = ({Low, Medium, High}, min, High), with the
+enrichment axioms verified against Kelly Ch. 1.2.
 
 **YAML front matter as metadata carrier.** The practice of embedding
 structured metadata in document headers has extensive precedent in
@@ -720,20 +729,20 @@ through processing stages.
 
 **Kleisli categories and LLM nondeterminism.** The morphisms in our
 algebra are effectful: an LLM call is stochastic, may fail, and operates
-through a prompt that is itself a text artifact subject to drift. The
+through a prompt that is itself a text artifact subject to drift. One
 natural framework for modeling this is the Kleisli category of a monad
-that captures nondeterminism and failure. In this view, a pipeline
-operation is not a pure function `(Text, Meta) → (Text, Meta)` but a
+that captures nondeterminism and failure: a pipeline operation becomes a
 Kleisli arrow `(Text, Meta) → M(Text, Meta)` where `M` is a monad
 combining probability distributions (stochasticity), error handling
-(failure modes), and possibly other effects (API rate limits, model
-unavailability). Human gates (lines 424-459) become collapse operators
-that project from the monadic type back to a committed value — precisely
-the role of measurement in quantum mechanics or observer decisions in
-second-order cybernetics. We have not yet formalized this connection, but
-the parallel is suggestive: the gate is where the pipeline's internal
-uncertainty resolves into a definite state that subsequent operations can
-depend on. This remains a direction for future work.
+(failure modes), and possibly other effects. Fritz's Corollary 3.2 shows
+that the Kleisli category of a symmetric monoidal affine monad on a
+Markov category is again a Markov category. The approach adopted in
+[categorical-structures.md, §2a](categorical-structures.md) is more
+general: we work with the Markov category axioms directly, without
+committing to a specific monad — avoiding the need to specify a measure
+space on artifacts. Human gates become collapse operators that project
+from the stochastic setting to a committed value, precisely the role of
+observation in second-order cybernetics.
 
 ## Next steps
 

@@ -63,6 +63,11 @@ empirical test of how close the approximation is. Section 4.1 below gives
 information the approximate projections lose, grounded in the rubric-based
 similarity scores the pipeline already uses for quality assessment.
 
+Section 2c below integrates these two concerns — exact compositional coherence
+and approximate universal properties — into a three-layer architecture that
+shows how the deterministic base, the Markov category, and the confidence
+enrichment fit together as compatible layers of a single framework.
+
 This situation is not a deficiency to be apologised for. It reflects a genuine
 feature of the domain. Meaning in LLM-mediated text processing is a temporary
 stabilisation in a coupled system, not a fixed object
@@ -291,12 +296,30 @@ artifact. The comonoid equations guarantee this is well-behaved.
 formulation (§2, pre-revision) described morphisms as Kleisli arrows of an
 unspecified monad M. Fritz's Corollary 3.2 shows that if one does pin down a
 specific monad (such as the Giry monad for measure-theoretic probability), the
-resulting Kleisli category is automatically a Markov category. The synthetic
-approach taken here is more general: we work with the Markov category axioms
-directly, without committing to a specific monad. The advantage is that the
-formalism does not depend on identifying the "right" monad — a question that
-would require specifying a measure space on artifacts. The Markov category
-axioms capture exactly the structure we need without this commitment.
+resulting Kleisli category is automatically a Markov category — provided the
+monad is *commutative* in the sense of Kock (1970). Kock's result shows that
+a commutative monad on a symmetric monoidal closed category induces a
+symmetric monoidal structure on the Kleisli category, which is the prerequisite
+for Fritz's corollary. The Giry monad is commutative (the Fubini theorem for
+product measures is precisely the commutativity condition), so the Kleisli
+category of Giry is symmetric monoidal and hence a Markov category.
+
+The synthetic approach taken here is more general: we work with the Markov
+category axioms directly, without committing to a specific monad. The advantage
+is that the formalism does not depend on identifying the "right" monad — a
+question that would require specifying a measure space on artifacts. Heunen,
+Kammar, Staton, and Yang (2017) show that *quasi-Borel spaces* provide a
+convenient ambient category for higher-order probability that avoids the
+measure-theoretic pathologies of standard Borel spaces. If one wanted to pin
+down the ambient category for **Text** — to make the Kleisli perspective
+concrete — quasi-Borel spaces would be the natural candidate: they support a
+probability monad, the resulting Kleisli category is a Markov category, and
+they handle the higher-order structure needed for prompt-parametrised
+operations. We do not need this commitment for the current development, but
+it clarifies what "specifying a measure space on artifacts" would involve.
+
+The Markov category axioms capture exactly the structure we need without
+this commitment.
 
 ### Deterministic morphisms
 
@@ -372,19 +395,32 @@ High-confidence scoring step yields a Medium-confidence result.
 
 ### Verification of the enrichment axioms
 
-The enrichment axioms (Kelly, Ch. 1.2) require:
+The enrichment axioms (Kelly, Ch. 1.2, specifically equations 1.1–1.4) require:
 
-1. **Composition is a V-morphism**: the composition map
-   `Hom(B,C) ⊗ Hom(A,B) → Hom(A,C)` sends `(c₂, c₁) ↦ min(c₂, c₁)`.
+1. **Composition is a V-morphism** (Kelly, eq. 1.1): the composition map
+   `M : Hom(B,C) ⊗ Hom(A,B) → Hom(A,C)` sends `(c₂, c₁) ↦ min(c₂, c₁)`.
    This must be associative: `min(c₃, min(c₂, c₁)) = min(min(c₃, c₂), c₁)`.
-   True because min is associative.
+   True because min is associative. Kelly requires this as a morphism in V
+   (a monotone map between hom-objects); it is, because min is monotone in
+   each argument.
 
-2. **Identity is maximal**: `High ≤ Hom(A, A)` — the identity morphism
-   (pass-through) operates at maximum confidence. True by definition: passing
-   an artifact through unchanged cannot degrade it.
+2. **Identity is maximal** (Kelly, eq. 1.2): `j_A : I → Hom(A, A)` picks out
+   the identity element High ∈ V. The unit axiom requires
+   `M ∘ (id ⊗ j_A) = id = M ∘ (j_A ⊗ id)` — composing with the identity
+   morphism at confidence High does not degrade confidence. True because
+   `min(c, High) = c`.
 
-3. **Composition respects the V-structure**: the interchange law for enriched
-   composition follows from commutativity of min.
+3. **Associativity** (Kelly, eq. 1.3): the two ways of composing three
+   enriched hom-objects agree. This holds because min is associative.
+
+4. **Unit coherence** (Kelly, eq. 1.4): the left and right unit maps compose
+   correctly. This follows from min being commutative and High being its unit.
+
+These four conditions are exactly Kelly's definition of a V-category (Kelly
+1982, Definition 1.2). Our verification is simple because V is a total order
+— the conditions become equations about min on a three-element chain. In a
+richer enrichment base (such as the product quantale V^5 for vector scores),
+verification would require checking the conditions componentwise.
 
 ### Multi-dimensional scores
 
@@ -402,6 +438,123 @@ enrichment then tracks through composition. The relationship is:
 
 The enrichment base is the min-lattice. The other structures are internal to
 the enrichment morphisms.
+
+---
+
+## 2c. The layered structure of Text
+
+Sections 2, 2a, and 2b developed three categorical perspectives on the
+pipeline. This section makes explicit that they are compatible layers of a
+single framework, not parallel stories told about the same objects.
+
+### The three layers
+
+**Layer 1: The deterministic base — Text_det.** The subcategory of
+deterministic morphisms (Fritz, Definition 10.1, Lemma 10.12). Objects are
+soft types. Morphisms are operations that respect the copy structure:
+enrichments, structural transformations (tagging, projection, template-fill),
+and the coproduct injections of §5. This subcategory is *cartesian* monoidal
+(Fritz, Remark 10.13) — it has genuine products, and universal properties hold
+strictly. The template system, the metadata join operator `⊔`, and the
+provenance accumulation rules all live here. Layer 1 is where the pipeline's
+bookkeeping is exact.
+
+**Layer 2: The Markov category — Text.** The full category of stochastic
+pipeline operations, with the Markov category structure of §2a. Objects are
+the same soft types. Morphisms are Markov kernels — stochastic maps that
+compose via Chapman–Kolmogorov. The comonoid structure (copy and delete)
+provides catalytic inputs and waste streams. Layer 2 contains Layer 1 as a
+subcategory: every deterministic morphism is a Markov kernel that happens to
+be non-stochastic. The distinction between transformations (genuinely
+stochastic) and enrichments (deterministic) is precisely the distinction
+between morphisms that live only in Layer 2 and those that also live in
+Layer 1.
+
+**Layer 3: The enriched category — Text over V.** The Markov category
+enriched over the confidence lattice V = ({Low, Medium, High}, min, High)
+as specified in §2b. The enrichment tracks quality degradation through
+composition: `confidence(g ∘ f) = min(confidence(f), confidence(g))`. This
+layer does not replace Layers 1–2; it *decorates* them with quality
+information. Every morphism in Layer 2 carries a confidence grade from
+Layer 3. Every deterministic morphism in Layer 1 operates at confidence
+High (the unit of V), because deterministic operations introduce no quality
+degradation.
+
+### How the layers interact
+
+The layers are not independent choices. They form a single coherent structure:
+
+```
+Text_det  ⊆  Text  →  enriched over V
+  (L1)        (L2)         (L3)
+
+L1 ⊂ L2:  deterministic ⊂ stochastic (Fritz, Lemma 10.12)
+L3 on L2:  every L2 morphism carries a V-grade
+L3 on L1:  all L1 morphisms have grade High (no quality loss)
+```
+
+**Layer 1 inside Layer 2** is the subcategory inclusion. The enrichments
+(Score, Evaluate, SecurityGate) and the structural operations (tagging
+injections, template-fill, projection) belong to Layer 1. The
+transformations (Fan, Deliberate, DraftCharter, Resolve) belong to Layer 2
+but not Layer 1. This inclusion is not a design choice — it is a consequence
+of the Markov category axioms: deterministic morphisms are closed under
+composition and contain the identities (Fritz, Lemma 10.12).
+
+**Layer 3 on top of Layer 2** is enrichment in the sense of Kelly (1982,
+Ch. 1.2). The enrichment does not change the morphisms — it adds a quality
+grade to each one. The min-composition law means that Layer 3 automatically
+tracks quality through the Layer 2 composition. No additional structure is
+needed: the enrichment axioms (§2b) are compatible with the Markov category
+axioms (§2a) because the enrichment operates on the hom-objects, not on the
+composition rule.
+
+**The three propagation rules** from
+[reference.md](reference.md) and
+[decorated-texts.md](decorated-texts.md) correspond to the layers:
+
+| Propagation rule | Layer | Mechanism |
+|---|---|---|
+| Confidence can only degrade | Layer 3 | min-lattice enrichment |
+| Provenance can only accumulate | Layer 1 | Monotone metadata join in **Text**_det |
+| Content transforms | Layer 2 | Stochastic morphisms in **Text** |
+
+Confidence degradation is a Layer 3 phenomenon. Provenance accumulation is a
+Layer 1 phenomenon (metadata operations are deterministic). Content
+transformation is a Layer 2 phenomenon (stochastic generation of new text).
+The three rules are not ad hoc — they are consequences of the layered
+structure.
+
+### What this integration clarifies
+
+**The "approximate" qualifier has a precise scope.** Compositional coherence
+(associativity, identity laws, comonoid equations) holds exactly in Layer 2 —
+it is a property of the Markov category structure. Universal properties
+(products, coproducts, equalizers) are design targets that the pipeline
+approximates — they hold exactly in Layer 1 (where the subcategory is
+cartesian) but only approximately for the stochastic operations of Layer 2.
+The Probe (§9) tests the Layer 2 approximation. The approximation metric
+(§4.1) quantifies it. Conflating "compositional coherence is approximate"
+with "universal properties are approximate" was the error that the Markov
+category framework (Layer 2) corrected: the first is false, the second is
+true and measurable.
+
+**Quality tracking is not bolted on.** The enrichment (Layer 3) is not a
+separate system that happens to run alongside the pipeline. It is a
+categorical structure on the same category — the confidence grades are part
+of the hom-objects, and the min-composition law is a consequence of the
+enrichment axioms. This means quality tracking composes the same way the
+pipeline composes. There is no gap between "the pipeline works" and "the
+pipeline tracks its own quality."
+
+**Deterministic operations are special, not second-class.** Layer 1 is not
+a degenerate case of Layer 2. It is a structurally richer subcategory —
+cartesian where Layer 2 is only semicartesian, with genuine products where
+Layer 2 has only semicartesian projections. The operations that live in
+Layer 1 (enrichments, structural transformations, injections) are the ones
+where the full universal properties hold. The pipeline's bookkeeping —
+scoring, gating, tagging, provenance — is exact. The stochasticity lives
+in the content-generating operations, which is exactly where it belongs.
 
 ---
 
@@ -473,8 +626,10 @@ design criterion that says "both the situation and the scenario-set should be
 recoverable from the charter" — rather than a product *fact*. The charter rubric
 can enforce this: a charter that garbles either projection scores lower on
 completeness, and the quality gate catches it. The product structure is
-maintained by design discipline, not by categorical necessity. (This laxness is
-characteristic of the domain: see §1 on approximate coherence.)
+maintained by design discipline, not by categorical necessity. (This is an
+approximate universal property in the sense distinguished in §1 — the
+compositional structure is exact, but the product structure is a design target
+quantified by the reconstruction error of §4.1.)
 
 **The transcript as approximate product of character positions.** The
 deliberation transcript carries all five character position-streams. Each
@@ -594,10 +749,18 @@ bookkeeping operations belong.
 
 The injections are not bare inclusions — they carry the provenance annotations
 (narrator, assumption-set, divergence axis) that make scenarios distinguishable
-in committee deliberation. This is the *decorated coproduct*: when Fong's
-decorated cospans appear in the palgebra formalism, this is the operative site.
-The decorations on the injection morphisms are exactly the
-assumption-annotations.
+in committee deliberation. This is the *decorated coproduct*: the operative
+site of Fong's decorated cospan construction (Fong 2016, Ch. 2). In Fong's
+framework, a decorated cospan is a cospan `A → N ← B` equipped with a
+decoration on the apex N drawn from a symmetric monoidal functor
+`F : Cospan → Set`. The pushout of the cospan legs determines how the
+decorations compose. Here the apex is the scenario-set, the legs are the
+injection morphisms ιₖ, and the decorations are the assumption-annotations.
+The pushout composition of decorated cospans is what makes the committee
+pipeline compositional: wiring two decorated operations together produces a
+decorated operation whose decorations combine via the pushout of their shared
+interface. This is not an analogy — it is the specific mechanism from Fong's
+thesis that the palgebra's pipeline wiring instantiates.
 
 **The universal property, precisely.** For any soft type X and any family of
 morphisms fₖ : scenarioₖ → X (one per scenario), there exists a morphism
@@ -771,6 +934,13 @@ inadequate scenario framing), the pushout degenerates toward a bare coproduct
 (A + B: a list of positions rather than a synthesis). The quality of the charter
 is therefore the quality of the common base C in the pushout diagram.
 
+This pushout is exactly the composition operation for Fong's decorated cospans
+(Fong 2016, Ch. 2): the resolution is the apex of the composed cospan, obtained
+by pushout over the shared evidentiary base. The decorated cospan framework
+ensures that composition is associative and that decorations (provenance,
+confidence grades) propagate correctly through the pushout. The palgebra's
+pipeline wiring inherits this compositional guarantee.
+
 ---
 
 ## 8. Fan and Funnel as Divergent and Convergent Spiders
@@ -913,6 +1083,17 @@ recommendation" or "extract the list of identified risks"). Then:
   — the feature varies substantially across runs. The morphism φ ∘ M is
   genuinely stochastic.
 
+The entropy of the feature distribution φ(M(s)) quantifies how much
+information the pipeline loses about the input situation at the level of
+feature φ. Perrone (2024) extends Fritz's Markov category framework with a
+categorical treatment of entropy, defining functorial entropy measures on
+Markov categories that compose correctly through morphism composition. The
+confidence degradation rule (§2b) — that confidence can only degrade through
+composition — is an instance of Perrone's monotonicity result: the entropy of
+a composed pipeline is at least the entropy of its components. The min-lattice
+enrichment tracks a coarse summary (three confidence bands) of what Perrone's
+framework tracks precisely (functorial entropy on Markov categories).
+
 This gives the eigenform concept a categorical home: eigenforms are the features
 for which the composed morphism φ ∘ M lands in the deterministic subcategory
 **Text**_det (Fritz, Lemma 10.12, Remark 10.13). The Probe empirically
@@ -1023,15 +1204,33 @@ perspectives. The backward-flowing evaluation signal in the open-game framework
 (rubric scores as continuation functions) provides the strategic dimension that
 the categorical treatment leaves implicit.
 
-The distributional type membership explored in
-[Furry Logic](../wild/diary/2026-03-13-furry-logic.md) extends the soft type
-system from graded single-type membership to distributional membership across
-type-space. In the categorical framing, this means objects are not points in a
-type lattice but probability measures on type-space, and morphisms must respect
-this distributional structure. The enriched category structure (§2) is the
-natural home for this extension: the confidence lattice over which **Text** is
-enriched would generalise to a richer structure that tracks distributional type
-information through composition.
+The soft type system is formalised in
+[soft-type-theory.md](soft-type-theory.md), which develops graded type
+inhabitation as quantale-valued presheaves on the type lattice (§§2–3 of that
+document) and extends to distributional type membership — the "furry logic" of
+[the diary entry](../wild/diary/2026-03-13-furry-logic.md) — in §4. The
+distributional extension connects directly to the Markov category framework:
+the type assignment `a ↦ μ_a ∈ Prob(T)` is a Markov kernel, and pipeline
+operations compose with type assignments via Chapman–Kolmogorov. The
+three-layer architecture (§2c) maps cleanly onto the soft type theory:
+deterministic type assignments (Layer 1), stochastic type assignments
+(Layer 2), and confidence-graded type assignments (Layer 3).
+
+The distributional type extension has a natural connection to the
+*disintegration* framework of Cho and Jacobs (2019). Disintegration is the
+categorical operation that decomposes a joint distribution into a marginal
+and a conditional — the Bayesian inversion that recovers `P(type | text)`
+from the joint `P(type, text)`. In the soft type context, the type
+assignment kernel `τ : Artifacts → Prob(T)` is precisely such a conditional:
+given a text, what is the distribution over types? Cho and Jacobs develop
+this via string diagrams in Markov categories, which means the disintegration
+composes correctly with the pipeline's other string-diagrammatic structure.
+The Bayesian inversion — going from `P(text | type)` (generative: what texts
+does this type produce?) to `P(type | text)` (discriminative: what type does
+this text have?) — is the formal version of the measurement framing in
+[soft-type-theory.md](soft-type-theory.md): rubric evaluation is
+discriminative classification, and the distributional type assignment is
+the result of Bayesian inversion on the generative pipeline.
 
 ---
 
@@ -1050,9 +1249,14 @@ Resource theories (Chapter 2) and string diagrams for symmetric monoidal
 categories; direct foundation for the palgebra formalism.
 
 **Fong, Brendan.** *The Algebra of Open and Interconnected Systems.* PhD thesis,
-University of Oxford, 2016. — Decorated cospans for composing open systems;
-grounds the treatment of pipeline operations as open systems with input/output
-interfaces.
+University of Oxford, 2016. — Decorated cospans (Ch. 2): a cospan
+`A → N ← B` with a decoration on the apex N drawn from a symmetric monoidal
+functor `F : Cospan → Set`. Composition is by pushout of the cospan legs,
+which determines how decorations compose. The palgebra's pipeline wiring —
+connecting operations by matching output types to input types — instantiates
+this construction, with provenance and confidence annotations as the
+decorations. §5 (coproduct injections) and §7 (resolution as pushout) are the
+specific sites where Fong's pushout composition appears.
 
 **Fritz, Tobias.** "A synthetic approach to Markov kernels, conditional
 independence and theorems on sufficient statistics." *Advances in Mathematics*
@@ -1063,13 +1267,53 @@ framework for stochastic maps. Definition 2.1 (Markov category), Corollary 3.2
 subcategory is cartesian monoidal). The foundation for §2a of this document.
 
 **Kelly, G. Maxwell.** *Basic Concepts of Enriched Category Theory.* Cambridge
-University Press, 1982. — Foundation for enrichment over confidence lattices;
-the theoretical basis for quality-score propagation through composition. Ch.
-1.2 (enrichment axioms) is the basis for §2b of this document.
+University Press, 1982. — The foundation for enriched category theory.
+Definition 1.2 (V-category): a collection of objects with V-valued
+hom-objects, composition maps `M : Hom(B,C) ⊗ Hom(A,B) → Hom(A,C)`, and
+identity elements `j_A : I → Hom(A,A)` satisfying associativity (eq. 1.3)
+and unit coherence (eq. 1.4). §2b of this document verifies these four
+conditions for V = ({Low, Medium, High}, min, High). Ch. 2.1 (V-valued
+presheaves) provides the framework used in
+[soft-type-theory.md](soft-type-theory.md) for graded type inhabitation.
 
 **Baez, John, and Mike Stay.** "Physics, Topology, Logic and Computation: A
 Rosetta Stone." In *New Structures for Physics*, ed. B. Coecke. Springer, 2011.
 — String diagrams as a unified language across physics, logic, and computation.
+
+**Cho, Kenta, and Bart Jacobs.** "Disintegration and Bayesian inversion via
+string diagrams." *Mathematical Structures in Computer Science* 29(7),
+938–971, 2019. — Develops disintegration (decomposition of a joint
+distribution into marginal and conditional) and Bayesian inversion within the
+string diagram calculus for Markov categories. Directly applicable to the
+distributional type membership question (§10, [soft-type-theory.md](soft-type-theory.md)):
+the type assignment kernel is a conditional arising from Bayesian inversion of
+the generative pipeline.
+
+**Perrone, Paolo.** "Markov categories and entropy." *IEEE Transactions on
+Information Theory* 70(3), 1666–1693, 2024. — Extends Fritz's Markov
+category framework with functorial entropy measures that compose correctly
+through morphism composition. The monotonicity result — entropy cannot
+decrease through composition — is the information-theoretic counterpart of
+the palgebra's confidence degradation rule (§2b). The min-lattice enrichment
+tracks a coarse summary of what Perrone's framework tracks precisely.
+See §9 for the connection to eigenform/residue entropy.
+
+**Kock, Anders.** "Monads on symmetric monoidal closed categories." *Archiv
+der Mathematik* 21, 1–10, 1970. — Commutative monads on symmetric monoidal
+closed categories: the commutativity condition ensures the Kleisli category
+inherits a symmetric monoidal structure. This is the prerequisite for Fritz's
+Corollary 3.2 (Kleisli categories of commutative affine monads are Markov
+categories). The Giry monad's commutativity — the Fubini theorem — is the
+concrete instance. See §2a (Kleisli perspective).
+
+**Heunen, Chris, Ohad Kammar, Sam Staton, and Hongseok Yang.** "A convenient
+category for higher-order probability theory." *Proceedings of LICS 2017.* —
+Quasi-Borel spaces: a cartesian closed category that supports a probability
+monad without the pathologies of standard Borel spaces. A candidate ambient
+category for making the Kleisli perspective on **Text** concrete (§2a):
+quasi-Borel spaces handle the higher-order structure needed for
+prompt-parametrised operations and yield a Markov category via the Kleisli
+construction.
 
 **De Wynter, Adrian, et al.** "On Meta-Prompting." arXiv:2312.06562, 2023. —
 Category-theoretic framework for LLM interactions; models prompt-response pairs

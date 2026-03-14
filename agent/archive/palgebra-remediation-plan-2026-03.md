@@ -1,6 +1,7 @@
 # Remediation Plan: Palgebra for Applied Category Theorists
 
 **Date**: 2026-03-13
+**Status**: All phases complete (2026-03-13). Archived.
 **Source**: `palgebra/act-review-2026-03.md`
 **Goal**: Address the review's findings systematically, converting the
 palgebra corpus from "early-stage formalism with genuine conceptual
@@ -528,25 +529,25 @@ metric from Phase 3.2.
 
 Citations to add (beyond Fritz, already done ✓):
 
-- [ ] **Cho, K. and Jacobs, B.** "Disintegration and Bayesian
+- [x] **Cho, K. and Jacobs, B.** "Disintegration and Bayesian
   inversion via string diagrams." *MSCS* 29(7), 2019. — For the
   distributional type membership question.
-- [ ] **Perrone, P.** "Markov categories and entropy." *IEEE Trans.
+- [x] **Perrone, P.** "Markov categories and entropy." *IEEE Trans.
   Information Theory* 70(3), 2024. — Extends Fritz to information
   loss; connects to confidence degradation.
-- [ ] **Kock, A.** "Monads on symmetric monoidal closed categories."
+- [x] **Kock, A.** "Monads on symmetric monoidal closed categories."
   *Archiv der Mathematik* 21, 1970. — Commutative monads; required
   for Kleisli products.
-- [ ] **Heunen, C., Kammar, O., Staton, S., and Yang, H.** "A
+- [x] **Heunen, C., Kammar, O., Staton, S., and Yang, H.** "A
   convenient category for higher-order probability theory." *LICS
   2017.* — Quasi-Borel spaces; potential ambient category for Text.
 
 Citations where deeper engagement is needed (already cited but
 under-engaged):
 
-- [ ] **Fong (2016)** — Engage with the pushout construction that
+- [x] **Fong (2016)** — Engage with the pushout construction that
   makes decorated cospans work, not just cite the thesis.
-- [ ] **Kelly (1982)** — Engage with the enrichment axioms
+- [x] **Kelly (1982)** — Engage with the enrichment axioms
   specifically, not just cite the book.
 
 **Deliverable**: Updated references sections. For Fong and Kelly,
@@ -558,29 +559,30 @@ add specific section/theorem references and explain what we import.
 
 ```
 Phase 1 (Foundations) — do first, in order:
-  1.1  Define Text precisely         → unblocks everything
-  1.2  Markov category treatment     → dissolves approximate coherence
-  1.3  Enrichment base               → cements confidence story
+  1.1  Define Text precisely         ✓ Complete (§2)
+  1.2  Markov category treatment     ✓ Complete (§2a), verified against Fritz
+  1.3  Enrichment base               ✓ Complete (§2b)
 
 Phase 2 (Honest downgrades) — can mostly parallelize:
-  2.1  Decision monad                → depends on 1.2
-  2.2  Frobenius terminology         → independent
-  2.3  Equalizer/pullback framing    → independent
+  2.1  Decision monad                ✓ Complete (duality-and-composition.md)
+  2.2  Frobenius terminology         ✓ Complete (§8)
+  2.3  Equalizer/pullback framing    ✓ Complete (§6–7)
 
 Phase 3 (Formalize strongest claims):
-  3.1  Coproduct end-to-end          → depends on 1.2
-  3.2  Approximation metric          → depends on 1.2
+  3.1  Coproduct end-to-end          ✓ Complete (§5), verified against Fritz
+  3.2  Approximation metric          ✓ Complete (§4.1), verified against Fritz
 
 Phase 4 (Novel contributions):
-  4.1  Probe as statistical test     → depends on 1.2, 3.1
-  4.2  Soft type theory              → depends on 1.3; long-term
+  4.1  Probe as statistical test     ✓ Complete (§9), verified against Fritz
+  4.2  Soft type theory              ✓ Complete (soft-type-theory.md)
 
 Phase 5 (Integration):
-  5.1  Layer integration             → depends on 1.1–1.3
-  5.2  Editorial consistency pass    → depends on all above
+  5.1  Layer integration             ✓ Complete (§2c — three-layer architecture)
+  5.2  Editorial consistency pass    ✓ Complete (2026-03-13)
 
 Phase 6 (Bibliography):
-  6.1  Citations and engagement      → ongoing; can start immediately
+  6.1  Citations and engagement      ✓ Complete (all citations added,
+                                     Fong and Kelly engagement deepened)
 ```
 
 ---
