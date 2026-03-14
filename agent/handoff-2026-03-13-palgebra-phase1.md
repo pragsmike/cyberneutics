@@ -1,4 +1,4 @@
-# Session Handoff: 2026-03-13 (Palgebra Phase 1 — Markov Category Foundations)
+# Session Handoff: 2026-03-13 (Palgebra Phases 1–2 — Markov Foundations + Honest Downgrades)
 
 ---
 
@@ -83,12 +83,35 @@ Not yet committed — this handoff and these changes go in the same commit.
 
 ---
 
-## What was NOT done (remaining phases)
+### 4. Phase 2: Honest downgrades (second commit)
 
-### Phase 2: Honest downgrades
-- **2.1** Decision monad: define η and μ, or rename to "decision pipeline"
-- **2.2** Drop Frobenius/spider terminology from §8 and duality-and-composition.md
-- **2.3** Reframe §6–7 (equalizers/pullbacks) as design specifications
+**2.1 Decision monad** — Rewrote the monad section of
+`duality-and-composition.md`. Attempted to define η (trivial deliberation as
+unit) and μ (flattening nested fan-funnel via a resolution→situation coercion).
+Identified two gaps preventing a formal monad claim: (a) η may itself be
+stochastic if it involves any LLM call, (b) μ requires a resolution→situation
+coercion whose well-behavedness is empirical. Adopted honest framing:
+"monad-inspired pipeline with operationally testable quality criteria derived
+from the monad laws." The bind operation is well-defined regardless (it's just
+composition of Markov kernels). Also removed the Kleisli interpretation
+subsection (which depended on the old unspecified-monad framing) and replaced
+with a bind-and-iteration subsection grounded in the Markov category.
+
+**2.2 Frobenius terminology** — Dropped "multiplication" / "comultiplication"
+from the symmetry table in `duality-and-composition.md` (replaced with
+"Convergent (many-to-one)" / "Divergent (one-to-many)"). Rewrote §8 of
+`categorical-structures.md`: renamed to "Divergent and Convergent Spiders,"
+added explicit note that the Frobenius equation has not been verified and
+likely does not hold, retained spider visual. Updated spider descriptions in
+`duality-and-composition.md` (convergent/divergent node instead of
+comultiplication/multiplication).
+
+**2.3 Equalizer/pullback reframing** — Added italicised framing paragraph at
+top of §6 of `categorical-structures.md` stating that §§6–7 are categorical
+design specifications, not claims about existing operations. The morphisms
+they require don't exist yet; the value is prescriptive.
+
+## What was NOT done (remaining phases)
 
 ### Phase 3: Formalize strongest claims
 - **3.1** Scenario-set coproduct end-to-end (the review's best candidate)
@@ -135,5 +158,6 @@ See `palgebra/remediation-plan.md` for full details and execution order.
 |------|--------|
 | `palgebra/reference.md` | Fritz citation added (committed 8122666) |
 | `palgebra/remediation-plan.md` | New file (committed 8122666) |
-| `palgebra/categorical-structures.md` | §1 rewritten, §2 edited, §2a/§2b added, §9 updated, refs expanded |
+| `palgebra/categorical-structures.md` | Phase 1: §1 rewritten, §2 edited, §2a/§2b added, §9 updated, refs expanded. Phase 2: §8 rewritten (Frobenius dropped), §6 framing added |
+| `palgebra/duality-and-composition.md` | Phase 2: monad section rewritten with explicit η/μ and honest status assessment, Frobenius terminology removed from symmetry table and spider descriptions |
 | `agent/handoff-2026-03-13-palgebra-phase1.md` | This file |

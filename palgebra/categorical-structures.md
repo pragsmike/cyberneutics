@@ -540,15 +540,23 @@ ridge structure requires examination before commitment.
 
 ## 6. Equalizers and Coequalizers
 
+*The constructions in §§6–7 are **categorical design specifications**, not
+claims about existing pipeline operations. The morphisms they require —
+"claim-extraction maps," "interpretation maps" — do not yet exist as named
+operations in the palgebra resource equations. The value of stating these
+constructions is prescriptive: the categorical structure tells us what
+operations would be worth building and what properties they should have. If
+and when these operations are implemented, the constructions become testable
+claims. Until then, they are a requirements spec derived from category theory.*
+
 Given two morphisms f, g: A → B, their **equalizer** is an object E with a map
 e: E → A such that f ∘ e = g ∘ e, universal among all such objects. The
 equalizer picks out the *subobject of A where f and g agree*.
 
 **Cross-scenario triangulation.** Let A be a collection of situation
 descriptions, B the space of factual claims, and let f and g be claim-extraction
-maps of two different narrators. (These maps are not yet formalized as named
-operations in the palgebra resource equations — they are *potential* operations
-that the equalizer construction motivates defining.) The equalizer E is the
+maps of two different narrators. (These maps are potential operations that the
+equalizer construction motivates defining.) The equalizer E is the
 sub-collection of situation descriptions on which both narrators produce the
 same claim — the *zone of uncontested framing*. Claims in the equalizer are
 load-bearing: they survive independent lenses and deserve the most scrutiny in
@@ -619,19 +627,25 @@ is therefore the quality of the common base C in the pushout diagram.
 
 ---
 
-## 8. Fan and Funnel as Coproduct and Product Spiders
+## 8. Fan and Funnel as Divergent and Convergent Spiders
 
 The two core pipeline operations are *spiders* in the string diagram calculus:
 nodes of higher arity that generalise the basic binary product and coproduct.
-(A note on terminology: this document names these by the *type-theoretic*
-construction they instantiate — the fan is a coproduct spider because it
-produces a coproduct, the funnel is a product spider because it constructs a
-product. In [duality-and-composition.md](duality-and-composition.md), they are
-named by their *algebraic* role in the Frobenius structure — the fan is a
-multiplication (monoid), the funnel a comultiplication (comonoid). Both
-conventions are standard; the difference is one of perspective, not substance.)
+The fan is a coproduct spider (one-to-many, divergent) and the funnel is a
+product spider (many-to-one, convergent). Their visual topology — one wire in
+and many out, or many in and one out — is the defining feature.
 
-**The fan (coproduct spider / one-to-many)** injects a single situation into
+(A note on what this section does *not* claim: earlier versions of this
+document described fan and funnel using the algebraic terminology
+"multiplication" and "comultiplication," suggesting a Frobenius algebra
+structure. A Frobenius algebra requires four maps satisfying the Frobenius
+equation `(μ ⊗ id) ∘ (id ⊗ δ) = δ ∘ μ = (id ⊗ μ) ∘ (δ ⊗ id)`. We have
+not verified this equation — and it likely does not hold in general, since
+it would require that partially funnelling then fanning equals fanning then
+partially funnelling. We retain the spider *visual* but do not claim the
+Frobenius algebraic structure.)
+
+**The fan (divergent spider / one-to-many)** injects a single situation into
 multiple distinct narrative contexts:
 
 ```
@@ -644,8 +658,8 @@ the divergent half of the pipeline: it releases the ambiguity of the situation
 into an explicitly structured space of possibilities. The universal property of
 the resulting coproduct licenses componentwise reasoning downstream.
 
-**The funnel (product spider / many-to-one)** combines multiple inputs into a
-single committed output:
+**The funnel (convergent spider / many-to-one)** combines multiple inputs into
+a single committed output:
 
 ```
 charter × scenario-set × roster × character-propensities × roberts-rules → transcript  [Deliberate]
@@ -657,18 +671,21 @@ each character's position is recoverable via projection. The funnel is the
 convergent half: it collapses the coproduct of perspectives into a committed
 product with recoverable provenance.
 
-**Composition: the deliberated choice.** Fan → funnel is the *decision monad*:
+**Composition: the deliberated choice.** Fan → funnel is the *decision
+pipeline* — an endofunctor with monad-like structure:
 
 ```
 M(situation) = Funnel(Fan(situation))
 ```
 
-The monad laws are operational quality criteria. The unit law: fanning and
+The monad laws generate operational quality criteria. The unit law: fanning and
 immediately collapsing without deliberation should return approximately the
 original situation — the pipeline added nothing. The associativity law: nested
 fan-funnel-fan-funnel should be equivalent to a single well-designed fan-funnel.
 Both are testable by running the pipeline with degraded deliberation and
-comparing output to input.
+comparing output to input. See
+[duality-and-composition.md](duality-and-composition.md) for the full
+treatment, including the precise status of the monad claim.
 
 ---
 

@@ -4,7 +4,7 @@
 
 The adversarial committee pipeline formalized in [committee-as-palgebra.md](committee-as-palgebra.md) is a **convergent** operation: multiple perspectives collapse into a single resolution. This document formalizes its categorical dual — **scenario generation** — as a divergent operation, then shows what happens when you compose them.
 
-The payoff: the composed operation converts ambiguity into justified commitment. The composition has the structure of a **monad**, which gives us formal quality criteria (the monad laws) and a theory of iteration (running the monad repeatedly to map decision landscapes). The iteration connects to residuality theory (O'Reilly) and to the Deleuzian "repetition produces difference" insight from [Essay 06](../essays/06-deleuze-difference-repetition.md), grounding both in operational pipeline algebra.
+The payoff: the composed operation converts ambiguity into justified commitment. The composition has **monad-like structure**, which gives us formal quality criteria (the monad laws as operational tests) and a theory of iteration (running the pipeline repeatedly to map decision landscapes). The iteration connects to residuality theory (O'Reilly) and to the Deleuzian "repetition produces difference" insight from [Essay 06](../essays/06-deleuze-difference-repetition.md), grounding both in operational pipeline algebra.
 
 This document parallels [committee-as-palgebra.md](committee-as-palgebra.md) in structure. That document formalizes one half of the duality (the funnel). This document formalizes the other half (the fan), the composition, and what the composition reveals.
 
@@ -20,7 +20,7 @@ The adversarial committee takes a charter, a roster of characters with divergent
 
 - **Projections**: any aspect of the resolution traces back to which character's perspective drove it.
 - **Universal property**: the resolution is the most specific commitment all members could endorse. Any weaker consensus that satisfies all members factors through it.
-- In string diagram language: a **many-to-one spider** (comultiplication).
+- In string diagram language: a **many-to-one spider** (convergent node).
 
 The full formalization is in [committee-as-palgebra.md](committee-as-palgebra.md). The key signature:
 
@@ -35,7 +35,7 @@ Scenario generation takes a single ambiguous situation and produces multiple dis
 
 - **Injections**: each assumption-set is embedded into narrative form as a distinct scenario.
 - **Universal property**: any downstream process that needs to handle all possible futures can be defined by specifying how it handles each scenario independently.
-- In string diagram language: a **one-to-many spider** (multiplication).
+- In string diagram language: a **one-to-many spider** (divergent node).
 
 The key signature:
 
@@ -51,7 +51,7 @@ situation × scenario-roster × scenario-parameters → scenario-set  [Fan]
 | Direction | Many → One | One → Many |
 | Purpose | Convergence: commit | Divergence: explore |
 | Categorical role | Product (with projections) | Coproduct (with injections) |
-| Spider topology | Comultiplication | Multiplication |
+| Spider topology | Convergent (many-to-one) | Divergent (one-to-many) |
 | Guards against | Indefinite deferral | Premature convergence |
 | Failure mode | Anchoring on first framing | Storytelling without selection |
 | Roster function | Adversarial stress-test | Narrative exploration |
@@ -215,49 +215,138 @@ The **evaluation loop** ensures quality. The same feedback mechanism from the co
 
 ---
 
-## The monad structure
+## The decision monad
 
-If the fan (free exploration) is left adjoint to the funnel (constrained selection), their composition yields a **monad** — the algebraic structure of "wrap in computational context, do work, extract result."
+The composed operation M = Funnel ∘ Fan has monad-like structure. Whether it
+is a monad in the strict categorical sense depends on whether the unit and
+multiplication can be defined precisely. This section attempts the definitions,
+states the monad laws as operational quality criteria, and is honest about where
+the formal verification remains open.
 
-### The monad in brief
+### The endofunctor
 
-The decision monad M is the composition Funnel ∘ Fan:
+The decision endofunctor M acts on the type `situation`:
 
 ```
 M(situation) = Funnel(Fan(situation))
 ```
 
-A single application of M: take a situation, fan it into scenarios, funnel the scenarios into a resolution. The resolution is a committed decision with traced rationale.
+A single application: take a situation, fan it into scenarios, funnel the
+scenarios into a resolution. The resolution is a committed decision with traced
+rationale.
 
-### The monad laws as quality criteria
+For M to be a monad, we need a unit η and a multiplication μ satisfying the
+monad laws.
 
-The monad laws (unit, associativity) are not abstract requirements — they are **operational quality tests** for the pipeline.
+### Unit: η
 
-**Unit law**: `Fan → immediate Funnel without real deliberation ≈ identity`
-
-If you fan a situation into scenarios and then immediately collapse without genuine deliberation — without adversarial challenge, without evidence demands, without the committee's characteristic friction — you should get back approximately the same situation you started with. The pipeline added nothing.
-
-*Operational test*: Run the composed pipeline with a trivially short deliberation (one round, no challenges). If the resolution is substantively different from the original situation framing, something in the pipeline is injecting content that didn't come from genuine deliberation. This tests whether the scaffold is load-bearing or just decorative.
-
-**Associativity**: `M(M(situation)) ≈ M(situation)` — nested fan-collapse-fan-collapse should be equivalent to a single well-designed fan-collapse.
-
-If you fan, funnel, then fan *the resolution* and funnel again, you should get a result equivalent to fanning more broadly in the first pass and funneling once. Nested application should not produce qualitatively different decisions than single application — it should just explore more thoroughly.
-
-*Operational test*: Run M twice (fan → funnel → fan the resolution → funnel again). Compare the final resolution with a single-pass M where the initial fan was broader (more scenarios, more divergence axes). If the nested version produces qualitatively different conclusions, the single-pass fan wasn't broad enough — it missed scenario regions that the second fan found by exploring from the resolution's vantage point.
-
-*When the law fails informatively*: Associativity failure isn't always a defect. If M(M(x)) ≠ M(x), the second application found something the first missed. The *pattern* of failure is diagnostic: it reveals which regions of the decision space were invisible from the original situation framing but became visible after the first resolution shifted the observer's position. This is the cybernetic loop in action — observation changes state, and the new state reveals new territory.
-
-### Kleisli interpretation
-
-In the Kleisli category of the decision monad, each pipeline operation is a Kleisli arrow:
+The unit `η : situation → M(situation)` should embed a situation into the
+monad "trivially" — without adding genuine deliberative content. Operationally:
 
 ```
-f : Situation → M(Resolution)
+η(situation) = Funnel(Fan(situation))  with trivial deliberation
 ```
 
-where M captures the nondeterminism of LLM generation. Each invocation actualizes one trajectory through the distribution of possible deliberations. The monad's bind operation (>>=) is: "take a resolution, use it to frame a new situation, and deliberate again."
+where "trivial deliberation" means: a single round, no adversarial challenge,
+no evidence demands — the committee rubber-stamps whatever framing it receives.
+The result is a resolution that restates the situation without transforming it.
 
-This connects to the Kleisli category discussion in [decorated-texts.md](decorated-texts.md) (Related Work section): the decision monad is a *specific* monad layered on top of the general nondeterminism monad that all LLM pipeline operations inhabit. It adds the expand-evaluate-commit structure to the underlying stochasticity.
+**The unit law** then says: `μ ∘ M(η) = id = μ ∘ η_M` — composing genuine
+deliberation with trivial deliberation (in either order) should equal genuine
+deliberation alone. Trivial deliberation is the identity element: it
+contributes nothing.
+
+*Operational test*: Run M with trivially short deliberation. If the resolution
+is substantively different from the original situation framing, the pipeline
+scaffold is injecting content that didn't come from genuine deliberation. This
+tests whether the scaffold is load-bearing or decorative.
+
+### Multiplication: μ
+
+The multiplication `μ : M(M(situation)) → M(situation)` should flatten nested
+application. Operationally:
+
+```
+μ : (fan → funnel → fan → funnel)(situation)  ≈  (broad-fan → funnel)(situation)
+```
+
+Nested application means: fan a situation, funnel it into a resolution, then
+treat that resolution as a new situation, fan it again, and funnel again. The
+multiplication says this should be equivalent to a single broader fan-funnel
+pass that explores the same territory in one sweep.
+
+**The associativity law** then says: `μ ∘ M(μ) = μ ∘ μ_M` — three levels of
+nesting flatten the same way regardless of which pair you flatten first.
+
+*Operational test*: Run M twice (fan → funnel → fan the resolution → funnel
+again). Compare the final resolution with a single-pass M where the initial
+fan was broader (more scenarios, more divergence axes). If the nested version
+produces qualitatively different conclusions, the single-pass fan wasn't broad
+enough — it missed scenario regions that the second fan found by exploring from
+the resolution's vantage point.
+
+*When the law fails informatively*: Associativity failure isn't always a
+defect. If M(M(x)) ≠ M(x), the second application found something the first
+missed. The *pattern* of failure is diagnostic: it reveals which regions of
+the decision space were invisible from the original situation framing but
+became visible after the first resolution shifted the observer's position.
+This is the cybernetic loop in action — observation changes state, and the
+new state reveals new territory.
+
+### Status of the monad claim
+
+The definitions above are operationally clear but mathematically incomplete.
+Two gaps remain:
+
+**η is not a morphism in the strict sense.** It requires a specific
+operational mode ("trivial deliberation") rather than being a natural
+transformation defined uniformly across all objects. In the Markov category
+framework (see [categorical-structures.md, §2a](categorical-structures.md)),
+η would need to be a deterministic morphism `situation → M(situation)` in the
+sense of Fritz (2020, Definition 10.1). Whether the trivial-deliberation
+operation qualifies as deterministic — whether it truly introduces no
+randomness — depends on whether even a rubber-stamp committee introduces
+stochastic variation. If the operation is implemented as a deterministic
+template-fill (no LLM call), η is deterministic and the unit law holds
+strictly. If it involves any LLM generation, η is itself stochastic and the
+unit law holds only up to distributional equivalence.
+
+**μ presupposes that a resolution can serve as a situation.** The types
+`resolution` and `situation` are distinct soft types with different templates
+and rubrics. Flattening M(M(situation)) requires a coercion
+`resolution → situation` — reframing a decision as a new problem to explore.
+This coercion exists operationally (you can always ask "given that we decided
+X, what are the implications?") but it is a non-identity morphism that
+transforms content. Whether the monad laws hold depends on this coercion
+being well-behaved — specifically, on the round-trip
+`situation → resolution → situation` preserving the essential structure of the
+original situation. This is an empirical question testable by the Probe.
+
+**Assessment**: The decision pipeline has monad-like structure. The unit and
+multiplication are operationally well-defined and the monad laws generate
+genuinely useful quality tests. Whether the construction is a formal monad in
+the Markov category depends on resolving the two gaps above. Until then, the
+honest framing is: *monad-inspired pipeline with operationally testable
+quality criteria derived from the monad laws.* If subsequent work resolves the
+gaps, the "inspired" qualifier can be dropped.
+
+### Bind and iteration
+
+Regardless of formal monad status, the **bind operation** is well-defined:
+
+```
+(>>=) : M(situation) → (resolution → M(situation')) → M(situation')
+```
+
+Take a resolution, use it to frame a new situation, and deliberate again. This
+is the "Cascaded Exploration" pattern in the table below. It is iterable —
+each cascade reveals second-order consequences.
+
+In the Markov category framework, bind is simply composition of Markov kernels.
+The Chapman–Kolmogorov equation (Fritz, equation 2.8) guarantees that iterated
+bind is associative. This is weaker than the full monad — it says sequential
+composition works, without requiring the flattening that μ provides — but it
+is sufficient for the pipeline patterns that matter in practice.
 
 ---
 
