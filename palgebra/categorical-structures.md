@@ -34,25 +34,33 @@ input type of `g`. This is not a trivial constraint — it is what prevents
 pipelines from drifting into type-confusion, passing a `transcript` where a
 `charter` was expected.
 
-**Coherence is approximate, not strict.** Mac Lane's coherence theorem
-guarantees that in a well-behaved monoidal category, all diagrams built from
-the canonical structural isomorphisms commute — there is exactly one way to
-rearrange inputs, and the result doesn't depend on which path you take. In a
-stochastic text-processing pipeline, this guarantee does not hold on the nose.
-Running the same pipeline twice on the same inputs will not produce identical
-outputs. Diagrams that should commute will commute *up to distributional
-equivalence*: the two paths through the diagram produce outputs drawn from the
-same distribution, but not the same text.
+**Stochastic does not mean incoherent.** Running the same pipeline twice on
+the same inputs will not produce identical outputs. This looks like it should
+break the categorical framework — if diagrams don't commute on the nose, what
+good are they? The answer is that the morphisms in **Text** are not functions
+but *Markov kernels*: stochastic maps that assign to each input a probability
+distribution over outputs. Composition of Markov kernels is strictly
+associative — the Chapman–Kolmogorov equation holds exactly, not approximately.
+The stochasticity is *inside* each morphism; the composition is exact. Two
+different sample runs give different texts, but the *distribution* over texts
+is the same regardless of how you parenthesise the composition. Section 2a
+makes this precise using Fritz's Markov category framework (Fritz 2020).
 
-This means the categorical structures described in this document are not strict
-but *lax*. Products are approximate products — the projections recover the
-original inputs only up to paraphrase and information loss. Coproducts are
-approximate coproducts — the injections carry provenance, but the
-componentwise extension property holds only to the degree that the pipeline
-handles each component consistently. The universal properties described below
+Two distinct concerns should not be conflated:
+
+*Compositional coherence* — do the categorical axioms hold? Yes, by the Markov
+category structure. Associativity, identity laws, and the comonoid equations
+hold as equalities between Markov kernels. This is not approximate.
+
+*Universal properties* — does the charter satisfy the universal property of a
+product? Does the scenario-set satisfy the universal property of a coproduct?
+Here the answer is genuinely approximate. The charter compresses its inputs;
+the projections are lossy. The universal properties described in §§4–7 below
 are *design targets* that a well-constructed pipeline approximates, not
 theorems that the pipeline satisfies exactly. The Probe operation (§9) is the
-empirical test of how close the approximation is.
+empirical test of how close the approximation is. Section 3.2 of the
+[remediation plan](remediation-plan.md) discusses how to give "approximate" a
+precise metric.
 
 This situation is not a deficiency to be apologised for. It reflects a genuine
 feature of the domain. Meaning in LLM-mediated text processing is a temporary
@@ -118,20 +126,24 @@ comonoid objects — equipped with a copy map that lets them feed into multiple
 operations without depletion.
 
 **Two important refinements apply to all morphisms in this category.** First,
-every morphism is properly a *Kleisli arrow* of a nondeterminism monad: a
-pipeline operation is not a pure function `(Text, Meta) → (Text, Meta)` but a
-stochastic map `(Text, Meta) → M(Text, Meta)` where M captures the probability
-distribution over possible outputs (see
-[Decorated Texts, §Related Work](decorated-texts.md) for the full discussion).
-The constructions in this document are therefore constructions in the Kleisli
-category, not the base category. Second, the hom-sets carry graded information:
-not just "does this morphism exist?" but "at what confidence level does the
-output inhabit its target type?" This makes **Text** an *enriched category* over
-a confidence lattice (see Kelly, *Basic Concepts of Enriched Category Theory*,
-and the confidence propagation rules in [reference.md](reference.md)). The
-enrichment is what makes the soft type system compositional — confidence
-degrades monotonically through composition, and this degradation is tracked by
-the enriched hom-structure.
+every morphism is a *stochastic map*: a pipeline operation does not produce a
+single determinate output but a probability distribution over possible outputs.
+The same inputs run twice will generally yield different texts. This means the
+category **Text** is not an ordinary category of functions but a category of
+*Markov kernels* — stochastic maps that compose via the Chapman–Kolmogorov
+equation. Section 2a below makes this precise using Fritz's Markov category
+framework (Fritz 2020), which provides the comonoid structure (copy and
+discard) that the palgebra already uses informally for catalytic inputs and
+waste streams.
+
+Second, the hom-sets carry graded information: not just "does this morphism
+exist?" but "at what confidence level does the output inhabit its target type?"
+This makes **Text** an *enriched category* over a confidence lattice — see §2b
+for the precise specification, or Kelly (*Basic Concepts of Enriched Category
+Theory*) for the general framework, and the confidence propagation rules in
+[reference.md](reference.md). The enrichment is what makes the soft type system
+compositional — confidence degrades monotonically through composition, and this
+degradation is tracked by the enriched hom-structure.
 
 Two morphism kinds are distinguished:
 
@@ -142,6 +154,253 @@ Two morphism kinds are distinguished:
   transcript against an evaluation rubric adds a confidence score to its front
   matter without changing its text. Enrichments are idempotent and
   re-runnable; transformations are not.
+
+In the Markov category framework (§2a), this distinction acquires a precise
+characterisation: enrichments are the *deterministic morphisms* in the sense of
+Fritz (2020, Definition 10.1) — those that respect the copy structure.
+Transformations are the genuinely stochastic morphisms that do not.
+
+---
+
+## 2a. Text as a Markov category
+
+Section 2 described the category **Text** informally. This section gives the
+precise treatment. Readers comfortable with the informal picture can skip ahead
+to §3; those who need to see the axioms — or who want to understand why the
+"approximate coherence" caveat in §1 is less dire than it sounds — should read
+on.
+
+### The framework
+
+A **Markov category** (Fritz 2020, Definition 2.1) is a symmetric monoidal
+category **C** in which every object X is equipped with a commutative comonoid
+structure:
+
+- A *comultiplication* (copy map): `copy_X : X → X ⊗ X`
+- A *counit* (delete map): `del_X : X → I`
+
+satisfying the commutative comonoid equations:
+
+1. **Coassociativity**: `(copy_X ⊗ id) ∘ copy_X = (id ⊗ copy_X) ∘ copy_X`
+   — copying twice in either order gives the same three copies.
+2. **Counitality**: `(del_X ⊗ id) ∘ copy_X = id = (id ⊗ del_X) ∘ copy_X`
+   — copying then discarding one copy gives back the original.
+3. **Commutativity**: `swap ∘ copy_X = copy_X` — the two copies are
+   interchangeable.
+
+plus compatibility with the monoidal product (Fritz, equation 2.4):
+
+4. **Monoidal compatibility**: `copy_{X⊗Y}` decomposes as copy on each factor
+   then regroup — copying a pair is the same as copying each component.
+
+and naturality of del (Fritz, equation 2.5):
+
+5. **Naturality of delete**: `del_Y ∘ f = del_X` for every morphism
+   `f : X → Y` — discarding the output of any operation is the same as
+   discarding the input. Every morphism preserves the counit.
+
+The intuition: morphisms in a Markov category are "noisy maps." Each morphism
+assigns to every input value a probability distribution over output values.
+Composition is the Chapman–Kolmogorov equation — the output distribution of
+`g ∘ f` is obtained by running f, then running g on each possible output of f,
+then aggregating (Fritz, Example 2.5, equation 2.8). The copy map represents
+deterministic duplication: take an input and produce two identical copies with
+no added noise. The delete map discards an input entirely.
+
+A consequence of the del axioms is that the monoidal unit I is **terminal**:
+there is exactly one morphism from any object to I (Fritz, p. 13). This is the
+*semicartesian* condition — the category has projections (you can always discard
+a factor) but not necessarily products in the strict categorical sense (because
+a joint distribution is not determined by its marginals).
+
+### Text is a Markov category
+
+We claim that **Text**, as described informally in §2, carries Markov category
+structure. The identification is:
+
+| Fritz's framework | Palgebra | Notation |
+|---|---|---|
+| Object X | Soft type (template, rubric) | `situation`, `charter`, `transcript`, ... |
+| Morphism f : X → Y | Pipeline operation: stochastic map from X-artifacts to Y-artifacts | `Deliberate`, `Fan`, `Score`, ... |
+| Monoidal product X ⊗ Y | Cross product of artifact types | `charter × scenario-set` |
+| Monoidal unit I | Trivial empty artifact | `Unit` |
+| `copy_X` | Feed artifact X into two downstream consumers unchanged | `{catalytic: X}` — the annotation that X is reused without alteration |
+| `del_X` | Discard artifact X | `{discard: X}` — the waste-stream annotation |
+| Composition g ∘ f | Sequential wiring: run f, feed its output to g | `→` chaining in resource equations |
+
+**Verifying the axioms:**
+
+*Coassociativity and counitality of copy.* Catalytic inputs are copied by
+reference — the same artifact is passed unchanged to multiple downstream
+operations. Copying an artifact twice (to feed three consumers) is the same
+regardless of grouping, because the artifact is not modified by the copy. This
+holds by the design of the catalytic annotation: the artifact is read, not
+written. Counitality says copying then discarding one copy returns the
+original — trivially true when copy is pass-by-reference.
+
+*Commutativity of copy.* The two copies of a catalytic input are
+interchangeable — the artifact doesn't know which consumer it was copied for.
+True by construction.
+
+*Monoidal compatibility (equation 2.4).* Copying a compound input `charter ×
+scenario-set` decomposes into copying each component separately, then
+regrouping. This holds because the monoidal product is tupling of independent
+artifacts — there is no entanglement between components that would make
+joint copying differ from componentwise copying.
+
+*Naturality of del (equation 2.5).* Discarding the output of a pipeline
+operation is the same as discarding the input without running the operation.
+This is the statement that pipeline operations have no *side effects* beyond
+their declared output — no hidden state changes, no context-window pollution,
+no external writes. This is a **design discipline**, enforced by the pipeline
+architecture (each operation reads its inputs and writes its declared outputs,
+nothing else). It is the most substantive axiom to verify: violations (such as
+context-window leakage between operations) would break the Markov category
+structure. The template system and the operation isolation conventions exist
+precisely to maintain this property.
+
+### What this buys
+
+**Associativity is no longer approximate.** In a Markov category, composition
+of stochastic maps is strictly associative — `(h ∘ g) ∘ f = h ∘ (g ∘ f)` as
+an equality of Markov kernels. The stochasticity is *inside* each morphism
+(the output is a distribution), not *around* the composition. Running the same
+pipeline twice gives different sample outputs, but the *distribution* over
+outputs is the same regardless of how you parenthesise the composition. The
+"approximate coherence" language in §1 was responding to a real phenomenon
+(sample-level variation) but misdiagnosed it as a failure of associativity.
+It is not. It is the ordinary behaviour of stochastic maps composing exactly.
+
+**The monoidal structure is semicartesian, not cartesian.** The monoidal
+product X ⊗ Y has projections (discard one factor) but is not a categorical
+product, because a joint output distribution is not determined by its
+marginals. This is exactly right for Text: knowing the distribution over
+charters and the distribution over transcripts separately does not tell you
+the joint distribution over (charter, transcript) pairs, because the
+transcript depends on the charter. Fritz (p. 14) makes this point explicitly
+for FinStoch; it applies equally here.
+
+**Catalytic inputs are comonoid maps.** The `{catalytic: X}` annotation is not
+an informal convention but the *copy map of the Markov category*. Catalytic
+inputs are precisely the objects being copied: they feed into an operation
+without being consumed because copy_X produces two references to the same
+artifact. The comonoid equations guarantee this is well-behaved.
+
+**The Kleisli perspective is compatible but not required.** The earlier
+formulation (§2, pre-revision) described morphisms as Kleisli arrows of an
+unspecified monad M. Fritz's Corollary 3.2 shows that if one does pin down a
+specific monad (such as the Giry monad for measure-theoretic probability), the
+resulting Kleisli category is automatically a Markov category. The synthetic
+approach taken here is more general: we work with the Markov category axioms
+directly, without committing to a specific monad. The advantage is that the
+formalism does not depend on identifying the "right" monad — a question that
+would require specifying a measure space on artifacts. The Markov category
+axioms capture exactly the structure we need without this commitment.
+
+### Deterministic morphisms
+
+Fritz (2020, Definition 10.1) defines a morphism `f : X → Y` in a Markov
+category as **deterministic** if it respects the comultiplication:
+
+```
+copy_Y ∘ f = (f ⊗ f) ∘ copy_X
+```
+
+In words: copying the output of f is the same as copying the input and
+applying f to each copy independently. For stochastic maps, this fails in
+general — applying a noisy operation to two copies of the same input produces
+*correlated but distinct* outputs, while copying the output of one application
+produces two *identical* copies.
+
+The deterministic morphisms form a symmetric monoidal subcategory
+**Text**_det ⊆ **Text** (Fritz, Lemma 10.12). This subcategory is in fact
+*cartesian* monoidal (Fritz, Remark 10.13) — it has genuine products and the
+full universal property.
+
+In the palgebra, the deterministic morphisms are exactly the **enrichments**:
+operations that read an artifact and update its metadata without changing the
+payload text. ScoreEvidence, Evaluate, SecurityGate — these produce the same
+output given the same input (modulo negligible model-temperature variation that
+can be driven to zero). They respect the copy structure: scoring two copies of
+the same evidence produces two copies of the same scores.
+
+**Transformations** — Deliberate, Fan, DraftCharter — are the genuinely
+stochastic morphisms. They do not respect copy: deliberating on two copies of
+the same charter will produce two different transcripts. This is not a defect;
+it is the whole point. The stochasticity of transformations is what the Probe
+(§9) measures.
+
+---
+
+## 2b. The enrichment base
+
+The Markov category structure (§2a) handles the stochastic composition story.
+The *enrichment* handles the confidence-tracking story. These are compatible
+layers: **Text** is a Markov category enriched over a confidence lattice.
+
+### The lattice
+
+The enrichment base is:
+
+```
+V = ({Low, Medium, High}, min, High)
+```
+
+This is a three-element totally ordered set with min as the monoidal product
+and High as the unit. It is a *commutative quantale* — a complete lattice in
+which the monoidal product distributes over arbitrary joins. (For a
+three-element total order, this is easy to verify: min distributes over max.)
+Being a commutative quantale, V is a monoidal closed category and therefore
+a valid enrichment base in the sense of Kelly (1982, Ch. 1.2).
+
+### The enriched structure
+
+For any two soft types A and B, the enriched hom-object `Hom(A, B)` is a
+confidence level — the minimum confidence at which any morphism A → B has
+been observed to produce outputs inhabiting type B.
+
+The enriched composition law is:
+
+```
+confidence(g ∘ f) = min(confidence(f), confidence(g))
+```
+
+This says: the confidence of a composed pipeline is bounded by its weakest
+link. A Medium-confidence evidence-gathering step followed by a
+High-confidence scoring step yields a Medium-confidence result.
+
+### Verification of the enrichment axioms
+
+The enrichment axioms (Kelly, Ch. 1.2) require:
+
+1. **Composition is a V-morphism**: the composition map
+   `Hom(B,C) ⊗ Hom(A,B) → Hom(A,C)` sends `(c₂, c₁) ↦ min(c₂, c₁)`.
+   This must be associative: `min(c₃, min(c₂, c₁)) = min(min(c₃, c₂), c₁)`.
+   True because min is associative.
+
+2. **Identity is maximal**: `High ≤ Hom(A, A)` — the identity morphism
+   (pass-through) operates at maximum confidence. True by definition: passing
+   an artifact through unchanged cannot degrade it.
+
+3. **Composition respects the V-structure**: the interchange law for enriched
+   composition follows from commutativity of min.
+
+### Multi-dimensional scores
+
+The three-element lattice captures the *pipeline-level* confidence
+propagation. Within individual rubrics, scoring is richer: five criteria, each
+0–3, with semiring (weighted sum) or Pareto (multi-objective frontier)
+combination. These internal scoring structures are not part of the enrichment
+— they operate *inside* the scoring morphisms, producing the metadata that the
+enrichment then tracks through composition. The relationship is:
+
+- **Within a rubric**: criteria combine via domain-specific rules (semiring,
+  Pareto, etc.) to produce a confidence band.
+- **Across pipeline stages**: confidence bands combine via min-lattice — the
+  enrichment.
+
+The enrichment base is the min-lattice. The other structures are internal to
+the enrichment morphisms.
 
 ---
 
@@ -447,9 +706,11 @@ recursive interaction, not fixed objects stored in either participant
 ([From Semantic Potential to Situated Sense](../wild/potential-to-sense/from_semantic_potential_to_situated_sense.md)).
 The pipeline's categorical structures are the *structural* eigenforms: the
 patterns of composition, projection, and injection that stabilise across runs
-even when the *content* varies. This is why the lax/approximate reading of the
-categorical constructions (§1) is not a weakness but a feature — it correctly
-reflects a domain where structure composes reliably and content does not.
+even when the *content* varies. This is why the distinction drawn in §1 — between compositional coherence
+(which holds exactly in the Markov category) and universal properties (which
+hold approximately) — matters. The structure composes reliably; the content
+varies. The eigenforms are where these meet: structural invariants that
+persist across stochastic variation.
 
 ---
 
@@ -499,9 +760,18 @@ University of Oxford, 2016. — Decorated cospans for composing open systems;
 grounds the treatment of pipeline operations as open systems with input/output
 interfaces.
 
+**Fritz, Tobias.** "A synthetic approach to Markov kernels, conditional
+independence and theorems on sufficient statistics." *Advances in Mathematics*
+370, 107239, 2020. arXiv:1908.07021. — Markov categories: the categorical
+framework for stochastic maps. Definition 2.1 (Markov category), Corollary 3.2
+(Kleisli categories of affine monads are Markov categories), Definition 10.1
+(deterministic morphisms), Lemma 10.12 and Remark 10.13 (deterministic
+subcategory is cartesian monoidal). The foundation for §2a of this document.
+
 **Kelly, G. Maxwell.** *Basic Concepts of Enriched Category Theory.* Cambridge
 University Press, 1982. — Foundation for enrichment over confidence lattices;
-the theoretical basis for quality-score propagation through composition.
+the theoretical basis for quality-score propagation through composition. Ch.
+1.2 (enrichment axioms) is the basis for §2b of this document.
 
 **Baez, John, and Mike Stay.** "Physics, Topology, Logic and Computation: A
 Rosetta Stone." In *New Structures for Physics*, ed. B. Coecke. Springer, 2011.
