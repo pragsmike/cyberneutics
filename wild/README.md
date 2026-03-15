@@ -12,12 +12,13 @@ The [diary/](diary/) directory holds field notes and idea-connection sketches fr
 ### Formalization and Theory
 
 - **[Committee Games](committee-games/)** — *ACTIVE* — Translation of the adversarial committee into compositional game theory (open games). Bridge document for the ACT / Cybercat community. Covers strategic structure, propensity-as-selection-function, rubric design as mechanism design, and the fan/funnel as composed open games.
-- **[Potential to Sense](potential-to-sense/)** — *ACTIVE* — Essay arguing that meaning in LLM interactions is co-produced in conversation rather than stored or extracted. Develops the claim through distributional semantics, Pask's conversation theory, von Foerster's eigenforms, and a cybernetic control-loop model.
+- **[Potential to Sense](potential-to-sense/)** — *ACTIVE* — Essay arguing that meaning in LLM interactions is co-produced in conversation rather than stored or extracted. Develops the claim through distributional semantics, Pask's conversation theory, von Foerster's eigenforms, and a cybernetic control-loop model. Also contains a working document on Pask's Colloquy of Mobiles (1968) as machine-machine conversation, the chameleon-mirror problem for multi-agent LLM design, and bisimulation as the frame for evaluating committee propensities.
 - **[Residuality Theory](residuality-theory/)** — *DORMANT* — Barry O'Reilly's architecture philosophy — residues as what survives transformation — mapped onto the cyberneutics pipeline. Partially integrated: architectural walks → Probe, residues vs. eigenforms, criticality → survival constraint.
 - **[Subagent Personas for Debate](subagent-personas-for-debate/)** — *SUPERSEDED* — Prior art and design space for multi-persona LLM deliberation architectures.
 
 ### Adjacent Domains
 
+- **[Communicating with Absent Parties](communicating-absent-parties/)** — *ACTIVE* — Synthesis of a 40-page deep research report on communication when one party is absent, unreachable, or non-responsive. Covers eight domains (nuclear semiotics, Pask CT, decipherment, Berea, SETI, information cascades, hermeneutics, biosemiotics) unified by the absent-party problem. Maps onto pipeline/bath, calibration register limits, fan/funnel with reconstructed perspective, furry logic, and the narrative immune systems adversarial thread. Includes bridge to Anamaria Berea's research program.
 - **[Cybernetics](cybernetics/)** — *ACTIVE* — Source material on Gordon Pask, conversation theory, von Foerster, and second-order cybernetics.
 - **[Neo-Cybernetics](neo-cybernetics/)** — *DORMANT* — The neo-cybernetics initiative and its relation to cyberneutics methodology.
 - **[Software Factories](software-factories/)** — *DORMANT* — Investigation of dark factory coding agent workflows and whether palgebra formalism can serve as a typed specification language for agent pipelines.
