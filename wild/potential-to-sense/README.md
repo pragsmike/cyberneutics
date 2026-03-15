@@ -8,6 +8,8 @@ An essay arguing that meaning in LLM interactions is co-produced in conversation
 
 - **[from_semantic_potential_to_situated_sense.md](from_semantic_potential_to_situated_sense.md)** — The full essay. Eleven sections tracing a path from LLMs-as-semantic-potential-fields through pragmatic collapse (human participation converting potential into situated sense) to implications for AI theory, interface design, epistemology, and multi-agent systems.
 
+- **[pask-machine-machine.md](pask-machine-machine.md)** — Working document on Pask's Colloquy of Mobiles (1968) as the earliest machine-machine conversation, the chameleon-mirror problem and its implications for LLM pipeline design, bisimulation as the right frame for evaluating committee character propensities, and the connection to absent-party communication (decipherment as bisimulation reconstruction from trace). Connects to `wild/communicating-absent-parties/`, `wild/committee-games/committee-as-open-game.md`, and the calibration register's zero-feedback limit.
+
 ## Central Argument
 
 LLMs maintain structured fields of semantic potential rather than storing determinate meanings. LLM-only discourse explores a statistical landscape with its own attractors and degeneracies but lacks external grounding. Human participation introduces pragmatic, embodied, and social constraints — relevance, correction, consequences — that convert potential into situated sense. Meaning is a temporary eigenform of a coupled human-machine conversation: stable enough to be used, but dependent on the ongoing dynamics of the exchange.
@@ -31,6 +33,8 @@ Key cross-references:
 - `palgebra/categorical-structures.md` — eigenforms in the pipeline context
 - `wild/residuality-theory/` — residues vs. eigenforms distinction
 - `palgebra/decorated-texts.md` — soft types and the measurement framing
+- `wild/communicating-absent-parties/` — absent-party communication, frozen entailment meshes
+- `wild/committee-games/committee-as-open-game.md` — propensity as strategy-set constraint
 
 ## Status
 
