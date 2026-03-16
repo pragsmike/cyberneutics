@@ -29,6 +29,7 @@ For general orientation, read `README.md`.
 | `applications/` | Domain analyses | See the methodology applied to a real subject area. |
 | `meta/` | Methodology evolution and project state | Understand current truths, open decisions, and validation status. |
 | `examples/` | Checked-in scenario and deliberation records | Reference example runs and historical records that stay in the repo. |
+| `research-programs/` | Evidence-building plans and study designs | Plan or execute empirical validation of the methodology. |
 | `wild/` | Incoming ideas, external material, diary | Explore adjacent territory that is not yet integrated. |
 | `references/` | Background reading | Find cited theoretical sources. |
 | `agent/` | Handoffs, rosters, prompts, rubrics | Continue ongoing work inside this repo. |

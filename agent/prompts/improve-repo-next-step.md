@@ -1,6 +1,6 @@
 # Improve This Repo: Next Highest-Value Change
 
-Onboard to this repository by reading `agent/onboarding-core.md`, the latest `agent/handoff-*.md`, and `meta/project-state.md`. Then audit the repo for the next highest-value improvement now that the 2026-03-07 compatibility remediation is complete.
+Onboard to this repository by reading `agent/onboarding-core.md`, the latest `agent/handoff-*.md`, and `meta/project-state.md`. Then audit the repo for the next highest-value improvement.
 
 ## Constraints
 
@@ -25,8 +25,8 @@ Onboard to this repository by reading `agent/onboarding-core.md`, the latest `ag
 
 Bias toward improvements that strengthen one of these areas:
 
-- documentation consistency after the compatibility sweep
-- structural linting or guardrails
-- onboarding clarity
-- unresolved stale or redirect surfaces
+- onboarding clarity and accuracy (do onboarding docs match current repo reality?)
 - evidence-building or methodology validation support where the repo is currently thin
+- stale references, broken cross-links, or outdated metadata (especially `meta/project-state.md` currency)
+- integration of mature wild/ material into the main content spine
+- unresolved items from completed sprints (e.g., remaining Bruner edits 2/5/8, open decisions in project-state.md)

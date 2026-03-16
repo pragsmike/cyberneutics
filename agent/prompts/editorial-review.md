@@ -29,6 +29,7 @@ Read the files below. The numbered essays form the theoretical spine; the rest a
 - `essays/scene-1.md`
 - `essays/when-methodology-fails.md`
 - `essays/tilt-sound-collective-story.md`
+- `essays/glossary.md`
 
 ### Context Documents (read for reference; include in navigation/coherence assessment)
 - `essays/README.md` — reading paths and audience definitions

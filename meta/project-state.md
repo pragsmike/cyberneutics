@@ -1,6 +1,6 @@
 # Project State
 
-Last updated: 2026-03-13
+Last updated: 2026-03-16
 
 This document is the canonical current-state reference for repo structure, compatibility truths, and live open questions. It replaces the old stale backlog-file role with a narrower, actively maintained state doc.
 
@@ -27,7 +27,7 @@ Complete as of 2026-03-07. All items resolved:
 - Checked-in scenario and deliberation records labeled and housed as examples.
 - Structural linting in place to keep these invariants from drifting.
 
-## Recent changes (2026-03-08 through 2026-03-13)
+## Recent changes (2026-03-08 through 2026-03-16)
 
 ### New content added (2026-03-08)
 
@@ -45,6 +45,20 @@ Complete as of 2026-03-07. All items resolved:
 - Completed `cyber-sense` → `cyberneutics` rename sweep in live content (diary entries, example deliberations). Archive files left as historical.
 - Refactoring sprint plan created: `agent/prompts/refactoring-sprint-2026-03.md`.
 
+### New content added (2026-03-15)
+
+- `wild/communicating-absent-parties/README.md` — Seven-section synthesis from a 40-page Perplexity deep research report on absent-party communication across eight domains (nuclear semiotics, Pask CT, decipherment, Berea, SETI, information cascades, hermeneutics, biosemiotics). Bridges to pipeline/bath distinction, calibration register at zero-feedback limit, and furry logic.
+- `wild/potential-to-sense/pask-machine-machine.md` — Pask's Colloquy of Mobiles (1968) as machine-machine conversation; chameleon-mirror problem, bisimulation as propensity constraint, Pask's machine trajectory from Musicolour to THOUGHTSTICKER.
+- `wild/potential-to-sense/README.md` — Updated with pask-machine-machine.md entry and cross-references.
+- `wild/diary/2026-03-15-absent-parties-and-chameleons.md` — Absent-party communication as unifying thread; pipeline/bath mapping at calibration register limit; Pask's chameleon-mirror problem; Berea bridge.
+- `wild/diary/2026-03-15-emotional-attention-steering.md` — Addresses GitHub issue #13; emotional state as continuous PID-controlled variables per character; bricking/exclusion mechanisms.
+- `wild/diary/2026-03-15-mystic-narrative.md` — Jean Houston's Four Levels model as pre-narrative conditioners; maps across shamanic and Diana's Grove lineages; connects to Bruner-Kahneman synthesis.
+
+### Prompt and agent maintenance (2026-03-16)
+
+- `agent/prompts/improve-repo-next-step.md` — Updated bias areas to reflect post-sprint state.
+- `agent/prompts/editorial-review.md` — Added `essays/glossary.md` to scope.
+
 ## Open decisions
 
 - Whether to record rubric scores as persistent metadata beyond the current review artifacts.
@@ -59,7 +73,7 @@ A refactoring sprint plan is at `agent/prompts/refactoring-sprint-2026-03.md`. I
 
 Pass 1 audit phase complete (2026-03-13). Reports:
 - WS-1 editorial review: `agent/archive/editorial-review-report-2026-03.md` — all 7 dimensions score 2/3; 10-item remediation plan.
-- WS-2 cross-reference audit: `agent/archive/cross-reference-audit-2026-03.md` — zero broken links; Bruner edit plan partially executed (6/9).
+- WS-2 cross-reference audit: `agent/archive/cross-reference-audit-2026-03.md` — zero broken links; Bruner edit plan fully executed (9/9, verified 2026-03-16).
 - WS-3 research program triage: `agent/archive/research-program-triage-2026-03.md` — all 8 programs relevant; ablation study and agent-independence ready to start.
 - WS-7 rubric extensions: `agent/rubrics/repo-consistency.md` — draft of 5 new dimensions (internal consistency, currency, pipeline velocity, formal consistency, practical validation).
 
@@ -75,7 +89,7 @@ Pass 2 complete (2026-03-13). mg reviewed Pass 1 findings and approved remediati
 - WS-5 wild triage: `agent/archive/wild-triage-2026-03.md` — 2 directories ready to promote (potential-to-sense, committee-games); 7 graduation-ready within 4 weeks; 4 remain active research; 1 superseded.
 - WS-6 wild cleanup: Status notes added to all 12 wild subdirectory READMEs. Status indicators added to `wild/README.md` with triage report link.
 
-Sprint status: **Complete**. Remaining items are longer-term (worked example, essay promotions from wild/, Bruner edits 2/5/8) and belong in future sprints.
+Sprint status: **Complete**. Bruner edits 2/5/8 verified applied (2026-03-16). Remaining longer-term items (worked example, essay promotions from wild/) belong in future sprints.
 
 ### Post-sprint: categorical-structures.md focused review (2026-03-13)
 
@@ -89,9 +103,9 @@ Sprint status: **Complete**. Remaining items are longer-term (worked example, es
 
 - A full empirical failure case for `essays/when-methodology-fails.md` still depends on real practice data.
 - Some evidence-building tasks in `research-programs/` still depend on running fresh situation-directory workflows rather than repo-local examples.
-- The Bruner-Kahneman diary entry (`wild/diary/2026-02-17-bruner-kahneman-synthesis.md`) contains a 9-edit plan for essay cross-references, of which 6 have been applied. Edits 2, 5, and 8 remain unapplied. Decision needed: complete remaining edits, revise, or close.
+- ~~The Bruner-Kahneman diary entry 9-edit plan~~ — All 9 edits verified applied as of 2026-03-16. Item closed.
 
 ## Docs still needing sweep
 
-- `project-state.md` itself should be updated after each sprint workstream completes.
+- `project-state.md` itself should be updated after each sprint workstream completes. Last sweep: 2026-03-16.
 - If this becomes stale, update this section rather than reintroducing a catch-all backlog file.
