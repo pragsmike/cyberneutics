@@ -66,8 +66,8 @@ the generation process.
 
 **Breaks:**
 - Immune systems have no provenance chain — pure shape-matching. Palgebra
-  cares deeply about provenance. The immune analogy maps to the bath model
-  but not cleanly to the pipeline model.
+  cares deeply about provenance. The immune analogy maps to the bloodstream
+  model but not cleanly to the organ model.
 
 **Predicted missing parts:**
 - **Memory cells**: After successfully identifying a type of bad text,
@@ -107,25 +107,25 @@ what survives repeated perturbation. Understanding is the residual
 structure after conversational shocks. The immune system and the
 conversation are the same pattern at different scales.
 
-## Two regimes: pipeline (organ) vs. bath (bloodstream)
+## Two regimes: organ vs. bloodstream
 
-**Inside a pipeline (organ):** You built it, you control it, you trust
+**Inside an organ** — a controlled channel with defined inputs, outputs, and inspectable transformations: You built it, you control it, you trust
 the operations. Texts flow through known transformations. Types are
 assigned by construction. Provenance is proof. Mutation is safe because
 you own the chain of custody.
 
-**In the bath (bloodstream):** Nobody owns the chain of custody. A text
+**In the bloodstream** — an ambient medium carrying unprovenanced material, where the receiving tissue must judge what to absorb and what to reject: Nobody owns the chain of custody. A text
 doesn't *have* a type — it has *claims* about its type, which are
 themselves texts in the pool. Type membership is a social construct
 emerging from the pattern of judgments weighted by judge credibility.
 
-This resolves a tension in the formalism: the pipeline is classical type
-theory (types are properties of objects); the bath is open-world
+This resolves a tension in the formalism: the organ is classical type
+theory (types are properties of objects); the bloodstream is open-world
 reasoning (types are conclusions drawn by reasoners, always revisable).
 
 ### Immutable texts with judgment graph
 
-For the bath regime:
+For the bloodstream regime:
 
 - Texts are immutable. Judges never modify originals.
 - Judgments are new decorated texts with pointers to the judged texts.
@@ -140,7 +140,7 @@ An append-only log of decorated texts with a typed reference graph.
 
 ### Description logic as reasoning framework
 
-The bath maps to description logic:
+The bloodstream maps to description logic:
 
 - **TBox** (terminological schema) = type definitions
 - **ABox** (assertion box) = pool of texts, judgments, reference links
@@ -149,7 +149,7 @@ The bath maps to description logic:
 
 Palgebra defines what types mean and how they propagate. Description
 logic provides inference machinery for classifying individuals in the
-open-world bath. Standard DL gives boolean classification; soft types
+open-world bloodstream. Standard DL gives boolean classification; soft types
 need fuzzy DL extension for graded membership.
 
 ## Organs as trust boundaries
@@ -207,7 +207,7 @@ This explains several practical patterns:
   (internal code, internal docs), some aren't (external dependencies,
   user-generated content), and the boundary isn't explicit. Redesigning
   the workflow means, in part, making the trust boundaries explicit so
-  the agent knows when it's inside an organ and when it's in the bath.
+  the agent knows when it's inside an organ and when it's in the bloodstream.
 
 - **Retrieval-augmented generation (RAG)** is an attempt to extend the
   organ boundary: pull external content into a local context where the
@@ -220,12 +220,12 @@ This explains several practical patterns:
 
 "Be conservative in what you send, be liberal in what you accept."
 
-- **Inside the pipeline (sending)**: Strict typing, rigorous rubric
+- **Inside the organ (sending)**: Strict typing, rigorous rubric
   application, remediation loops. Don't release anything that hasn't
   passed the gauntlet. A dark factory's scenario suite is Postel's
   law applied to output.
 
-- **In the bath (accepting)**: Let texts arrive untyped, partially
+- **In the bloodstream (accepting)**: Let texts arrive untyped, partially
   typed, multiply typed, contradictorily typed. Accept into the pool.
   Then classify — attach judgments, score, let the reasoner work.
   Liberal acceptance is not naive trust.
@@ -264,7 +264,7 @@ power users and becomes a public good.
 
 ## Open threads
 
-- **Formalize the bath model in palgebra.** Operations on pools, not
+- **Formalize the bloodstream model in palgebra.** Operations on pools, not
   just pipelines. Judgment-as-text morphism. Trust emergence from graph
   topology. Fuzzy DL integration.
 - **Adaptive rubrics.** The immune analogy predicts rubrics should
@@ -275,9 +275,9 @@ power users and becomes a public good.
   (targeting the immune system like HIV), flooding the zone
   (overwhelming the discriminator), type-spoofing (engineering texts
   to pass surface checks).
-- **Pipeline/bath interface.** Where output crosses from trusted organ
-  to untrusted pool, and where a bath judge ingests a text into a
-  trusted internal pipeline. This is where Postel's law operates.
+- **Organ/bloodstream interface.** Where output crosses from trusted organ
+  to untrusted pool, and where a bloodstream judge ingests a text into a
+  trusted internal organ. This is where Postel's law operates.
   Type-by-construction becomes type-by-claim at the boundary.
 - **Regulatory mechanisms.** Meta-rubrics that evaluate whether the
   evaluation system itself is well-calibrated. The "who watches the

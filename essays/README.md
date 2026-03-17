@@ -72,7 +72,7 @@ If you want the precise machinery underneath the methodology:
 2. **[Decorated Texts](../palgebra/decorated-texts.md)** - The full essay developing the pipeline algebra from first principles
 3. **[Committee as Palgebra](../palgebra/committee-as-palgebra.md)** - Worked example: the adversarial committee pipeline formalized as resource equations
 4. **[From Methodology to Formalism](./08-from-methodology-to-formalism.md)** (~15 min) - The bridge: how the philosophical foundations and the algebra describe the same phenomenon
-5. **[Narrative Immune Systems](./09-narrative-immune-systems.md)** (~8 min) - Evaluation as immune function, trust boundaries, the organ/bath distinction
+5. **[Narrative Immune Systems](./09-narrative-immune-systems.md)** (~8 min) - Evaluation as immune function, trust boundaries, the organ/bloodstream distinction
 6. **[Decisions Under Uncertainty](./10-decisions-under-uncertainty.md)** (~12 min) - The fan/funnel duality, decision monads, and rigorous decision-making through composition and iteration
 
 ### A Note on the Committee Characters
@@ -265,14 +265,14 @@ The essays in this directory establish *why* narrative engines need narrative en
 
 **The extension**: The evaluation feedback loop in the committee pipeline is a generator-discriminator architecture. It is also, precisely, an immune system.
 
-**Key insight**: The analogy is functorial (structure-preserving), not merely metaphorical. It predicts missing components (adaptive rubrics, memory cells, regulatory mechanisms) and identifies two regimes — pipeline (organ) and bath (bloodstream) — with distinct type-theoretic properties. Trust boundaries determine where immune function concentrates.
+**Key insight**: The analogy is functorial (structure-preserving), not merely metaphorical. It predicts missing components (adaptive rubrics, memory cells, regulatory mechanisms) and identifies two regimes — organ and bloodstream — with distinct type-theoretic properties. Trust boundaries determine where immune function concentrates.
 
 **Covers**:
 - Generator-discriminator as immune system (rubrics as antibodies, evaluators as T cells, evaluation protocols as thymic gauntlet)
 - Thymic selection mapped to type-checking: positive selection as template conformance, negative selection as degenerate parroting
-- Organ (pipeline) vs. bath (bloodstream): two trust regimes with different reasoning frameworks
+- Organ vs. bloodstream: two trust regimes with different reasoning frameworks
 - Organs as trust boundaries: why local agentic AI outperforms open-web agentic AI
-- Postel's law as design principle at the organ/bath interface
+- Postel's law as design principle at the organ/bloodstream interface
 - Civic application: mis/dis/malinformation as pathogen taxonomy
 - Predicted missing parts: memory cells, autoimmune disorders, immunodeficiency
 

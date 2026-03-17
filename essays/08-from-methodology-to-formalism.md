@@ -265,12 +265,12 @@ sits.
 The narrative immune systems work (see [Essay 09](./09-narrative-immune-systems.md))
 extends the formalism into two regimes:
 
-**Inside a pipeline (organ)**: Types are assigned by construction.
+**Inside an organ**: Types are assigned by construction.
 Provenance is proof. The artifact carries its chain of custody. You built
-the pipeline, you control it, you trust the operations. This is the
+the channel, you control it, you trust the operations. This is the
 regime the palgebra formalizes well.
 
-**In the open world (bath)**: Nobody owns the chain of custody. A text
+**In the bloodstream**: Nobody owns the chain of custody. A text
 doesn't *have* a type — it has *claims* about its type, which are
 themselves texts subject to evaluation. Type membership is a social
 construct emerging from a pattern of judgments.
@@ -522,4 +522,4 @@ The bridge is where the methodology lives.
 - [Committee as Palgebra](../palgebra/committee-as-palgebra.md) — the worked example
 - [The Synthesis](./05-the-synthesis.md) — the philosophical synthesis this essay formalizes
 
-**Next essay**: [Narrative Immune Systems](./09-narrative-immune-systems.md) — extending the formalism to immune function, trust boundaries, and organ/bath regimes
+**Next essay**: [Narrative Immune Systems](./09-narrative-immune-systems.md) — extending the formalism to immune function, trust boundaries, and organ/bloodstream regimes
