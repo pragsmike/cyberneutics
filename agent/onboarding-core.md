@@ -103,6 +103,17 @@ Available workflows:
 
 Read the relevant `SKILL.md` before using any of these workflows.
 
+## Key vocabulary
+
+The methodology distinguishes two trust regimes:
+
+- **Organ**: a controlled channel with defined inputs, outputs, and inspectable transformations. You trust it because you built it and can verify the chain of custody. Internal trust, controlled transformations.
+- **Bloodstream**: an ambient medium carrying unprovenanced material. The receiving tissue must judge what to absorb and what to reject. External judgment required, mixed provenance.
+
+Older material may use "pipeline" and "bath" as synonyms for organ and bloodstream. The current terms are organ/bloodstream. "Pipeline" also appears in non-metaphorical senses (committee pipeline, fan/funnel pipeline, pipeline algebra) — those are unrelated to this distinction.
+
+For the full glossary, see `essays/glossary.md`.
+
 ## Working style
 
 - Ask clarifying questions when the ambiguity is itself the problem.
