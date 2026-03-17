@@ -1,7 +1,7 @@
 # Evaluating Deliberative Architectures: The Black Swan Hindsight Framework
 
-**Status**: Not started
-**Runs**: None yet
+**Status**: Phase A in progress — Pre-Gates 1 and 2 complete; full Phase A pending decision on scenario revision
+**Runs**: Pre-Gate 1 (3 contamination probes, all passed); Pre-Gate 2 (10 pilot runs: B1 and B1-ext on 5 scenarios, dual-scored)
 **Results**: [evaluating-deliberative-architectures/results/](evaluating-deliberative-architectures/results/)
 
 > **Contributing to this program**

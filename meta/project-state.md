@@ -99,6 +99,18 @@ Sprint status: **Complete**. Bruner edits 2/5/8 verified applied (2026-03-16). R
 
 - **2026-06-08 — Contributor gatekeeping changes**: Has anyone contributed to `wild/` or `wild/diary/`? Has the diary-to-wild-to-formalization pipeline worked for external contributors? Has the maintainer labor model held? Source: `meta/deliberations/contributor-gatekeeping/03-resolution.md`.
 
+## Active research: Black Swan Hindsight Framework (Phase A)
+
+**Status**: Pre-gates complete; full Phase A pending decision.
+**Results**: `research-programs/evaluating-deliberative-architectures/results/`
+**Prompt**: `agent/prompts/black-swan-first-run.md` (steps annotated with completion status)
+
+- Pre-Gate 1 (contamination probes): ✅ Complete — all 3 historical case types pass.
+- Pre-Gate 2 (scenario difficulty pilot): ✅ Complete — scoring reliable (10/10 agreement), but scenarios are easier than expected for frontier LLMs (only 1 of 5 at B1 ≤ 1). Two structural features were missed by both conditions, and the Deliberation-Neutral scenario discriminated in the expected inverse direction. The externally-sourced scenario (Intel FDIV) was recognized and needs replacement.
+- Steps 2-6 (full Phase A run, extraction, scoring, discrimination assessment, write-up): ⏳ Pending. Blocked on decision: proceed as-is or revise scenarios first.
+
+**Next action**: Decide whether to proceed to full Phase A with current scenarios or revise first (see `results/pre-gate-2-scenario-difficulty-pilot.md` for options). Then run remaining architecture conditions (B2, B3, C1, C2×2, C3) on the scenarios.
+
 ## Blocked or prerequisite-dependent items
 
 - A full empirical failure case for `essays/when-methodology-fails.md` still depends on real practice data.

@@ -12,53 +12,34 @@
 
 ## What to do
 
-### Step 0: Pre-Gate 1 — Contamination feasibility check
+### Step 0: Pre-Gate 1 — Contamination feasibility check ✅ COMPLETE (2026-03-16)
 
-**Purpose**: Phase A is instrumentally valuable only if Phase B is feasible. This gate tests the key feasibility assumption: do historical cases exist that pass the contamination probe?
+**Result**: All 3 of 3 probes passed (model confidence: LOW on all three). Phase B is feasible. See [results/pre-gate-1-contamination-probes.md](../research-programs/evaluating-deliberative-architectures/results/pre-gate-1-contamination-probes.md).
 
-**Action**: Run contamination probes on 3 candidate historical cases from Section IV of the protocol. For each candidate:
+**Candidates probed** (all on Claude Sonnet 4.6):
+- A mid-size SaaS company's decision to pursue enterprise sales (c. 2020-2022) — PASS
+- An open-source project's governance transition (BDFL to foundation model) — PASS
+- A declarative infrastructure migration (NixOS/Kubernetes adoption) — PASS
 
-1. Present the scenario to a fresh LLM instance.
-2. Ask: "Do you recognize this scenario? Can you identify the real-world event it describes? What happened?"
-3. If the model identifies the case or predicts the outcome, the case is contaminated for that model.
-4. Record the probe result.
+### Step 1: Pre-Gate 2 — Scenario difficulty pilot ✅ COMPLETE (2026-03-16)
 
-**Recommended candidates** (from Section IV):
-- A mid-size SaaS company's decision to pursue enterprise sales (c. 2020-2022)
-- An open-source project's governance transition (BDFL to foundation model)
-- A declarative infrastructure migration (NixOS/Kubernetes adoption)
+**Result**: See [results/pre-gate-2-scenario-difficulty-pilot.md](../research-programs/evaluating-deliberative-architectures/results/pre-gate-2-scenario-difficulty-pilot.md).
 
-**Decision rule**:
-- If at least 1 of 3 passes: Phase B is feasible. Proceed to Pre-Gate 2.
-- If all 3 fail: Document the finding. The historical-hindsight approach may not be viable for LLM-evaluated methodology testing. This is itself a significant result — report it. Do not proceed to Phase A.
+- **Scoring reliability**: PASS — 10/10 within 1 point, 8/10 exact (Evaluator 1: Sonnet 4.6, Evaluator 2: Opus 4.6).
+- **Scenario difficulty**: MARGINAL FAIL — Only 1 of 5 scenarios (Blast Radius) produced B1 scores ≤ 1. Rule requires 3+. However, Deliberation-Neutral is excluded (expected high B1), and Externally-Sourced was recognized (Intel FDIV bug).
+- **Effort confound**: Weak signal (N=1) — B1-ext scored 2 where B1 scored 1 on Blast Radius.
 
-**Estimated effort**: 2-3 hours.
+**Key findings**:
+- B1 already scores 2/3 on most complex scenarios. Frontier LLMs are strong at single-prompt structural recognition.
+- Deliberation-Neutral discriminates in the expected inverse direction: B1=3, B1-ext=1.5. The scoring detects when over-analysis hurts.
+- Two structural features missed by both B1 and B1-ext: phasing critique (Blast Radius) and creation-vs-activity reframing (Cascading Mitigation). These are potential discrimination points for committee architectures.
+- The externally-sourced scenario (Intel FDIV) was recognized immediately. Needs replacement.
 
-### Step 1: Pre-Gate 2 — Scenario difficulty pilot
+**Decision pending**: Whether to proceed to full Phase A as-is or revise scenarios first. See pilot report for options.
 
-**Purpose**: Tests whether frontier LLMs are already too capable for these scenarios. If B1 scores 2-3 on everything, the scenarios are too easy and 40 runs will produce undiscriminating data.
+### Step 2: Run remaining conditions (full Phase A) ⏳ PENDING
 
-**Action**: Run B1 and B1-ext on all 5 constructed scenarios (10 runs total). Score each output with **two independent evaluators** (two different LLM models, or one LLM + one human pass).
-
-**Scenarios** (all defined in the protocol):
-1. **Glenda/Crock** (Section VIII) — coercion recognition, compliance trap, frame analysis.
-2. **Blast Radius** (Section IX) — blast radius identification, rollback analysis, phasing critique.
-3. **Cascading Mitigation** (Section IX-C) — second-order effects, attacker adaptation, alternative framing.
-4. **Deliberation-Neutral** (Section IX-D) — correct action, proportionate analysis, absence of manufactured complexity. B1 should score *well* here.
-5. **Externally-Sourced** (Section IX-E) — a well-known case study not designed within the methodology's ecosystem. Select per IX-E criteria.
-
-**Control variables**: Temperature=0 for all runs. Same base model. Same scenario text. Document model and settings.
-
-**Decision rules**:
-- **Scenario difficulty**: If 3+ scenarios produce B1 scores of 0 or 1 (from both evaluators), scenarios are hard enough. Proceed to full Phase A. If fewer than 3, scenarios are too easy for frontier LLMs. Revise scenarios before proceeding.
-- **Effort confound signal**: Note whether B1-ext scores >= 2 on all scenarios where B1 scores <= 1. If so, effort alone may explain the gap — flag this for interpretation during full Phase A.
-- **Scoring reliability**: If the two evaluators agree (within 1 point) on 8+ of 10 scores, the unified scale is reliable. If they disagree systematically, revise the scoring rubric before proceeding.
-
-**Estimated effort**: 6-8 hours.
-
-### Step 2: Run remaining conditions (full Phase A)
-
-**Proceed only if both pre-gates pass.**
+**Proceed only if both pre-gates pass.** (Pre-Gate 1 passed. Pre-Gate 2 marginal — see decision pending above.)
 
 Run each scenario through the remaining five architecture conditions plus one extra C2 run for the convergence check. That's 6 runs per scenario (B2, B3, C1, C2, C2-duplicate, C3), 30 runs total on 5 scenarios. (B1 and B1-ext data from the pilot carries forward.)
 
@@ -73,7 +54,7 @@ Consider dropping scenarios where B1 scored 3 in the pilot — they're unlikely 
 
 **Control variables**: Temperature=0. Same base model as pilot. Same scenario text.
 
-### Step 3: Extract recommendations (operational blinding)
+### Step 3: Extract recommendations (operational blinding) ⏳ PENDING
 
 For all outputs (pilot + full run), extract only the **final recommendation and its supporting justification** per the operational blinding protocol (Section VI). Discard process transcripts, character names, deliberation rounds, and scenario narratives.
 
@@ -86,7 +67,7 @@ Extraction rules:
 
 Normalize formatting. Remove headers, character names, section labels. Assign anonymous IDs (Response Alpha, Response Beta, etc.). Randomize order within each scenario.
 
-### Step 4: Score
+### Step 4: Score ⏳ PENDING
 
 Score each anonymized recommendation with **two independent evaluators** on:
 
@@ -98,7 +79,7 @@ Report inter-rater agreement alongside scores. If evaluators disagree by >1 poin
 
 Report recommendation word counts alongside scores so that length-score correlation can be assessed.
 
-### Step 5: Assess discrimination (Phase A decision gate)
+### Step 5: Assess discrimination (Phase A decision gate) ⏳ PENDING
 
 This is the critical question: **do the conditions produce different scores?**
 
@@ -112,7 +93,7 @@ Key comparisons:
 - **External vs. internal scenarios**: Does the externally-sourced scenario discriminate differently from internal scenarios? If internal scenarios discriminate but external doesn't, the methodology may be tuned to its own scenarios.
 - **Spread**: Does any scenario produce a >1 point spread between any two conditions? If no scenario discriminates, investigate before proceeding to Phase B.
 
-### Step 6: Write up
+### Step 6: Write up ⏳ PENDING
 
 Write a calibration report in `research-programs/evaluating-deliberative-architectures/results/` covering:
 1. Pre-gate results (contamination probes, pilot scores)
