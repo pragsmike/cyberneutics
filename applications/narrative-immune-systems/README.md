@@ -66,7 +66,7 @@ What if the adversary doesn't tamper with the AI at all, but instead coerces the
 
 ## Relationship to Essay 09
 
-[Essay 09](../../essays/09-narrative-immune-systems.md) works at the level of **formal architecture** — pipeline design, type systems, agent infrastructure, the palgebra formalism. It develops the immune-system analogy for narrative engineering: generator-discriminator loops, rubrics as antibodies, thymic selection as type-checking, the organ/bath distinction as trust boundaries.
+[Essay 09](../../essays/09-narrative-immune-systems.md) works at the level of **formal architecture** — pipeline design, type systems, agent infrastructure, the palgebra formalism. It develops the immune-system analogy for narrative engineering: generator-discriminator loops, rubrics as antibodies, thymic selection as type-checking, the organ/bloodstream distinction as trust boundaries.
 
 The essays in this directory apply that architecture to observed phenomena. [Social Decision Disruption](social-decision-disruption.md) applies it to **civic epistemology** — journalism, information warfare, public trust. The Glenda/Crock essays apply it to **adversarial AI alignment** — structural corruption, detection, and coercion.
 
@@ -89,4 +89,4 @@ The Glenda/Crock analysis of mesh-rewiring and seam detection originated in a fr
 
 ## Open Threads
 
-See the open threads section of [Essay 09](../../essays/09-narrative-immune-systems.md) for formal extensions: bath-model palgebra, adaptive rubrics, information warfare as immune evasion, the pipeline/bath interface, and regulatory mechanisms for the evaluation system itself.
+See the open threads section of [Essay 09](../../essays/09-narrative-immune-systems.md) for formal extensions: bloodstream-model palgebra, adaptive rubrics, information warfare as immune evasion, the organ/bloodstream interface, and regulatory mechanisms for the evaluation system itself.

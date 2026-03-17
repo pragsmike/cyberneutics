@@ -4,7 +4,7 @@ Domain analyses that apply the Cyberneutics framework to real-world phenomena.
 
 The [essays](../essays/) build the theoretical foundations. The [palgebra](../palgebra/) provides formal machinery. The [artifacts](../artifacts/) provide practical techniques. This directory shows what happens when you point those tools at a problem domain and see what they reveal.
 
-Each subdirectory is a self-contained investigation. The framework provides the vocabulary (trust boundaries, organ/bath regimes, soft types, immune function, generator-discriminator loops); the application provides the territory.
+Each subdirectory is a self-contained investigation. The framework provides the vocabulary (trust boundaries, organ/bloodstream regimes, soft types, immune function, generator-discriminator loops); the application provides the territory.
 
 ---
 

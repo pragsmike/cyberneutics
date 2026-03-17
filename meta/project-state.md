@@ -47,10 +47,10 @@ Complete as of 2026-03-07. All items resolved:
 
 ### New content added (2026-03-15)
 
-- `wild/communicating-absent-parties/README.md` — Seven-section synthesis from a 40-page Perplexity deep research report on absent-party communication across eight domains (nuclear semiotics, Pask CT, decipherment, Berea, SETI, information cascades, hermeneutics, biosemiotics). Bridges to pipeline/bath distinction, calibration register at zero-feedback limit, and furry logic.
+- `wild/communicating-absent-parties/README.md` — Seven-section synthesis from a 40-page Perplexity deep research report on absent-party communication across eight domains (nuclear semiotics, Pask CT, decipherment, Berea, SETI, information cascades, hermeneutics, biosemiotics). Bridges to organ/bloodstream distinction, calibration register at zero-feedback limit, and furry logic.
 - `wild/potential-to-sense/pask-machine-machine.md` — Pask's Colloquy of Mobiles (1968) as machine-machine conversation; chameleon-mirror problem, bisimulation as propensity constraint, Pask's machine trajectory from Musicolour to THOUGHTSTICKER.
 - `wild/potential-to-sense/README.md` — Updated with pask-machine-machine.md entry and cross-references.
-- `wild/diary/2026-03-15-absent-parties-and-chameleons.md` — Absent-party communication as unifying thread; pipeline/bath mapping at calibration register limit; Pask's chameleon-mirror problem; Berea bridge.
+- `wild/diary/2026-03-15-absent-parties-and-chameleons.md` — Absent-party communication as unifying thread; organ/bloodstream mapping at calibration register limit; Pask's chameleon-mirror problem; Berea bridge.
 - `wild/diary/2026-03-15-emotional-attention-steering.md` — Addresses GitHub issue #13; emotional state as continuous PID-controlled variables per character; bricking/exclusion mechanisms.
 - `wild/diary/2026-03-15-mystic-narrative.md` — Jean Houston's Four Levels model as pre-narrative conditioners; maps across shamanic and Diana's Grove lineages; connects to Bruner-Kahneman synthesis.
 
