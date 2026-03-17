@@ -28,7 +28,7 @@ Quick reference for the 20 terms that recur across the essay collection. Each en
 
 **Narrative engineering** — The discipline of composing primitive narrative computers into reliable systems through redundancy, feedback, iteration, and staged composition. Analogous to how software engineering grew from symbolic computing. ([Essay 07](./07-bolands-narrative-engineering.md); [README](./README.md))
 
-**Organ/Bath regime** — Two trust regimes from the immune-system analogy. *Organ* (pipeline): types are assigned by construction, provenance is proof, you control the chain of custody. *Bath* (open world): nobody owns the chain of custody, type membership is a social construct emerging from patterns of judgment. ([Essay 09](./09-narrative-immune-systems.md))
+**Organ/Bloodstream regime** — Two trust regimes from the immune-system analogy. *Organ*: a controlled channel with defined inputs, outputs, and inspectable transformations — you trust it because you built it and can verify the chain of custody. *Bloodstream*: an ambient medium carrying unprovenanced material — the receiving tissue must judge what to absorb and what to reject, because nobody owns the chain of custody and type membership is a social construct emerging from patterns of judgment. (Older material may use "pipeline/bath" as deprecated synonyms for organ/bloodstream.) ([Essay 09](./09-narrative-immune-systems.md))
 
 **Rhizome** — A non-hierarchical knowledge topology with multiple entry points and no single root; Deleuze and Guattari's term for networks that grow by lateral connection rather than tree-structured hierarchy. Pask's entailment mesh is structurally isomorphic. ([Essay 06](./06-deleuze-difference-repetition.md); [Essay 11](./11-conversation-theory.md))
 
