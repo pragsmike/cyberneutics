@@ -1,6 +1,6 @@
 # Project State
 
-Last updated: 2026-03-16
+Last updated: 2026-03-17
 
 This document is the canonical current-state reference for repo structure, compatibility truths, and live open questions. It replaces the old stale backlog-file role with a narrower, actively maintained state doc.
 
@@ -54,6 +54,11 @@ Complete as of 2026-03-07. All items resolved:
 - `wild/diary/2026-03-15-emotional-attention-steering.md` — Addresses GitHub issue #13; emotional state as continuous PID-controlled variables per character; bricking/exclusion mechanisms.
 - `wild/diary/2026-03-15-mystic-narrative.md` — Jean Houston's Four Levels model as pre-narrative conditioners; maps across shamanic and Diana's Grove lineages; connects to Bruner-Kahneman synthesis.
 
+### Black Swan Phase A committee deliberation (2026-03-17)
+
+- `../situations/black-swan-phase-a/deliberations/` — Full deliberation record (00–06): charter, convening, roster, deliberation (4 rounds), resolution, evaluation-1 (10/15), remediation-1, evaluation-2 (13/15 — at bar). Decision: targeted revision with reassessment trigger.
+- `meta/project-state.md` — Active research section updated with committee decision and execution plan.
+
 ### Prompt and agent maintenance (2026-03-16)
 
 - `agent/prompts/improve-repo-next-step.md` — Updated bias areas to reflect post-sprint state.
@@ -101,15 +106,30 @@ Sprint status: **Complete**. Bruner edits 2/5/8 verified applied (2026-03-16). R
 
 ## Active research: Black Swan Hindsight Framework (Phase A)
 
-**Status**: Pre-gates complete; full Phase A pending decision.
+**Status**: Decision made — targeted revision with reassessment trigger, then conditional Phase A execution.
 **Results**: `research-programs/evaluating-deliberative-architectures/results/`
 **Prompt**: `agent/prompts/black-swan-first-run.md` (steps annotated with completion status)
+**Deliberation record**: `../situations/black-swan-phase-a/deliberations/` (00-charter through 06-evaluation-2)
 
 - Pre-Gate 1 (contamination probes): ✅ Complete — all 3 historical case types pass.
 - Pre-Gate 2 (scenario difficulty pilot): ✅ Complete — scoring reliable (10/10 agreement), but scenarios are easier than expected for frontier LLMs (only 1 of 5 at B1 ≤ 1). Two structural features were missed by both conditions, and the Deliberation-Neutral scenario discriminated in the expected inverse direction. The externally-sourced scenario (Intel FDIV) was recognized and needs replacement.
-- Steps 2-6 (full Phase A run, extraction, scoring, discrimination assessment, write-up): ⏳ Pending. Blocked on decision: proceed as-is or revise scenarios first.
+- Committee deliberation on proceed-or-revise: ✅ Complete (2026-03-16/17). Full fan→funnel→evaluation→remediation→re-evaluation cycle. Score: 10/15 → remediated → 13/15 (at bar). Decision: targeted revision with reassessment trigger.
+- Steps 2-6 (full Phase A run, extraction, scoring, discrimination assessment, write-up): ⏳ Pending. Unblocked — execution plan in 03-resolution.md.
 
-**Next action**: Decide whether to proceed to full Phase A with current scenarios or revise first (see `results/pre-gate-2-scenario-difficulty-pilot.md` for options). Then run remaining architecture conditions (B2, B3, C1, C2×2, C3) on the scenarios.
+### Committee decision summary (2026-03-17)
+
+The committee's key insight (surfaced in the remediation round): **the comparison that matters is C2 vs. B1-ext, not C2 vs. B1.** B1-ext is the effort-matched control for token count. This changes:
+- Difficulty criterion: B1-ext ≤ 1 (not B1 ≤ 1) — harder bar
+- Re-pilot: B1 AND B1-ext on revised scenarios (6 runs, not 3)
+- Go/no-go: reassessment trigger if zero scenarios score B1-ext ≤ 1 (replaces unconditional "proceed regardless")
+- Portfolio framing: valid for Deliberation-Neutral only; ad hoc for other scenarios
+
+**Next action**: Execute the implementation plan from `03-resolution.md`:
+1. Construct replacement externally-sourced scenario (avoid Therac-25/Ariane 5; use obscure published case; cap 2 attempts)
+2. Surgical hardening of Glenda/Crock and Cascading Mitigation
+3. Re-pilot with B1 + B1-ext on 3 revised scenarios (6 runs, dual-scored)
+4. Assess against B1-ext ≤ 1 criterion → reassessment trigger or proceed
+5. If proceeding: B2, B3, C1, C2×2, C3 on all 5 scenarios; foreground C2 vs. B1-ext comparison
 
 ## Blocked or prerequisite-dependent items
 
@@ -119,5 +139,5 @@ Sprint status: **Complete**. Bruner edits 2/5/8 verified applied (2026-03-16). R
 
 ## Docs still needing sweep
 
-- `project-state.md` itself should be updated after each sprint workstream completes. Last sweep: 2026-03-16.
+- `project-state.md` itself should be updated after each sprint workstream completes. Last sweep: 2026-03-17.
 - If this becomes stale, update this section rather than reintroducing a catch-all backlog file.
