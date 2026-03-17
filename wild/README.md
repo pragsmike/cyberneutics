@@ -18,7 +18,7 @@ The [diary/](diary/) directory holds field notes and idea-connection sketches fr
 
 ### Adjacent Domains
 
-- **[Communicating with Absent Parties](communicating-absent-parties/)** — *ACTIVE* — Synthesis of a 40-page deep research report on communication when one party is absent, unreachable, or non-responsive. Covers eight domains (nuclear semiotics, Pask CT, decipherment, Berea, SETI, information cascades, hermeneutics, biosemiotics) unified by the absent-party problem. Maps onto pipeline/bath, calibration register limits, fan/funnel with reconstructed perspective, furry logic, and the narrative immune systems adversarial thread. Includes bridge to Anamaria Berea's research program.
+- **[Communicating with Absent Parties](communicating-absent-parties/)** — *ACTIVE* — Synthesis of a 40-page deep research report on communication when one party is absent, unreachable, or non-responsive. Covers eight domains (nuclear semiotics, Pask CT, decipherment, Berea, SETI, information cascades, hermeneutics, biosemiotics) unified by the absent-party problem. Maps onto organ/bloodstream, calibration register limits, fan/funnel with reconstructed perspective, furry logic, and the narrative immune systems adversarial thread. Includes bridge to Anamaria Berea's research program.
 - **[Cybernetics](cybernetics/)** — *ACTIVE* — Source material on Gordon Pask, conversation theory, von Foerster, and second-order cybernetics.
 - **[Neo-Cybernetics](neo-cybernetics/)** — *DORMANT* — The neo-cybernetics initiative and its relation to cyberneutics methodology.
 - **[Software Factories](software-factories/)** — *DORMANT* — Investigation of dark factory coding agent workflows and whether palgebra formalism can serve as a typed specification language for agent pipelines.

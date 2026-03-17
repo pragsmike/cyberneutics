@@ -58,14 +58,14 @@ This document outlines the engineering plan for a Python-based implementation of
 
 ### Phase 3: Scale and Integration (6-8 weeks)
 
-**Goal**: Scale to a realistic corpus, integrate with the cyberneutics bath model, and formalize in palgebra.
+**Goal**: Scale to a realistic corpus, integrate with the cyberneutics bloodstream model, and formalize in palgebra.
 
 **Steps**:
 
 1. **Scalability**: Test on a corpus of 500+ documents. Identify computational bottlenecks. Implement approximate sheaf consistency (Laplacian eigenvalue bounds rather than full cohomology) if needed.
-2. **RDF integration**: Connect the mesh representation to the bath's existing RDF judgment graph. A discrepancy classification becomes a judgment node in the bath.
+2. **RDF integration**: Connect the mesh representation to the bloodstream's existing RDF judgment graph. A discrepancy classification becomes a judgment node in the bloodstream.
 3. **Palgebra formalization**: Write the resource equations for the full pipeline.
 4. **Adversarial testing**: Construct a suite of adversarial documents (type-spoofing, Crock-style mesh rewiring) and test detection rates. Measure false positive and false negative rates.
 5. **Integration with `/committee`**: Design a committee character specifically tasked with structural mesh evaluation.
 
-**Deliverable**: A production-capable system integrated with the cyberneutics bath model.
+**Deliverable**: A production-capable system integrated with the cyberneutics bloodstream model.

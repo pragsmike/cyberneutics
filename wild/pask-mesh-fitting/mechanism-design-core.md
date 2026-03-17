@@ -47,7 +47,7 @@ Given document meshes for all N trusted documents, the corpus mesh is constructe
 - **Edge accumulation**: Relations that appear across multiple documents are strengthened. An edge supported by 15 documents is structurally more central than one supported by 2. Cross-document edge agreement is a strong signal of corpus consensus.
 - **Structural centrality**: The corpus mesh has a natural centrality structure. Highly connected, high-weight nodes and edges form the **core** — the settled conceptual architecture. Peripheral, low-weight, high-spread nodes form the **frontier** — areas where the corpus has sparse coverage or internal disagreement.
 
-The corpus mesh is not static. As new documents are admitted to the trusted corpus, the mesh grows. The aggregation operation is incremental: a newly admitted document's mesh is merged into the existing corpus mesh without recomputing from scratch. This is the append-only property of the bath's judgment graph, applied to the semantic layer.
+The corpus mesh is not static. As new documents are admitted to the trusted corpus, the mesh grows. The aggregation operation is incremental: a newly admitted document's mesh is merged into the existing corpus mesh without recomputing from scratch. This is the append-only property of the bloodstream's judgment graph, applied to the semantic layer.
 
 #### The mathematical structure
 
@@ -64,7 +64,7 @@ For the sheaf-theoretic treatment (Section 1.4), we additionally equip G with a 
 
 ### 1.3 The Fitting Operation
 
-A new, unprovenanced document arrives from the bath. We extract its mesh fragment using the same K-run fan extraction used for corpus documents. The resulting fragment is a weighted typed hypergraph f = (V_f, E_f, ...) with the same structure as the corpus mesh but typically much smaller.
+A new, unprovenanced document arrives from the bloodstream. We extract its mesh fragment using the same K-run fan extraction used for corpus documents. The resulting fragment is a weighted typed hypergraph f = (V_f, E_f, ...) with the same structure as the corpus mesh but typically much smaller.
 
 The fitting operation asks: **does f embed cleanly into G?**
 
@@ -210,7 +210,7 @@ The following rubric evaluates any implementation attempt against five criteria,
 - **0**: The system produces a binary flag (consistent/inconsistent) with no explanation.
 - **1**: The system produces a discrepancy classification with a numeric score but no structural detail. A human can see that the document was flagged as type-spoofing but cannot see which edges were distorted or why.
 - **2**: The system identifies the specific concept nodes and edges involved in the discrepancy. A human can inspect the mismatch and evaluate whether the system's classification is correct. The judgment is auditable.
-- **3**: The system produces a full discrepancy report with: (a) the specific structural discrepancies, (b) the corpus edges they conflict with, (c) the confidence in the classification, (d) the extraction variance signal, and (e) a natural-language summary suitable for a non-specialist reviewer. The report is a decorated text with provenance metadata pointing to specific structural evidence. It functions as a judgment node in the bath.
+- **3**: The system produces a full discrepancy report with: (a) the specific structural discrepancies, (b) the corpus edges they conflict with, (c) the confidence in the classification, (d) the extraction variance signal, and (e) a natural-language summary suitable for a non-specialist reviewer. The report is a decorated text with provenance metadata pointing to specific structural evidence. It functions as a judgment node in the bloodstream.
 
 ### Scoring
 
@@ -257,17 +257,17 @@ document-mesh × corpus-mesh → corpus-mesh  [MergeIntoCorpus]
   {catalytic: corpus-mesh → corpus-mesh; feedback: corpus-mesh}
 
 # ── Fitting: new document evaluation ────────────────────────────
-# A bath document undergoes the same extraction pipeline, then
+# A bloodstream document undergoes the same extraction pipeline, then
 # its fragment is fitted against the corpus mesh.
 
-bath-document × ontology-scaffold → bath-mesh-fragment-set  [ExtractMeshes]
+bloodstream-document × ontology-scaffold → bloodstream-mesh-fragment-set  [ExtractMeshes]
   {catalytic: ontology-scaffold; fan: K}
 
-bath-mesh-fragment-set → bath-document-mesh  [AggregateFragments]
+bloodstream-mesh-fragment-set → bloodstream-document-mesh  [AggregateFragments]
   {enriches: semantic-metadata}
 
 # ── Node embedding (Step 1) ─────────────────────────────────────
-bath-document-mesh × corpus-mesh → candidate-matching  [MatchNodes]
+bloodstream-document-mesh × corpus-mesh → candidate-matching  [MatchNodes]
   {catalytic: corpus-mesh}
 
 # ── Relational consistency (Step 2) ─────────────────────────────
@@ -282,11 +282,11 @@ candidate-matching × corpus-mesh → path-report  [VerifyPaths]
 consistency-report × path-report × extraction-variance → discrepancy-judgment  [Classify]
 
 # ── Judgment emission ───────────────────────────────────────────
-# The discrepancy judgment becomes a judgment node in the bath,
-# pointing to the bath document and carrying structural evidence.
+# The discrepancy judgment becomes a judgment node in the bloodstream,
+# pointing to the bloodstream document and carrying structural evidence.
 
-discrepancy-judgment × bath-document → bath-judgment-node  [EmitJudgment]
-  {enriches: bath-document with cy:hasJudgment pointer}
+discrepancy-judgment × bloodstream-document → bloodstream-judgment-node  [EmitJudgment]
+  {enriches: bloodstream-document with cy:hasJudgment pointer}
 ```
 
 ### Decorated text structure for a discrepancy judgment
@@ -322,7 +322,7 @@ provenance:
 
 ## Discrepancy Report
 
-Document [bath-doc-0042] exhibits the type-spoof signature: vocabulary
+Document [bloodstream-doc-0042] exhibits the type-spoof signature: vocabulary
 maps cleanly to corpus nodes (node embedding quality 0.92) but relational
 structure is systematically distorted (relational consistency 0.31).
 Twelve of 34 extracted edges carry incorrect relation types, concentrated

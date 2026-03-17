@@ -26,9 +26,9 @@ Bernard Scott's distinction between "proto-conversation" (partially formed, asym
 
 Glanville's second-order move: the absent party's "presence" is constituted by the interpreter's act of interpretation. The conversation doesn't halt when one party disappears — it becomes a second-order conversation between the interpreter and their own model of the absent other. This reframes the problem from deficit (missing feedback) to constitutive condition (the interpreter's creativity is required to complete the circuit).
 
-## The pipeline/bath mapping
+## The organ/bloodstream mapping
 
-This maps cleanly onto the pipeline/bath distinction. Pipeline assumes a controlled channel with feedback — you trust the transformations because you can verify them. Bath is unprovenanced text requiring external judgment. Absent-party communication is the extreme bath case: no provenance, no feedback, no sender to interrogate.
+This maps cleanly onto the organ/bloodstream distinction. The organ assumes a controlled channel with feedback — you trust the transformations because you can verify them. The bloodstream is unprovenanced text requiring external judgment. Absent-party communication is the extreme bloodstream case: no provenance, no feedback, no sender to interrogate.
 
 The calibration register hits a fundamental limit here. Meta-d' requires ground truth feedback to measure the gap between sensitivity and metacognitive sensitivity. In the absent-party case, there is no ground truth. The register must track internal consistency rather than correspondence — which, as it turns out, is what all hermeneutics has always done. Gadamer's "fusion of horizons" when one horizon is frozen in time is exactly the calibration register operating without ground truth.
 
@@ -36,7 +36,7 @@ The calibration register hits a fundamental limit here. Meta-d' requires ground 
 
 The Perplexity report treats structural absence (Section 7) as something that happens through propagation dynamics — the sender's identity gets stripped away as information cascades through a network. But there's a case it doesn't cover: deliberately engineered absence as adversarial strategy.
 
-Disinformation campaigns often involve an originator who absents themselves so the target community must process the message without a sender to interrogate. This is the Glenda/Crock problem — the attacker's absence is strategic, not incidental. The message arrives as bath (unprovenanced, no return address) precisely because the attacker designed it that way. The "seams" in the mesh-rewiring attack are temporal and structural rather than intentional — the attack succeeds precisely to the extent that the absence looks incidental rather than engineered.
+Disinformation campaigns often involve an originator who absents themselves so the target community must process the message without a sender to interrogate. This is the Glenda/Crock problem — the attacker's absence is strategic, not incidental. The message arrives as bloodstream (unprovenanced, no return address) precisely because the attacker designed it that way. The "seams" in the mesh-rewiring attack are temporal and structural rather than intentional — the attack succeeds precisely to the extent that the absence looks incidental rather than engineered.
 
 Nobody in the nuclear semiotics, SETI, or cascade dynamics literature seems to treat the adversary's self-absenting as a formal category distinct from incidental absence. This is a potential contribution point connecting the narrative immune systems research program to the absent-party synthesis.
 
@@ -44,7 +44,7 @@ Luhmann gets closest: his three-selection model treats the sender as structurall
 
 ## Promises as absent-party communication
 
-A promise attempts to freeze one side of a conversation — "I will do X" — but conversations are what unfreezes things. The promise tries to be pipeline (controlled, typed, trusted) in what is actually a bath (uncontrolled future context). That's why promises feel like lies in retrospect: not because the promiser was dishonest, but because the encoding couldn't survive the interpretive drift.
+A promise attempts to freeze one side of a conversation — "I will do X" — but conversations are what unfreezes things. The promise tries to be organ (controlled, typed, trusted) in what is actually bloodstream (uncontrolled future context). That's why promises feel like lies in retrospect: not because the promiser was dishonest, but because the encoding couldn't survive the interpretive drift.
 
 Is there a calibrated promise? One that carries its own uncertainty estimate: "I intend to do X, and here's my historically observed follow-through rate on commitments of this type." Nobody talks like that, but institutions approximate it: credit scores, track records, reputation systems. These are calibration registers for promises — meta-d' applied to commitment reliability.
 
@@ -113,4 +113,4 @@ Plus the gap I'd add: deliberately engineered absence as adversarial strategy, d
 
 ---
 
-*Cross-references: wild/communicating-absent-parties/, wild/potential-to-sense/, wild/gordon-pask/, wild/pask-mesh-bath.md, research-programs/metacognition/, research-programs/narrative-immune-systems/, committee-as-open-game.md*
+*Cross-references: wild/communicating-absent-parties/, wild/potential-to-sense/, wild/gordon-pask/, wild/pask-mesh-fitting/, research-programs/metacognition/, research-programs/narrative-immune-systems/, committee-as-open-game.md*

@@ -106,4 +106,4 @@ Appendix, for cybercat aficionados:
 1. Save this file as `agent/diary/2026-03-13-furry-logic.md`.
 2. No structural changes to the repo are implied by this entry. Ideas need further development.
 3. The essay outlined in Section 7 is a candidate for the essay series, probably after the civic application essay (Avenue C from the narrative immune systems diary). The appendix structure — same core text, technical spine visible only to those who want it — should be the model for future essays aimed at mixed audiences.
-4. The DL historical arc (Section 2) connects to the bath model formalization (Promising Avenue A from narrative immune systems). If that work proceeds, this diary entry's DL treatment should inform it.
+4. The DL historical arc (Section 2) connects to the bloodstream model formalization (Promising Avenue A from narrative immune systems). If that work proceeds, this diary entry's DL treatment should inform it.

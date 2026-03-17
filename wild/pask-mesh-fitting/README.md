@@ -17,7 +17,7 @@
 
 The general document-evaluation framework:
 
-- **The bath** — pool of unprovenanced texts; you certify consistency with a trusted corpus, not truth. Two tiers: admission (human, expensive) and consistency checking (automatable).
+- **The bloodstream** — pool of unprovenanced texts; you certify consistency with a trusted corpus, not truth. Two tiers: admission (human, expensive) and consistency checking (automatable).
 - **RDF judgments** — explicit rubric scores as first-class, immutable nodes; coverage and auditability from graph structure.
 - **Pask entailment meshes** — reading produces a typed graph fragment; the corpus has an aggregate mesh; a new document is evaluated by whether its fragment embeds in that mesh (vocabulary, relational structure, inferential paths).
 - **Discrepancy taxonomy** — novel-but-coherent, contradictory, **type-spoof** (disinformation signature), domain-foreign.
@@ -45,4 +45,4 @@ The Pask mesh fitting document is the *document-evaluation* framework. The Glend
 
 ## Connections
 
-Essay 09 (Narrative Immune Systems), Essay 10 (Decisions Under Uncertainty), Essay 11 (Conversation Theory), palgebra bath formalization (open thread), [social decision disruption](../../applications/narrative-immune-systems/social-decision-disruption.md), residuality theory.
+Essay 09 (Narrative Immune Systems), Essay 10 (Decisions Under Uncertainty), Essay 11 (Conversation Theory), palgebra bloodstream formalization (open thread), [social decision disruption](../../applications/narrative-immune-systems/social-decision-disruption.md), residuality theory.

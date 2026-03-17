@@ -10,24 +10,24 @@ This note records a conversation that began with a practical question — how do
 
 ---
 
-## The Bath Problem, Restated
+## The Bloodstream Problem, Restated
 
-The bath is a pool of unprovenanced texts. You cannot certify truth from inside the pool. What you *can* certify is coherence with a trusted reference set — a corpus of documents that have passed some external admission process. The judgment "document A is consistent with the corpus" is a relational claim, not a truth claim.
+The bloodstream is a pool of unprovenanced texts. You cannot certify truth from inside the pool. What you *can* certify is coherence with a trusted reference set — a corpus of documents that have passed some external admission process. The judgment "document A is consistent with the corpus" is a relational claim, not a truth claim.
 
-This is the honest epistemology of the bath. It maps onto legal standards rather than scientific ones: you are not establishing that A is true, you are establishing that A is *consistent with admitted evidence*. The corpus is the record of admitted testimony. A document that contradicts the corpus is flagged; the contradiction requires resolution before either document can be relied upon.
+This is the honest epistemology of the bloodstream. It maps onto legal standards rather than scientific ones: you are not establishing that A is true, you are establishing that A is *consistent with admitted evidence*. The corpus is the record of admitted testimony. A document that contradicts the corpus is flagged; the contradiction requires resolution before either document can be relied upon.
 
 The system therefore has two tiers:
 
 - **Admission** — how documents enter the trusted corpus. Expensive, human, high-standard. This is where the real judgment lives.
-- **Consistency checking** — how bath documents are evaluated against the corpus. Automatable, relational, fast.
+- **Consistency checking** — how bloodstream documents are evaluated against the corpus. Automatable, relational, fast.
 
 The first tier cannot be automated without circularity. The second tier is where tooling can help. The question explored here is what form that tooling should take.
 
 ---
 
-## RDF Judgments as Bath Metadata
+## RDF Judgments as Bloodstream Metadata
 
-The minimal architecture for the bath uses RDF triples to represent judgments as first-class immutable nodes:
+The minimal architecture for the bloodstream uses RDF triples to represent judgments as first-class immutable nodes:
 
 ```
 <judgment:J1> rdf:type      cy:Judgment .
@@ -97,7 +97,7 @@ A recurring question: have LLMs made these structural methods obsolete?
 
 Partial substitution: LLMs genuinely replace many NLP pipeline components — named entity recognition, relation extraction, topic modeling, shallow semantic similarity. For average-case tasks on standard benchmarks, the substitution is real.
 
-Non-substitution: LLMs *simulate* structural comparison without performing it. Asked "does this document contradict the corpus?", an LLM produces a plausible answer based on training distribution, not a computation over an explicit graph. The answer may be right more often, but the reasoning is opaque and the failure modes are invisible. For the bath problem — where the adversarial cases are precisely the ones where surface plausibility is engineered — average-case accuracy is the wrong measure.
+Non-substitution: LLMs *simulate* structural comparison without performing it. Asked "does this document contradict the corpus?", an LLM produces a plausible answer based on training distribution, not a computation over an explicit graph. The answer may be right more often, but the reasoning is opaque and the failure modes are invisible. For the bloodstream problem — where the adversarial cases are precisely the ones where surface plausibility is engineered — average-case accuracy is the wrong measure.
 
 The productive synthesis: use the LLM as mesh extractor (doing the expensive reading work to produce a typed graph fragment), and use structural comparison as the actual discriminator (doing the topological analysis that produces inspectable, auditable discrepancy scores). The LLM handles the reading; the graph machinery handles the comparison. The judgment node in the pool points to specific structural discrepancies, not to a model's verdict.
 
@@ -111,7 +111,7 @@ The productive synthesis: use the LLM as mesh extractor (doing the expensive rea
 
 - **Corpus admission formalization.** Can the admission criteria be made explicit enough to resist adversarial gaming without becoming rigid enough to reject genuinely novel documents? This is the autoimmune/immunodeficiency tradeoff applied to the admission process.
 
-- **Palgebra formalization.** The bath operations described here — mesh extraction as a morphism, corpus aggregation as a coproduct, discrepancy scoring as a functor to a graded type — should be expressible in palgebra. Formalizing them would tighten the connection to the rest of the framework.
+- **Palgebra formalization.** The bloodstream operations described here — mesh extraction as a morphism, corpus aggregation as a coproduct, discrepancy scoring as a functor to a graded type — should be expressible in palgebra. Formalizing them would tighten the connection to the rest of the framework.
 
 - **Connection to residuality.** A corpus mesh that survives repeated adversarial document injections without topological distortion is, in O'Reilly's sense, a residual structure. The documents that fail to distort the mesh are its shocks; the stable topology is the residue. This connection may have formal content worth developing.
 
@@ -119,10 +119,10 @@ The productive synthesis: use the LLM as mesh extractor (doing the expensive rea
 
 ## Summary
 
-The bath's epistemic limit — you cannot certify truth, only consistency with admitted evidence — is not a weakness but the honest formulation of the problem. Pask's entailment mesh, treated as computable document metadata rather than a human learning artifact, provides a structural basis for consistency checking that goes beyond rubric scoring: it evaluates whether a document's *relational architecture* fits the corpus, not just whether its surface claims pass explicit criteria. The type-spoof discrepancy — familiar vocabulary, wrong relational structure — is the formal signature of engineered disinformation.
+The bloodstream's epistemic limit — you cannot certify truth, only consistency with admitted evidence — is not a weakness but the honest formulation of the problem. Pask's entailment mesh, treated as computable document metadata rather than a human learning artifact, provides a structural basis for consistency checking that goes beyond rubric scoring: it evaluates whether a document's *relational architecture* fits the corpus, not just whether its surface claims pass explicit criteria. The type-spoof discrepancy — familiar vocabulary, wrong relational structure — is the formal signature of engineered disinformation.
 
 For the application of this framework to adversarial LLM alignment (mesh-rewiring, the seam, defensive implications), see [Glenda/Crock alignment](../../applications/narrative-immune-systems/glenda-crock-alignment.md).
 
 ---
 
-*Connections: Essay 09 (Narrative Immune Systems), Essay 10 (Decisions Under Uncertainty), Essay 11 (Conversation Theory), palgebra bath formalization (open thread), residuality theory.*
+*Connections: Essay 09 (Narrative Immune Systems), Essay 10 (Decisions Under Uncertainty), Essay 11 (Conversation Theory), palgebra bloodstream formalization (open thread), residuality theory.*
