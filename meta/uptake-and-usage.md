@@ -18,6 +18,7 @@ state** and **brief trajectory**. For a dated event log, see
   - *Residuality contributor*: Essay on software engineering practice and agents, arguing that implementation language familiarity is becoming less important to programmers in the age of AI coding assistants, and that Clojure yields simpler code structures that are easier for both humans and agents to reason about. This aligns with and independently supports the project’s recent decision to prefer Clojure over Python for the multi-model committee orchestrator (see `research-programs/committee-implementation-taxonomy.md`).
 - **MOOLLM integration** — the adversarial committee mechanism has been incorporated into the MOOLLM platform, making the technique available to that platform’s user base.
 - **Repository stars** — as of 2026-02-23, the git repository had two stars on the hosting platform (lightweight adoption signal).
+- **Colleague adoption (March 2026)** — a colleague of mg is using the committee skill to design a risk management process for their project, with reported success. This is the first known use for process design (as opposed to direct decision-making) and the first adoption via colleague-to-colleague transmission rather than the repository.
 - **Evidence so far**: Internal comparison runs and one external deliberation review (Condorcet run scored 13/15 High) support “suitable for early adopters” and give initial empirical evidence that deliberation structure (Robert’s Rules, adversarial back-and-forth) changes outcomes vs. independent vote. No failure reports or sustained multi-session external use reported yet; no rubric scores from purely external deliberations.
 
 ---
@@ -49,4 +50,4 @@ feedback would be:
 
 ---
 
-**Last updated**: March 5, 2026
+**Last updated**: March 20, 2026

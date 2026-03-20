@@ -126,12 +126,27 @@ The contributor produced a substantial body of work that has been reviewed and m
 
 ---
 
+### 2026-03-20 — Colleague using committee skill for risk management process design
+
+**Who**: Colleague of mg (details TBD)
+**What**: Using the committee skill to help design a risk management process for their project. Reported success.
+
+**Why this is interesting**: This is the first reported use of the methodology for *process design* — using the committee not to make a decision but to design a decision-making process. Risk management is a natural fit: it involves competing perspectives on what could go wrong, values trade-offs between caution and progress, and benefits from adversarial stress-testing of proposed controls.
+
+**What this validates**: The methodology is being adopted through direct colleague-to-colleague transmission (not just via the repository). The use case (process design) is a new domain beyond the strategic-decision and technology-evaluation cases seen previously. The user reports success, though details are not yet available.
+
+**What we don't know yet**: What "success" means concretely — whether they ran `/review`, what scores they got, what the risk management process looks like, whether the committee surfaced risks or perspectives that wouldn't have emerged otherwise.
+
+**Predicted signal status update**: "Sustained multi-session use by external users" — still pending formal confirmation, but this is the closest signal yet (a colleague using the skill in their own project context).
+
+---
+
 ## Feedback log (chronological)
 
 *(Record practitioner feedback here as it arrives — date, source, verbatim if possible, brief analysis.)*
 
-No feedback received yet beyond the adoption events above.
+No detailed feedback received yet beyond the adoption events above.
 
 ---
 
-**Chronology last updated**: March 5, 2026
+**Chronology last updated**: March 20, 2026
