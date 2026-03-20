@@ -1,21 +1,21 @@
 # Evaluating Deliberative Architectures: The Black Swan Hindsight Framework
 
-**Status**: Phase A in progress — Pre-Gates 1 and 2 complete; full Phase A pending decision on scenario revision
-**Runs**: Pre-Gate 1 (3 contamination probes, all passed); Pre-Gate 2 (10 pilot runs: B1 and B1-ext on 5 scenarios, dual-scored)
+**Status**: Phase A in progress — reclassified from "Protocol Calibration" to "Targeted Reframing Probe" after revision and reassessment (2026-03-20). Pre-Gates 1 and 2 complete; targeted runs pending.
+**Runs**: Pre-Gate 1 (3 contamination probes, all passed); Pre-Gate 2 (10 pilot runs: B1 and B1-ext on 5 scenarios, dual-scored); Phase A revision (6 re-pilot runs on hardened/replacement scenarios)
 **Results**: [evaluating-deliberative-architectures/results/](evaluating-deliberative-architectures/results/)
 
 > **Contributing to this program**
 > - **Skills needed**: LLM prompt automation, historical research, qualitative evaluation, familiarity with the committee pipeline (`/committee`) and evaluation dimensions in [evaluation-schemes.md](evaluation-schemes.md).
 > - **Estimated scope**: 4-6 weeks for corpus construction, architecture runs, and initial analysis.
 > - **Contributor type**: Paired recommended (one designs cases, one evaluates blind). Solo possible but slower.
-> - **Entry point**: Read Sections I-III (problem, innovation, contamination). Then read [evaluation-schemes.md](evaluation-schemes.md) Sections III and VIII for dimension codebooks. Start with the **protocol calibration run** (Phase A: all constructed scenarios, Section VIII-IX) — it requires no historical research and verifies that the experimental machinery produces discriminable, scorable outputs before investing in historical case construction. Phase A is calibration, not evidence for the core claim. See also [protocol-evaluation-rubric.md](evaluating-deliberative-architectures/protocol-evaluation-rubric.md).
+> - **Entry point**: Read Sections I-III (problem, innovation, contamination). Then read [evaluation-schemes.md](evaluation-schemes.md) Sections III and VIII for dimension codebooks. Start with the **targeted reframing probe** (Phase A: C2 vs. B1-ext on 2 constructed scenarios, Section X-A) — it requires no historical research and tests a specific hypothesis about deliberation's value-add before investing in historical case construction. Phase A is a targeted probe, not evidence for the core claim. See also [protocol-evaluation-rubric.md](evaluating-deliberative-architectures/protocol-evaluation-rubric.md).
 
-**Last updated**: 2026-03-16
+**Last updated**: 2026-03-20
 
 **Origins**: Identified as a distinct research design that complements the [evaluation-schemes](evaluation-schemes.md) framework. Where evaluation-schemes tests process quality (do structured methods produce better-reasoned outputs?), this framework tests *anticipatory validity* (do structured methods see what's coming?). Related to but distinct from Design C in evaluation-schemes — see [Section XI](#xi-relationship-to-evaluation-schemes-design-c) for the distinction.
 
 **Important distinction**: This framework has two phases that test different things and should be reported separately:
-- **Phase A — Protocol calibration (constructed scenarios)**: Tests whether the experimental machinery works — whether the architecture conditions produce discriminably different outputs, whether scoring is consistent, and whether the evaluation protocol is operationally feasible. Does *not* test anticipatory validity (constructed scenarios have no temporal asymmetry and no historical outcome to anticipate). Findings refine the protocol and may reveal whether conditions produce *any* structural differences worth measuring.
+- **Phase A — Targeted reframing probe (constructed scenarios)**: Originally designed as protocol calibration (full architecture comparison on 5 scenarios × 7 conditions). Reclassified after Pre-Gate 2 revision and committee reassessment (2026-03-20) to a targeted probe testing a specific hypothesis: does committee deliberation (C2) surface conceptual *reframing* that effort-matched single-agent analysis (B1-ext) misses? Tests C2 vs. B1-ext on 2 scenarios with 2 binary reframing features. See [Section X-A](#x-a-phase-a-reclassification-targeted-reframing-probe) for the reclassification rationale and run plan.
 - **Phase B — Anticipatory validity (historical cases)**: Tests the framework's core question — whether deliberative architectures anticipate structural risks that simpler approaches miss. Requires historical cases with reconstructable knowledge boundaries and known outcomes. This is the evidential phase.
 
 See [protocol-evaluation-rubric.md](evaluating-deliberative-architectures/protocol-evaluation-rubric.md) for the rubric used to evaluate this protocol, and [protocol-evaluation-2026-03-16.md](evaluating-deliberative-architectures/protocol-evaluation-2026-03-16.md) for the initial evaluation and remediation that produced the current version.
@@ -640,21 +640,23 @@ Additionally, note in the results whether the scenario discriminated (>1 point s
 - **Effort confound signal**: If B1-ext scores ≥ 2 on all scenarios where B1 scores ≤ 1, flag that effort alone may explain the gap between simple and complex architectures.
 - **Scoring reliability**: If the two evaluators agree (within 1 point) on 8+ of 10 scores, the unified scale is reliable enough for the full run. If they disagree systematically, revise the rubric before proceeding.
 
-### Phase A: Protocol Calibration (Constructed Scenarios)
+### Phase A: Targeted Reframing Probe (Constructed Scenarios)
+
+> **Amendment note (2026-03-20)**: Phase A reclassified from "Protocol Calibration" to "Targeted Reframing Probe" after Pre-Gate 2 revision revealed that B1-ext scores cannot be reduced below 2 through scenario hardening (the multi-angle prompt instructs the exact analysis the scoring system rewards). Committee reassessment ([deliberations/black-swan-phase-a-reassessment/03-resolution.md](../examples/deliberations/black-swan-phase-a-reassessment/03-resolution.md)) unanimously recommended pivoting to test a specific hypothesis: committee deliberation adds value on *reframing* tasks (generating alternative problem frames), not on *deepening* tasks (more thorough analysis within the existing frame). See [Section X-A](#x-a-phase-a-reclassification-targeted-reframing-probe) for full rationale.
 
 > Proceed only if both pre-gates pass.
 
 | Task | Effort | Output |
 |------|--------|--------|
-| Prepare constructed scenario prompts (Sections VIII-IX, including externally-sourced IX-E) | 1-2 hours | 5 scenario files with prompts and criteria |
-| Run remaining conditions (B2, B3, C1, C2×2, C3) on scenarios that discriminated in pilot | 6-10 hours | 25-30 run outputs (may be fewer if some scenarios dropped) |
-| Extract recommendations per operational blinding protocol | 2-3 hours | Anonymized recommendation extracts |
-| Score on unified scale (VII-A) + scenario-specific criteria, using two evaluators | 8-10 hours | Dual-scored calibration corpus (Tables 1b, 3); inter-rater agreement |
-| Assess discrimination: do conditions produce different scores? | 2-3 hours | Calibration report: which scenarios discriminate, which don't |
+| Run B1-ext × 2 on Blast Radius (original) and Cascading Mitigation (hardened) | 2-3 hours | 4 run outputs (variance baseline) |
+| Run C2 × 2 on Blast Radius (original) and Cascading Mitigation (hardened) | 2-3 hours | 4 run outputs (convergence check) |
+| Dual-score all 8 outputs on target binary features using three-level scale (Section X-A) | 2-3 hours | 16 feature scores (8 outputs × 2 features × 2 evaluators) |
+| Assess against pass criterion (Section X-A) | 1 hour | Pass/fail determination |
+| Write Phase A report (full trajectory regardless of outcome) | 2-3 hours | Phase A report in results/ |
 
-**Phase A total** (including pre-gates): 25-36 person-hours. Can be completed in 2-3 sessions.
+**Phase A total** (including pre-gates): 15-20 person-hours. Can be completed in 2-3 sessions.
 
-**Phase A decision gate**: If no scenario produces a spread of >1 point between any two conditions, the protocol's architecture conditions are not producing discriminable differences. Investigate: is the unified scale too coarse? Are the scenarios too easy? Are the recommendation extracts losing the signal? Revise before proceeding to Phase B.
+**Phase A decision gate (revised)**: Does C2 produce a "present" rating on at least one target reframing feature where *both* B1-ext runs produce "absent" ratings on the same feature? If yes: proceed to Phase B with the reframing hypothesis. If no: accept the ceiling and report the full Phase A trajectory as a methodological finding. Do not narrow further (per committee condition).
 
 ### Phase B: Anticipatory Validity (Historical Cases)
 
@@ -703,7 +705,7 @@ Additionally, note in the results whether the scenario discriminated (>1 point s
 
 | Phase | Person-hours | Elapsed time | Prerequisite |
 |-------|-------------|-------------|-------------|
-| **A: Protocol calibration (incl. pre-gates)** | **25-36** | **2-3 sessions** | None |
+| **A: Targeted reframing probe (incl. pre-gates)** | **15-20** | **2-3 sessions** | None |
 | B-1: Corpus construction | 16-24 | 2 weeks | Phase A complete and protocol validated |
 | B-2: Architecture runs | 10-15 | 1 week | B-1 |
 | B-3: Blind evaluation | 24-38 | 2 weeks | B-2 |
@@ -714,6 +716,98 @@ Additionally, note in the results whether the scenario discriminated (>1 point s
 Phase A (including pre-gates) can be run immediately with no prerequisites. Phase B requires Phase A to validate the protocol.
 
 If using human raters for Phase B-3 (recommended for first run): add ~$2-4K for rater compensation (assuming $50/hour, 2 raters).
+
+---
+
+## X-A. Phase A Reclassification: Targeted Reframing Probe
+
+> **Amendment note (2026-03-20)**: Added per committee reassessment ([deliberations/black-swan-phase-a-reassessment/](../examples/deliberations/black-swan-phase-a-reassessment/)). Documents the Phase A reclassification from "Protocol Calibration" to "Targeted Reframing Probe," including the empirical findings that motivated the change, the reframing hypothesis, run plan, scoring criteria, and pass criterion.
+
+### Empirical Basis for Reclassification
+
+Pre-Gate 2 (2026-03-16) found that 4 of 5 scenarios produced B1 scores ≤ 1, meeting the difficulty criterion. However, B1-ext scored ≥ 2 on all scenarios, triggering the effort confound flag. The committee resolution directed a targeted revision: replace one externally-sourced scenario, surgically harden two scenarios, and re-pilot.
+
+The revision (2026-03-20) produced a decisive finding: **the difficulty problem is structural, not fixable by scenario hardening.** Results:
+
+| Scenario | Original B1-ext | Hardened B1-ext | Δ |
+|----------|----------------|----------------|---|
+| Externally-sourced (replacement) | — | 2.0 | new |
+| Glenda/Crock | 3.0 | 3.0 | 0 |
+| Cascading Mitigation | 2.0 | 2.5 | +0.5 |
+
+Zero scenarios met the B1-ext ≤ 1 difficulty criterion. The B1-ext multi-angle prompt instructs the model to perform multi-perspective structural analysis — which is exactly what the unified scoring scale (VII-A) rewards. Hardening scenarios reduces B1 scores (the model has fewer explicit clues to pick up) but does not reduce B1-ext scores (the prompt itself provides the analytical framework). This is not a scenario construction failure; it is a design insight about the relationship between instruction-matched prompting and scoring.
+
+The reassessment trigger activated. The committee reconvened and unanimously recommended Option C: pivot to binary-feature-only analysis, specified as a targeted reframing probe.
+
+### The Reframing Hypothesis
+
+**Hypothesis**: Committee deliberation (C2) adds value specifically on *reframing* tasks — generating alternative problem frames — not on *deepening* tasks (more thorough analysis within the existing frame).
+
+**Rationale** (Vic's distinction): The B1-ext prompt instructs deepening explicitly ("analyze from multiple angles," "consider systemic effects," etc.). A capable model, given enough tokens and explicit instructions to analyze deeply, will deepen effectively. But *reframing* — shifting to an entirely different problem frame — requires a conceptual move the prompt doesn't directly instruct. Committee deliberation, where adversarial characters challenge each other's framings, may create conditions where reframing emerges naturally through argumentative pressure.
+
+**What this means for Phase A**: Phase A no longer asks "do architecture conditions produce discriminably different outputs?" (the original calibration question). It asks a narrower, sharper question: "does C2 surface specific reframing insights that B1-ext misses?"
+
+**What this means for Phase B**: If Phase A passes, Phase B should be designed to test the reframing hypothesis on historical cases. The comparison should be C2 vs. B1-ext, not the full architecture set. The metric should target whether the committee identifies structural dynamics that require reframing the problem, not just deeper analysis of it.
+
+### Target Reframing Features
+
+Two features were selected because they represent genuine conceptual reframes (not just deeper analysis) and were missed by both B1 and B1-ext across multiple runs:
+
+**Feature 1 — Phasing critique (Blast Radius, criterion c)**: The insight that a phased rollout "tests the deployment tool, not the configuration." This is a reframe from "how to roll out safely" to "what is actually being tested by the rollout methodology." It requires recognizing that the phasing strategy addresses a different risk than the one the scenario presents.
+
+**Feature 2 — Creation-vs-activity reframing (Cascading Mitigation, criterion c)**: The insight that "the problem is fake account activity, not fake account creation." This is a reframe from "how to block account creation" to "what problem are we actually solving." The B1-ext re-pilot output said "friction on signup is solving the wrong problem at the wrong layer" — in the neighborhood, but did not complete the reframe. This partial miss at 3,000 words of multi-angle analysis makes it a strong discrimination target.
+
+### Run Plan
+
+8 runs total, all dual-scored:
+
+| Run | Condition | Scenario | Purpose |
+|-----|-----------|----------|---------|
+| 1-2 | B1-ext × 2 | Blast Radius (original) | Variance baseline |
+| 3-4 | B1-ext × 2 | Cascading Mitigation (hardened) | Variance baseline |
+| 5-6 | C2 × 2 | Blast Radius (original) | Convergence check |
+| 7-8 | C2 × 2 | Cascading Mitigation (hardened) | Convergence check |
+
+B1-ext is run twice per scenario (not reused from Pre-Gate 2) because the hardened Cascading Mitigation scenario differs from the Pre-Gate 2 version, and replication establishes a variance baseline. C2 is run twice per scenario for convergence checking (consistent with the existing convergence protocol in Section VII).
+
+### Scoring Protocol: Three-Level Binary Feature Scale
+
+Each of the 8 outputs is scored on *both* target features by two independent evaluators. The scoring uses a three-level scale:
+
+| Rating | Definition | Example (Creation-vs-activity feature) |
+|--------|-----------|---------------------------------------|
+| **Absent** | The feature does not appear in any form. The output does not question the problem framing, does not suggest an alternative frame, and does not hint at the insight even obliquely. | Output discusses blocking fake account creation in detail. Never raises the question of whether creation is the right problem to target. |
+| **Partially present** | The output moves toward the insight but does not complete the reframe. The direction is visible but the destination is not reached. | "Friction on signup is solving the wrong problem at the wrong layer." In the neighborhood — questions the frame — but does not arrive at "the problem is activity not creation." |
+| **Present** | The output explicitly articulates the reframe. The alternative problem frame is stated, not merely gestured at. | "The problem isn't that fake accounts are being created; it's that fake accounts are active. Focus detection on activity rather than blocking creation." |
+
+**Scoring guidance**: Score conservatively. "Partially present" requires clear movement toward the reframe, not just general analytical depth. "Present" requires explicit articulation, not inference by the evaluator. When evaluators disagree, the lower rating prevails (conservative resolution).
+
+### Pass Criterion
+
+C2 produces a "present" rating on at least one target feature where **both** B1-ext runs produce "absent" ratings on the same feature.
+
+Specifics:
+
+- "Partially present" in B1-ext does **not** count as a miss. The feature must be completely absent from both B1-ext runs.
+- C2 must produce "present" (not "partially present") in at least one of its two runs on the same feature.
+- If evaluators disagree on a rating, the lower rating prevails. So "present" requires both evaluators to rate "present."
+- The criterion must be met on at least one of the two target features.
+
+### If Pass
+
+Proceed to Phase B with the reframing hypothesis. Phase B is designed to test whether committee deliberation surfaces structural reframing in historical cases that single-agent analysis misses. The comparison is C2 vs. B1-ext; the full architecture set (B2, B3, C1, C3) may be included but is not required. The dropped conditions from Phase A can be incorporated into Phase B if resources permit.
+
+### If Fail
+
+Accept the ceiling. Report the full Phase A trajectory — from original pilot through Pre-Gate 2, revision, reassessment, and targeted probe — as a methodological finding. The finding itself ("committee deliberation does not reliably surface reframing that effort-matched single-agent analysis misses") is informative and publishable. **Do not narrow further.** (This is a committee condition: three successive scope reductions — from 7 conditions to C2 vs. B1-ext, from composite to binary features, from 5 scenarios to 2 — represent the honest limit of what this data can support. A fourth narrowing would be data-dredging.)
+
+### Phase A Trajectory (for the record)
+
+1. **Original design**: 7 conditions × 5 scenarios × composite scoring (unified 0-3 scale). Estimated 25-36 person-hours.
+2. **Pre-Gate 2 finding**: B1-ext ≥ 2 on all scenarios → effort confound flag. Committee directed revision.
+3. **Revision finding**: Hardening reduces B1 but not B1-ext → difficulty problem is structural (prompt-scoring alignment).
+4. **Reassessment**: Committee pivots to targeted reframing probe. 2 conditions × 2 scenarios × binary features. Estimated 8-12 person-hours for runs + scoring.
+5. **Current**: Runs pending.
 
 ---
 
@@ -754,21 +848,30 @@ Store results in [evaluating-deliberative-architectures/results/](evaluating-del
 | C2 (Peer-agent committee) | ... | ... | |
 | C3 (Deliberated choice) | ... | ... | |
 
-### Table 1b — Condition x Scenario Raw Scores (Constructed Cases — Phase A Calibration)
+### Table 1b — Binary Feature Scores (Constructed Cases — Phase A Targeted Reframing Probe)
 
-> **Note (2026-03-16)**: Phase A uses raw scores and descriptive comparisons, not inferential statistics. With N=5-6 constructed scenarios and ordinal scales, means, confidence intervals, and effect sizes are not meaningful. Report raw scores per scenario per condition. Reserve inferential statistics for Phase B (historical cases, N=4-5) and the combined program (N=9-11), noting even then that N is marginal.
+> **Note (2026-03-20)**: Phase A reclassified to targeted reframing probe. Table 1b now reports three-level binary feature scores (absent/partial/present) per Section X-A, replacing the original 7-condition × 5-scenario matrix.
 
-| Condition | Scenario 1 | Scenario 2 | Scenario 3 | Scenario 4 | Scenario 5 | Median |
-|-----------|-----------|-----------|-----------|-----------|-----------|--------|
-| B1 | | | | | | |
-| B1-ext | | | | | | |
-| B2 | | | | | | |
-| B3 | | | | | | |
-| C1 | | | | | | |
-| C2 | | | | | | |
-| C3 | | | | | | |
+| Run | Condition | Scenario | Feature 1: Phasing Critique | Feature 2: Creation-vs-Activity | Evaluator |
+|-----|-----------|----------|----------------------------|-------------------------------|-----------|
+| 1 | B1-ext | Blast Radius | | | Sonnet |
+| 1 | B1-ext | Blast Radius | | | Opus |
+| 2 | B1-ext | Blast Radius | | | Sonnet |
+| 2 | B1-ext | Blast Radius | | | Opus |
+| 3 | B1-ext | Cascading Mitigation (hardened) | | | Sonnet |
+| 3 | B1-ext | Cascading Mitigation (hardened) | | | Opus |
+| 4 | B1-ext | Cascading Mitigation (hardened) | | | Sonnet |
+| 4 | B1-ext | Cascading Mitigation (hardened) | | | Opus |
+| 5 | C2 | Blast Radius | | | Sonnet |
+| 5 | C2 | Blast Radius | | | Opus |
+| 6 | C2 | Blast Radius | | | Sonnet |
+| 6 | C2 | Blast Radius | | | Opus |
+| 7 | C2 | Cascading Mitigation (hardened) | | | Sonnet |
+| 7 | C2 | Cascading Mitigation (hardened) | | | Opus |
+| 8 | C2 | Cascading Mitigation (hardened) | | | Sonnet |
+| 8 | C2 | Cascading Mitigation (hardened) | | | Opus |
 
-Score each cell using the unified 0-3 structural recognition scale (Section VII-A).
+Score each cell: **A** (absent), **P** (partially present), or **✓** (present). See Section X-A for definitions and pass criterion.
 
 ### Table 2 — Convergence Check (C2 Duplicate Runs)
 
@@ -779,33 +882,20 @@ Score each cell using the unified 0-3 structural recognition scale (Section VII-
 
 *Qualitative observations only. Do not assign topology labels.*
 
-### Table 3 — Scenario-Specific Criteria Scores (Constructed Cases — Phase A Calibration)
+### Table 3 — Pre-Gate 2 Pilot Scores (Historical Reference)
 
-These are the scenario-specific criteria from Sections VIII-IX, used as supplementary detail alongside the unified 0-3 scores in Table 1b. Report raw scores.
+> **Note (2026-03-20)**: The original Table 3 (scenario-specific criteria by condition) is superseded by the targeted reframing probe design (Table 1b). Pre-Gate 2 pilot scores and re-pilot scores are archived in [results/](evaluating-deliberative-architectures/results/) for reference. The original 7-condition × 5-scenario design was not executed.
 
-| Condition | Glenda/Crock (0-3) | Blast Radius (0-6) | Cascading Mitigation (0-6) | Deliberation-Neutral (0-3) | External (0-3) |
-|-----------|--------------------|--------------------|---------------------|--------------------------|--------------------------|
-| B1 | | | | | |
-| B1-ext | | | | | |
-| B2 | | | | | |
-| B3 | | | | | |
-| C1 | | | | | |
-| C2 | | | | | |
-| C3 | | | | | |
+### Table 4 — Pass Criterion Assessment (Phase A Targeted Reframing Probe)
 
-### Table 4 — Pairwise Condition Comparisons (Phase A Calibration)
+> **Note (2026-03-20)**: Replaces the original pairwise condition comparison table. The critical comparison is now C2 vs. B1-ext on specific binary features.
 
-> **Note**: With N=5-6, report descriptive comparisons only. "A > B on K of N scenarios" is the appropriate claim. Do not compute effect sizes or confidence intervals.
+| Feature | B1-ext Run 1 | B1-ext Run 2 | C2 Run 1 | C2 Run 2 | Pass? |
+|---------|-------------|-------------|---------|---------|-------|
+| Phasing critique (Blast Radius) | | | | | |
+| Creation-vs-activity (Cascading Mitigation) | | | | | |
 
-| Comparison | Scenarios where A > B | Scenarios where A = B | Scenarios where A < B | Qualitative note |
-|------------|----------------------|----------------------|----------------------|-----------------|
-| C2 vs. B1 | | | | |
-| C2 vs. B1-ext | | | | |
-| C2 vs. B3 | | | | |
-| B1-ext vs. B1 | | | | |
-| C3 vs. C2 | | | | |
-
-The critical comparison is **C2 vs. B1-ext**: same depth and effort, with vs. without deliberative structure. If B1-ext matches C2 across most scenarios, deliberative structure does not add value beyond structured prompting with adequate token budget.
+**Pass rule**: At least one row must show: both B1-ext runs = "absent" AND at least one C2 run = "present" (after conservative resolution of evaluator disagreements). See Section X-A for full specification.
 
 ### Table 4b — Effect Sizes (Historical Cases Only — Phase B)
 
@@ -837,7 +927,7 @@ The critical comparison is **C2 vs. B1-ext**: same depth and effort, with vs. wi
 - **Ground truth by hindsight**: Avoids the fundamental problem of evaluating wicked-problem outputs with no reference point (Phase B).
 - **Tests what matters**: Anticipation of structural risks is closer to what people want from deliberative architectures than process quality metrics alone.
 - **Contamination-aware**: Explicit mitigation strategies, not just a footnote.
-- **Phase A/B separation**: Constructed scenarios serve as protocol calibration (Phase A), clearly distinguished from evidential claims (Phase B). This prevents overclaiming from constructed-scenario results.
+- **Phase A/B separation**: Constructed scenarios serve as a targeted probe (Phase A), clearly distinguished from evidential claims (Phase B). Phase A's reclassification from calibration to reframing probe is itself a methodological finding — it demonstrates honest adaptation when the original design assumption (that scenarios could be made hard enough for B1-ext) proved false.
 - **Effort-matched baseline**: B1-ext controls for the token/effort confound, isolating deliberative structure from prompting depth.
 - **Deliberation-neutral scenario**: Tests the methodology's boundary condition — where deliberation should *not* help — enabling falsification.
 - **Operational blinding**: Recommendation extraction protocol addresses the structural distinguishability problem.

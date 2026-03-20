@@ -128,15 +128,23 @@ Sprint status: **Complete**. Bruner edits 2/5/8 verified applied (2026-03-16). R
 
 ## Active research: Black Swan Hindsight Framework (Phase A)
 
-**Status**: Decision made — targeted revision with reassessment trigger, then conditional Phase A execution.
+**Status**: Phase A complete. **Result: DOES NOT PASS.** C2 does not reliably surface reframing insights absent from B1-ext on the tested scenarios.
 **Results**: `research-programs/evaluating-deliberative-architectures/results/`
+**Phase A report**: `results/phase-a-results.md`
 **Prompt**: `agent/prompts/black-swan-first-run.md` (steps annotated with completion status)
 **Deliberation record**: `../situations/black-swan-phase-a/deliberations/` (00-charter through 06-evaluation-2)
 
 - Pre-Gate 1 (contamination probes): ✅ Complete — all 3 historical case types pass.
 - Pre-Gate 2 (scenario difficulty pilot): ✅ Complete — scoring reliable (10/10 agreement), but scenarios are easier than expected for frontier LLMs (only 1 of 5 at B1 ≤ 1). Two structural features were missed by both conditions, and the Deliberation-Neutral scenario discriminated in the expected inverse direction. The externally-sourced scenario (Intel FDIV) was recognized and needs replacement.
 - Committee deliberation on proceed-or-revise: ✅ Complete (2026-03-16/17). Full fan→funnel→evaluation→remediation→re-evaluation cycle. Score: 10/15 → remediated → 13/15 (at bar). Decision: targeted revision with reassessment trigger.
-- Steps 2-6 (full Phase A run, extraction, scoring, discrimination assessment, write-up): ⏳ Pending. Unblocked — execution plan in 03-resolution.md.
+- **Targeted revision (2026-03-20)**: ✅ Complete. Replaced externally-sourced scenario (Longford-derived, conditional contamination pass). Hardened Glenda/Crock and Cascading Mitigation. Re-piloted all three (6 runs, dual-scored). **Finding: hardening reduces B1 scores but NOT B1-ext scores.** Zero scenarios meet B1-ext ≤ 1. **Reassessment trigger activated.** The structural problem is that the B1-ext multi-angle prompt instructs the model to perform the exact analytical task the scoring system rewards.
+- **Reassessment deliberation (2026-03-20)**: ✅ Complete. Committee reconvened, scored 13.5/15 (HIGH, no remediation needed). Unanimous decision: **pivot Phase A to Targeted Reframing Probe** — test whether C2 surfaces conceptual reframes (phasing critique, creation-vs-activity) that B1-ext completely misses. Key insight (Vic): B1-ext captures "deepening" but may miss "reframing." Phase A reclassified from Protocol Calibration to Targeted Reframing Probe. Scope reduced to 8 runs on 2 scenarios. Deliberation record: `examples/deliberations/black-swan-phase-a-reassessment/`.
+- **Protocol amendment (2026-03-20)**: ✅ Complete. Section X-A added to protocol document. Phase A reclassified, run plan specified, three-level binary feature scoring defined, pass criterion formalized. Resolution ratified by user.
+- **B1-ext replication (2026-03-20)**: ✅ Complete. 4 runs (2 × Blast Radius, 2 × Cascading Mitigation hardened). Feature 2 (creation-vs-activity) eliminated as discrimination target — B1-ext Run 3 scored "Present." Only Feature 1 (phasing critique) remained viable.
+- **C2 runs (2026-03-20)**: ✅ Complete. 4 runs (2 × Blast Radius, 2 × Cascading Mitigation hardened). All dual-scored by Sonnet + Opus evaluators.
+- **Phase A result (2026-03-20)**: ✅ **DOES NOT PASS.** C2's best score on Feature 1 is "Partially present" (Run 5); pass criterion requires "Present." C2 moved closer to the phasing critique than B1-ext (Partially present vs. Absent) but did not reliably complete the reframe. Feature 2 surfaced by both conditions (not discriminating). Full report: `results/phase-a-results.md`.
+
+**Next steps for this research program**: Per protocol if-fail path — report the null result, proceed to Phase B (new scenarios with established discrimination) or document the null and pause. Decision pending.
 
 ### Committee decision summary (2026-03-17)
 
