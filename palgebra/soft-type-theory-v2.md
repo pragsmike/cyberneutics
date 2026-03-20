@@ -1,8 +1,15 @@
-# Soft Type Theory
+# Soft Type Theory (v2 — extended treatment, pending independent mathematical review)
 
 *A formal treatment of the soft type system, developing graded type
 inhabitation as quantale-valued presheaves and extending to distributional
-type membership.*
+type membership, with full treatments of the product quantale, the coend
+construction for untagged mixed-type texts, and the sheaf condition.*
+
+*Status: §§1–5 share content with the canonical `soft-type-theory.md`.
+§§6–7 are new formal developments that have not yet received independent
+mathematical review. See the deliberation record at
+`../situations/soft-type-extension/deliberations/` for the committee's
+conditional adoption decision and the specific claims flagged for review.*
 
 ---
 
@@ -16,7 +23,7 @@ semantic quality, and the resulting scores determine how well an artifact
 inhabits the type. This section develops the mathematical structure behind
 that intuition.
 
-Three questions motivate the formalisation:
+Six questions motivate the formalisation:
 
 1. **What kind of mathematical object is a soft type?** The answer in §2 is:
    a quantale-valued presheaf. The template defines the presheaf's support,
@@ -34,6 +41,21 @@ Three questions motivate the formalisation:
    [the diary entry](../wild/diary/2026-03-13-furry-logic.md). This is the
    novel contribution: type membership becomes a measure on type-space,
    connecting directly to Fritz's Markov category framework.
+
+4. **What structure do the rubric scores themselves carry?** The answer in
+   §5 develops the product quantale V_5 for vector-valued rubric scores,
+   with a collapse functor mediating between rich internal tracking and
+   coarse pipeline-boundary decisions.
+
+5. **How does the pipeline compute when type decomposition is unknown?**
+   The answer in §6 introduces the coend construction for integrating over
+   latent type decompositions, connecting distributional type membership to
+   soft routing as an alternative to hard MAP estimation.
+
+6. **Are the type grades globally consistent?** The answer in §7 analyses
+   the sheaf condition on the type lattice, conjecturing that the
+   measurement framing generically prevents sheaf structure and identifying
+   restricted settings where consistency holds.
 
 ---
 
@@ -502,7 +524,261 @@ semantics.
 
 ---
 
-## 6. Open questions
+## 6. The coend construction: computing with unknown type decompositions
+
+### The problem
+
+Section 4 introduces distributional type membership: a text's type is a
+measure μ_a ∈ Prob(T) rather than a point. But it leaves open how the
+pipeline should *compute* with this distribution when the type decomposition
+is not observed. A committee transcript that spans both `deliberation` and
+`resolution` types has a bimodal type distribution — but the pipeline
+cannot directly observe the decomposition. It sees the text as a whole;
+the internal structure that makes part of it deliberative and part of it
+resolutional is latent.
+
+The categorical tool for this situation is the **coend**: it integrates
+over all possible decompositions, producing a result that is independent
+of which decomposition is the "right" one.
+
+### Coends in the enriched setting
+
+In a V-enriched category **C**, the **coend** of a functor
+`H : C^op × C → V` is a V-object written:
+
+```
+∫^X H(X, X)
+```
+
+defined by the universal property (Kelly, Ch. 3.10, Definition 3.69):
+it is the universal V-object receiving a *dinatural transformation* from H.
+Concretely, the coend is the coequaliser of:
+
+```
+∐_{f : X → Y} H(Y, X) ⇉ ∐_X H(X, X)
+```
+
+where the two maps are induced by H's covariant and contravariant
+actions on f. The coend "quotients out" the dependency on the
+intermediate variable — it identifies all the ways of decomposing through
+different intermediate types.
+
+**Intuition.** If H(A, B) measures "how well does this text look as an
+A-component when viewed from the B-perspective," then the coend ∫^C H(C, C)
+aggregates over all possible decomposition types C, producing a single
+grade that does not depend on which C was chosen. It is the categorical
+analogue of marginalisation in probability: sum over the latent variable.
+
+### Application to mixed-type texts
+
+For a text a that spans types A and B, define the bifunctor:
+
+```
+H_a : T^op × T → V_5
+```
+
+```
+H_a(X, Y) = F_a(X) ⊗ Hom_T(Y, X)
+```
+
+where F_a is the V_5-valued presheaf of a (§5), ⊗ is the monoidal
+product in V_5 (componentwise min), and Hom_T(Y, X) is the V_5-enriched
+hom in the type lattice (the degree to which Y refines X).
+
+The coend:
+
+```
+∫^C F_a(C) ⊗ Hom_T(C, C) = ∫^C F_a(C)
+```
+
+simplifies because Hom_T(C, C) = (3,3,3,3,3) (the identity refinement
+is maximal). So the coend reduces to the colimit of F_a over T — the
+"total inhabitation grade" of the artifact across all types, with the
+refinement structure quotiented out.
+
+This is exactly the right construction for an untagged text. The
+pipeline does not know whether the text is "really" A or "really" B;
+the coend produces a single grade that accounts for all possibilities
+weighted by the refinement relationships between types.
+
+### The coend as type inference
+
+In the distributional setting of §4, the coend has a probabilistic
+interpretation. The distributional type assignment is
+`τ : Artifacts → Prob(T)`. For a bifunctor
+`H : T^op × T → Prob(V_5)`, the coend becomes:
+
+```
+∫^C H(C, C) ≈ ∫_T μ_a(dC) · F_a(C)
+```
+
+— the expected score profile under the type distribution. This is type
+inference in the precise sense: given the observed artifact and the prior
+μ_a over types, the coend computes the posterior-weighted type profile.
+
+**Connection to routing.** The routing decision of §4 (route : Prob(T) → T)
+commits to a single type. The coend provides an alternative: instead of
+committing, compute the expected quality profile across all types and use
+that for downstream processing. This is the "soft routing" alternative to
+the MAP estimator — analogous to the difference between hard and soft
+attention in neural architectures. Whether soft routing improves pipeline
+quality is an empirical question; the coend provides the formal framework
+for investigating it.
+
+**Connection to the Probe.** The Probe (§9 of
+[categorical-structures.md](categorical-structures.md)) runs the pipeline
+N times to characterise the distribution over outputs. The coend-based
+type inference can be applied to each Probe run, producing N
+expected-score profiles. The variance of these profiles across runs
+measures how sensitive the type inference is to the pipeline's
+stochasticity — a second-order uncertainty measure that the scalar
+routing decision of §4 obscures.
+
+### What the coend does not resolve
+
+The coend construction assumes the presheaf F_a is already known — that
+is, the artifact has been scored against all types in T. In practice,
+scoring is expensive (each type requires a rubric evaluation), and T
+may be large. The coend computes the right answer given complete data;
+it does not address the data acquisition problem. An efficient
+approximation would score against a small subset of T and estimate the
+coend from the partial presheaf. Whether this approximation is reliable
+depends on the structure of T (specifically, on how much information the
+refinement order provides about unscored types). This is an open
+question with operational consequences for pipeline design.
+
+The coend also requires the enrichment base V_5 to support the
+coequaliser construction. For the product quantale V_5, coequalisers
+exist because V_5 is cocomplete as a lattice (arbitrary joins exist).
+The coend is then well-defined as a specific join in V_5. This would
+not hold for all enrichment bases — it is a consequence of the quantale
+structure.
+
+---
+
+## 7. The sheaf condition: local-to-global consistency of type grades
+
+### Motivation
+
+The presheaf F_a : T^op → V_5 of §§2 and 5 assigns grades to types
+subject only to the functoriality constraint (grades decrease along
+refinement). This is a weak condition: it says nothing about whether
+the grades are *consistent* across different refinement chains. Two
+independent paths through the type lattice might assign the same
+artifact conflicting grades at a common sub-type — the presheaf permits
+this as long as each path individually respects the order.
+
+A **sheaf condition** would strengthen the presheaf to require
+local-to-global consistency: if an artifact's grades are compatible on
+every overlap of refinement chains, they extend to a unique globally
+consistent assignment. This is the "gluing" property that turns a
+presheaf into a sheaf.
+
+### The sheaf condition on T
+
+The type lattice T, as a preorder, has a natural Grothendieck topology:
+the *canonical topology* generated by covering families. For a preorder,
+the relevant covers are the *jointly surjective refinement families*:
+a type A is covered by types {B₁, ..., Bₙ} if every artifact that
+inhabits A also inhabits some Bᵢ.
+
+The sheaf condition for F_a on this topology says: if F_a is defined on
+each Bᵢ and the values agree on overlaps (types that refine two or more
+Bᵢ simultaneously), then F_a extends uniquely to A.
+
+```
+Sheaf condition: For every cover {B₁,...,Bₙ} of A in T,
+if F_a(Bᵢ) and F_a(Bⱼ) agree on Bᵢ ∩ Bⱼ (the infimum in T)
+for all i,j, then there exists a unique F_a(A) compatible with all Bᵢ.
+```
+
+In the vector setting (V_5-valued presheaves), "agree on overlaps"
+means componentwise agreement at the overlap types. The condition is
+checkable criterion by criterion.
+
+### Does the rubric system satisfy the sheaf condition?
+
+This is an empirical question with a likely negative answer. Here is the
+argument for skepticism:
+
+Consider three types: `text` (general), `evidence` (refines text), and
+`argument` (refines text). The overlap `evidence ∩ argument` in the
+type lattice is the infimum — the most refined type that both evidence
+and argument refine. For many type lattices this infimum is `text`
+itself (evidence and argument may have no common specialisation).
+
+The sheaf condition would require: if an artifact scores (2,3,1,2,2)
+as evidence and (3,1,2,1,3) as argument, and these are compatible at
+`text` (which they must be, since both are ≤ the text grade), then
+the text grade is uniquely determined. But the text grade is determined
+by its own rubric, which may produce (2,2,2,2,2) — consistent with
+both but not determined by them.
+
+The problem is that rubric scores are *measurements*, not *deductions*.
+The evidence rubric and the argument rubric measure different quality
+dimensions. Their overlap at `text` does not constrain the text rubric's
+output — the text rubric has its own criteria. The sheaf condition
+requires that local measurements determine global assignments; the
+measurement framing (§2, §4) says each rubric is an independent
+instrument.
+
+**Conjecture.** The presheaf F_a is generically *not* a sheaf on the
+type lattice with the canonical topology. The failure is not a defect
+of the rubric system but a consequence of the measurement framing:
+independent instruments do not in general satisfy gluing conditions.
+
+### When the sheaf condition does hold
+
+There are restricted settings where the condition holds:
+
+**Within a single refinement chain.** If types form a linear chain
+(A₁ refines A₂ refines ... refines Aₙ), the sheaf condition is
+trivially satisfied because there are no independent overlaps — every
+cover is linearly ordered, and the presheaf values are already
+determined by functoriality.
+
+**When rubrics share criteria.** If two rubrics at the same level of
+the type lattice share criteria (e.g., both `evidence` and `argument`
+include "evidence-standards"), the shared criterion grades must agree
+on any artifact. This gives a partial sheaf condition on the sub-quantale
+corresponding to the shared criteria.
+
+**When enforced by rubric design.** A rubric designer could choose to
+make rubrics compositional: the text rubric's criteria are exactly the
+union of the evidence and argument rubrics' criteria, with the text
+grade on each criterion defined as the max of the sub-type grades.
+This would force the sheaf condition by construction. Whether this
+improves pipeline reliability or merely constrains rubric design
+unnecessarily is a design question, not a mathematical one.
+
+### Connection to mechanism design
+
+The open games formalization
+([committee-as-open-game.md](../wild/committee-games/committee-as-open-game.md),
+§4) identifies the evaluation rubric as the continuation function k
+that determines committee equilibrium. The sheaf condition is a
+coherence constraint on k: it requires that the rubric system's
+evaluations are globally consistent, not just locally consistent along
+each refinement chain.
+
+If the sheaf condition fails — if different rubrics can give
+inconsistent signals — then the continuation function k is
+ill-defined at the overlaps. Characters best-responding to
+inconsistent signals will produce incoherent strategies. This
+connects the sheaf condition to the committee's behavior: a
+non-sheaf rubric system permits committee equilibria that are
+locally rational but globally incoherent.
+
+Whether this theoretical risk materialises in practice depends on
+how much the rubric system's criteria overlap at different type
+levels. The vector setting of §5 makes this checkable: compare
+criterion-by-criterion grades across types and look for
+inconsistencies at overlap points. This is a concrete diagnostic
+that rubric designers can apply.
+
+---
+
+## 8. Open questions
 
 Several questions remain for future development:
 
@@ -524,19 +800,6 @@ Girard's coherence spaces. The presheaf of §2 is a "coherence" structure
 coherence space (Danos & Ehrhard 2011) — with the pipeline's stochastic
 maps as morphisms — is speculative but suggestive.
 
-**Sheaf condition.** The presheaf of §2 (and its V_5-valued generalisation
-in §5) is not yet a *sheaf*. A sheaf condition would say: if an artifact's
-type grades are locally consistent (compatible on every overlap of
-refinement chains), then they extend to a globally consistent type profile.
-Whether the rubric system satisfies this gluing condition — and whether
-enforcing it would improve pipeline reliability — is an open question with
-practical consequences for rubric design. In the vector setting, the sheaf
-condition is componentwise: consistency must hold for each criterion
-independently. This may be easier to verify (or falsify) than the scalar
-case, since individual criteria are more constrained.
-*Proposed treatment:* [soft-type-theory-v2.md, §7](soft-type-theory-v2.md)
-(pending independent review).
-
 **Curry-Howard for soft types.** Is there a proof theory for the soft type
 system? In classical type theory, types are propositions and programs are
 proofs. In the soft type system, types are graded — so proofs would be
@@ -544,19 +807,28 @@ graded too. This connects to the quantitative type theories of Atkey (2018)
 and the graded monads of Gaboardi et al. (2016). Whether a useful
 correspondence exists for pipeline operations is unexplored.
 
-**Coend construction for untagged mixed-type texts.** The diary entry
-identifies the coend as the canonical tool for eliminating a "dummy
-variable" of type decomposition: when a text's decomposition into component
-types must be *inferred* rather than declared, the coend integrates over
-all possible decompositions. Formally, for types A and B with a common
-sub-structure, the coend `∫^C Hom(C,A) × Hom(C,B)` characterises the
-space of texts that could be decomposed as either A or B. This would
-formalise how the pipeline handles texts whose type membership is
-distributional (§4) but whose decomposition is unknown — connecting the
-distributional type assignment μ_a ∈ Prob(T) to the categorical
-machinery for weighted colimits in enriched categories (Kelly, Ch. 3.10).
-*Proposed treatment:* [soft-type-theory-v2.md, §6](soft-type-theory-v2.md)
-(pending independent review).
+**Sheaf condition: empirical validation.** Section 7 conjectures that the
+presheaf is generically not a sheaf and identifies restricted settings
+where the condition holds (linear chains, shared criteria, enforced by
+rubric design). The next step is empirical: run a suite of rubric
+evaluations across a type lattice, extract the overlap grades, and test
+whether the sheaf condition holds or fails. The vector setting of §5 makes
+this checkable criterion by criterion.
+
+**Coend approximation for large type lattices.** Section 6's coend
+construction assumes scoring against all types in T. For large T, this
+is impractical. Whether the coend can be reliably approximated from a
+sparse sub-lattice of T — and what the approximation error bounds are —
+is an open question with direct operational implications for pipeline
+routing efficiency.
+
+**Soft routing vs. hard routing.** Section 6 introduces the coend-based
+"soft routing" alternative to the MAP estimator of §4. Whether soft
+routing improves pipeline quality (fewer misrouted artifacts, better
+downstream scores) is an empirical question that could be tested in the
+Probe framework (§9 of
+[categorical-structures.md](categorical-structures.md)): compare hard-
+and soft-routed versions of the same pipeline across N Probe runs.
 
 **Connection to Gärdenfors' conceptual spaces.** The distributional type
 membership of §4 has a geometric interpretation: convex regions in a
@@ -569,6 +841,16 @@ would ask whether the natural types (the soft types of §2) correspond to
 convex regions in this space — and whether the presheaf functoriality
 condition (grades decrease along refinement) has a geometric counterpart
 in the containment of convex regions.
+
+**Interaction between coend and sheaf condition.** The coend (§6) and the
+sheaf condition (§7) are related but distinct. The coend marginalises over
+type decompositions; the sheaf condition constrains whether local type
+grades extend globally. If the presheaf is a sheaf, the coend computation
+simplifies (local data determines global data, so the coend can be computed
+from any sufficiently fine cover). If it is not a sheaf, the coend must
+account for the inconsistencies — the "soft routing" of §6 may
+systematically disagree with hard routing at the inconsistency points.
+The interaction between these constructions is unexplored.
 
 ---
 
