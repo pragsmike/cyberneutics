@@ -439,15 +439,16 @@ collapse(s₁,...,s₅) = High   if sum(sᵢ) ≥ 13
                        Low    otherwise
 ```
 
-This is a lax monoidal functor from (V_5, componentwise-min) to (V, min).
-It is *lax* rather than strict because collapsing respects the order
+This is an oplax monoidal functor from (V_5, componentwise-min) to (V, min).
+It is *oplax* rather than strict because collapsing respects the order
 (if `v ≤ w` componentwise then `collapse(v) ≤ collapse(w)`) but does not
 strictly preserve the monoidal product — the collapse of a componentwise
-min may exceed the min of the collapses. Concretely: two vectors might
-each collapse to Medium, but their componentwise min might collapse to Low
-(if each vector's weak criterion is different and the mins accumulate).
+min may fall strictly below the min of the collapses. Concretely: two
+vectors might each collapse to Medium, but their componentwise min might
+collapse to Low (if each vector's weak criterion is different and the
+mins accumulate).
 
-The laxness is a genuine feature, not a defect. It records the fact that
+The oplaxness is a genuine feature, not a defect. It records the fact that
 pipeline-boundary decisions are necessarily coarser than the internal
 quality tracking. The category **Text** is enriched over V_5 internally,
 and enriched over V at its boundaries. The collapse functor mediates
@@ -459,8 +460,8 @@ counterpart of the "score combination structures" in
 which describes lattice, semiring, and Pareto combination strategies. The
 min-lattice collapse is the lattice case. A semiring collapse (weighted
 sum) or a Pareto collapse (preserve the frontier) would be alternative
-functors from V_5 to different scalar bases, each lax monoidal with
-different laxness properties. The choice of collapse functor is a design
+functors from V_5 to different scalar bases, each oplax monoidal with
+different oplaxness properties. The choice of collapse functor is a design
 decision with operational consequences — it determines what information
 survives at pipeline boundaries.
 
@@ -592,42 +593,74 @@ The coend:
 ```
 
 simplifies because Hom_T(C, C) = (3,3,3,3,3) (the identity refinement
-is maximal). So the coend reduces to the colimit of F_a over T — the
-"total inhabitation grade" of the artifact across all types, with the
-refinement structure quotiented out.
+is maximal). So the coend reduces to the colimit of F_a over T.
 
-This is exactly the right construction for an untagged text. The
-pipeline does not know whether the text is "really" A or "really" B;
-the coend produces a single grade that accounts for all possibilities
-weighted by the refinement relationships between types.
+In V_5 (a complete lattice), the colimit is the join — the componentwise
+supremum of all F_a(C) values. For a presheaf satisfying the
+functoriality condition (grades decrease along refinement), the supremum
+is achieved at the least refined (most general) type. The coend therefore
+returns F_a evaluated at the top of the type lattice. This is
+mathematically correct but computationally trivial: the coend does not
+aggregate information from multiple types in a non-trivial way.
 
-### The coend as type inference
+The coend's value lies not in the *number* it computes but in the
+*universal property* it satisfies. By Kelly (Ch. 3.10, Definition 3.69),
+the coend is characterised by the property that any family of V_5-morphisms
+`H(C, C) → X` that is dinatural in C factors uniquely through the coend.
+In the type-theoretic setting, this means: any construction that processes
+an artifact in a way that does not depend on which type decomposition is
+chosen is canonically determined by the coend. The coend is a *coherence
+guarantee* — it identifies the type-decomposition-independent part of the
+pipeline's computations.
 
-In the distributional setting of §4, the coend has a probabilistic
-interpretation. The distributional type assignment is
-`τ : Artifacts → Prob(T)`. For a bifunctor
-`H : T^op × T → Prob(V_5)`, the coend becomes:
+### Two formalisations of marginalisation
+
+The coend and the distributional type assignment of §4 both formalise the
+intuition of "marginalising over the latent type variable," but they are
+different constructions that give different answers in general.
+
+**The categorical construction (coend).** The coend ∫^C F_a(C) in V_5
+computes a join — a supremum over the monoidal structure (V_5, min). For
+a presheaf on a bounded preorder, this is the value at the most general
+type. Its contribution is the universal property (structural guarantee),
+not the computed value.
+
+**The probabilistic construction (expectation).** The distributional type
+assignment `τ : Artifacts → Prob(T)` from §4 gives a probability measure
+μ_a over types. The expected score profile is:
 
 ```
-∫^C H(C, C) ≈ ∫_T μ_a(dC) · F_a(C)
+E_{μ_a}[F_a] = ∫_T μ_a(dC) · F_a(C)
 ```
 
-— the expected score profile under the type distribution. This is type
-inference in the precise sense: given the observed artifact and the prior
-μ_a over types, the coend computes the posterior-weighted type profile.
+This is a weighted average over the score profiles, using addition and
+multiplication in ℝ^5. It is a different operation from the coend's join:
+the coend operates in (V_5, min), the expectation operates in (ℝ^5, +, ·).
+For a delta measure μ_a = δ_t (single-type text), the expectation
+returns F_a(t); this equals the coend — which is always F_a at the most
+general type — only when t is itself the most general type.
+
+**Why both matter.** The coend provides structural guarantees (any
+type-decomposition-independent construction factors through it). The
+expectation provides a computational tool (a single aggregate score
+profile for routing). A future treatment might unify them by working in
+a semiring-enriched setting where the coend computes a weighted sum
+rather than a supremum, but this would require reworking the enrichment
+base throughout the document and is left as an open question.
 
 **Connection to routing.** The routing decision of §4 (route : Prob(T) → T)
-commits to a single type. The coend provides an alternative: instead of
-committing, compute the expected quality profile across all types and use
-that for downstream processing. This is the "soft routing" alternative to
-the MAP estimator — analogous to the difference between hard and soft
-attention in neural architectures. Whether soft routing improves pipeline
-quality is an empirical question; the coend provides the formal framework
-for investigating it.
+commits to a single type via MAP estimation. The expectation provides
+a "soft routing" alternative: instead of committing, compute the expected
+quality profile across all types and use that for downstream processing.
+This is analogous to the difference between hard and soft attention in
+neural architectures. Whether soft routing improves pipeline quality is
+an empirical question. The coend's universal property provides a separate
+guarantee: any soft router satisfying the dinaturality condition factors
+canonically through the coend (see §8, open questions).
 
 **Connection to the Probe.** The Probe (§9 of
 [categorical-structures.md](categorical-structures.md)) runs the pipeline
-N times to characterise the distribution over outputs. The coend-based
+N times to characterise the distribution over outputs. The expectation-based
 type inference can be applied to each Probe run, producing N
 expected-score profiles. The variance of these profiles across runs
 measures how sensitive the type inference is to the pipeline's
@@ -680,7 +713,11 @@ The type lattice T, as a preorder, has a natural Grothendieck topology:
 the *canonical topology* generated by covering families. For a preorder,
 the relevant covers are the *jointly surjective refinement families*:
 a type A is covered by types {B₁, ..., Bₙ} if every artifact that
-inhabits A also inhabits some Bᵢ.
+inhabits A also inhabits some Bᵢ. (This semantic characterisation is
+equivalent to the categorical one — the sieve generated by the Bᵢ is a
+covering sieve for the canonical topology — because the refinement order
+on T is defined in terms of inhabitation containment: B refines A
+precisely when every B-artifact is an A-artifact, per §2.)
 
 The sheaf condition for F_a on this topology says: if F_a is defined on
 each Bᵢ and the values agree on overlaps (types that refine two or more
@@ -761,13 +798,17 @@ coherence constraint on k: it requires that the rubric system's
 evaluations are globally consistent, not just locally consistent along
 each refinement chain.
 
-If the sheaf condition fails — if different rubrics can give
-inconsistent signals — then the continuation function k is
-ill-defined at the overlaps. Characters best-responding to
-inconsistent signals will produce incoherent strategies. This
-connects the sheaf condition to the committee's behavior: a
-non-sheaf rubric system permits committee equilibria that are
-locally rational but globally incoherent.
+**Conjecture (sheaf-equilibrium connection).** If the sheaf condition
+fails — if different rubrics can give inconsistent signals — then the
+continuation function k becomes ambiguous at the overlaps, facing a
+multi-objective optimisation problem rather than a scalar one.
+Characters best-responding to inconsistent signals may produce
+strategies that are locally rational but globally incoherent: a
+non-sheaf rubric system permits committee equilibria that optimise
+against different rubric perspectives without coordinating across them.
+Deriving this rigorously would require showing that the composed open
+game with inconsistent payoffs fails to have a Nash equilibrium or that
+its equilibria are Pareto-dominated, which we have not attempted.
 
 Whether this theoretical risk materialises in practice depends on
 how much the rubric system's criteria overlap at different type
@@ -852,6 +893,26 @@ account for the inconsistencies — the "soft routing" of §6 may
 systematically disagree with hard routing at the inconsistency points.
 The interaction between these constructions is unexplored.
 
+**Soft routing and dinaturality.** The "soft routing" alternative to MAP
+estimation (§6) assigns processing weights to pipeline branches without
+committing to a single type. A natural question is whether soft routers
+satisfy the dinaturality condition required to factor through the coend.
+For a linear router (weights are the presheaf values), dinaturality
+follows from presheaf functoriality. For nonlinear routers, it is an
+additional constraint. If the dinaturality condition holds, the coend's
+universal property (Kelly 3.10, Definition 3.69) guarantees that the
+router has a canonical factorisation — providing a formal basis for
+comparing different soft routing strategies.
+
+**Empirical test of the sheaf-equilibrium conjecture.** The conjecture
+in §7 connecting sheaf failure to committee equilibrium incoherence has a
+testable prediction: if rubric inconsistencies at type overlaps
+(checkable via §5's vector scores) correlate with lower evaluation scores
+in committee deliberations (checkable via the evaluation rubrics), the
+conjecture gains empirical support. A systematic study would measure
+rubric overlap grades across a type lattice and correlate the degree of
+sheaf-condition failure with deliberation quality outcomes.
+
 ---
 
 ## References
@@ -864,7 +925,8 @@ deterministic morphisms (Definition 10.1), Giry monad connection
 
 **Kelly, G. Maxwell.** *Basic Concepts of Enriched Category Theory.*
 Cambridge University Press, 1982. — Enrichment axioms (Ch. 1.2),
-V-valued presheaves (Ch. 2.1), quantale enrichment.
+V-valued presheaves (Ch. 2.1), quantale enrichment, coend definition and
+universal property (Ch. 3.10, Definition 3.69).
 
 **Lawvere, F. William.** "Metric spaces, generalized logic, and closed
 categories." *Rendiconti del Seminario Matematico e Fisico di Milano* 43,

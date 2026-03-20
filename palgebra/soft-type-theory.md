@@ -417,15 +417,16 @@ collapse(s₁,...,s₅) = High   if sum(sᵢ) ≥ 13
                        Low    otherwise
 ```
 
-This is a lax monoidal functor from (V_5, componentwise-min) to (V, min).
-It is *lax* rather than strict because collapsing respects the order
+This is an oplax monoidal functor from (V_5, componentwise-min) to (V, min).
+It is *oplax* rather than strict because collapsing respects the order
 (if `v ≤ w` componentwise then `collapse(v) ≤ collapse(w)`) but does not
 strictly preserve the monoidal product — the collapse of a componentwise
-min may exceed the min of the collapses. Concretely: two vectors might
-each collapse to Medium, but their componentwise min might collapse to Low
-(if each vector's weak criterion is different and the mins accumulate).
+min may fall strictly below the min of the collapses. Concretely: two
+vectors might each collapse to Medium, but their componentwise min might
+collapse to Low (if each vector's weak criterion is different and the
+mins accumulate).
 
-The laxness is a genuine feature, not a defect. It records the fact that
+The oplaxness is a genuine feature, not a defect. It records the fact that
 pipeline-boundary decisions are necessarily coarser than the internal
 quality tracking. The category **Text** is enriched over V_5 internally,
 and enriched over V at its boundaries. The collapse functor mediates
@@ -437,8 +438,8 @@ counterpart of the "score combination structures" in
 which describes lattice, semiring, and Pareto combination strategies. The
 min-lattice collapse is the lattice case. A semiring collapse (weighted
 sum) or a Pareto collapse (preserve the frontier) would be alternative
-functors from V_5 to different scalar bases, each lax monoidal with
-different laxness properties. The choice of collapse functor is a design
+functors from V_5 to different scalar bases, each oplax monoidal with
+different oplaxness properties. The choice of collapse functor is a design
 decision with operational consequences — it determines what information
 survives at pipeline boundaries.
 
