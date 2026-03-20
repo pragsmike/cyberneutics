@@ -33,6 +33,7 @@ on lessons learned that aren't captured in formal documentation.
 3. **Generates new handoff** following the structured template
 4. **Saves** as `agent/handoff-[TODAY].md`
 5. **Archives previous** handoff to `agent/archive/handoff-[OLD-DATE].md`
+6. **Updates `meta/project-state.md`** — add a brief entry to the "Recent changes" section noting what was accomplished this session. This keeps project-state current for successor agents who read it during onboarding step 2.
 
 All steps happen automatically without confirmation prompts.
 
@@ -163,8 +164,9 @@ When user types `/handoff`, simply execute the skill:
 1. Read `agent/handoff-*.md` (most recent if multiple)
 2. Analyze the current session transcript
 3. Generate comprehensive handoff document
-4. Save as `agent/handoff-2026-02-16.md`
+4. Save as `agent/handoff-[TODAY].md`
 5. Move previous handoff to `agent/archive/`
-6. Confirm completion: "Handoff document created: agent/handoff-2026-02-16.md (previous handoff archived)"
+6. Update `meta/project-state.md` "Recent changes" section with this session's accomplishments
+7. Confirm completion: "Handoff document created: agent/handoff-[TODAY].md (previous handoff archived, project-state updated)"
 
 No intermediate confirmations or reviews—generate and save directly.

@@ -14,7 +14,8 @@ For general orientation, read `README.md`.
 
 ## Session start
 
-1. Read the most recent `agent/handoff-[YYYY-MM-DD]*.md`.
+0. **Confirm repo root.** All paths in this document are relative to the repository root. List the contents of `agent/` and confirm you can see files including `onboarding-core.md`, `roster.md`, and one or more `handoff-*.md` files. If you see nothing or get errors, your working directory is not the repo root — resolve the correct path before proceeding. (Common in Cowork, sandboxed environments, and IDE configurations where the working directory differs from the project root.)
+1. List the files in `agent/` and read the most recent `handoff-[YYYY-MM-DD]*.md` (by date in the filename). You should see at least one handoff file. If you see none, recheck your path resolution per step 0 — do not assume they have been archived.
 2. Read `meta/project-state.md` for current architecture truths and open decisions.
 3. If `/committee`, `/scenarios`, or `/probe` is relevant, check the resolved situations root for prior runs on related topics before starting a new one.
 4. Do not search `agent/archive/` during onboarding. It is historical only. Use it only when the task explicitly calls for provenance or historical reconstruction.
@@ -86,9 +87,10 @@ Canonical skill bodies live only in `.claude/skills/`. Do not create a duplicate
 
 Compatibility model:
 
-- Claude: discover workflows via `.claude/commands/`, then follow `.claude/skills/<name>/SKILL.md`
-- Cursor: discover workflows via `.cursor/commands/`, then follow `.claude/skills/<name>/SKILL.md`
-- Codex and other agents without repo-local skill discovery: open `.claude/skills/<name>/SKILL.md` manually and follow it
+- Claude: auto-loads `CLAUDE.md`; discover workflows via `.claude/commands/`, then follow `.claude/skills/<name>/SKILL.md`
+- Cursor: auto-loads `.cursor/rules`; discover workflows via `.cursor/commands/`, then follow `.claude/skills/<name>/SKILL.md`
+- Codex and other agents without repo-local skill discovery (including Antigravity): open `.claude/skills/<name>/SKILL.md` manually and follow it
+- Cowork: `CLAUDE.md` is injected as system context but the working directory is not the repo root. Follow step 0 above to anchor paths before proceeding.
 
 Available workflows:
 

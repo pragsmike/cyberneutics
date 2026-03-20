@@ -1,13 +1,13 @@
 # Project State
 
-Last updated: 2026-03-17
+Last updated: 2026-03-20
 
 This document is the canonical current-state reference for repo structure, compatibility truths, and live open questions. It replaces the old stale backlog-file role with a narrower, actively maintained state doc.
 
 ## Current architecture truths
 
 - `agent/onboarding-core.md` is the canonical onboarding source.
-- `AGENTS.md` and `CLAUDE.md` are thin tool-specific entry points.
+- `AGENTS.md`, `CLAUDE.md`, and `.cursor/rules` are thin tool-specific entry points.
 - Canonical skill bodies live only in `.claude/skills/`.
 - Claude and Cursor command discovery is handled by thin wrappers in `.claude/commands/` and `.cursor/commands/`.
 - Live outputs belong in external situation directories resolved via `--situation`, `.claude/cyberneutics-config.yaml`, or `~/situations/<topic-slug>/`.
@@ -27,7 +27,7 @@ Complete as of 2026-03-07. All items resolved:
 - Checked-in scenario and deliberation records labeled and housed as examples.
 - Structural linting in place to keep these invariants from drifting.
 
-## Recent changes (2026-03-08 through 2026-03-16)
+## Recent changes (2026-03-08 through 2026-03-20)
 
 ### New content added (2026-03-08)
 
@@ -63,6 +63,13 @@ Complete as of 2026-03-07. All items resolved:
 
 - `agent/prompts/improve-repo-next-step.md` — Updated bias areas to reflect post-sprint state.
 - `agent/prompts/editorial-review.md` — Added `essays/glossary.md` to scope.
+
+### Onboarding repair and cross-agent compatibility (2026-03-20)
+
+- `agent/onboarding-core.md` — Added Step 0 (repo root verification) and strengthened Step 1 (list-before-read with failure guidance). Updated compatibility model with Cowork, Cursor auto-load, and Antigravity entries.
+- `.claude/skills/handoff/SKILL.md` — Added step 6: update `meta/project-state.md` during handoff. Updated Usage section.
+- `.cursor/rules` — New file. Cursor onboarding entry point mirroring `CLAUDE.md` and `AGENTS.md`.
+- Diagnosed and fixed silent onboarding failure in Cowork where relative paths caused agents to miss handoff files when cwd ≠ repo root.
 
 ## Open decisions
 
