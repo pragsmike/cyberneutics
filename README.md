@@ -94,6 +94,8 @@ The methodology documented here has produced:
 - Richer exploration of decision spaces with formal quality tracking
 - Auditable artifacts with full provenance (not just chat transcripts)
 
+The inspectable reasoning record is independently valuable — it is the committee's primary product, not a byproduct of decision quality. Even when simpler approaches might reach the same decision, they rarely produce an audit trail that shows *why*.
+
 These aren't incremental improvements. They represent a fundamentally different approach to human-AI collaboration.
 
 ## What's in this repository?
@@ -137,7 +139,7 @@ These aren't incremental improvements. They represent a fundamentally different 
 - **[Duality and Composition](./palgebra/duality-and-composition.md)** — the fan/funnel duality: scenario generation as the committee's categorical dual, their composition as a decision monad, and iteration for mapping decision landscapes
 - Adapts Fong and Spivak's resource-theoretic framework (*Seven Sketches in Compositionality*, Ch. 2) to LLM pipelines. Three isomorphic representations: resource equations, string diagrams, and YAML-decorated artifact files
 
-The essays describe *why* narrative engines need narrative engineering. The artifacts provide *how* — concrete techniques like adversarial committees and evaluation rubrics. Palgebra provides *what, precisely* — a formal language for specifying pipelines, their types, their quality propagation, and their composition laws. An adversarial committee is a transformation morphism; a rubric evaluation is an enrichment morphism; a human review gate is a collapse operator. The formalism makes these relationships explicit and composable.
+The essays describe *why* narrative engines need narrative engineering. The artifacts provide *how* — concrete techniques like adversarial committees and evaluation rubrics. Palgebra provides *what, precisely* — a formal language for specifying pipelines, their types, their quality propagation, and their composition laws (currently at working-hypothesis status pending expert review; see [LLM-mathematical-inquiry outline](wild/llm-mathematical-inquiry-outline.md)). An adversarial committee is a transformation morphism; a rubric evaluation is an enrichment morphism; a human review gate is a collapse operator. The formalism makes these relationships explicit and composable.
 
 **[Research Programs](research-programs/)** - Active experiments and evidence-building
 - [Research programs index](./research-programs/README.md) — all programs ordered by impact on uncertainty, with quick-start guide for contributors

@@ -3,6 +3,8 @@
 *A treatment of the basic category-theoretic constructions as they appear in
 narrative computing pipelines, in pedagogical order.*
 
+> **Epistemic status**: Provisionally useful but untrusted. These constructions organize thinking about pipeline composition but have not been reviewed by category theory experts. Lax/approximate coherence framing was added after a focused review (2026-03-13); overclaimed universal properties were weakened to design targets in that same review. Treat as working hypotheses. See the [LLM-mathematical-inquiry outline](../wild/llm-mathematical-inquiry-outline.md).
+
 ---
 
 ## 1. Preliminaries: Why Category Theory Here

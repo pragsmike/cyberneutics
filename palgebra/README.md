@@ -4,6 +4,8 @@ A pipeline algebra for LLM workflows, treating them as compositions of
 **decorated texts** — text artifacts carrying structured metadata through
 typed operations.
 
+> **Epistemic status**: The constructions here are provisionally useful for organizing thinking about LLM pipelines, but they have not been reviewed by domain experts in category theory. They should be treated as working hypotheses, not established results. See the [LLM-mathematical-inquiry outline](../wild/llm-mathematical-inquiry-outline.md) for the proposed path to validation.
+
 The formalism adapts the resource-theoretic framework from Fong and
 Spivak's *Seven Sketches in Compositionality* (2019), Chapter 2, to
 LLM pipelines. Where Fong and Spivak use string diagrams and resource

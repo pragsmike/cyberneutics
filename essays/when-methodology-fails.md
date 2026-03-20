@@ -53,6 +53,8 @@ This connects to a specific theoretical claim: repetition produces difference (E
 
 **If you realize mid-run that the problem is simpler than you thought**: that's actually a success — the methodology helped you see the problem more clearly. Stop the pipeline, act on what you now understand, and note what made the problem seem more complex than it was.
 
+Note that even in this failure mode, the committee produced an inspectable record of the reasoning that led to the (unnecessary) analysis. Whether this record has archival or training value — showing *why* the team initially thought the problem was complex — is a separate question from whether the decision needed the methodology.
+
 ---
 
 ## Failure Mode 2: The committee characters don't deliver on their epistemic promise

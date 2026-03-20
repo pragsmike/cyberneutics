@@ -44,7 +44,7 @@ Check these before you commit to a track:
 
 ## Where to start (by impact on uncertainty)
 
-These programs are ordered by how much they reduce the main open uncertainties: *Does the methodology outperform simpler approaches? When does it help? How do we know?*
+These programs are ordered by how much they reduce the main open uncertainties: *Does the methodology outperform simpler approaches? When does it help? How do we know?* (These primarily address the decision-quality claim. The inspectability claim — that the committee produces auditable reasoning records regardless of outcome quality — is treated as structural rather than empirical. A separate meta-level question — *can LLM pipelines do reliable mathematics under structured guidance?* — is outlined in [wild/llm-mathematical-inquiry-outline.md](../wild/llm-mathematical-inquiry-outline.md).)
 
 | Priority | Uncertainty reduced | Plan(s) |
 |----------|---------------------|---------|

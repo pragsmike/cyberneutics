@@ -83,6 +83,8 @@ An adversarial committee forces the system to explore the **tails of the distrib
 
 We aren't creating consciousness. We are creating a **dynamic system of constraints**—a constructed game—that forces the narrative engine to generate something richer, more specific, and more rigorous than it would on its own.
 
+There is a secondary value that is easy to miss: the game produces a transcript, and the transcript is inspectable. A solo LLM can reach a good answer without leaving a legible record of *how* it got there. The committee always produces one. Whether the committee outperforms simpler prompting on decision quality is an empirical question (see [ablation-study.md](../research-programs/ablation-study.md)); that the committee produces an auditable reasoning record is structural — it falls out of the adversarial process itself.
+
 ## Connection to MOOLLM
 
 This aligns perfectly with the philosophy behind **[MOOLLM](https://github.com/SimHacker/MOOLLM)** — Don Hopkins' runtime environment for multi-agent LLM interaction, providing structured environments ("worlds") where AI interactions are constrained by explicit rules, roles, and protocols. MOOLLM is the platform; Cyberneutics is the methodology that runs on it. Hopkins frames it as a system of "games" and "worlds."

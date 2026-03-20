@@ -1,6 +1,8 @@
 # Committee Games
 
 > **Status**: ACTIVE — Game-theoretic formalization of the adversarial committee; ready for publication as bridge paper for ACT community. See [wild triage report](../../agent/archive/wild-triage-2026-03.md).
+>
+> **Epistemic status**: Provisionally useful but untrusted. The open games translation has not been reviewed by domain experts. It should be treated as a working hypothesis and bridge document for soliciting expert feedback, not as established applied category theory.
 
 A translation of the cyberneutics adversarial committee into the language of compositional game theory (open games), building a bridge to the ACT / Cybercat research community.
 
