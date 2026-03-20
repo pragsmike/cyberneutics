@@ -20,7 +20,9 @@ The [adoption strategy committee](../examples/deliberations/methodology-adoption
 
 Every methodology has a failure envelope. Knowing where the boundary is lets you work near it safely instead of accidentally crossing it. This essay maps that boundary for cyberneutics — not to undermine the methodology, but because understanding *where* a tool breaks is what distinguishes engineering from salesmanship.
 
-A caveat before we begin: these are *predicted* failure modes, not empirically documented ones. The methodology is young. The committee runs in this repository are largely self-referential (the methodology evaluating itself). No practitioner has yet reported "I followed the process and it failed in this specific way." These failure modes are derived from the methodology's theoretical structure, from known LLM limitations, and from what happened to other methodologies with similar designs. They are a safety manual written before the accidents, not an accident report. As empirical failure cases accumulate, this essay should be updated to distinguish prediction from observation.
+A caveat before we begin: these are largely *predicted* failure modes, not empirically documented ones. The methodology is young. The committee runs in this repository are largely self-referential (the methodology evaluating itself). No practitioner has yet reported "I followed the process and it failed in this specific way." These failure modes are derived from the methodology's theoretical structure, from known LLM limitations, and from what happened to other methodologies with similar designs. They are a safety manual written before the accidents, not an accident report. As empirical failure cases accumulate, this essay should be updated to distinguish prediction from observation.
+
+One partial exception: the [Phase A targeted reframing probe](../research-programs/evaluating-deliberative-architectures/results/phase-a-results.md) (2026-03-20) tested whether committee deliberation surfaces conceptual reframing that an effort-matched single AI misses. It returned a null result — the committee moved closer to a target insight but didn't reliably get there. This is relevant to Failure Modes 2 and 6: the committee characters may produce the *genre* of adversarial reframing without completing the actual conceptual move, and the methodology's self-evaluation (the committee deliberating on its own experimental design) produced the experiment that yielded the null. See [The test](#the-test) at the end of this essay.
 
 The failure modes below are organized by root cause, not severity. Each has: a concrete scenario, the mechanism that produces the failure, observable signs that it's happening, and what to do about it. Where a failure mode connects to the theoretical foundations, that connection is made explicit — because the point isn't just "things go wrong" but "here is which load-bearing theoretical claim is failing and why."
 
@@ -313,6 +315,18 @@ If no: either the problem was outside the methodology's scope, or the methodolog
 This isn't a one-time test. It's a calibration practice. The methodology's credibility should be proportional to its empirical track record — not to its theoretical elegance, not to its formal rigor, not to how good the transcripts look.
 
 *Results, not resolutions.*
+
+### First empirical data point (2026-03-20)
+
+The [Black Swan Hindsight Framework Phase A](../research-programs/evaluating-deliberative-architectures/results/phase-a-results.md) ran a version of this test. Two constructed scenarios with known structural insights. Committee deliberation (five characters, adversarial debate) vs. a single AI given the same word count and instructions to analyze from multiple angles. Two specific insights were the targets: did the committee spot them when the single AI didn't?
+
+Result: the committee did not reliably surface the insights the single AI missed. On one target (the phasing critique — recognizing that a phased migration tests the deployment tool, not the configuration), the committee got closer (one run scored "Partially present" vs. "Absent" for both single-AI runs) but never completed the reframe. On the other target (creation-vs-activity reframing), both conditions surfaced it — it wasn't a committee-specific capability.
+
+This is a single data point on constructed scenarios with minimal statistical power. It doesn't settle the question. But it establishes the baseline: on these scenarios, the committee's advantage over an effort-matched single agent is directional, not categorical. The committee produced qualitatively different analysis — character-driven tensions, productive disagreements, argumentative pressure — without producing reliably different *insights* at the reframing level.
+
+The finding connects to two failure modes in this essay. **Failure Mode 2** (shallow roleplaying): the committee characters generated the genre of adversarial reframing — Vic distinguished types of drift, Joe recalled institutional failures, Tammy traced feedback loops — but the collective argumentative pressure wasn't enough to complete the specific conceptual move. **Failure Mode 6** (meta-circularity): the committee deliberated on its own experimental design (twice), producing the pivot to the reframing probe. The methodology's self-governance worked well. Its performance on the test the self-governance designed did not pass the self-governance's own pre-registered criterion. That's an honest outcome.
+
+The full narrative is in [the-story-so-far.md](../research-programs/evaluating-deliberative-architectures/results/the-story-so-far.md). The detailed evidence is in [the results directory](../research-programs/evaluating-deliberative-architectures/results/).
 
 ---
 

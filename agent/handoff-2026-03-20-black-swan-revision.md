@@ -106,7 +106,7 @@ Per the resolution's implementation plan (user ratified):
 
 ## Reassessment deliberation (later in same session)
 
-After the reassessment trigger fired, the committee was reconvened. Full deliberation record: `examples/deliberations/black-swan-phase-a-reassessment/` (00-charter through 04-evaluation).
+After the reassessment trigger fired, the committee was reconvened. Full deliberation record: `research-programs/evaluating-deliberative-architectures/results/deliberations/black-swan-phase-a-reassessment/` (00-charter through 04-evaluation). Also available at the original location `examples/deliberations/black-swan-phase-a-reassessment/`.
 
 **Decision**: Pivot Phase A from "Protocol Calibration" to **Targeted Reframing Probe** (Option C, unanimous).
 

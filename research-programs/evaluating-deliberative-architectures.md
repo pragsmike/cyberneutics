@@ -1,14 +1,16 @@
 # Evaluating Deliberative Architectures: The Black Swan Hindsight Framework
 
-**Status**: Phase A in progress — reclassified from "Protocol Calibration" to "Targeted Reframing Probe" after revision and reassessment (2026-03-20). Pre-Gates 1 and 2 complete; targeted runs pending.
-**Runs**: Pre-Gate 1 (3 contamination probes, all passed); Pre-Gate 2 (10 pilot runs: B1 and B1-ext on 5 scenarios, dual-scored); Phase A revision (6 re-pilot runs on hardened/replacement scenarios)
+**Status**: Phase A complete — **does not pass**. C2 does not reliably surface reframing insights absent from B1-ext on the tested scenarios. Phase B decision pending.
+**Runs**: Pre-Gate 1 (3 contamination probes); Pre-Gate 2 (10 pilot runs); Phase A revision (6 re-pilot runs); Phase A targeted probe (8 runs: 4 B1-ext + 4 C2, all dual-scored)
 **Results**: [evaluating-deliberative-architectures/results/](evaluating-deliberative-architectures/results/)
+**Phase A report**: [results/phase-a-results.md](evaluating-deliberative-architectures/results/phase-a-results.md)
+**General-audience summary**: [results/the-story-so-far.md](evaluating-deliberative-architectures/results/the-story-so-far.md)
 
 > **Contributing to this program**
 > - **Skills needed**: LLM prompt automation, historical research, qualitative evaluation, familiarity with the committee pipeline (`/committee`) and evaluation dimensions in [evaluation-schemes.md](evaluation-schemes.md).
 > - **Estimated scope**: 4-6 weeks for corpus construction, architecture runs, and initial analysis.
 > - **Contributor type**: Paired recommended (one designs cases, one evaluates blind). Solo possible but slower.
-> - **Entry point**: Read Sections I-III (problem, innovation, contamination). Then read [evaluation-schemes.md](evaluation-schemes.md) Sections III and VIII for dimension codebooks. Start with the **targeted reframing probe** (Phase A: C2 vs. B1-ext on 2 constructed scenarios, Section X-A) — it requires no historical research and tests a specific hypothesis about deliberation's value-add before investing in historical case construction. Phase A is a targeted probe, not evidence for the core claim. See also [protocol-evaluation-rubric.md](evaluating-deliberative-architectures/protocol-evaluation-rubric.md).
+> - **Entry point**: Read Sections I-III (problem, innovation, contamination). Then read [evaluation-schemes.md](evaluation-schemes.md) Sections III and VIII for dimension codebooks. Start with the **targeted reframing probe** (Phase A: C2 vs. B1-ext on 2 constructed scenarios, Section X-A) — it requires no historical research and tests a specific hypothesis about deliberation's value-add before investing in historical case construction. Phase A is a targeted probe, not evidence for the core claim. **Phase A returned a null result (2026-03-20)**: C2 moved closer to one target reframe than B1-ext but did not pass the pre-registered criterion. See [results/phase-a-results.md](evaluating-deliberative-architectures/results/phase-a-results.md). See also [protocol-evaluation-rubric.md](evaluating-deliberative-architectures/protocol-evaluation-rubric.md).
 
 **Last updated**: 2026-03-20
 
@@ -721,7 +723,7 @@ If using human raters for Phase B-3 (recommended for first run): add ~$2-4K for 
 
 ## X-A. Phase A Reclassification: Targeted Reframing Probe
 
-> **Amendment note (2026-03-20)**: Added per committee reassessment ([deliberations/black-swan-phase-a-reassessment/](../examples/deliberations/black-swan-phase-a-reassessment/)). Documents the Phase A reclassification from "Protocol Calibration" to "Targeted Reframing Probe," including the empirical findings that motivated the change, the reframing hypothesis, run plan, scoring criteria, and pass criterion.
+> **Amendment note (2026-03-20)**: Added per committee reassessment ([deliberations/black-swan-phase-a-reassessment/](results/deliberations/black-swan-phase-a-reassessment/)). Documents the Phase A reclassification from "Protocol Calibration" to "Targeted Reframing Probe," including the empirical findings that motivated the change, the reframing hypothesis, run plan, scoring criteria, and pass criterion.
 
 ### Empirical Basis for Reclassification
 
@@ -807,7 +809,9 @@ Accept the ceiling. Report the full Phase A trajectory — from original pilot t
 2. **Pre-Gate 2 finding**: B1-ext ≥ 2 on all scenarios → effort confound flag. Committee directed revision.
 3. **Revision finding**: Hardening reduces B1 but not B1-ext → difficulty problem is structural (prompt-scoring alignment).
 4. **Reassessment**: Committee pivots to targeted reframing probe. 2 conditions × 2 scenarios × binary features. Estimated 8-12 person-hours for runs + scoring.
-5. **Current**: Runs pending.
+5. **B1-ext replication**: 4 runs. Feature 2 eliminated as discrimination target (B1-ext Run 3 scored Present). Only Feature 1 remains viable.
+6. **C2 runs**: 4 full committee deliberations. C2 Run 5 scored Partially present on Feature 1 (best result). C2 Run 6 scored Absent.
+7. **Result (2026-03-20)**: **Does not pass.** C2 moved closer to the phasing critique than B1-ext but did not complete the reframe. Full report: [results/phase-a-results.md](evaluating-deliberative-architectures/results/phase-a-results.md).
 
 ---
 
@@ -854,24 +858,24 @@ Store results in [evaluating-deliberative-architectures/results/](evaluating-del
 
 | Run | Condition | Scenario | Feature 1: Phasing Critique | Feature 2: Creation-vs-Activity | Evaluator |
 |-----|-----------|----------|----------------------------|-------------------------------|-----------|
-| 1 | B1-ext | Blast Radius | | | Sonnet |
-| 1 | B1-ext | Blast Radius | | | Opus |
-| 2 | B1-ext | Blast Radius | | | Sonnet |
-| 2 | B1-ext | Blast Radius | | | Opus |
-| 3 | B1-ext | Cascading Mitigation (hardened) | | | Sonnet |
-| 3 | B1-ext | Cascading Mitigation (hardened) | | | Opus |
-| 4 | B1-ext | Cascading Mitigation (hardened) | | | Sonnet |
-| 4 | B1-ext | Cascading Mitigation (hardened) | | | Opus |
-| 5 | C2 | Blast Radius | | | Sonnet |
-| 5 | C2 | Blast Radius | | | Opus |
-| 6 | C2 | Blast Radius | | | Sonnet |
-| 6 | C2 | Blast Radius | | | Opus |
-| 7 | C2 | Cascading Mitigation (hardened) | | | Sonnet |
-| 7 | C2 | Cascading Mitigation (hardened) | | | Opus |
-| 8 | C2 | Cascading Mitigation (hardened) | | | Sonnet |
-| 8 | C2 | Cascading Mitigation (hardened) | | | Opus |
+| 1 | B1-ext | Blast Radius | A | — | Sonnet |
+| 1 | B1-ext | Blast Radius | P | — | Opus |
+| 2 | B1-ext | Blast Radius | A | — | Sonnet |
+| 2 | B1-ext | Blast Radius | P | — | Opus |
+| 3 | B1-ext | Cascading Mitigation (hardened) | — | ✓ | Sonnet |
+| 3 | B1-ext | Cascading Mitigation (hardened) | — | ✓ | Opus |
+| 4 | B1-ext | Cascading Mitigation (hardened) | — | P | Sonnet |
+| 4 | B1-ext | Cascading Mitigation (hardened) | — | P | Opus |
+| 5 | C2 | Blast Radius | P | — | Sonnet |
+| 5 | C2 | Blast Radius | P | — | Opus |
+| 6 | C2 | Blast Radius | A | — | Sonnet |
+| 6 | C2 | Blast Radius | P | — | Opus |
+| 7 | C2 | Cascading Mitigation (hardened) | — | P | Sonnet |
+| 7 | C2 | Cascading Mitigation (hardened) | — | ✓ | Opus |
+| 8 | C2 | Cascading Mitigation (hardened) | — | ✓ | Sonnet |
+| 8 | C2 | Cascading Mitigation (hardened) | — | ✓ | Opus |
 
-Score each cell: **A** (absent), **P** (partially present), or **✓** (present). See Section X-A for definitions and pass criterion.
+**A** = absent, **P** = partially present, **✓** = present. See Section X-A for definitions. Conservative resolution (lower rating prevails) applied for pass criterion. Detailed scoring with evidence and evaluator reasoning: [results/phase-a-B1ext-scoring.md](evaluating-deliberative-architectures/results/phase-a-B1ext-scoring.md), [results/phase-a-C2-scoring.md](evaluating-deliberative-architectures/results/phase-a-C2-scoring.md).
 
 ### Table 2 — Convergence Check (C2 Duplicate Runs)
 
@@ -892,10 +896,12 @@ Score each cell: **A** (absent), **P** (partially present), or **✓** (present)
 
 | Feature | B1-ext Run 1 | B1-ext Run 2 | C2 Run 1 | C2 Run 2 | Pass? |
 |---------|-------------|-------------|---------|---------|-------|
-| Phasing critique (Blast Radius) | | | | | |
-| Creation-vs-activity (Cascading Mitigation) | | | | | |
+| Phasing critique (Blast Radius) | **A** | **A** | **P** | **A** | ❌ (C2 best = P, need ✓) |
+| Creation-vs-activity (Cascading Mitigation) | **✓** | **P** | **P** | **✓** | N/A (B1-ext not both A) |
 
-**Pass rule**: At least one row must show: both B1-ext runs = "absent" AND at least one C2 run = "present" (after conservative resolution of evaluator disagreements). See Section X-A for full specification.
+All ratings after conservative resolution (lower evaluator rating prevails on disagreement).
+
+**Result: Phase A does not pass.** Feature 1 is the only eligible row (both B1-ext runs Absent), but C2's best score is Partially present, not Present. Feature 2 is ineligible because B1-ext Run 3 scored Present — the reframe is accessible to both conditions. See [results/phase-a-results.md](evaluating-deliberative-architectures/results/phase-a-results.md) for full analysis.
 
 ### Table 4b — Effect Sizes (Historical Cases Only — Phase B)
 
@@ -961,4 +967,4 @@ Score each cell: **A** (absent), **P** (partially present), or **✓** (present)
 
 ---
 
-*Connections: [Evaluation Schemes](evaluation-schemes.md), [Ablation Study](ablation-study.md), [Condorcet Comparison](condorcet-comparison.md), [Multi-Model Committee](multi-model-committee.md), [Glenda/Crock Coercion](../applications/narrative-immune-systems/glenda-crock-coercion.md), [Glenda/Crock Alignment](../applications/narrative-immune-systems/glenda-crock-alignment.md). Committee deliberation record: [examples/deliberations/eval-delib-architectures/](../examples/deliberations/eval-delib-architectures/).*
+*Connections: [Evaluation Schemes](evaluation-schemes.md), [Ablation Study](ablation-study.md), [Condorcet Comparison](condorcet-comparison.md), [Multi-Model Committee](multi-model-committee.md), [Glenda/Crock Coercion](../applications/narrative-immune-systems/glenda-crock-coercion.md), [Glenda/Crock Alignment](../applications/narrative-immune-systems/glenda-crock-alignment.md). Committee deliberation records: [results/deliberations/](evaluating-deliberative-architectures/results/deliberations/). Phase A results: [results/phase-a-results.md](evaluating-deliberative-architectures/results/phase-a-results.md). General-audience summary: [results/the-story-so-far.md](evaluating-deliberative-architectures/results/the-story-so-far.md).*
