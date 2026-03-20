@@ -64,12 +64,27 @@ Complete as of 2026-03-07. All items resolved:
 - `agent/prompts/improve-repo-next-step.md` — Updated bias areas to reflect post-sprint state.
 - `agent/prompts/editorial-review.md` — Added `essays/glossary.md` to scope.
 
+### LLM-math-inquiry recording and planning (2026-03-20)
+
+- `agent/onboarding-core.md` — Added "Epistemic positions the agent must know" section (inspectability, epistemic status, LLM-math-inquiry). Epistemic caveat added to palgebra row in repository map.
+- `meta/project-state.md` — Added "Epistemic positions (recorded 2026-03-20)" section.
+- `wild/llm-mathematical-inquiry-outline.md` — New: rough research program outline (scope, methods, dependencies, relationship diagram).
+- `agent/handoff-2026-03-20-llm-math-inquiry.md` — New: handoff with placement plan for seven locations across main documents.
+
 ### Onboarding repair and cross-agent compatibility (2026-03-20)
 
 - `agent/onboarding-core.md` — Added Step 0 (repo root verification) and strengthened Step 1 (list-before-read with failure guidance). Updated compatibility model with Cowork, Cursor auto-load, and Antigravity entries.
 - `.claude/skills/handoff/SKILL.md` — Added step 6: update `meta/project-state.md` during handoff. Updated Usage section.
 - `.cursor/rules` — New file. Cursor onboarding entry point mirroring `CLAUDE.md` and `AGENTS.md`.
 - Diagnosed and fixed silent onboarding failure in Cowork where relative paths caused agents to miss handoff files when cwd ≠ repo root.
+
+## Epistemic positions (recorded 2026-03-20)
+
+Three positions recorded in `agent/onboarding-core.md` (section "Epistemic positions the agent must know"):
+
+1. **Committee inspectability vs. decision quality**: The committee's load-bearing claim is inspectable reasoning records, not superior decisions. These are independent axes; the inspectability claim holds regardless of ablation results.
+2. **Formal work is provisionally useful but untrusted**: palgebra, furry logic, and open games constructions are working hypotheses, not theorems. They need human expert review (hence the ACT outreach).
+3. **LLM-steered mathematical inquiry**: The formal work is simultaneously subject matter and test case. A rough research program outline is in `wild/llm-mathematical-inquiry-outline.md`.
 
 ## Open decisions
 
@@ -146,5 +161,5 @@ The committee's key insight (surfaced in the remediation round): **the compariso
 
 ## Docs still needing sweep
 
-- `project-state.md` itself should be updated after each sprint workstream completes. Last sweep: 2026-03-17.
+- `project-state.md` itself should be updated after each sprint workstream completes. Last sweep: 2026-03-20.
 - If this becomes stale, update this section rather than reintroducing a catch-all backlog file.

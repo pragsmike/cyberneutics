@@ -26,7 +26,7 @@ For general orientation, read `README.md`.
 |-----------|----------|--------------------------|
 | `essays/` | Theoretical foundations | Understand why the methodology works. |
 | `artifacts/` | Techniques, templates, guides | Apply the methodology in practice. |
-| `palgebra/` | Formal pipeline algebra | Write or inspect resource equations and composition rules. |
+| `palgebra/` | Formal pipeline algebra | Write or inspect resource equations and composition rules. **Epistemic status: provisionally useful but untrusted** — see "Epistemic positions" below. |
 | `applications/` | Domain analyses | See the methodology applied to a real subject area. |
 | `meta/` | Methodology evolution and project state | Understand current truths, open decisions, and validation status. |
 | `examples/` | Checked-in scenario and deliberation records | Reference example runs and historical records that stay in the repo. |
@@ -115,6 +115,20 @@ The methodology distinguishes two trust regimes:
 Older material may use "pipeline" and "bath" as synonyms for organ and bloodstream. The current terms are organ/bloodstream. "Pipeline" also appears in non-metaphorical senses (committee pipeline, fan/funnel pipeline, pipeline algebra) — those are unrelated to this distinction.
 
 For the full glossary, see `essays/glossary.md`.
+
+## Epistemic positions the agent must know
+
+### Committee value: inspectability, not (just) decision quality
+
+The committee's core value proposition is **inspectable reasoning records**, not superior decision outcomes. Solo evaluation can reach good decisions but does not reliably produce an audit trail. The deliberation transcript *is* the product, not a byproduct. This is a separate axis from whether the committee outperforms simpler approaches on decision quality (which is what the ablation study tests). Both claims matter, but they are independent — and the inspectability claim holds regardless of ablation results.
+
+### Formal work is provisionally useful but untrusted
+
+The deep mathematical analyses — palgebra, furry logic, open games translation — are **provisionally useful but untrusted** until a human expert evaluates them. LLM-generated mathematics should not be treated as established results. This connects directly to the ACT outreach: one reason to engage the Cybercat community is to get qualified eyes on whether the categorical constructions actually work. The formal outputs are working hypotheses, not theorems. Do not cite them as proven; do cite them as structurally useful for organizing thinking.
+
+### LLM-steered mathematical inquiry as a research program
+
+The formal work is simultaneously **subject matter and test case** for the methodology. We are using the cyberneutics framework to push LLMs into doing real mathematics, which means the palgebra and furry logic analyses are not just categorical theory — they are empirical data about how well LLM pipelines can do mathematics when harnessed through structured deliberation. The interesting questions are: How do we steer LLM pipelines to do reliable mathematics? How do we know when they have? What does the calibration register need to track to support this? What is the role of human expert verification in the loop? This is distinct from both the metacognition research program (SDT calibration) and the ablation study (does the committee help?). It sits at the meta-level: the epistemics of LLM-assisted formal reasoning. See `wild/` for a rough outline of this program.
 
 ## Working style
 
