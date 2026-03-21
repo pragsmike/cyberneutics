@@ -184,5 +184,5 @@ The committee's key insight (surfaced in the remediation round): **the compariso
 
 ## Docs still needing sweep
 
-- `project-state.md` itself should be updated after each sprint workstream completes. Last sweep: 2026-03-20.
+- `project-state.md` itself should be updated after each sprint workstream completes. Last sweep: 2026-03-21.
 - If this becomes stale, update this section rather than reintroducing a catch-all backlog file.
