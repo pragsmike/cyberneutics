@@ -85,6 +85,15 @@ Complete as of 2026-03-07. All items resolved:
 - **`wild/archive/` created**: Four dormant wild topics moved to `wild/archive/`: residuality-theory, harness-engineering, neo-cybernetics, software-factories. `wild/README.md` updated.
 - **Onboarding updated**: Step 4 now covers both `agent/archive/` and `wild/archive/`. Wild detail section lists the archive directory.
 
+### Repo trimming pass 2 (2026-03-20)
+
+- **`bradley_thesis.pdf` deleted** (8 MB): publicly available thesis; citation retained in research survey.
+- **`wild/subagent-personas-for-debate/` archived**: moved to `wild/archive/` (was marked SUPERSEDED).
+- **`cowork-plugin/` removed**: superseded by native `.claude/skills/` structure. Cowork Plugin section removed from `README.md`.
+- **39 archived handoffs digested**: replaced with `agent/archive/handoff-digest-2026-01-to-03.md`. Active handoffs (03-07c through 03-20) retained.
+- **Pask-mesh-fitting research consolidated**: 7 short research notes merged into `research/research-survey.md`; tractability analysis kept separate.
+- **Deferred**: Essay 07 (~30% redundant with 01/05/06 per editorial review) flagged for future editorial trim.
+
 ## Epistemic positions (recorded 2026-03-20)
 
 Three positions recorded in `agent/onboarding-core.md` (section "Epistemic positions the agent must know"):
@@ -96,7 +105,6 @@ Three positions recorded in `agent/onboarding-core.md` (section "Epistemic posit
 ## Open decisions
 
 - Whether to record rubric scores as persistent metadata beyond the current review artifacts.
-- Whether the cowork plugin should ship under MIT, and whether its runtime behavior needs additional validation before stronger claims are made.
 - Whether `wild/potential-to-sense/` should be promoted to `essays/` (polished draft, strong connections to existing theory).
 - Whether to add OpenCode to the multi-model committee research program as a Tier 2 platform candidate (per contributor issue #6).
 - Whether multimodal inputs (images, diagrams) should be explored as a new research direction (per contributor issue #11).
