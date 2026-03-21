@@ -30,7 +30,7 @@ To date, the documented approach to solving this has been almost **exclusively A
 *   **The Problem:** This is fully programmatic and decoupled from AI coding agents (like Cowork, Antigravity, or Cline). It relies on fixed API keys and deterministic `for` loops, rather than autonomous agents deciding when to speak.
 
 ## 2. The Cowork Plugin Attempt: Forced Hub-and-Spoke
-The recent attempt to move this out of Python scripts and into an agent ecosystem lives in the [cowork-plugin/](../../cowork-plugin/) directory built on 2026-02-24.
+The recent attempt to move this out of Python scripts and into an agent ecosystem was built as a `cowork-plugin/` directory on 2026-02-24 (removed 2026-03-20; superseded by native `.claude/skills/` structure).
 
 **The Strategy:**
 The plugin attempted to instantiate Maya, Frankie, Joe, Vic, and Tammy as distinct Claude Code "subagents" (`agents/maya.md`, etc.).

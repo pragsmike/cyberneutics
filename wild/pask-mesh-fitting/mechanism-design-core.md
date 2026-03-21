@@ -152,14 +152,7 @@ For adversarial detection, variance is a signal: engineered text that maintains 
 
 ## 2. Research Synthesis
 
-This architectural design synthesizes several distinct fields of mathematical and computational research. The deep-dive analyses for each theoretical pillar can be found in the `research/` directory:
-
-*   **[Knowledge Graph Embeddings](research/knowledge-graph-embeddings.md)**: Using TransE and RotatE for geometric consistency checking.
-*   **[Sheaf Theory and Consistency Checking](research/sheaf-theory-consistency.md)**: Using sheaf cohomology and the Sheaf Laplacian to detect topological obstructions.
-*   **[LLM-Based Knowledge Graph Extraction](research/llm-kg-extraction.md)**: Evaluating the reliability, schema adherence, and adversarial robustness of the extraction fan.
-*   **[Topological Data Analysis](research/topological-data-analysis.md)**: Alternative structural comparison using persistent homology.
-*   **[Graph Matching and Subgraph Embedding](research/graph-matching.md)**: Neural approaches to typed subgraph homomorphism.
-*   **[Adjacent Frameworks](research/adjacent-frameworks.md)**: Relational Message Passing, Hypergraph Neural Networks, and Ologs.
+This architectural design synthesizes several distinct fields of mathematical and computational research. The deep-dive analyses for each theoretical pillar are consolidated in the [research survey](research/research-survey.md) (knowledge graph embeddings, sheaf theory, LLM-based extraction, topological data analysis, graph matching, quantum probability, and adjacent frameworks). For tractability analysis and validation experiments, see [tractability and risks](research/tractability-and-risks.md).
 
 ---
 
