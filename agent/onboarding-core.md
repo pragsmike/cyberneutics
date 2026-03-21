@@ -18,7 +18,7 @@ For general orientation, read `README.md`.
 1. List the files in `agent/` and read the most recent `handoff-[YYYY-MM-DD]*.md` (by date in the filename). You should see at least one handoff file. If you see none, recheck your path resolution per step 0 — do not assume they have been archived.
 2. Read `meta/project-state.md` for current architecture truths and open decisions.
 3. If `/committee`, `/scenarios`, or `/probe` is relevant, check the resolved situations root for prior runs on related topics before starting a new one.
-4. Do not search `agent/archive/` during onboarding. It is historical only. Use it only when the task explicitly calls for provenance or historical reconstruction.
+4. Do not search archive directories during onboarding — they are historical only. This includes `agent/archive/` and `wild/archive/`. Use them only when the task explicitly calls for provenance or historical reconstruction.
 
 ## Repository map
 
@@ -45,12 +45,13 @@ For general orientation, read `README.md`.
 - `scenario-roster.md`: scenario-generation roster
 - `prompts/`: reusable prompts for repo maintenance and research
 - `rubrics/`: repo-review rubrics and evaluation criteria
-- `archive/`: historical only; excluded from onboarding unless explicitly needed
+- `archive/`: historical only; excluded from onboarding unless explicitly needed (see step 4 above)
 
 ### `wild/` in more detail
 
 - `diary/`: field notes and idea-connection sketches; the most exploratory material in the repo
-- Topic directories (e.g. `residuality-theory/`, `pask-mesh-fitting/`): incoming ideas being tamed
+- Topic directories (e.g. `committee-games/`, `pask-mesh-fitting/`): incoming ideas being tamed
+- `archive/`: dormant topics (historical only; excluded from onboarding unless explicitly needed)
 
 ### `examples/` in more detail
 

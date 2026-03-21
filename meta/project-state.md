@@ -12,7 +12,7 @@ This document is the canonical current-state reference for repo structure, compa
 - Claude and Cursor command discovery is handled by thin wrappers in `.claude/commands/` and `.cursor/commands/`.
 - Live outputs belong in external situation directories resolved via `--situation`, `.claude/cyberneutics-config.yaml`, or `~/situations/<topic-slug>/`.
 - Checked-in run records in this repo are examples or historical records. They are not live runtime outputs.
-- `agent/archive/` is historical only and excluded from onboarding unless provenance is explicitly requested.
+- Archive directories (`agent/archive/`, `wild/archive/`) are historical only and excluded from onboarding unless provenance is explicitly requested.
 - When adding cross-references in README files, use markdown links, not backtick paths (convention established 2026-03-07).
 
 ## Compatibility migration status
@@ -78,6 +78,13 @@ Complete as of 2026-03-07. All items resolved:
 - `.cursor/rules` — New file. Cursor onboarding entry point mirroring `CLAUDE.md` and `AGENTS.md`.
 - Diagnosed and fixed silent onboarding failure in Cowork where relative paths caused agents to miss handoff files when cwd ≠ repo root.
 
+### Repo trimming and archive reorganization (2026-03-20)
+
+- **Examples trimmed**: Reduced from 14 deliberation + 3 scenario directories to 5 deliberation + 1 scenario. Kept representative set covering distinct deliberation types: `is-author-crackpot`, `is-author-crackpot-revisited` (mandated), `methodology-adoption-strategy` (full-pipeline worked example), `eval-delib-architectures` (protocol evaluation with remediation cycles), `soft-type-extension` (extended feedback loop). Scenario: `methodology-adoption-strategy` (paired with kept deliberation).
+- **Black-swan references fixed**: Four files updated to point from `examples/deliberations/black-swan-*` to `research-programs/evaluating-deliberative-architectures/results/deliberations/black-swan-*` (the canonical location after the example copies were removed).
+- **`wild/archive/` created**: Four dormant wild topics moved to `wild/archive/`: residuality-theory, harness-engineering, neo-cybernetics, software-factories. `wild/README.md` updated.
+- **Onboarding updated**: Step 4 now covers both `agent/archive/` and `wild/archive/`. Wild detail section lists the archive directory.
+
 ## Epistemic positions (recorded 2026-03-20)
 
 Three positions recorded in `agent/onboarding-core.md` (section "Epistemic positions the agent must know"):
@@ -132,7 +139,7 @@ Sprint status: **Complete**. Bruner edits 2/5/8 verified applied (2026-03-16). R
 **Results**: `research-programs/evaluating-deliberative-architectures/results/`
 **Phase A report**: `results/phase-a-results.md`
 **Prompt**: `agent/prompts/black-swan-first-run.md` (steps annotated with completion status)
-**Deliberation records**: `research-programs/evaluating-deliberative-architectures/results/deliberations/` (also mirrored in `examples/deliberations/`)
+**Deliberation records**: `research-programs/evaluating-deliberative-architectures/results/deliberations/`
 
 - Pre-Gate 1 (contamination probes): ✅ Complete — all 3 historical case types pass.
 - Pre-Gate 2 (scenario difficulty pilot): ✅ Complete — scoring reliable (10/10 agreement), but scenarios are easier than expected for frontier LLMs (only 1 of 5 at B1 ≤ 1). Two structural features were missed by both conditions, and the Deliberation-Neutral scenario discriminated in the expected inverse direction. The externally-sourced scenario (Intel FDIV) was recognized and needs replacement.

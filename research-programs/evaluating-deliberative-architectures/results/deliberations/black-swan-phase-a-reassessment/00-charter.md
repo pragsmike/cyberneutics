@@ -47,4 +47,4 @@ The committee is reconvened per the reassessment trigger in the 2026-03-16 resol
 - Replacement scenario construction: `results/replacement-scenario-construction.md`
 - Hardened scenarios: `results/glenda-crock-hardened.md`, `results/cascading-mitigation-hardened.md`
 - Original Pre-Gate 2: `results/pre-gate-2-scenario-difficulty-pilot.md`
-- Original resolution: `examples/deliberations/black-swan-phase-a/03-resolution.md`
+- Original resolution: `research-programs/evaluating-deliberative-architectures/results/deliberations/black-swan-phase-a/03-resolution.md`

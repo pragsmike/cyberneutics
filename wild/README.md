@@ -14,19 +14,15 @@ The [diary/](diary/) directory holds field notes and idea-connection sketches fr
 - **[LLM-Mathematical-Inquiry Outline](llm-mathematical-inquiry-outline.md)** — *DRAFT* — Rough outline for a research program on the epistemics of LLM-assisted formal reasoning: can LLM pipelines do reliable mathematics under structured guidance, and how would we know? Scope, method candidates, dependencies, and relationship to metacognition and ablation programs. Awaiting mg review before promotion to `research-programs/`.
 - **[Committee Games](committee-games/)** — *ACTIVE* — Translation of the adversarial committee into compositional game theory (open games). Bridge document for the ACT / Cybercat community. Covers strategic structure, propensity-as-selection-function, rubric design as mechanism design, and the fan/funnel as composed open games.
 - **[Potential to Sense](potential-to-sense/)** — *ACTIVE* — Essay arguing that meaning in LLM interactions is co-produced in conversation rather than stored or extracted. Develops the claim through distributional semantics, Pask's conversation theory, von Foerster's eigenforms, and a cybernetic control-loop model. Also contains a working document on Pask's Colloquy of Mobiles (1968) as machine-machine conversation, the chameleon-mirror problem for multi-agent LLM design, and bisimulation as the frame for evaluating committee propensities.
-- **[Residuality Theory](residuality-theory/)** — *DORMANT* — Barry O'Reilly's architecture philosophy — residues as what survives transformation — mapped onto the cyberneutics pipeline. Partially integrated: architectural walks → Probe, residues vs. eigenforms, criticality → survival constraint.
 - **[Subagent Personas for Debate](subagent-personas-for-debate/)** — *SUPERSEDED* — Prior art and design space for multi-persona LLM deliberation architectures.
 
 ### Adjacent Domains
 
 - **[Communicating with Absent Parties](communicating-absent-parties/)** — *ACTIVE* — Synthesis of a 40-page deep research report on communication when one party is absent, unreachable, or non-responsive. Covers eight domains (nuclear semiotics, Pask CT, decipherment, Berea, SETI, information cascades, hermeneutics, biosemiotics) unified by the absent-party problem. Maps onto organ/bloodstream, calibration register limits, fan/funnel with reconstructed perspective, furry logic, and the narrative immune systems adversarial thread. Includes bridge to Anamaria Berea's research program.
 - **[Cybernetics](cybernetics/)** — *ACTIVE* — Source material on Gordon Pask, conversation theory, von Foerster, and second-order cybernetics.
-- **[Neo-Cybernetics](neo-cybernetics/)** — *DORMANT* — The neo-cybernetics initiative and its relation to cyberneutics methodology.
-- **[Software Factories](software-factories/)** — *DORMANT* — Investigation of dark factory coding agent workflows and whether palgebra formalism can serve as a typed specification language for agent pipelines.
 
 ### Architecture and Tooling
 
-- **[Harness Engineering](harness-engineering/)** — *DORMANT* — Notes on engineering the runtime harness for cyberneutics workflows.
 - **[Palgebra Graph Visualization](palgebra-graph-ui/)** — *ACTIVE* — UX and UI concepts for visualizing computational structure (using blackbody heat encoding) rather than just task state (Kanban).
 
 ### Known Limitations and Research Directions
@@ -34,3 +30,12 @@ The [diary/](diary/) directory holds field notes and idea-connection sketches fr
 - **[Blast Radius Problem](blast-radius-problem/)** — *ACTIVE* — Exploring role-differentiation in an agent committee as a load-bearing architectural requirement for tasks with asymmetric failure modes (e.g., declarative fleet management).
 - **[Cyberneutics Director](cyberneutics-director/)** — *ACTIVE* — A conceptual deliberative routing architecture for multi-agent workflows, differentiating between task coordination and decision deliberation.
 - **[Pask Mesh Fitting](pask-mesh-fitting/)** — *ACTIVE* — Currently assessed as computationally intractable at scale ($O(N^3)$ complexity) due to reliance on topological matrix math and massive LLM extraction volume. See its [Tractability and Risks](pask-mesh-fitting/research/tractability-and-risks.md) document for details.
+
+## Archive
+
+The [archive/](archive/) directory holds dormant wild topics — mature reference material that has been partially integrated or is no longer under active development. **Do not read these directories during onboarding or routine work** — they are historical only, kept for reference if the topics are revived.
+
+- **[Residuality Theory](archive/residuality-theory/)** — Barry O'Reilly's architecture philosophy mapped onto the cyberneutics pipeline.
+- **[Harness Engineering](archive/harness-engineering/)** — Notes on engineering the runtime harness.
+- **[Neo-Cybernetics](archive/neo-cybernetics/)** — The neo-cybernetics initiative and its relation to cyberneutics methodology.
+- **[Software Factories](archive/software-factories/)** — Dark factory workflows and palgebra as typed specification language.

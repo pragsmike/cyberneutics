@@ -24,7 +24,7 @@ This is a **durable, multi-session** execution plan for the Black Swan Hindsight
 ## Reference documents
 
 - Protocol: `research-programs/evaluating-deliberative-architectures.md`
-- Resolution: `examples/deliberations/black-swan-phase-a/03-resolution.md`
+- Resolution: `research-programs/evaluating-deliberative-architectures/results/deliberations/black-swan-phase-a/03-resolution.md`
 - Pre-Gate 2 results: `research-programs/evaluating-deliberative-architectures/results/pre-gate-2-scenario-difficulty-pilot.md`
 - Story-so-far summary: `research-programs/evaluating-deliberative-architectures/results/the-story-so-far.md`
 

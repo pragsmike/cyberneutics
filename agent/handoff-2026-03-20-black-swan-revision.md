@@ -106,7 +106,7 @@ Per the resolution's implementation plan (user ratified):
 
 ## Reassessment deliberation (later in same session)
 
-After the reassessment trigger fired, the committee was reconvened. Full deliberation record: `research-programs/evaluating-deliberative-architectures/results/deliberations/black-swan-phase-a-reassessment/` (00-charter through 04-evaluation). Also available at the original location `examples/deliberations/black-swan-phase-a-reassessment/`.
+After the reassessment trigger fired, the committee was reconvened. Full deliberation record: `research-programs/evaluating-deliberative-architectures/results/deliberations/black-swan-phase-a-reassessment/` (00-charter through 04-evaluation).
 
 **Decision**: Pivot Phase A from "Protocol Calibration" to **Targeted Reframing Probe** (Option C, unanimous).
 
@@ -126,11 +126,11 @@ After the reassessment trigger fired, the committee was reconvened. Full deliber
 
 | File | Purpose |
 |------|---------|
-| `examples/deliberations/black-swan-phase-a-reassessment/00-charter.md` | Charter with context, success criteria, exit conditions |
-| `examples/deliberations/black-swan-phase-a-reassessment/01-roster.md` | Standard 5-member committee roster |
-| `examples/deliberations/black-swan-phase-a-reassessment/02-deliberation.md` | Full deliberation transcript (opening statements + Round 2) |
-| `examples/deliberations/black-swan-phase-a-reassessment/03-resolution.md` | Formal resolution with YAML frontmatter, run plan, pass criterion |
-| `examples/deliberations/black-swan-phase-a-reassessment/04-evaluation.md` | Independent evaluation (13.5/15) |
+| `research-programs/evaluating-deliberative-architectures/results/deliberations/black-swan-phase-a-reassessment/00-charter.md` | Charter with context, success criteria, exit conditions |
+| `research-programs/evaluating-deliberative-architectures/results/deliberations/black-swan-phase-a-reassessment/01-roster.md` | Standard 5-member committee roster |
+| `research-programs/evaluating-deliberative-architectures/results/deliberations/black-swan-phase-a-reassessment/02-deliberation.md` | Full deliberation transcript (opening statements + Round 2) |
+| `research-programs/evaluating-deliberative-architectures/results/deliberations/black-swan-phase-a-reassessment/03-resolution.md` | Formal resolution with YAML frontmatter, run plan, pass criterion |
+| `research-programs/evaluating-deliberative-architectures/results/deliberations/black-swan-phase-a-reassessment/04-evaluation.md` | Independent evaluation (13.5/15) |
 
 ---
 
