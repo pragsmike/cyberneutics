@@ -100,6 +100,10 @@ Complete as of 2026-03-07. All items resolved:
 - **Palgebra architecture docs revised**: §2d (closure/self-reference) and §2e (morphisms as texts) added to `categorical-structures.md`. Terminology note disambiguating SWE vs. Kelly senses of "enrichment" added to §2b. Cross-references planted in `soft-type-theory.md`, `decorated-texts.md`, `reference.md`, `README.md`. "Self-applicable" entry added to key-ideas list.
 - **Prompts archived**: `cowork-merge-bradley-references.md` and `cowork-revise-architecture-docs.md` moved to `agent/archive/`.
 
+### Fuzzy type theory investigation (2026-03-22)
+
+- **`wild/fuzzy-type-theory/north-cyberneutics-comparison.md`** — NEW: combined report comparing North's fuzzy type theory, Mulder-North-Péroux "Measuring Data Types" paper, and cyberneutics soft type / furry logic system. Conclusion: furry logic and North's system are sibling constructions sharing enriched-category-over-ordered-monoid machinery, diverging at the application layer. Key finding: measuring coalgebras provide a formal model for rubric scoring (degree of conformance as enrichment data). Adoption triage: acknowledge North as prior art (now), investigate Set^M enrichment and C-inductive types as rubric-relative types (medium-term), defer dependent types (requires expert review).
+
 ## Epistemic positions (recorded 2026-03-20)
 
 Three positions recorded in `agent/onboarding-core.md` (section "Epistemic positions the agent must know"):
