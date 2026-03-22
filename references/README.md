@@ -88,17 +88,87 @@ Sources are organized by theoretical tradition. For a reading-path view (which s
 
 ## Category Theory & Formalism
 
+### Foundations and Introductions
+
 **Fong, Brendan, and David I. Spivak.** *Seven Sketches in Compositionality: An Invitation to Applied Category Theory* (2019). Cambridge University Press. — Resource theories (Chapter 2) and string diagrams for symmetric monoidal categories provide the mathematical foundation for the palgebra formalism. Cited in: [palgebra/reference.md](../palgebra/reference.md), [palgebra/decorated-texts.md](../palgebra/decorated-texts.md).
 
 **Fong, Brendan.** *The Algebra of Open and Interconnected Systems* (2016). PhD thesis, University of Oxford. — Decorated cospans for composing open systems; grounds the treatment of LLM pipelines as composable open systems. Cited in: [palgebra/reference.md](../palgebra/reference.md).
 
-**Kelly, G. Maxwell.** *Basic Concepts of Enriched Category Theory* (1982). Cambridge University Press. — The technical foundation for enrichment over confidence lattices in the palgebra. Cited in: [palgebra/reference.md](../palgebra/reference.md).
+**Kelly, G. Maxwell.** *Basic Concepts of Enriched Category Theory* (1982). Cambridge University Press. — Enrichment axioms (Ch. 1.2, eqs. 1.1–1.4), V-valued presheaves (Ch. 2.1), quantale enrichment, coends (Ch. 3.10). The technical foundation for enrichment over confidence lattices in the palgebra; the verification of enrichment axioms in [categorical-structures.md §2b](../palgebra/categorical-structures.md) follows Kelly's Definition 1.2 directly. Cited in: [palgebra/reference.md](../palgebra/reference.md), [palgebra/categorical-structures.md](../palgebra/categorical-structures.md).
 
 **Baez, John, and Mike Stay.** "Physics, Topology, Logic and Computation: A Rosetta Stone." In *New Structures for Physics*, ed. B. Coecke (2011). Springer. — String diagrams as a unified language across physics, logic, and computation. Cited in: [palgebra/README.md](../palgebra/README.md).
 
 **Lawvere, F. William, and Stephen Schanuel.** *Conceptual Mathematics: A First Introduction to Categories* (1997). Cambridge University Press. — Accessible introduction to category theory emphasizing conceptual over technical; recommended entry point for the palgebra formalism. Cited in: [Deleuzian Foundations](../essays/06-deleuze-difference-repetition.md).
 
 **Spivak, David I.** *Category Theory for the Sciences* (2014). MIT Press. — Applications-focused introduction to category theory; bridges formal machinery and scientific domains. Cited in: [Deleuzian Foundations](../essays/06-deleuze-difference-repetition.md).
+
+**Spivak, David I.** "The operad of wiring diagrams." arXiv:1305.0297 (2013). — Operads for multi-input/output system composition; provides the algebraic structure behind wiring diagram composition in the palgebra. Cited in: [palgebra/reference.md](../palgebra/reference.md).
+
+### Language, Enrichment, and Magnitude
+
+These papers trace the arc from Tai-Danae Bradley's thesis through enriched-category language modeling to the magnitude result, with direct connections to the cyberneutics soft type system and pipeline algebra. The connection is documented in [wild/diary/2026-03-22-bradley-magnitude-tropical.md](../wild/diary/2026-03-22-bradley-magnitude-tropical.md).
+
+**Bradley, Tai-Danae.** *At the Interface of Algebra and Statistics.* PhD thesis, CUNY Graduate Center, 2020. arXiv:2004.05631. — Density operators for joint probability distributions over text; partial trace recovers marginals; off-diagonal elements encode correlational structure. Foundation for the type-spoof detection idea in Pask mesh fitting. Cited in: [wild/pask-mesh-fitting/research/research-survey.md](../wild/pask-mesh-fitting/research/research-survey.md).
+
+**Bradley, Tai-Danae, Stoudenmire, E.M., and Terilla, John.** "Modeling Sequences with Quantum States: A Look Under the Hood." *Machine Learning: Science and Technology* (2020). doi:10.1088/2632-2153/ab8731. — Tensor network implementation of the density operator approach; Matrix Product States as tractable approximation addressing the exponential scaling problem. Directly relevant to tractability concerns in the Pask mesh fitting research. Cited in: [references/bradley-cyberneutics-references.md](bradley-cyberneutics-references.md).
+
+**Bradley, Tai-Danae, and Vlassopoulos, Yiannis.** "Language Modeling with Reduced Densities." *Compositionality* 3:4 (2021). doi:10.32408/compositionality-3-4. — Reduced density operators for language; eigenvectors as "concepts" extracted from statistical data. The conceptual bridge between the thesis machinery and language modeling proper. Cited in: [references/bradley-cyberneutics-references.md](bradley-cyberneutics-references.md).
+
+**Bradley, Tai-Danae, Terilla, John, and Vlassopoulos, Yiannis.** "An Enriched Category Theory of Language: From Syntax to Semantics." *La Matematica* (2022). doi:10.1007/s44007-022-00021-2. arXiv:2106.07890. — The [0,1]-enriched category of texts; Yoneda embedding as semantic representation; copresheaf category as "space of meanings." Establishes the enriched-category framework for language that Bradley-Vigneaux (2025) builds on. Direct structural parallel to the cyberneutics soft type system: both are enriched presheaf constructions over different enrichment bases. Cited in: [references/bradley-cyberneutics-references.md](bradley-cyberneutics-references.md), [wild/diary/2026-03-22-bradley-magnitude-tropical.md](../wild/diary/2026-03-22-bradley-magnitude-tropical.md).
+
+**Bradley, Tai-Danae.** "Entropy as a Topological Operad Derivation." *Entropy* 23(9):1195 (2021). doi:10.3390/e23091195. — Shannon entropy characterized as a derivation of the operad of topological simplices. Background for the entropy-magnitude connection in Bradley-Vigneaux (2025). Cited in: [references/bradley-cyberneutics-references.md](bradley-cyberneutics-references.md).
+
+**Bradley, Tai-Danae, and Vigneaux, Juan Pablo.** "The Magnitude of Categories of Texts Enriched by Language Models." *Theory and Applications of Categories* 44(37):1256–1281 (2025). arXiv:2501.06662. — Constructs the [0,1]-enriched category of texts from LLM next-token probabilities; passes to generalized metric space via −ln; computes Möbius function and magnitude; magnitude function recovers Tsallis entropies whose derivative at t=1 gives Shannon entropy sum. Key connections to cyberneutics: magnitude as pipeline entropy diagnostic via calibration register; the −ln passage reveals that the cyberneutics min-lattice enrichment is already tropical; Leinster magnitude applied to LLM-generated text gives a worked example of the machinery the palgebra needs. Cited in: [references/bradley-cyberneutics-references.md](bradley-cyberneutics-references.md), [wild/diary/2026-03-22-bradley-magnitude-tropical.md](../wild/diary/2026-03-22-bradley-magnitude-tropical.md).
+
+**Bradley, Tai-Danae, Gastaldi, Juan Luis, and Terilla, John.** "The Structure of Meaning in Language: Parallel Narratives in Linear Algebra and Category Theory." *Notices of the AMS* 71(2), Feb 2024. doi:10.1090/noti2868. — Expository paper on how categorical thinking clarifies the syntax-to-semantics passage in LLMs. Useful as a register model for the "practitioner audience" layer of cyberneutics writing. Cited in: [references/bradley-cyberneutics-references.md](bradley-cyberneutics-references.md).
+
+**Bradley, Tai-Danae, Parzygnat, Arthur J., Vlasic, Andrew, and Pham, Alexander.** "Towards Structure-Preserving Quantum Encodings." *Phys. Rev. Research* 7, 041001 (2025). doi:10.1103/rph8-g15q. — Categorical perspective on classical-to-quantum data encoding. Tangentially relevant if the density operator approach to type membership is pursued. Cited in: [references/bradley-cyberneutics-references.md](bradley-cyberneutics-references.md).
+
+### Generalized Metric Spaces, Magnitude, and Tropical Geometry
+
+**Lawvere, F. William.** "Metric spaces, generalized logic, and closed categories." *Rendiconti del Seminario Matematico e Fisico di Milano* 43:135–166 (1973). — Enriched categories over [0,∞] as generalized metric spaces. The foundational insight connecting the probability-to-distance passage in Bradley-Vigneaux (2025) to the cyberneutics confidence lattice. Cited in: [palgebra/reference.md](../palgebra/reference.md), [references/bradley-cyberneutics-references.md](bradley-cyberneutics-references.md).
+
+**Leinster, Tom.** "The magnitude of metric spaces." *Documenta Mathematica* 18 (2013). — Magnitude as a numerical invariant of enriched categories; generalizes Euler characteristic. The invariant that Bradley-Vigneaux compute for the language category. Cited in: [references/bradley-cyberneutics-references.md](bradley-cyberneutics-references.md).
+
+**Leinster, Tom, and Shulman, Michael.** "Magnitude homology of enriched categories and metric spaces." *Algebraic & Geometric Topology* 21(5) (2021). arXiv:1711.00802. — Magnitude homology: the categorification of magnitude that Bradley-Vigneaux cite for their homology conjectures. Relevant if cyberneutics pursues pipeline magnitude beyond the scalar invariant. Cited in: [references/bradley-cyberneutics-references.md](bradley-cyberneutics-references.md).
+
+**Vigneaux, Juan Pablo.** "A combinatorial approach to categorical Möbius inversion and pseudoinversion." arXiv:2407.14647 (2024). — The computational method Bradley-Vigneaux use to compute magnitude. Would be needed for any actual computation of pipeline magnitude from calibration register data. Cited in: [references/bradley-cyberneutics-references.md](bradley-cyberneutics-references.md).
+
+**Willerton, Simon.** Section 4 of arXiv:2501.00416 (2025). — Short introduction to magnitude referenced by Bradley; useful as an accessible entry point to the magnitude invariant. Cited in: [references/bradley-cyberneutics-references.md](bradley-cyberneutics-references.md).
+
+**Vlassopoulos, Yiannis, and Gaubert, Stéphane.** "Tropical geometry and language models." arXiv:2405.12264 (2024). — Connects the Bradley-Terilla-Vlassopoulos enriched language category to tropical geometry; representable functors as extremal rays. Directly relevant because the cyberneutics min-lattice enrichment is already a tropical semiring structure. Cited in: [references/bradley-cyberneutics-references.md](bradley-cyberneutics-references.md), [wild/diary/2026-03-22-bradley-magnitude-tropical.md](../wild/diary/2026-03-22-bradley-magnitude-tropical.md).
+
+### Markov Categories and Categorical Probability
+
+**Fritz, Tobias.** "A synthetic approach to Markov kernels, conditional independence and theorems on sufficient statistics." *Advances in Mathematics* 370 (2020). arXiv:1908.07021. — Markov categories as the categorical framework for stochastic maps; deterministic morphisms (Def 10.1); Giry monad connection (Cor 3.2). Provides the comonoid/copy structure that the palgebra uses for catalytic inputs, and a principled treatment of deterministic vs. stochastic morphisms within one framework. The core reference for Layer 2 of the three-layer architecture. Cited in: [palgebra/reference.md](../palgebra/reference.md), [palgebra/categorical-structures.md](../palgebra/categorical-structures.md).
+
+**Cho, Kenta, and Jacobs, Bart.** "Disintegration and Bayesian inversion via string diagrams." *Mathematical Structures in Computer Science* 29(7):938–971 (2019). — Bayesian inversion in Markov categories via string diagrams. The type assignment kernel τ : Artifacts → Prob(T) as a conditional from disintegration of the joint (text, type) distribution. Cited in: [palgebra/reference.md](../palgebra/reference.md), [palgebra/soft-type-theory.md](../palgebra/soft-type-theory.md).
+
+**Perrone, Paolo.** "Markov categories and entropy." *IEEE Trans. Information Theory* 70(3):1666–1693 (2024). — Functorial entropy on Markov categories; confidence degradation as a coarse instance of Perrone's monotonicity. Connects to the Bradley-Vigneaux entropy result: both extract entropy from categorical structure, but Perrone works in the Markov category while Bradley-Vigneaux work via magnitude of the enriched category. Cited in: [palgebra/reference.md](../palgebra/reference.md).
+
+**Kock, Anders.** "Monads on symmetric monoidal closed categories." *Archiv der Mathematik* 21:1–10 (1970). — Commutative monads; prerequisite for Fritz Cor 3.2 connecting the Giry monad to Markov categories. Cited in: [palgebra/reference.md](../palgebra/reference.md).
+
+**Heunen, Chris, Kammar, Ohad, Staton, Sam, and Yang, Hongseok.** "A convenient category for higher-order probability theory." *LICS 2017*. — Quasi-Borel spaces as the ambient category for **Text**; provides the measure-theoretic foundation for the Markov category structure. Cited in: [palgebra/reference.md](../palgebra/reference.md).
+
+**Jacobs, Bart.** "Probabilities, distribution monads, and convex categories." *Theoretical Computer Science* 412(28) (2011). — Distribution monads and convex algebras; connects the Giry monad to probability-valued type membership in the soft type system. Cited in: [palgebra/reference.md](../palgebra/reference.md).
+
+### Open Games and Compositional Game Theory
+
+**Ghani, Neil, Hedges, Jules, Winschel, Viktor, and Zahn, Philipp.** "Compositional game theory." *LICS 2018*. — Open games as compositionally structured strategic interactions. Foundation for the committee-as-open-game formalization. Cited in: [palgebra/reference.md](../palgebra/reference.md), [wild/committee-games/committee-as-open-game.md](../wild/committee-games/committee-as-open-game.md).
+
+### Quantales and Enrichment Bases
+
+**Rosenthal, Kimmo I.** *Quantales and their Applications.* Pitman Research Notes 234 (1990). — Product quantales (Prop 1.2.2); used for the V₅ product quantale in the multi-dimensional scoring extension. Cited in: [palgebra/reference.md](../palgebra/reference.md).
+
+**Atkey, Robert.** "Syntax and Semantics of Quantitative Type Theory." *LICS 2018*. — Graded types and resource tracking; structural parallel to the palgebra's graded type inhabitation. Cited in: [palgebra/reference.md](../palgebra/reference.md).
+
+**Danos, Vincent, and Ehrhard, Thomas.** "Probabilistic coherence spaces as a model of higher-order probabilistic computation." *Information and Computation* 209(6):966–991 (2011). — Probabilistic coherence spaces; relevant to the measure-theoretic foundations of the soft type system. Cited in: [palgebra/reference.md](../palgebra/reference.md).
+
+---
+
+## Semiotics & Visualization
+
+**Vickers, Peter, Faith, Joe, and Rossiter, Nick.** "Understanding Visualization: A Formal Approach Using Category Theory and Semiotics." *IEEE Transactions on Visualization and Computer Graphics* 19(6):1048–1061 (2013). arXiv:1311.4376. — Connects Peircean and Saussurean semiotics to category theory via commutative diagrams; formalizes the sign-interpretation process categorically. Relevant to the cyberneutics pipeline's treatment of text as carrying both syntactic structure and semantic potential. Cited in: [wild/diary/2026-03-22-bradley-magnitude-tropical.md](../wild/diary/2026-03-22-bradley-magnitude-tropical.md).
 
 ---
 

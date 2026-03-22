@@ -146,6 +146,8 @@ matter. Evaluate reads a transcript, produces evaluation scores.
 
 Mark enrichments with `{enriches: namespace}` in the equation.
 
+Both morphism kinds are specified by text artifacts (prompt files or scripts) that are themselves objects of the pipeline — see [categorical-structures.md §2e](categorical-structures.md) for implications.
+
 ### Why the distinction matters
 
 - **Enrichment is safe to re-run** (close to idempotent when inputs are

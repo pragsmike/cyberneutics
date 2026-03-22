@@ -1,6 +1,6 @@
 # Project State
 
-Last updated: 2026-03-20
+Last updated: 2026-03-22
 
 This document is the canonical current-state reference for repo structure, compatibility truths, and live open questions. It replaces the old stale backlog-file role with a narrower, actively maintained state doc.
 
@@ -94,6 +94,12 @@ Complete as of 2026-03-07. All items resolved:
 - **Pask-mesh-fitting research consolidated**: 7 short research notes merged into `research/research-survey.md`; tractability analysis kept separate.
 - **Deferred**: Essay 07 (~30% redundant with 01/05/06 per editorial review) flagged for future editorial trim.
 
+### Bradley bibliography merge and architecture doc revisions (2026-03-22)
+
+- **Master bibliography expanded**: `references/README.md` gained 26 new entries. 11 NEW papers from the Bradley–cyberneutics conversation (density operators, enriched language categories, magnitude, tropical geometry). 14 palgebra-cited papers that were missing from the master bibliography (Fritz, Cho & Jacobs, Perrone, Kock, Heunen et al., Jacobs, Ghani et al., Spivak operad, Lawvere 1973, Leinster, Rosenthal, Atkey, Danos & Ehrhard, Bradley thesis). 1 Vickers-Faith-Rossiter semiotics paper. Kelly annotation enriched. CT&F section restructured into 7 subsections.
+- **Palgebra architecture docs revised**: §2d (closure/self-reference) and §2e (morphisms as texts) added to `categorical-structures.md`. Terminology note disambiguating SWE vs. Kelly senses of "enrichment" added to §2b. Cross-references planted in `soft-type-theory.md`, `decorated-texts.md`, `reference.md`, `README.md`. "Self-applicable" entry added to key-ideas list.
+- **Prompts archived**: `cowork-merge-bradley-references.md` and `cowork-revise-architecture-docs.md` moved to `agent/archive/`.
+
 ## Epistemic positions (recorded 2026-03-20)
 
 Three positions recorded in `agent/onboarding-core.md` (section "Epistemic positions the agent must know"):
@@ -184,5 +190,5 @@ The committee's key insight (surfaced in the remediation round): **the compariso
 
 ## Docs still needing sweep
 
-- `project-state.md` itself should be updated after each sprint workstream completes. Last sweep: 2026-03-21.
+- `project-state.md` itself should be updated after each sprint workstream completes. Last sweep: 2026-03-22.
 - If this becomes stale, update this section rather than reintroducing a catch-all backlog file.

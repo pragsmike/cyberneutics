@@ -378,6 +378,8 @@ clipboard (enrichment). The traveler accompanies the workpiece through
 the shop floor. At the end of the line, the traveler is the proof that
 the workpiece was built correctly.
 
+Both kinds of morphism are *specified by texts* — prompt files or scripts — which are themselves decorated texts in the pipeline. The specification of a transformation is an object of the same category as the transformation's input and output. This means pipeline specifications are auditable by the same machinery that audits pipeline outputs: a prompt file has a type profile, carries provenance, and can be scored against a rubric. No separate verification framework is needed. See [categorical-structures.md §2e](categorical-structures.md) for the categorical perspective.
+
 ## Pipeline composition laws
 
 Having distinguished these two morphism types, we can now state the laws

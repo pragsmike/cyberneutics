@@ -94,6 +94,8 @@ only accumulate. Content transforms.
 diagrams (visual topology), decorated artifact files (implementation).
 Given any one, you can derive the others.
 
+**Self-applicable.** Morphisms are specified by texts (prompts, scripts) that are themselves pipeline objects with type profiles. The pipeline can audit its own specifications. See [categorical-structures.md §2d–§2e](categorical-structures.md).
+
 ## Theoretical roots
 
 The formalism draws on:

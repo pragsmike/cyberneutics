@@ -364,6 +364,8 @@ The Markov category structure (§2a) handles the stochastic composition story.
 The *enrichment* handles the confidence-tracking story. These are compatible
 layers: **Text** is a Markov category enriched over a confidence lattice.
 
+**Terminology note.** "Enrichment" is used in two senses in this repository. In the pipeline architecture ([reference.md](reference.md), [decorated-texts.md](decorated-texts.md)), an *enrichment morphism* is a pipeline stage that updates metadata without changing the payload text — the enterprise-architecture sense. In category theory (Kelly, 1982), an *enriched category* replaces hom-sets with hom-objects valued in a monoidal category — attaching quantitative data to the arrows themselves. Both senses are active here. The SWE enrichment morphisms are operations that update the presheaf layer (object decoration). The Kelly enrichment is the confidence structure on hom-objects (arrow decoration). Section 2d explains how they relate.
+
 ### The lattice
 
 The enrichment base is:
@@ -557,6 +559,30 @@ Layer 1 (enrichments, structural transformations, injections) are the ones
 where the full universal properties hold. The pipeline's bookkeeping —
 scoring, gating, tagging, provenance — is exact. The stochasticity lives
 in the content-generating operations, which is exactly where it belongs.
+
+---
+
+## 2d. Closure and self-reference
+
+**Text** is a *closed* category — its hom-objects are themselves texts. A calibration record for the Deliberate morphism is an artifact in **Text**. A prompt file specifying a scoring rubric is an artifact in **Text**. The objects that describe morphisms live in the same category as the objects those morphisms act on.
+
+This has a structural consequence that connects the enrichment layer (§2b) to the presheaf layer ([soft-type-theory.md](soft-type-theory.md)). Because hom-objects are objects, the presheaf machinery applies to them: a calibration record has a type profile — it inhabits the "calibration-record" type to some degree, scored by a rubric. The Kelly enrichment value `Hom(A, B) = Medium` is a *summary statistic* derived from the presheaf evaluation of the hom-object that lives at Hom(A, B). The three-element lattice V is a coarsening of the richer V₅-valued presheaf data on that calibration record.
+
+This means the two senses of "enrichment" flagged in the terminology note (§2b) are not independent stories but one story at different resolutions. The SWE enrichment morphisms update the presheaf layer on objects. The Kelly enrichment on arrows is the presheaf layer applied to hom-objects and then coarsened. The presheaf construction is the common root.
+
+The self-referential loop this creates is what makes the calibration register a viable System 3* audit channel rather than an external oracle: calibration records are auditable by the same machinery that audits pipeline outputs. The recursion stabilises at the eigenform — when scoring the scoring produces the same result as scoring alone. See §9 for the Probe as an empirical eigenform test.
+
+---
+
+## 2e. Morphisms as texts
+
+Every morphism in the pipeline is *specified by a text*. A prompt file is a text that specifies a stochastic morphism (Layer 2). A scoring script is a text that specifies a deterministic morphism (Layer 1 / **Text**_det). Both are objects of **Text**. Both have type profiles.
+
+This maps exactly onto Fritz's deterministic/stochastic partition (§2a): prompts are Markov kernels whose output depends on both the input and the LLM's sampling; scripts are deterministic morphisms whose output is a function of the input alone. The specification medium is the same — a text file — but the morphism class differs.
+
+The engineering payoff is that no separate metalanguage is needed for pipeline specification. The pipeline description *is* pipeline data. A prompt file that specifies DraftCharter is an artifact of type `prompt` that can be scored against a prompt rubric, tracked in the provenance chain, and audited by the committee. Verification — comparing a specification against its output — is itself a morphism in **Text**, and the evaluation of that comparison is a presheaf value. Every modification to the pipeline is an artifact with a type profile, subject to the same audit machinery as the artifacts the pipeline produces.
+
+The pipeline is self-applicable in a controlled way: you can run the committee on a prompt to evaluate prompt quality. You can score the scoring rubric. The tower of self-application terminates at human gates (§8 of [reference.md](reference.md)) and eigenforms (§9), not at infinity.
 
 ---
 

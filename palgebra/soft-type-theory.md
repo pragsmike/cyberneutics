@@ -187,6 +187,10 @@ produces two transcripts with potentially different rubric scores —
 different type profiles. The distribution over type profiles is determined
 by the Markov kernel of the transformation.
 
+### Reflexivity: presheaves on hom-objects
+
+Because **Text** is closed — its hom-objects are themselves texts — the presheaf construction applies reflexively. A calibration record for a morphism f : A → B is an object of **Text** with its own type profile. The confidence value that the enrichment layer (§2b of [categorical-structures.md](categorical-structures.md)) assigns to f is a summary of this presheaf evaluation, coarsened to the three-element lattice V. This connects the presheaf layer developed here to the enrichment layer: the Kelly enrichment on arrows is the presheaf evaluation of the corresponding hom-objects, projected down to V. See [categorical-structures.md §2d](categorical-structures.md) for the full discussion.
+
 ---
 
 ## 4. The distributional extension: furry logic
