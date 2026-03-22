@@ -105,6 +105,12 @@ Complete as of 2026-03-07. All items resolved:
 - **`wild/fuzzy-type-theory/north-cyberneutics-comparison.md`** — Combined report comparing North's fuzzy type theory, Mulder-North-Péroux "Measuring Data Types" paper, and cyberneutics soft type / furry logic system. Conclusion: sibling constructions, not specialization. Key finding: measuring coalgebras as formal model for rubric scoring. Adoption triage: acknowledge North as prior art (now), investigate Set^M enrichment and C-inductive types (medium-term), defer dependent types.
 - **`wild/fuzzy-type-theory/` directory restructured**: Three files with distinct roles — `README.md` (navigation map, research question, adoption triage summary), `norths-fuzzy-type-theory.md` (standalone reference summary of North's program, rewritten from earlier report), `north-cyberneutics-comparison.md` (comparative analysis, compressed §1-§2 to avoid overlap with reference file). Old untracked `fuzzy-type-theory-report.md` deleted.
 
+### ACT review and remediation of wild/fuzzy-type-theory (2026-03-22)
+
+- **ACT-focused review completed**: `wild/fuzzy-type-theory/act-review-2026-03-22.md` — assessed shared-ancestor claim (sound), sibling-not-specialization (sound with caveats), measuring-coalgebra parallel (plausible but underspecified), magnitude connection (correctly flagged speculation). External references verified via web search.
+- **10-change remediation executed**: quantale clarification, weighted-limit fix, Markov measurability note, §5c endofunctor rewrite (flagged as open question), authorship expansion to "North et al." (3 files), Set^M prominence elevated in §1, adoption triage adjusted (Set^M moved to adopt-now, dependent types deferral strengthened), notation glossary added to README.md, forward-reference in `palgebra/soft-type-theory.md`, worked example §5d (evidence type presheaf with full arithmetic, functoriality, confidence propagation, Chapman-Kolmogorov). All verified by independent consistency check.
+- **Adoption triage updated**: "Adopt now" items now include Set^M enrichment design exploration and measuring-coalgebra research note (not yet produced). "Investigate" refocused on endofunctor existence question. "Defer" strengthened with revisit trigger for dependent types.
+
 ## Epistemic positions (recorded 2026-03-20)
 
 Three positions recorded in `agent/onboarding-core.md` (section "Epistemic positions the agent must know"):

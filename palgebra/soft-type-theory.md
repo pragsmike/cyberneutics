@@ -16,6 +16,11 @@ semantic quality, and the resulting scores determine how well an artifact
 inhabits the type. This section develops the mathematical structure behind
 that intuition.
 
+The enriched-category-over-ordered-monoid construction that underlies this
+formalization has independent prior art in North et al.'s fuzzy type theory
+program — see [wild/fuzzy-type-theory/](../../wild/fuzzy-type-theory/) for
+the comparison and adoption plan.
+
 Three questions motivate the formalisation:
 
 1. **What kind of mathematical object is a soft type?** The answer in §2 is:

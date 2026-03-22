@@ -14,7 +14,7 @@ The "Measuring Data Types" paper introduces a third angle: Sweedler measuring co
 
 ## Files in this directory
 
-- **[norths-fuzzy-type-theory.md](norths-fuzzy-type-theory.md)** — Reference summary of North's program: M-enriched categories for opinions, Set^M enrichment for proof relevance, fuzzy display map categories for dependent types. Technical detail sufficient for cross-referencing. Source links included.
+- **[norths-fuzzy-type-theory.md](norths-fuzzy-type-theory.md)** — Reference summary of the North et al. program: M-enriched categories for opinions, Set^M enrichment for proof relevance, fuzzy display map categories for dependent types. Technical detail sufficient for cross-referencing. Source links included. Credits the full collaboration (Arya, Coraglia, O'Connor, Riess, Tenório, North).
 
 - **[north-cyberneutics-comparison.md](north-cyberneutics-comparison.md)** — Comparative analysis and action plan. Shared ancestor, divergences in both directions, measuring coalgebra–rubric parallel, magnitude connections, adoption triage (adopt now / investigate / defer).
 
@@ -27,11 +27,22 @@ The "Measuring Data Types" paper introduces a third angle: Sweedler measuring co
 
 ## Adoption triage (from comparison report §6)
 
-**Adopt now:** Acknowledge North as prior art in soft-type-theory.md. Record measuring-coalgebra–rubric parallel as research note.
+**Adopt now:** Acknowledge North et al. as prior art in soft-type-theory.md. Record measuring-coalgebra–rubric parallel as research note. Produce a Set^M enrichment design exploration — a worked example comparing Set^M-enriched hom-objects to scalar enrichment for one concrete pipeline morphism.
 
-**Investigate:** Set^M enrichment for proof-relevant type profiles (multiple evaluations as structured hom-object data). C-inductive data types as rubric-relative types ((template, rubric) as C-algebra). Magnitude of measuring-enriched categories.
+**Investigate:** Whether a natural endofunctor F exists for (template, rubric) pairs, or whether soft types require a different categorical framework (sketches, essentially algebraic theories, Lawvere theories). Magnitude of measuring-enriched categories.
 
-**Defer:** North's dependent type theory (not needed for current pipeline). Formal proof that enrichment ≅ presheaf in closed categories (requires expert verification).
+**Defer:** North's dependent type theory (revisit trigger: branching pipelines where output type depends on input value). Formal proof that enrichment ≅ presheaf in closed categories (requires expert verification).
+
+## Notation
+
+| Symbol | Meaning | Used in |
+|--------|---------|---------|
+| V | Three-element lattice {Low, Medium, High} with min as tensor | soft-type-theory.md, categorical-structures.md |
+| V₅ | Product quantale [0,3]⁵ with componentwise min | soft-type-theory.md §5, worked example (§5d) |
+| M | Arbitrary ordered commutative monoid (North's general enrichment base) | norths-fuzzy-type-theory.md |
+| [0,1] | Unit interval with multiplication (North's primary example) | norths-fuzzy-type-theory.md, comparison §1 |
+| Set^M | Category of fuzzy sets over M (proof-relevant enrichment) | norths-fuzzy-type-theory.md §3, comparison §§1–2 |
+| T | Category of soft types (objects = (template, rubric) pairs) | soft-type-theory.md §2, worked example (§5d) |
 
 ## Epistemic status
 

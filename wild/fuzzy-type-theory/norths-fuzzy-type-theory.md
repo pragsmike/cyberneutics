@@ -1,6 +1,6 @@
-# North's Fuzzy Type Theory: Reference Summary
+# Fuzzy Type Theory (North et al.): Reference Summary
 
-**Purpose:** Standalone summary of Paige North's enriched-type-theory program, for cross-reference from cyberneutics documents. Not a cyberneutics document itself — see [north-cyberneutics-comparison.md](north-cyberneutics-comparison.md) for the comparative analysis.
+**Purpose:** Standalone summary of the enriched-type-theory program developed by North and collaborators, for cross-reference from cyberneutics documents. Not a cyberneutics document itself — see [north-cyberneutics-comparison.md](north-cyberneutics-comparison.md) for the comparative analysis.
 
 **Primary source:** North, "(Towards a) Fuzzy type theory," Topos Institute colloquium, 2023-02-02. Slides: https://topos.institute/events/topos-colloquium/slides/2023-02-02.pdf
 
@@ -8,7 +8,7 @@
 
 ## 1. Motivation and setting
 
-North's project builds a type theory for **opinions** — propositions that hold to intermediate degrees and may have multiple distinct reasons or pieces of evidence. The categorical program:
+North's project builds a type theory for **opinions** — propositions that hold to intermediate degrees and may have multiple distinct reasons or pieces of evidence. The program is collaborative: key contributions come from Arya, Coraglia, O'Connor, Riess, and Tenório alongside North, particularly in the ACT 2022 Adjoint School project and Coraglia's thesis (Ch. 4). This summary follows North's 2023 colloquium presentation as the most accessible single source but the underlying work is collective. The categorical program:
 
 - Replace posets (Boolean-enriched categories) with fuzzy posets: categories enriched in an ordered monoid such as [0,1] with multiplication.
 - Keep proof relevance: hom-objects should carry many arrows (reasons), not just a truth value.
@@ -34,7 +34,7 @@ A fuzzy poset is exactly an M-enriched category with at most one underlying arro
 
 Ordinary conjunction and disjunction are (co)limits. In the enriched setting, **weighted limits and colimits** are the right generalization.
 
-A weighted product of objects A, B with weights α, β ∈ M behaves like a fuzzy conjunction of "A to degree α" and "B to degree β." One can prove fuzzy modus ponens: from a fuzzy implication and a fuzzy premise weighted by α, derive a conclusion whose degree is bounded below by α.
+A weighted product of objects A, B with weights α, β ∈ M behaves like a fuzzy conjunction of "A to degree α" and "B to degree β." (More precisely, a weighted limit is defined for a weight functor W : J^op → V — see Kelly, Ch. 3.1. The scalar-weight description here is the special case where J is discrete and W assigns a single value from M to each object, a pedagogical simplification of the general construction.) One can prove fuzzy modus ponens: from a fuzzy implication and a fuzzy premise weighted by α, derive a conclusion whose degree is bounded below by α.
 
 Presheaf constructions appear naturally: functors from a discrete set of basic statements into M yield a completion under weighted colimits, whose elements are large fuzzy conjunctions ⋀_s μ(s) · s.
 

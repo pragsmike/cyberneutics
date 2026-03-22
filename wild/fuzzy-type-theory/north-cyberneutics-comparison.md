@@ -7,8 +7,8 @@ theory, the Mulder-North-Péroux "Measuring Data Types" paper
 Prompted by the question: is furry logic a variant of North's work, and does
 the measuring framework connect to Bradley's magnitude and rubric scoring?
 
-**Prerequisite:** For North's technical machinery (M-enrichment, Set^M
-enrichment, fuzzy display maps, dependent types), see
+**Prerequisite:** For the technical machinery of the North et al. program
+(M-enrichment, Set^M enrichment, fuzzy display maps, dependent types), see
 [norths-fuzzy-type-theory.md](norths-fuzzy-type-theory.md). For the
 motivation behind furry logic (multi-type texts, DL historical arc,
 measurement framing, categorical constructions), see
@@ -23,11 +23,25 @@ type membership with enriched membership over an ordered monoid M.
 
 North uses M = [0,1] with multiplication; hom-values are degrees of
 entailment. Cyberneutics uses V = ({Low, Medium, High}, min, High);
-hom-values are confidence levels. Both are commutative quantales, both are
-valid enrichment bases in the sense of Kelly (1982, Ch. 1.2), and both
+hom-values are confidence levels. Both are commutative quantales — [0,1] with the usual order, sup as
+join, and multiplication as tensor; V with the linear order
+Low < Medium < High, max as join, and min as tensor — both are valid
+enrichment bases in the sense of Kelly (1982, Ch. 1.2), and both
 produce presheaf constructions as the natural object for graded type
 assignment. The formal machinery is the same; the application domains
 diverge.
+
+The shared-ancestor framing should not obscure a significant structural
+divergence in how the two programs *escalate* from the base enrichment.
+North moves from M-enrichment to Set^M-enrichment — a jump from
+enrichment in a poset (one arrow or none per hom) to enrichment in a
+genuine category (multiple arrows per hom, each with its own degree).
+This is the proof-relevance move: multiple distinct reasons can support
+the same opinion, each with its own strength. Cyberneutics stays at the
+scalar level (one grade per hom) but makes the distributional move
+instead (type membership as a measure on type-space). These are
+orthogonal escalations from the same base, and either program could in
+principle adopt the other's.
 
 ---
 
@@ -69,6 +83,10 @@ are bimodal distributions.
 This distributional move connects to Fritz's Markov category framework:
 the type assignment τ : Artifacts → Prob(T) is a Markov kernel, and
 pipeline composition acts on type assignments via Chapman-Kolmogorov.
+(In the cyberneutics setting, both the type space T and the enrichment
+base V are finite, so τ is trivially a Markov kernel — no measurability
+subtleties arise. The Markov category machinery is used here for its
+compositional structure, not its measure-theoretic generality.)
 North's system stays at graded inhabitation of individual types and does
 not make this distributional step.
 
@@ -217,13 +235,141 @@ In the measuring framework, different coalgebras C give different notions
 of initiality for the same endofunctor. The coalgebra plays the same role
 as the rubric: it defines what counts as a good instance.
 
-This suggests that the cyberneutics soft type (template, rubric) could be
-formalized as a C-algebra where C is a measuring coalgebra derived from
-the rubric. The template defines the endofunctor (the recursive structure
-of the type); the rubric defines the measuring coalgebra (the standard
-against which conformance is assessed). This would give the soft type
-system a foundation in the same categorical framework as North's type
-theory.
+This suggests a structural echo: just as C-inductive data types generalize
+initiality via a measuring coalgebra C, a soft type might admit a parallel
+formalization where the rubric plays the role of C — defining what counts
+as a conforming instance. However, the parallel faces a fundamental gap:
+C-inductive data types require an endofunctor F (defining recursive
+structure), and the initial C-algebra is an inductive datatype
+parameterized by the measuring instrument C. Cyberneutics types are not
+recursive — a (template, rubric) pair specifies checklist-style structural
+requirements, not an inductive datatype constructor. Whether a natural
+endofunctor F exists for (template, rubric) pairs, or whether soft types
+are better modeled by a different categorical framework (e.g., sketches,
+essentially algebraic theories, or Lawvere theories), is the key open
+question this parallel raises. The structural resonance is real — both
+frameworks use enrichment to capture "degree of conformance" — but the
+specific mechanism (endofunctor algebras vs. presheaf evaluation) diverges.
+
+### 5d. Worked example: the evidence type
+
+The preceding sections describe structural parallels at the level of
+categorical machinery. This section grounds them in a concrete
+construction using a single soft type from the cyberneutics pipeline.
+
+**The type lattice T.** Define a small fragment of T as a poset (Hasse
+diagram):
+
+```
+          text
+         /    \
+    evidence  argument
+        |         |
+ scored-evidence  evaluated-argument
+```
+
+Five objects, four refinement arrows. Refinement is transitive and
+reflexive (a preorder). In T^op, the arrows reverse: text refines
+everything, scored-evidence refines evidence and text.
+
+**An artifact and its rubric evaluation.** Consider an artifact `a` — a
+paragraph of evidence submitted to a committee pipeline, containing a
+sourced claim with date and relevance assessment. The `evidence` type has
+a rubric scoring five criteria (reasoning completeness, adversarial rigor,
+assumption surfacing, evidence standards, trade-off explicitness), each on
+the 0–3 scale of V₅.
+
+Evaluating the rubric on artifact `a` yields:
+
+```
+F_a(evidence) = (2, 1, 3, 2, 2) ∈ V₅
+```
+
+This is the presheaf evaluation: F_a : T^op → V₅ sends the type
+`evidence` to the 5-vector of rubric scores. For the more general type
+`text` (which `evidence` refines), the rubric is less demanding:
+
+```
+F_a(text) = (3, 2, 3, 3, 3) ∈ V₅
+```
+
+For the more specialized type `scored-evidence` (which refines
+`evidence`), the rubric adds a requirement for explicit metadata structure
+and calibration:
+
+```
+F_a(scored-evidence) = (2, 1, 2, 2, 1) ∈ V₅
+```
+
+**Functoriality verification.** The presheaf must satisfy: if B refines A
+(i.e., there is an arrow A → B in T, hence B → A in T^op), then
+F_a(A) ≥ F_a(B) componentwise. Check:
+
+```
+F_a(text)            = (3, 2, 3, 3, 3)
+F_a(evidence)        = (2, 1, 3, 2, 2)  ≤ (3, 2, 3, 3, 3) ✓
+F_a(scored-evidence) = (2, 1, 2, 2, 1)  ≤ (2, 1, 3, 2, 2) ✓
+```
+
+Functoriality holds: more demanding rubrics produce lower (or equal)
+scores. This is a design constraint on the rubric system — adding
+requirements to a type cannot raise an artifact's grade.
+
+**Confidence propagation through a morphism.** A pipeline morphism
+`f : evidence → scored-evidence` (an enrichment operation that adds
+scoring metadata) has its own confidence vector:
+
+```
+conf(f) = (3, 2, 3, 2, 3) ∈ V₅
+```
+
+The enriched composition law gives:
+
+```
+F_{f(a)}(scored-evidence) ≤ componentwise-min(conf(f), F_a(evidence))
+                          = min((3,2,3,2,3), (2,1,3,2,2))
+                          = (2, 1, 3, 2, 2)
+```
+
+The output cannot score higher than the minimum of the morphism's
+confidence and the input's grade, on each criterion independently.
+
+**Chapman–Kolmogorov in the distributional case.** Now suppose artifact
+`a` has distributional type membership:
+
+```
+μ_a = 0.7 · δ_evidence + 0.3 · δ_argument
+```
+
+The artifact is 70% evidence, 30% argument by type weight. A pipeline
+morphism `f` with Markov kernel k_f maps each input to a distribution
+over outputs. In the finite/discrete case, this is matrix multiplication.
+If k_f maps evidence-typed inputs to scored-evidence with probability 0.9
+and leaves them as evidence with probability 0.1, and maps argument-typed
+inputs to evaluated-argument with probability 0.8 and argument with 0.2:
+
+```
+μ_{f(a)}(scored-evidence)    = 0.7 × 0.9 + 0.3 × 0.0 = 0.63
+μ_{f(a)}(evidence)           = 0.7 × 0.1 + 0.3 × 0.0 = 0.07
+μ_{f(a)}(evaluated-argument) = 0.7 × 0.0 + 0.3 × 0.8 = 0.24
+μ_{f(a)}(argument)           = 0.7 × 0.0 + 0.3 × 0.2 = 0.06
+```
+
+This is the Chapman–Kolmogorov equation in the discrete case:
+μ_{f(a)}(B) = Σ_T μ_a(T) · k_f(T, B). The distributional type membership
+of the output is determined by the input's type distribution and the
+morphism's transition kernel. Associativity of this composition follows
+from associativity of matrix multiplication — the Markov category axioms
+are satisfied trivially in the finite/discrete setting.
+
+**What this example does NOT do.** The presheaf construction and Markov
+kernel composition above are fully concrete. What remains open is the
+measuring-coalgebra parallel from §5a–§5c: this example does not exhibit
+an endofunctor F or a measuring coalgebra C. The rubric evaluation
+F_a(evidence) = (2,1,3,2,2) is a presheaf value, not a coalgebra
+measurement in the Sweedler sense. Whether the presheaf construction can
+be recast as a measuring enrichment — and what endofunctor would be
+required — remains the key open question for ACT engagement.
 
 ---
 
@@ -231,24 +377,29 @@ theory.
 
 ### Adopt now (light integration)
 
-- **Terminology**: acknowledge North's fuzzy type theory as prior art in
-  the soft-type-theory.md document. The enriched-category-over-ordered-
-  monoid construction is the same; the divergence is in application.
+- **Terminology**: acknowledge North et al.'s fuzzy type theory as prior
+  art in the soft-type-theory.md document. The enriched-category-over-
+  ordered-monoid construction is the same; the divergence is in application.
 
 - **Measuring coalgebra as rubric model**: record the structural parallel
   (§5a above) as a research note. This is a potential formalization of
   what rubric scoring does, worth developing if the ACT outreach produces
   collaborators interested in the formal foundations.
 
+- **Set^M enrichment as a design exploration**: produce a worked example
+  comparing Set^M-enriched hom-objects (multiple evaluations with
+  individual degrees) to the current scalar enrichment (single aggregate
+  grade) for one concrete pipeline morphism. This is feasible without
+  expert review and would clarify whether the information-preservation
+  benefit justifies the complexity.
+
 ### Investigate (medium-term)
 
-- **Set^M enrichment for proof-relevant type profiles**: could cyberneutics
-  benefit from tracking multiple distinct evaluations as structured hom-
-  object data rather than variance samples? Worth a worked example.
-
-- **C-inductive data types as rubric-relative types** (§5c): formalize
-  (template, rubric) as C-algebra where C is a measuring coalgebra. This
-  would unify the soft type system with the measuring framework.
+- **C-inductive data types as rubric-relative types** (§5c): determine
+  whether a natural endofunctor F exists for (template, rubric) pairs, or
+  whether soft types require a different categorical framework (sketches,
+  essentially algebraic theories, Lawvere theories). This is the key open
+  question from the measuring-coalgebra parallel.
 
 - **Magnitude of measuring-enriched categories**: determine whether
   Leinster magnitude extends to coalgebra-enriched categories, and if so
@@ -257,10 +408,11 @@ theory.
 ### Defer (requires expert review)
 
 - **North's dependent type theory**: display maps, structural rules, Π/Σ
-  formers. Cyberneutics does not currently need dependent types. If the
-  methodology scales to nested pipelines (pipelines that generate
-  pipelines), dependent types might become relevant — the type of the
-  output depends on the value of the input. But this is speculative.
+  formers. Cyberneutics does not currently need dependent types. **Revisit
+  trigger:** if the pipeline introduces branching where the output type
+  depends on the input *value* (not just the input type), dependent types
+  become relevant. The current linear pipeline does not require this, but
+  nested pipelines (pipelines that generate pipelines) would.
 
 - **Formal proof that enrichment ≅ presheaf in closed categories**: the
   §2d closure insight (categorical-structures.md) states that Kelly
