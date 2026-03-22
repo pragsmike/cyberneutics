@@ -2,72 +2,53 @@
 
 **Date:** 2026-03-22
 **Context:** Comparison of three related programs — North et al.'s fuzzy type
-theory (Topos colloquium 2023), the Mulder-North-Péroux "Measuring Data
-Types" paper (arXiv:2405.14678, 2024), and the cyberneutics soft type /
-furry logic system — prompted by the question of whether furry logic is a
-variant or specialization of North's work, and whether the measuring
-framework connects to Bradley's magnitude and to rubric scoring.
+theory, the Mulder-North-Péroux "Measuring Data Types" paper
+(arXiv:2405.14678), and the cyberneutics soft type / furry logic system.
+Prompted by the question: is furry logic a variant of North's work, and does
+the measuring framework connect to Bradley's magnitude and rubric scoring?
+
+**Prerequisite:** For North's technical machinery (M-enrichment, Set^M
+enrichment, fuzzy display maps, dependent types), see
+[norths-fuzzy-type-theory.md](norths-fuzzy-type-theory.md). For the
+motivation behind furry logic (multi-type texts, DL historical arc,
+measurement framing, categorical constructions), see
+[wild/diary/2026-03-13-furry-logic.md](../diary/2026-03-13-furry-logic.md).
 
 ---
 
 ## 1. The shared ancestor: enriched categories over ordered monoids
 
-All three programs begin from the same categorical root. Replace Boolean
-type membership (a thing is or isn't of type A) with enriched membership
-over an ordered monoid M, so that inhabitation becomes graded.
+All three programs begin from the same categorical root: replace Boolean
+type membership with enriched membership over an ordered monoid M.
 
-North uses M = [0,1] with multiplication (fuzzy logic tradition). The
-enrichment values on hom-objects are degrees of entailment between
-propositions: hom(p, q) = 0.7 means "p entails q to degree 0.7."
-
-Cyberneutics uses V = ({Low, Medium, High}, min, High). The enrichment
-values on hom-objects are confidence levels: Hom(A, B) = Medium means
-"morphisms from type A to type B have been observed to produce outputs at
-confidence Medium."
-
-Both are commutative quantales, both are valid enrichment bases in the
-sense of Kelly (1982, Ch. 1.2), and both produce presheaf constructions
-(V-valued functors on a type category) as the natural object for graded
-type assignment. The formal machinery is the same; the application domains
+North uses M = [0,1] with multiplication; hom-values are degrees of
+entailment. Cyberneutics uses V = ({Low, Medium, High}, min, High);
+hom-values are confidence levels. Both are commutative quantales, both are
+valid enrichment bases in the sense of Kelly (1982, Ch. 1.2), and both
+produce presheaf constructions as the natural object for graded type
+assignment. The formal machinery is the same; the application domains
 diverge.
 
 ---
 
 ## 2. Where North's program goes that cyberneutics doesn't
 
-North's goal is a *type theory* — a Curry-Howard-Lambek correspondence for
-enriched categories. This means she builds:
+North builds a structural type theory: judgement forms with degree
+annotations (Γ ⊢ s : A [≥ α]), structural rules tracking degree
+propagation, proof relevance via Set^M enrichment (multiple arrows per hom,
+each with its own degree), and dependent types via fuzzy display map
+categories. See [norths-fuzzy-type-theory.md §§2–3](norths-fuzzy-type-theory.md)
+for full exposition.
 
-- **Judgement forms** with degree annotations: Γ ⊢ s : A [≥ α], meaning
-  "term s has type A in context Γ with degree at least α."
-
-- **Structural rules** (weakening, substitution) that track degree
-  propagation. The meta-theorem is that every derivable judgement
-  corresponds to a morphism in the enriched categorical model whose degree
-  meets the annotated bound.
-
-- **Proof relevance** via Set^M enrichment. Where the M-enriched picture
-  gives a single degree per hom-pair (analogous to cyberneutics' scalar
-  confidence), the Set^M-enriched picture gives a *set of arrows each with
-  its own degree*. Multiple distinct proofs of the same proposition, each
-  with a strength grade. This is richer than anything in the current
-  cyberneutics formalism.
-
-- **Dependent types** via fuzzy display map categories. Display maps are
-  arrows of degree exactly 1 (pure type dependencies with no fuzziness);
-  their stability under weighted pullbacks encodes substitution in the
-  presence of degrees. This is the machinery for families of types depending
-  on terms — a la Martin-Löf, but fuzzy.
-
-Cyberneutics has none of this structural type theory. The soft type system
-assigns graded type profiles to artifacts via presheaf evaluation, but does
-not have judgement forms, structural rules, or dependent types. It does not
-need them for pipeline composition — the three-layer architecture
-(categorical-structures.md §2a–§2c) handles composition without a proof
-theory. But the structural rules would be useful if cyberneutics wanted to
-reason about type-level guarantees across pipeline stages (e.g., "if all
-inputs have confidence ≥ Medium, the output has confidence ≥ Medium" as a
-formally derivable statement rather than an empirical observation).
+Cyberneutics has none of this. The soft type system assigns graded type
+profiles via presheaf evaluation but has no judgement forms, structural
+rules, or dependent types. It does not need them for pipeline composition —
+the three-layer architecture (categorical-structures.md §2a–§2c) handles
+composition without a proof theory. But the structural rules would be
+useful for reasoning about type-level guarantees across pipeline stages
+(e.g., "if all inputs have confidence ≥ Medium, the output has confidence
+≥ Medium" as a formally derivable statement rather than an empirical
+observation).
 
 ---
 

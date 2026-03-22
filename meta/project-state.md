@@ -102,7 +102,8 @@ Complete as of 2026-03-07. All items resolved:
 
 ### Fuzzy type theory investigation (2026-03-22)
 
-- **`wild/fuzzy-type-theory/north-cyberneutics-comparison.md`** — NEW: combined report comparing North's fuzzy type theory, Mulder-North-Péroux "Measuring Data Types" paper, and cyberneutics soft type / furry logic system. Conclusion: furry logic and North's system are sibling constructions sharing enriched-category-over-ordered-monoid machinery, diverging at the application layer. Key finding: measuring coalgebras provide a formal model for rubric scoring (degree of conformance as enrichment data). Adoption triage: acknowledge North as prior art (now), investigate Set^M enrichment and C-inductive types as rubric-relative types (medium-term), defer dependent types (requires expert review).
+- **`wild/fuzzy-type-theory/north-cyberneutics-comparison.md`** — Combined report comparing North's fuzzy type theory, Mulder-North-Péroux "Measuring Data Types" paper, and cyberneutics soft type / furry logic system. Conclusion: sibling constructions, not specialization. Key finding: measuring coalgebras as formal model for rubric scoring. Adoption triage: acknowledge North as prior art (now), investigate Set^M enrichment and C-inductive types (medium-term), defer dependent types.
+- **`wild/fuzzy-type-theory/` directory restructured**: Three files with distinct roles — `README.md` (navigation map, research question, adoption triage summary), `norths-fuzzy-type-theory.md` (standalone reference summary of North's program, rewritten from earlier report), `north-cyberneutics-comparison.md` (comparative analysis, compressed §1-§2 to avoid overlap with reference file). Old untracked `fuzzy-type-theory-report.md` deleted.
 
 ## Epistemic positions (recorded 2026-03-20)
 
