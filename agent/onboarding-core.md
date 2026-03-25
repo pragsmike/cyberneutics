@@ -2,7 +2,7 @@
 
 ## What this repo is
 
-Cyberneutics is a methodology for working with LLMs as collaborative sense-making partners. It treats LLMs as narrative engines rather than answer machines and focuses on rigorous, traceable decisions under genuine uncertainty. The repository is organized as:
+Cyberneutics is a methodology for harnessing LLMs as structured sense-making tools. It treats LLMs as narrative engines rather than answer machines and focuses on rigorous, traceable decisions under genuine uncertainty. The repository is organized as:
 
 - essays: why the methodology works
 - artifacts: how to apply it

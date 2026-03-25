@@ -15,9 +15,11 @@
 
 > Sounds like something a Rand Corporation analyst would say to avoid being understood. - Hunter S. Thompson, if he were alive
 
-**Cyberneutics** (literally, steering interpretation) is a methodology for working with AI systems as collaborative sense-making partners rather than oracles that deliver answers. It provides rigorous, traceable techniques for **making decisions under genuine uncertainty** — the kind where you can't enumerate outcomes or assign probabilities, and the act of deciding changes what you're deciding about.
+**Cyberneutics** (literally, steering interpretation) is a methodology for harnessing narrative engines — LLMs — as structured sense-making tools rather than oracles that deliver answers. It provides rigorous, traceable techniques for **making decisions under genuine uncertainty** — the kind where you can't enumerate outcomes or assign probabilities, and the act of deciding changes what you're deciding about.
 
-Large Language Models are not databases. They are not logic engines. They are **narrative generators** - storytelling machines operating through what we call "the pachinko of stored literature." This changes everything about how we should work with them.
+Large Language Models are not databases. They are not logic engines. They are **narrative generators** — storytelling machines operating through what we call "the pachinko of stored literature." This changes everything about how we should work with them.
+
+**A note on what's here and what's established.** The methodology — adversarial committees, evaluation rubrics, fan/funnel pipelines — is grounded in engineering practice: it works, it's been tested, and the reasons it works are understandable. The formal connections to category theory (palgebra, the open games translation, furry logic) are the author's attempt to understand *why* the architecture works, developed in collaboration with LLMs. That formalization is exploratory and has not been validated by domain experts. Outreach to the applied category theory community is the intended validation path. We know what we have and what we don't have yet.
 
 ## Narrative computing and narrative engineering
 

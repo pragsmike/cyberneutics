@@ -1,5 +1,7 @@
 # Communication with Absent Parties
 
+> **Epistemic status**: This document synthesizes a Perplexity deep research report with connections to the cyberneutics framework. The categorical suggestions (decorated cospans for frozen entailment meshes, functors between sender/receiver categories) are speculative and have not been developed formally or reviewed by domain experts.
+
 ## Situation
 
 Standard communication theory — Shannon, Wiener, Pask — presupposes co-present, mutually responsive interlocutors. The sender transmits, the receiver responds, errors get corrected, and shared understanding emerges through feedback. But a large and undertheorized class of real communication lacks this structure entirely. Nuclear waste warnings must persist for 10,000+ years across civilizational discontinuities. Dead scripts (Linear B, Voynich, Indus Valley) present texts whose senders cannot be interrogated. SETI confronts signals from entities that may share no cognitive architecture with the receiver. Information cascades strip the originator's identity and intent as content propagates through networks. Biological heredity transmits genetic and epigenetic messages from ancestral organisms that are structurally absent at the moment of reception. In every case, the feedback channel is severed: the sender cannot correct misinterpretation, and the receiver cannot request clarification.

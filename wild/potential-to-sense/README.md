@@ -1,6 +1,8 @@
 # From Semantic Potential to Situated Sense
 
 > **Status**: ACTIVE — Polished essay ready for immediate promotion to essays/. See [wild triage report](../../agent/archive/wild-triage-2026-03.md).
+>
+> **Epistemic status**: The essay's theoretical claims (eigenforms, pragmatic collapse, control-loop model) are developed through argument and analogy, not formal proof. Connections to categorical structures (decorated cospans, soft types) are pointers to the palgebra formalism, which is itself provisionally useful but untrusted pending expert review.
 
 An essay arguing that meaning in LLM interactions is co-produced in conversation rather than stored in model weights or extracted by prompting. The essay develops the claim through distributional semantics, Pask's conversation theory, von Foerster's eigenforms, and a cybernetic model of the human-LLM control loop.
 

@@ -409,7 +409,7 @@ But the fundamental insight is clear:
 
 Not AI assistants that think for us.
 
-**Collaborative sense-making partners that help us think better.**
+**Structured sense-making tools that help us think better.**
 
 That's the paradigm shift. That's why narrative engines change everything.
 
