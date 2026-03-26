@@ -106,6 +106,24 @@ This exploration, together with the Four Levels model in the companion diary ent
 
 ---
 
+## Addendum: Emotion blend vocabularies as scoring apparatus (2026-03-26)
+
+The negative decision above — do not attempt a rich emotional ontology for the state variables — holds. But it addresses only half the problem. The PID state variables (urgency, frustration, confidence, engagement) are engineering control variables. The orchestrator's *scoring function* — which evaluates the previous round's transcript to compute PID inputs — needs a finer diagnostic vocabulary to characterize *what emotional tone a character's output actually exhibits*.
+
+Two candidate vocabularies emerged from examining emotion blend taxonomies:
+
+**Plutchik's wheel of emotions** (1980). Eight generators (Joy, Trust, Fear, Surprise, Sadness, Disgust, Anger, Anticipation) arranged as four opposed pairs on a cyclic group. Dyads graded by distance: primary (adjacent, frequently felt — e.g. Love = Joy + Trust), secondary (2 apart, sometimes felt — e.g. Envy = Sadness + Anger), tertiary (3 apart, seldom felt — e.g. Shame = Fear + Disgust). Opposites annihilate. Intensity varies along a radial axis (annoyance → anger → rage). The structure has a Z₂ × Z₈ skeleton — considerably more algebraic than the 6sec chart below. Still not closed (the 24 dyads don't recombine), but the grading gives a way to specify how "far" a committee member's emotional blend should reach: primary dyads for natural/frequent blends, tertiary for rarer, more unstable combinations.
+
+**6sec emotion blend chart** (6seconds.org). Five generators (Joy, Sadness, Disgust, Fear, Anger) with a 5×5 symmetric blend matrix producing 25 named combinations. Self-products are intensifications (ecstasy, despair, abhorrence, terror, rage). Not closed — not even a magma. But useful as a compact reference grid for blend vocabulary and drift detection.
+
+**Role in the architecture.** These vocabularies are not state variables in the PID loop. They are part of the measurement/scoring apparatus that feeds *into* the PID. When the orchestrator scores the previous round's transcript — "was Maya's output anxious or merely cautious? Is Frankie's tone ironic or contemptuous?" — it needs discriminators finer than the four state dimensions. The blend taxonomies provide those. They also serve as calibration instruments: if a character's target operating point is "protective skepticism" (Fear × Joy in Plutchik's terms) but their output reads as "dread" (Sadness × Fear), that's detectable emotional drift.
+
+**Connection to furry logic.** Each blend genuinely inhabits both parent types simultaneously — "dread" is fully Sadness and fully Fear, not 60/40. This is exactly the soft-type situation that furry logic addresses: fuzzy logic's graded single-type membership misrepresents what's happening. See `wild/fuzzy-type-theory/`.
+
+**Prior art.** Tayari Meftah et al. (2010, 2011) formalized Plutchik algebraically as an 8-dimensional vector space (Emotica project). Semeraro et al. (2021) built PyPlutchik for corpus-level emotion annotation. Li et al. (2024, EMNLP) used Plutchik's dyad structure to improve MoE emotion classifiers. Collected references in `wild/emotional-attention-steering/references.md`.
+
+---
+
 ## Cross-references
 
 - `wild/diary/2026-03-15-mystic-narrative.md` — Houston's Four Levels model; emotional and mythic layers as pre-narrative conditioners of sense-making

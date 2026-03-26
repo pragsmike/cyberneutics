@@ -23,6 +23,10 @@ The [diary/](diary/) directory holds field notes and idea-connection sketches fr
 
 - **[Palgebra Graph Visualization](palgebra-graph-ui/)** — *ACTIVE* — UX and UI concepts for visualizing computational structure (using blackbody heat encoding) rather than just task state (Kanban).
 
+### Emotion and Attention
+
+- **[Emotional Attention Steering](emotional-attention-steering/)** — *EXPLORATORY* — Architectural design for emotional state modulation in committee deliberation via external PID control loop. Emotion blend vocabularies (Plutchik, 6sec) as scoring apparatus for transcript evaluation. Long-term design target; prerequisites: metacog instrumentation, independent agents.
+
 ### Known Limitations and Research Directions
 
 - **[Blast Radius Problem](blast-radius-problem/)** — *ACTIVE* — Exploring role-differentiation in an agent committee as a load-bearing architectural requirement for tasks with asymmetric failure modes (e.g., declarative fleet management).

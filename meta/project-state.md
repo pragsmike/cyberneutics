@@ -1,6 +1,6 @@
 # Project State
 
-Last updated: 2026-03-22
+Last updated: 2026-03-26
 
 This document is the canonical current-state reference for repo structure, compatibility truths, and live open questions. It replaces the old stale backlog-file role with a narrower, actively maintained state doc.
 
@@ -112,6 +112,12 @@ Complete as of 2026-03-07. All items resolved:
 - **`agent/onboarding-core.md`** — Added `/diary` row to Available Workflows table.
 - **`wild/diary/2026-03-26-echo-chamber-immune-organs.md`** — New diary entry: echo chambers reframed as immune organs via organ/bloodstream distinction; emotion-first vs. inference-first as thymic discrimination signal; dark shares as organ/bloodstream interface morphism; missing System 3* (calibration gap).
 - **`applications/narrative-immune-systems/references-choe-echo-chamber-studies.md`** — New: six verified studies with full citations, key findings, and cyberneutics cross-references (Simchon SDT inoculation meta-analysis, Van der Linden Instagram prebunking, Kim voter suppression, Bond 61M mobilization, CIRCLE youth sources, Civic Power IPO report).
+
+### Emotional attention steering directory (2026-03-26)
+
+- **`wild/emotional-attention-steering/`** — New directory with README.md, references.md, and 6sec-emotion-blend-chart.png. Research question: how to model emotional dynamics in committee deliberation via external PID control, and what scoring vocabulary the orchestrator needs. References cover Plutchik primary sources and algebraic formalizations, 6sec blend chart, computational emotion classification (Li et al. EMNLP 2024), and connections to furry logic.
+- **`wild/diary/2026-03-15-emotional-attention-steering.md`** — Addendum on emotion blend vocabularies as scoring apparatus: Plutchik's Z₂ × Z₈ skeleton and 6sec's 5×5 blend matrix as measurement/scoring vocabulary feeding into PID loop (distinct from PID state variables). Drift detection via blend calibration.
+- **`wild/README.md`** — Added "Emotion and Attention" subsection.
 
 ### ACT review and remediation of wild/fuzzy-type-theory (2026-03-22)
 
