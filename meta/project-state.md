@@ -105,6 +105,14 @@ Complete as of 2026-03-07. All items resolved:
 - **`wild/fuzzy-type-theory/north-cyberneutics-comparison.md`** — Combined report comparing North's fuzzy type theory, Mulder-North-Péroux "Measuring Data Types" paper, and cyberneutics soft type / furry logic system. Conclusion: sibling constructions, not specialization. Key finding: measuring coalgebras as formal model for rubric scoring. Adoption triage: acknowledge North as prior art (now), investigate Set^M enrichment and C-inductive types (medium-term), defer dependent types.
 - **`wild/fuzzy-type-theory/` directory restructured**: Three files with distinct roles — `README.md` (navigation map, research question, adoption triage summary), `norths-fuzzy-type-theory.md` (standalone reference summary of North's program, rewritten from earlier report), `north-cyberneutics-comparison.md` (comparative analysis, compressed §1-§2 to avoid overlap with reference file). Old untracked `fuzzy-type-theory-report.md` deleted.
 
+### Diary skill integration and new diary entry (2026-03-26)
+
+- **`.claude/skills/diary/SKILL.md`** — New skill for writing diary entries. Documents file conventions, document structure, public-facing privacy filters, relationship to other artifacts, and common mistakes. Format-fixed to match other skills (YAML frontmatter added).
+- **`.claude/commands/diary.md`** — New thin slash command wrapper for diary skill.
+- **`agent/onboarding-core.md`** — Added `/diary` row to Available Workflows table.
+- **`wild/diary/2026-03-26-echo-chamber-immune-organs.md`** — New diary entry: echo chambers reframed as immune organs via organ/bloodstream distinction; emotion-first vs. inference-first as thymic discrimination signal; dark shares as organ/bloodstream interface morphism; missing System 3* (calibration gap).
+- **`applications/narrative-immune-systems/references-choe-echo-chamber-studies.md`** — New: six verified studies with full citations, key findings, and cyberneutics cross-references (Simchon SDT inoculation meta-analysis, Van der Linden Instagram prebunking, Kim voter suppression, Bond 61M mobilization, CIRCLE youth sources, Civic Power IPO report).
+
 ### ACT review and remediation of wild/fuzzy-type-theory (2026-03-22)
 
 - **ACT-focused review completed**: `wild/fuzzy-type-theory/act-review-2026-03-22.md` — assessed shared-ancestor claim (sound), sibling-not-specialization (sound with caveats), measuring-coalgebra parallel (plausible but underspecified), magnitude connection (correctly flagged speculation). External references verified via web search.

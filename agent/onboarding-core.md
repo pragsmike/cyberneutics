@@ -103,6 +103,7 @@ Available workflows:
 | `/review` | `.claude/skills/review/SKILL.md` | A committee run needs independent evaluation. |
 | `/handoff` | `.claude/skills/handoff/SKILL.md` | The session is ending or continuity matters. |
 | `/string-diagram` | `.claude/skills/string-diagram/SKILL.md` | A workflow should be formalized as resource equations or Mermaid. |
+| `/diary` | `.claude/skills/diary/SKILL.md` | Writing or drafting diary entries for `wild/diary/`; or a conversation produces exploratory ideas that should be recorded. |
 
 Read the relevant `SKILL.md` before using any of these workflows.
 
