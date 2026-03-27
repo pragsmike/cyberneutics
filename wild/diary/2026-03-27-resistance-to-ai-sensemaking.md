@@ -2,7 +2,7 @@
 
 **Date:** 2026-03-27
 
-**Context:** A recent conversation with a colleague — a rigorous scientist with engineering training — surfaced a pattern worth examining: how precautionary reasoning about a charged technology can foreclose the inquiry needed to test the precautionary stance itself. The colleague holds that generative AI should be restricted to expert systems and computer vision, that the documented harms (psychosis, environmental damage, student deskilling, corporate indifference to user wellbeing) outweigh any benefits, and that further engagement with the technology is not warranted. The conversation coincided with a Guardian article (Moore, 2026) profiling cases of AI-associated psychosis and a Substack piece on AI literacy for families (Engelbrecht, 2026), both of which illuminate the pattern and its relationship to real but mislocated concerns. A companion evidence report catalogues the primary literature on AI-associated psychosis: `references/ai_psychosis_evidence_report.md`.
+**Context:** A recent conversation with a colleague — a rigorous scientist with engineering training — surfaced a pattern worth examining: how precautionary reasoning about a charged technology can foreclose the inquiry needed to test the precautionary stance itself. The colleague holds that generative AI should be restricted to expert systems and computer vision, that the documented harms (psychosis, environmental damage, student deskilling, corporate indifference to user wellbeing) outweigh any benefits, and that further engagement with the technology is not warranted. The conversation coincided with a Guardian article (Moore, 2026) profiling cases of AI-associated psychosis and a Substack piece on AI literacy for families (Engelbrecht, 2026), both of which illuminate the pattern and its relationship to real but mislocated concerns. A [companion evidence report](../../references/ai_psychosis_evidence_report.md) catalogues the primary literature on AI-associated psychosis:.
 
 ---
 
@@ -96,7 +96,7 @@ The value of the committee format here is that it forces the position that struc
 
 ### Artifacts
 
-1. Write the skeptic persona at full character-sheet depth, matching the format of `artifacts/character-propensity-reference.md`. The character should be genuinely formidable — representing the precautionary position at its strongest, with the self-sealing pattern modeled faithfully rather than caricatured.
+1. Write the skeptic persona at full character-sheet depth, matching the format of [character-propensity-reference](../../artifacts/character-propensity-reference.md). The character should be genuinely formidable — representing the precautionary position at its strongest, with the self-sealing pattern modeled faithfully rather than caricatured.
 
 2. Run a committee deliberation (standard 5-member roster + skeptic) on the question of appropriate AI engagement frameworks. The charge should be sharp enough that the committee produces genuine conflict, not diplomatic convergence.
 
