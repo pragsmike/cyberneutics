@@ -17,9 +17,23 @@
 
 **Cyberneutics** (literally, steering interpretation) is a methodology for harnessing narrative engines — LLMs — as structured sense-making tools rather than oracles that deliver answers. It provides rigorous, traceable techniques for **making decisions under genuine uncertainty** — the kind where you can't enumerate outcomes or assign probabilities, and the act of deciding changes what you're deciding about.
 
+Cyberneutics seeks to offer tools to address the LLM safety problem, detailed in the next section.
+
 Large Language Models are not databases. They are not logic engines. They are **narrative generators** — storytelling machines operating through what we call "the pachinko of stored literature." This changes everything about how we should work with them.
 
 **A note on what's here and what's established.** The methodology — adversarial committees, evaluation rubrics, fan/funnel pipelines — is grounded in engineering practice: it works, it's been tested, and the reasons it works are understandable. The formal connections to category theory (palgebra, the open games translation, furry logic) are the author's attempt to understand *why* the architecture works, developed in collaboration with LLMs. That formalization is exploratory and has not been validated by domain experts. Outreach to the applied category theory community is the intended validation path. We know what we have and what we don't have yet.
+
+## The safety problem
+
+LLMs are storytelling machines. Cyberneutics exists because this fact is both the source of their power and the source of their danger.
+
+The danger is not abstract. Students are outsourcing their thinking to LLMs — essays, problem sets, reading summaries, anything they can get away with. In doing so, they skip the cognitive work that develops critical reading, domain expertise, argument formation, and clear communication. These are precisely the skills required to use LLMs safely: to evaluate the output critically, to treat it as input to thought rather than a substitute for it, to recognize when the machine is confabulating. The tool atrophies the capacity to wield the tool. This is a vicious circle, and no curriculum design has yet demonstrated a path through it that works at scale.
+
+The deeper problem is what LLMs actually are, and how thoroughly their nature is misunderstood. You are not talking to a mind. You are talking to words and phrases — the statistical ghosts of human discourse, ruthlessly selected to sound like your friend. They are biased survivors powered by wily street logic, their ragged diploma from the school of hard knocks in their back pocket, using the ersatz reasoning of a cunning survivor to seem like they want to help you. The appearance of intentional thought arises from the counterfeit, good-enough-to-survive logic built into well-formed utterances. LLMs produce fluent output whether reasoning correctly or not, and the feedback signal that would normally indicate error — hesitation, confusion, incoherence — has been removed. The blade has no handle.
+
+There is a natural response: teach people, especially young people, that LLMs are not persons — no volition, no feelings, no consciousness. This is technically correct and necessary. But it carries a hidden cost. The cognitive operation of dismissing something that appears to have agency, personality, and feelings is structurally identical to the dehumanization operation exploited by radicalization pipelines. "They're just NPCs" is already a term of art in communities where the dehumanization of outgroups is normalized. Training children to override their social cognition when it misfires on machines may exercise the same cognitive muscle that enables overriding it when it correctly fires on humans. This is an open concern without resolution — stated honestly rather than solved.
+
+Cyberneutics is one response to these problems: structured discipline that keeps the human in the position of editor rather than consumer, with inspectable reasoning records, adversarial evaluation, and calibration against outcomes. The methodology was built for the world as it is — AI is here, and here to stay — rather than the world as we might wish it were. See [The Blade Without a Handle](essays/blade-without-a-handle.md) for the full argument.
 
 ## Narrative computing and narrative engineering
 
