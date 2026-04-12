@@ -24,6 +24,8 @@ This matters operationally. The committee pipeline never needs its characters to
 
 Deleuze held that relations are explanatory, while abstractions need to be explained. An abstraction is a shorthand for an observed pattern of relations — useful among those who share the vocabulary, obscuring for those who don't. Worse, abstraction by definition loses information, so it invites divergent reconstruction when the receiver fills in particulars from their own priors.  More interesting are the relations - the morphisms - between the particulars and they abstractions that model them.
 
+In Peircean semiotics, it's the interpretant that's most interesting - a mediating relation, a pair of opposite morphisms.
+
 This principle keeps appearing in different guises. In *Seven Sketches*, chapter 3: a database isn't the sets of data mapped from the schema category — it's the set-valued functor that does the mapping. The database *is* the morphism. A map (cartographic) is a functor from territory to representation; the art is choosing which structure to preserve and which to forget. The mathematical sense of "map" (a correspondence, a functor into a model) and the everyday sense (a representation on paper) aren't as far apart as they seem — both are structure-preserving passages from one domain to another.
 
 In every case the morphism, the passage, the mapping is the primary thing. The domain and codomain are what remain after the morphism has done its work.
