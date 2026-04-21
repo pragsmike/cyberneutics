@@ -128,8 +128,11 @@ These aren't incremental improvements. They represent a fundamentally different 
 - [Narrative immune systems](./essays/09-narrative-immune-systems.md)
 - [Decisions under uncertainty](./essays/10-decisions-under-uncertainty.md)
 - [Conversation theory](./essays/11-conversation-theory.md)
+- [From semantic potential to situated sense](./essays/12-potential-to-sense.md)
 - [Stories all the way down](./essays/stories-all-the-way-down.md)
 - [The Stochastic Imps of Happenstance](./essays/the-stochastic-imps-of-happenstance.md)
+- [The Blade Without a Handle](./essays/blade-without-a-handle.md) — safety essay on the vicious circle and the dehumanization trap
+- [The Primacy of Reasoning Artifacts](./essays/primacy-of-reasoning-artifacts.md) — why theory, model stacks, and deliberation records outlast final products
 - [Societies of Thought: From Neural Evidence to Methodological Action](./essays/societies-of-thought-synthesis.md)
 - [Narrative computing as historical progression](./essays/narrative-computing-history.md)
 - [When this methodology fails](./essays/when-methodology-fails.md)

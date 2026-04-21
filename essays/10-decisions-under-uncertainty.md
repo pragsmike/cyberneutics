@@ -124,7 +124,7 @@ Running the composed pipeline multiple times from the same premises is not a con
 
 Barry O'Reilly's residuality theory introduces the concept of the **architectural walk**: knowledge built through repeated traversal. You walk a system multiple times; each repetition differs slightly; the differences accumulate into understanding that no single pass can provide.
 
-O'Reilly roots this explicitly in Deleuze — the same philosophical ground as Essay 06. The walk is an instance of process philosophy in action: each repetition is not the same repetition, because both the walker and the path are different. This is the Deleuzian "repetition produces difference" made operational in software architecture. His three core philosophical commitments — process over substance, criticality over correctness, difference over essence — mirror the foundations of cyberneutics point for point.
+O'Reilly roots this explicitly in Deleuze — the same philosophical ground as Essay 06. The walk is an instance of process philosophy in action: each repetition is not the same repetition, because both the walker and the path are different. This is the Deleuzian "repetition produces difference" made operational in software architecture. His three core philosophical commitments — process over substance, criticality over correctness, difference over essence — mirror the foundations of cyberneutics point for point. (Residuality's full development is in [wild/residuality-theory/](../wild/residuality-theory/); bibliography and the 2021 philosophy paper are in [references/README.md §Residuality Theory](../references/README.md#residuality-theory).)
 
 The composed fan → funnel pipeline is an architectural walk through a decision space. Each run follows different lines of flight — different scenarios get generated, different arguments crystallize, different metaphors catch fire. The transcript is what the walk leaves behind.
 
@@ -210,7 +210,7 @@ The palgebra and residuality theory offer complementary views of the same pipeli
 
 A deliberation record is both a palgebra artifact chain and the residue of the committee process. These are charts on the same manifold.
 
-Pask's Conversation Theory provides a third lens at the micro-scale: each conversational move — challenge, rephrasing, teachback — is a "shock," and what remains invariant across those shocks is the residual structure of understanding. A Paskian "understanding" is a residual architecture of concepts; an O'Reilly "residue" is a Paskian understanding scaled to systems engineering. Residuality theory, conversation theory, and palgebra describe the same pattern at different scales — what survives perturbation is knowledge.
+Pask's Conversation Theory (fully introduced in [Essay 11](./11-conversation-theory.md)) provides a third lens at the micro-scale: each conversational move — challenge, rephrasing, teachback — is a "shock," and what remains invariant across those shocks is the residual structure of understanding. A Paskian "understanding" is a residual architecture of concepts; an O'Reilly "residue" is a Paskian understanding scaled to systems engineering. Residuality theory, conversation theory, and palgebra describe the same pattern at different scales — what survives perturbation is knowledge.
 
 ---
 

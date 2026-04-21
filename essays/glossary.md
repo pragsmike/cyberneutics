@@ -32,6 +32,8 @@ Quick reference for the 20 terms that recur across the essay collection. Each en
 
 **Rhizome** — A non-hierarchical knowledge topology with multiple entry points and no single root; Deleuze and Guattari's term for networks that grow by lateral connection rather than tree-structured hierarchy. Pask's entailment mesh is structurally isomorphic. ([Essay 06](./06-deleuze-difference-repetition.md); [Essay 11](./11-conversation-theory.md))
 
+**Rubric** — A scored dimensional framework applied to a decorated text: each dimension (e.g. coherence, grounding, surfacing of alternatives, blindspot coverage) produces a graded score with brief justification. Rubrics drive enrichment morphisms in the pipeline and are the "antibodies" of the narrative immune system. ([Independent Evaluation Protocols](../artifacts/independent-evaluation.md); [Evaluation Rubrics Reference](../artifacts/evaluation-rubrics-reference.md); used throughout [Essay 07](./07-bolands-narrative-engineering.md), [Essay 08](./08-from-methodology-to-formalism.md), [Essay 09](./09-narrative-immune-systems.md))
+
 **Second-order cybernetics** — The cybernetics of observing systems (von Foerster, Bateson): the observer is part of the observed system, and observation changes state. First-order cybernetics studies systems from outside; second-order recognizes there is no outside. ([Essay 04](./04-cybernetics-and-observation.md))
 
 **Situation-Gap-Bridge** — Dervin's Sense-Making model: people in *situations* encounter *gaps* (where understanding fails) and construct *bridges* (cognitive or communicative moves that allow continued navigation). The bridge changes the situation, producing new gaps. ([Essay 03](./03-sensemaking-101.md))

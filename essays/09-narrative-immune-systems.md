@@ -72,7 +72,8 @@ the generation process.
 **Predicted missing parts:**
 - **Memory cells**: After successfully identifying a type of bad text,
   the system should get better at that pattern. Currently evaluations
-  are stateless. Pask's entailment meshes suggest the shape: accumulated
+  are stateless. Pask's entailment meshes (fully introduced in
+  [Essay 11](./11-conversation-theory.md)) suggest the shape: accumulated
   evaluative judgments forming a network of mutually-supporting patterns,
   each edge strengthened by repeated encounters.
 - **Autoimmune disorders**: Over-aggressive rubrics, thresholds set

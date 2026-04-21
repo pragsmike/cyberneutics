@@ -34,6 +34,7 @@ If you want to understand why this methodology works and what problem it solves:
 2. **[From Practice to Theory: How We Got Here](./02-from-practice-to-theory.md)** (~6 min) - How operational failures led to the methodology (personal narrative)
 3. **[Stories All the Way Down](./stories-all-the-way-down.md)** (~8 min) - Why everything is narrative and what that means for AI use
 4. **[Introduction to Sense-Making](./03-sensemaking-101.md)** (~8 min) - Dervin's framework for understanding information-seeking as active construction
+5. **[The Blade Without a Handle](./blade-without-a-handle.md)** (~14 min) - Why structured discipline is the point of this methodology: the vicious circle of LLM misuse and what a response requires
 
 Ready to try it? Start with **[Start Here](../artifacts/start-here.md)** for a guided first run, or **[Quick Start Guide](../artifacts/quick-start-guide.md)** for a faster on-ramp.
 
@@ -51,6 +52,7 @@ If you want to understand the theoretical synthesis:
 8. **[Conversation Theory](./11-conversation-theory.md)** (~13 min) - Pask's micro-mechanics of understanding: teachback, entailment meshes, and conversational architecture
 9. **[Decisions Under Uncertainty](./10-decisions-under-uncertainty.md)** (~12 min) - How the duality of exploration and commitment yields rigorous decision-making
 10. **[From Semantic Potential to Situated Sense](./12-potential-to-sense.md)** (~15 min) - Why meaning in LLM interaction is co-produced, not extracted: the epistemology of pragmatic collapse and temporary eigenforms in coupled human-machine conversation
+11. **[The Primacy of Reasoning Artifacts](./primacy-of-reasoning-artifacts.md)** (~12 min) - Three-tradition convergence (Naur, NASA systems engineering, Cyberneutics) on why the reasoning behind a decision outlasts the decision itself — the epistemological justification for treating deliberation records as primary output
 
 Essays 06–08 are more technically demanding than the rest of the collection — Deleuzian philosophy (06), Boland's narrative engineering (07), and the methodology-to-formalism bridge (08) each require sustained attention. If Essay 06 feels too dense, you can safely skip to Essay 07; it's largely independent.
 
@@ -62,8 +64,9 @@ If you're not convinced this is necessary:
 
 1. **[Why Narrative Engines Change Everything](./01-why-narrative-engines-change-everything.md)** (~12 min) - The problem space
 2. **[Stories All the Way Down](./stories-all-the-way-down.md)** (~8 min) - Concrete examples of narrative in action
-3. **[The Stochastic Imps of Happenstance](./the-stochastic-imps-of-happenstance.md)** (~11 min) - Why most failures are noise, not malice, and what that means
-4. **[When This Methodology Fails](./when-methodology-fails.md)** (~23 min) - Honest engineering assessment of failure modes and scope boundaries
+3. **[The Blade Without a Handle](./blade-without-a-handle.md)** (~14 min) - The safety argument from first principles: the vicious circle and the dehumanization trap, stated as open concerns rather than solved problems
+4. **[The Stochastic Imps of Happenstance](./the-stochastic-imps-of-happenstance.md)** (~11 min) - Why most failures are noise, not malice, and what that means
+5. **[When This Methodology Fails](./when-methodology-fails.md)** (~23 min) - Honest engineering assessment of failure modes and scope boundaries
 
 ### For Formalists (The Algebra)
 
@@ -353,6 +356,14 @@ The essays in this directory establish *why* narrative engines need narrative en
 
 ## Supplementary Essays
 
+### [The Blade Without a Handle](./blade-without-a-handle.md)
+
+The honest safety argument: students outsourcing thinking to LLMs skip the cognitive work that develops critical reading, domain expertise, and judgment — the very skills needed to use LLMs safely. The vicious circle, what the machine actually is (the "statistical ghost"), why internet-safety analogies break, and the dehumanization trap: training people to override social cognition on machines may exercise the same cognitive muscle that enables overriding it on humans. Explicitly stated as "open concern without resolution." The methodology in this repository is one structured response.
+
+### [The Primacy of Reasoning Artifacts](./primacy-of-reasoning-artifacts.md)
+
+Three independent traditions (Peter Naur on programming as theory-building, NASA systems engineering on the model stack, Cyberneutics on deliberation records) converge on the same claim: the reasoning artifact — theory, model stack, deliberation record — matters more than the final product it generates. The product is disposable; the reasoning behind it is what survives disruption and lets a project be rebuilt on different foundations. Provides the epistemological justification for why this methodology treats deliberation records as the primary output.
+
 ### [Narrative Computing as Historical Progression](./narrative-computing-history.md)
 
 Deeper dive into the historical progression from numeric to symbolic to narrative computing, with detailed examples of how each paradigm shift required new methodologies and disciplines.
@@ -437,6 +448,7 @@ The [Glossary](./glossary.md) provides one-sentence definitions for 20 key terms
 | Enrichment morphism | [Essay 08](./08-from-methodology-to-formalism.md) | [Palgebra ref](../palgebra/reference.md) | Operation updating metadata while leaving content unchanged |
 | Collapse operator / human gate | [Essay 08](./08-from-methodology-to-formalism.md) | 09, 10 | Projects graded uncertainty to crisp commitment |
 | Narrative immune system | [Essay 09](./09-narrative-immune-systems.md) | 10 | Generator-discriminator architecture with graded recognition |
+| Rubric | [Evaluation Rubrics Reference](../artifacts/evaluation-rubrics-reference.md) | 07, 08, 09, 11 | Scored dimensional framework applied to decorated text (e.g. coherence, grounding, alternatives, blindspots) |
 | Fan/funnel duality | [Essay 10](./10-decisions-under-uncertainty.md) | [Palgebra ref](../palgebra/reference.md) | Fan diverges exploring; funnel converges to commitment |
 | Robert's Rules | [Artifact](../artifacts/roberts-rules-forcing-function.md) | 02, 05, 07 | Parliamentary procedure preventing premature convergence |
 
