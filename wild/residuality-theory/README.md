@@ -1,6 +1,8 @@
 # Residuality Theory
 
-> **Status**: DORMANT — Mature reference material suitable for graduation to essays/ or applications/. See [wild triage report](../../agent/archive/wild-triage-2026-03.md).
+> **Status**: ACTIVE — Reopened April 2026 after reading the 2021 philosophy paper in full; essay-13 is the current graduation target. See [wild triage report](../../agent/archive/wild-triage-2026-03.md) for the prior dormant assessment.
+>
+> - 2026-04-20: Full text of the 2021 philosophy paper now in the repository (see [references/papers/](../../references/papers/)); diary entry at [wild/diary/2026-04-20-residuality-philosophy-paper-reading.md](../diary/2026-04-20-residuality-philosophy-paper-reading.md).
 
 > "Every time I repeat the walk I notice small differences from my previous experiences, and those small differences add up to solid knowledge about this walk." — Barry O'Reilly
 
