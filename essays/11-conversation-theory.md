@@ -257,7 +257,7 @@ These aren't problems. They're directions where conversation theory suggests the
 
 ## What's Next
 
-This is the final essay in the theoretical sequence. The eleven numbered essays establish why narrative engines need narrative engineering and how four theoretical traditions — Dervin's sense-making, von Foerster's second-order cybernetics, Deleuze's difference and repetition, and Pask's conversation theory — compose into a coherent framework for collaborative sense-making with AI.
+The theoretical sequence continues in [Essay 12](./12-potential-to-sense.md), which develops the epistemology of meaning-as-conversation that the pipeline's human gates operationalize. The twelve numbered essays together establish why narrative engines need narrative engineering and how several theoretical traditions — Dervin's sense-making, von Foerster's second-order cybernetics, Deleuze's difference and repetition, Pask's conversation theory, and the distributional-semantics grounding of pragmatic collapse — compose into a coherent framework for collaborative sense-making with AI.
 
 From here:
 - **To start doing**: [Start Here](../artifacts/start-here.md) — a guided first run of the methodology, or [Quick Start Guide](../artifacts/quick-start-guide.md) for a faster on-ramp
@@ -267,6 +267,8 @@ From here:
 ---
 
 **Previous essay**: [Decisions Under Uncertainty](./10-decisions-under-uncertainty.md)—the composed pipeline that Conversation Theory provides micro-mechanics for.
+
+**Next essay**: [From Semantic Potential to Situated Sense](./12-potential-to-sense.md) — the epistemology that explains why pipeline human gates are irreducible, not merely prudent.
 
 **Related artifacts**:
 - [Adversarial Committees](../artifacts/adversarial-committees.md)—the deliberation element where teachback occurs

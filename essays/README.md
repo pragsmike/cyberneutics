@@ -22,7 +22,7 @@ The numbered essays total roughly 30,000 words. At a comfortable pace for dense 
 | Theorist (minimal) | 01, History, 02, 03, 04, 05, 06, 11, 10 | ~100 minutes |
 | Skeptic | 01, Stories, Imps, When-Fails | ~55 minutes |
 | Formalist | Palgebra refs + 08, 09, 10 | ~50 minutes (essays only; palgebra reference adds ~30 min) |
-| Full numbered sequence (01–11) | All 11 | ~120 minutes |
+| Full numbered sequence (01–12) | All 12 | ~130 minutes |
 
 ## Reading Paths
 
@@ -50,6 +50,7 @@ If you want to understand the theoretical synthesis:
 7. **[Deleuzian Foundations](./06-deleuze-difference-repetition.md)** (~12 min) - Becoming, difference, and why repetition produces novelty
 8. **[Conversation Theory](./11-conversation-theory.md)** (~13 min) - Pask's micro-mechanics of understanding: teachback, entailment meshes, and conversational architecture
 9. **[Decisions Under Uncertainty](./10-decisions-under-uncertainty.md)** (~12 min) - How the duality of exploration and commitment yields rigorous decision-making
+10. **[From Semantic Potential to Situated Sense](./12-potential-to-sense.md)** (~15 min) - Why meaning in LLM interaction is co-produced, not extracted: the epistemology of pragmatic collapse and temporary eigenforms in coupled human-machine conversation
 
 Essays 06–08 are more technically demanding than the rest of the collection — Deleuzian philosophy (06), Boland's narrative engineering (07), and the methodology-to-formalism bridge (08) each require sustained attention. If Essay 06 feels too dense, you can safely skip to Essay 07; it's largely independent.
 
@@ -311,6 +312,26 @@ The essays in this directory establish *why* narrative engines need narrative en
 - The complete four-pillar theoretical architecture: Dervin + von Foerster + Deleuze + Pask
 
 **Read this if**: You want to understand the micro-mechanics of how committee deliberation actually produces understanding, or why the cyberneutics methodology has four independent theoretical foundations that converge.
+
+---
+
+### [From Semantic Potential to Situated Sense](./12-potential-to-sense.md)
+
+**The epistemology of pragmatic collapse**: LLMs maintain structured fields of semantic potential, not stored meanings. Human participation — with its purposes, corrections, embodied associations, and stakes — is what converts potential into situated sense. Meaning is a temporary eigenform of the coupled conversation, not a property of either participant alone.
+
+**Key insight**: The unit of analysis for questions about meaning in human-LLM interaction is the interaction itself, not the model and not the user. The cybernetic control loop of prompt-proposal-feedback is where meaning actually stabilizes.
+
+**Covers**:
+- Distributional semantics and semantic potential fields
+- Concepts as latent relational structure, not stored packets
+- LLM-only discourse as exploration of state space (with attractors and degeneracies)
+- Human participation as pragmatic collapse
+- Pask, Berea, and von Foerster on meaning through recursive conversation
+- Against the container model of meaning
+- A cybernetic model of human-LLM interaction
+- Implications for AI theory, interface design, epistemology, and multi-agent systems
+
+**Read this if**: You want the theoretical grounding for why pipeline human gates are load-bearing rather than ornamental, and why LLM-only discourse drifts without them.
 
 ---
 

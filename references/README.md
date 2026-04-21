@@ -70,6 +70,22 @@ Sources are organized by theoretical tradition. For a reading-path view (which s
 
 ---
 
+## Residuality Theory
+
+**O'Reilly, Barry M.** "An Introduction to Residuality Theory: Software Design Heuristics for Complex Systems." *Procedia Computer Science* 170 (2020): 875–880. — The operational paper: incidence matrix technique, K-reduction heuristics, training/test holdout protocol. Provides the concrete method that the philosophy paper (below) grounds. Cited in: [Decisions Under Uncertainty](../essays/10-decisions-under-uncertainty.md), [Conversation Theory](../essays/11-conversation-theory.md), [wild/residuality-theory/](../wild/residuality-theory/).
+
+**O'Reilly, Barry M.** "The Philosophy of Residuality Theory." *Procedia Computer Science* 184 (2021): 809–816. — The philosophical counterpart to the 2020 introduction. Introduces *residual causality*: structure itself imposes future-destroying constraints that cannot be predicted at design time. Targets the "component metaphor" (essentialism, causalities of certainty, cybernetics, structuralism) as the philosophical commitments that produce fragile architectures. Anchors its post-structural move in Serres (via Brown 2002) and Latour rather than Deleuze. Open access under CC BY-NC-ND; archived copy at [papers/The-Philosophy-of-Residuality-Theory.pdf](papers/The-Philosophy-of-Residuality-Theory.pdf). Cited in: [wild/diary/2026-04-20-residuality-philosophy-paper-reading.md](../wild/diary/2026-04-20-residuality-philosophy-paper-reading.md), [wild/residuality-theory/](../wild/residuality-theory/).
+
+**O'Reilly, Barry M.** "Residuality and Representation: Toward a Coherent Philosophy of Software Architecture." *Procedia Computer Science* 224 (2023): 91–97. — Revised restatement of the 2021 philosophy paper, reorganized around three concepts: processuality, criticality, and difference. Expanded post-structural lineage (Kant, Deleuze, Derrida) compared to the 2021 paper's focus on Serres and Latour. Cited in: [wild/residuality-theory/](../wild/residuality-theory/).
+
+**Normand, Eric.** "Residuality Theory." Eric Normand's Newsletter (Substack), May 2024. https://ericnormand.substack.com/p/residuality-theory — Practitioner introduction with a worked example (country-based coupon banner service); the clearest pedagogical on-ramp to the operational machinery. Cited in: [wild/diary/2026-04-20-residuality-philosophy-paper-reading.md](../wild/diary/2026-04-20-residuality-philosophy-paper-reading.md).
+
+**Brown, Steven D.** "Michel Serres: Science, translation and the logic of the parasite." *Theory, Culture & Society* 19(3) (2002): 1–27. — The Serres interpretation O'Reilly (2021) cites for residuality's post-structural grounding. Serres on noise, modeling, external influence, and translation; the substantive post-structural anchor for residuality theory. Cited in: [wild/diary/2026-04-20-residuality-philosophy-paper-reading.md](../wild/diary/2026-04-20-residuality-philosophy-paper-reading.md).
+
+**Stacey, Ralph D.** *Complexity and Organizational Reality: Uncertainty and the Need to Rethink Management after the Collapse of Investment Capitalism.* 2nd ed. Routledge, 2009. — Load-bearing citation underneath O'Reilly's philosophy of residuality. The three causalities of certainty (formative, rationalist, efficient) plus adaptionist and transformative; the "dominant discourse of management" critique. Directly relevant to the Cyberneutics argument that expected-utility decision theory fails under genuine uncertainty. Cited in: [wild/diary/2026-04-20-residuality-philosophy-paper-reading.md](../wild/diary/2026-04-20-residuality-philosophy-paper-reading.md).
+
+---
+
 ## AI & LLMs
 
 **Bender, Emily M., Timnit Gebru, Angelina McMillan-Major, and Shmargaret Shmitchell.** "On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?" *FAccT '21: Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency*, 610–623. — The "stochastic parrot" framing: LLMs produce plausible text without understanding; critical treatment of the risks of scale without grounding. Cited in: [Narrative Computing History](../essays/narrative-computing-history.md).
