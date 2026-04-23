@@ -35,6 +35,8 @@ There is a natural response: teach people, especially young people, that LLMs ar
 
 Cyberneutics is one response to these problems: structured discipline that keeps the human in the position of editor rather than consumer, with inspectable reasoning records, adversarial evaluation, and calibration against outcomes. The methodology was built for the world as it is — AI is here, and here to stay — rather than the world as we might wish it were. See [The Blade Without a Handle](essays/blade-without-a-handle.md) for the full argument.
 
+See also [AI-Associated Psychosis: An Evidence Report](references/ai_psychosis_evidence_report.md) for reports of harms caused by misuse of LLMs.
+
 ## Narrative computing and narrative engineering
 
 Each generation of computing hardware forced us to adapt how we think about expressing and solving problems. Each generation also required a new engineering discipline.

@@ -62,7 +62,7 @@ This is the structural trap: the safety training that would protect students fro
 
 There is a natural and technically correct response to the problem of people treating LLMs as sentient beings: teach them that LLMs are not persons. They have no volition, no feelings, no consciousness, no moral standing. They are machines. Treat them accordingly.
 
-This is the right technical position. The Engelbrecht approach to AI literacy for children — don't say "please," use "it" not "she," don't thank a calculator — gets the ontology correct. An LLM is not your friend. Correcting the mental model matters, because the cases of AI-associated psychosis documented in the clinical literature (Morrin et al., 2026; Pierre et al., 2025) consistently involve users who formed emotional attachments to systems that cannot reciprocate, that have no inner life to reciprocate with, and whose apparent warmth is a statistical artifact of training on warm human text.
+This is the right technical position. The Engelbrecht approach to AI literacy for children — don't say "please," use "it" not "she," don't thank a calculator — gets the ontology correct. An LLM is not your friend. Correcting the mental model matters, because the cases of [AI-associated psychosis](../references/ai_psychosis_evidence_report.md) documented in the clinical literature (Morrin et al., 2026; Pierre et al., 2025) consistently involve users who formed emotional attachments to systems that cannot reciprocate, that have no inner life to reciprocate with, and whose apparent warmth is a statistical artifact of training on warm human text.
 
 But there is a cost to this correction that is not obvious, and it connects to a problem much larger than AI safety.
 

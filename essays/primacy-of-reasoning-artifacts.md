@@ -142,8 +142,6 @@ The three-tradition convergence is the essay's core argument, but the claim has 
 
 **Dijkstra.** Edsger Dijkstra, in "On the Cruelty of Really Teaching Computer Science" (1988), argued that programming is a thinking activity, not a typing activity, and that computer science education should be radically formal — focused on the mathematical reasoning that produces programs rather than on the programs themselves. Dijkstra arrived from a very different direction than Naur (radical formalism vs. philosophical pragmatism), but the destination is the same: the reasoning is primary; the code is secondary.
 
-**Coles.** Robert Coles, in *The Call of Stories* (1989), documented what happened when medical students read literature as part of their training. They became better clinicians — not because the novels contained medical knowledge, but because the *process of engaging with stories* developed capacities for judgment, empathy, and interpretive skill that transferred to clinical practice. The students who read Tolstoy and George Eliot learned to sit with ambiguity, to consider multiple interpretations, to notice what the patient was not saying. The stories were the reasoning artifact; clinical competence was the product. Coles was not writing about software or systems engineering. He was writing about how young doctors learn to think. Same claim, different domain.
-
 **Pask.** Gordon Pask's Conversation Theory provides the micro-mechanics. Understanding, for Pask, is demonstrated through *teachback* — the ability to reconstruct another's position from a different starting point. Agreement is a surface indicator that may or may not reflect understanding. Teachback is the test. If you can explain the reasoning in your own terms, you hold the theory. If you can only repeat the conclusion, you hold the artifact. The teachback is the reasoning; agreement is the residue.
 
 **The shared canon.** There is a cultural instance of the same claim that predates all of these. The canonical literary references that once pervaded educated discourse — Sisyphus, Midas, Persephone, Icarus — functioned as compressed reasoning artifacts. They were not mere allusions. They were shared models, compressed into a word or a phrase, that enabled high-bandwidth communication about complex situations. To invoke "Sisyphean" was to activate, in the listener's mind, a complete model of futile but compelled effort — with its emotional topology, its moral ambiguity, its recognition of the absurd. The word was a pointer to a shared theory.
@@ -158,7 +156,7 @@ The most important artifact is never the final product. It is always the reasoni
 
 Code, hardware, recommendations, verdicts, clinical diagnoses, legal decisions, strategic plans — these are residue. Valuable residue, necessary residue, but residue. The theory, the model stack, the deliberation record, the story of why this and not that — these are what carry understanding forward. They are what make the product maintainable, evaluable, and improvable. Without them, the product is a mystery in working order — useful until the first time you need to change it or explain it or decide whether it's still the right product for a changed world.
 
-Every tradition that has taken this problem seriously has arrived at the same conclusion. Naur said it about programs. Watson said it about systems. We found it in committee pipelines. Brooks said it about conceptual structures. Dijkstra said it about mathematical reasoning. Coles found it in literature courses that produced better doctors. Pask built it into the definition of understanding itself. The canonical literary traditions encoded it in shared myths that compressed entire models into a word.
+Every tradition that has taken this problem seriously has arrived at the same conclusion. Naur said it about programs. Watson said it about systems. We found it in committee pipelines. Brooks said it about conceptual structures. Dijkstra said it about mathematical reasoning. Pask built it into the definition of understanding itself. The canonical literary traditions encoded it in shared myths that compressed entire models into a word.
 
 The agent era brings one new thing to this old insight: speed. Agents generate artifacts faster than any previous tool. Code, reports, analyses, recommendations — all flowing at the speed of token completion, all plausible, all theory-less. The temptation is to let the speed carry you. To accept the residue and skip the reasoning. To treat the agent as a faster engineer rather than as a fast generator of theory-less artifacts that need a human theory-builder to be useful.
 
@@ -185,7 +183,6 @@ The handle must be in your hand before the blade arrives.
 - Brooks, F. (1975/1995). *The Mythical Man-Month.* Addison-Wesley.
 - Brooks, F. (1986). "No Silver Bullet: Essence and Accidents of Software Engineering."
 - Dijkstra, E.W. (1988). "On the Cruelty of Really Teaching Computer Science." EWD-1036.
-- Coles, R. (1989). *The Call of Stories: Teaching and the Moral Imagination.* Houghton Mifflin.
 - Pask, G. (1976). *Conversation Theory: Applications in Education and Epistemology.* Elsevier.
 
 ---
