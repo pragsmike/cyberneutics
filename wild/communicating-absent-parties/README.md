@@ -2,11 +2,33 @@
 
 > **Epistemic status**: This document synthesizes a Perplexity deep research report with connections to the cyberneutics framework. The categorical suggestions (decorated cospans for frozen entailment meshes, functors between sender/receiver categories) are speculative and have not been developed formally or reviewed by domain experts.
 
+## Files in this directory
+
+| Layer | File | When to read |
+|---|---|---|
+| Cyberneutics synthesis and critique | `README.md` (this file) | **Default entry point.** Start here. Contains the cyberneutics-framed argument for why this thread matters, what the report covers, and what it misses. |
+| Full report (canonical) | [`absent_party_report.md`](absent_party_report.md) | Read when you need the primary source material — detailed arguments, verbatim framings, or the annotated bibliography. This is the authoritative edition. |
+| Original PDF | `absent_party_report.pdf` | **Do not read during normal work.** Kept for forensic use only, in case a formatting miscue or extraction error in the markdown needs to be traced back to the source. |
+
+**Guidance for agents:** Do not open the PDF. The markdown edition (`absent_party_report.md`) is the canonical artifact; the PDF is retained solely so that suspected extraction errors can be verified against the original. If you need more than the README provides, read the markdown.
+
+## Why read the full markdown
+
+The full report (`absent_party_report.md`, ~1000 lines, ~25K tokens) is worth opening if any of the following apply:
+
+- You are working on a cyberneutics thread where the source-level detail matters — specific authors, dated citations, verbatim framings, or primary-literature links that the README compresses or omits. The annotated bibliography (Section 12, 70 entries with inline DOIs and publisher links) is the most valuable single piece of material the README does not reproduce.
+- You need to verify a claim this README attributes to the report. The README summarizes; it does not quote.
+- You are drafting outreach to a specific researcher in one of the eight surveyed domains (Sebeok / nuclear semiotics, Pask / CT, Ventris–Kober / decipherment, Berea / planetary communication, Vakoch / SETI, BHW / cascades, Gadamer–Derrida / hermeneutics, Barbieri–Hoffmeyer / biosemiotics, Brier / cybersemiotics). Each domain has a dedicated section with the key figures, primary works, and cross-citations laid out in detail.
+- You are exploring whether a specific cross-domain isomorphism (e.g., "is entailment-mesh reconstruction in decipherment formally the same operation as ribosomal decoding?") has been theorized elsewhere. The report's Section 11 identifies five explicit theoretical gaps; the surrounding sections contain the material that shows why those gaps are real.
+- You want the full categorical / information-theoretic framing of the absent-party problem (Sections 11.4–11.7), which the README only gestures at.
+
+If you only need the cyberneutics connection, the taxonomy of absence, or the list of the five theoretical gaps, this README has enough. Go to the markdown when the README's compression starts to feel lossy for your task.
+
 ## Situation
 
 Standard communication theory — Shannon, Wiener, Pask — presupposes co-present, mutually responsive interlocutors. The sender transmits, the receiver responds, errors get corrected, and shared understanding emerges through feedback. But a large and undertheorized class of real communication lacks this structure entirely. Nuclear waste warnings must persist for 10,000+ years across civilizational discontinuities. Dead scripts (Linear B, Voynich, Indus Valley) present texts whose senders cannot be interrogated. SETI confronts signals from entities that may share no cognitive architecture with the receiver. Information cascades strip the originator's identity and intent as content propagates through networks. Biological heredity transmits genetic and epigenetic messages from ancestral organisms that are structurally absent at the moment of reception. In every case, the feedback channel is severed: the sender cannot correct misinterpretation, and the receiver cannot request clarification.
 
-The Perplexity deep research report (`absent_party_report.pdf`) surveys eight domains where this problem surfaces and finds a unifying thread: absent-party communication is not a marginal edge case but a central, recurring structural challenge. The theoretical frameworks differ across domains — Shannon in nuclear semiotics, Pask in conversation theory, Peirce in biosemiotics, Gadamer in hermeneutics — but the underlying information-theoretic challenge is isomorphic. The report identifies five major theoretical gaps where these domains fail to connect and proposes Brier's cybersemiotics as a candidate integrative framework.
+The Perplexity deep research report ([`absent_party_report.md`](absent_party_report.md)) surveys eight domains where this problem surfaces and finds a unifying thread: absent-party communication is not a marginal edge case but a central, recurring structural challenge. The theoretical frameworks differ across domains — Shannon in nuclear semiotics, Pask in conversation theory, Peirce in biosemiotics, Gadamer in hermeneutics — but the underlying information-theoretic challenge is isomorphic. The report identifies five major theoretical gaps where these domains fail to connect and proposes Brier's cybersemiotics as a candidate integrative framework.
 
 The report's key finding: heredity itself — the transmission of biological information from parent to offspring, where the sender is structurally absent at the moment of gene expression — is the ur-case of absent-sender communication. Every other domain addresses a specialized variant of this same fundamental problem.
 
