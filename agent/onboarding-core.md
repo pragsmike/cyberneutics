@@ -32,7 +32,7 @@ For general orientation, read `README.md`.
 | `examples/` | Checked-in scenario and deliberation records | Reference example runs and historical records that stay in the repo. |
 | `research-programs/` | Evidence-building plans and study designs | Plan or execute empirical validation of the methodology. |
 | `wild/` | Incoming ideas, external material, diary | Explore adjacent territory that is not yet integrated. |
-| `references/` | Background reading | Find cited theoretical sources. |
+| `references/` | Background reading | Find cited theoretical sources. If adding a paper, read `references/papers/README.md` first — it has the workflow. |
 | `agent/` | Handoffs, rosters, prompts, rubrics | Continue ongoing work inside this repo. |
 | `.claude/skills/` | Canonical skill definitions | Follow cyberneutics workflows. |
 | `.claude/commands/` | Thin Claude command wrappers | Discover slash commands in Claude without duplicating skill bodies. |
