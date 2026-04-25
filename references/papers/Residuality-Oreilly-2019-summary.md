@@ -1,3 +1,17 @@
+---
+title: "No More Snake Oil: Architecting Agility through Antifragility — Summary"
+author: "O'Reilly, Barry M."
+year: 2019
+venue: "Procedia Computer Science 151: 884–890"
+doi: "10.1016/j.procs.2019.04.122"
+license: "CC BY-NC-ND 4.0"
+type: paper-summary
+length_words: 1525
+topics: [antifragility, criticality-over-correctness, VUCA, Flow-First-Design, FMEA, Taleb, Hole-four-properties]
+companion_full_text: Residuality-Oreilly-2019.md
+companion_pdf: pdfs/Residuality-Oreilly-2019.pdf
+---
+
 # No More Snake Oil: Architecting Agility through Antifragility
 
 **O'Reilly, Barry M.** *Procedia Computer Science* 151 (2019): 884–890. CC BY-NC-ND 4.0.
@@ -92,6 +106,6 @@ The paper is the practitioner-pitched precursor to the 2020 *Procedia* introduct
 
 ---
 
-*Companion to: `Residuality-Oreilly-2019.pdf`*
-*See also: `Residuality-Oreilly-2020.md`, `The-Philosophy-of-Residuality-Theory.md` (2021), `Residuality-Oreilly-2022.md`, `Residuality-Oreilly-2023.md`, `Residuality-Oreilly-chronology.md`*
+*Companion to: `pdfs/Residuality-Oreilly-2019.pdf`*
+*See also: [`Residuality-Oreilly-2020-summary.md`](Residuality-Oreilly-2020-summary.md), [`Residuality-Oreilly-2021-summary.md`](Residuality-Oreilly-2021-summary.md) (Philosophy of Residuality), [`Residuality-Oreilly-2021-machine-in-the-ghost-summary.md`](Residuality-Oreilly-2021-machine-in-the-ghost-summary.md) (Machine in the Ghost), [`Residuality-Oreilly-2022-summary.md`](Residuality-Oreilly-2022-summary.md), [`Residuality-Oreilly-2023-summary.md`](Residuality-Oreilly-2023-summary.md), [`Residuality-Oreilly-chronology.md`](Residuality-Oreilly-chronology.md)*
 *Cyberneutics cross-references: `essays/10-decisions-under-uncertainty.md`, `wild/residuality-theory/README.md`, `wild/diary/2026-04-20-residuality-philosophy-paper-reading.md`*

@@ -1,3 +1,10 @@
+---
+title: "O'Reilly Residuality Publications: Chronology"
+type: chronology
+covers: [O'Reilly residuality corpus 2018–2024]
+purpose: "Reading map and Cite-which-for-what guide. Orientation layer above the per-paper summaries."
+---
+
 # O'Reilly Residuality Publications: Chronology
 
 A chronology of Barry M. O'Reilly's published work on residuality theory, with notes on what each piece adds and how it sits in the lineage. Useful as an orientation document when working with the corpus or deciding which paper to cite for which claim.
@@ -15,10 +22,13 @@ For the bibliography proper (full annotations, formal citations), see [README.md
 | 2020 | "An Introduction to Residuality Theory: Software Design Heuristics for Complex Systems" | *Procedia Computer Science* 170: 875–880 | The operational paper. Incidence matrix technique, K-reduction heuristics, training/test holdout protocol. |
 | 2020 | "There Is No Spoon — The Path to Residuality Theory" | Cutter Consortium collection | Compilation of Cutter pieces 2018–2020. Practitioner-facing synthesis bridging the 2019 and 2020 academic papers. |
 | 2021 | "The Philosophy of Residuality Theory" | *Procedia Computer Science* 184: 809–816 | Philosophical counterpart to the 2020 paper. Component-metaphor critique; residual causality; Serres and Latour as primary post-structural anchors. |
-| 2023 | "Residuality and Representation: Toward a Coherent Philosophy of Software Architecture" | *Procedia Computer Science* 224: 91–97 | Restatement of the 2021 paper organized around three concepts: processuality, criticality, difference. Expanded post-structural lineage including Kant, Deleuze, Derrida. |
+| 2021 | "The Machine in the Ghost: Autonomy, Hyperconnectivity, and Residual Causality" | *Philosophies* 6(4):81 | The non-Procedia journal piece. Journal-length development of *residual causality*, framed around political/autonomy stakes the workshop papers don't reach. Includes the reflexive "how residuality came to be" genealogy. Open access (MDPI, CC BY). |
+| 2021 | "Hyperliminal Coupling, Why Software Projects Fail Repeatedly" | Cutter Consortium | Origin of the *hyperliminal coupling* concept that the 2022 paper inherits. Practitioner-pitched. Paywalled. |
+| 2022 | "Residuality Theory, Random Simulation, and Attractor Networks" | *Procedia Computer Science* 201: 639–645 | Theoretical-consolidation paper. Grounds residuality in complexity science via Kauffman networks; formalizes the two-step algorithm (random stressor simulation + NKP analysis); introduces the residual index Ri as a per-project empirical test. |
+| 2023 | "Residuality and Representation: Toward a Coherent Philosophy of Software Architecture" | *Procedia Computer Science* 224: 91–97 | Restatement of the 2021 *Philosophy* paper organized around three concepts: processuality, criticality, difference. Expanded post-structural lineage including Kant, Deleuze, Derrida. |
 | 2024 | *Residues: Time, Change, and Uncertainty in Software Architecture* | Leanpub (~60 pp.) | Book-length practitioner synthesis. Treats the theory as ready for application rather than continued development. Mixed practitioner reviews. |
 
-The four Procedia papers (2019, 2020, 2021, 2023) all appeared in the *International Workshop on Computational Antifragility and Antifragile Engineering* (the ANTIFRAGILE workshop series), and all are CC BY-NC-ND open access.
+The five Procedia papers (2019, 2020, 2021, 2022, 2023) all appeared in the *International Workshop on Computational Antifragility and Antifragile Engineering* (the ANTIFRAGILE workshop series) — except the 2023 paper, which moved to the *International Conference on Mobile Systems and Pervasive Computing*. All are CC BY-NC-ND open access.
 
 ---
 
@@ -74,6 +84,37 @@ Key contributions:
 The 2021 paper is where O'Reilly explicitly names the cybernetics critique that engaging frameworks (including those that draw on Stafford Beer's VSM) need to answer. It cites Stacey four times; Stacey's *Complexity and Organizational Reality* (2009) is load-bearing for this paper specifically.
 
 **Cite this when**: making the structure-as-risk argument; engaging with the post-structural commitments of residuality; addressing the cybernetics critique directly; tracing residual causality as a concept distinct from the operational matrix technique.
+
+### 2021 — "The Machine in the Ghost: Autonomy, Hyperconnectivity, and Residual Causality" (*Philosophies* 6(4):81)
+
+The non-Procedia journal piece. Open access in MDPI's *Philosophies* (CC BY 4.0). Treated by O'Reilly as the extended development of *residual causality* — the concept that the *Philosophy of Residuality Theory* paper introduces and that the 2022 and 2023 papers assume. The 2022 paper cites it as ref [7] alongside the Procedia *Philosophy* paper ([6]) when it gestures at the philosophical foundations.
+
+The Procedia 2021 paper is short (8 pp.) and pitched at the ANTIFRAGILE workshop audience. *Philosophies* gave O'Reilly room to develop the same arguments at journal length (~7,400 words; the Procedia papers are ~3,500–4,300) and pitch them at a philosophy-of-technology audience.
+
+Three things make this paper distinct from the rest of the corpus:
+
+1. **The political/autonomy framing.** Residual causality is reframed as a *threat to human autonomy* in a hyperconnected society, with the COOP ransomware attack (Sweden, June 2021) as the opening case. The workshop papers stay inside the architecture-quality frame; this paper goes external.
+2. **The reflexive §5.** O'Reilly narrates how residuality theory came into being through his own random walk through the literature — Taleb, Cynefin, Stacey, Peirce's Tychism, Prigogine, Serres, Latour, Heidegger, Baudrillard — and explicitly frames that walk as the philosophical equivalent of stressor analysis. Random reading stresses the worldview of the architect and reveals invisible coupling between embedded paradigmatic assumptions and design behaviour. This is the only paper where O'Reilly tells the theory's intellectual genealogy.
+3. **Most explicit list of philosophical sources in the corpus.** Heidegger (technology obscures other ways of seeing), Peirce (Tychism), Prigogine ("order floating on disorder" — the source phrasing for hyperliminality), Serres via Latour 1987 (gestalt switch), Stacey (dominant discourse), Taleb, Baudrillard (simulacra). Each is named as load-bearing for a specific construct.
+
+The paper is archived locally (see [`Residuality-Oreilly-2021-machine-in-the-ghost-summary.md`](Residuality-Oreilly-2021-machine-in-the-ghost-summary.md)).
+
+**Cite this when**: residual causality is itself the topic, not a stepping-stone to the matrix technique; the political/autonomy frame matters; engaging with a philosophy-of-technology audience; tracing the genealogy of how residuality emerged; pulling on Peirce's Tychism, Prigogine, or Heidegger as anchors for hyperliminality. **Don't cite this when**: the audience needs the four-pillar component-metaphor structure done concretely (use the Procedia *Philosophy* paper instead — it's tighter on that point).
+
+### 2022 — "Residuality Theory, Random Simulation, and Attractor Networks" (Procedia 201)
+
+The theoretical-consolidation paper, presented at the 9th ANTIFRAGILE workshop (Porto). This is where residuality is reframed as a complexity-science theory: the constructs from 2019–2021 are summarized through the lens of a single two-step algorithm (random stressor simulation followed by NKP network analysis on the software architecture), and the underlying logic is filled in via Kauffman networks and attractor theory.
+
+Two contributions matter most:
+
+1. **The two-step algorithm.** Software design *in general* is reframed as random simulation + network analysis; residuality is the variant that makes both steps explicit and amplifies their randomness/explicitness. This is the move that lets residuality be compared to other software design methodologies on a common axis rather than as a separate paradigm.
+2. **The residual index Ri.** A per-project empirical test: divide stressors into training and testing sets, build the residual architecture from training, score the testing set against both naïve and residual architectures. Ri > 0 means the residual approach handled out-of-sample stress better than the naïve baseline. This is the falsifiability move the philosophy papers gesture at.
+
+The paper also names *NKP analysis* as the architectural lens: N (number of components), K (max connections per component), P (bias toward a particular outcome). Loose coupling, cohesion, granularity — the practitioner vocabulary — are recast as NKP-tuning operations. Edge of chaos as the design target.
+
+This paper is the clearest single statement of how residuality fits inside the complexity sciences. If you cite only one paper for the full theory-as-theory story, this is it.
+
+**Cite this when**: relating residuality to complexity science (Kauffman, attractors, edge of chaos); using the two-step algorithm or NKP analysis vocabulary; needing the residual index Ri as the per-project empirical test; comparing residuality to other software methodologies on a shared axis.
 
 ### 2023 — "Residuality and Representation" (Procedia 224)
 

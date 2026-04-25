@@ -1,3 +1,17 @@
+---
+title: "Residuality Theory, Random Simulation, and Attractor Networks"
+author: "O'Reilly, Barry M."
+year: 2022
+venue: "Procedia Computer Science 201: 639–645"
+doi: "10.1016/j.procs.2022.03.084"
+license: "CC BY-NC-ND 4.0"
+type: paper-extract
+length_words: 3489
+topics: [Kauffman-networks, NKP-analysis, attractors, edge-of-chaos, residual-index-Ri, two-step-algorithm, hyperliminal-coupling, complexity-science]
+companion_summary: Residuality-Oreilly-2022-summary.md
+companion_pdf: pdfs/Residuality-Oreilly-2022.pdf
+---
+
 # Residuality Theory, random simulation, and attractor networks
 
 Barry M O'Reilly  

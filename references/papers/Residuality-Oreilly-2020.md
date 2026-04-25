@@ -1,3 +1,17 @@
+---
+title: "An Introduction to Residuality Theory: Software Design Heuristics for Complex Systems"
+author: "O'Reilly, Barry M."
+year: 2020
+venue: "Procedia Computer Science 170: 875–880"
+doi: "10.1016/j.procs.2020.03.120"
+license: "CC BY-NC-ND 4.0"
+type: paper-extract
+length_words: 3405
+topics: [residues, stressors, incidence-matrix, K-reduction, training-test-protocol, residual-index, Ashby-requisite-variety]
+companion_summary: Residuality-Oreilly-2020-summary.md
+companion_pdf: pdfs/Residuality-Oreilly-2020.pdf
+---
+
 # An Introduction to Residuality Theory: Software Design Heuristics for Complex Systems
 
 Barry M O'Reilly  

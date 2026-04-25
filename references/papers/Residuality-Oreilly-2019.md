@@ -1,3 +1,17 @@
+---
+title: "No More Snake Oil: Architecting Agility through Antifragility"
+author: "O'Reilly, Barry M."
+year: 2019
+venue: "Procedia Computer Science 151: 884–890"
+doi: "10.1016/j.procs.2019.04.122"
+license: "CC BY-NC-ND 4.0"
+type: paper-extract
+length_words: 3802
+topics: [antifragility, criticality-over-correctness, VUCA, Flow-First-Design, FMEA, Taleb, Hole-four-properties]
+companion_summary: Residuality-Oreilly-2019-summary.md
+companion_pdf: pdfs/Residuality-Oreilly-2019.pdf
+---
+
 # No More Snake Oil: Architecting Agility through Antifragility
 
 Barry O'Reilly  

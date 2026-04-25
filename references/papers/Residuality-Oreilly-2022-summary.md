@@ -1,3 +1,17 @@
+---
+title: "Residuality Theory, Random Simulation, and Attractor Networks — Summary"
+author: "O'Reilly, Barry M."
+year: 2022
+venue: "Procedia Computer Science 201: 639–645"
+doi: "10.1016/j.procs.2022.03.084"
+license: "CC BY-NC-ND 4.0"
+type: paper-summary
+length_words: 982
+topics: [Kauffman-networks, NKP-analysis, attractors, edge-of-chaos, residual-index-Ri, two-step-algorithm, hyperliminal-coupling, complexity-science]
+companion_full_text: Residuality-Oreilly-2022.md
+companion_pdf: pdfs/Residuality-Oreilly-2022.pdf
+---
+
 # Residuality Theory, Random Simulation, and Attractor Networks
 
 **O'Reilly, Barry M.** *Procedia Computer Science* 201 (2022): 639–645. CC BY-NC-ND 4.0.
@@ -75,6 +89,6 @@ LLM-extracted content. Page numbers refer to the *Procedia Computer Science* pag
 
 ---
 
-*Companion to: `Residuality-Oreilly-2022.pdf`*
-*See also: `Residuality-Oreilly-2019.md`, `Residuality-Oreilly-2020.md`, `The-Philosophy-of-Residuality-Theory.md`, `Residuality-Oreilly-2023.md`*
+*Companion to: `pdfs/Residuality-Oreilly-2022.pdf`*
+*See also: [`Residuality-Oreilly-2019-summary.md`](Residuality-Oreilly-2019-summary.md), [`Residuality-Oreilly-2020-summary.md`](Residuality-Oreilly-2020-summary.md), [`Residuality-Oreilly-2021-summary.md`](Residuality-Oreilly-2021-summary.md) (Philosophy of Residuality), [`Residuality-Oreilly-2021-machine-in-the-ghost-summary.md`](Residuality-Oreilly-2021-machine-in-the-ghost-summary.md) (Machine in the Ghost), [`Residuality-Oreilly-2023-summary.md`](Residuality-Oreilly-2023-summary.md), [`Residuality-Oreilly-chronology.md`](Residuality-Oreilly-chronology.md)*
 *Cyberneutics cross-references: `wild/diary/2026-02-21-cyberneutics-dual-operations.md`, `research-programs/evaluating-deliberative-architectures/`, `.claude/skills/probe/SKILL.md`*

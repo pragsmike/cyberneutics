@@ -2,13 +2,32 @@
 
 Archived papers cited elsewhere in the Cyberneutics repository.
 
-## Organization
+## Reading order for agents
 
-Each paper exists in two forms:
+If you are looking up "what does X cite for Y" or doing background reading, **start with the summary**. The full extractions exist for verification and for deep reading; they are 3–10× the size of the summaries.
 
-- **Markdown (`<name>.md`)** — extracted full text, structure preserved, boilerplate stripped. **This is the primary form.** Read the markdown, not the PDF.
-- **Summary (`<name>-summary.md`)** — curated summary with key claims, selected quotations, and cyberneutics connections.
-- **PDF (`pdfs/<name>.pdf`)** — original file, kept as a forensic source to verify the extraction. Do not read PDFs during normal work; they are binary, slow to process, and the markdown already contains the full text. Read a PDF only if explicitly instructed to do so, or if there is a specific reason to check the original against the extraction.
+| Layer | Purpose | Approx. size |
+|---|---|---|
+| Summary (`<slug>-summary.md`) | Curated key claims, quotations, and cyberneutics connections. The default reading layer. | ~80 lines / ~2–3K tokens |
+| Full text (`<slug>.md`) | Extracted body of the paper. Read when you need a specific passage or argument the summary doesn't cover. | ~120–190 lines / ~6–25K tokens |
+| PDF (`pdfs/<slug>.pdf`) | Original file. Forensic only. Don't read it; it's binary and slow. Open only to verify the extraction or check a typesetting artifact. | n/a |
+
+The chronology is the navigation layer: see [Residuality-Oreilly-chronology.md](Residuality-Oreilly-chronology.md) for which paper to cite for which claim, the relationships between papers, and notes on retrieval.
+
+## Cite which paper for what
+
+Quick picker for the O'Reilly residuality corpus. The chronology has the long form; this is the one-table version.
+
+| To cite for... | Use | Why |
+|---|---|---|
+| Antifragility as the architectural target; the Taleb anchor; "criticality over correctness" | [2019](Residuality-Oreilly-2019-summary.md) | Origin of the criticality move; later papers assume it. The 2020 paper is often miscited for this. |
+| Incidence matrices, K-reduction heuristics, the training/test stressor protocol | [2020](Residuality-Oreilly-2020-summary.md) | Operational paper. What practitioners apply. |
+| The component-metaphor critique; residual causality as a concept; the cybernetics critique | [2021 *Philosophy*](Residuality-Oreilly-2021-summary.md) | Philosophical counterpart to the 2020 paper. Serres + Latour as the post-structural anchors. |
+| Residual causality as a stand-alone concept; the political/autonomy stakes of software; reflexive genealogy of how residuality emerged; the "machine in the ghost" formulation | [2021 *Machine in the Ghost*](Residuality-Oreilly-2021-machine-in-the-ghost-summary.md) | The non-Procedia journal piece. Journal-length development; political framing the workshop papers don't have; the only paper where O'Reilly narrates the theory's intellectual genealogy in the first person. |
+| Kauffman networks, NKP analysis, edge of chaos, the residual index Ri, the two-step algorithm | [2022](Residuality-Oreilly-2022-summary.md) | Theoretical-consolidation paper. Where residuality is reframed inside complexity science with an empirical falsifiability move. |
+| The phenomenal gap; processuality / criticality / difference; the Deleuzian walk; Kant lineage | [2023](Residuality-Oreilly-2023-summary.md) | Restatement of the philosophical arguments around a different conceptual triad. Better text for academic-philosophical audiences. |
+
+For the genealogy, the philosophical lineage shifts, common miscitations, and reading paths, see [Residuality-Oreilly-chronology.md](Residuality-Oreilly-chronology.md).
 
 ---
 
@@ -16,7 +35,7 @@ Each paper exists in two forms:
 
 When a new PDF is dropped into this directory, assimilate it by following these steps. The scheme is the one already in use across every existing paper; the instructions here exist so you don't have to rediscover it.
 
-1. **Place the PDF** at `pdfs/<name>.pdf` using the same naming convention as siblings (e.g. `Residuality-Oreilly-2019.pdf`, `The-Philosophy-of-Residuality-Theory.pdf`).
+1. **Place the PDF** at `pdfs/<name>.pdf` using the same naming convention as siblings (e.g. `Residuality-Oreilly-2019.pdf`, `Residuality-Oreilly-2021.pdf`).
 
 2. **Extract the text to `<name>.md`** with `pdftotext -layout pdfs/<name>.pdf -` and hand-clean:
    - Strip ScienceDirect/Elsevier/Procedia boilerplate, running heads, and page-footer copyright blocks.
@@ -32,19 +51,21 @@ When a new PDF is dropped into this directory, assimilate it by following these 
    - `## Cyberneutics Connections`, `## Epistemic Status`.
    - Three-line footer: `*Companion to: …*`, `*See also: …*`, `*Cyberneutics cross-references: …*`.
 
-4. **Register the paper in this README.** Add an H3 block with bold `**Citation:**`, bold `**Summary:**` one-paragraph line, and three bulleted links (full text, summary, PDF). Update the series intro blurb if the new paper changes the arc count or ordering. Remove the paper from any trailing "Note" paragraph if it was listed there as "not archived."
+4. **Register the paper in this README.** Add an H3 block with bold `**Citation:**`, bold `**Summary:**` one-paragraph line, and three bulleted links (full text, summary, PDF). Update the series intro blurb and the *Cite which paper for what* table if the new paper changes the arc, ordering, or coverage of distinct claims. Remove the paper from the "Cited but not archived" table if it was listed there.
 
-5. **Update the `See also:` footer of every other summary in the directory** so all summaries cross-reference each other symmetrically.
+5. **Register the paper in `references/README.md`** — the master bibliography. Add an entry under the appropriate tradition section with citation, one-line annotation, and a link back to the local archive. The master bib is the discovery surface for agents reading from the top of the references tree; missing it here means future readers won't know the paper is locally available.
 
-6. **Update any chronology or reading-map files** (e.g. `Residuality-Oreilly-chronology.md`) that catalogue the corpus this paper belongs to.
+6. **Update the `See also:` footer of every other summary in the directory** so all summaries cross-reference each other symmetrically. The footer should list every sibling summary plus the chronology file.
 
-7. **Verify.** `ReadLints` the touched files; re-read this README to confirm links and the arc blurb render correctly; spot-check two or three page-cited quotations in the new summary against the PDF.
+7. **Update any chronology or reading-map files** (e.g. `Residuality-Oreilly-chronology.md`) that catalogue the corpus this paper belongs to. Both the at-a-glance table and the per-paper "What each piece adds" section need an entry. If the new paper changes which paper to cite for which claim, update the `Cite which paper for what` table at the top of this README.
+
+8. **Verify.** Re-read this README to confirm links and the arc blurb render correctly; spot-check two or three page-cited quotations in the new summary against the PDF; run `Grep` on the old "Cited but not archived" entry to confirm no other doc still lists the paper as missing.
 
 ---
 
 ## O'Reilly — Residuality Theory series
 
-Five papers from Barry M. O'Reilly's ongoing development of residuality theory, in chronological order. Together they form a self-contained arc: antifragility-driven heuristics and the first statement of criticality-over-correctness (2019) → the residual analysis process, incidence matrices, and training/test holdout (2020) → philosophical critique of the component metaphor (2021) → complexity-science formalization via Kauffman networks and the NKP residual index (2022) → process-philosophy treatment of representation, criticality, and difference (2023). Read them in order for the full argument; each paper builds explicitly on the prior ones.
+Six papers from Barry M. O'Reilly's ongoing development of residuality theory, in chronological order. Together they form a self-contained arc: antifragility-driven heuristics and the first statement of criticality-over-correctness (2019) → the residual analysis process, incidence matrices, and training/test holdout (2020) → paired philosophical 2021 papers (the Procedia *Philosophy of Residuality Theory* critiques the component metaphor; the *Machine in the Ghost* journal piece develops residual causality at length and frames it as a threat to autonomy in hyperconnected society) → complexity-science formalization via Kauffman networks and the NKP residual index (2022) → process-philosophy treatment of representation, criticality, and difference (2023). Read them in order for the full argument; each paper builds explicitly on the prior ones.
 
 ---
 
@@ -78,9 +99,21 @@ Five papers from Barry M. O'Reilly's ongoing development of residuality theory, 
 
 **Summary:** Diagnoses the "component metaphor" — the cluster of essentialism, causalities of certainty, machine-metaphor cybernetics, and structuralism that underlies conventional software architecture — and argues that residuality theory constitutes a post-structuralist, constructivist paradigm shift grounded in Taleb, Stacey, Latour, and Serres.
 
-- [Full text](The-Philosophy-of-Residuality-Theory.md)
-- [Summary and cyberneutics connections](The-Philosophy-of-Residuality-Theory-summary.md)
-- [Original PDF](pdfs/The-Philosophy-of-Residuality-Theory.pdf)
+- [Full text](Residuality-Oreilly-2021.md)
+- [Summary and cyberneutics connections](Residuality-Oreilly-2021-summary.md)
+- [Original PDF](pdfs/Residuality-Oreilly-2021.pdf)
+
+---
+
+### The Machine in the Ghost: Autonomy, Hyperconnectivity, and Residual Causality (2021)
+
+**Citation:** O'Reilly, B. M. "The Machine in the Ghost: Autonomy, Hyperconnectivity, and Residual Causality." *Philosophies* 6(4):81 (2021). CC BY 4.0.
+
+**Summary:** The corpus's only non-Procedia journal piece, in MDPI's *Philosophies*. Develops *residual causality* at journal length and reframes it as a structural threat to human autonomy in a hyperconnected society — the political/autonomy stakes the workshop papers don't reach. Includes a reflexive section in which O'Reilly narrates how residuality theory came to be through his own random walk through the literature (Heidegger, Peirce's Tychism, Prigogine, Serres, Latour, Stacey, Taleb, Baudrillard) — explicitly framing random reading as stressor analysis applied to one's worldview.
+
+- [Full text](Residuality-Oreilly-2021-machine-in-the-ghost.md)
+- [Summary and cyberneutics connections](Residuality-Oreilly-2021-machine-in-the-ghost-summary.md)
+- [Original PDF](pdfs/Residuality-Oreilly-2021-machine-in-the-ghost.pdf)
 
 ---
 
@@ -108,4 +141,13 @@ Five papers from Barry M. O'Reilly's ongoing development of residuality theory, 
 
 ---
 
-**Note:** The 2021 paper ("The Machine in the Ghost: Autonomy, Hyperconnectivity, and Residual Causality", *Philosophies* 6(4):81) and the 2021 "Hyperliminal Coupling" (Cutter Consortium) are cited in the series but not archived here.
+## Cited but not archived
+
+These O'Reilly works are cited within the corpus or named in the chronology but not present locally. Listed in chronological order. The chronology has fuller annotations.
+
+| Year | Title | Venue | Status |
+|---|---|---|---|
+| 2018 | "No More Snake Oil" | Cutter Consortium *Executive Update* | Practitioner version of the 2019 paper. cutter.com (free download). |
+| 2020 | "There Is No Spoon: The Path to Residuality Theory" | Cutter Consortium collection | Compilation of 2018–2020 Cutter pieces. cutter.com (free download). |
+| 2021 | "Hyperliminal Coupling, Why Software Projects Fail Repeatedly" | Cutter Consortium | Origin of the *hyperliminal coupling* concept used heavily in the 2022 paper. Paywalled. |
+| 2024 | *Residues: Time, Change, and Uncertainty in Software Architecture* | Leanpub (~60 pp.) | Book-length practitioner synthesis. Paid (60-day refund window per Leanpub policy). |

@@ -1,3 +1,17 @@
+---
+title: "Residuality and Representation: Toward a Coherent Philosophy of Software Architecture"
+author: "O'Reilly, Barry M."
+year: 2023
+venue: "Procedia Computer Science 224: 91–97"
+doi: "10.1016/j.procs.2023.09.015"
+license: "CC BY-NC-ND 4.0"
+type: paper-extract
+length_words: 4255
+topics: [phenomenal-gap, processuality, criticality, difference, Deleuzian-walk, Kant, Cilliers, process-philosophy]
+companion_summary: Residuality-Oreilly-2023-summary.md
+companion_pdf: pdfs/Residuality-Oreilly-2023.pdf
+---
+
 # Residuality and Representation: Toward a Coherent Philosophy of Software Architecture
 
 Barry M O'Reilly  

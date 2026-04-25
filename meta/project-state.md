@@ -1,6 +1,6 @@
 # Project State
 
-Last updated: 2026-03-26
+Last updated: 2026-04-24
 
 This document is the canonical current-state reference for repo structure, compatibility truths, and live open questions. It replaces the old stale backlog-file role with a narrower, actively maintained state doc.
 
@@ -112,6 +112,13 @@ Complete as of 2026-03-07. All items resolved:
 - **`agent/onboarding-core.md`** — Added `/diary` row to Available Workflows table.
 - **`wild/diary/2026-03-26-echo-chamber-immune-organs.md`** — New diary entry: echo chambers reframed as immune organs via organ/bloodstream distinction; emotion-first vs. inference-first as thymic discrimination signal; dark shares as organ/bloodstream interface morphism; missing System 3* (calibration gap).
 - **`applications/narrative-immune-systems/references-choe-echo-chamber-studies.md`** — New: six verified studies with full citations, key findings, and cyberneutics cross-references (Simchon SDT inoculation meta-analysis, Van der Linden Instagram prebunking, Kim voter suppression, Bond 61M mobilization, CIRCLE youth sources, Civic Power IPO report).
+
+### references/papers/ audit + Machine in the Ghost assimilation (2026-04-24)
+
+- **Audit findings** surfaced 10 issues including missing 2022 entry in chronology, master bib out of sync (missing 2019 and 2022 papers), asymmetric See-also footers, naming inconsistency for the 2021 *Philosophy* paper, two contradictory not-archived lists, and absent agent-discoverability scaffolding (token-budget guidance, Cite-which-for-what table, frontmatter).
+- **Fixes applied** (items 1–7 + 9 + 10): chronology gained the missing 2022 entry; master bib in `references/README.md` gained 2019, 2022, and *Machine in the Ghost* entries with archive cross-links; See-also footers symmetrized across all 6 summaries; 2021 paper renamed under unified `Residuality-Oreilly-2021` slug via `git mv`; all 12 paper-related markdowns + chronology gained YAML frontmatter (title, author, year, venue, DOI, license, type, length_words, topics, companions); `papers/README.md` rewritten with Reading-order-for-agents + Cite-which-paper-for-what tables; add-paper workflow expanded from 7 to 8 steps with explicit master-bib registration as new step 5; not-archived footer reconciled into single canonical 4-row table.
+- **`Residuality-Oreilly-2021-machine-in-the-ghost.{md,-summary.md,pdf}`**: NEW. Extraction (~7,360 words) and full summary for *The Machine in the Ghost: Autonomy, Hyperconnectivity, and Residual Causality*, *Philosophies* 6(4):81 (2021). The corpus's only non-Procedia journal piece; develops residual causality at journal length and reframes it as a threat to autonomy in hyperconnected society. mg downloaded the PDF manually after MDPI/Akamai blocked all automated fetches from this environment.
+- **Repo workflow lesson recorded**: future paper additions must update master bib (`references/README.md`) — the gap that caused 2019 and 2022 to be missing for an unknown duration is now closed in the workflow.
 
 ### Emotional attention steering directory (2026-03-26)
 

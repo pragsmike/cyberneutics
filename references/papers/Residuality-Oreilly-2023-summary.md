@@ -1,3 +1,17 @@
+---
+title: "Residuality and Representation — Summary"
+author: "O'Reilly, Barry M."
+year: 2023
+venue: "Procedia Computer Science 224: 91–97"
+doi: "10.1016/j.procs.2023.09.015"
+license: "CC BY-NC-ND 4.0"
+type: paper-summary
+length_words: 1164
+topics: [phenomenal-gap, processuality, criticality, difference, Deleuzian-walk, Kant, Cilliers, process-philosophy]
+companion_full_text: Residuality-Oreilly-2023.md
+companion_pdf: pdfs/Residuality-Oreilly-2023.pdf
+---
+
 # Residuality and Representation: Toward a Coherent Philosophy of Software Architecture
 
 **O'Reilly, Barry M.** *Procedia Computer Science* 224 (2023): 91–97. CC BY-NC-ND 4.0.
@@ -85,6 +99,6 @@ LLM-extracted content. Page numbers refer to the *Procedia Computer Science* pag
 
 ---
 
-*Companion to: `Residuality-Oreilly-2023.pdf`*
-*See also: `Residuality-Oreilly-2019.md`, `Residuality-Oreilly-2020.md`, `The-Philosophy-of-Residuality-Theory.md`, `Residuality-Oreilly-2022.md`*
+*Companion to: `pdfs/Residuality-Oreilly-2023.pdf`*
+*See also: [`Residuality-Oreilly-2019-summary.md`](Residuality-Oreilly-2019-summary.md), [`Residuality-Oreilly-2020-summary.md`](Residuality-Oreilly-2020-summary.md), [`Residuality-Oreilly-2021-summary.md`](Residuality-Oreilly-2021-summary.md) (Philosophy of Residuality), [`Residuality-Oreilly-2021-machine-in-the-ghost-summary.md`](Residuality-Oreilly-2021-machine-in-the-ghost-summary.md) (Machine in the Ghost), [`Residuality-Oreilly-2022-summary.md`](Residuality-Oreilly-2022-summary.md), [`Residuality-Oreilly-chronology.md`](Residuality-Oreilly-chronology.md)*
 *Cyberneutics cross-references: `wild/diary/2026-04-03-narrative-proof.md`, `essays/10-decisions-under-uncertainty.md`, `essays/06-deleuze-difference-repetition.md`, `palgebra/`*

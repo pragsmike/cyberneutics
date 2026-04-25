@@ -1,3 +1,17 @@
+---
+title: "An Introduction to Residuality Theory — Summary"
+author: "O'Reilly, Barry M."
+year: 2020
+venue: "Procedia Computer Science 170: 875–880"
+doi: "10.1016/j.procs.2020.03.120"
+license: "CC BY-NC-ND 4.0"
+type: paper-summary
+length_words: 815
+topics: [residues, stressors, incidence-matrix, K-reduction, training-test-protocol, residual-index, Ashby-requisite-variety]
+companion_full_text: Residuality-Oreilly-2020.md
+companion_pdf: pdfs/Residuality-Oreilly-2020.pdf
+---
+
 # An Introduction to Residuality Theory: Software Design Heuristics for Complex Systems
 
 **O'Reilly, Barry M.** *Procedia Computer Science* 170 (2020): 875–880. CC BY-NC-ND 4.0.
@@ -72,6 +86,6 @@ LLM-extracted content. Page numbers refer to the *Procedia Computer Science* pag
 
 ---
 
-*Companion to: `Residuality-Oreilly-2020.pdf`*
-*See also: `Residuality-Oreilly-2019.md`, `The-Philosophy-of-Residuality-Theory.md` (2021), `Residuality-Oreilly-2022.md`, `Residuality-Oreilly-2023.md`*
+*Companion to: `pdfs/Residuality-Oreilly-2020.pdf`*
+*See also: [`Residuality-Oreilly-2019-summary.md`](Residuality-Oreilly-2019-summary.md), [`Residuality-Oreilly-2021-summary.md`](Residuality-Oreilly-2021-summary.md) (Philosophy of Residuality), [`Residuality-Oreilly-2021-machine-in-the-ghost-summary.md`](Residuality-Oreilly-2021-machine-in-the-ghost-summary.md) (Machine in the Ghost), [`Residuality-Oreilly-2022-summary.md`](Residuality-Oreilly-2022-summary.md), [`Residuality-Oreilly-2023-summary.md`](Residuality-Oreilly-2023-summary.md), [`Residuality-Oreilly-chronology.md`](Residuality-Oreilly-chronology.md)*
 *Cyberneutics cross-references: `essays/10-decisions-under-uncertainty.md`, `wild/diary/2026-02-21-cyberneutics-dual-operations.md`*
