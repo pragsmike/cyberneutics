@@ -76,6 +76,8 @@ O'Reilly uses "residue" but does not sharpen it against eigenform. The cyberneut
 
 This vocabulary is sufficient to add a measurable dimension to the residual index. Ri > 0 says the residual architecture beat the naïve baseline on the testing set. *Eigenform Ri* — the fraction of residues that recur across bagged partitions — would say something stronger: the residual architecture's *invariants* are stable across stressor sampling, not just its averaged performance.
 
+> **Status: Untested.** Eigenform Ri is proposed; it has not been computed for any deliberation in this repository. The Black Swan deliberations have multiple runs and dual-scoring; the variance is computable but has not been computed. Treat as proposal, not contribution, until the measurement is performed.
+
 ### 2.3 Inspectable reasoning records as criticality at the deliberation layer
 
 Residuality theory specifies criticality for systems but says little about how an architect *knows* they have it. The committee deliberation transcript is a candidate answer at the deliberation layer: the trace of what survived adversarial cross-examination is exactly the residue analogue, and the inspectability of that trace is what makes the criticality verifiable rather than asserted. This generalizes residuality from architecture to deliberation, and gives the criticality goal an evidentiary form.
@@ -112,6 +114,8 @@ O'Reilly's residual index Ri is a per-project test. Cyberneutics' calibration re
 
 This too is contribution back. Ri demonstrates per-project falsifiability; the calibration register demonstrates that residuality-aligned methods can carry their falsifiability commitment into longitudinal practice. The two are complementary: one says "this project worked," the other says "the methodology continues to work."
 
+> **Status: Architectural commitment, not implementation.** The calibration register is a planned mechanism dependent on agent-substrate support for inter-agent communication (Claude Code, Codex, etc., as the platforms mature). Until that substrate exists, "calibration register as long-run Ri" is a design target, not a deployed instrument.
+
 ### 2.9 The fan operation as a stressor-list generator for residual analysis
 
 This is the most directly actionable contribution back. Residual analysis (the 2020 and 2022 papers) takes a stressor list as input. Building the list well is harder than the papers acknowledge: O'Reilly characterizes the practice as "playfulness," notes the 2021 *Philosophy* paper's emphasis on "naive ideas about cause/effect as information," and observes that practitioners often default to probability-weighted enumeration that the methodology explicitly rejects. The standard failure mode is the curse of dimensionality — distributions return to areas of high probability, and the architect's stressor list becomes a refined version of the risk register the methodology was built to escape.
@@ -132,7 +136,7 @@ These are structural alignments that exist in the corpus but are not framed as b
 
 - **Hyperliminality ↔ organ/bloodstream.** Both are the same structural diagnosis: an ordered, controlled regime nested inside a disordered, ambient one, with the cross-regime interface as the locus of risk. The vocabularies developed independently and could be unified, but the parallel is more useful kept visible than merged. This is flagged in the [`wild/residuality-theory/README.md`](README.md) Remaining Directions list.
 
-- **Random reading as stressor analysis applied to one's worldview ↔ the fan operation.** The reflexive §5 of the [2021 *Machine in the Ghost*](../../references/papers/Residuality-Oreilly-2021-machine-in-the-ghost.md) paper explicitly frames O'Reilly's own random walk through the literature (Heidegger, Peirce, Prigogine, Serres, Latour, Stacey, Taleb, Baudrillard) as stressor analysis applied to the worldview of the architect. The cyberneutics fan operation does the same move in the decision domain. The convergence between O'Reilly arriving at this through residuality and cyberneutics arriving at it through committee deliberation is itself an instance of *narrative proof* — independent formulations of the same problem strengthen both. This is a candidate diary-entry seam not yet written.
+- **Random reading as stressor analysis applied to one's worldview ↔ the fan operation.** The reflexive §5 of the [2021 *Machine in the Ghost*](../../references/papers/Residuality-Oreilly-2021-machine-in-the-ghost.md) paper explicitly frames O'Reilly's own random walk through the literature (Heidegger, Peirce, Prigogine, Serres, Latour, Stacey, Taleb, Baudrillard) as stressor analysis applied to the worldview of the architect. The cyberneutics fan operation does the same move in the decision domain. The convergence between O'Reilly arriving at this through residuality and cyberneutics arriving at it through committee deliberation is one seam in cyberneutics' [narrative-proof](../diary/2026-04-03-narrative-proof.md) web — narrow because n=2 with overlapping intellectual environments, but real where the structural pattern recurs. This is a candidate diary-entry seam not yet written.
 
 - **The eye-of-the-storm architect ↔ the human gate.** O'Reilly's framing of the skeptical architect as "the eye of the storm" maps neatly onto the cyberneutics editorial human gate — the moment in the pipeline where the recursive deliberation terminates and a commitment is made. The 2026-04-20 diary recorded this as "one line worth keeping." It has not yet been used in any essay, but it is sitting in the wild ready for promotion.
 
@@ -144,7 +148,7 @@ These are structural alignments that exist in the corpus but are not framed as b
 
 - **The 2023 paper's processuality/criticality/difference triad ↔ cyberneutics' bridge=feedback=differentiation=teachback synthesis.** Essay 11's four-pillar synthesis (Dervin, von Foerster, Deleuze, Pask) and O'Reilly's 2023 triad cover overlapping territory in different vocabularies. Both are answers to "what's the unit of architecture-as-process?" The two sets of pillars could be cross-mapped: processuality ↔ Dervin (the gap is dynamic); criticality ↔ Pask (teachback as criticality test); difference ↔ Deleuze (explicit). The residuality side would benefit from the cyberneutics multi-pillar reading; the cyberneutics side would benefit from the residuality terms-of-art being recognized as load-bearing in essay 11 rather than as supporting analogy.
 
-- **Assemblage, rhizome, and nomadic distribution as residuality's operative grammar.** Three concepts from Deleuze and Guattari's *A Thousand Plateaus* — assemblage, rhizome, and nomadic distribution — map onto load-bearing residuality constructs (the residue, the hypernetwork of residues, the architectural walk) closely enough to qualify as conceptual structure rather than analogy. The vocabulary itself is absent from O'Reilly's papers; the *commitments* are present in the corpus and most explicit in the 2023 paper. The full development is in [`assemblage-rhizome-nomad.md`](assemblage-rhizome-nomad.md). This finding sharpens the case for treating residuality and cyberneutics as two independent traditions arriving at Deleuze-Guattarian architectural commitments through different practical routes, rather than two systems with shared citations. Essay-13's spine is most likely to be the convergence-as-narrative-proof move under this grammar.
+- **Assemblage, rhizome, and nomadic distribution as residuality's operative grammar.** Three concepts from Deleuze and Guattari's *A Thousand Plateaus* — assemblage, rhizome, and nomadic distribution — map onto load-bearing residuality constructs (the residue, the hypernetwork of residues, the architectural walk) closely enough to qualify as conceptual structure rather than analogy. The vocabulary itself is absent from O'Reilly's papers; the *commitments* are present in the corpus and most explicit in the 2023 paper. The full development is in [`assemblage-rhizome-nomad.md`](assemblage-rhizome-nomad.md). This finding sharpens the case for treating residuality and cyberneutics as two traditions arriving at Deleuze-Guattarian architectural commitments through different practical routes, rather than two systems with shared citations. Essay-13's spine candidate: the convergence under this grammar is one seam in the [narrative-proof](../diary/2026-04-03-narrative-proof.md) web — narrow because n=2 with overlapping intellectual environments — and the grammar's load-bearing claim (that it does explanatory work neither tradition could do alone) is testable via the falsifier paragraph in [`assemblage-rhizome-nomad.md`](assemblage-rhizome-nomad.md).
 
 > **Correction note (2026-04-25).** The earlier diary entry [2026-04-20](../diary/2026-04-20-residuality-philosophy-paper-reading.md) characterized the 2021 *Philosophy* paper's Deleuze engagement as "name-check only" and recommended that essay-13's Deleuze framing be revised in favor of Serres and Latour. That characterization was accurate *for the 2021 paper alone* but mis-extrapolated to the corpus; the 2023 paper develops Deleuze substantively, with five in-text engagements and three secondary references. The recommendation to "soften the Deleuze framing in essays 06 and 10" — flowing from the diary — is therefore retracted. The corrected position is that Deleuze is a primary anchor in the 2023 paper, alongside the Serres-and-Latour anchor of the 2021 paper, and that essay-13 should reflect the multi-anchor reality of the corpus. See [`assemblage-rhizome-nomad.md`](assemblage-rhizome-nomad.md) for the full analysis.
 
@@ -198,37 +202,44 @@ A practitioner reading the survey will reach §6 (residues + stressor process) a
 
 To be explicit about what stays out: the residue/eigenform distinction in its essay-10 form, the Probe-as-architectural-walks formalization, the inspectable-reasoning-records-as-criticality move, the Naur bridge, the calibration-register-as-long-run-Ri framing — these are cyberneutics contributions not part of O'Reilly's stated program as of 2024. The most directly actionable one — the fan operation as a stressor-list generator for residual analysis — has been written up in residuality-facing form as [`fan-as-stressor-generator.md`](fan-as-stressor-generator.md) (a self-contained note pitched at residuality practitioners). The other contributions remain Cyberneutics-internal as of this writing; whether and when they get residuality-facing treatment is open.
 
-The current state therefore has four documents in the residuality cluster, each with its own audience: the survey [`state-of-residuality-2026.md`](state-of-residuality-2026.md) presents O'Reilly's view to a third-party reader; this bilateral note records the cyberneutics-↔-residuality relationship for repository contributors; the fan-as-stressor-generator note offers a single tool to a residuality practitioner without requiring methodology buy-in; the assemblage-rhizome-nomad note ([`assemblage-rhizome-nomad.md`](assemblage-rhizome-nomad.md)) develops the Deleuze-Guattarian grammar that operates in the corpus beneath O'Reilly's explicit citations. Essay-13 will be the cyberneutics-side numbered-essay statement, drafted after Stacey arrives; whether the surrounding working notes survive into the final state is itself part of essay-13 development.
+The current state therefore has four documents in the residuality multi-document set, each with its own audience: the survey [`state-of-residuality-2026.md`](state-of-residuality-2026.md) presents O'Reilly's view to a third-party reader; this bilateral note records the cyberneutics-↔-residuality relationship for repository contributors; the fan-as-stressor-generator note offers a single tool to a residuality practitioner without requiring methodology buy-in; the assemblage-rhizome-nomad note ([`assemblage-rhizome-nomad.md`](assemblage-rhizome-nomad.md)) develops the Deleuze-Guattarian grammar that operates in the corpus beneath O'Reilly's explicit citations. Essay-13 will be the cyberneutics-side numbered-essay statement, drafted after Stacey arrives; retention of the surrounding working notes is decided by deletion test once the essay is drafted.
 
 ---
 
 ## 5. Summary table
 
-The table groups every connection by direction (inherited / contributed / parallel) and reports where each one is currently documented. The "Status" column reflects the *form* of the documentation, not the priority. Of the contributions back, only one — the fan operation as stressor-list generator — has been written up in residuality-facing form (the standalone working note); the others remain Cyberneutics-internal scaffolding pending essay-13's drafting and any decision to externalize specific contributions. The fan-as-stressor-generator was prioritized for externalization because it is the most directly actionable single tool a residuality practitioner can adopt without methodology buy-in, and because residuality theory's papers describe needing such a tool. Other contributions could be externalized similarly when the use case warrants — the calibration register as long-run Ri, for example, would land best alongside an empirical study.
+The table groups every connection by direction (inherited / contributed / parallel) and classifies contributed-back items along two orthogonal axes: **evidence tier** ((a) demonstrated in this repository / (b) implemented but not measured / (c) proposed but not implemented / (d) speculative or theoretical only) and **stance** (tool-or-cultural-practice × offer-or-prescription). Items classified as prescription are filed under "research directions about cyberneutics' practice" rather than as contributions to residuality theory; the prescriptive register would conscript the receiving tradition rather than offer to it.
 
-| Direction | Item | Where it lives now | Status |
-|---|---|---|---|
-| Inherited from residuality | Architectural-walks vocabulary | Essays 06, 10 | Stable |
-| Inherited from residuality | Residue/eigenform distinction | Essays 04, 06, 08, 10; palgebra | Stable |
-| Inherited from residuality | Criticality over correctness | Essay 10; methodology framing | Stable |
-| Inherited from residuality | Stressor vocabulary at micro-scale | Essay 11; wild/cybernetics/conversation-theory.md | Stable |
-| Inherited from residuality | Residual causality as dual-use frame | Diary 2026-04-20 | Open thread |
-| Contributed back | Probe as quantitative apparatus for walks | Essay 10; palgebra | Not yet written into a residuality-facing document |
-| Contributed back | Local/global eigenform distinction | Essays 04, 10 | Same |
-| Contributed back | Inspectable records as criticality | Methodology framing; diary 2026-04-25 | Same |
-| Contributed back | Two-step algorithm generalized to sense-making | Essay 10; palgebra | Same |
-| Contributed back | Second-order cybernetics answer to VSM critique | Diary 2026-04-20 | Same |
-| Contributed back | Naur bridge | Diary 2026-04-25 | Same |
-| Contributed back | Pask bridge | Essay 11; wild/cybernetics/conversation-theory.md | Same |
-| Contributed back | Calibration register as long-run Ri | Methodology; not yet written in residuality terms | Same |
-| Contributed back | Fan operation as stressor-list generator | [`fan-as-stressor-generator.md`](fan-as-stressor-generator.md); §2.9 above | Most directly actionable contribution; residuality practitioners can adopt without committing to cyberneutics |
-| Parallel, not borrowed | Hyperliminality ↔ organ/bloodstream | Repo navigation | Open |
-| Parallel, not borrowed | Random reading ↔ fan operation | Diary 2026-04-20 (open seam) | Candidate diary entry |
-| Parallel, not borrowed | Eye of the storm ↔ human gate | Diary 2026-04-20 | Candidate essay material |
-| Parallel, not borrowed | Component metaphor ↔ Naur ↔ cyberneutics inspectability | Diary 2026-04-25 | Stable framing |
-| Parallel, not borrowed | Mesh as accumulated funnel residue | wild/pask-mesh-fitting | Working hypothesis |
-| Parallel, not borrowed | Stacey as shared anchor | References | Under-engaged on cyberneutics side |
-| Parallel, not borrowed | Triad ↔ four-pillar synthesis | Essay 11 vs O'Reilly 2023 | Cross-mapping not written |
+Of the contributed-back items, the fan-as-stressor-generator is the only one written up in residuality-facing form. Two further items reach tier (a) (Probe as quantitative apparatus; situation-directory pattern as residue-from-live-process); the rest are scaffolding pending essay-13's drafting and any decision to externalize.
+
+| Direction | Item | Where it lives now | Evidence tier | Stance |
+|---|---|---|---|---|
+| Inherited from residuality | Architectural-walks vocabulary | Essays 06, 10 | — | — |
+| Inherited from residuality | Residue/eigenform distinction | Essays 04, 06, 08, 10; palgebra | — | — |
+| Inherited from residuality | Criticality over correctness | Essay 10; methodology framing | — | — |
+| Inherited from residuality | Stressor vocabulary at micro-scale | Essay 11; wild/cybernetics/conversation-theory.md | — | — |
+| Inherited from residuality | Residual causality as dual-use frame | Diary 2026-04-20 | — | open thread |
+| Contributed back | Probe as quantitative apparatus for walks | Essay 10; palgebra | (a) | tool, offer |
+| Contributed back | Local/global eigenform distinction | Essays 04, 10 | (a) | tool, offer |
+| Contributed back | Two-step algorithm generalized to sense-making | Essay 10; palgebra | (a) | tool, offer |
+| Contributed back | Situation-directory pattern as residue-from-live-process | This repo's situation-directory practice | (a) | cultural practice, offer |
+| Contributed back | Inspectable records as criticality | Methodology framing; diary 2026-04-25 | (b) | cultural practice, offer |
+| Contributed back | Decision-landscape mapping as NKP generalization | Essay 10; palgebra; not yet formalized as NKP claim | (b) | tool, offer |
+| Contributed back | Eigenform Ri (proposal §2.2) | §2.2 above | (c) untested | tool, offer |
+| Contributed back | Calibration register as long-run Ri | §2.8 above; design target pending multi-agent substrate | (c) not implemented | tool, offer |
+| Contributed back | Fan operation as stressor-list generator | [`fan-as-stressor-generator.md`](fan-as-stressor-generator.md); §2.9 above | (b) tool implemented; (c) Ri_F − Ri_A protocol untested | tool, offer |
+| Contributed back | Second-order cybernetics answer to VSM critique | Diary 2026-04-20; §2.5 above | (d) | conceptual position, offer |
+| Contributed back | Naur bridge | Diary 2026-04-25; §2.6 above | (d) | conceptual position, offer |
+| Contributed back | Pask bridge | Essay 11; wild/cybernetics/conversation-theory.md; §2.7 above | (d) | conceptual position, offer |
+| Research direction (not contribution) | Diary discipline as residuality-style organizational practice | This repo's diary practice | (d) | cultural practice, prescription |
+| Research direction (not contribution) | Failure catalog for first-order applications of residuality | Not yet written | (d) | tool/framework, prescription |
+| Parallel, not borrowed | Hyperliminality ↔ organ/bloodstream | Repo navigation | — | — |
+| Parallel, not borrowed | Random reading ↔ fan operation | Diary 2026-04-20 (open seam) | — | candidate diary entry |
+| Parallel, not borrowed | Eye of the storm ↔ human gate | Diary 2026-04-20 | — | candidate essay material |
+| Parallel, not borrowed | Component metaphor ↔ Naur ↔ cyberneutics inspectability | Diary 2026-04-25 | — | stable framing |
+| Parallel, not borrowed | Mesh as accumulated funnel residue | wild/pask-mesh-fitting | — | working hypothesis |
+| Parallel, not borrowed | Stacey as shared anchor | References | — | under-engaged on cyberneutics side |
+| Parallel, not borrowed | Triad ↔ four-pillar synthesis | Essay 11 vs O'Reilly 2023 | — | cross-mapping not written |
 
 ---
 

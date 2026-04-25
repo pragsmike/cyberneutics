@@ -75,6 +75,8 @@ A practical workflow, suitable for adoption inside an existing residual-analysis
 
 ## Empirical claim
 
+> **Status: Untested.** The protocol below is proposed; no Ri_F − Ri_A measurement has been performed on any system. The fan-as-stressor-generator workflow itself is implemented and operational in this repository; the *empirical claim* about its effect on Ri is a working hypothesis until the protocol runs on at least one system.
+
 The fan-as-stressor-generator workflow makes a specific empirical claim that is testable using residual analysis's own machinery: **a stressor list produced by a multi-character fan operation will produce a residual architecture with a higher Ri than a stressor list produced by a single-architect enumeration on the same system.**
 
 The protocol:

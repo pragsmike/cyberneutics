@@ -1,8 +1,21 @@
 # 2026-04-20 — Residuality: the philosophy paper, read at last
 
-> **Correction added 2026-04-25.** The "Where Deleuze actually sits in this" section below characterizes the 2021 *Philosophy* paper's Deleuze engagement as a single sentence and concludes that "essay-13's Deleuze framing has to be revised" with Serres and Latour as primary anchors. That characterization is accurate for the 2021 paper alone but mis-extrapolates to the corpus. The 2023 *Residuality and Representation* paper develops Deleuze substantively — five in-text engagements, three secondary references including *Difference and Repetition* directly — and the corpus as a whole operates on Deleuze-Guattarian conceptual structure (assemblage, rhizome, nomadic distribution) even where the *Mille Plateaux* vocabulary is absent. The recommendation here to "soften the Deleuze framing" in essays 06 and 10 is **retracted**. The corrected position is that Deleuze is a primary anchor in the 2023 paper, alongside the Serres-and-Latour anchor of the 2021 paper, and that the corpus has multiple primary anchors across the arc. See [`wild/residuality-theory/assemblage-rhizome-nomad.md`](../residuality-theory/assemblage-rhizome-nomad.md) for the full analysis.
->
-> Stacey's *Complexity and Organizational Reality* — flagged in the "Three things this changes for us" section below as the larger gap — has been ordered (delivery expected late April / early May 2026). The Stacey-as-load-bearing claim and the cybernetics-critique answer below remain open until the book arrives.
+> **Reader's note.** This entry has three layers: (1) the original 2026-04-20 record of the first careful reading of the 2021 *Philosophy* paper, (2) corrections recorded on 2026-04-25 after the assemblage-rhizome-nomad analysis surfaced that two of the original entry's recommendations were 2021-paper-bounded rather than corpus-level, and (3) the current status of the threads the entry opened. The structure is preserved as a record of the evolution of understanding; act on the **Current status** section at the bottom, not on the original recommendations alone.
+
+---
+
+## Current status (as of 2026-04-25)
+
+- **The "Deleuze as name-check only" claim is retracted.** It was accurate for the 2021 paper alone but the 2023 *Residuality and Representation* paper develops Deleuze substantively (five in-text engagements, three secondary references including *Difference and Repetition* directly), and the corpus as a whole operates on Deleuze-Guattarian conceptual structure (assemblage, rhizome, nomadic distribution) even where the *Mille Plateaux* vocabulary is absent. See [`wild/residuality-theory/assemblage-rhizome-nomad.md`](../residuality-theory/assemblage-rhizome-nomad.md) for the full analysis.
+- **The recommendation to "soften the Deleuze framing" in essays 06 and 10 is retracted.** Essays 06 and 10 stand as written; the 2023 paper's substantive Deleuze engagement supports the existing framing.
+- **The Stacey gap is real and pending.** Stacey's *Complexity and Organizational Reality* has been ordered (delivery expected late April / early May 2026). The Stacey-as-load-bearing claim and the cybernetics-critique answer below remain open until the book arrives.
+- **The cybernetics-critique answer remains open work.** The VSM critique that essay-13 must answer is drafted in [`wild/residuality-theory/cyberneutics-and-residuality.md`](../residuality-theory/cyberneutics-and-residuality.md) §2.5 and below in this entry. Making it load-bearing in essay-13 awaits Stacey.
+- **The residual-causality-as-dual-use frame stands** as an open thread for future essay material (not yet written).
+- **The current essay-13 plan** is in [`wild/residuality-theory/README.md`](../residuality-theory/README.md) under "Essay-13: planned graduation as multi-document set."
+
+---
+
+## Original entry (2026-04-20)
 
 A long conversation that started with Eric Normand's substack piece on residuality theory and ended with the 2021 Procedia paper itself in hand. The paper changes several things about how `wild/residuality-theory/` should be developed and how essay-13 should eventually be framed. Recording the findings while they are fresh.
 
@@ -27,7 +40,7 @@ The via negativa move: we cannot identify perfect form, but we can identify resi
 
 ## Where Deleuze actually sits in this
 
-> **[2026-04-25 retraction marker.]** This section's "name-check only" claim was 2021-paper-bounded. The 2023 *Residuality and Representation* paper develops Deleuze substantively (five in-text engagements, *Difference and Repetition* cited directly, plus Cisney and Williams as secondary literature). Across the corpus residuality theory operates on Deleuze-Guattarian grammar (assemblage, rhizome, nomadic distribution) even where the *Mille Plateaux* vocabulary is absent. See the top-of-file footnote and [`wild/residuality-theory/assemblage-rhizome-nomad.md`](../residuality-theory/assemblage-rhizome-nomad.md). The section below is preserved as historical record of the working understanding on 2026-04-20; act on the current understanding, not on it.
+> **Note: the conclusion of this section has been retracted.** See **Current status** at the top of this entry. The text below is preserved as historical record of the 2026-04-20 working understanding; the corpus-level claim that emerged from it (Deleuze as name-check only) does not survive the 2023-paper engagement done on 2026-04-25.
 
 Less centrally than I had assumed. The 2021 paper name-checks Deleuze once, in a single sentence: *"Deleuze clearly saw post-structuralism's escape from rigid structures as a cause for celebration."* That is the full extent of the Deleuze citation. No *Difference and Repetition*, no technical use of "difference," no rhizome.
 
@@ -59,7 +72,7 @@ This is worth imitating. Essay-13 should not treat residuality as a universal so
 
 ## Next moves
 
-> **[2026-04-25 status update.]** Items 1–3 below are done; item 4 is partially done with caveats noted. The current best plan is recorded in [`wild/residuality-theory/README.md`](../residuality-theory/README.md) under "Essay-13: planned graduation, likely a cluster" and the "Remaining directions" list below it. The list below is preserved as historical record of the working plan on 2026-04-20.
+> **Note**: this list is historical (2026-04-20). See **Current status** at the top of the entry, and the canonical plan in [`wild/residuality-theory/README.md`](../residuality-theory/README.md) under "Essay-13: planned graduation as multi-document set."
 
 Separate from essay-12's graduation (now in motion), the sequence for residuality is:
 

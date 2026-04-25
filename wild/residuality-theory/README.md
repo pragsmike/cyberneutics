@@ -24,6 +24,7 @@ If you are an agent landing in this directory looking for what to read, see *Sou
 
 | File | What it is | When to read |
 |---|---|---|
+| [`essay-13-readiness-plan.md`](essay-13-readiness-plan.md) | **Action document.** Current state of essay-13 readiness, what has been done, what remains (items 9a, 9b, 11, 17, 18, plus Stacey arrival), the four-posture decision space, sustained dissents preserved through deliberation, and the canonical contribution-back inventory. Codifies the outcomes of the 2026-04-25 audit + remediation deliberation. | **First** if you are picking up work toward essay-13. |
 | [`state-of-residuality-2026.md`](state-of-residuality-2026.md) | Survey paper. ~5,200 words. Third-person presentation of residuality theory as a unified body, drawing on all six O'Reilly papers. Sections: hyperliminality, component metaphor, residual causality, residues + stressor process, two-step algorithm, NKP analysis, Ri, processuality/criticality/difference, limits, historical development, reading paths. | When you want the current synthesis without reconstructing it from six separate papers. The first read for someone new to the topic. |
 | [`cyberneutics-and-residuality.md`](cyberneutics-and-residuality.md) | Working note on the bilateral relationship: what cyberneutics inherits from residuality, what cyberneutics could contribute back, and the structural parallels that are neither. Includes proposals for extending the survey paper. ~3,900 words. | When working on essay-13 development, or when the question is "where does our methodology stand relative to O'Reilly's program?" |
 | [`fan-as-stressor-generator.md`](fan-as-stressor-generator.md) | Standalone working note pitched at a residuality practitioner: the cyberneutics fan operation as an upstream tool for generating the stressor list residual analysis takes as input. Self-contained — does not require commitment to the rest of the cyberneutics methodology. ~2,300 words. | When you are a residuality practitioner looking for a more disciplined stressor-generation tool, or when explaining the most actionable single contribution cyberneutics offers back. |
@@ -138,7 +139,7 @@ O'Reilly's hyperliminality — ordered software inside a disordered environment 
 
 ### Random reading as worldview-stressor analysis
 
-The 2021 *Machine in the Ghost* paper has a reflexive §5 in which O'Reilly narrates how residuality theory came to be through his own random walk through the literature, and explicitly frames random reading as stressor analysis applied to one's own worldview. This is the same move the cyberneutics fan operation makes for decision spaces: divergent material that stresses a worldview and reveals previously invisible coupling between assumptions. The convergence between O'Reilly arriving at this through residuality and cyberneutics arriving at it through committee deliberation is itself an instance of *narrative proof* — independent formulations of the same problem strengthen both. This is a candidate diary-entry seam for `wild/diary/`.
+The 2021 *Machine in the Ghost* paper has a reflexive §5 in which O'Reilly narrates how residuality theory came to be through his own random walk through the literature, and explicitly frames random reading as stressor analysis applied to one's own worldview. This is the same move the cyberneutics fan operation makes for decision spaces: divergent material that stresses a worldview and reveals previously invisible coupling between assumptions. The convergence between O'Reilly arriving at this through residuality and cyberneutics arriving at it through committee deliberation is one seam in cyberneutics' [narrative-proof](../diary/2026-04-03-narrative-proof.md) web — narrow because n=2 with overlapping intellectual environments, but real where the structural pattern recurs. This is a candidate diary-entry seam for `wild/diary/`.
 
 ### Residuality and palgebra
 
@@ -171,16 +172,18 @@ April 2026 integrations (working notes in this directory):
 
 This directory was created because an external contributor (second fork, February 2026) noted the Deleuzian walks → Architectural walks connection and because the eigenform question opened a productive theoretical seam. See [meta/uptake-and-usage.md](../../meta/uptake-and-usage.md) for context.
 
-### Essay-13: planned graduation, likely a cluster
+### Essay-13: planned graduation as multi-document set
 
-Essay-13 is the planned numbered-essay graduation of the residuality material. Current working assumption: essay-13 is *not* a single graduation event but a *cluster* of artefacts with different audiences:
+Essay-13's planned graduation is a multi-document set with one numbered essay plus retained working notes, each serving a distinct audience:
 
-- The **numbered essay** itself — Cyberneutics-side statement of where the methodology stands relative to residuality, with the convergence-as-narrative-proof framing as the candidate spine, the cybernetics-critique answer made load-bearing, and the contributions back named.
-- The **survey paper** ([`state-of-residuality-2026.md`](state-of-residuality-2026.md)) — kept as third-party presentation of O'Reilly's view; not absorbed into essay-13. Audience: someone learning residuality, who would read essay-13 second.
-- The **fan-as-stressor-generator working note** ([`fan-as-stressor-generator.md`](fan-as-stressor-generator.md)) — kept as practitioner-facing artefact pitched at residuality practitioners. Not absorbed into essay-13. Audience: software architects practicing residual analysis who want a more disciplined stressor-generation tool.
-- The **bilateral note** and **assemblage-rhizome-nomad** as Cyberneutics-internal scaffolding for essay-13 development; whether they survive in their current form post-essay-13 is itself an open question.
+- The **numbered essay** — Cyberneutics-side statement of where the methodology stands relative to residuality, with the cybernetics-critique answer made load-bearing and the contributions back named.
+- The **survey paper** ([`state-of-residuality-2026.md`](state-of-residuality-2026.md)) — third-party presentation of O'Reilly's view. Audience: someone learning residuality, who would read essay-13 second.
+- The **fan-as-stressor-generator note** ([`fan-as-stressor-generator.md`](fan-as-stressor-generator.md)) — residuality-practitioner-facing tool. Audience: software architects practicing residual analysis who want a more disciplined stressor-generation tool.
+- The **bilateral note** and **assemblage-rhizome-nomad note** — Cyberneutics-internal scaffolding for essay-13 development; retention decided by deletion test once the essay is drafted.
 
-The "graduation target" framing therefore covers the cluster, not just the numbered essay slot. Spine candidate: convergence-as-narrative-proof under Deleuze-Guattarian grammar. Cybernetics-critique answer must be load-bearing in the numbered essay (currently drafted only in the bilateral note's §2.5 and the 2026-04-20 diary).
+**Spine.** The convergence under a shared Deleuze-Guattarian grammar (assemblage, rhizome, nomadic distribution) is one seam in cyberneutics' narrative-proof web (see [diary 2026-04-03](../diary/2026-04-03-narrative-proof.md) for the canonical definition), narrow because n=2 and the intellectual environments overlap. The grammar's load-bearing claim — that it does explanatory work neither tradition could do alone — is testable; the falsifier paragraph in [`assemblage-rhizome-nomad.md`](assemblage-rhizome-nomad.md) is the test.
+
+**Cybernetics-critique answer** must be load-bearing in the numbered essay (currently drafted only in the bilateral note's §2.5 and the 2026-04-20 diary).
 
 ### Remaining directions
 
