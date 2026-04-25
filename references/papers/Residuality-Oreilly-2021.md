@@ -1,3 +1,17 @@
+---
+title: "The Philosophy of Residuality Theory"
+author: "O'Reilly, Barry M."
+year: 2021
+venue: "Procedia Computer Science 184: 809–816"
+doi: "10.1016/j.procs.2021.03.101"
+license: "CC BY-NC-ND 4.0"
+type: paper-extract
+length_words: 4064
+topics: [component-metaphor, residual-causality, post-structuralism, Serres, Latour, Stacey, cybernetics-critique, via-negativa]
+companion_summary: Residuality-Oreilly-2021-summary.md
+companion_pdf: pdfs/Residuality-Oreilly-2021.pdf
+---
+
 # The Philosophy of Residuality Theory
 
 Barry M O'Reilly  

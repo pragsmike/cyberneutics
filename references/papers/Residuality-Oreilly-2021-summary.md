@@ -1,3 +1,17 @@
+---
+title: "The Philosophy of Residuality Theory — Summary"
+author: "O'Reilly, Barry M."
+year: 2021
+venue: "Procedia Computer Science 184: 809–816"
+doi: "10.1016/j.procs.2021.03.101"
+license: "CC BY-NC-ND 4.0"
+type: paper-summary
+length_words: 1011
+topics: [component-metaphor, residual-causality, post-structuralism, Serres, Latour, Stacey, cybernetics-critique, via-negativa]
+companion_full_text: Residuality-Oreilly-2021.md
+companion_pdf: pdfs/Residuality-Oreilly-2021.pdf
+---
+
 # The Philosophy of Residuality Theory
 
 **O'Reilly, Barry M.** *Procedia Computer Science* 184 (2021): 809–816. CC BY-NC-ND 4.0.
@@ -81,6 +95,6 @@ LLM-extracted content. Page numbers refer to the *Procedia Computer Science* pag
 
 ---
 
-*Companion to: `The-Philosophy-of-Residuality-Theory.pdf`*
-*See also: `Residuality-Oreilly-2019.md`, `Residuality-Oreilly-2020.md`, `Residuality-Oreilly-2022.md`, `Residuality-Oreilly-2023.md`*
+*Companion to: `pdfs/Residuality-Oreilly-2021.pdf`*
+*See also: [`Residuality-Oreilly-2019-summary.md`](Residuality-Oreilly-2019-summary.md), [`Residuality-Oreilly-2020-summary.md`](Residuality-Oreilly-2020-summary.md), [`Residuality-Oreilly-2021-machine-in-the-ghost-summary.md`](Residuality-Oreilly-2021-machine-in-the-ghost-summary.md) (Machine in the Ghost — companion 2021 paper), [`Residuality-Oreilly-2022-summary.md`](Residuality-Oreilly-2022-summary.md), [`Residuality-Oreilly-2023-summary.md`](Residuality-Oreilly-2023-summary.md), [`Residuality-Oreilly-chronology.md`](Residuality-Oreilly-chronology.md)*
 *Cyberneutics cross-references: `essays/10-decisions-under-uncertainty.md`, `wild/diary/2026-04-03-narrative-proof.md`, `palgebra/`*
