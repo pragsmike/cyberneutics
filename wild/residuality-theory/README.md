@@ -153,19 +153,42 @@ A deliberation record (00-04 files) is both a palgebra artifact chain *and* the 
 
 ## Status
 
-**Partially integrated.** The core connections have been formalized:
+**Substantially integrated.** Eight connections have been formalized in the residuality material this directory now contains. The first three were the original integrations from February–March 2026; the next five came out of the April assimilation work and are developed in the working notes.
+
+Original integrations:
 
 - **Architectural walks → Probe operation**: Running the composed fan → funnel pipeline N times is N architectural walks through the decision space. See [Duality and Composition](../../palgebra/duality-and-composition.md) for the formal treatment.
 - **Residues vs. eigenforms**: A single deliberation produces a residue; repeated runs hunt eigenforms. The remediation loop within a run hunts local eigenforms; the Probe operation hunts global ones. See [Decisions Under Uncertainty](../../essays/10-decisions-under-uncertainty.md) for the philosophical bridge.
 - **Criticality → survival constraint**: The appropriate optimization target for wicked problems shifts from maximizing expected value to satisficing subject to a survival constraint. This is O'Reilly's "criticality over correctness" made operational.
 
+April 2026 integrations (working notes in this directory):
+
+- **Bilateral inheritance/contribution map**: a full inventory of what cyberneutics borrows from residuality and what cyberneutics could contribute back, in [`cyberneutics-and-residuality.md`](cyberneutics-and-residuality.md). Includes the Naur bridge, the Pask bridge, the second-order cybernetics answer to the VSM critique, and survey-extension proposals.
+- **Fan operation as stressor-list generator**: the most directly actionable contribution back to residuality theory — a structured LLM-driven fan as the upstream tool for residual analysis's stressor list. Self-contained note pitched at residuality practitioners: [`fan-as-stressor-generator.md`](fan-as-stressor-generator.md). Includes an empirical protocol using Ri.
+- **Deleuze-Guattarian conceptual grammar**: residue ↔ assemblage, hypernetwork-of-residues ↔ rhizome, architectural walk ↔ nomadic distribution. The mapping is one-to-one rather than analogical and operates beneath O'Reilly's explicit Deleuze citations. See [`assemblage-rhizome-nomad.md`](assemblage-rhizome-nomad.md).
+- **Survey of residuality theory**: a third-person ~5,400-word presentation of the corpus as a unified body. See [`state-of-residuality-2026.md`](state-of-residuality-2026.md). The companion bibliography is [`residuality-bibliography.md`](residuality-bibliography.md).
+- **Recorded retraction**: the 2026-04-20 diary's "Deleuze as name-check only" claim has been corrected; essays 06 and 10 stand as written. The retraction is recorded in five places to prevent the recurring of the misreading.
+
 This directory was created because an external contributor (second fork, February 2026) noted the Deleuzian walks → Architectural walks connection and because the eigenform question opened a productive theoretical seam. See [meta/uptake-and-usage.md](../../meta/uptake-and-usage.md) for context.
+
+### Essay-13: planned graduation, likely a cluster
+
+Essay-13 is the planned numbered-essay graduation of the residuality material. Current working assumption: essay-13 is *not* a single graduation event but a *cluster* of artefacts with different audiences:
+
+- The **numbered essay** itself — Cyberneutics-side statement of where the methodology stands relative to residuality, with the convergence-as-narrative-proof framing as the candidate spine, the cybernetics-critique answer made load-bearing, and the contributions back named.
+- The **survey paper** ([`state-of-residuality-2026.md`](state-of-residuality-2026.md)) — kept as third-party presentation of O'Reilly's view; not absorbed into essay-13. Audience: someone learning residuality, who would read essay-13 second.
+- The **fan-as-stressor-generator working note** ([`fan-as-stressor-generator.md`](fan-as-stressor-generator.md)) — kept as practitioner-facing artefact pitched at residuality practitioners. Not absorbed into essay-13. Audience: software architects practicing residual analysis who want a more disciplined stressor-generation tool.
+- The **bilateral note** and **assemblage-rhizome-nomad** as Cyberneutics-internal scaffolding for essay-13 development; whether they survive in their current form post-essay-13 is itself an open question.
+
+The "graduation target" framing therefore covers the cluster, not just the numbered essay slot. Spine candidate: convergence-as-narrative-proof under Deleuze-Guattarian grammar. Cybernetics-critique answer must be load-bearing in the numbered essay (currently drafted only in the bilateral note's §2.5 and the 2026-04-20 diary).
 
 ### Remaining directions
 
-- Whether the 2-round remediation cap makes sense in eigenform terms — are we stopping at local fixed points? (Documented as open question in the palgebra treatment.)
-- Connecting O'Reilly's "criticality" more deeply to the evaluation rubric system — how do you know a deliberation is critical rather than just locally coherent?
-- A committee deliberation on the question: what is the committee process in residuality terms? What are the residues of deliberation?
-- Whether hyperliminality and the organ/bloodstream distinction should be unified vocabulary or kept separate as parallel framings of the same structural problem.
-- Whether to write a diary entry naming the convergence between the *Machine in the Ghost* §5 reflexive move and the cyberneutics fan operation as an instance of narrative proof.
-- Essay-13 development: graduating residuality material from this wild/ directory into a numbered essay. The survey paper here is a candidate for that promotion if/when essay-13 stabilizes.
+- **Stacey arrives**: order placed late April 2026, delivery expected late April / early May. The cybernetics-critique answer that essay-13 must make load-bearing leans on Stacey's three-causalities and dominant-discourse work, currently engaged secondhand through O'Reilly's 2021 *Philosophy* paper. Until Stacey is in hand, primary-source engagement is deferred. After Stacey arrives: a short follow-up working note checking whether Stacey's framework fits cleanly into the assemblage-rhizome-nomad grammar developed in [`assemblage-rhizome-nomad.md`](assemblage-rhizome-nomad.md), or preserves a distinct philosophical line.
+- **Drafting essay-13** after the Stacey reading. Spine candidate above; ~5,000+ words; the cybernetics-critique answer is the load-bearing piece that must be defended explicitly.
+- **A diary entry on the random-reading-as-stressor-analysis convergence** — the *Machine in the Ghost* §5 reflexive move ↔ the fan operation. Flagged as "candidate diary-entry seam not yet written" in the bilateral note.
+- **Whether hyperliminality and the organ/bloodstream distinction should be unified vocabulary** or kept separate as parallel framings.
+- **Whether the deterritorialization side of assemblage** (which the assemblage-rhizome-nomad note flags as undertreated) should get its own working note, particularly in connection with legacy-systems and the Naur theory-building bridge.
+- **Whether the 2-round remediation cap makes sense in eigenform terms** — are we stopping at local fixed points? (Documented as open question in the palgebra treatment.)
+- **Connecting O'Reilly's "criticality" more deeply to the evaluation rubric system** — how do you know a deliberation is critical rather than just locally coherent?
+- **A committee deliberation on the question**: what is the committee process in residuality terms? What are the residues of deliberation?

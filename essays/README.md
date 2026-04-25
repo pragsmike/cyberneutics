@@ -338,6 +338,18 @@ The essays in this directory establish *why* narrative engines need narrative en
 
 ---
 
+### Essay 13 — Residuality and Cyberneutics (planned)
+
+**Status**: Planned but not yet drafted. Slot reserved; current scaffolding lives in [`wild/residuality-theory/`](../wild/residuality-theory/), which holds a third-party survey of Barry M. O'Reilly's residuality theory, a union bibliography, a bilateral relationship note, a fan-as-stressor-generator working note, and a Deleuze-Guattarian conceptual-grammar reading.
+
+**Spine candidate**: convergence as narrative proof. Residuality theory and cyberneutics arrived at structurally-similar architectural commitments — process over substance, criticality over correctness, difference over essence — through independent practical routes (residuality from software architecture, cyberneutics from sense-making and committee deliberation). The convergence under a Deleuze-Guattarian conceptual grammar (assemblage, rhizome, nomadic distribution) is itself the load-bearing finding.
+
+**Drafting prerequisites**: Stacey's *Complexity and Organizational Reality* (ordered late April 2026; expected delivery late April / early May) for primary-source engagement with the cybernetics-critique answer. The other prerequisites (sit with the 2021 paper, working notes complete, Deleuze framing corrected) are met.
+
+**Likely structure**: a numbered essay paired with retained working notes in `wild/residuality-theory/` (the survey, the fan-as-stressor-generator practitioner-facing artefact, the bilateral relationship note as scaffolding). Essay-13 is therefore likely a *cluster* rather than a single graduation event.
+
+---
+
 ### [The Stochastic Imps of Happenstance](./the-stochastic-imps-of-happenstance.md)
 
 **The insight**: Most failures aren't malice or incompetence—they're noise. Entropy favors failure simply because there are more ways to break than to succeed.

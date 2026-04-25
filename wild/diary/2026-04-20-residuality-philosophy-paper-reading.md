@@ -27,6 +27,8 @@ The via negativa move: we cannot identify perfect form, but we can identify resi
 
 ## Where Deleuze actually sits in this
 
+> **[2026-04-25 retraction marker.]** This section's "name-check only" claim was 2021-paper-bounded. The 2023 *Residuality and Representation* paper develops Deleuze substantively (five in-text engagements, *Difference and Repetition* cited directly, plus Cisney and Williams as secondary literature). Across the corpus residuality theory operates on Deleuze-Guattarian grammar (assemblage, rhizome, nomadic distribution) even where the *Mille Plateaux* vocabulary is absent. See the top-of-file footnote and [`wild/residuality-theory/assemblage-rhizome-nomad.md`](../residuality-theory/assemblage-rhizome-nomad.md). The section below is preserved as historical record of the working understanding on 2026-04-20; act on the current understanding, not on it.
+
 Less centrally than I had assumed. The 2021 paper name-checks Deleuze once, in a single sentence: *"Deleuze clearly saw post-structuralism's escape from rigid structures as a cause for celebration."* That is the full extent of the Deleuze citation. No *Difference and Repetition*, no technical use of "difference," no rhizome.
 
 The heavy post-structural lifting is done by **Serres** (via Brown's 2002 paper in *Theory, Culture & Society*) and **Latour** (Actor-Network Theory, *Science in Action*). Serres on noise-as-worth-including, modeling, translation. Latour on the component metaphor as a constructed fact — a Latourian black box "validated by inclusion in thousands of texts yet with little scientific backing in the beginning."
@@ -57,12 +59,14 @@ This is worth imitating. Essay-13 should not treat residuality as a universal so
 
 ## Next moves
 
+> **[2026-04-25 status update.]** Items 1–3 below are done; item 4 is partially done with caveats noted. The current best plan is recorded in [`wild/residuality-theory/README.md`](../residuality-theory/README.md) under "Essay-13: planned graduation, likely a cluster" and the "Remaining directions" list below it. The list below is preserved as historical record of the working plan on 2026-04-20.
+
 Separate from essay-12's graduation (now in motion), the sequence for residuality is:
 
-1. Add O'Reilly (2020, 2021, 2023) and Normand (2024) to references/README.md under a new Residuality Theory subsection. Add Brown (2002) on Serres. Add Stacey (2009).
-2. Consider buying or borrowing Stacey's *Complexity and Organizational Reality* and adding it to the inventory.
-3. Sit with the 2021 paper. It is short and dense; one careful re-read will probably surface things this diary entry misses.
-4. When essay-13 is drafted — after essay-12 has graduated and after at least one sprint of sitting with the paper — make the revisions above: Serres-and-Latour as primary anchors, Deleuze as pattern-match only, Stacey as load-bearing, the VSM critique answered explicitly, residual causality as the core concept connecting structure-as-risk to the pipeline's stress-testing posture.
+1. ✅ **Done (2026-04-20 → 2026-04-24).** Add O'Reilly (2020, 2021, 2023) and Normand (2024) to references/README.md under a new Residuality Theory subsection. Add Brown (2002) on Serres. Add Stacey (2009). All six O'Reilly papers (the four above plus 2019 and the 2021 *Philosophies* piece *Machine in the Ghost*) now archived in [`references/papers/`](../../references/papers/) with full-text markdown extractions and summaries. Master bibliography in [references/README.md §Residuality Theory](../../references/README.md#residuality-theory) lists all six plus Normand, Brown, and Stacey.
+2. ✅ **Done (2026-04-25).** Stacey's *Complexity and Organizational Reality* has been ordered; delivery expected late April / early May 2026.
+3. ✅ **Done (2026-04-25).** Sit with the 2021 paper completed. The careful re-read produced the survey, bilateral note, fan-as-stressor-generator, and Deleuzian-grammar working notes in [`wild/residuality-theory/`](../residuality-theory/). The "things this diary entry misses" turned out to include the corpus-level Deleuze engagement (corrected at top of file).
+4. ⚠ **Partially done; corrected.** Essay-12 has graduated. The "soften Deleuze framing in essays 06 and 10" recommendation has been **retracted** (see footnote at top of this file): the 2023 paper's substantive Deleuze engagement and the assemblage-rhizome-nomad grammar make the existing essay 06 and 10 framings well-supported. Stacey-as-load-bearing remains pending the book's arrival. The VSM critique answer has been drafted in [`cyberneutics-and-residuality.md`](../residuality-theory/cyberneutics-and-residuality.md) §2.5; making it load-bearing in essay-13 is open work. Residual causality as the structure-as-risk concept connecting to the pipeline's stress-testing posture stands.
 
 ## One line worth keeping
 

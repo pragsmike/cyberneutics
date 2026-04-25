@@ -1,6 +1,6 @@
 # Project State
 
-Last updated: 2026-04-24
+Last updated: 2026-04-25
 
 This document is the canonical current-state reference for repo structure, compatibility truths, and live open questions. It replaces the old stale backlog-file role with a narrower, actively maintained state doc.
 
@@ -112,6 +112,14 @@ Complete as of 2026-03-07. All items resolved:
 - **`agent/onboarding-core.md`** — Added `/diary` row to Available Workflows table.
 - **`wild/diary/2026-03-26-echo-chamber-immune-organs.md`** — New diary entry: echo chambers reframed as immune organs via organ/bloodstream distinction; emotion-first vs. inference-first as thymic discrimination signal; dark shares as organ/bloodstream interface morphism; missing System 3* (calibration gap).
 - **`applications/narrative-immune-systems/references-choe-echo-chamber-studies.md`** — New: six verified studies with full citations, key findings, and cyberneutics cross-references (Simchon SDT inoculation meta-analysis, Van der Linden Instagram prebunking, Kim voter suppression, Bond 61M mobilization, CIRCLE youth sources, Civic Power IPO report).
+
+### Residuality theory: survey, bilateral note, fan-as-stressor-generator, Deleuzian-grammar working note (2026-04-25)
+
+- **Five new files in `wild/residuality-theory/`**: `state-of-residuality-2026.md` (~5,400-word survey paper drawing on all six O'Reilly papers), `residuality-bibliography.md` (~2,900-word union bibliography), `cyberneutics-and-residuality.md` (~4,200-word bilateral relationship note), `fan-as-stressor-generator.md` (~2,300-word standalone working note pitched at residuality practitioners), `assemblage-rhizome-nomad.md` (~3,000-word working note on the Deleuze-Guattari conceptual grammar that operates in residuality theory beneath O'Reilly's explicit Deleuze citations).
+- **Directory README rewritten** as agent-facing navigation hub: source-material navigation table, cited-but-not-archived list, practitioner-introduction links, three-step reading recommendation. Existing Cyberneutics-internal content (Deleuzian thread, residues-vs-eigenforms, palgebra connection) preserved.
+- **Major framing correction recorded**: the 2026-04-20 diary's "Deleuze as name-check only" claim was bounded to the 2021 *Philosophy* paper. The 2023 *Residuality and Representation* paper develops Deleuze substantively (five in-text engagements, three secondary references). The recommendation to "soften the Deleuze framing in essays 06 and 10" is **retracted**. Essays 06 and 10 stand as written. Corpus has multiple primary philosophical anchors across its arc, not one.
+- **Stacey ordered.** *Complexity and Organizational Reality* (Routledge 2009) ordered late April 2026; arrival expected late April / early May. Essay-13 drafting waits on this delivery for primary-source engagement with the cybernetics-critique answer.
+- **Cleanup pass on false signals**: 14 items addressed across `wild/README.md`, the bilateral note, the survey, the residuality-theory README, the 2026-04-20 diary, `essays/README.md`, and this file.
 
 ### references/papers/ audit + Machine in the Ghost assimilation (2026-04-24)
 
