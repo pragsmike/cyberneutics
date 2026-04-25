@@ -143,7 +143,7 @@ The load-bearing claim of the committee format was never "makes better decisions
 - **Raw outputs**: [raw/](raw/) (all B1 and B1-ext model outputs)
 - **Committee deliberation record**: [deliberations/black-swan-phase-a/](deliberations/black-swan-phase-a/) (charter, transcript, resolution, two evaluations, one remediation round)
 - **Protocol**: [../evaluating-deliberative-architectures.md](../evaluating-deliberative-architectures.md)
-- **Revision plan**: [../../../agent/prompts/black-swan-phase-a-revision.md](../../../agent/prompts/black-swan-phase-a-revision.md)
+- **Revision plan** (archived; spent): [../../../agent/archive/black-swan-phase-a-revision-plan.md](../../../agent/archive/black-swan-phase-a-revision-plan.md)
 - **Research program README**: [../README.md](../README.md)
 - **Reassessment deliberation**: [deliberations/black-swan-phase-a-reassessment/](deliberations/black-swan-phase-a-reassessment/) (charter, roster, deliberation, resolution, evaluation)
 - **Phase A results report**: [phase-a-results.md](phase-a-results.md)
