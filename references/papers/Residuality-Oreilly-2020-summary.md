@@ -73,5 +73,5 @@ LLM-extracted content. Page numbers refer to the *Procedia Computer Science* pag
 ---
 
 *Companion to: `Residuality-Oreilly-2020.pdf`*
-*See also: `The-Philosophy-of-Residuality-Theory.md` (2021), `Residuality-Oreilly-2022.md`, `Residuality-Oreilly-2023.md`*
+*See also: `Residuality-Oreilly-2019.md`, `The-Philosophy-of-Residuality-Theory.md` (2021), `Residuality-Oreilly-2022.md`, `Residuality-Oreilly-2023.md`*
 *Cyberneutics cross-references: `essays/10-decisions-under-uncertainty.md`, `wild/diary/2026-02-21-cyberneutics-dual-operations.md`*
