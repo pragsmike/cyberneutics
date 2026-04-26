@@ -1,6 +1,6 @@
 # Project State
 
-Last updated: 2026-04-25
+Last updated: 2026-04-26
 
 This document is the canonical current-state reference for repo structure, compatibility truths, and live open questions. It replaces the old stale backlog-file role with a narrower, actively maintained state doc.
 
@@ -112,6 +112,15 @@ Complete as of 2026-03-07. All items resolved:
 - **`agent/onboarding-core.md`** — Added `/diary` row to Available Workflows table.
 - **`wild/diary/2026-03-26-echo-chamber-immune-organs.md`** — New diary entry: echo chambers reframed as immune organs via organ/bloodstream distinction; emotion-first vs. inference-first as thymic discrimination signal; dark shares as organ/bloodstream interface morphism; missing System 3* (calibration gap).
 - **`applications/narrative-immune-systems/references-choe-echo-chamber-studies.md`** — New: six verified studies with full citations, key findings, and cyberneutics cross-references (Simchon SDT inoculation meta-analysis, Van der Linden Instagram prebunking, Kim voter suppression, Bond 61M mobilization, CIRCLE youth sources, Civic Power IPO report).
+
+### Residuality theory: survey broadened to include the 2024 *Residues* book (2026-04-26)
+
+- **Survey [`state-of-residuality-2026.md`](../wild/residuality-theory/state-of-residuality-2026.md) broadened from "papers" to "papers + 2024 book."** Integration strategy (b): book material throughout in survey-register prose, with a dedicated §12 treating the book in its own right (register, additions, omissions, reception, uptake, forthcoming work). Length grew from ~5,400 to ~6,800 words. Stability-window re-check on the bilateral note found no flip on the convergence spine; item 9b is not restarted.
+- **Working notes revised** to incorporate book material: bilateral note ([`cyberneutics-and-residuality.md`](../wild/residuality-theory/cyberneutics-and-residuality.md)) updated with book's contagion-analysis renaming of step 2, with hyperliminality-grounded reformulation of the cybernetics-critique answer in §2.5 (Beer's VSM as ergodic-core methodology rather than wholesale rejection), and with publicly-unverified-empirical-claim possibility added carefully to §2.1/§2.2; fan note ([`fan-as-stressor-generator.md`](../wild/residuality-theory/fan-as-stressor-generator.md)) repositioned as breadth discipline atop O'Reilly's recommended upstream aids (PESTLE, BMC, Porter) rather than filling a vacuum; assemblage-rhizome-nomad note ([`assemblage-rhizome-nomad.md`](../wild/residuality-theory/assemblage-rhizome-nomad.md)) sharpened with book-level evidence (book amplifies walk, omits grammar) and corpus-wide negative-search-result evidence, plus a new §6 falsifier paragraph (item 11) for the convergence claim.
+- **Bibliography expanded** with book-cited references (DeLanda 2013, Marion 1999, Prigogine & Stengers 1997, Parnas & Clements 1986, Osterwalder & Pigneur 2010, Porter 2008, PESTLE source) and Phase 0 external-research sources (VirtualDDD sessions, Avanscoperta workshop, *software-architektur.tv* episode 279, doubleSlash blog explainer, Goodreads named-reviewer reception cluster). Pending-known-gaps section added recording publicly-unverified items.
+- **Honest open gaps** flagged across survey, bibliography, and README: O'Reilly's PhD thesis announced (June 2024 book Introduction) but not publicly indexed at search date; "longer version" of *Residues* announced (book Conclusion) but not yet appeared; cross-project significance-test paper claimed in book but not openly available. Affiliation lead: Stockholm-area institution. Black Tulip Technology named as O'Reilly's consultancy.
+- **Plan and edit-plan recorded**: [`book-integration-plan.md`](../wild/residuality-theory/book-integration-plan.md) (phase-organised) and [`book-integration-edit-plan.md`](../wild/residuality-theory/book-integration-edit-plan.md) (file-by-file). External-research output in [`oreilly-current-work-report.md`](../wild/residuality-theory/oreilly-current-work-report.md); the prompt that produced it in [`research-prompt-residuality-external.md`](../wild/residuality-theory/research-prompt-residuality-external.md). Re-running thesis search recommended in 6–12 months via DiVA, KTH, Stockholm University, and European thesis aggregators.
+- **Item 14 in essay-13 readiness plan** flagged for closure: the survey-broadening absorbs the work that bilateral §4 was preparing for; mg confirmation pending.
 
 ### Residuality theory: survey, bilateral note, fan-as-stressor-generator, Deleuzian-grammar working note (2026-04-25)
 

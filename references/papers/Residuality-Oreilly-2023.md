@@ -25,8 +25,6 @@ Department of Engineering and Innovation, Open University Milton Keynes UK
 
 Software architecture involves making decisions about the structure of applications in respect to the environment in which software must execute. In the process of making these decisions architects produce representations of both the software and the environment. These representations take the form of diagrams, models, textual descriptions, and sometimes loose conversations. Modern approaches to software architecture, such as agile, or Enterprise Architecture approaches, do not attempt to challenge traditional modes of representation. Residuality Theory states that an architecture can be expressed as a stack of residues, or leftovers, that are the results of stressors, unpredictable events that may arise in the environment. This creates a dynamic representation that expresses temporality, flux, and uncertainty as opposed to the traditional static representations of component structure, patterns, and process diagrams that constitute most architectural approaches. Residuality thus entails a challenging conceptual shift and it is necessary to highlight this in order to avoid confusion in practitioners and to make clear just how stark the differences between residuality and traditional approaches are. The aim of this conceptual article is to make it easier for architects to understand the differences and avoid falling back toward default approaches. This article will describe the three important underlying concepts in residuality that inform this shift – processuality, criticality, and difference.
 
-Keywords: Type your keywords here, separated by semicolons ;
-
 ---
 
 ## 1. Introduction

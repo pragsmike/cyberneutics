@@ -2,12 +2,12 @@
 title: "Residuality Theory: Union Bibliography"
 type: bibliography
 companion_survey: state-of-residuality-2026.md
-sources: "Union of references cited across O'Reilly's six papers (2019, 2020, 2021 Philosophy, 2021 Machine in the Ghost, 2022, 2023), Eric Normand's Substack essay, and the chronology's adjacent works"
+sources: "Union of references cited across O'Reilly's six papers (2019, 2020, 2021 Philosophy, 2021 Machine in the Ghost, 2022, 2023) and the 2024 Leanpub book Residues, plus Eric Normand's Substack essay, plus the chronology's adjacent works, plus practitioner-traction signals and reviews gathered in April 2026"
 ---
 
 # Residuality Theory: Union Bibliography
 
-This is the union of works cited across O'Reilly's six residuality-theory papers, plus Eric Normand's practitioner introduction, plus the load-bearing adjacent works the chronology flags. Where the work is locally archived, the entry links to the local copy. Where it is not, the entry gives a publicly accessible URL or DOI; entries with neither are book references for which no canonical online source exists.
+This is the union of works cited across O'Reilly's six residuality-theory papers and the 2024 *Residues* book, plus Eric Normand's practitioner introduction, plus the load-bearing adjacent works the chronology flags, plus the practitioner-traction signals and reviews gathered in April 2026. Where the work is locally archived, the entry links to the local copy. Where it is not, the entry gives a publicly accessible URL or DOI; entries with neither are book references for which no canonical online source exists.
 
 For the corpus-level reading guide, see [`references/papers/README.md`](../../references/papers/README.md). For chronology and Cite-which-paper-for-what guidance, see [`references/papers/Residuality-Oreilly-chronology.md`](../../references/papers/Residuality-Oreilly-chronology.md). For the survey that draws on this bibliography, see [`state-of-residuality-2026.md`](state-of-residuality-2026.md).
 
@@ -31,7 +31,7 @@ The five Procedia papers and the *Philosophies* journal piece, all open access, 
 - **O'Reilly, B. M.** "No More Snake Oil." Cutter Consortium *Business & Enterprise Architecture Executive Update*, July 2018. Practitioner version of the 2019 Procedia paper. Available via [cutter.com](https://www.cutter.com/) (free download).
 - **O'Reilly, B. M.** *There Is No Spoon: The Path to Residuality Theory*. Cutter Consortium, 2020. Compilation of 2018–2020 Cutter pieces. Available via [cutter.com](https://www.cutter.com/) (free download).
 - **O'Reilly, B. M.** *Hyperliminal Coupling: Why Software Projects Fail Repeatedly*. Cutter Consortium, 2021. Origin of the *hyperliminal coupling* concept that the 2022 Procedia paper inherits. Paywalled.
-- **O'Reilly, B. M.** *Residues: Time, Change, and Uncertainty in Software Architecture*. Leanpub, 2024. ~60 pp. Book-length practitioner synthesis. [leanpub.com/residuality](https://leanpub.com/residuality) (paid; 60-day refund window per Leanpub policy).
+- **O'Reilly, B. M.** *Residues: Time, Change, and Uncertainty in Software Architecture*. Leanpub, 2024 (version 2024-06-02). ~85 pp. Book-length practitioner synthesis. [leanpub.com/residuality](https://leanpub.com/residuality) (paid; 60-day refund window per Leanpub policy). Self-described as the practitioner-pitched compression of the 2018–2023 paper sequence; written in less academic register than the papers; includes the worked EV-charger example, the seven-line heuristics list, and the cross-project significance claim. The book's *Introduction* announces a forthcoming PhD thesis; the *Conclusion* announces a forthcoming "longer version." Dedicated "For Tanya, my stressor"; reviewers acknowledged: Riccardo Bennett-Lovsey, Blair Moir, Einar Høst, Jeroen Haegebaert; editor Mathias Verraes; cover art by Alexander O'Reilly aged 11. Author identifies as founder of Black Tulip Technology and as PhD student in complexity science based in Stockholm, Sweden. See survey [§10](state-of-residuality-2026.md) and [§12](state-of-residuality-2026.md) for the book's place in the corpus.
 
 ## Practitioner introductions and talks
 
@@ -51,7 +51,10 @@ The complexity-science line that residuality theory grounds itself in.
 - **Stacey, Ralph D.** *Complexity and Organizational Reality: Uncertainty and the Need to Rethink Management after the Collapse of Investment Capitalism*. 2nd ed., Routledge, 2009 (also cited as 2010 in the 2019 paper). Load-bearing for the 2021 *Philosophy* paper. Source of the four causalities (formative, rationalist, efficient, adaptionist) plus transformative, and the "dominant discourse of management" critique. Cited four times in the 2021 *Philosophy* paper.
 - **Hole, Kjell Jørgen.** *Anti-Fragile ICT Systems*. Springer, 2016. Source of the four properties of antifragile ICT systems (modularity, weak links, redundancy, diversity) used directly in the 2019 paper.
 - **Kauffman, Stuart A.** *The Origins of Order: Self-Organization and Selection in Evolution*. Oxford University Press, 1993. The NK network framework. Foundation for the 2022 paper's complexity-science grounding.
-- **Kauffman, Stuart A.** *At Home in the Universe: The Search for Laws of Self-Organization and Complexity*. Oxford University Press, 1995. Cited in the 2023 paper for the bridge between substance and process via attractors.
+- **Kauffman, Stuart A.** *At Home in the Universe: The Search for Laws of Self-Organization and Complexity*. Oxford University Press, 1995. Cited in the 2023 paper for the bridge between substance and process via attractors and in the 2024 book as the source for the Random Boolean Network (RBN) framing of attractors that underlies the criticality concept.
+- **DeLanda, Manuel.** *Intensive Science and Virtual Philosophy*. Bloomsbury Publishing, 2013. Cited in the 2024 book for the deeper-dive treatment of attractors in social systems. **Annotation:** O'Reilly's only explicit citation to a Deleuze-trained complexity theorist; the work is precisely the bridge between Deleuze and complex-systems science that residuality theory operates on. High relevance for the assemblage-rhizome-nomad working note.
+- **Marion, Russ.** *The Edge of Organization: Chaos and Complexity Theories of Formal Social Systems*. Sage, 1999. Cited in the 2024 book for the deeper-dive treatment of attractors in social systems alongside DeLanda.
+- **Prigogine, Ilya, and Isabelle Stengers.** *The End of Certainty*. Simon and Schuster, 1997. Cited in the 2024 book in the philosophers list for complexity science and process philosophy. (Distinct from the Prigogine 1989 *Futures* article cited separately above.)
 - **Cilliers, Paul.** *Complexity and Postmodernism: Understanding Complex Systems*. Routledge, 1998 (cited as 2002 in the 2023 paper). Origin of the *phenomenal gap* concept; the post-structural-complexity bridge.
 - **Kuhn, Thomas S.** *The Structure of Scientific Revolutions*. University of Chicago Press, 2012 (orig. 1962). Paradigm-crisis framing used in the 2023 paper.
 - **Snowden, David J., and Mary E. Boone.** "A Leader's Framework for Decision Making." *Harvard Business Review* 85, no. 11 (2007): 68. The Cynefin framework. [hbr.org/2007/11/a-leaders-framework-for-decision-making](https://hbr.org/2007/11/a-leaders-framework-for-decision-making).
@@ -76,7 +79,8 @@ The complexity-science line that residuality theory grounds itself in.
 
 The software-engineering tradition residuality theory cites both as inheritance and as foil.
 
-- **Parnas, David L.** "On the Criteria to Be Used in Decomposing Systems into Modules." *Communications of the ACM* 15, no. 12 (1972). [dl.acm.org/citation.cfm?id=361623](https://dl.acm.org/citation.cfm?id=361623). The foundational nonconventional-decomposition paper, focused on volatility rather than functionality. Cited as the 1972 origin point for residuality-aligned thinking.
+- **Parnas, David L.** "On the Criteria to Be Used in Decomposing Systems into Modules." *Communications of the ACM* 15, no. 12 (1972). [dl.acm.org/citation.cfm?id=361623](https://dl.acm.org/citation.cfm?id=361623). The foundational nonconventional-decomposition paper, focused on volatility rather than functionality. Cited as the 1972 origin point for residuality-aligned thinking. The 2024 book leans on this paper specifically when arguing that flow-based decomposition should replace process/use-case decomposition.
+- **Parnas, David L., and Paul C. Clements.** "A Rational Design Process: How and Why to Fake It." *IEEE Transactions on Software Engineering* SE-12, no. 2 (1986): 251–257. Cited in the 2024 book for the claim that a rational, structured process for designing software is impossible — useful only as a fiction presented to management. Source for the book's argument that traditional engineering methods are themselves random simulations dressed up as structured processes.
 - **Löwy, Juval.** *Righting Software: A Method for System and Project Design*. Addison-Wesley Professional, 2019. The IDesign Method; volatility-based decomposition. Cited in 2019 and 2021 *Philosophy*.
 - **Löwy, Juval.** "Volatility-Based Decomposition." IDesignIncTV, 22 November 2013. [youtube.com/watch?v=VIC7QW62-Tw](https://www.youtube.com/watch?v=VIC7QW62-Tw).
 - **Kazman, Rick, Mark H. Klein, and Paul C. Clements.** "ATAM: Method for Architecture Evaluation." Technical Report, Software Engineering Institute / Carnegie Mellon University, August 2002. [resources.sei.cmu.edu/library/asset-view.cfm?assetid=5177](https://resources.sei.cmu.edu/library/asset-view.cfm?assetid=5177). Architecture Trade-Off Analysis Method, used in the 2019 design-testing step.
@@ -90,6 +94,9 @@ The software-engineering tradition residuality theory cites both as inheritance 
 - **Ramos, A. L., J. V. Ferreira, and J. Barceló.** "Model-Based Systems Engineering: An Emerging Approach for Modern Systems." *IEEE Transactions on Systems, Man, and Cybernetics, Part C (Applications and Reviews)* 42, no. 1 (2012): 101–111. DOI: [10.1109/TSMCC.2011.2106495](https://doi.org/10.1109/TSMCC.2011.2106495). Cited in 2020.
 - **Loosemore, Martin, and Eric Cheung.** "Implementing Systems Thinking to Manage Risk in Public Private Partnership Projects." *International Journal of Project Management* 33, no. 6 (2015): 1325–1334. DOI: [10.1016/j.ijproman.2015.02.005](https://doi.org/10.1016/j.ijproman.2015.02.005). Cited in 2020 for non-linear risk management.
 - **Strategyzer.** "The Business Model Canvas." 2018. [strategyzer.com/canvas/business-model-canvas](https://strategyzer.com/canvas/business-model-canvas). Used in the 2019 VUCA-analysis step.
+- **Osterwalder, Alexander, and Yves Pigneur.** *Business Model Generation: A Handbook for Visionaries, Game Changers, and Challengers*. Vol. 1. John Wiley & Sons, 2010. Cited in the 2024 book as a recommended upstream aid for stressor generation in residual analysis.
+- **Porter, Michael E.** "The Five Competitive Forces That Shape Strategy." *Harvard Business Review* 86, no. 1 (2008): 78. Cited in the 2024 book as a recommended upstream aid for stressor generation alongside PESTLE and the Business Model Canvas.
+- **Perera, R.** *The PESTLE Analysis*. Nerdynaut, 2017. Cited in the 2024 book as one of the recommended upstream aids for stressor generation.
 
 ## Conventional patterns and methods (cited as targets of critique)
 
@@ -156,9 +163,33 @@ These ground the *Machine in the Ghost* paper's political/autonomy framing.
 - **Wikipedia.** "Software Crisis." [en.wikipedia.org/wiki/Software_crisis](https://en.wikipedia.org/wiki/Software_crisis).
 - **Understanding Evolution.** "Exaptations." 2018. [evolution.berkeley.edu/evolibrary/article/exaptations_01](https://evolution.berkeley.edu/evolibrary/article/exaptations_01). The biological-evolution source for non-linear system responsiveness.
 
-## Reception and critical literature (informal)
+## Practitioner uptake: talks, workshops, transcripts
 
-The chronology notes that the 2024 *Residues* book has attracted both sympathetic practitioner reviews and critical reviews — including extended Goodreads reviews — that argue the theory is unfalsifiable, self-defeating, and dismissive of effective principles like SOLID, DRY, and modularity patterns. No formal critical literature in peer-reviewed venues is yet known to this bibliography. This is an open seam of work worth tracking.
+External venues where O'Reilly has continued to teach the methodology, plus practitioner-led explainers and workshop transcripts. Gathered as part of the April 2026 external research pass.
+
+- **VirtualDDD.** "An Introduction to Residuality Theory by Barry M. O'Reilly." Session listing. [virtualddd.com/sessions/an-introduction-to-residuality-theory-by-barry-m-oreilly/](https://virtualddd.com/sessions/an-introduction-to-residuality-theory-by-barry-m-oreilly/) — Practitioner-community introduction.
+- **VirtualDDD.** "Practical Residuality by Barry M. O'Reilly." Session listing. [virtualddd.com/sessions/practical-residuality-by-barry-m-oreilly/](https://virtualddd.com/sessions/practical-residuality-by-barry-m-oreilly/) — Hands-on session involving incidence-matrix work; the closest practitioner-led entry to the methodology's matrix techniques.
+- **Avanscoperta.** "Residuality Theory for Antifragile Software Architecture." Workshop transcript, 27 November 2023. [blog.avanscoperta.it/2023/11/27/residuality-theory-for-antifragile-software-architecture/](https://blog.avanscoperta.it/2023/11/27/residuality-theory-for-antifragile-software-architecture/) — Transcribed Advanced Software Architecture Workshop content; positions residuality as combining "philosophy, the complexity sciences, and software engineering."
+- **software-architektur.tv.** Episode 279 (2023). [software-architektur.tv/transcriptions/279.html](https://software-architektur.tv/transcriptions/279.html) — Long-form interview engaging residuality at depth.
+- **YouTube.** "An Introduction To Residuality Theory by Barry O'Reilly." 2022. [youtube.com/watch?v=8Vr_7S45rRU](https://www.youtube.com/watch?v=8Vr_7S45rRU) — Earlier conference-style introduction; identifies O'Reilly as "PhD Student in Complexity Science."
+- **doubleSlash blog.** "Residuality Theory: Future-Proof Software Architecture Inspired by Insights from Biology." 2026. [blog.doubleslash.de/en/software-technologien/software-architecture/residuality-theory-future-proof-software-architecture-inspired-by-insights-from-biology/](https://blog.doubleslash.de/en/software-technologien/software-architecture/residuality-theory-future-proof-software-architecture-inspired-by-insights-from-biology/) — Independent practitioner explainer.
+
+## Reception and critical literature
+
+Sourced from the April 2026 external research pass. Goodreads is the only public cluster of named reviews located; no major-venue critical essay (InfoQ, IEEE Software, *Communications of the ACM*) was located, and that absence may be a search-strategy artefact worth re-checking.
+
+- **Goodreads.** *Residues: Time, Change, and Uncertainty in Software Architecture*, reviews page. [goodreads.com/en/book/show/219197668-residues](https://www.goodreads.com/en/book/show/219197668-residues). Named reviewers cited in the survey: **Christian Marques** (2024-12-18, sympathetic, "excellent," "succinctly covering the theory"); **Alejandro** (2024-12-20, sympathetic, bridges "philosophy, complexity science, and software architecture"); **Nicola** (2025-01-03, critical, ideas "very abstract and not rigorous," objects to tone toward developers); **Travis** (2025-02-13, mixed/critical, "feels half baked at best").
+- **Normand, Eric.** "Residuality Theory." Eric Normand's Newsletter (Substack), May 2024. (Already cited under Practitioner introductions and talks.) Sympathetic to the methodology but criticises the *name*: "It's a terrible name."
+
+## Pending — known gaps
+
+Recorded in the bibliography itself so future agents know what they would not be able to find as of April 2026:
+
+- **O'Reilly's PhD thesis.** Announced in the 2024 book *Introduction*. Not located in DiVA (Swedish national academic repository), KTH's repository, Stockholm University's repository, or European thesis aggregators searched. Affiliation lead: Stockholm-area institution. No DOI, supervisor, defence date, abstract, or open-access PDF available at search date. Worth re-running this search in 6–12 months.
+- **The "longer version" of *Residues*.** Announced in the 2024 book *Conclusion* as forthcoming. Not yet appeared. No revised edition or traditional-publisher imprint located.
+- **Cross-project significance-test paper.** The 2024 book asserts that experiments have "revealed a statistically significant effect" across projects (*Empirical Test*; *Conclusion*). No standalone methods/results paper publicly available; the 2022 Procedia paper formalises Ri but does not contain the cross-project test. Likely candidate is the unpublished thesis above.
+- **Cutter Consortium pieces.** *No More Snake Oil* (2018), *There Is No Spoon* (2020), and *Hyperliminal Coupling* (2021) are paywalled. Only metadata accessible without paywall retrieval; the 2021 Cutter PDF collection page identifies O'Reilly as founder of Black Tulip Technology and creator of Antifragile System Design.
+- **Major-venue critical essay on *Residues***. None located in InfoQ, IEEE Software, *Communications of the ACM*, or comparable outlets. May exist; may be a search-strategy gap.
 
 ---
 

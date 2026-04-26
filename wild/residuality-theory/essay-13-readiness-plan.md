@@ -32,6 +32,12 @@ The plan has authority because it codifies the outcomes of:
 - 2026-04-20 diary restructured: Reader's note + Current status (canonical) + Original entry (2026-04-20) preserved as historical record.
 - [`meta/project-state.md`](../../meta/project-state.md) updated with audit + remediation entry.
 
+**Done (2026-04-26, book integration)**: Survey broadened to include the 2024 *Residues* book (option b: integrated throughout in survey-register prose, not appendix). Bilateral, fan, and assemblage-rhizome-nomad notes revised to reflect book material. Bibliography expanded with book-cited references (Schon, Ralph & Tempero, Parnas, DeLanda, Marion, Prigogine, Osterwalder, Porter, etc.) and Phase 0 external-research sources (VirtualDDD sessions, Avanscoperta workshop, software-architektur.tv, doubleSlash blog, Goodreads reviews). Provenance updated. The integration plan and per-file edit plan are recorded in [`book-integration-plan.md`](book-integration-plan.md) and [`book-integration-edit-plan.md`](book-integration-edit-plan.md); the Phase 0 research output is in [`oreilly-current-work-report.md`](oreilly-current-work-report.md). Honest open gaps: PhD thesis announced but not publicly indexed; longer-version book promised but not appeared; cross-project significance test claimed but not publicly available.
+
+### Stability re-check 2026-04
+
+The 2024 *Residues* book renames the second step of the two-step algorithm from "NKP analysis" (2022 paper) to "Contagion Analysis." NKP analysis lives inside the renamed step as one tool among several; hyperliminal coupling becomes the primary thing the second step reveals. Re-check determination (2026-04-26): **No flip on the convergence spine.** The bilateral note's §2.4 generalization claim — cyberneutics' fan→funnel pipeline is the generalization of "random simulation + network analysis" to sense-making — survives the renaming because contagion analysis is the same second step (incidence-matrix-based investigation of how stress spreads through component coupling) under a different name. Fan still maps to random simulation; funnel still does cross-stressor coupling analysis. §2.4 is updated to use the contagion vocabulary alongside the original NKP framing rather than rewritten substantively. Item 9b's stability window is **not** restarted by this finding.
+
 **Pending (Phases 3–5)**: see "Remaining work" below.
 
 ---
@@ -67,7 +73,7 @@ These can happen during or after drafting; they sharpen the material but do not 
 - Item 10: deletion test for each working note. Apply during drafting as the essay consumes (or fails to consume) each note. Survivors are retained; non-survivors are marked "scaffolding, retain only if independently useful."
 - Item 12: audit the "narrative proof" cite — **DONE 2026-04-25** as Phase 1 check A.
 - Item 13: audit calibration register state — **DONE 2026-04-25** as Phase 1 check B.
-- Item 14: consider extracting bilateral note's §4 (survey-extension proposals) as a separate document.
+- Item 14: consider extracting bilateral note's §4 (survey-extension proposals) as a separate document. **Re-evaluation 2026-04-26**: the survey-broadening to include the 2024 book substantially absorbs the work §4 was preparing for (the survey now contains the book material that §4 proposed adding). Item 14 may now collapse — the extraction is no longer needed if the survey is doing the work directly. Mark for explicit closure once mg confirms the survey is doing what §4 anticipated.
 - Item 15: system-equilibrium note in directory README acknowledging scaffolding-mass dynamic and committing to graduation discipline.
 - Item 16: tier-classify the six committee analytical claims symmetrically — **DONE 2026-04-25** as part of remediation round 1 (recorded in Round 2 transcript).
 
