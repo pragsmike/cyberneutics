@@ -17,6 +17,8 @@
 
 **Cyberneutics** (literally, steering interpretation) is a methodology for harnessing narrative engines — LLMs — as structured sense-making tools rather than oracles that deliver answers. It provides rigorous, traceable techniques for **making decisions under genuine uncertainty** — the kind where you can't enumerate outcomes or assign probabilities, and the act of deciding changes what you're deciding about.
 
+> What do you do when the cognitive apparatus producing your beliefs is itself unreliable in ways you can't directly inspect?
+
 Cyberneutics seeks to offer tools to address the LLM safety problem, detailed in the next section.
 
 Large Language Models are not databases. They are not logic engines. They are **narrative generators** — storytelling machines operating through what we call "the pachinko of stored literature." This changes everything about how we should work with them.
